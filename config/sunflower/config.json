@@ -1,5 +1,5 @@
 {
-    "active_notebook": 1, 
+    "active_notebook": 0, 
     "always_show_tabs": true, 
     "button_relief": false, 
     "confirmations": {
@@ -41,10 +41,10 @@
         "row_hinting": true, 
         "search_modifier": "000", 
         "second_extension": false, 
-        "selection_color": "#ffff5e5e0000", 
-        "selection_indicator": "\u2731", 
+        "selection_color": "#16b60000ffff", 
+        "selection_indicator": "\u25b6", 
         "show_expanders": false, 
-        "show_hidden": false, 
+        "show_hidden": true, 
         "single_click_navigation": true, 
         "time_format": "%H:%M %d-%m-%y"
     }, 
