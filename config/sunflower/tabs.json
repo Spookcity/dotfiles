@@ -1,0 +1,26 @@
+{
+    "left": {
+        "active_tab": 0, 
+        "tabs": [
+            {
+                "class": "FileList", 
+                "lock": null, 
+                "path": "/home/rick", 
+                "sort_ascending": true, 
+                "sort_column": 0
+            }
+        ]
+    }, 
+    "right": {
+        "active_tab": 0, 
+        "tabs": [
+            {
+                "class": "FileList", 
+                "lock": null, 
+                "path": "/mnt/Ricks_Stuff", 
+                "sort_ascending": true, 
+                "sort_column": 0
+            }
+        ]
+    }
+}

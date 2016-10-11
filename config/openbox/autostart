@@ -1,0 +1,26 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+compton --config /home/rick/.config/compton.conf -b &
+sh ~/.fehbg &
+tint2 -c /home/rick/.config/tint2/text_only_3.tint2rc &
+#cadence --minimized &
+paramano &
+alsa-tray &
+conky -c ~/.conky/conkyrc &
+#terminator -H -b  &
+redshift &
+#xset m 5/3 0 &
+#synclient TouchpadOff=1 &
+

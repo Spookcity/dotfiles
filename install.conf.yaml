@@ -1,0 +1,87 @@
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.redshiftgrc: redshiftgrc
+    ~/.conky:
+        path: conky/
+        create: true
+    ~/.gitconfig: gitconfig
+    ~/.vimrc: vimrc
+    ~/.oh-my-zsh:
+        path: oh-my-zsh/
+        create: true
+    ~/.icons:
+        path: icons/
+        create: true
+    ~/.fonts:
+        path: fonts/
+        create: true
+    ~/.repoconfig:
+        path: repoconfig/
+        create: true
+    ~/.vim:
+        path: vim/
+        create: true
+    ~/.tmux.conf: tmux.conf
+    ~/.themes:
+        path: themes/
+        create: true
+    ~/.dircolors:
+        path: dircolors/
+        create: true
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.nanorc: nanorc
+    ~/.zshrc: zshrc
+    ~/bin:
+        path: bin/
+        create: true
+    ~/.config/fontconfig:
+        path: config/fontconfig/
+        create: true
+    ~/.config/openbox:
+        path: config/openbox/
+        create: true
+    ~/.config/obmenu-generator:
+        path: config/obmenu-generator/
+        create: true
+    ~/.config/geany:
+        path: config/geany/
+        create: true
+    ~/.config/htop:
+        path: config/htop/
+        create: true
+    ~/.config/ranger:
+        path: config/ranger/
+        create: true
+    ~/.config/sunflower:
+        path: config/sunflower/
+        create: true
+    ~/.config/compton.conf:
+        path: config/compton.conf
+        create: true
+    ~/.config/paramano.conf:
+        path: config/paramano.conf
+        create: true
+    ~/.config/gtk-2.0:
+        path: config/gtk-2.0/
+        create: true
+    ~/.config/gtk-3.0:
+        path: config/gtk-3.0/
+        create: true
+    ~/.config/i3:
+        path: config/i3/
+        create: true
+    ~/.config/rtile:
+        path: config/rtile/
+        create: true
+    ~/.config/terminator:
+        path: config/terminator/
+        create: true
+    ~/.config/tint2:
+        path: config/tint2/
+        create: true
+
+

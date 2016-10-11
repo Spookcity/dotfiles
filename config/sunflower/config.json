@@ -1,0 +1,97 @@
+{
+    "active_notebook": 1, 
+    "always_show_tabs": true, 
+    "button_relief": false, 
+    "confirmations": {
+        "delete_items": true
+    }, 
+    "create_dialog": {
+        "directory_mode": 493, 
+        "edit_file": false, 
+        "file_mode": 420
+    }, 
+    "editor": {
+        "application": "Geany", 
+        "default_editor": "geany %F", 
+        "external_command": "geany %F", 
+        "terminal_command": false, 
+        "type": 0
+    }, 
+    "expand_tabs": 0, 
+    "focus_new_tab": true, 
+    "history_file": ".bash_history", 
+    "horizontal_split": false, 
+    "item_list": {
+        "always_visible": [], 
+        "breadcrumbs": 2, 
+        "case_sensitive_sort": false, 
+        "force_directories": true, 
+        "grid_lines": 0, 
+        "headers_visible": true, 
+        "hide_horizontal_scrollbar": false, 
+        "left_directories": [
+            "/home/rick"
+        ], 
+        "mode_format": 1, 
+        "number_sensitive_sort": false, 
+        "right_click_select": false, 
+        "right_directories": [
+            "/mnt/Ricks_Stuff"
+        ], 
+        "row_hinting": true, 
+        "search_modifier": "000", 
+        "second_extension": false, 
+        "selection_color": "#ffff5e5e0000", 
+        "selection_indicator": "\u2731", 
+        "show_expanders": false, 
+        "show_hidden": false, 
+        "single_click_navigation": true, 
+        "time_format": "%H:%M %d-%m-%y"
+    }, 
+    "last_version": 0, 
+    "media_preview": true, 
+    "multiple_instances": false, 
+    "network_path_completion": true, 
+    "operations": {
+        "automount_insert": false, 
+        "automount_start": true, 
+        "follow_symlink": false, 
+        "hide_on_minimize": false, 
+        "merge_in_silent": true, 
+        "overwrite_in_silent": true, 
+        "reserve_size": false, 
+        "set_mode": true, 
+        "set_owner": false, 
+        "set_timestamp": true, 
+        "silent": false, 
+        "trash_files": true
+    }, 
+    "plugins": [
+        "file_list", 
+        "system_terminal"
+    ], 
+    "show_command_bar": false, 
+    "show_command_entry": false, 
+    "show_notifications": true, 
+    "show_status_bar": 0, 
+    "show_toolbar": true, 
+    "size_format": 1, 
+    "superuser_notification": true, 
+    "tab_button_icons": true, 
+    "tab_close_button": true, 
+    "terminal": {
+        "allow_bold": true, 
+        "command": "terminator -into {0}", 
+        "command2": "terminator -into {0} -e \"{1}\"", 
+        "cursor_shape": 0, 
+        "font": "Monospace 12", 
+        "mouse_autohide": false, 
+        "show_scrollbars": true, 
+        "type": 0, 
+        "use_system_font": true
+    }, 
+    "ubuntu_coloring": false, 
+    "viewer": {
+        "word_wrap": false
+    }
+}
