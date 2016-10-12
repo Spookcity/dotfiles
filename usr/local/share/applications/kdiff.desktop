@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Kdiff
+Categories=Development;
+Type=Application
+StartupNotify=true
+TryExec=kdiff3
+Exec=kdiff3

@@ -1,7 +1,7 @@
 " don't bother with vi compatibility
 set nocompatible
 
-colorscheme moonshine
+colorscheme base16-shapeshifter
 
 " enable syntax highlighting
 syntax enable

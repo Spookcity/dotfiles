@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=FL Studio
+Categories=audiovideo;
+Type=Application
+StartupNotify=true
+Exec=env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Image-Line/FL\ Studio\ 12/FL64.exe

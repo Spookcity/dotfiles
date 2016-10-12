@@ -21,6 +21,20 @@
 [plugins]
 [profiles]
   [[default]]
+    background_color = "#001e27"
+    background_darkness = 0.95
+    background_image = None
+    background_type = transparent
+    cursor_color = "#708284"
+    cursor_shape = ibeam
+    font = Inconsolata for Powerline Medium 11.5
+    foreground_color = "#708284"
+    palette = "#002831:#d11c24:#738a05:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#001e27:#bd3613:#475b62:#536870:#708284:#5956ba:#819090:#fcf4dc"
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Dark]]
     background_color = "#080808"
     background_darkness = 0.9
     background_image = None
@@ -34,18 +48,6 @@
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
-  [[Solarized Dark]]
-    background_color = "#001e27"
-    background_image = None
-    cursor_color = "#708284"
-    cursor_shape = ibeam
-    font = Inconsolata for Powerline Medium 11.5
-    foreground_color = "#708284"
-    palette = "#002831:#d11c24:#738a05:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#001e27:#bd3613:#475b62:#536870:#708284:#5956ba:#819090:#fcf4dc"
-    scrollback_lines = 5000
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
   [[Twilight]]
     background_color = "#141414"
     background_darkness = 0.9
@@ -53,7 +55,7 @@
     background_type = transparent
     cursor_color = "#ffffff"
     cursor_shape = ibeam
-    font = Anonymous Pro for Powerline 11.5
+    font = Inconsolata for Powerline Italic 11.5
     foreground_color = "#ffffd4"
     palette = "#141414:#c06d44:#afb97a:#c2a86c:#44474a:#b4be7c:#778385:#ffffd4:#262626:#de7c4c:#ccd88c:#e2c47e:#5a5e62:#d0dc8e:#8a989b:#ffffd4"
     scrollback_lines = 5000
