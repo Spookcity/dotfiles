@@ -432,13 +432,13 @@
         <command>terminator -f -b -e htop</command>
       </action>
     </keybind>
-    <keybind key="W-s">
+    <keybind key="W-g">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>smartgit</name>
+          <name>git-cola</name>
         </startupnotify>
-        <command>smartgit</command>
+        <command>git-cola</command>
       </action>
     </keybind>
     <keybind key="W-m">
@@ -921,10 +921,6 @@
       <skip_taskbar>no</skip_taskbar>
       <focus>yes</focus>
       <maximized>no</maximized>
-    </application>
-    <application name="kdiff3">
-      <decor>no</decor>
-      <maximized>yes</maximized>
     </application>
     <application name="Sunflower">
       <decor>no</decor>

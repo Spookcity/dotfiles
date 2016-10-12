@@ -16,11 +16,12 @@ background_color = #282828 0
 border_color = #CCCCCC 80
 
 # Panel
+panel_items = TSC
 panel_monitor = all
 panel_position = top center horizontal
-panel_size = 100% 25
-panel_margin = 0 0
-panel_padding = 3 0 3
+panel_size = 100% 29
+panel_margin = 6 0 
+panel_padding = 6 0 6
 panel_dock = 0
 wm_menu = 1
 panel_layer = bottom
@@ -36,17 +37,17 @@ strut_policy = follow_size
 
 # Taskbar
 taskbar_mode = multi_desktop
-taskbar_padding = 0 3 10
+taskbar_padding = 6 0 6
 taskbar_background_id = 0
 #taskbar_active_background_id = 0
 
 # Tasks
-urgent_nb_of_blink = 7
+urgent_nb_of_blink = 7.5
 task_icon = 0
 task_text = 1
 task_centered = 1
-task_maximum_size = 175 25
-task_padding = 5 0 
+task_maximum_size = 200 0
+task_padding = 0 3 0
 task_background_id = 0
 task_active_background_id = 2
 task_urgent_background_id = 2
@@ -60,7 +61,7 @@ task_urgent_icon_asb = 100 0 0
 task_iconified_icon_asb = 100 0 0
 
 # Fonts
-task_font = goblin one 8
+task_font = goblin one 7
 task_font_color = #191919 100
 task_active_font_color = #bfbfbf 100
 task_urgent_font_color = #191919 100
