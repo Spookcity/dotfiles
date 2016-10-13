@@ -11,14 +11,14 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH="1"
-#POWERLEVEL9K_SHORTEN_STRATEGY=truncate_middle
+#POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon virtualenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ip time)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# History
+# Config history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
@@ -26,7 +26,12 @@ setopt hist_ignore_space
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Completion
+# keybindings
+bindkey -e                      # emacs keybindings
+bindkey '\e[1;5C' forward-word            # C-Right
+bindkey '\e[1;5D' backward-word           # C-Left
+bindkey '\e[2~'   overwrite-mode          # Insert
+bindkey '^A'      beginning-of-line       # Home
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -41,7 +46,7 @@ DISABLE_AUTO_UPDATE="true"
 #ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+#COMPLETION_WAITING_DOTS="true"
 
 # COLORS
 eval $(dircolors -b $HOME/.dircolors/dircolors.256dark)
