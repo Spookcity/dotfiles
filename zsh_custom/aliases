@@ -1,0 +1,6 @@
+alias upgrade='sudo pacman -Syu'
+alias yup='yaourt -Syua'
+alias abs='sudo abs'
+alias orphan='pacman -Qtd'
+alias virtual='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env'
+alias y='yaourt'
