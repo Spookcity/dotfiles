@@ -1,0 +1,7 @@
+export EDITOR='vim'
+export VISUAL='geany'
+export TERM="xterm-256color"
+export USE_CCACHE=1
+export CCACHE_DIR=/mnt/Ricks_Stuff/.ccache
+export JAVA_HOME=/usr/lib/jvm/java-8-jdk/jdk/bin/java
+archey
