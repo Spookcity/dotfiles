@@ -1,6 +1,8 @@
+#!/bin/bash
+eval `ssh-agent -s`
+ssh-add
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
 
 export EDITOR=vim
 export VISUAL=geany

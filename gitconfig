@@ -1,5 +1,14 @@
 [user]
-	email = blackacidevil138@hotmail.com
-	name = Spookcity
+	email = spookcity138@gmail.com
+	name = Rick M
 [color]
 	ui = auto
+[gui]
+	editor = geany
+[cola]
+	boldheaders = false
+	fontdiff = Inconsolata,11,-1,5,50,0,0,0,0,0
+[diff]
+	tool = kdiff3
+[credential]
+	helper = store
