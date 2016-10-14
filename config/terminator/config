@@ -1,50 +1,72 @@
 [global_config]
   enabled_plugins = CustomCommandsMenu, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
   geometry_hinting = False
-  inactive_color_offset = 0.81
   suppress_multiple_term_dialog = True
-  title_font = Inconsolata for Powerline Medium 11.5
+  title_font = Consolas for Powerline 11
   title_hide_sizetext = True
   title_transmit_bg_color = "#4c4c4c"
   title_use_system_font = False
 [keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
 [plugins]
 [profiles]
   [[default]]
-    background_color = "#001e27"
-    background_darkness = 0.95
+    background_color = "#080808"
+    background_darkness = 0.85
     background_image = None
+    background_type = transparent
+    cursor_color = "#a5a2a2"
+    cursor_shape = ibeam
+    font = Consolas for Powerline 11
+    foreground_color = "#ffffd4"
+    palette = "#090300:#db2d20:#01a252:#fded02:#01a0e4:#a16a94:#b5e4f4:#a5a2a2:#5c5855:#e8bbd0:#3a3432:#4a4543:#807d7c:#d6d5d4:#cdab53:#f7f7f7"
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Gotham]]
+    background_color = "#0a0f14"
+    background_darkness = 0.85
+    background_image = None
+    background_type = transparent
+    cursor_color = "#7b7b7b"
+    cursor_shape = ibeam
+    font = Consolas for Powerline 11
+    foreground_color = "#98d1ce"
+    palette = "#0a0f14:#c33027:#26a98b:#edb54b:#195465:#4e5165:#33859d:#98d1ce:#10151b:#d26939:#081f2d:#245361:#093748:#888ba5:#599caa:#d3ebe9"
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[Solarized Dark]]
+    background_color = "#001e27"
+    background_darkness = 0.85
+    background_image = None
+    background_type = transparent
     cursor_color = "#708284"
     cursor_shape = ibeam
-    font = Inconsolata for Powerline Medium 11.5
+    font = Consolas for Powerline 11
     foreground_color = "#708284"
     palette = "#002831:#d11c24:#738a05:#a57706:#2176c7:#c61c6f:#259286:#eae3cb:#001e27:#bd3613:#475b62:#536870:#708284:#5956ba:#819090:#fcf4dc"
     scrollback_lines = 5000
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
-  [[Dark]]
-    background_color = "#080808"
-    background_darkness = 0.9
-    background_image = None
-    background_type = transparent
-    cursor_color = "#a5a2a2"
-    cursor_shape = ibeam
-    font = Inconsolata for Powerline Medium 11.5
-    foreground_color = "#a5a2a2"
-    palette = "#090300:#db2d20:#01a252:#fded02:#01a0e4:#a16a94:#b5e4f4:#a5a2a2:#5c5855:#e8bbd0:#3a3432:#4a4543:#807d7c:#d6d5d4:#cdab53:#f7f7f7"
-    scrollback_lines = 5000
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
   [[Twilight]]
     background_color = "#141414"
-    background_darkness = 0.9
+    background_darkness = 0.85
     background_image = None
     background_type = transparent
     cursor_color = "#ffffff"
     cursor_shape = ibeam
-    font = Inconsolata for Powerline Italic 11.5
+    font = Consolas for Powerline 11
     foreground_color = "#ffffd4"
     palette = "#141414:#c06d44:#afb97a:#c2a86c:#44474a:#b4be7c:#778385:#ffffd4:#262626:#de7c4c:#ccd88c:#e2c47e:#5a5e62:#d0dc8e:#8a989b:#ffffd4"
     scrollback_lines = 5000
