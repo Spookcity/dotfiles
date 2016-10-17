@@ -1,14 +1,40 @@
 [user]
 	email = spookcity138@gmail.com
-	name = Rick M
-[color]
-	ui = auto
+	name = Rick M.
 [gui]
 	editor = geany
-[cola]
-	boldheaders = false
-	fontdiff = Inconsolata,11,-1,5,50,0,0,0,0,0
+	fontui = -family \"Droid Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	spellingdictionary = en_US
+	displayuntracked = true
+	historybrowser = gitk
+	recentrepo = /home/rick/dotfiles
+	recentrepo = /home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte
 [diff]
-	tool = kdiff3
-[credential]
-	helper = store
+	tool = home/rick/bin/meld.sh
+[color "branch"]
+
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+
+	meta = yellow bold
+	frag = magenta bold # line info
+	old = red # deletions
+	new = green # additions
+
+[color "status"]
+
+	added = yellow
+	changed = green
+	untracked = cyan	
+[cola]
+	blameviewer = git gui blame
+	fontdiff = Droid Sans Mono,9,-1,5,50,0,0,0,0,0
+	boldheaders = false
+[difftool]
+	prompt = false
+[merge]
+	tool = xxdiff

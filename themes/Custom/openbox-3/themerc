@@ -1,0 +1,130 @@
+# Name: Custom
+# Author: NixiePro <nixiepro@openmailbox.org>
+
+# Menu
+menu.title.bg: 				        Flat Solid
+menu.title.bg.color: 				#171717
+menu.title.text.color: 				#af865a
+menu.title.text.justify: 	        Center
+menu.border.width: 			        4
+menu.border.color:                  #1f1f1f
+menu.overlap.x: 		            -14
+menu.overlap.y:				        0
+menu.items.bg: 				        Flat Solid
+menu.items.bg.color: 				#1f1f1f
+menu.items.text.color: 				#798C91
+menu.items.justify:                 left
+menu.items.disabled.text.color:	    #535C5C
+menu.items.active.bg: 			    Flat Solid
+menu.items.active.bg.color: 		#1f1f1f
+menu.items.active.text.color: 	    #D17B49
+menu.separator.width:			    1
+menu.separator.padding.width:	    4
+menu.separator.padding.height:	    4
+menu.separator.color:               #1f1f1f
+
+
+# Active window
+window.active.border.color: #484848
+
+window.active.title.bg: flat solid
+window.active.title.bg.color: #2d2d2d
+window.active.title.separator.color: #2d2d2d
+window.active.text.justify: left
+window.active.label.bg: parentrelative
+window.active.label.text.color: #888888
+
+window.active.handle.bg: flat solid
+window.active.handle.bg.color: #2d2d2d
+
+window.active.grip.bg: flat solid
+window.active.grip.bg.color: #2d2d2d
+
+window.active.button.unpressed.bg: flat solid
+window.active.button.unpressed.bg.color: #2d2d2d
+window.active.button.unpressed.image.color: #6D715E
+
+window.active.button.pressed.bg: flat solid
+window.active.button.pressed.bg.color: #2d2d2d
+window.active.button.pressed.image.color: #2274AF
+
+window.active.button.disabled.bg: flat solid
+window.active.button.disabled.bg.color: #2d2d2d
+window.active.button.disabled.image.color: #535C5C
+
+
+# Inactive window
+window.inactive.border.color: #393939
+
+window.inactive.title.bg: flat solid
+window.inactive.title.bg.color: #2d2d2d
+window.inactive.title.separator.color: #2d2d2d
+window.inactive.text.justify: center
+
+window.inactive.label.bg: parentrelative
+window.inactive.label.text.color: #2d2d2d
+
+window.inactive.handle.bg: flat solid
+window.inactive.handle.bg.color: #2d2d2d
+
+window.inactive.grip.bg: flat solid
+window.inactive.grip.bg.color: #2d2d2d
+
+window.inactive.button.unpressed.bg: flat solid
+window.inactive.button.unpressed.bg.color: #2D2D2D
+window.inactive.button.unpressed.image.color: #2D2D2D
+
+window.inactive.button.pressed.bg: flat solid
+window.inactive.button.pressed.bg.color: #2d2d2d
+window.inactive.button.pressed.image.color: #2274AF
+
+window.inactive.button.disabled.bg: flat solid
+window.inactive.button.disabled.bg.color: #2d2d2d
+window.inactive.button.disabled.image.color: #2d2d2d
+
+
+# OSD
+osd.border.width: 1
+osd.border.color: #484848
+
+osd.bg: flat solid
+osd.bg.color: #2d2d2d
+osd.label.bg: flat solid
+osd.label.bg.color: #2d2d2d
+osd.label.text.color: #888888
+
+osd.hilight.bg: flat solid
+osd.hilight.bg.color: #2274AF
+
+osd.unhilight.bg: flat solid
+osd.unhilight.bg.color: #2d2d2d
+
+osd.button.unpressed.bg: flat border
+osd.button.unpressed.bg.color: #303030
+osd.button.unpressed.*.border.color: #242424
+
+osd.button.pressed.bg: flat border
+osd.button.pressed.bg.color: #2a2a2a
+osd.button.pressed.*.border.color: #242424
+
+osd.button.focused.bg: flat solid border
+osd.button.focused.bg.color: #303030
+osd.button.focused.*.border.color: #1e1e1e
+
+osd.button.focused.box.color: #C0B18B
+
+
+# Fonts
+window.active.label.text.font:shadow=n
+window.inactive.label.text.font:shadow=n
+menu.items.font:shadow=n
+menu.title.text.font:shadow=n
+
+
+# Everything else
+border.width: 1
+padding.width: 8
+padding.height: 4
+window.handle.width: 0
+window.client.padding.width: 0
+window.label.text.justify: left

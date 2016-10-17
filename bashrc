@@ -1,12 +1,11 @@
 #!/bin/bash
-eval `ssh-agent -s`
-ssh-add
+#eval `ssh-agent -s`
+#ssh-add
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+#[[ $- != *i* ]] && return
 
 export EDITOR=vim
-export VISUAL=geany
-export PATH=:~/bin:/usr/local/sbin:/usr/local/bin:/usr/local/lib:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/outproc/bin
+#export PATH=:~/bin:/usr/local/sbin:/usr/local/bin:/usr/local/lib:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/outproc/bin
 JAVA_HOME=/usr/lib/jvm/java-8-jdk/jdk/bin/java
 
 # Android tools

@@ -1,0 +1,59 @@
+{
+    "recent": [
+        "/home/rick/dotfiles/oh-my-zsh",
+        "/home/rick/dotfiles",
+        "/home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte"
+    ],
+    "gui_state": {
+        "push": {
+            "maximized": false,
+            "width": 666,
+            "height": 420,
+            "y": 29,
+            "x": 467
+        },
+        "mainview": {
+            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPZAAAC1vwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAAB4AAACOAAAAZQD////7AAAACABEAGkAZgBmAQAAAK8AAAJFAAAAIAD///8AAAABAAACZAAAAtb8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAeAAAC1gAAAHAA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABwAAAAZgAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAogAAACNAAAAcAD///8AAAADAAAGQAAAAF38AQAAAAH8AAAAAAAABkAAAACJAP////oAAAAAAQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAQAAAAD/////AAAAiQD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAjAD///8AAAAAAAAC1gAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "x": 0,
+            "y": 29,
+            "lock_layout": true,
+            "maximized": false,
+            "width": 1600,
+            "height": 852,
+            "show_status_filter": false
+        },
+        "pull": {
+            "x": 467,
+            "y": 29,
+            "maximized": false,
+            "width": 666,
+            "height": 420,
+            "rebase": false
+        },
+        "startupdialog": {
+            "maximized": false,
+            "width": 800,
+            "height": 450,
+            "y": 206,
+            "x": 399
+        },
+        "gitdag": {
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQFAAADOvwCAAAAAfwAAAAaAAADOgAAAM8A/////AIAAAAC+wAAAAYATABvAGcBAAAAGgAAALQAAABuAP////sAAAAIAEQAaQBmAGYBAAAA0QAAAoMAAABeAP///wAAAAEAAAI4AAADOvwCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAGoA////+wAAAAoARgBpAGwAZQBzAQAAABoAAAM6AAAAagD///8AAAAAAAADOgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "x": 0,
+            "y": 29,
+            "maximized": false,
+            "lock_layout": true,
+            "width": 1600,
+            "height": 852,
+            "count": 1000
+        },
+        "browser": {
+            "maximized": false,
+            "width": 720,
+            "x": 52,
+            "y": 25,
+            "height": 420
+        }
+    },
+    "bookmarks": []
+}
