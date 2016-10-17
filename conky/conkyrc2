@@ -1,4 +1,5 @@
 # MADE BY MQZABIN. PLEASE KEEP THE CREDITS
+# MODIFIED by Spookcity
 
 background yes
 update_interval 2
@@ -7,8 +8,8 @@ no_buffers yes
 imlib_cache_size 10
 
 # WINDOW ESPECIFICATIONS
-gap_x 1150
-gap_y -210
+gap_x 1160
+gap_y -165
 minimum_size 440 768
 maximum_width 440
 own_window yes
@@ -50,9 +51,9 @@ TEXT
 
 # IMAGES
 ${image ~/.conky/images/arch_linux1.png -p 235,5 -s 80x80}\
-${image ~/.conky/images/process-bg.png -p 216,521 -s 220x210}\
-${image ~/.conky/images/cpu-bg.png -p 216,310 -s 220x65}\
-${image ~/.conky/images/cpu-bg.png -p 216,100 -s 220x85}\
+${image ~/.conky/images/process-bg.png -p 216,519 -s 220x210}\
+${image ~/.conky/images/cpu-bg.png -p 216,310 -s 220x60}\
+${image ~/.conky/images/cpu-bg.png -p 216,100 -s 220x80}\
 ${image ~/.conky/images/disk-bg.png -p 216,763 -s 220x55}\
 
 # INFOS
@@ -61,9 +62,9 @@ ${goto 320}${voffset }${font Droid Sans :size=16}${color4}Arch${color}${color2}L
 
 # SYS
 ${goto 288}${voffset 8}${color1}${font Droid Sans :size=10}FILE SYSTEM${color}
-${goto 220}${color2}${font Droid Sans :size=10}Root -${goto 273}${fs_used /}${goto 395}${fs_size /}${color}
-${goto 220}${color2}${font Droid Sans :size=10}Home -${goto 269} ${fs_used /home}${goto 395}${fs_size /home}${color}
-${goto 220}${color2}${font Droid Sans :size=10}Stuff -${goto 274}${fs_used /mnt/Ricks_Stuff}${goto 395}${fs_size /mnt/Ricks_Stuff}${color}
+${goto 220}${color1}${font Droid Sans :size=10}Root ${goto 273}${voffset }${goto 270}${color2}${fs_bar 7,70 /}${goto 350}${voffset -2 }${color}${color1}${fs_used /}/${fs_size /}${color}
+${goto 220}${color1}${font Droid Sans :size=10}Home ${goto 269}${voffset }${goto 270}${color2}${fs_bar 7,70 /home}${goto 350}${voffset -2 }${color}${color1}${fs_used /home}/${fs_size /home}${color}
+${goto 220}${color1}${font Droid Sans :size=10}Stuff ${goto 270}${color1}${voffset }${color2}${fs_bar 7,70 /mnt/Ricks_Stuff}${goto 350}${voffset -2 }${color}${color1}${fs_used /mnt/Ricks_Stuff}/${fs_size /mnt/Ricks_Stuff}${color}
 # CONNECTION
 
 ${voffset -3}${goto 236}${font Droid Sans :size=10}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 332}    Down ${color1}${downspeed wlp3s0}
@@ -78,8 +79,8 @@ ${voffset -16}${goto 225}${color1}${font Droid Sans :size=8}CPU 1:${color}
 ${voffset 7}${goto 225}${color1}${font Droid Sans :size=8}CPU 2:${color}
 
 
-${voffset -7}${goto 225}${color1}${font Droid Sans :size=10}RAM:${color}
-${voffset 4}${goto 222}${color1}Uptime:${font}${color}
+${voffset -7}${goto 234}${color2}${font Droid Sans :size=10}RAM:${color}
+${voffset 4}${goto 234}${color2}Uptime:${font}${color}
 ${voffset -95}${alignr 18}${color1}${font Droid Sans :size=8}${cpu cpu1}%${color}
 ${voffset 6}${alignr 18}${color1}${cpu cpu2}%${color}
 ${voffset 22}${alignr 10}${font Droid Sans :size=10}${color1}${memperc}%${color}
@@ -87,7 +88,7 @@ ${voffset 4}${alignr }${color1}${uptime_short}${color}
 ${voffset -97}${goto 277}${color2}${cpubar cpu1 9, 110}${color}
 ${voffset 2}${goto 277}${color2}${cpubar cpu2 9, 110}${color}
 ${voffset 19}${goto 284}${color1}${mem} / ${memmax}${font}${color}
-${voffset 40}${goto 232}${loadgraph 40,200 8cbc65 8cbc65 -l}
+${voffset 40}${goto 215}${loadgraph 40,220 8cbc65 8cbc65 -l}
 
 # PROCESS
 ${color1}${font Droid Sans :size=8}${voffset 35}${goto 222}${top_mem name 1}
@@ -125,13 +126,9 @@ ${voffset -13}${goto 306}RAM (%)
 ${voffset -14}${alignr 24}RAM${color}${font}
 
 # DISK
-${voffset 220}${goto 222}${color1}${font Droid Sans :size=10}System${color}
-${voffset 2}${goto 222}${color1}Home${color}
-${voffset -36}${goto 275}${color2}${fs_bar 8,60 /}${color}
-${voffset 2}${goto 275}${color2}${fs_bar 8,60 /home}${color}
-${voffset -40}${alignr 12}${color1}${fs_used /}/${fs_size /}${color}
-${voffset 3}${alignr 12}${color1}${fs_used /home}/${fs_size /home}${font}${color}
-
+${voffset 215}${goto 308}${color1}${font Droid Sans :size=10}SWAP${color}
+${voffset -4}${goto 220}${font Droid Sans :size=8}${color1}Used: $swap ${color2}  ${swapbar 8, 110}${color}       ${color1}${swapperc}%${color}
+${voffset 7}${goto 220}${font Droid Sans :size=8}${color1}Total:${goto 395} ${swapmax}${color}
 # DATE
  #${voffset 45}${font Droid Sans :size=10}${alignr 32}${color1}${time %H:%M}${color}
  #${voffset -2}${alignr 15}${color1}${time %a, %b %d}${font}${color}
