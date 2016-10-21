@@ -10,17 +10,17 @@
     <focusNew>yes</focusNew>
     <!-- always try to focus new windows when they appear. other rules do
        apply -->
-    <followMouse>no</followMouse>
+    <followMouse>yes</followMouse>
     <!-- move focus to a window when you move the mouse into it -->
     <focusLast>yes</focusLast>
     <!-- focus the last used window when changing desktops, instead of the one
        under the mouse pointer. when followMouse is enabled -->
-    <underMouse>no</underMouse>
+    <underMouse>yes</underMouse>
     <!-- move focus under the mouse, even when the mouse is not moving -->
-    <focusDelay>200</focusDelay>
+    <focusDelay>180</focusDelay>
     <!-- when followMouse is enabled, the mouse must be inside the window for
        this many milliseconds (1000 = 1 sec) before moving focus to it -->
-    <raiseOnFocus>no</raiseOnFocus>
+    <raiseOnFocus>yes</raiseOnFocus>
     <!-- when followMouse is enabled, and a window is given focus by moving the
        mouse into it, also raise the window -->
   </focus>
@@ -128,7 +128,7 @@
     <name>desktop 2</name>
     -->
     </names>
-    <popupTime>875</popupTime>
+    <popupTime>0</popupTime>
     <!-- The number of milliseconds to show the popup for when switching
        desktops.  Set this to 0 to disable the popup. -->
   </desktops>
@@ -234,22 +234,22 @@
         <command>rtile.rb --swap</command>
       </action>
     </keybind>
-    <keybind key="S-W-8">
+    <keybind key="W-Up">
       <action name="Execute">
         <command>rtile.rb --grow-up</command>
       </action>
     </keybind>
-    <keybind key="S-W-2">
+    <keybind key="W-Down">
       <action name="Execute">
         <command>rtile.rb --grow-down</command>
       </action>
     </keybind>
-    <keybind key="S-W-4">
+    <keybind key="W-Left">
       <action name="Execute">
         <command>rtile.rb --grow-left</command>
       </action>
     </keybind>
-    <keybind key="S-W-6">
+    <keybind key="W-Right">
       <action name="Execute">
         <command>rtile.rb --grow-right</command>
       </action>
@@ -306,7 +306,7 @@
     </keybind>
     <keybind key="W-0">
       <action name="Execute">
-        <command>rtile.rb --binary</command>
+        <command>rtile.rb --all</command>
       </action>
     </keybind>
     <keybind key="W-i">
@@ -445,9 +445,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>clementine</name>
+          <name>ncmpcpp</name>
         </startupnotify>
-        <command>clementine</command>
+        <command>terminator --layout=ncmpcpp  -e ncmpcpp</command>
       </action>
     </keybind>
     <keybind key="W-a">
@@ -494,8 +494,8 @@
     </keybind>
     <keybind key="A-space">
       <action name="Execute">
-        <name>dmeun</name>
-        <command>dmenu_run -i -b -fn 'Comfortaa:size=10.5' -nb 'black' -nf '#3972ac' -sb '#003399' -sf 'white'</command>
+        <name>Rofi</name>
+        <command>rofi -show run</command>
       </action>
     </keybind>
     <keybind key="W-x">

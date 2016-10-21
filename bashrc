@@ -5,7 +5,7 @@
 #[[ $- != *i* ]] && return
 
 export EDITOR=vim
-#export PATH=:~/bin:/usr/local/sbin:/usr/local/bin:/usr/local/lib:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/outproc/bin
+#export PATH=:~/bin:~/scripts:/usr/local/sbin:/usr/local/bin:/usr/local/lib:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/outproc/bin
 JAVA_HOME=/usr/lib/jvm/java-8-jdk/jdk/bin/java
 
 # Android tools
@@ -14,9 +14,10 @@ export PATH=${PATH}:/opt/android-sdk
 export PATH=${PATH}:/opt/android-sdk/platform-tools
 
 # Android Toolchain Path
-export ARCH=arm
+#export ARCH=arm
 #export CROSS_COMPILE=/opt/toolchains/arm-linux-androideabi-6.1-linaro/bin
-export CC=${CROSS_COMPILE}-gcc #export CXX=${CROSS_COMPILE}-g++
+export CC=${CROSS_COMPILE}-gcc 
+#export CXX=${CROSS_COMPILE}-g++
 #export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6144m"
 
 
@@ -25,5 +26,4 @@ export CCACHE_DIR=/mnt/Ricks_Stuff/.ccache
 STAGING_RT_PRIORITY_BASE=15
 STAGING_RT_PRIORITY_SERVER=95
 source /usr/bin/virtualenvwrapper.sh
-archey
 

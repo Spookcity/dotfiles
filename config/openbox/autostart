@@ -15,6 +15,7 @@
 compton --config /home/rick/.config/compton.conf -b &
 sh ~/.fehbg &
 tint2 -c /home/rick/.config/tint2/grey_tint2rc &
+mpd &
 #cadence --minimized &
 paramano &
 alsa-tray &

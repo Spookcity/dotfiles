@@ -8,8 +8,8 @@ no_buffers yes
 imlib_cache_size 10
 
 # WINDOW ESPECIFICATIONS
-gap_x 1160
-gap_y -165
+gap_x 1155
+gap_y -160
 minimum_size 440 768
 maximum_width 440
 own_window yes
@@ -88,7 +88,7 @@ ${voffset 4}${alignr }${color1}${uptime_short}${color}
 ${voffset -97}${goto 277}${color2}${cpubar cpu1 9, 110}${color}
 ${voffset 2}${goto 277}${color2}${cpubar cpu2 9, 110}${color}
 ${voffset 19}${goto 284}${color1}${mem} / ${memmax}${font}${color}
-${voffset 40}${goto 215}${loadgraph 40,220 8cbc65 8cbc65 -l}
+${voffset 40}${goto 218}${loadgraph 40,220 8cbc65 8cbc65 -l}
 
 # PROCESS
 ${color1}${font Droid Sans :size=8}${voffset 35}${goto 222}${top_mem name 1}
@@ -126,7 +126,7 @@ ${voffset -13}${goto 306}RAM (%)
 ${voffset -14}${alignr 24}RAM${color}${font}
 
 # DISK
-${voffset 215}${goto 308}${color1}${font Droid Sans :size=10}SWAP${color}
+${voffset 215}${goto 310}${color1}${font Droid Sans :size=10}SWAP${color}
 ${voffset -4}${goto 220}${font Droid Sans :size=8}${color1}Used: $swap ${color2}  ${swapbar 8, 110}${color}       ${color1}${swapperc}%${color}
 ${voffset 7}${goto 220}${font Droid Sans :size=8}${color1}Total:${goto 395} ${swapmax}${color}
 # DATE
@@ -134,4 +134,4 @@ ${voffset 7}${goto 220}${font Droid Sans :size=8}${color1}Total:${goto 395} ${sw
  #${voffset -2}${alignr 15}${color1}${time %a, %b %d}${font}${color}
 
 # PANEL
-${voffset  }${goto 65}${font Droid Sans :size=10}${color1}RAM: ${color}${color2}${mem}/${memmax} ${color}${color2}${membar 9, 60} ${memperc}%${color}      ${color1}CPU: ${color2}${cpubar cpu1 9, 60} ${cpu cpu0}%${color}${font}
+#${voffset  }${goto 70}${font Droid Sans :size=10}${color1}RAM: ${color}${color2}${mem}/${memmax} ${color}${color2}${membar 9, 60} ${memperc}%${color}      ${color1}CPU: ${color2}${cpubar cpu1 9, 60} ${cpu cpu0}%${color}${font}

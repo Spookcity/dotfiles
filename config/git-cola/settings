@@ -1,59 +1,59 @@
 {
-    "recent": [
-        "/home/rick/dotfiles/oh-my-zsh",
-        "/home/rick/dotfiles",
-        "/home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte"
-    ],
+    "bookmarks": [],
     "gui_state": {
         "push": {
-            "maximized": false,
             "width": 666,
             "height": 420,
             "y": 29,
-            "x": 467
+            "x": 467,
+            "maximized": false
         },
         "mainview": {
-            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPZAAAC1vwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAAB4AAACOAAAAZQD////7AAAACABEAGkAZgBmAQAAAK8AAAJFAAAAIAD///8AAAABAAACZAAAAtb8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAeAAAC1gAAAHAA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABwAAAAZgAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAogAAACNAAAAcAD///8AAAADAAAGQAAAAF38AQAAAAH8AAAAAAAABkAAAACJAP////oAAAAAAQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAQAAAAD/////AAAAiQD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAjAD///8AAAAAAAAC1gAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "x": 0,
-            "y": 29,
-            "lock_layout": true,
-            "maximized": false,
             "width": 1600,
+            "lock_layout": true,
+            "x": 0,
+            "maximized": false,
             "height": 852,
-            "show_status_filter": false
+            "show_status_filter": false,
+            "y": 29,
+            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPDAAAC0fwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAACAAAACMAAAAZQD////7AAAACABEAGkAZgBmAQAAAK8AAAJCAAAAIAD///8AAAABAAACegAAAtH8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAgAAAC0QAAAGQA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABwAAAAZgAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAogAAACNAAAAcAD///8AAAADAAAGQAAAAGD8AQAAAAH8AAAAAAAABkAAAACUAP////oAAAAAAQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAQAAAAD/////AAAAlAD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAlAD///8AAAAAAAAC0QAAAAQAAAAEAAAACAAAAAj8AAAAAA=="
         },
         "pull": {
-            "x": 467,
-            "y": 29,
-            "maximized": false,
             "width": 666,
+            "rebase": false,
+            "x": 467,
+            "maximized": false,
             "height": 420,
-            "rebase": false
+            "y": 29
         },
         "startupdialog": {
-            "maximized": false,
             "width": 800,
             "height": 450,
             "y": 206,
-            "x": 399
+            "x": 399,
+            "maximized": false
         },
         "gitdag": {
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQFAAADOvwCAAAAAfwAAAAaAAADOgAAAM8A/////AIAAAAC+wAAAAYATABvAGcBAAAAGgAAALQAAABuAP////sAAAAIAEQAaQBmAGYBAAAA0QAAAoMAAABeAP///wAAAAEAAAI4AAADOvwCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAGoA////+wAAAAoARgBpAGwAZQBzAQAAABoAAAM6AAAAagD///8AAAAAAAADOgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "x": 0,
-            "y": 29,
-            "maximized": false,
-            "lock_layout": true,
             "width": 1600,
+            "lock_layout": true,
+            "x": 0,
+            "maximized": false,
             "height": 852,
+            "y": 29,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQFAAADOvwCAAAAAfwAAAAaAAADOgAAAM8A/////AIAAAAC+wAAAAYATABvAGcBAAAAGgAAALQAAABuAP////sAAAAIAEQAaQBmAGYBAAAA0QAAAoMAAABeAP///wAAAAEAAAI4AAADOvwCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAGoA////+wAAAAoARgBpAGwAZQBzAQAAABoAAAM6AAAAagD///8AAAAAAAADOgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
             "count": 1000
         },
         "browser": {
-            "maximized": false,
             "width": 720,
-            "x": 52,
+            "height": 420,
             "y": 25,
-            "height": 420
+            "x": 52,
+            "maximized": false
         }
     },
-    "bookmarks": []
+    "recent": [
+        "/home/rick/dotfiles",
+        "/home/rick/dotfiles/oh-my-zsh",
+        "/home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte"
+    ]
 }

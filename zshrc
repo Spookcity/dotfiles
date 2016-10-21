@@ -19,8 +19,11 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(ip time)
 # CASE_SENSITIVE="true"
 
 # Config history
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
+setopt SHARE_HISTORY 
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS 
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -65,20 +68,21 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Plugins
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
 
 autoload -U compinit && compinit
 # Other
 
 source $ZSH/oh-my-zsh.sh
 source /usr/bin/virtualenvwrapper.sh
-# User configuration
 
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
+export CC=${CROSS_COMPILE}/usr/bin/gcc
+export CXX=${CROSS_COMPILE}/usr/bin/g++
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
