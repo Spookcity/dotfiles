@@ -49,7 +49,7 @@ gaps outer 0
 smart_borders on
 new_window none
 
-bindsym $mod+g exec ~/scripts/toggle_gaps.sh
+bindsym $mod+g exec $HOME/.config/i3/scripts/toggle_gaps.sh
 #edit gaps mode
 #########################################################################
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -99,8 +99,8 @@ floating_maximum_size -1 x -1
 
 
 floating_modifier $mod
-bindsym $mod+Return exec --no-startup-id exec $HOME/scripts/fullscreen_wrap.sh $editor
-bindsym $mod+Shift+Return exec --no-startup-id exec $HOME/scripts/fullscreen_wrap.sh $editor --name __scratchpad
+bindsym $mod+Return exec --no-startup-id exec $HOME/.config/i3/scripts/fullscreen_wrap.sh $editor
+bindsym $mod+Shift+Return exec --no-startup-id exec $HOME/.config/i3/scripts/fullscreen_wrap.sh $editor --name __scratchpad
 
 bindsym $mod+q kill
 
@@ -162,13 +162,13 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/volume_control.py down 5
-bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/volume_control.py up 5
-bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/volume_control.py toggle
-bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/scripts/fullscreen_wrap.sh pavucontrol -t 3"
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/.config/i3/scripts/volume_control.py down 5
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/.config/i3/scripts/volume_control.py up 5
+bindsym XF86AudioMute exec --no-startup-id $HOME/.config/i3/scripts/volume_control.py toggle
+bindsym $mod+Shift+v exec --no-startup-id "killall pavucontrol; $HOME/.config/i3/scripts/fullscreen_wrap.sh pavucontrol -t 3"
 
-bindsym XF86MonBrightnessDown exec --no-startup-id ${HOME}/scripts/backlight.sh -dec 10
-bindsym XF86MonBrightnessUp exec --no-startup-id ${HOME}/scripts/backlight.sh -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -inc 10
 
 
 bindsym $mod+Shift+c reload
@@ -191,7 +191,7 @@ mode "$mode_resize" {
     bindsym Shift+Up resize shrink height 20 px or 5 ppt
     bindsym Shift+Right resize grow width 20 px or 5 ppt
 
-    bindsym s mode "default", exec --no-startup-id $HOME/scripts/slopsize.sh
+    bindsym s mode "default", exec --no-startup-id $HOME/.config/i3/scripts/slopsize.sh
 
     bindsym 1 mode "default", resize set 1000 600
     bindsym 2 mode "default", resize set 1500 600
@@ -204,9 +204,9 @@ mode "$mode_resize" {
 set $mode_power power
 bindsym Mod1+Control+l mode "$mode_power"
 mode "$mode_power" {
-    bindsym e mode "default", exec --no-startup-id $HOME/.config/i3/i3exit logout
-    bindsym r mode "default", exec --no-startup-id $HOME/.config/i3/i3exit reboot
-    bindsym p mode "default", exec --no-startup-id $HOME/.config/i3/i3exit shutdown
+    bindsym e mode "default", exec --no-startup-id $HOME/.config/i3/scripts/i3exit logout
+    bindsym r mode "default", exec --no-startup-id $HOME/.config/i3/scripts/i3exit reboot
+    bindsym p mode "default", exec --no-startup-id $HOME/.config/i3/scripts/i3exit shutdown
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -216,48 +216,26 @@ mode "$mode_power" {
 set $mode_brightness brightness
 bindsym $mod+Shift+b mode "$mode_brightness"
 mode "$mode_brightness" {
-    bindsym plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 10
-    bindsym minus exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -dec 10
-    bindsym Shift+plus  exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -inc 1
-    bindsym Shift+minus exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -dec 1
+    bindsym plus  exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -inc 10
+    bindsym minus exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -dec 10
+    bindsym Shift+plus  exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -inc 1
+    bindsym Shift+minus exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -dec 1
 
-    bindsym 0     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 100
-    bindsym 1     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 10
-    bindsym 2     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 20
-    bindsym 3     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 30
-    bindsym 4     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 40
-    bindsym 5     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 50
-    bindsym 6     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 60
-    bindsym 7     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 70
-    bindsym 8     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 80
-    bindsym 9     mode "default", exec --no-startup-id ${HOME}/scripts/backlight.sh -time 50 -set 90
+    bindsym 0     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 100
+    bindsym 1     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 10
+    bindsym 2     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 20
+    bindsym 3     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 30
+    bindsym 4     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 40
+    bindsym 5     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 50
+    bindsym 6     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 60
+    bindsym 7     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 70
+    bindsym 8     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 80
+    bindsym 9     mode "default", exec --no-startup-id $HOME/.config/i3/scripts/backlight.sh -time 50 -set 90
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 
-# fix graphics glitch
-new_window none
-
-for_window [window_role="pop-up"] floating enable
-for_window [window_role="bubble"] floating enable
-for_window [window_role="task_dialog"] floating enable
-for_window [window_role="Preferences"] floating enable
-
-for_window [window_type="dialog"] floating enable
-for_window [window_type="menu"] floating enable
-
-
-#for_window [instance="sun-awt-X11-XFramePeer"] floating enable
-for_window [instance="__scratchpad"] floating enable
-
-for_window [class="(?i)pavucontrol"] floating enable, move position mouse
-for_window [class="(?i)pavucontrol" instance="pavucontrol-bar"] move down 34px
-
-#assign [class="(?i)chrome"]                       $ws1
-assign [class="(?i)eclipse" window_type="splash"] $ws3
-assign [class="(?i)eclipse" window_type="normal"] $ws3
-assign [class="(?i)thunderbird"]                  $ws9
 
 bar {
 #    verbose yes

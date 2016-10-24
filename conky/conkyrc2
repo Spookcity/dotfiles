@@ -68,7 +68,7 @@ ${goto 220}${color1}${font Droid Sans :size=10}Stuff ${goto 270}${color1}${voffs
 # CONNECTION
 
 ${voffset -3}${goto 236}${font Droid Sans :size=10}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 332}    Down ${color1}${downspeed wlp3s0}
-${voffset 10}${goto 222}${upspeedgraph wlp3s0 26,80 8cbc65 8cbc65}${goto 332}${downspeedgraph wlp3s0 26,80 8cbc65 8cbc65}
+${voffset 10}${goto 217}${upspeedgraph wlp3s0 26,80 8cbc65 8cbc65}${goto 332}    ${downspeedgraph wlp3s0 26,80 8cbc65 8cbc65}
 ${voffset 9}${goto 222}${color2}Sent ${color1}${totalup wlp3s0}${color2}${goto 332}Received ${color1}${totaldown wlp3s0}${font}
 
 
@@ -88,10 +88,11 @@ ${voffset 4}${alignr }${color1}${uptime_short}${color}
 ${voffset -97}${goto 277}${color2}${cpubar cpu1 9, 110}${color}
 ${voffset 2}${goto 277}${color2}${cpubar cpu2 9, 110}${color}
 ${voffset 19}${goto 284}${color1}${mem} / ${memmax}${font}${color}
+
 ${voffset 40}${goto 218}${loadgraph 40,220 8cbc65 8cbc65 -l}
 
 # PROCESS
-${color1}${font Droid Sans :size=8}${voffset 35}${goto 222}${top_mem name 1}
+${color1}${font Droid Sans :size=8}${voffset 21}${goto 222}${top_mem name 1}
 ${voffset 4}${goto 222}${top_mem name 2}
 ${voffset 4}${goto 222}${top_mem name 3}
 ${voffset 4}${goto 222}${top_mem name 4}
@@ -127,7 +128,7 @@ ${voffset -14}${alignr 24}RAM${color}${font}
 
 # DISK
 ${voffset 215}${goto 310}${color1}${font Droid Sans :size=10}SWAP${color}
-${voffset -4}${goto 220}${font Droid Sans :size=8}${color1}Used: $swap ${color2}  ${swapbar 8, 110}${color}       ${color1}${swapperc}%${color}
+${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 270} ${swapbar 8, 110}${color} ${goto 405}${color1}${swapperc}%${color}
 ${voffset 7}${goto 220}${font Droid Sans :size=8}${color1}Total:${goto 395} ${swapmax}${color}
 # DATE
  #${voffset 45}${font Droid Sans :size=10}${alignr 32}${color1}${time %H:%M}${color}

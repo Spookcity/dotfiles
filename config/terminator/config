@@ -9,26 +9,32 @@
 [keybindings]
 [layouts]
   [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
   [[ncmpcpp]]
     [[[child0]]]
-      position = 0:24
-      type = Window
       order = 0
       parent = ""
-      size = 1580, 350
+      position = 0:28
+      size = 1600, 350
+      type = Window
 [plugins]
 [profiles]
   [[default]]
     background_color = "#1f1f1f"
-    background_darkness = 0.9
+    background_darkness = 0.85
     background_image = None
     background_type = transparent
     cursor_color = "#a5a2a2"
     cursor_shape = ibeam
-    font = Roboto Mono 10
+    font = Hack 9.5
     foreground_color = "#c0b18b"
     palette = "#543d3e:#d17b49:#7b8748:#af865a:#686a6a:#775759:#6d715e:#c0b18b:#543d3e:#d17b49:#7b8748:#af865a:#686a6a:#775759:#6d715e:#c0b18b"
-    scrollback_lines = 5000
+    scrollback_lines = 7000
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False

@@ -1,7 +1,7 @@
 " don't bother with vi compatibility
 set nocompatible
 
-colorscheme base16-shapeshifter
+colorscheme twilight256
 
 " Vim-Air Theme
 let g:airline_theme='serene'
