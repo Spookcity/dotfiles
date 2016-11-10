@@ -31,7 +31,7 @@
     background_type = transparent
     cursor_color = "#a5a2a2"
     cursor_shape = ibeam
-    font = Hack 9.5
+    font = Inconsolata for Powerline Medium 11
     foreground_color = "#c0b18b"
     palette = "#543d3e:#d17b49:#7b8748:#af865a:#686a6a:#775759:#6d715e:#c0b18b:#543d3e:#d17b49:#7b8748:#af865a:#686a6a:#775759:#6d715e:#c0b18b"
     scrollback_lines = 7000

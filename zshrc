@@ -85,4 +85,4 @@ export CC=${CROSS_COMPILE}/usr/bin/gcc
 export CXX=${CROSS_COMPILE}/usr/bin/g++
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+ export SSH_KEY_PATH="~/.ssh/id_rsa"

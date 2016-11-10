@@ -6,7 +6,7 @@
 
 export EDITOR=vim
 #export PATH=:~/bin:~/scripts:/usr/local/sbin:/usr/local/bin:/usr/local/lib:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/outproc/bin
-JAVA_HOME=/usr/lib/jvm/java-8-jdk/jdk/bin/java
+JAVA_HOME=/usr/lib/jvm/java-7-jdk/bin/java
 
 # Android tools
 export ANDROID_HOME=/opt/android-sdk
@@ -14,10 +14,10 @@ export PATH=${PATH}:/opt/android-sdk
 export PATH=${PATH}:/opt/android-sdk/platform-tools
 
 # Android Toolchain Path
-#export ARCH=arm
+export ARCH=arm
 #export CROSS_COMPILE=/opt/toolchains/arm-linux-androideabi-6.1-linaro/bin
 export CC=${CROSS_COMPILE}-gcc 
-#export CXX=${CROSS_COMPILE}-g++
+export CXX=${CROSS_COMPILE}-g++
 #export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6144m"
 
 

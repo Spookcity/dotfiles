@@ -38,3 +38,5 @@
 	prompt = false
 [merge]
 	tool = xxdiff
+[color]
+	ui = auto

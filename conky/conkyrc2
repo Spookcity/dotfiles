@@ -62,9 +62,9 @@ ${goto 320}${voffset }${font Droid Sans :size=16}${color4}Arch${color}${color2}L
 
 # SYS
 ${goto 288}${voffset 8}${color1}${font Droid Sans :size=10}FILE SYSTEM${color}
-${goto 220}${color1}${font Droid Sans :size=10}Root ${goto 273}${voffset }${goto 270}${color2}${fs_bar 7,70 /}${goto 350}${voffset -2 }${color}${color1}${fs_used /}/${fs_size /}${color}
-${goto 220}${color1}${font Droid Sans :size=10}Home ${goto 269}${voffset }${goto 270}${color2}${fs_bar 7,70 /home}${goto 350}${voffset -2 }${color}${color1}${fs_used /home}/${fs_size /home}${color}
-${goto 220}${color1}${font Droid Sans :size=10}Stuff ${goto 270}${color1}${voffset }${color2}${fs_bar 7,70 /mnt/Ricks_Stuff}${goto 350}${voffset -2 }${color}${color1}${fs_used /mnt/Ricks_Stuff}/${fs_size /mnt/Ricks_Stuff}${color}
+${goto 220}${color1}${font Droid Sans :size=10}Root ${goto 273}${voffset }${goto 270}${color2}${fs_bar 7,70 /}${goto 350}${voffset -2 }${color}${color2}${fs_used /}${color1}/${fs_size /}${color}
+${goto 220}${color1}${font Droid Sans :size=10}Home ${goto 269}${voffset }${goto 270}${color2}${fs_bar 7,70 /home}${goto 350}${voffset -2 }${color}${color2}${fs_used /home}${color1}/${fs_size /home}${color}
+${goto 220}${color1}${font Droid Sans :size=10}Stuff ${goto 270}${color1}${voffset }${color2}${fs_bar 7,70 /mnt/Ricks_Stuff}${goto 350}${voffset -2 }${color}${color2}${fs_used /mnt/Ricks_Stuff}${color1}/${fs_size /mnt/Ricks_Stuff}${color}
 # CONNECTION
 
 ${voffset -3}${goto 236}${font Droid Sans :size=10}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 332}    Down ${color1}${downspeed wlp3s0}
@@ -127,8 +127,8 @@ ${voffset -13}${goto 306}RAM (%)
 ${voffset -14}${alignr 24}RAM${color}${font}
 
 # DISK
-${voffset 215}${goto 310}${color1}${font Droid Sans :size=10}SWAP${color}
-${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 270} ${swapbar 8, 110}${color} ${goto 405}${color1}${swapperc}%${color}
+${voffset 215}${goto 311}${color1}${font Droid Sans :size=10}SWAP${color}
+${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 271} ${swapbar 8, 110}${color} ${goto 405}${color1}${swapperc}%${color}
 ${voffset 7}${goto 220}${font Droid Sans :size=8}${color1}Total:${goto 395} ${swapmax}${color}
 # DATE
  #${voffset 45}${font Droid Sans :size=10}${alignr 32}${color1}${time %H:%M}${color}
