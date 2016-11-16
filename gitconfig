@@ -1,6 +1,6 @@
 [user]
 	email = spookcity138@gmail.com
-	name = Rick
+	name = Rick M.
 [gui]
 	editor = geany
 	fontui = -family \"Droid Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
@@ -11,7 +11,7 @@
 	recentrepo = /home/rick/dotfiles
 	recentrepo = /home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte
 [diff]
-	tool = home/rick/bin/meld.sh
+	tool = /home/rick/bin/meld.sh
 [color "branch"]
 
 	current = yellow reverse
@@ -40,3 +40,5 @@
 	tool = xxdiff
 [color]
 	ui = auto
+[credential]
+	helper = store --file /home/rick/.config/git/credentials

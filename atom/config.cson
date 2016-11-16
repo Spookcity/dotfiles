@@ -1,0 +1,31 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    automaticallyUpdate: false
+    disabledPackages: [
+      "wrap-guide"
+      "about"
+      "bookmarks"
+      "background-tips"
+      "language-clojure"
+      "language-mustache"
+      "language-sass"
+      "language-toml"
+      "metrics"
+      "spell-check"
+      "welcome"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    fontFamily: "Anonymous Pro"
+    invisibles: {}
+  "exception-reporting":
+    userId: "f1c7e011-796b-a89d-169a-17f103226992"
+  "tree-view-git-status":
+    autoToggle: false
+  welcome:
+    showOnStartup: false

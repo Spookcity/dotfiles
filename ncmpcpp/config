@@ -1,0 +1,76 @@
+mpd_host = "127.0.0.1"
+
+mpd_port = 6600
+
+mpd_music_dir = "/mnt/Samba/Music"
+
+mpd_crossfade_time = "5"
+startup_screen = browser
+#display_screens_numbers_on_start = yes
+# Display ..
+song_list_format = " $0$8$8%l$0$8 $1|$7 $7%a$7 $1|$7 $6%t$1 $R $1%y$1 $1%b$1"
+song_status_format = "{$8%a} $2»$8»$5» $b{$1%b}$/b"
+song_library_format = "{%n > }{%t}|{%f}"
+browser_sort_mode = "name"
+ignore_leading_the = "yes"
+browser_playlist_prefix = "$2plist »$9 "
+browser_sort_format = "{%a - }{%t}|{%f} {(%l)}"
+alternative_header_first_line_format = "{$b$1%t$9$/b}"
+alternative_header_second_line_format ="$0{%a} $b$8-$9$/b {%b}$9"
+song_columns_list_format = "$L(9)[black]{l} (30)[blue]{a} (30)[green]{b} (30)[magenta]{t}"
+
+default_find_mode = "wrapped" (wrapped/normal)
+default_tag_editor_pattern = "%n - %t"
+header_text_scrolling = "yes"
+jump_to_now_playing_song_at_start = "yes"
+
+playlist_display_mode = "classic" (classic/columns)
+browser_display_mode = "classic" (classic/columns)
+search_engine_display_mode = "classic" (classic/columns)
+
+# Now Playing ..
+now_playing_prefix = "$b>>"
+now_playing_suffix = "$/b"
+
+# Colors ..
+empty_tag_color = "red"
+statusbar_color = "red"
+state_line_color = "black"
+state_flags_color = "green"
+main_window_color = "green" 
+header_window_color = "blue"
+main_window_highlight_color = "blue"
+progressbar_elapsed_color = "cyan"
+progressbar_color = "black"
+alternative_ui_separator_color = "white"
+active_column_color = "white"
+active_window_border = "red"
+
+# Progress Bar ..
+progressbar_look = "▉▉▉"
+progressbar_boldness = "no"
+
+# Misc ..   
+display_bitrate = "yes"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+titles_visibility = "no"
+statusbar_visibility = "yes"
+empty_tag_marker=" -- ‼ -- " 
+mouse_support = "yes"
+mouse_list_scroll_whole_page = "no"
+header_visibility = "no"
+display_remaining_time = "no"
+ask_before_clearing_playlists = "no"
+discard_colors_if_item_is_selected = "yes"
+song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+
+# Visualizer ..
+visualizer_in_stereo = "yes"
+visualizer_sync_interval = "30"
+visualizer_output_name = "Pipe"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_type = "wave" (spectrum/wave)
+visualizer_color = "green"
+visualizer_look = "∙▋"
+

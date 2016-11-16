@@ -46,7 +46,7 @@ DISABLE_AUTO_UPDATE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-#ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 #COMPLETION_WAITING_DOTS="true"
@@ -85,4 +85,4 @@ export CC=${CROSS_COMPILE}/usr/bin/gcc
 export CXX=${CROSS_COMPILE}/usr/bin/g++
 
 # ssh
- export SSH_KEY_PATH="~/.ssh/id_rsa"
+# export SSH_KEY_PATH="~/.ssh/id_rsa"

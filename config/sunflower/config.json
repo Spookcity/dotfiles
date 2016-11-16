@@ -38,7 +38,7 @@
         "right_directories": [
             "/mnt/Ricks_Stuff"
         ], 
-        "row_hinting": true, 
+        "row_hinting": false, 
         "search_modifier": "000", 
         "second_extension": false, 
         "selection_color": "#bfe909781f22", 
@@ -53,7 +53,7 @@
     "multiple_instances": false, 
     "network_path_completion": true, 
     "operations": {
-        "automount_insert": false, 
+        "automount_insert": true, 
         "automount_start": true, 
         "follow_symlink": false, 
         "hide_on_minimize": false, 

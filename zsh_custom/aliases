@@ -2,5 +2,16 @@ alias upgrade='sudo pacman -Syu'
 alias yup='yaourt -Syua'
 alias abs='sudo abs'
 alias orphan='pacman -Qtd'
-alias virtual='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env'
 alias y='yaourt'
+
+alias virtual='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env'
+
+alias log='adb logcat -d > logcat.txt'
+alias device='adb devices'
+
+alias java7='sudo archlinux-java set java-7-jdk'
+alias java8='sudo archlinux-java set java-8-jdk'
+alias ajs='archlinux-java status'
+
+alias c='clear'
+alias q='exit'
