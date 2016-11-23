@@ -14,17 +14,28 @@
       "metrics"
       "spell-check"
       "welcome"
+      "grammar-selector"
     ]
     telemetryConsent: "no"
     themes: [
-      "atom-dark-ui"
-      "base16-tomorrow-dark-theme"
+      "seti-ui"
+      "seti-syntax"
     ]
   editor:
     fontFamily: "Anonymous Pro"
     invisibles: {}
+    scrollSensitivity: 50
   "exception-reporting":
     userId: "f1c7e011-796b-a89d-169a-17f103226992"
+  "git-diff":
+    showIconsInEditorGutter: true
+  "open-file-in":
+    applications: "sunflower.desktop"
+  "seti-ui":
+    compactView: true
+    themeColor: "Red"
+  tabs:
+    enableVcsColoring: true
   "tree-view-git-status":
     autoToggle: false
   welcome:
