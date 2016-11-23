@@ -2,7 +2,7 @@
 	email = spookcity138@gmail.com
 	name = Rick M.
 [gui]
-	editor = geany
+	editor = "env GTK_THEME=cathexis atom "
 	fontui = -family \"Droid Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	spellingdictionary = en_US
@@ -10,8 +10,6 @@
 	historybrowser = gitk
 	recentrepo = /home/rick/dotfiles
 	recentrepo = /home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte
-[diff]
-	tool = /home/rick/bin/meld.sh
 [color "branch"]
 
 	current = yellow reverse
@@ -42,3 +40,5 @@
 	ui = auto
 [credential]
 	helper = store --file /home/rick/.config/git/credentials
+[diff]
+	tool = diffuse 

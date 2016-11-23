@@ -1,64 +1,69 @@
 {
     "bookmarks": [],
     "gui_state": {
+        "gitdag": {
+            "y": 29,
+            "height": 852,
+            "width": 1600,
+            "count": 1000,
+            "x": 0,
+            "lock_layout": true,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQFAAADOvwCAAAAAfwAAAAaAAADOgAAAM8A/////AIAAAAC+wAAAAYATABvAGcBAAAAGgAAALQAAABuAP////sAAAAIAEQAaQBmAGYBAAAA0QAAAoMAAABeAP///wAAAAEAAAI4AAADOvwCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAGoA////+wAAAAoARgBpAGwAZQBzAQAAABoAAAM6AAAAagD///8AAAAAAAADOgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "maximized": false
+        },
         "fetch": {
             "height": 420,
             "x": 467,
-            "maximized": false,
-            "y": 28,
-            "width": 666
-        },
-        "pull": {
-            "x": 467,
-            "rebase": false,
-            "maximized": false,
-            "y": 29,
             "width": 666,
-            "height": 420
-        },
-        "startupdialog": {
-            "height": 450,
-            "x": 399,
             "maximized": false,
-            "y": 206,
-            "width": 800
-        },
-        "gitdag": {
-            "x": 0,
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQFAAADOvwCAAAAAfwAAAAaAAADOgAAAM8A/////AIAAAAC+wAAAAYATABvAGcBAAAAGgAAALQAAABuAP////sAAAAIAEQAaQBmAGYBAAAA0QAAAoMAAABeAP///wAAAAEAAAI4AAADOvwCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAGoA////+wAAAAoARgBpAGwAZQBzAQAAABoAAAM6AAAAagD///8AAAAAAAADOgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "lock_layout": true,
-            "y": 29,
-            "width": 1600,
-            "count": 1000,
-            "height": 852,
-            "maximized": false
+            "y": 28
         },
         "browser": {
             "height": 420,
             "x": 52,
+            "width": 720,
             "maximized": false,
-            "y": 25,
-            "width": 720
+            "y": 25
         },
-        "push": {
-            "x": 467,
-            "height": 420,
-            "maximized": false,
+        "pull": {
             "y": 29,
-            "width": 666
+            "height": 420,
+            "width": 666,
+            "x": 467,
+            "maximized": false,
+            "rebase": false
         },
         "mainview": {
-            "x": 0,
-            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPJAAADMfwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAACAAAAEUAAAAZQD////7AAAACABEAGkAZgBmAQAAATcAAAIaAAAAIAD///8AAAABAAACdAAAAzH8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAgAAADMQAAAHAA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABwAAAAZgAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAogAAACNAAAAcAD///8AAAADAAAGQAAAAP/8AQAAAAH8AAAAAAAABkAAAAAAAP////r/////AQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAAAAAAD/////AAAAkAD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAlAD///8AAAAAAAADMQAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "maximized": true,
             "y": 28,
-            "width": 1600,
             "height": 849,
+            "show_status_filter": false,
+            "width": 1600,
             "lock_layout": true,
-            "show_status_filter": false
+            "maximized": true,
+            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPHAAADMfwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAACAAAAEUAAAAZQD////7AAAACABEAGkAZgBmAQAAATcAAAIaAAAAIAD///8AAAABAAACdgAAAzH8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAgAAADMQAAAHAA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABwAAAAZgAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAogAAACNAAAAcAD///8AAAADAAAGQAAAAH78AQAAAAH8AAAAAAAABkAAAAAAAP////r/////AQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAAAAAAD/////AAAAkAD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAlAD///8AAAAAAAADMQAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "x": 0
+        },
+        "startupdialog": {
+            "height": 450,
+            "x": 399,
+            "width": 800,
+            "maximized": false,
+            "y": 206
+        },
+        "push": {
+            "height": 420,
+            "x": 467,
+            "width": 666,
+            "maximized": false,
+            "y": 29
         }
     },
     "recent": [
-        "/home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte"
+        "/home/rick/dotfiles",
+        "/home/rick/android_dev/G800F_Trees-CM14/android_kernel_samsung_kminilte",
+        "/opt/toolchains/crosstool/arm-cortex_a7-linux-gnueabihf-UBER_6.2",
+        "/mnt/Ricks_Stuff/ZephyrOS_nougat_sources/.repo/manifests",
+        "/mnt/Ricks_Stuff/Slim_MM_sources/vendor/slim",
+        "/mnt/Ricks_Stuff/Slim_MM_sources/.repo/manifests"
     ]
 }

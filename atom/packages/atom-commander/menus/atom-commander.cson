@@ -1,0 +1,187 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  '.atom-commander': [
+    {
+      'label': 'Select'
+      'submenu': [
+        {
+          'label': 'All'
+          'command': 'atom-commander:select-all'
+        }
+        {
+          'label': 'None'
+          'command': 'atom-commander:select-none'
+        }
+        {
+          'label': 'Add'
+          'command': 'atom-commander:select-add'
+        }
+        {
+          'label': 'Remove'
+          'command': 'atom-commander:select-remove'
+        }
+        {
+          'label': 'Invert'
+          'command': 'atom-commander:select-invert'
+        }
+        {
+          'label': 'Folders'
+          'command': 'atom-commander:select-folders'
+        }
+        {
+          'label': 'Files'
+          'command': 'atom-commander:select-files'
+        }
+      ]
+    }
+    {
+      'label': 'Go'
+      'submenu': [
+        {
+          'label': 'Project'
+          'command': 'atom-commander:go-project'
+        }
+        {
+          'label': 'Editor'
+          'command': 'atom-commander:go-editor'
+        }
+        {
+          'label': 'Drive'
+          'command': 'atom-commander:go-drive'
+        }
+        {
+          'label': 'Root'
+          'command': 'atom-commander:go-root'
+        }
+        {
+          'label': 'Home'
+          'command': 'atom-commander:go-home'
+        }
+      ]
+    }
+    {
+      'label': 'Bookmarks'
+      'submenu': [
+        {
+          'label': 'Add'
+          'command': 'atom-commander:add-bookmark'
+        }
+        {
+          'label': 'Remove'
+          'command': 'atom-commander:remove-bookmark'
+        }
+        {
+          'label': 'Open'
+          'command': 'atom-commander:open-bookmark'
+        }
+      ]
+    }
+    {
+      'label': 'Servers'
+      'submenu': [
+        {
+          'label': 'Add'
+          'command': 'atom-commander:add-server'
+        }
+        {
+          'label': 'Remove'
+          'command': 'atom-commander:remove-server'
+        }
+        {
+          'label': 'Open'
+          'command': 'atom-commander:open-server'
+        }
+        {
+          'label': 'Close'
+          'command': 'atom-commander:close-server'
+        }
+        {
+          'label': 'Cache'
+          'command': 'atom-commander:open-cache'
+        }
+      ]
+    }
+    {
+      'label': 'Open'
+      'submenu': [
+        {
+          'label': 'Terminal'
+          'command': 'atom-commander:open-terminal'
+        }
+        {
+          'label': 'File Manager'
+          'command': 'atom-commander:show-in-file-manager'
+        }
+        {
+          'label': 'System'
+          'command': 'atom-commander:open-with-system'
+        }
+      ]
+    }
+    {
+      'label': 'View'
+      'submenu': [
+        {
+          'label': 'Refresh'
+          'command': 'atom-commander:refresh-view'
+        }
+        {
+          'label': 'Mirror'
+          'command': 'atom-commander:mirror-view'
+        }
+        {
+          'label': 'Swap'
+          'command': 'atom-commander:swap-view'
+        }
+      ]
+    }
+    {
+      'label': 'Compare'
+      'submenu': [
+        {
+          'label': 'Folders'
+          'command': 'atom-commander:compare-folders'
+        }
+        {
+          'label': 'Files'
+          'command': 'atom-commander:compare-files'
+        }
+      ]
+    }
+    {type: 'separator'}
+    {
+      'label': 'Columns'
+      'submenu': [
+        {
+          'label': 'Toggle Extension'
+          'command': 'atom-commander:toggle-extension-column'
+        }
+        {
+          'label': 'Toggle Size'
+          'command': 'atom-commander:toggle-size-column'
+        }
+        {
+          'label': 'Toggle Date'
+          'command': 'atom-commander:toggle-date-column'
+        }
+      ]
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'Atom Commander'
+      'submenu': [
+        {
+          'label': 'Toggle Focus'
+          'command': 'atom-commander:toggle-focus'
+        }
+        {
+          'label': 'Toggle Visible'
+          'command': 'atom-commander:toggle-visible'
+        }
+      ]
+    ]
+  }
+]

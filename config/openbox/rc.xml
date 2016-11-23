@@ -442,9 +442,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>geany</name>
+          <name>atom</name>
         </startupnotify>
-        <command>geany</command>
+        <command>atom</command>
       </action>
     </keybind>
     <keybind key="W-b">
@@ -891,7 +891,7 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <application name="geany">
+    <application name="atom">
       <decor>no</decor>
       <maximized>no</maximized>
     </application>
@@ -933,7 +933,7 @@
   # order that they appear in this list
 
 
-    # each rule element can be left out or set to 'default' to specify to not 
+    # each rule element can be left out or set to 'default' to specify to not
     # change that attribute of the window
 
     <decor>yes</decor>
