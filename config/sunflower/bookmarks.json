@@ -6,16 +6,12 @@
             "uri": "/home/rick"
         }, 
         {
-            "name": "Ricks_Stuff", 
-            "uri": "/mnt/Ricks_Stuff"
-        }, 
-        {
             "name": "Root", 
             "uri": "/"
         }, 
         {
             "name": "Samba", 
-            "uri": "smb://192.168.1.8/ricks stuff/"
+            "uri": "/mnt/Samba"
         }
     ], 
     "show_mounts": false, 

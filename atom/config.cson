@@ -33,7 +33,7 @@
     applications: "sunflower.desktop"
   "seti-ui":
     compactView: true
-    themeColor: "Red"
+    themeColor: "Steel"
   tabs:
     enableVcsColoring: true
   "tree-view-git-status":

@@ -41,4 +41,4 @@
 [credential]
 	helper = store --file /home/rick/.config/git/credentials
 [diff]
-	tool = diffuse 
+	tool = meld %F

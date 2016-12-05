@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
+        "raw": "/tmp/d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
-        "spec": "/tmp/d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
+        "rawSpec": "/tmp/d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
+        "spec": "/tmp/d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161016-21040-enblx7.nelwgq4cxr"
+      "/tmp/apm-install-dir-1161024-14550-fay9so.rqa37q4cxr"
     ]
   ],
-  "_from": "../d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
-  "_id": "git-plus@5.25.3",
+  "_from": "../d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
+  "_id": "git-plus@5.25.5",
   "_inCache": true,
   "_location": "/git-plus",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
+    "raw": "/tmp/d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
-    "spec": "/tmp/d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
+    "rawSpec": "/tmp/d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
+    "spec": "/tmp/d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
-  "_shasum": "b7638a6b1afb5d4fe644b4c38f0cdbc032c7659e",
+  "_resolved": "file:../d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
+  "_shasum": "b7af7b04edfa6dfbea25b9c71aa869130d68706e",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161016-21040-8mq1zm.dnbmzbmx6r/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161016-21040-enblx7.nelwgq4cxr",
+  "_spec": "/tmp/d-1161024-14550-1xay3mz.67cuhj8aor/package.tgz",
+  "_where": "/tmp/apm-install-dir-1161024-14550-fay9so.rqa37q4cxr",
   "bugs": {
     "url": "https://github.com/akonwi/git-plus/issues"
   },
@@ -73,7 +73,7 @@
     "type": "git",
     "url": "git+https://github.com/akonwi/git-plus.git"
   },
-  "version": "5.25.3",
+  "version": "5.25.5",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
