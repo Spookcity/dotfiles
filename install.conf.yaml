@@ -85,3 +85,51 @@
         create: true
 
 
+- clean: ['~']
+
+
+- clean: ['~']
+
+- link:
+    ~/.oh-my-zsh/custom:
+        path: oh-my-zsh/custom/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: gitconfig
+    ~/.oh-my-zsh:
+        path: oh-my-zsh/
+        create: true
+    ~/.Xresources: Xresources
+    ~/.repoconfig:
+        path: repoconfig/
+        create: true
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.Xresources: Xresources
+    ~/.config/git-cola:
+        path: config/git-cola/
+        create: true
+    ~/.config/git:
+        path: config/git/
+        create: true
+    ~/.config/neofetch:
+        path: config/neofetch/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.atom:
+        path: atom/
+        create: true
+    ~/.ncmpcpp:
+        path: ncmpcpp/
+        create: true
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.Xdefaults: Xdefaults
+
+

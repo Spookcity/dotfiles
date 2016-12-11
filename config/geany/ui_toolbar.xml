@@ -15,7 +15,6 @@ A list of available actions can be found in the documentation included with Gean
 at http://www.geany.org/manual/current/index.html#customizing-the-toolbar.
 -->
 	<toolbar name='GeanyToolbar'>
-		<toolitem action='New' />
 		<toolitem action='Open' />
 		<toolitem action='Save' />
 		<toolitem action='SaveAll' />

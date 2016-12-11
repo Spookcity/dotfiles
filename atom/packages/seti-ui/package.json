@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161016-19721-nvmbys.518gx03sor/package.tgz",
+        "raw": "/tmp/d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161016-19721-nvmbys.518gx03sor/package.tgz",
-        "spec": "/tmp/d-1161016-19721-nvmbys.518gx03sor/package.tgz",
+        "rawSpec": "/tmp/d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
+        "spec": "/tmp/d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161016-19721-1chqbmb.fcyuot7qfr"
+      "/tmp/apm-install-dir-116117-3679-1nx02nm.sqr4j10pb9"
     ]
   ],
-  "_from": "../d-1161016-19721-nvmbys.518gx03sor/package.tgz",
-  "_id": "seti-ui@1.3.2",
+  "_from": "../d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
+  "_id": "seti-ui@1.4.0",
   "_inCache": true,
   "_location": "/seti-ui",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161016-19721-nvmbys.518gx03sor/package.tgz",
+    "raw": "/tmp/d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161016-19721-nvmbys.518gx03sor/package.tgz",
-    "spec": "/tmp/d-1161016-19721-nvmbys.518gx03sor/package.tgz",
+    "rawSpec": "/tmp/d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
+    "spec": "/tmp/d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161016-19721-nvmbys.518gx03sor/package.tgz",
-  "_shasum": "ae546f1ffab59b2b3a4c67024e9dca7e149ae3d5",
+  "_resolved": "file:../d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
+  "_shasum": "54f0683da9ee52567c92a1a50fc7861a5bb7c8d6",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161016-19721-nvmbys.518gx03sor/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161016-19721-1chqbmb.fcyuot7qfr",
+  "_spec": "/tmp/d-116117-3679-mtxbhg.7szzjmj9k9/package.tgz",
+  "_where": "/tmp/apm-install-dir-116117-3679-1nx02nm.sqr4j10pb9",
   "bugs": {
     "url": "https://github.com/jesseweed/seti-ui/issues"
   },
@@ -103,7 +103,9 @@
       "default": false
     }
   },
-  "dependencies": {},
+  "dependencies": {
+    "gulp-svgmin": "^1.2.3"
+  },
   "description": "A dark colored UI theme for Atom with custom file icons.",
   "devDependencies": {
     "gulp": "^3.9.1",
@@ -111,39 +113,1643 @@
     "gulp-iconfont-css": "^2.1.0"
   },
   "engines": {
-    "atom": ">1.8.0"
+    "atom": ">1.12.0"
   },
   "homepage": "https://github.com/jesseweed/seti-ui#readme",
   "license": "MIT",
   "main": "lib/main",
   "name": "seti-ui",
   "optionalDependencies": {},
-  "readme": "# Seti UI\n\n[![Gitter](https://img.shields.io/gitter/room/jesseweed/seti-ui.svg?style=flat-square)](https://gitter.im/jesseweed/seti-ui) [![apm](https://img.shields.io/apm/dm/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/v/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/l/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui)\n[![Gratipay Team](https://img.shields.io/gratipay/team/atom-seti-ui.svg?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)\n\n\nThis is the latest version of the Seti UI theme. It's a dark interface theme crafted especially for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings. [Seti Syntax](https://atom.io/themes/seti-syntax) is also available for all your codez.\n\n-----\n\n##### **Please Note:** This is the Seti interface theme for [Atom](http://atom.io) only\n\nThis is for the _interface_ of the Atom editor. I also have [Seti Syntax](https://atom.io/themes/seti-syntax) for theming the _code view_ in Atom.\n\nIf these are not the droids you're looking for, may I point you in the drection of these great ports:\n\n+ [Emacs](https://github.com/caisah/seti-theme)\n+ [iTerm](https://github.com/willmanduffy/seti-iterm)\n+ [JetBrains](https://github.com/zchee/Seti_JetBrains)\n+ [Sublime Text 3](https://packagecontrol.io/packages/Seti_UI)\n+ [Vim](https://github.com/trusktr/seti.vim)\n\n-----\n\n## What's New? 1.0 Update\nSeti UI has been updated with a cleaner, more streamlined interface, a slightly tweaked color scheme, additional icons and new user settings, as well as a handful of other small ui improvements and a refactored code base.\n\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)\n\n-----\n\n### More colors\nSeti now has 8 theme colors to choose from:\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-colors.png)\n\n-----\n\n### More icons\nFile icons will now show up in the file search (`cmd+ p`) dialog in addition to the side bar and tabs. This should make for easier grokking when you're searching for a file.\n\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-search.png)\n\n-----\n\n### Settings\n_To get here, Go to \"Atom > Preferences\" Select \"Themes\"  and click the settings icon next to \"Seti\" under UI Theme dropdown_\n\nWith 1.0 you can now adjust some of the more commonly requested features directly in Atom's settings view (Settings > Themes > Click the gear icon next to Seti).\n\n+ **File Icons:** Probably the most frequet requests has been a simpler way to disable the file icons for those of you using other file icon packages. Now you can :)\n+ **Compact Mode :** Seti 1.0's face-lift brings a cleaner, less cramped interface, which also happens to take up a bit more space. If you prefer the old more compact version, you can revert it here.\n+ **Ignored Files:** By default, ignored files are shown as a muted grey. However, if you'd like to hide them altogether you can use this.\n+ **Hide Tabs:** Lastly (for now), there have been a few requests to be able to hide tabs altogether. This is of course disabled by default, but if you're the anti-tab type, you can hide them here.\n\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-settings.png)\n\nSetting are brand new, and still have a few kinks to be worked out. If you run into any problems with them, or would like to request an additional setting, please file an issue!\n\n\n-----\n\n## Bugs\nIf you find a bug, please do [add a bug](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in Atom. I only support the Atom versions, please check the links above to report a bug on another platforms.\n\n##### Seti 1.0 has been optimized to work with Atom 1.6 and above:\n###### Including the 1.7 beta\nMost if not everything should work on older versions as well, but if you see something that doesn't look quite right, make sure you have the latest version of Atom installed before filling a bug.\n\n-----\n\n## Installation\nThe easiest way to install Seti is to do as follows:\n\n+ Go to Atom > Settings\n+ Click \"+ Install\"\n+ Search for `seti ui` and click `themes` button to search.\n+ Browse for `Seti UI` and click `install`\n\nAlternatively you can use the [Atom Package Manager](https://github.com/atom/apm):\n\n```bash\napm install seti-ui\n```\n\n\n-----\n\n## Contributing\nAnyone is welcome to contribute to the development of this theme. If can be a lot of work to keep up on, and I'll take help wherever i can get it :)\n\n### 1. Fork\nIf you're keen to contribute, start by [forking](https://github.com/jesseweed/seti-ui/tree/1.0-beta#fork-destination-box) the repo and cloning it to your computer.\n\n**Note:** To use the development version, you must first install the production version (`apm uninstall seti-ui`), then and run the following commands:\n\n```bash\n# To install the local version as an Atom Theme\napm link .\n\n# Open with dev mode:\natom --dev .\n```\n\n### 2. Make Some Changes\n\nOnce this is complete you will be able to edit seti files directly in Atom and see your changes in real time.\n\n### 3. Create a Pull Request\n\nOnce you are satisfied, with your updates, commit your change, push them to your fork and submit a pull request with a description of the changes that you made.\n\n### 4. Unlink\n\nOnce you're done working locally and ready to install the production version again, simply run `apm unlink .` from the root of the seti-ui project.\n\n\n-----\n\n## Adding File Icons\nThe process of adding file icons is still a bit complex, but it _has_ been greatly simplified in 1.0. It does howevere require that you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.\n\nOnce you have these, you will need to open a terminal window, navigate to the _seti-ui_ folder and run `npm install` (note you only need to do this once).\n\nOnce everything is setup, follow these steps any time you want to add a new icon:\n\n  1. Create an SVG icon with the name of the language, and save it to the `icons` folder _(do not use any spaces or special characters)_\n\n  2. Navigate to the _seti-ui_ folder in your terminal and run `gulp fonts` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)\n\n  3. Lastly, open [styles/icons/mapping.less](styles/icons/mapping.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```\n\n  The first parameter `'.scss'` is the file extension you want to target, the second parameter `'sass'` is the name of the icon you just created, without the extension (sass.svg), and the last parameter `@pink` indicated what color the icon should be.\n\n  There are currently 9 supported icon colors:\n    - @blue\n    - @grey\n    - @green\n    - @orange\n    - @pink\n    - @purple\n    - @red\n    - @white\n    - @yellow\n\n\n  While, you _can_ add additional colors to [styles/ui-variables.less](styles/ui-variables.less), but please do not do this unless you find it _absolutely_ necessary. If you do add another color, please make sure that matches the general feel of the other colors. If you add something really bright or really pale, your pull request will likely be declined.\n\n  You will need to do this once for every extension, you want to target. For example, if you want to target both **.sass** and **.scss** extensions, you would add the following:\n\n```\n.icon-set('.sass', 'sass', @pink);\n.icon-set('.scss', 'sass', @pink);\n```\n\n-----\n\n## Current Icons\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-icons.png)\n\n-----\n\n## Custom App Icons\nIf you'd like a new app icon to match the look & feel of Seti, feel free to use one of these:\n\n[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/circular/circular-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/circular)\n[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/rounded/rounded-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/rounded/)\n[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/squared/squared-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/squared/)\n",
+  "readme": "# Seti UI\n\n[![Gitter](https://img.shields.io/gitter/room/jesseweed/seti-ui.svg?style=flat-square)](https://gitter.im/jesseweed/seti-ui) [![apm](https://img.shields.io/apm/dm/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/v/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui) [![apm](https://img.shields.io/apm/l/seti-ui.svg?style=flat-square)](https://atom.io/themes/seti-ui)\n[![Gratipay Team](https://img.shields.io/gratipay/team/atom-seti-ui.svg?style=flat-square)](https://gratipay.com/Atom-Seti-UI/)\n\n\nThis is the latest version of the Seti UI theme. It's a dark interface theme crafted especially for [Atom](http://atom.io), with subtle colors that are meant to be easy on the eyes. It includes custom file icons, and new user configurable settings. [Seti Syntax](https://atom.io/themes/seti-syntax) is also available for all your codez.\n\n-----\n\n##### **Please Note:** This is the Seti interface theme for [Atom](http://atom.io) only\n\nThis is for the _interface_ of the Atom editor. I also have [Seti Syntax](https://atom.io/themes/seti-syntax) for theming the _code view_ in Atom.\n\nIf these are not the droids you're looking for, may I point you in the drection of these great ports:\n\n+ [Emacs](https://github.com/caisah/seti-theme)\n+ [iTerm](https://github.com/willmanduffy/seti-iterm)\n+ [JetBrains](https://github.com/zchee/Seti_JetBrains)\n+ [Sublime Text 3](https://packagecontrol.io/packages/Seti_UI)\n+ [Vim](https://github.com/trusktr/seti.vim)\n\n-----\n\n## What's New? 1.0 Update\nSeti UI has been updated with a cleaner, more streamlined interface, a slightly tweaked color scheme, additional icons and new user settings, as well as a handful of other small ui improvements and a refactored code base.\n\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot.png)\n\n-----\n\n### More colors\nSeti now has 8 theme colors to choose from:\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-colors.png)\n\n-----\n\n### More icons\nFile icons will now show up in the file search (`cmd+ p`) dialog in addition to the side bar and tabs. This should make for easier grokking when you're searching for a file.\n\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-search.png)\n\n-----\n\n### Settings\n_To get here, Go to \"Atom > Preferences\" Select \"Themes\"  and click the settings icon next to \"Seti\" under UI Theme dropdown_\n\nWith 1.0 you can now adjust some of the more commonly requested features directly in Atom's settings view (Settings > Themes > Click the gear icon next to Seti).\n\n+ **File Icons:** Probably the most frequet requests has been a simpler way to disable the file icons for those of you using other file icon packages. Now you can :)\n+ **Compact Mode :** Seti 1.0's face-lift brings a cleaner, less cramped interface, which also happens to take up a bit more space. If you prefer the old more compact version, you can revert it here.\n+ **Ignored Files:** By default, ignored files are shown as a muted grey. However, if you'd like to hide them altogether you can use this.\n+ **Hide Tabs:** Lastly (for now), there have been a few requests to be able to hide tabs altogether. This is of course disabled by default, but if you're the anti-tab type, you can hide them here.\n\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-settings.png)\n\nSetting are brand new, and still have a few kinks to be worked out. If you run into any problems with them, or would like to request an additional setting, please file an issue!\n\n\n-----\n\n## Bugs\nIf you find a bug, please do [add a bug](https://github.com/jesseweed/seti-ui/issues). However, first make sure it is for Seti UI in Atom. I only support the Atom versions, please check the links above to report a bug on another platforms.\n\n##### Seti 1.0 has been optimized to work with Atom 1.6 and above:\n###### Including the 1.7 beta\nMost if not everything should work on older versions as well, but if you see something that doesn't look quite right, make sure you have the latest version of Atom installed before filling a bug.\n\n-----\n\n## Installation\nThe easiest way to install Seti is to do as follows:\n\n+ Go to Atom > Settings\n+ Click \"+ Install\"\n+ Search for `seti ui` and click `themes` button to search.\n+ Browse for `Seti UI` and click `install`\n\nAlternatively you can use the [Atom Package Manager](https://github.com/atom/apm):\n\n```bash\napm install seti-ui\n```\n\n\n-----\n\n## Contributing\nAnyone is welcome to contribute to the development of this theme. If can be a lot of work to keep up on, and I'll take help wherever i can get it :)\n\n### 1. Fork\nIf you're keen to contribute, start by [forking](https://github.com/jesseweed/seti-ui/tree/1.0-beta#fork-destination-box) the repo and cloning it to your computer.\n\n**Note:** To use the development version, you must first install the production version (`apm uninstall seti-ui`), then and run the following commands:\n\n```bash\n# To install the local version as an Atom Theme\napm link .\n\n# Open with dev mode:\natom --dev .\n```\n\n### 2. Make Some Changes\n\nOnce this is complete you will be able to edit seti files directly in Atom and see your changes in real time.\n\n### 3. Create a Pull Request\n\nOnce you are satisfied, with your updates, commit your change, push them to your fork and submit a pull request with a description of the changes that you made.\n\n### 4. Unlink\n\nOnce you're done working locally and ready to install the production version again, simply run `apm unlink .` from the root of the seti-ui project.\n\n\n-----\n\n## Adding File Icons\nThe process of adding file icons is still a bit complex, but it _has_ been greatly simplified in 1.0. It does however require that you have [node](https://nodejs.org/en/) and [gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md) installed.\n\nOnce you have these, you will need to open a terminal window, navigate to the _seti-ui_ folder and run `npm install` (note you only need to do this once).\n\nOnce everything is setup, follow these steps any time you want to add a new icon:\n\n  1. Create an SVG icon with the name of the language, and save it to the `icons` folder _(do not use any spaces or special characters)_\n\n  2. Navigate to the _seti-ui_ folder in your terminal and run `gulp font` (this will add the new svg file to our icon font, update our file as well as the less file with the mixins we'll need to link to the icon later.)\n\n  3. Lastly, open [styles/icons/mapping.less](styles/icons/mapping.less) and create a link for the icon you just added with the `.icon-set` mixin. Assuming you were adding an icon for Sass it might look something like this: ```.icon-set('.scss', 'sass', @pink)```\n\n  The first parameter `'.scss'` is the file extension you want to target, the second parameter `'sass'` is the name of the icon you just created, without the extension (sass.svg), and the last parameter `@pink` indicated what color the icon should be.\n\n  There are currently 9 supported icon colors:\n    - @blue\n    - @grey\n    - @green\n    - @orange\n    - @pink\n    - @purple\n    - @red\n    - @white\n    - @yellow\n\n\n  While, you _can_ add additional colors to [styles/ui-variables.less](styles/ui-variables.less), but please do not do this unless you find it _absolutely_ necessary. If you do add another color, please make sure that matches the general feel of the other colors. If you add something really bright or really pale, your pull request will likely be declined.\n\n  You will need to do this once for every extension, you want to target. For example, if you want to target both **.sass** and **.scss** extensions, you would add the following:\n\n```\n.icon-set('.sass', 'sass', @pink);\n.icon-set('.scss', 'sass', @pink);\n```\n\n-----\n\n## Current Icons\n![Screenshot](https://github.com/jesseweed/seti-ui/raw/master/screenshot-icons.png)\n\n-----\n\n## Custom App Icons\nIf you'd like a new app icon to match the look & feel of Seti, feel free to use one of these:\n\n[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/circular/circular-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/circular)\n[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/rounded/rounded-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/rounded/)\n[ ![Screenshot](https://github.com/jesseweed/seti-syntax/raw/master/_icons/squared/squared-128x128.png) ](https://github.com/jesseweed/seti-syntax/tree/master/_icons/squared/)\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jesseweed/seti-ui.git"
   },
   "theme": "ui",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "_atomModuleCache": {
     "version": 1,
-    "dependencies": [],
+    "dependencies": [
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "2.2.1",
+        "path": "node_modules/ansi-styles/index.js"
+      },
+      {
+        "name": "argparse",
+        "version": "1.0.9",
+        "path": "node_modules/argparse/index.js"
+      },
+      {
+        "name": "array-differ",
+        "version": "1.0.0",
+        "path": "node_modules/array-differ/index.js"
+      },
+      {
+        "name": "array-find-index",
+        "version": "1.0.2",
+        "path": "node_modules/array-find-index/index.js"
+      },
+      {
+        "name": "array-uniq",
+        "version": "1.0.3",
+        "path": "node_modules/array-uniq/index.js"
+      },
+      {
+        "name": "beeper",
+        "version": "1.1.1",
+        "path": "node_modules/beeper/index.js"
+      },
+      {
+        "name": "buffer-shims",
+        "version": "1.0.0",
+        "path": "node_modules/buffer-shims/index.js"
+      },
+      {
+        "name": "builtin-modules",
+        "version": "1.1.1",
+        "path": "node_modules/builtin-modules/index.js"
+      },
+      {
+        "name": "camelcase",
+        "version": "2.1.1",
+        "path": "node_modules/camelcase/index.js"
+      },
+      {
+        "name": "camelcase-keys",
+        "version": "2.1.0",
+        "path": "node_modules/camelcase-keys/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "1.1.3",
+        "path": "node_modules/chalk/index.js"
+      },
+      {
+        "name": "clap",
+        "version": "1.1.2",
+        "path": "node_modules/clap/index.js"
+      },
+      {
+        "name": "clone",
+        "version": "1.0.2",
+        "path": "node_modules/clone/clone.js"
+      },
+      {
+        "name": "clone-stats",
+        "version": "0.0.1",
+        "path": "node_modules/clone-stats/index.js"
+      },
+      {
+        "name": "coa",
+        "version": "1.0.1",
+        "path": "node_modules/coa/index.js"
+      },
+      {
+        "name": "colors",
+        "version": "1.1.2",
+        "path": "node_modules/colors/lib/index.js"
+      },
+      {
+        "name": "core-util-is",
+        "version": "1.0.2",
+        "path": "node_modules/core-util-is/lib/util.js"
+      },
+      {
+        "name": "csso",
+        "version": "2.2.1",
+        "path": "node_modules/csso/lib/index.js"
+      },
+      {
+        "name": "currently-unhandled",
+        "version": "0.4.1",
+        "path": "node_modules/currently-unhandled/index.js"
+      },
+      {
+        "name": "dateformat",
+        "version": "1.0.12",
+        "path": "node_modules/dateformat/lib/dateformat.js"
+      },
+      {
+        "name": "decamelize",
+        "version": "1.2.0",
+        "path": "node_modules/decamelize/index.js"
+      },
+      {
+        "name": "duplexer2",
+        "version": "0.0.2",
+        "path": "node_modules/duplexer2/index.js"
+      },
+      {
+        "name": "error-ex",
+        "version": "1.3.0",
+        "path": "node_modules/error-ex/index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.5",
+        "path": "node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "esprima",
+        "version": "2.7.3",
+        "path": "node_modules/esprima/esprima.js"
+      },
+      {
+        "name": "fancy-log",
+        "version": "1.2.0",
+        "path": "node_modules/fancy-log/index.js"
+      },
+      {
+        "name": "find-up",
+        "version": "1.1.2",
+        "path": "node_modules/find-up/index.js"
+      },
+      {
+        "name": "get-stdin",
+        "version": "4.0.1",
+        "path": "node_modules/get-stdin/index.js"
+      },
+      {
+        "name": "glogg",
+        "version": "1.0.0",
+        "path": "node_modules/glogg/index.js"
+      },
+      {
+        "name": "graceful-fs",
+        "version": "4.1.11",
+        "path": "node_modules/graceful-fs/graceful-fs.js"
+      },
+      {
+        "name": "gulp-svgmin",
+        "version": "1.2.3",
+        "path": "node_modules/gulp-svgmin/dist/index.js"
+      },
+      {
+        "name": "gulp-util",
+        "version": "3.0.7",
+        "path": "node_modules/gulp-util/index.js"
+      },
+      {
+        "name": "gulplog",
+        "version": "1.0.0",
+        "path": "node_modules/gulplog/index.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "2.0.0",
+        "path": "node_modules/has-ansi/index.js"
+      },
+      {
+        "name": "has-gulplog",
+        "version": "0.1.0",
+        "path": "node_modules/has-gulplog/index.js"
+      },
+      {
+        "name": "hosted-git-info",
+        "version": "2.1.5",
+        "path": "node_modules/hosted-git-info/index.js"
+      },
+      {
+        "name": "indent-string",
+        "version": "2.1.0",
+        "path": "node_modules/indent-string/index.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.3",
+        "path": "node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "is-arrayish",
+        "version": "0.2.1",
+        "path": "node_modules/is-arrayish/index.js"
+      },
+      {
+        "name": "is-builtin-module",
+        "version": "1.0.0",
+        "path": "node_modules/is-builtin-module/index.js"
+      },
+      {
+        "name": "is-finite",
+        "version": "1.0.2",
+        "path": "node_modules/is-finite/index.js"
+      },
+      {
+        "name": "is-utf8",
+        "version": "0.2.1",
+        "path": "node_modules/is-utf8/is-utf8.js"
+      },
+      {
+        "name": "isarray",
+        "version": "0.0.1",
+        "path": "node_modules/isarray/index.js"
+      },
+      {
+        "name": "js-yaml",
+        "version": "3.6.1",
+        "path": "node_modules/js-yaml/index.js"
+      },
+      {
+        "name": "load-json-file",
+        "version": "1.1.0",
+        "path": "node_modules/load-json-file/index.js"
+      },
+      {
+        "name": "lodash._basecopy",
+        "version": "3.0.1",
+        "path": "node_modules/lodash._basecopy/index.js"
+      },
+      {
+        "name": "lodash._basetostring",
+        "version": "3.0.1",
+        "path": "node_modules/lodash._basetostring/index.js"
+      },
+      {
+        "name": "lodash._basevalues",
+        "version": "3.0.0",
+        "path": "node_modules/lodash._basevalues/index.js"
+      },
+      {
+        "name": "lodash._getnative",
+        "version": "3.9.1",
+        "path": "node_modules/lodash._getnative/index.js"
+      },
+      {
+        "name": "lodash._isiterateecall",
+        "version": "3.0.9",
+        "path": "node_modules/lodash._isiterateecall/index.js"
+      },
+      {
+        "name": "lodash._reescape",
+        "version": "3.0.0",
+        "path": "node_modules/lodash._reescape/index.js"
+      },
+      {
+        "name": "lodash._reevaluate",
+        "version": "3.0.0",
+        "path": "node_modules/lodash._reevaluate/index.js"
+      },
+      {
+        "name": "lodash._reinterpolate",
+        "version": "3.0.0",
+        "path": "node_modules/lodash._reinterpolate/index.js"
+      },
+      {
+        "name": "lodash._root",
+        "version": "3.0.1",
+        "path": "node_modules/lodash._root/index.js"
+      },
+      {
+        "name": "lodash.escape",
+        "version": "3.2.0",
+        "path": "node_modules/lodash.escape/index.js"
+      },
+      {
+        "name": "lodash.isarguments",
+        "version": "3.1.0",
+        "path": "node_modules/lodash.isarguments/index.js"
+      },
+      {
+        "name": "lodash.isarray",
+        "version": "3.0.4",
+        "path": "node_modules/lodash.isarray/index.js"
+      },
+      {
+        "name": "lodash.keys",
+        "version": "3.1.2",
+        "path": "node_modules/lodash.keys/index.js"
+      },
+      {
+        "name": "lodash.restparam",
+        "version": "3.6.1",
+        "path": "node_modules/lodash.restparam/index.js"
+      },
+      {
+        "name": "lodash.template",
+        "version": "3.6.2",
+        "path": "node_modules/lodash.template/index.js"
+      },
+      {
+        "name": "lodash.templatesettings",
+        "version": "3.1.1",
+        "path": "node_modules/lodash.templatesettings/index.js"
+      },
+      {
+        "name": "loud-rejection",
+        "version": "1.6.0",
+        "path": "node_modules/loud-rejection/index.js"
+      },
+      {
+        "name": "map-obj",
+        "version": "1.0.1",
+        "path": "node_modules/map-obj/index.js"
+      },
+      {
+        "name": "meow",
+        "version": "3.7.0",
+        "path": "node_modules/meow/index.js"
+      },
+      {
+        "name": "object-assign",
+        "version": "4.1.0",
+        "path": "node_modules/meow/node_modules/object-assign/index.js"
+      },
+      {
+        "name": "minimist",
+        "version": "1.2.0",
+        "path": "node_modules/minimist/index.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.5.1",
+        "path": "node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "minimist",
+        "version": "0.0.8",
+        "path": "node_modules/mkdirp/node_modules/minimist/index.js"
+      },
+      {
+        "name": "multipipe",
+        "version": "0.1.2",
+        "path": "node_modules/multipipe/index.js"
+      },
+      {
+        "name": "normalize-package-data",
+        "version": "2.3.5",
+        "path": "node_modules/normalize-package-data/lib/normalize.js"
+      },
+      {
+        "name": "number-is-nan",
+        "version": "1.0.1",
+        "path": "node_modules/number-is-nan/index.js"
+      },
+      {
+        "name": "object-assign",
+        "version": "3.0.0",
+        "path": "node_modules/object-assign/index.js"
+      },
+      {
+        "name": "parse-json",
+        "version": "2.2.0",
+        "path": "node_modules/parse-json/index.js"
+      },
+      {
+        "name": "path-exists",
+        "version": "2.1.0",
+        "path": "node_modules/path-exists/index.js"
+      },
+      {
+        "name": "path-type",
+        "version": "1.1.0",
+        "path": "node_modules/path-type/index.js"
+      },
+      {
+        "name": "pify",
+        "version": "2.3.0",
+        "path": "node_modules/pify/index.js"
+      },
+      {
+        "name": "pinkie",
+        "version": "2.0.4",
+        "path": "node_modules/pinkie/index.js"
+      },
+      {
+        "name": "pinkie-promise",
+        "version": "2.0.1",
+        "path": "node_modules/pinkie-promise/index.js"
+      },
+      {
+        "name": "process-nextick-args",
+        "version": "1.0.7",
+        "path": "node_modules/process-nextick-args/index.js"
+      },
+      {
+        "name": "q",
+        "version": "1.4.1",
+        "path": "node_modules/q/q.js"
+      },
+      {
+        "name": "read-pkg",
+        "version": "1.1.0",
+        "path": "node_modules/read-pkg/index.js"
+      },
+      {
+        "name": "read-pkg-up",
+        "version": "1.0.1",
+        "path": "node_modules/read-pkg-up/index.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "1.1.14",
+        "path": "node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "redent",
+        "version": "1.0.0",
+        "path": "node_modules/redent/index.js"
+      },
+      {
+        "name": "repeating",
+        "version": "2.0.1",
+        "path": "node_modules/repeating/index.js"
+      },
+      {
+        "name": "replace-ext",
+        "version": "0.0.1",
+        "path": "node_modules/replace-ext/index.js"
+      },
+      {
+        "name": "sax",
+        "version": "1.2.1",
+        "path": "node_modules/sax/lib/sax.js"
+      },
+      {
+        "name": "semver",
+        "version": "5.3.0",
+        "path": "node_modules/semver/semver.js"
+      },
+      {
+        "name": "signal-exit",
+        "version": "3.0.2",
+        "path": "node_modules/signal-exit/index.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.5.6",
+        "path": "node_modules/source-map/source-map.js"
+      },
+      {
+        "name": "sparkles",
+        "version": "1.0.0",
+        "path": "node_modules/sparkles/index.js"
+      },
+      {
+        "name": "spdx-correct",
+        "version": "1.0.2",
+        "path": "node_modules/spdx-correct/index.js"
+      },
+      {
+        "name": "spdx-expression-parse",
+        "version": "1.0.4",
+        "path": "node_modules/spdx-expression-parse/index.js"
+      },
+      {
+        "name": "spdx-license-ids",
+        "version": "1.2.2",
+        "path": "node_modules/spdx-license-ids/spdx-license-ids.json"
+      },
+      {
+        "name": "sprintf-js",
+        "version": "1.0.3",
+        "path": "node_modules/sprintf-js/src/sprintf.js"
+      },
+      {
+        "name": "string_decoder",
+        "version": "0.10.31",
+        "path": "node_modules/string_decoder/index.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.1",
+        "path": "node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "strip-bom",
+        "version": "2.0.0",
+        "path": "node_modules/strip-bom/index.js"
+      },
+      {
+        "name": "strip-indent",
+        "version": "1.0.1",
+        "path": "node_modules/strip-indent/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "2.0.0",
+        "path": "node_modules/supports-color/index.js"
+      },
+      {
+        "name": "svgo",
+        "version": "0.7.1",
+        "path": "node_modules/svgo/lib/svgo.js"
+      },
+      {
+        "name": "through2",
+        "version": "2.0.3",
+        "path": "node_modules/through2/through2.js"
+      },
+      {
+        "name": "isarray",
+        "version": "1.0.0",
+        "path": "node_modules/through2/node_modules/isarray/index.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "2.2.2",
+        "path": "node_modules/through2/node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "time-stamp",
+        "version": "1.0.1",
+        "path": "node_modules/time-stamp/index.js"
+      },
+      {
+        "name": "trim-newlines",
+        "version": "1.0.0",
+        "path": "node_modules/trim-newlines/index.js"
+      },
+      {
+        "name": "util-deprecate",
+        "version": "1.0.2",
+        "path": "node_modules/util-deprecate/node.js"
+      },
+      {
+        "name": "validate-npm-package-license",
+        "version": "3.0.1",
+        "path": "node_modules/validate-npm-package-license/index.js"
+      },
+      {
+        "name": "vinyl",
+        "version": "0.5.3",
+        "path": "node_modules/vinyl/index.js"
+      },
+      {
+        "name": "whet.extend",
+        "version": "0.9.9",
+        "path": "node_modules/whet.extend/index.js"
+      },
+      {
+        "name": "xtend",
+        "version": "4.0.1",
+        "path": "node_modules/xtend/immutable.js"
+      }
+    ],
     "extensions": {
       ".js": [
-        "gulpfile.js"
+        "gulpfile.js",
+        "node_modules/ansi-regex/index.js",
+        "node_modules/ansi-styles/index.js",
+        "node_modules/argparse/index.js",
+        "node_modules/argparse/lib/action/append/constant.js",
+        "node_modules/argparse/lib/action/append.js",
+        "node_modules/argparse/lib/action/count.js",
+        "node_modules/argparse/lib/action/help.js",
+        "node_modules/argparse/lib/action/store/constant.js",
+        "node_modules/argparse/lib/action/store/false.js",
+        "node_modules/argparse/lib/action/store/true.js",
+        "node_modules/argparse/lib/action/store.js",
+        "node_modules/argparse/lib/action/subparsers.js",
+        "node_modules/argparse/lib/action/version.js",
+        "node_modules/argparse/lib/action.js",
+        "node_modules/argparse/lib/action_container.js",
+        "node_modules/argparse/lib/argparse.js",
+        "node_modules/argparse/lib/argument/error.js",
+        "node_modules/argparse/lib/argument/exclusive.js",
+        "node_modules/argparse/lib/argument/group.js",
+        "node_modules/argparse/lib/argument_parser.js",
+        "node_modules/argparse/lib/const.js",
+        "node_modules/argparse/lib/help/added_formatters.js",
+        "node_modules/argparse/lib/help/formatter.js",
+        "node_modules/argparse/lib/namespace.js",
+        "node_modules/argparse/lib/utils.js",
+        "node_modules/array-differ/index.js",
+        "node_modules/array-find-index/index.js",
+        "node_modules/array-uniq/index.js",
+        "node_modules/beeper/index.js",
+        "node_modules/buffer-shims/index.js",
+        "node_modules/builtin-modules/index.js",
+        "node_modules/builtin-modules/static.js",
+        "node_modules/camelcase/index.js",
+        "node_modules/camelcase-keys/index.js",
+        "node_modules/chalk/index.js",
+        "node_modules/clap/index.js",
+        "node_modules/clone/clone.js",
+        "node_modules/clone/test.js",
+        "node_modules/clone-stats/index.js",
+        "node_modules/clone-stats/test.js",
+        "node_modules/coa/index.js",
+        "node_modules/coa/lib/arg.js",
+        "node_modules/coa/lib/cmd.js",
+        "node_modules/coa/lib/color.js",
+        "node_modules/coa/lib/completion.js",
+        "node_modules/coa/lib/index.js",
+        "node_modules/coa/lib/opt.js",
+        "node_modules/coa/lib/shell.js",
+        "node_modules/colors/examples/normal-usage.js",
+        "node_modules/colors/examples/safe-string.js",
+        "node_modules/colors/lib/colors.js",
+        "node_modules/colors/lib/custom/trap.js",
+        "node_modules/colors/lib/custom/zalgo.js",
+        "node_modules/colors/lib/extendStringPrototype.js",
+        "node_modules/colors/lib/index.js",
+        "node_modules/colors/lib/maps/america.js",
+        "node_modules/colors/lib/maps/rainbow.js",
+        "node_modules/colors/lib/maps/random.js",
+        "node_modules/colors/lib/maps/zebra.js",
+        "node_modules/colors/lib/styles.js",
+        "node_modules/colors/lib/system/supports-colors.js",
+        "node_modules/colors/safe.js",
+        "node_modules/colors/themes/generic-logging.js",
+        "node_modules/core-util-is/lib/util.js",
+        "node_modules/core-util-is/test.js",
+        "node_modules/csso/dist/csso-browser.js",
+        "node_modules/csso/lib/cli.js",
+        "node_modules/csso/lib/compressor/clean/Atrule.js",
+        "node_modules/csso/lib/compressor/clean/Comment.js",
+        "node_modules/csso/lib/compressor/clean/Declaration.js",
+        "node_modules/csso/lib/compressor/clean/Identifier.js",
+        "node_modules/csso/lib/compressor/clean/Ruleset.js",
+        "node_modules/csso/lib/compressor/clean/Space.js",
+        "node_modules/csso/lib/compressor/clean/index.js",
+        "node_modules/csso/lib/compressor/compress/Atrule.js",
+        "node_modules/csso/lib/compressor/compress/Attribute.js",
+        "node_modules/csso/lib/compressor/compress/Dimension.js",
+        "node_modules/csso/lib/compressor/compress/Number.js",
+        "node_modules/csso/lib/compressor/compress/String.js",
+        "node_modules/csso/lib/compressor/compress/Url.js",
+        "node_modules/csso/lib/compressor/compress/Value.js",
+        "node_modules/csso/lib/compressor/compress/atrule/keyframes.js",
+        "node_modules/csso/lib/compressor/compress/color.js",
+        "node_modules/csso/lib/compressor/compress/index.js",
+        "node_modules/csso/lib/compressor/compress/property/background.js",
+        "node_modules/csso/lib/compressor/compress/property/font-weight.js",
+        "node_modules/csso/lib/compressor/compress/property/font.js",
+        "node_modules/csso/lib/compressor/index.js",
+        "node_modules/csso/lib/compressor/restructure/1-initialMergeRuleset.js",
+        "node_modules/csso/lib/compressor/restructure/2-mergeAtrule.js",
+        "node_modules/csso/lib/compressor/restructure/3-disjoinRuleset.js",
+        "node_modules/csso/lib/compressor/restructure/4-restructShorthand.js",
+        "node_modules/csso/lib/compressor/restructure/6-restructBlock.js",
+        "node_modules/csso/lib/compressor/restructure/7-mergeRuleset.js",
+        "node_modules/csso/lib/compressor/restructure/8-restructRuleset.js",
+        "node_modules/csso/lib/compressor/restructure/index.js",
+        "node_modules/csso/lib/compressor/restructure/prepare/createDeclarationIndexer.js",
+        "node_modules/csso/lib/compressor/restructure/prepare/index.js",
+        "node_modules/csso/lib/compressor/restructure/prepare/processSelector.js",
+        "node_modules/csso/lib/compressor/restructure/prepare/specificity.js",
+        "node_modules/csso/lib/compressor/restructure/utils.js",
+        "node_modules/csso/lib/compressor/usage.js",
+        "node_modules/csso/lib/index.js",
+        "node_modules/csso/lib/parser/const.js",
+        "node_modules/csso/lib/parser/index.js",
+        "node_modules/csso/lib/parser/scanner.js",
+        "node_modules/csso/lib/utils/clone.js",
+        "node_modules/csso/lib/utils/list.js",
+        "node_modules/csso/lib/utils/names.js",
+        "node_modules/csso/lib/utils/translate.js",
+        "node_modules/csso/lib/utils/translateWithSourceMap.js",
+        "node_modules/csso/lib/utils/walk.js",
+        "node_modules/currently-unhandled/browser.js",
+        "node_modules/currently-unhandled/core.js",
+        "node_modules/currently-unhandled/index.js",
+        "node_modules/dateformat/bin/cli.js",
+        "node_modules/dateformat/lib/dateformat.js",
+        "node_modules/decamelize/index.js",
+        "node_modules/duplexer2/example.js",
+        "node_modules/duplexer2/index.js",
+        "node_modules/error-ex/index.js",
+        "node_modules/escape-string-regexp/index.js",
+        "node_modules/esprima/bin/esparse.js",
+        "node_modules/esprima/bin/esvalidate.js",
+        "node_modules/esprima/esprima.js",
+        "node_modules/fancy-log/index.js",
+        "node_modules/find-up/index.js",
+        "node_modules/get-stdin/index.js",
+        "node_modules/glogg/index.js",
+        "node_modules/graceful-fs/fs.js",
+        "node_modules/graceful-fs/graceful-fs.js",
+        "node_modules/graceful-fs/legacy-streams.js",
+        "node_modules/graceful-fs/polyfills.js",
+        "node_modules/gulp-svgmin/dist/index.js",
+        "node_modules/gulp-util/index.js",
+        "node_modules/gulp-util/lib/PluginError.js",
+        "node_modules/gulp-util/lib/buffer.js",
+        "node_modules/gulp-util/lib/combine.js",
+        "node_modules/gulp-util/lib/env.js",
+        "node_modules/gulp-util/lib/isBuffer.js",
+        "node_modules/gulp-util/lib/isNull.js",
+        "node_modules/gulp-util/lib/isStream.js",
+        "node_modules/gulp-util/lib/log.js",
+        "node_modules/gulp-util/lib/noop.js",
+        "node_modules/gulp-util/lib/template.js",
+        "node_modules/gulplog/index.js",
+        "node_modules/has-ansi/index.js",
+        "node_modules/has-gulplog/index.js",
+        "node_modules/hosted-git-info/git-host-info.js",
+        "node_modules/hosted-git-info/git-host.js",
+        "node_modules/hosted-git-info/index.js",
+        "node_modules/indent-string/index.js",
+        "node_modules/inherits/inherits.js",
+        "node_modules/inherits/inherits_browser.js",
+        "node_modules/is-arrayish/index.js",
+        "node_modules/is-builtin-module/index.js",
+        "node_modules/is-finite/index.js",
+        "node_modules/is-utf8/is-utf8.js",
+        "node_modules/isarray/build/build.js",
+        "node_modules/isarray/index.js",
+        "node_modules/js-yaml/bin/js-yaml.js",
+        "node_modules/js-yaml/dist/js-yaml.js",
+        "node_modules/js-yaml/dist/js-yaml.min.js",
+        "node_modules/js-yaml/index.js",
+        "node_modules/js-yaml/lib/js-yaml/common.js",
+        "node_modules/js-yaml/lib/js-yaml/dumper.js",
+        "node_modules/js-yaml/lib/js-yaml/exception.js",
+        "node_modules/js-yaml/lib/js-yaml/loader.js",
+        "node_modules/js-yaml/lib/js-yaml/mark.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/core.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/default_full.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/default_safe.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/failsafe.js",
+        "node_modules/js-yaml/lib/js-yaml/schema/json.js",
+        "node_modules/js-yaml/lib/js-yaml/schema.js",
+        "node_modules/js-yaml/lib/js-yaml/type/binary.js",
+        "node_modules/js-yaml/lib/js-yaml/type/bool.js",
+        "node_modules/js-yaml/lib/js-yaml/type/float.js",
+        "node_modules/js-yaml/lib/js-yaml/type/int.js",
+        "node_modules/js-yaml/lib/js-yaml/type/js/function.js",
+        "node_modules/js-yaml/lib/js-yaml/type/js/regexp.js",
+        "node_modules/js-yaml/lib/js-yaml/type/js/undefined.js",
+        "node_modules/js-yaml/lib/js-yaml/type/map.js",
+        "node_modules/js-yaml/lib/js-yaml/type/merge.js",
+        "node_modules/js-yaml/lib/js-yaml/type/null.js",
+        "node_modules/js-yaml/lib/js-yaml/type/omap.js",
+        "node_modules/js-yaml/lib/js-yaml/type/pairs.js",
+        "node_modules/js-yaml/lib/js-yaml/type/seq.js",
+        "node_modules/js-yaml/lib/js-yaml/type/set.js",
+        "node_modules/js-yaml/lib/js-yaml/type/str.js",
+        "node_modules/js-yaml/lib/js-yaml/type/timestamp.js",
+        "node_modules/js-yaml/lib/js-yaml/type.js",
+        "node_modules/js-yaml/lib/js-yaml.js",
+        "node_modules/load-json-file/index.js",
+        "node_modules/lodash._basecopy/index.js",
+        "node_modules/lodash._basetostring/index.js",
+        "node_modules/lodash._basevalues/index.js",
+        "node_modules/lodash._getnative/index.js",
+        "node_modules/lodash._isiterateecall/index.js",
+        "node_modules/lodash._reescape/index.js",
+        "node_modules/lodash._reevaluate/index.js",
+        "node_modules/lodash._reinterpolate/index.js",
+        "node_modules/lodash._root/index.js",
+        "node_modules/lodash.escape/index.js",
+        "node_modules/lodash.isarguments/index.js",
+        "node_modules/lodash.isarray/index.js",
+        "node_modules/lodash.keys/index.js",
+        "node_modules/lodash.restparam/index.js",
+        "node_modules/lodash.template/index.js",
+        "node_modules/lodash.templatesettings/index.js",
+        "node_modules/loud-rejection/api.js",
+        "node_modules/loud-rejection/index.js",
+        "node_modules/loud-rejection/register.js",
+        "node_modules/map-obj/index.js",
+        "node_modules/meow/index.js",
+        "node_modules/meow/node_modules/object-assign/index.js",
+        "node_modules/minimist/example/parse.js",
+        "node_modules/minimist/index.js",
+        "node_modules/mkdirp/bin/cmd.js",
+        "node_modules/mkdirp/examples/pow.js",
+        "node_modules/mkdirp/index.js",
+        "node_modules/mkdirp/node_modules/minimist/example/parse.js",
+        "node_modules/mkdirp/node_modules/minimist/index.js",
+        "node_modules/multipipe/index.js",
+        "node_modules/normalize-package-data/lib/extract_description.js",
+        "node_modules/normalize-package-data/lib/fixer.js",
+        "node_modules/normalize-package-data/lib/make_warning.js",
+        "node_modules/normalize-package-data/lib/normalize.js",
+        "node_modules/normalize-package-data/lib/safe_format.js",
+        "node_modules/number-is-nan/index.js",
+        "node_modules/object-assign/index.js",
+        "node_modules/parse-json/index.js",
+        "node_modules/parse-json/vendor/parse.js",
+        "node_modules/parse-json/vendor/unicode.js",
+        "node_modules/path-exists/index.js",
+        "node_modules/path-type/index.js",
+        "node_modules/pify/index.js",
+        "node_modules/pinkie/index.js",
+        "node_modules/pinkie-promise/index.js",
+        "node_modules/process-nextick-args/index.js",
+        "node_modules/process-nextick-args/test.js",
+        "node_modules/q/q.js",
+        "node_modules/q/queue.js",
+        "node_modules/read-pkg/index.js",
+        "node_modules/read-pkg-up/index.js",
+        "node_modules/readable-stream/duplex.js",
+        "node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/readable-stream/passthrough.js",
+        "node_modules/readable-stream/readable.js",
+        "node_modules/readable-stream/transform.js",
+        "node_modules/readable-stream/writable.js",
+        "node_modules/redent/index.js",
+        "node_modules/repeating/index.js",
+        "node_modules/replace-ext/index.js",
+        "node_modules/sax/lib/sax.js",
+        "node_modules/semver/semver.js",
+        "node_modules/signal-exit/index.js",
+        "node_modules/signal-exit/signals.js",
+        "node_modules/source-map/dist/source-map.debug.js",
+        "node_modules/source-map/dist/source-map.js",
+        "node_modules/source-map/dist/source-map.min.js",
+        "node_modules/source-map/lib/array-set.js",
+        "node_modules/source-map/lib/base64-vlq.js",
+        "node_modules/source-map/lib/base64.js",
+        "node_modules/source-map/lib/binary-search.js",
+        "node_modules/source-map/lib/mapping-list.js",
+        "node_modules/source-map/lib/quick-sort.js",
+        "node_modules/source-map/lib/source-map-consumer.js",
+        "node_modules/source-map/lib/source-map-generator.js",
+        "node_modules/source-map/lib/source-node.js",
+        "node_modules/source-map/lib/util.js",
+        "node_modules/source-map/source-map.js",
+        "node_modules/sparkles/index.js",
+        "node_modules/spdx-correct/index.js",
+        "node_modules/spdx-expression-parse/index.js",
+        "node_modules/spdx-expression-parse/parser.js",
+        "node_modules/sprintf-js/dist/angular-sprintf.min.js",
+        "node_modules/sprintf-js/dist/sprintf.min.js",
+        "node_modules/sprintf-js/gruntfile.js",
+        "node_modules/sprintf-js/src/angular-sprintf.js",
+        "node_modules/sprintf-js/src/sprintf.js",
+        "node_modules/string_decoder/index.js",
+        "node_modules/strip-ansi/index.js",
+        "node_modules/strip-bom/index.js",
+        "node_modules/strip-indent/cli.js",
+        "node_modules/strip-indent/index.js",
+        "node_modules/supports-color/index.js",
+        "node_modules/svgo/lib/svgo/coa.js",
+        "node_modules/svgo/lib/svgo/config.js",
+        "node_modules/svgo/lib/svgo/js2svg.js",
+        "node_modules/svgo/lib/svgo/jsAPI.js",
+        "node_modules/svgo/lib/svgo/plugins.js",
+        "node_modules/svgo/lib/svgo/svg2js.js",
+        "node_modules/svgo/lib/svgo/tools.js",
+        "node_modules/svgo/lib/svgo.js",
+        "node_modules/svgo/plugins/_collections.js",
+        "node_modules/svgo/plugins/_path.js",
+        "node_modules/svgo/plugins/_transforms.js",
+        "node_modules/svgo/plugins/addAttributesToSVGElement.js",
+        "node_modules/svgo/plugins/addClassesToSVGElement.js",
+        "node_modules/svgo/plugins/cleanupAttrs.js",
+        "node_modules/svgo/plugins/cleanupEnableBackground.js",
+        "node_modules/svgo/plugins/cleanupIDs.js",
+        "node_modules/svgo/plugins/cleanupListOfValues.js",
+        "node_modules/svgo/plugins/cleanupNumericValues.js",
+        "node_modules/svgo/plugins/collapseGroups.js",
+        "node_modules/svgo/plugins/convertColors.js",
+        "node_modules/svgo/plugins/convertPathData.js",
+        "node_modules/svgo/plugins/convertShapeToPath.js",
+        "node_modules/svgo/plugins/convertStyleToAttrs.js",
+        "node_modules/svgo/plugins/convertTransform.js",
+        "node_modules/svgo/plugins/mergePaths.js",
+        "node_modules/svgo/plugins/minifyStyles.js",
+        "node_modules/svgo/plugins/moveElemsAttrsToGroup.js",
+        "node_modules/svgo/plugins/moveGroupAttrsToElems.js",
+        "node_modules/svgo/plugins/removeAttrs.js",
+        "node_modules/svgo/plugins/removeComments.js",
+        "node_modules/svgo/plugins/removeDesc.js",
+        "node_modules/svgo/plugins/removeDimensions.js",
+        "node_modules/svgo/plugins/removeDoctype.js",
+        "node_modules/svgo/plugins/removeEditorsNSData.js",
+        "node_modules/svgo/plugins/removeElementsByAttr.js",
+        "node_modules/svgo/plugins/removeEmptyAttrs.js",
+        "node_modules/svgo/plugins/removeEmptyContainers.js",
+        "node_modules/svgo/plugins/removeEmptyText.js",
+        "node_modules/svgo/plugins/removeHiddenElems.js",
+        "node_modules/svgo/plugins/removeMetadata.js",
+        "node_modules/svgo/plugins/removeNonInheritableGroupAttrs.js",
+        "node_modules/svgo/plugins/removeRasterImages.js",
+        "node_modules/svgo/plugins/removeStyleElement.js",
+        "node_modules/svgo/plugins/removeTitle.js",
+        "node_modules/svgo/plugins/removeUnknownsAndDefaults.js",
+        "node_modules/svgo/plugins/removeUnusedNS.js",
+        "node_modules/svgo/plugins/removeUselessDefs.js",
+        "node_modules/svgo/plugins/removeUselessStrokeAndFill.js",
+        "node_modules/svgo/plugins/removeViewBox.js",
+        "node_modules/svgo/plugins/removeXMLNS.js",
+        "node_modules/svgo/plugins/removeXMLProcInst.js",
+        "node_modules/svgo/plugins/sortAttrs.js",
+        "node_modules/svgo/plugins/transformsWithOnePath.js",
+        "node_modules/through2/node_modules/isarray/index.js",
+        "node_modules/through2/node_modules/isarray/test.js",
+        "node_modules/through2/node_modules/readable-stream/duplex.js",
+        "node_modules/through2/node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/through2/node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/through2/node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/through2/node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/through2/node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/through2/node_modules/readable-stream/lib/internal/streams/BufferList.js",
+        "node_modules/through2/node_modules/readable-stream/passthrough.js",
+        "node_modules/through2/node_modules/readable-stream/readable.js",
+        "node_modules/through2/node_modules/readable-stream/transform.js",
+        "node_modules/through2/node_modules/readable-stream/writable.js",
+        "node_modules/through2/through2.js",
+        "node_modules/time-stamp/index.js",
+        "node_modules/trim-newlines/index.js",
+        "node_modules/util-deprecate/browser.js",
+        "node_modules/util-deprecate/node.js",
+        "node_modules/validate-npm-package-license/index.js",
+        "node_modules/vinyl/index.js",
+        "node_modules/vinyl/lib/cloneBuffer.js",
+        "node_modules/vinyl/lib/inspectStream.js",
+        "node_modules/vinyl/lib/isBuffer.js",
+        "node_modules/vinyl/lib/isNull.js",
+        "node_modules/vinyl/lib/isStream.js",
+        "node_modules/whet.extend/index.js",
+        "node_modules/whet.extend/lib/whet.extend.js",
+        "node_modules/xtend/immutable.js",
+        "node_modules/xtend/mutable.js",
+        "node_modules/xtend/test.js"
       ],
       ".coffee": [
         "lib/dom.coffee",
         "lib/headers.coffee",
         "lib/main.coffee",
         "lib/settings.coffee",
-        "lib/utility.coffee"
+        "lib/utility.coffee",
+        "node_modules/coa/src/arg.coffee",
+        "node_modules/coa/src/cmd.coffee",
+        "node_modules/coa/src/color.coffee",
+        "node_modules/coa/src/completion.coffee",
+        "node_modules/coa/src/index.coffee",
+        "node_modules/coa/src/opt.coffee",
+        "node_modules/coa/src/shell.coffee",
+        "node_modules/whet.extend/src/whet.extend.coffee"
       ],
       ".json": [
+        "node_modules/ansi-regex/package.json",
+        "node_modules/ansi-styles/package.json",
+        "node_modules/argparse/package.json",
+        "node_modules/array-differ/package.json",
+        "node_modules/array-find-index/package.json",
+        "node_modules/array-uniq/package.json",
+        "node_modules/beeper/package.json",
+        "node_modules/buffer-shims/package.json",
+        "node_modules/builtin-modules/builtin-modules.json",
+        "node_modules/builtin-modules/package.json",
+        "node_modules/camelcase/package.json",
+        "node_modules/camelcase-keys/package.json",
+        "node_modules/chalk/package.json",
+        "node_modules/clap/package.json",
+        "node_modules/clone/package.json",
+        "node_modules/clone-stats/package.json",
+        "node_modules/coa/package.json",
+        "node_modules/colors/package.json",
+        "node_modules/core-util-is/package.json",
+        "node_modules/csso/package.json",
+        "node_modules/currently-unhandled/package.json",
+        "node_modules/dateformat/package.json",
+        "node_modules/decamelize/package.json",
+        "node_modules/duplexer2/package.json",
+        "node_modules/error-ex/package.json",
+        "node_modules/escape-string-regexp/package.json",
+        "node_modules/esprima/package.json",
+        "node_modules/fancy-log/package.json",
+        "node_modules/find-up/package.json",
+        "node_modules/get-stdin/package.json",
+        "node_modules/glogg/package.json",
+        "node_modules/graceful-fs/package.json",
+        "node_modules/gulp-svgmin/package.json",
+        "node_modules/gulp-util/package.json",
+        "node_modules/gulplog/package.json",
+        "node_modules/has-ansi/package.json",
+        "node_modules/has-gulplog/package.json",
+        "node_modules/hosted-git-info/package.json",
+        "node_modules/indent-string/package.json",
+        "node_modules/inherits/package.json",
+        "node_modules/is-arrayish/package.json",
+        "node_modules/is-builtin-module/package.json",
+        "node_modules/is-finite/package.json",
+        "node_modules/is-utf8/package.json",
+        "node_modules/isarray/component.json",
+        "node_modules/isarray/package.json",
+        "node_modules/js-yaml/package.json",
+        "node_modules/load-json-file/package.json",
+        "node_modules/lodash._basecopy/package.json",
+        "node_modules/lodash._basetostring/package.json",
+        "node_modules/lodash._basevalues/package.json",
+        "node_modules/lodash._getnative/package.json",
+        "node_modules/lodash._isiterateecall/package.json",
+        "node_modules/lodash._reescape/package.json",
+        "node_modules/lodash._reevaluate/package.json",
+        "node_modules/lodash._reinterpolate/package.json",
+        "node_modules/lodash._root/package.json",
+        "node_modules/lodash.escape/package.json",
+        "node_modules/lodash.isarguments/package.json",
+        "node_modules/lodash.isarray/package.json",
+        "node_modules/lodash.keys/package.json",
+        "node_modules/lodash.restparam/package.json",
+        "node_modules/lodash.template/package.json",
+        "node_modules/lodash.templatesettings/package.json",
+        "node_modules/loud-rejection/package.json",
+        "node_modules/map-obj/package.json",
+        "node_modules/meow/node_modules/object-assign/package.json",
+        "node_modules/meow/package.json",
+        "node_modules/minimist/package.json",
+        "node_modules/mkdirp/node_modules/minimist/package.json",
+        "node_modules/mkdirp/package.json",
+        "node_modules/multipipe/package.json",
+        "node_modules/normalize-package-data/lib/typos.json",
+        "node_modules/normalize-package-data/lib/warning_messages.json",
+        "node_modules/normalize-package-data/package.json",
+        "node_modules/number-is-nan/package.json",
+        "node_modules/object-assign/package.json",
+        "node_modules/parse-json/package.json",
+        "node_modules/path-exists/package.json",
+        "node_modules/path-type/package.json",
+        "node_modules/pify/package.json",
+        "node_modules/pinkie/package.json",
+        "node_modules/pinkie-promise/package.json",
+        "node_modules/process-nextick-args/package.json",
+        "node_modules/q/package.json",
+        "node_modules/read-pkg/package.json",
+        "node_modules/read-pkg-up/package.json",
+        "node_modules/readable-stream/package.json",
+        "node_modules/redent/package.json",
+        "node_modules/repeating/package.json",
+        "node_modules/replace-ext/package.json",
+        "node_modules/sax/package.json",
+        "node_modules/semver/package.json",
+        "node_modules/signal-exit/package.json",
+        "node_modules/source-map/package.json",
+        "node_modules/sparkles/package.json",
+        "node_modules/spdx-correct/package.json",
+        "node_modules/spdx-expression-parse/package.json",
+        "node_modules/spdx-license-ids/package.json",
+        "node_modules/spdx-license-ids/spdx-license-ids.json",
+        "node_modules/sprintf-js/bower.json",
+        "node_modules/sprintf-js/package.json",
+        "node_modules/string_decoder/package.json",
+        "node_modules/strip-ansi/package.json",
+        "node_modules/strip-bom/package.json",
+        "node_modules/strip-indent/package.json",
+        "node_modules/supports-color/package.json",
+        "node_modules/svgo/package.json",
+        "node_modules/through2/node_modules/isarray/component.json",
+        "node_modules/through2/node_modules/isarray/package.json",
+        "node_modules/through2/node_modules/readable-stream/package.json",
+        "node_modules/through2/package.json",
+        "node_modules/time-stamp/package.json",
+        "node_modules/trim-newlines/package.json",
+        "node_modules/util-deprecate/package.json",
+        "node_modules/validate-npm-package-license/package.json",
+        "node_modules/vinyl/package.json",
+        "node_modules/whet.extend/package.json",
+        "node_modules/xtend/package.json",
         "package.json"
       ]
     },
-    "folders": []
+    "folders": [
+      {
+        "paths": [
+          "file-types",
+          "",
+          "lib"
+        ],
+        "dependencies": {
+          "gulp-svgmin": "^1.2.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/argparse",
+          "node_modules/argparse/lib/action/append",
+          "node_modules/argparse/lib/action",
+          "node_modules/argparse/lib/action/store",
+          "node_modules/argparse/lib",
+          "node_modules/argparse/lib/argument",
+          "node_modules/argparse/lib/help"
+        ],
+        "dependencies": {
+          "sprintf-js": "~1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/camelcase-keys"
+        ],
+        "dependencies": {
+          "camelcase": "^2.0.0",
+          "map-obj": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^2.2.1",
+          "escape-string-regexp": "^1.0.2",
+          "has-ansi": "^2.0.0",
+          "strip-ansi": "^3.0.0",
+          "supports-color": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/clap"
+        ],
+        "dependencies": {
+          "chalk": "^1.1.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/coa",
+          "node_modules/coa/lib",
+          "node_modules/coa/src",
+          "node_modules/coa/test",
+          "node_modules/coa/tests"
+        ],
+        "dependencies": {
+          "q": "^1.1.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/csso/dist",
+          "node_modules/csso/lib",
+          "node_modules/csso/lib/compressor/clean",
+          "node_modules/csso/lib/compressor/compress",
+          "node_modules/csso/lib/compressor/compress/atrule",
+          "node_modules/csso/lib/compressor/compress/property",
+          "node_modules/csso/lib/compressor",
+          "node_modules/csso/lib/compressor/restructure",
+          "node_modules/csso/lib/compressor/restructure/prepare",
+          "node_modules/csso/lib/parser",
+          "node_modules/csso/lib/utils",
+          "node_modules/csso"
+        ],
+        "dependencies": {
+          "clap": "^1.0.9",
+          "source-map": "^0.5.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/currently-unhandled"
+        ],
+        "dependencies": {
+          "array-find-index": "^1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/dateformat/bin",
+          "node_modules/dateformat/lib",
+          "node_modules/dateformat",
+          "node_modules/dateformat/test",
+          "node_modules/dateformat/test/weekofyear"
+        ],
+        "dependencies": {
+          "get-stdin": "^4.0.1",
+          "meow": "^3.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/duplexer2",
+          "node_modules/duplexer2/test"
+        ],
+        "dependencies": {
+          "readable-stream": "~1.1.9"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/error-ex"
+        ],
+        "dependencies": {
+          "is-arrayish": "^0.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fancy-log"
+        ],
+        "dependencies": {
+          "chalk": "^1.1.1",
+          "time-stamp": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/find-up"
+        ],
+        "dependencies": {
+          "path-exists": "^2.0.0",
+          "pinkie-promise": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glogg"
+        ],
+        "dependencies": {
+          "sparkles": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/gulp-svgmin/dist",
+          "node_modules/gulp-svgmin"
+        ],
+        "dependencies": {
+          "gulp-util": "^3.0.4",
+          "svgo": "^0.7.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/gulp-util",
+          "node_modules/gulp-util/lib"
+        ],
+        "dependencies": {
+          "array-differ": "^1.0.0",
+          "array-uniq": "^1.0.2",
+          "beeper": "^1.0.0",
+          "chalk": "^1.0.0",
+          "dateformat": "^1.0.11",
+          "fancy-log": "^1.1.0",
+          "gulplog": "^1.0.0",
+          "has-gulplog": "^0.1.0",
+          "lodash._reescape": "^3.0.0",
+          "lodash._reevaluate": "^3.0.0",
+          "lodash._reinterpolate": "^3.0.0",
+          "lodash.template": "^3.0.0",
+          "minimist": "^1.1.0",
+          "multipipe": "^0.1.2",
+          "object-assign": "^3.0.0",
+          "replace-ext": "0.0.1",
+          "through2": "^2.0.0",
+          "vinyl": "^0.5.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/gulplog"
+        ],
+        "dependencies": {
+          "glogg": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/has-gulplog"
+        ],
+        "dependencies": {
+          "sparkles": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/indent-string"
+        ],
+        "dependencies": {
+          "repeating": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/is-builtin-module"
+        ],
+        "dependencies": {
+          "builtin-modules": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/is-finite"
+        ],
+        "dependencies": {
+          "number-is-nan": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/js-yaml/bin",
+          "node_modules/js-yaml/dist",
+          "node_modules/js-yaml",
+          "node_modules/js-yaml/lib/js-yaml",
+          "node_modules/js-yaml/lib/js-yaml/schema",
+          "node_modules/js-yaml/lib/js-yaml/type",
+          "node_modules/js-yaml/lib/js-yaml/type/js",
+          "node_modules/js-yaml/lib"
+        ],
+        "dependencies": {
+          "argparse": "^1.0.7",
+          "esprima": "^2.6.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/load-json-file"
+        ],
+        "dependencies": {
+          "graceful-fs": "^4.1.2",
+          "parse-json": "^2.2.0",
+          "pify": "^2.0.0",
+          "pinkie-promise": "^2.0.0",
+          "strip-bom": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/lodash.escape"
+        ],
+        "dependencies": {
+          "lodash._root": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/lodash.keys"
+        ],
+        "dependencies": {
+          "lodash._getnative": "^3.0.0",
+          "lodash.isarguments": "^3.0.0",
+          "lodash.isarray": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/lodash.template"
+        ],
+        "dependencies": {
+          "lodash._basecopy": "^3.0.0",
+          "lodash._basetostring": "^3.0.0",
+          "lodash._basevalues": "^3.0.0",
+          "lodash._isiterateecall": "^3.0.0",
+          "lodash._reinterpolate": "^3.0.0",
+          "lodash.escape": "^3.0.0",
+          "lodash.keys": "^3.0.0",
+          "lodash.restparam": "^3.0.0",
+          "lodash.templatesettings": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/lodash.templatesettings"
+        ],
+        "dependencies": {
+          "lodash._reinterpolate": "^3.0.0",
+          "lodash.escape": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/loud-rejection"
+        ],
+        "dependencies": {
+          "currently-unhandled": "^0.4.1",
+          "signal-exit": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/meow"
+        ],
+        "dependencies": {
+          "camelcase-keys": "^2.0.0",
+          "decamelize": "^1.1.2",
+          "loud-rejection": "^1.0.0",
+          "map-obj": "^1.0.1",
+          "minimist": "^1.1.3",
+          "normalize-package-data": "^2.3.4",
+          "object-assign": "^4.0.1",
+          "read-pkg-up": "^1.0.1",
+          "redent": "^1.0.0",
+          "trim-newlines": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mkdirp/bin",
+          "node_modules/mkdirp/examples",
+          "node_modules/mkdirp",
+          "node_modules/mkdirp/test"
+        ],
+        "dependencies": {
+          "minimist": "0.0.8"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/multipipe",
+          "node_modules/multipipe/test"
+        ],
+        "dependencies": {
+          "duplexer2": "0.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/normalize-package-data/lib",
+          "node_modules/normalize-package-data",
+          "node_modules/normalize-package-data/test",
+          "node_modules/normalize-package-data/test/fixtures"
+        ],
+        "dependencies": {
+          "hosted-git-info": "^2.1.4",
+          "is-builtin-module": "^1.0.0",
+          "semver": "2 || 3 || 4 || 5",
+          "validate-npm-package-license": "^3.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/parse-json",
+          "node_modules/parse-json/vendor"
+        ],
+        "dependencies": {
+          "error-ex": "^1.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/path-exists"
+        ],
+        "dependencies": {
+          "pinkie-promise": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/path-type"
+        ],
+        "dependencies": {
+          "graceful-fs": "^4.1.2",
+          "pify": "^2.0.0",
+          "pinkie-promise": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/pinkie-promise"
+        ],
+        "dependencies": {
+          "pinkie": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/read-pkg"
+        ],
+        "dependencies": {
+          "load-json-file": "^1.0.0",
+          "normalize-package-data": "^2.3.2",
+          "path-type": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/read-pkg-up"
+        ],
+        "dependencies": {
+          "find-up": "^1.0.0",
+          "read-pkg": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/readable-stream",
+          "node_modules/readable-stream/lib"
+        ],
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.1",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/redent"
+        ],
+        "dependencies": {
+          "indent-string": "^2.1.0",
+          "strip-indent": "^1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/repeating"
+        ],
+        "dependencies": {
+          "is-finite": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/spdx-correct"
+        ],
+        "dependencies": {
+          "spdx-license-ids": "^1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-bom"
+        ],
+        "dependencies": {
+          "is-utf8": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-indent"
+        ],
+        "dependencies": {
+          "get-stdin": "^4.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/svgo/lib/svgo",
+          "node_modules/svgo/lib",
+          "node_modules/svgo",
+          "node_modules/svgo/plugins"
+        ],
+        "dependencies": {
+          "coa": "~1.0.1",
+          "colors": "~1.1.2",
+          "csso": "~2.2.1",
+          "js-yaml": "~3.6.1",
+          "mkdirp": "~0.5.1",
+          "sax": "~1.2.1",
+          "whet.extend": "~0.9.9"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/through2"
+        ],
+        "dependencies": {
+          "readable-stream": "^2.1.5",
+          "xtend": "~4.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/through2/node_modules/readable-stream",
+          "node_modules/through2/node_modules/readable-stream/lib",
+          "node_modules/through2/node_modules/readable-stream/lib/internal/streams"
+        ],
+        "dependencies": {
+          "buffer-shims": "^1.0.0",
+          "core-util-is": "~1.0.0",
+          "inherits": "~2.0.1",
+          "isarray": "~1.0.0",
+          "process-nextick-args": "~1.0.6",
+          "string_decoder": "~0.10.x",
+          "util-deprecate": "~1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/validate-npm-package-license"
+        ],
+        "dependencies": {
+          "spdx-correct": "~1.0.0",
+          "spdx-expression-parse": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/vinyl",
+          "node_modules/vinyl/lib"
+        ],
+        "dependencies": {
+          "clone": "^1.0.0",
+          "clone-stats": "^0.0.1",
+          "replace-ext": "0.0.1"
+        }
+      }
+    ]
   }
 }

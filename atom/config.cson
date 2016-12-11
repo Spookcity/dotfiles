@@ -29,6 +29,7 @@
     userId: "f1c7e011-796b-a89d-169a-17f103226992"
   "git-diff":
     showIconsInEditorGutter: true
+  "git-plus": {}
   "open-file-in":
     applications: "sunflower.desktop"
   "seti-ui":
