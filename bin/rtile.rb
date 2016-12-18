@@ -9,7 +9,7 @@ include REXML
 
 
 NAME = "rtile"
-VERSION = "1.92"
+VERSION = "1.95"
 
 GROW_PUSHBACK = 32
 
@@ -46,6 +46,8 @@ def main()
 		split_active(settings, Window.get_visible_windows(), split.first.gsub(/^--split-/, ''))
 	elsif not (grow = ARGV.grep(/--grow-(up|down|left|right)/)).empty?
 		grow_active(settings, Window.get_visible_windows(), grow.first.gsub(/^--grow-/, ''))
+	elsif not (grid = ARGV.grep(/--grid-\d+x\d+-\d+,\d+/)).empty?
+		grid_active(settings, Monitor.get_monitors(), Monitor.get_current_workspace(), grid.first.gsub(/^--grid-/, ''))
 	else
 		tile_active(settings, Monitor.get_monitors(), Monitor.get_current_workspace(), ARGV.select do |arg| arg =~ /^(l|r|t|b)+$/ end)
 	end
@@ -53,7 +55,6 @@ end
 
 
 def tile_active(settings, monitors, current_workspace, args)
-	median = settings.medians[current_workspace]
 	window = get_active_window()
 	return if window.nil?
 	cols, rows, x, y = 1, 1, 0, 0
@@ -66,6 +67,11 @@ def tile_active(settings, monitors, current_workspace, args)
 			y = rows - 1 if c == 'b'			
 		end
 	end
+	grid(settings, window, monitors, current_workspace, cols, rows, x, y)
+end
+
+
+def grid(settings, window, monitors, current_workspace, cols, rows, x, y)
 	columns = []
 	(0...cols).each do |c|
 		columns << []
@@ -75,7 +81,7 @@ def tile_active(settings, monitors, current_workspace, args)
 	end
 	columns[x][y] = window
 	
-	tile(settings, columns, get_monitor(window, monitors), median)
+	tile(settings, columns, get_monitor(window, monitors), settings.medians[current_workspace])
 end
 
 
@@ -124,6 +130,13 @@ def grow_active(settings, windows, direction)
 	return if window.nil?
 	other_windows = windows.select do |w| window.id != w.id end
 	grow(settings, window, direction, other_windows)
+end
+
+
+def grid_active(settings, monitors, current_workspace, params)
+	window = get_active_window()
+	cols, rows, x, y = params.match(/(\d+)x(\d+)-(\d+),(\d+)/i).captures	
+	grid(settings, window, monitors, current_workspace, cols.to_i, rows.to_i, x.to_i - 1 , y.to_i - 1)
 end
 
 
@@ -309,15 +322,17 @@ end
 
 def tile_all_binary(settings, windows, monitors, current_workspace)
 	monitor_hash = get_monitor_window_hash(monitors, windows)
+	reverse_x = settings.reverse_x.include? current_workspace
+	reverse_y = settings.reverse_y.include? current_workspace
 
 	monitors.each do |monitor|
 		monitor_windows = get_sorted_monitor_windows(settings, monitor_hash[monitor.name], monitor, current_workspace)
 		monitor_windows.reject! do |w| w.nil? end
-		break if monitor_windows.empty?
+		next if monitor_windows.empty?
 		tile(settings, [[monitor_windows[0]]], monitor, 0.5)
 		for i in 0...monitor_windows.size
 			if i > 0
-				split(settings, monitor_windows[i - 1], i % 2 == 0 ? 'up' : 'left', [monitor_windows[i]])
+				split(settings, monitor_windows[i - 1], i % 2 == 0 ? (reverse_y ? 'down' : 'up') : (reverse_x ? 'right' : 'left'), [monitor_windows[i]])
 			end
 		end
 	end
@@ -392,11 +407,11 @@ def tile_all(settings, windows, monitors, current_workspace)
 
 	monitors.each do |monitor|
 		monitor_windows = get_sorted_monitor_windows(settings, monitor_hash[monitor.name], monitor, current_workspace)
-		break if monitor_windows.empty?
+		next if monitor_windows.empty?
 		
 		column_sizes = nil
 		unless settings.column_configs.empty?
-			column_config = settings.column_configs.select do |cs| (cs.workspace.nil? or cs.workspace == current_workspace) and cs.windows == monitor_windows.size end.first
+			column_config = settings.column_configs.select do |cs| (cs.workspace.nil? or cs.workspace == current_workspace) and cs.windows == monitor_windows.size end.last
 			column_sizes = column_config.column_sizes unless column_config.nil?
 		end
 		
