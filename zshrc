@@ -10,8 +10,9 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH="1"
-#POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+#POWERLEVEL9K_SHORTEN_DELIMITER=""
+#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon virtualenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 
@@ -68,7 +69,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Plugins
-plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git z zsh-autosuggestions web-search zsh-syntax-highlighting)
 
 autoload -U compinit && compinit
 # Other

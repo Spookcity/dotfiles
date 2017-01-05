@@ -1,79 +1,89 @@
 {
     "gui_state": {
-        "createbranchdialog": {
-            "width": 555,
-            "x": 523,
-            "y": 28,
-            "height": 333,
-            "maximized": false
-        },
-        "mainview": {
-            "y": 28,
-            "maximized": true,
-            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPHAAADMfwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAACAAAAEUAAAAZQD////7AAAACABEAGkAZgBmAQAAATcAAAIaAAAAIAD///8AAAABAAACdgAAAzH8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAgAAADMQAAAHAA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABwAAAAZgAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAogAAACNAAAAcAD///8AAAADAAAGQAAAAH78AQAAAAH8AAAAAAAABkAAAAAAAP////r/////AQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAAAAAAD/////AAAAkAD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAlAD///8AAAAAAAADMQAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "width": 1600,
-            "x": 0,
-            "height": 849,
-            "lock_layout": true,
-            "show_status_filter": false
-        },
-        "browser": {
-            "width": 720,
-            "x": 52,
-            "y": 25,
-            "height": 420,
-            "maximized": false
-        },
         "startupdialog": {
-            "width": 800,
-            "x": 399,
             "y": 206,
             "height": 450,
+            "width": 800,
+            "x": 399,
+            "maximized": false
+        },
+        "stashview": {
+            "y": 241,
+            "height": 420,
+            "width": 1600,
+            "x": 0,
+            "maximized": false
+        },
+        "recentfiledialog": {
+            "y": 241,
+            "height": 420,
+            "width": 1600,
+            "x": 0,
             "maximized": false
         },
         "push": {
-            "width": 666,
-            "x": 467,
             "y": 29,
             "height": 420,
+            "width": 666,
+            "x": 467,
+            "maximized": false
+        },
+        "browser": {
+            "y": 25,
+            "height": 420,
+            "width": 720,
+            "x": 52,
             "maximized": false
         },
         "pull": {
-            "y": 29,
-            "maximized": false,
-            "rebase": false,
             "width": 666,
             "x": 467,
-            "height": 420
+            "y": 29,
+            "height": 420,
+            "maximized": false,
+            "rebase": false
         },
         "gitdag": {
-            "y": 29,
+            "width": 1600,
             "count": 1000,
-            "maximized": false,
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQFAAADOvwCAAAAAfwAAAAaAAADOgAAAM8A/////AIAAAAC+wAAAAYATABvAGcBAAAAGgAAALQAAABuAP////sAAAAIAEQAaQBmAGYBAAAA0QAAAoMAAABeAP///wAAAAEAAAI4AAADOvwCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAGoA////+wAAAAoARgBpAGwAZQBzAQAAABoAAAM6AAAAagD///8AAAAAAAADOgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "width": 1600,
-            "x": 0,
+            "y": 29,
             "height": 852,
-            "lock_layout": true
+            "lock_layout": true,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQFAAADNPwCAAAAAfwAAAAgAAADNAAAANgA/////AIAAAAC+wAAAAYATABvAGcBAAAAIAAAATQAAABzAP////sAAAAIAEQAaQBmAGYBAAABVwAAAf0AAABiAP///wAAAAEAAAI4AAADNPwCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAHAA////+wAAAAoARgBpAGwAZQBzAQAAACAAAAM0AAAAcAD///8AAAAAAAADNAAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "maximized": false,
+            "x": 0
         },
-        "stashview": {
-            "width": 1600,
-            "x": 0,
-            "y": 241,
-            "height": 420,
+        "createbranchdialog": {
+            "y": 28,
+            "height": 333,
+            "width": 555,
+            "x": 523,
             "maximized": false
         },
+        "mainview": {
+            "show_status_filter": false,
+            "width": 1600,
+            "x": 0,
+            "y": 28,
+            "height": 849,
+            "lock_layout": true,
+            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPqAAADMfwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAACAAAAEUAAAAZQD////7AAAACABEAGkAZgBmAQAAATcAAAIaAAAAIAD///8AAAABAAACUwAAAzH8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAgAAADMQAAAHAA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABuQAAAZgAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAm4AAADjAAAAcAD///8AAAADAAAGQAAAACD8AQAAAAH8AAAAAAAABkAAAAAAAP////r/////AQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAAAAAAD/////AAAAkAD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAlAD///8AAAAAAAADMQAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "maximized": true
+        },
         "fetch": {
-            "width": 666,
-            "x": 467,
             "y": 28,
             "height": 420,
+            "width": 666,
+            "x": 467,
             "maximized": false
         }
     },
     "recent": [
+        "/home/rick/android_dev/G800F-Kernel_Stuff/android_kernel_samsung_kminilte-MM",
+        "/home/rick/android_dev/G800F-Kernel_Stuff/android_kernel_samsung_kminilte",
         "/home/rick/dotfiles",
-        "/home/rick/android_dev/G800F_Trees-MM/android_hardware_samsung"
+        "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_kernel_samsung_kminilte",
+        "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_hardware_ril"
     ],
     "bookmarks": []
 }

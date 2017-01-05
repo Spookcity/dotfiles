@@ -18,7 +18,7 @@ set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
 set uicolor #8b8c8c
 set want_ttk 1
-set bgcolor #0E0E0E
+set bgcolor #0e0e0e
 set fgcolor #dcdccc
 set uifgcolor black
 set uifgdisabledcolor #999
@@ -30,7 +30,7 @@ set diffcontext 3
 set selectbgcolor #23394c
 set foundbgcolor yellow
 set currentsearchhitbgcolor orange
-set extdifftool meld
+set extdifftool xxdiff
 set perfile_attrs 0
 set headbgcolor lime
 set headfgcolor black
@@ -54,9 +54,9 @@ set circleoutlinecolor black
 set geometry(main) 1598x817+0+0
 set geometry(state) normal
 set geometry(topwidth) 1598
-set geometry(topheight) 210
+set geometry(topheight) 294
 set geometry(pwsash0) "813 1"
-set geometry(pwsash1) "1158 1"
+set geometry(pwsash1) "1161 1"
 set geometry(botwidth) 1010
-set geometry(botheight) 602
+set geometry(botheight) 518
 set permviews {}

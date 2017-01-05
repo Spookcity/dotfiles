@@ -5,8 +5,8 @@
 #[[ $- != *i* ]] && return
 
 export EDITOR=vim
-#export PATH=:~/bin:~/scripts:/usr/local/sbin:/usr/local/bin:/usr/local/lib:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/outproc/bin
- # JAVA_HOME=/usr/lib/jvm/java-8-jdk/bin/java
+export PATH=:~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/lib:/sbin:/bin
+#JAVA_HOME=/usr/lib/jvm/java-8-jdk/bin/java
 
 # Android tools
 export ANDROID_HOME=/opt/android-sdk

@@ -8,7 +8,7 @@ GitPull = require './git-pull'
 
 disposables = new CompositeDisposable
 
-verboseCommitsEnabled = -> atom.config.get('git-plus.experimental') and atom.config.get('git-plus.verboseCommits')
+verboseCommitsEnabled = -> atom.config.get('git-plus.commits.verboseCommits')
 
 getStagedFiles = (repo) ->
   git.stagedFiles(repo).then (files) ->
@@ -42,15 +42,11 @@ prepFile = ({status, filePath, diff, commentChar, template}) ->
       #{diff}"""
   fs.writeFileSync filePath, content
 
-destroyCommitEditor = ->
-  atom.workspace?.getPanes().some (pane) ->
-    pane.getItems().some (paneItem) ->
-      if paneItem?.getURI?()?.includes 'COMMIT_EDITMSG'
-        if pane.getItems().length is 1
-          pane.destroy()
-        else
-          paneItem.destroy()
-        return true
+destroyCommitEditor = (filePath) ->
+  if atom.config.get('git-plus.general.openInPane')
+    atom.workspace.paneForURI(filePath)?.destroy()
+  else
+    atom.workspace.paneForURI(filePath).itemForURI(filePath)?.destroy()
 
 trimFile = (filePath, commentChar) ->
   cwd = Path.dirname(filePath)
@@ -63,22 +59,30 @@ commit = (directory, filePath) ->
   git.cmd(['commit', "--cleanup=strip", "--file=#{filePath}"], cwd: directory)
   .then (data) ->
     notifier.addSuccess data
-    destroyCommitEditor()
+    destroyCommitEditor(filePath)
     git.refresh()
   .catch (data) ->
     notifier.addError data
-    destroyCommitEditor()
+    destroyCommitEditor(filePath)
 
 cleanup = (currentPane, filePath) ->
   currentPane.activate() if currentPane.isAlive()
   disposables.dispose()
-  fs.unlink filePath
+  fs.removeSync filePath
 
 showFile = (filePath) ->
-  if atom.config.get('git-plus.openInPane')
-    splitDirection = atom.config.get('git-plus.splitPane')
-    atom.workspace.getActivePane()["split#{splitDirection}"]()
-  atom.workspace.open filePath
+  commitEditor = atom.workspace.paneForURI(filePath)?.itemForURI(filePath)
+  if not commitEditor
+    if atom.config.get('git-plus.general.openInPane')
+      splitDirection = atom.config.get('git-plus.general.splitPane')
+      atom.workspace.getActivePane()["split#{splitDirection}"]()
+    atom.workspace.open filePath
+  else
+    if atom.config.get('git-plus.general.openInPane')
+      atom.workspace.paneForURI(filePath).activate()
+    else
+      atom.workspace.paneForURI(filePath).activateItemForURI(filePath)
+    Promise.resolve(commitEditor)
 
 module.exports = (repo, {stageChanges, andPush}={}) ->
   filePath = Path.join(repo.getPath(), 'COMMIT_EDITMSG')
@@ -88,7 +92,7 @@ module.exports = (repo, {stageChanges, andPush}={}) ->
   init = -> getStagedFiles(repo).then (status) ->
     if verboseCommitsEnabled()
       args = ['diff', '--color=never', '--staged']
-      args.push '--word-diff' if atom.config.get('git-plus.wordDiff')
+      args.push '--word-diff' if atom.config.get('git-plus.diffs.wordDiff')
       git.cmd(args, cwd: repo.getWorkingDirectory())
       .then (diff) -> prepFile {status, filePath, diff, commentChar, template}
     else

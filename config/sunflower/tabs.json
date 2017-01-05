@@ -5,19 +5,40 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/home/rick/android_dev/G800F_Trees-Nougat_7.1", 
+                "path": "/home/rick/.oh-my-zsh/custom", 
+                "sort_ascending": true, 
+                "sort_column": 0
+            }, 
+            {
+                "class": "FileList", 
+                "lock": null, 
+                "path": "/home/rick/android_dev/G800F-Kernel_Stuff/android_kernel_samsung_kminilte-MM", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
         ]
     }, 
     "right": {
-        "active_tab": 0, 
+        "active_tab": 1, 
         "tabs": [
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/mnt/Ricks_Stuff", 
+                "path": "/home/rick/bin", 
+                "sort_ascending": true, 
+                "sort_column": 0
+            }, 
+            {
+                "class": "FileList", 
+                "lock": null, 
+                "path": "/usr/bin", 
+                "sort_ascending": true, 
+                "sort_column": 0
+            }, 
+            {
+                "class": "FileList", 
+                "lock": null, 
+                "path": "/home/rick/android_dev/G800F-Kernel_Stuff", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }

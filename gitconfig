@@ -10,24 +10,7 @@
 	historybrowser = gitk
 	recentrepo = /home/rick/dotfiles
 	recentrepo = /home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte
-[color "branch"]
 
-	current = yellow reverse
-	local = yellow
-	remote = green
-
-[color "diff"]
-
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
-
-[color "status"]
-
-	added = yellow
-	changed = green
-	untracked = cyan	
 [cola]
 	blameviewer = git gui blame
 	fontdiff = Droid Sans Mono,9,-1,5,50,0,0,0,0,0
@@ -36,9 +19,11 @@
 	prompt = false
 [merge]
 	tool = xxdiff
-[color]
-	ui = auto
+	conflictstyle = diff3
 [credential]
 	helper = store --file /home/rick/.config/git/credentials
+
 [diff]
-	tool = meld %F
+	tool = xxdiff %F
+[color]
+	ui = auto

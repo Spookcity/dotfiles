@@ -21,3 +21,4 @@ alias ajs='archlinux-java status'
 # other stuffs
 alias c='clear'
 alias q='exit'
+alias make='/home/rick/bin/color.sh'

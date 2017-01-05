@@ -2,39 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
+        "raw": "/tmp/d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
-        "spec": "/tmp/d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
+        "rawSpec": "/tmp/d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
+        "spec": "/tmp/d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161110-19796-epxn7g.dhqu102j4i"
+      "/tmp/apm-install-dir-11701-8102-1s46gfc.xihx672e29"
     ]
   ],
-  "_from": "../d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
-  "_id": "git-plus@5.29.0",
+  "_from": "../d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
+  "_id": "git-plus@7.0.4",
   "_inCache": true,
   "_location": "/git-plus",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
+    "raw": "/tmp/d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
-    "spec": "/tmp/d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
+    "rawSpec": "/tmp/d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
+    "spec": "/tmp/d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
-  "_shasum": "348b0c7579d1b248279afc1a55a95ab64d270c26",
+  "_resolved": "file:../d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
+  "_shasum": "9095c035ca03cc7886c1a09dabf4646dcf874d03",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161110-19796-5mct7i.zpjj43rf6r/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161110-19796-epxn7g.dhqu102j4i",
+  "_spec": "/tmp/d-11701-8102-kkaysr.n5dskvgqfr/package.tgz",
+  "_where": "/tmp/apm-install-dir-11701-8102-1s46gfc.xihx672e29",
   "bugs": {
     "url": "https://github.com/akonwi/git-plus/issues"
   },
@@ -42,6 +42,11 @@
     "status-bar": {
       "versions": {
         "^1.0.0": "consumeStatusBar"
+      }
+    },
+    "autosave": {
+      "versions": {
+        "1.0.0": "consumeAutosave"
       }
     }
   },
@@ -52,7 +57,9 @@
     "fs-plus": "^2.2.0",
     "fuzzaldrin": "^1.2.0",
     "underscore": "^1.8.3",
-    "underscore-plus": "^1.6.6"
+    "underscore-plus": "^1.6.6",
+    "universal-analytics": "^0.4.8",
+    "uuid": "^3.0.1"
   },
   "description": "Do git things without the terminal",
   "devDependencies": {
@@ -69,25 +76,58 @@
   "main": "./lib/git-plus",
   "name": "git-plus",
   "optionalDependencies": {},
-  "readme": "# Git-Plus package ![Build Status](https://travis-ci.org/akonwi/git-plus.svg?branch=master)\n\n[![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](http://forthebadge.com)\n\nvim-fugitive like package for atom. make commits and other git things without the terminal\n\n![A screenshot of your spankin' package](https://raw.githubusercontent.com/akonwi/git-plus/master/commit.gif)\n\n## Usage\n\n# IMPORTANT:\nMake sure your gitconfig file is configured. You must configure at least the `user.email` and `user.name` variables.\n\nAlso, the package currently favors an ssh setup that doesn't expect to be prompted for credentials in order to push/pull, .etc. Github has a guide to help you set that up [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)\n\nIf you are on a Windows machine, I recommend checking out [this thread](https://github.com/akonwi/git-plus/issues/224) if you have issues pushing/pulling from a remote repository with this package. I also don't have the means to do my own user testing in a windows environment so I won't be immediately able to help troubleshoot windows problems.\n\n### Showing the Git-Plus Palette\n>- `Cmd-Shift-H` on MacOS\n>- `Ctrl-Shift-H` on Windows + Linux\n>- `Git Plus: Menu` on the atom command palette.\n\n### Push/Pull/Fetch notifications\nNotifications will appear in a console output above the status bar.\nThis view can be toggled by clicking the pin icon in the bottom right of the status bar.\n\n![screenshot](https://github.com/akonwi/git-plus/raw/master/pin.png)\n\n### Commands\n_Commands are accessible for keybindings by dasherizing the command title._\n> Git Add ==  `git-plus:add`\n\n> Git Add All Commit And Push == `git-plus:add-all-commit-and-push`\n\n  __Note: This list is not exhaustive. And if what you want isn't a feature, You can use `Git Run` and enter the command__\n\n| Command | Effect | Default key binding |\n|----------|--------|------------------\n| `Git Run ` | Execute a custom command. ex. `fetch --all` | |\n| `Git Status ` | Show current status. | `Cmd-Shift-A S` |\n| `Git Add ` | Add the current file. | `Cmd-Shift-A` |\n| `Git Add All` | Adds all changed files. | |\n| `Git add and commit and push` | Commit currently open file and push to a remote repo. | `Cmd-Shift-A Q` |\n| `Git add all commit and push` | Commit every changed file and push to a remote repo. | `Cmd-Shift-A P` |\n| `Git commit` | Commit the staged changes. Git-Plus shows a commit message editor. To make the commit, save the file. To cancel the commit, close the tab. | `Cmd-Shift-C`(*`Ctrl-Shift-X`* on Windows and Linux) |\n| `Git commit amend` | Amend the changes to previous commit. |  |\n| `Git checkout current file` | Undo changes and checkout the current file. | |\n| `Git Checkout `*`[ref]`* | Change to another ref (branch or tag). | |\n| `Git Diff [All]` | Show the diff for the current file, or all files. The diff can either be against the staged or un-staged tree, as selected in the options. | |\n| `Git new branch` | Create a new branch. | |\n| `Git` *`[push⎮pull]`* | Push to or pull from a remote repo. If you have multiple remote repos, you can choose which to push to or pull from. | |\n| `Git Add and Commit` | Add all changed files and show the commit message file. Similar to `Git add all` and `Git commit` run in succession. | `Cmd-Shift-A c` |\n| `Git Add All and Commit` | Add all changed files and show the commit message file. Similar to `Git add all` and `Git commit` in succession. | `Cmd-Shift-A a` |\n| `Git Remove [current file]` | `git rm` the current file or open an selector to select the files to remove. You can select multiple files at once. | |\n| `Git Log [Current File]` | Show the commit history [for the current file] and show display the selected commit. | |\n| `Git Show` | Show the specified object, for example `HEAD`, `HEAD~2`,`3925a0d`, `origin/master` or `v2.7.3`. | |\n| `Git Open Changed Files` | Open tabs with all added, modified or renamed files. | |\n| `Git Tags` | Operate on tags individually. There are options to add, show, push, checkout, verify, and delete. | |\n\n### Commit window\nTo change where the commit window appears go to settings and find\n![screenshot](http://imgur.com/cdc7M5p.png)\n\n## Contributing\n\n1. Fork it\n2. Create your feature branch (`git checkout -b my-new-feature`)\n3. Write tests\n4. Make your changes\n5. Run `apm test`\n6. Commit your changes (`git commit -am 'Add some feature'`)\n7. Push to the branch (`git push origin my-new-feature`)\n8. Create new Pull Request\n",
+  "providedServices": {
+    "git-plus": {
+      "description": "Execute git commands",
+      "versions": {
+        "1.0.0": "provideService"
+      }
+    }
+  },
+  "readme": "# Git-Plus package ![Build Status](https://travis-ci.org/akonwi/git-plus.svg?branch=master)\n\n[![forthebadge](http://forthebadge.com/images/badges/uses-git.svg)](http://forthebadge.com)\n\nvim-fugitive like package for atom. make commits and other git things without the terminal\n\n![A screenshot of your spankin' package](https://raw.githubusercontent.com/akonwi/git-plus/master/commit.gif)\n\n## Usage\n\n# IMPORTANT:\nMake sure your gitconfig file is configured. You must configure at least the `user.email` and `user.name` variables.\n\nAlso, the package currently favors an ssh setup that doesn't expect to be prompted for credentials in order to push/pull, .etc. Github has a guide to help you set that up [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)\n\nIf you are on a Windows machine, I recommend checking out [this thread](https://github.com/akonwi/git-plus/issues/224) if you have issues pushing/pulling from a remote repository with this package. I also don't have the means to do my own user testing in a windows environment so I won't be immediately able to help troubleshoot windows problems.\n\n### Showing the Git-Plus Palette\n>- `Cmd-Shift-H` on MacOS\n>- `Ctrl-Shift-H` on Windows + Linux\n>- `Git Plus: Menu` on the atom command palette.\n\n### Push/Pull/Fetch notifications\nNotifications will appear in a console output above the status bar.\nThis view can be toggled by clicking the pin icon in the bottom right of the status bar.\n\n![screenshot](https://github.com/akonwi/git-plus/raw/master/pin.png)\n\n### Commands\n_Commands are accessible for keybindings by dasherizing the command title._\n> Git Add ==  `git-plus:add`\n\n> Git Add All Commit And Push == `git-plus:add-all-commit-and-push`\n\n  __Note: The following list of commands is not exhaustive. If what you want isn't a feature, you can use `Git Run` and enter the command.__\n\n| Command | Effect | Default key binding |\n|----------|--------|------------------\n| `Git Run ` | Execute a custom command. ex. `fetch --all` | |\n| `Git Status ` | Show current status. | `Cmd-Shift-A S` |\n| `Git Add ` | Add the current file to the index. | `Cmd-Shift-A` |\n| `Git Add All` | Adds all files to the index (ex. `git add .`). | |\n| `Git Commit` | Commit the staged changes. Git-Plus will show an editor for the commit message. To make the commit, save the file. To cancel the commit, close the tab. | `Cmd-Shift-C`(*`Ctrl-Shift-X`* on Windows and Linux) |\n| `Git Add And Commit` | Stages the current file before preparing a commit. (`Git add all` and `Git commit` run in succession) | `Cmd-Shift-A c` |\n| `Git Add All and Commit` | Stages all changes before preparing a commit. (`Git add all` and `Git commit` in succession) | `Cmd-Shift-A a` |\n| `Git Add And Commit And Push` |  Commit currently open file and push to a remote repo. | `Cmd-Shift-A Q` |\n| `Git Add All Commit And Push` | Commit all changes and push to a remote repo. | `Cmd-Shift-A P` |\n| `Git Commit Amend` | Amend the previous commit. |  |\n| `Git Checkout Current File` | Undo changes and reset the current file to HEAD. | |\n| `Git Checkout `*`[ref]`* | Change to another ref (branch or tag). | |\n| `Git Checkout New branch` | Create a new branch. | |\n| `Git Diff [All]` | Show the diff for the current file, or all files. The diff can either be against the staged or un-staged tree, as selected in the options. | |\n| `Git` *`[Push⎮Pull]`* | Push to or pull from a remote repo. If you have multiple remote repos, you can choose which to push to or pull from. | |\n| `Git Remove [current file]` | `git rm` the current file or open an selector to select the files to remove. You can select multiple files at once. | |\n| `Git Log [Current File]` | Show the commit history [for the current file] and show display the selected commit. | |\n| `Git Show` | Show the specified object, for example `HEAD`, `HEAD~2`,`3925a0d`, `origin/master` or `v2.7.3`. | |\n| `Git Open Changed Files` | Open tabs with all added, modified or renamed files. | |\n| `Git Tags` | Operate on tags individually. There are options to add, show, push, checkout, verify, and delete. | |\n\n### Commit Window\nTo change where the commit window appears go to settings and find\n![screenshot](http://imgur.com/cdc7M5p.png)\n\n### Experimental Features\nIf you would like to use experimental features, enable them in the package settings.\n* Custom Commands\n  > If enabled, you can define your own commands in your atom `init.coffee` or `init.js` file. These commands will appear in both the atom command palette as well as the Git-Plus command palette. Just like any other commands, you can define keybindings for them as well.\n\n  > Example command for undoing the last commit:\n  ``` coffeescript\n  # In init.coffee\n  atom.packages.onDidActivateInitialPackages (p) ->\n  if gitPlus = atom.packages.getActivePackage('git-plus')?.mainModule.provideService()\n    gitPlus.registerCommand 'atom-text-editor', 'akonwi:undo-last-commit', ->\n      gitPlus.getRepo() # If there are multiple repos in the project, you will be prompted to select which to use\n      .then (repo) -> gitPlus.run repo, 'reset HEAD~1'\n  ```\n  > The name of the command in the Git-plus palette will be the undasherized version of what you provided -> 'Undo Last Commit'.\n\n  > *Please beware of giving your commands the same name(undo-last-commit) as existing commands. They will appear as duplicates in the Git-plus palette.*\n* Stage Files Beta\n  > When enabled, the 'Unstage Files' and 'Stage Files' commands will be merged into one view where the staged status of multiple files can be toggled.\n\n## Contributing\n\n1. Fork it\n2. Create your feature branch (`git checkout -b my-new-feature`)\n3. Write tests\n4. Make your changes\n5. Run `apm test`\n6. Commit your changes (`git commit -am 'Add some feature'`)\n7. Push to the branch (`git push origin my-new-feature`)\n8. Create new Pull Request\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/akonwi/git-plus.git"
   },
-  "version": "5.29.0",
+  "version": "7.0.4",
   "_atomModuleCache": {
     "version": 1,
     "dependencies": [
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "2.2.1",
+        "path": "node_modules/ansi-styles/index.js"
+      },
       {
         "name": "ansi-to-html",
         "version": "0.4.2",
         "path": "node_modules/ansi-to-html/lib/ansi_to_html.js"
       },
       {
+        "name": "asn1",
+        "version": "0.2.3",
+        "path": "node_modules/asn1/lib/index.js"
+      },
+      {
+        "name": "assert-plus",
+        "version": "0.2.0",
+        "path": "node_modules/assert-plus/assert.js"
+      },
+      {
         "name": "async",
         "version": "0.2.10",
         "path": "node_modules/async/lib/async.js"
+      },
+      {
+        "name": "asynckit",
+        "version": "0.4.0",
+        "path": "node_modules/asynckit/index.js"
       },
       {
         "name": "atom-notify",
@@ -105,9 +145,74 @@
         "path": "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/fuzzaldrin.js"
       },
       {
+        "name": "aws-sign2",
+        "version": "0.6.0",
+        "path": "node_modules/aws-sign2/index.js"
+      },
+      {
+        "name": "aws4",
+        "version": "1.5.0",
+        "path": "node_modules/aws4/aws4.js"
+      },
+      {
+        "name": "bcrypt-pbkdf",
+        "version": "1.0.0",
+        "path": "node_modules/bcrypt-pbkdf/index.js"
+      },
+      {
+        "name": "boom",
+        "version": "2.10.1",
+        "path": "node_modules/boom/lib/index.js"
+      },
+      {
+        "name": "caseless",
+        "version": "0.11.0",
+        "path": "node_modules/caseless/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "1.1.3",
+        "path": "node_modules/chalk/index.js"
+      },
+      {
+        "name": "combined-stream",
+        "version": "1.0.5",
+        "path": "node_modules/combined-stream/lib/combined_stream.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.9.0",
+        "path": "node_modules/commander/index.js"
+      },
+      {
+        "name": "cryptiles",
+        "version": "2.0.5",
+        "path": "node_modules/cryptiles/lib/index.js"
+      },
+      {
         "name": "d",
         "version": "0.1.1",
         "path": "node_modules/d/index.js"
+      },
+      {
+        "name": "dashdash",
+        "version": "1.14.1",
+        "path": "node_modules/dashdash/lib/dashdash.js"
+      },
+      {
+        "name": "assert-plus",
+        "version": "1.0.0",
+        "path": "node_modules/dashdash/node_modules/assert-plus/assert.js"
+      },
+      {
+        "name": "delayed-stream",
+        "version": "1.0.0",
+        "path": "node_modules/delayed-stream/lib/delayed_stream.js"
+      },
+      {
+        "name": "ecc-jsbn",
+        "version": "0.1.1",
+        "path": "node_modules/ecc-jsbn/index.js"
       },
       {
         "name": "emissary",
@@ -150,6 +255,31 @@
         "path": "node_modules/es6-weak-map/index.js"
       },
       {
+        "name": "escape-string-regexp",
+        "version": "1.0.5",
+        "path": "node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "extend",
+        "version": "3.0.0",
+        "path": "node_modules/extend/index.js"
+      },
+      {
+        "name": "extsprintf",
+        "version": "1.0.2",
+        "path": "node_modules/extsprintf/lib/extsprintf.js"
+      },
+      {
+        "name": "forever-agent",
+        "version": "0.6.1",
+        "path": "node_modules/forever-agent/index.js"
+      },
+      {
+        "name": "form-data",
+        "version": "2.1.2",
+        "path": "node_modules/form-data/lib/form_data.js"
+      },
+      {
         "name": "fs-plus",
         "version": "2.9.3",
         "path": "node_modules/fs-plus/lib/fs-plus.js"
@@ -160,14 +290,124 @@
         "path": "node_modules/fuzzaldrin/lib/fuzzaldrin.js"
       },
       {
+        "name": "generate-function",
+        "version": "2.0.0",
+        "path": "node_modules/generate-function/index.js"
+      },
+      {
+        "name": "generate-object-property",
+        "version": "1.2.0",
+        "path": "node_modules/generate-object-property/index.js"
+      },
+      {
+        "name": "getpass",
+        "version": "0.1.6",
+        "path": "node_modules/getpass/lib/index.js"
+      },
+      {
+        "name": "assert-plus",
+        "version": "1.0.0",
+        "path": "node_modules/getpass/node_modules/assert-plus/assert.js"
+      },
+      {
+        "name": "graceful-readlink",
+        "version": "1.0.1",
+        "path": "node_modules/graceful-readlink/index.js"
+      },
+      {
         "name": "grim",
         "version": "1.5.0",
         "path": "node_modules/grim/lib/grim.js"
       },
       {
+        "name": "har-validator",
+        "version": "2.0.6",
+        "path": "node_modules/har-validator/lib/index.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "2.0.0",
+        "path": "node_modules/has-ansi/index.js"
+      },
+      {
+        "name": "hawk",
+        "version": "3.1.3",
+        "path": "node_modules/hawk/lib/index.js"
+      },
+      {
+        "name": "hoek",
+        "version": "2.16.3",
+        "path": "node_modules/hoek/lib/index.js"
+      },
+      {
+        "name": "http-signature",
+        "version": "1.1.1",
+        "path": "node_modules/http-signature/lib/index.js"
+      },
+      {
+        "name": "is-my-json-valid",
+        "version": "2.15.0",
+        "path": "node_modules/is-my-json-valid/index.js"
+      },
+      {
+        "name": "is-property",
+        "version": "1.0.2",
+        "path": "node_modules/is-property/is-property.js"
+      },
+      {
+        "name": "is-typedarray",
+        "version": "1.0.0",
+        "path": "node_modules/is-typedarray/index.js"
+      },
+      {
+        "name": "isstream",
+        "version": "0.1.2",
+        "path": "node_modules/isstream/isstream.js"
+      },
+      {
+        "name": "jodid25519",
+        "version": "1.0.2",
+        "path": "node_modules/jodid25519/index.js"
+      },
+      {
         "name": "jquery",
         "version": "2.1.4",
         "path": "node_modules/jquery/dist/jquery.js"
+      },
+      {
+        "name": "jsbn",
+        "version": "0.1.0",
+        "path": "node_modules/jsbn/index.js"
+      },
+      {
+        "name": "json-schema",
+        "version": "0.2.3",
+        "path": "node_modules/json-schema/lib/validate.js"
+      },
+      {
+        "name": "json-stringify-safe",
+        "version": "5.0.1",
+        "path": "node_modules/json-stringify-safe/stringify.js"
+      },
+      {
+        "name": "jsonpointer",
+        "version": "4.0.1",
+        "path": "node_modules/jsonpointer/jsonpointer.js"
+      },
+      {
+        "name": "jsprim",
+        "version": "1.3.1",
+        "path": "node_modules/jsprim/lib/jsprim.js"
+      },
+      {
+        "name": "mime-db",
+        "version": "1.25.0",
+        "path": "node_modules/mime-db/index.js"
+      },
+      {
+        "name": "mime-types",
+        "version": "2.1.13",
+        "path": "node_modules/mime-types/index.js"
       },
       {
         "name": "mixto",
@@ -180,9 +420,39 @@
         "path": "node_modules/mkdirp/index.js"
       },
       {
+        "name": "oauth-sign",
+        "version": "0.8.2",
+        "path": "node_modules/oauth-sign/index.js"
+      },
+      {
+        "name": "pinkie",
+        "version": "2.0.4",
+        "path": "node_modules/pinkie/index.js"
+      },
+      {
+        "name": "pinkie-promise",
+        "version": "2.0.1",
+        "path": "node_modules/pinkie-promise/index.js"
+      },
+      {
         "name": "property-accessors",
         "version": "1.1.3",
         "path": "node_modules/property-accessors/lib/property-accessors.js"
+      },
+      {
+        "name": "punycode",
+        "version": "1.4.1",
+        "path": "node_modules/punycode/punycode.js"
+      },
+      {
+        "name": "qs",
+        "version": "6.3.0",
+        "path": "node_modules/qs/lib/index.js"
+      },
+      {
+        "name": "request",
+        "version": "2.79.0",
+        "path": "node_modules/request/index.js"
       },
       {
         "name": "rimraf",
@@ -190,9 +460,54 @@
         "path": "node_modules/rimraf/rimraf.js"
       },
       {
+        "name": "sntp",
+        "version": "1.0.9",
+        "path": "node_modules/sntp/index.js"
+      },
+      {
         "name": "space-pen",
         "version": "5.1.2",
         "path": "node_modules/space-pen/lib/space-pen.js"
+      },
+      {
+        "name": "sshpk",
+        "version": "1.10.1",
+        "path": "node_modules/sshpk/lib/index.js"
+      },
+      {
+        "name": "assert-plus",
+        "version": "1.0.0",
+        "path": "node_modules/sshpk/node_modules/assert-plus/assert.js"
+      },
+      {
+        "name": "stringstream",
+        "version": "0.0.5",
+        "path": "node_modules/stringstream/stringstream.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.1",
+        "path": "node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "2.0.0",
+        "path": "node_modules/supports-color/index.js"
+      },
+      {
+        "name": "tough-cookie",
+        "version": "2.3.2",
+        "path": "node_modules/tough-cookie/lib/cookie.js"
+      },
+      {
+        "name": "tunnel-agent",
+        "version": "0.4.3",
+        "path": "node_modules/tunnel-agent/index.js"
+      },
+      {
+        "name": "tweetnacl",
+        "version": "0.14.5",
+        "path": "node_modules/tweetnacl/nacl-fast.js"
       },
       {
         "name": "underscore",
@@ -208,93 +523,69 @@
         "name": "underscore",
         "version": "1.6.0",
         "path": "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "universal-analytics",
+        "version": "0.4.8",
+        "path": "node_modules/universal-analytics/index.js"
+      },
+      {
+        "name": "async",
+        "version": "1.2.1",
+        "path": "node_modules/universal-analytics/node_modules/async/lib/async.js"
+      },
+      {
+        "name": "uuid",
+        "version": "3.0.1",
+        "path": "node_modules/uuid/index.js"
+      },
+      {
+        "name": "verror",
+        "version": "1.3.6",
+        "path": "node_modules/verror/lib/verror.js"
+      },
+      {
+        "name": "xtend",
+        "version": "4.0.1",
+        "path": "node_modules/xtend/immutable.js"
       }
     ],
     "extensions": {
-      ".coffee": [
-        "lib/command-keystroke-humanizer.coffee",
-        "lib/config.coffee",
-        "lib/context-package-finder.coffee",
-        "lib/git-plus-commands.coffee",
-        "lib/git-plus.coffee",
-        "lib/git.coffee",
-        "lib/models/_pull.coffee",
-        "lib/models/context/git-add-and-commit-context.coffee",
-        "lib/models/context/git-add-context.coffee",
-        "lib/models/context/git-checkout-file-context.coffee",
-        "lib/models/context/git-diff-context.coffee",
-        "lib/models/context/git-difftool-context.coffee",
-        "lib/models/context/git-unstage-file-context.coffee",
-        "lib/models/git-branch.coffee",
-        "lib/models/git-checkout-all-files.coffee",
-        "lib/models/git-checkout-file.coffee",
-        "lib/models/git-cherry-pick.coffee",
-        "lib/models/git-commit-amend.coffee",
-        "lib/models/git-commit.coffee",
-        "lib/models/git-delete-local-branch.coffee",
-        "lib/models/git-delete-remote-branch.coffee",
-        "lib/models/git-diff-all.coffee",
-        "lib/models/git-diff.coffee",
-        "lib/models/git-difftool.coffee",
-        "lib/models/git-fetch-prune.coffee",
-        "lib/models/git-fetch.coffee",
-        "lib/models/git-init.coffee",
-        "lib/models/git-log.coffee",
-        "lib/models/git-merge.coffee",
-        "lib/models/git-open-changed-files.coffee",
-        "lib/models/git-pull.coffee",
-        "lib/models/git-push.coffee",
-        "lib/models/git-rebase.coffee",
-        "lib/models/git-remove.coffee",
-        "lib/models/git-run.coffee",
-        "lib/models/git-show.coffee",
-        "lib/models/git-stage-files.coffee",
-        "lib/models/git-stage-hunk.coffee",
-        "lib/models/git-stash-apply.coffee",
-        "lib/models/git-stash-drop.coffee",
-        "lib/models/git-stash-pop.coffee",
-        "lib/models/git-stash-save-message.coffee",
-        "lib/models/git-stash-save.coffee",
-        "lib/models/git-status.coffee",
-        "lib/models/git-tags.coffee",
-        "lib/models/git-unstage-files.coffee",
-        "lib/notifier.coffee",
-        "lib/output-view-manager.coffee",
-        "lib/views/branch-list-view.coffee",
-        "lib/views/cherry-pick-select-branch-view.coffee",
-        "lib/views/cherry-pick-select-commits-view.coffee",
-        "lib/views/delete-branch-view.coffee",
-        "lib/views/git-palette-view.coffee",
-        "lib/views/log-list-view.coffee",
-        "lib/views/merge-list-view.coffee",
-        "lib/views/output-view.coffee",
-        "lib/views/projects-list-view.coffee",
-        "lib/views/pull-branch-list-view.coffee",
-        "lib/views/rebase-list-view.coffee",
-        "lib/views/remote-branch-list-view.coffee",
-        "lib/views/remote-list-view.coffee",
-        "lib/views/remove-list-view.coffee",
-        "lib/views/repo-list-view.coffee",
-        "lib/views/select-list-multiple-view.coffee",
-        "lib/views/select-stage-files-view.coffee",
-        "lib/views/select-stage-hunk-file-view.coffee",
-        "lib/views/select-stage-hunks-view.coffee",
-        "lib/views/select-unstage-files-view.coffee",
-        "lib/views/stash-message-view.coffee",
-        "lib/views/status-list-view.coffee",
-        "lib/views/status-view.coffee",
-        "lib/views/tag-create-view.coffee",
-        "lib/views/tag-list-view.coffee",
-        "lib/views/tag-view.coffee",
-        "node_modules/atom-notify/Gruntfile.coffee",
-        "node_modules/atom-notify/notify.coffee"
-      ],
       ".js": [
+        "lib/analytics.js",
         "lib/grammars/diff.js",
+        "node_modules/ansi-regex/index.js",
+        "node_modules/ansi-styles/index.js",
         "node_modules/ansi-to-html/gruntFile.js",
         "node_modules/ansi-to-html/lib/ansi_to_html.js",
         "node_modules/ansi-to-html/lib/cli.js",
+        "node_modules/asn1/lib/ber/errors.js",
+        "node_modules/asn1/lib/ber/index.js",
+        "node_modules/asn1/lib/ber/reader.js",
+        "node_modules/asn1/lib/ber/types.js",
+        "node_modules/asn1/lib/ber/writer.js",
+        "node_modules/asn1/lib/index.js",
+        "node_modules/asn1/tst/ber/reader.test.js",
+        "node_modules/asn1/tst/ber/writer.test.js",
+        "node_modules/assert-plus/assert.js",
         "node_modules/async/lib/async.js",
+        "node_modules/asynckit/bench.js",
+        "node_modules/asynckit/index.js",
+        "node_modules/asynckit/lib/abort.js",
+        "node_modules/asynckit/lib/async.js",
+        "node_modules/asynckit/lib/defer.js",
+        "node_modules/asynckit/lib/iterate.js",
+        "node_modules/asynckit/lib/readable_asynckit.js",
+        "node_modules/asynckit/lib/readable_parallel.js",
+        "node_modules/asynckit/lib/readable_serial.js",
+        "node_modules/asynckit/lib/readable_serial_ordered.js",
+        "node_modules/asynckit/lib/state.js",
+        "node_modules/asynckit/lib/streamify.js",
+        "node_modules/asynckit/lib/terminator.js",
+        "node_modules/asynckit/parallel.js",
+        "node_modules/asynckit/serial.js",
+        "node_modules/asynckit/serialOrdered.js",
+        "node_modules/asynckit/stream.js",
         "node_modules/atom-notify/dist/index.js",
         "node_modules/atom-space-pen-views/lib/main.js",
         "node_modules/atom-space-pen-views/lib/scroll-view.js",
@@ -304,9 +595,27 @@
         "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/fuzzaldrin.js",
         "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/matcher.js",
         "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/scorer.js",
+        "node_modules/aws-sign2/index.js",
+        "node_modules/aws4/aws4.js",
+        "node_modules/aws4/lru.js",
+        "node_modules/bcrypt-pbkdf/index.js",
+        "node_modules/boom/lib/index.js",
+        "node_modules/caseless/index.js",
+        "node_modules/caseless/test.js",
+        "node_modules/chalk/index.js",
+        "node_modules/combined-stream/lib/combined_stream.js",
+        "node_modules/commander/index.js",
+        "node_modules/cryptiles/lib/index.js",
         "node_modules/d/auto-bind.js",
         "node_modules/d/index.js",
         "node_modules/d/lazy.js",
+        "node_modules/dashdash/lib/dashdash.js",
+        "node_modules/dashdash/node_modules/assert-plus/assert.js",
+        "node_modules/delayed-stream/lib/delayed_stream.js",
+        "node_modules/ecc-jsbn/index.js",
+        "node_modules/ecc-jsbn/lib/ec.js",
+        "node_modules/ecc-jsbn/lib/sec.js",
+        "node_modules/ecc-jsbn/test.js",
         "node_modules/emissary/lib/behavior.js",
         "node_modules/emissary/lib/emissary.js",
         "node_modules/emissary/lib/emitter.js",
@@ -736,13 +1045,65 @@
         "node_modules/es6-weak-map/is-weak-map.js",
         "node_modules/es6-weak-map/polyfill.js",
         "node_modules/es6-weak-map/valid-weak-map.js",
+        "node_modules/escape-string-regexp/index.js",
+        "node_modules/extend/index.js",
+        "node_modules/extsprintf/examples/simple.js",
+        "node_modules/extsprintf/lib/extsprintf.js",
+        "node_modules/forever-agent/index.js",
+        "node_modules/form-data/lib/browser.js",
+        "node_modules/form-data/lib/form_data.js",
+        "node_modules/form-data/lib/populate.js",
         "node_modules/fs-plus/lib/fs-plus.js",
         "node_modules/fuzzaldrin/lib/filter.js",
         "node_modules/fuzzaldrin/lib/fuzzaldrin.js",
         "node_modules/fuzzaldrin/lib/matcher.js",
         "node_modules/fuzzaldrin/lib/scorer.js",
+        "node_modules/generate-function/example.js",
+        "node_modules/generate-function/index.js",
+        "node_modules/generate-function/test.js",
+        "node_modules/generate-object-property/index.js",
+        "node_modules/generate-object-property/test.js",
+        "node_modules/getpass/lib/index.js",
+        "node_modules/getpass/node_modules/assert-plus/assert.js",
+        "node_modules/graceful-readlink/index.js",
         "node_modules/grim/lib/deprecation.js",
         "node_modules/grim/lib/grim.js",
+        "node_modules/har-validator/lib/async.js",
+        "node_modules/har-validator/lib/error.js",
+        "node_modules/har-validator/lib/index.js",
+        "node_modules/har-validator/lib/runner.js",
+        "node_modules/har-validator/lib/schemas/index.js",
+        "node_modules/has-ansi/index.js",
+        "node_modules/hawk/dist/client.js",
+        "node_modules/hawk/example/usage.js",
+        "node_modules/hawk/lib/browser.js",
+        "node_modules/hawk/lib/client.js",
+        "node_modules/hawk/lib/crypto.js",
+        "node_modules/hawk/lib/index.js",
+        "node_modules/hawk/lib/server.js",
+        "node_modules/hawk/lib/utils.js",
+        "node_modules/hoek/lib/escape.js",
+        "node_modules/hoek/lib/index.js",
+        "node_modules/http-signature/lib/index.js",
+        "node_modules/http-signature/lib/parser.js",
+        "node_modules/http-signature/lib/signer.js",
+        "node_modules/http-signature/lib/utils.js",
+        "node_modules/http-signature/lib/verify.js",
+        "node_modules/is-my-json-valid/example.js",
+        "node_modules/is-my-json-valid/formats.js",
+        "node_modules/is-my-json-valid/index.js",
+        "node_modules/is-my-json-valid/require.js",
+        "node_modules/is-property/is-property.js",
+        "node_modules/is-typedarray/index.js",
+        "node_modules/is-typedarray/test.js",
+        "node_modules/isstream/isstream.js",
+        "node_modules/isstream/test.js",
+        "node_modules/jodid25519/index.js",
+        "node_modules/jodid25519/lib/core.js",
+        "node_modules/jodid25519/lib/curve255.js",
+        "node_modules/jodid25519/lib/dh.js",
+        "node_modules/jodid25519/lib/eddsa.js",
+        "node_modules/jodid25519/lib/utils.js",
         "node_modules/jquery/dist/jquery.js",
         "node_modules/jquery/dist/jquery.min.js",
         "node_modules/jquery/src/ajax/jsonp.js",
@@ -828,29 +1189,229 @@
         "node_modules/jquery/src/var/support.js",
         "node_modules/jquery/src/var/toString.js",
         "node_modules/jquery/src/wrap.js",
+        "node_modules/jsbn/example.js",
+        "node_modules/jsbn/index.js",
+        "node_modules/json-schema/lib/links.js",
+        "node_modules/json-schema/lib/validate.js",
+        "node_modules/json-stringify-safe/stringify.js",
+        "node_modules/jsonpointer/jsonpointer.js",
+        "node_modules/jsprim/lib/jsprim.js",
+        "node_modules/mime-db/index.js",
+        "node_modules/mime-types/index.js",
         "node_modules/mixto/lib/mixin.js",
         "node_modules/mkdirp/examples/pow.js",
         "node_modules/mkdirp/index.js",
+        "node_modules/oauth-sign/index.js",
+        "node_modules/pinkie/index.js",
+        "node_modules/pinkie-promise/index.js",
         "node_modules/property-accessors/lib/property-accessors.js",
+        "node_modules/punycode/punycode.js",
+        "node_modules/qs/dist/qs.js",
+        "node_modules/qs/lib/formats.js",
+        "node_modules/qs/lib/index.js",
+        "node_modules/qs/lib/parse.js",
+        "node_modules/qs/lib/stringify.js",
+        "node_modules/qs/lib/utils.js",
+        "node_modules/request/index.js",
+        "node_modules/request/lib/auth.js",
+        "node_modules/request/lib/cookies.js",
+        "node_modules/request/lib/getProxyFromURI.js",
+        "node_modules/request/lib/har.js",
+        "node_modules/request/lib/helpers.js",
+        "node_modules/request/lib/multipart.js",
+        "node_modules/request/lib/oauth.js",
+        "node_modules/request/lib/querystring.js",
+        "node_modules/request/lib/redirect.js",
+        "node_modules/request/lib/tunnel.js",
+        "node_modules/request/request.js",
         "node_modules/rimraf/bin.js",
         "node_modules/rimraf/rimraf.js",
+        "node_modules/sntp/examples/offset.js",
+        "node_modules/sntp/examples/time.js",
+        "node_modules/sntp/index.js",
+        "node_modules/sntp/lib/index.js",
         "node_modules/space-pen/lib/space-pen.js",
+        "node_modules/sshpk/lib/algs.js",
+        "node_modules/sshpk/lib/certificate.js",
+        "node_modules/sshpk/lib/dhe.js",
+        "node_modules/sshpk/lib/ed-compat.js",
+        "node_modules/sshpk/lib/errors.js",
+        "node_modules/sshpk/lib/fingerprint.js",
+        "node_modules/sshpk/lib/formats/auto.js",
+        "node_modules/sshpk/lib/formats/openssh-cert.js",
+        "node_modules/sshpk/lib/formats/pem.js",
+        "node_modules/sshpk/lib/formats/pkcs1.js",
+        "node_modules/sshpk/lib/formats/pkcs8.js",
+        "node_modules/sshpk/lib/formats/rfc4253.js",
+        "node_modules/sshpk/lib/formats/ssh-private.js",
+        "node_modules/sshpk/lib/formats/ssh.js",
+        "node_modules/sshpk/lib/formats/x509-pem.js",
+        "node_modules/sshpk/lib/formats/x509.js",
+        "node_modules/sshpk/lib/identity.js",
+        "node_modules/sshpk/lib/index.js",
+        "node_modules/sshpk/lib/key.js",
+        "node_modules/sshpk/lib/private-key.js",
+        "node_modules/sshpk/lib/signature.js",
+        "node_modules/sshpk/lib/ssh-buffer.js",
+        "node_modules/sshpk/lib/utils.js",
+        "node_modules/sshpk/node_modules/assert-plus/assert.js",
+        "node_modules/stringstream/example.js",
+        "node_modules/stringstream/stringstream.js",
+        "node_modules/strip-ansi/index.js",
+        "node_modules/supports-color/index.js",
+        "node_modules/tough-cookie/lib/cookie.js",
+        "node_modules/tough-cookie/lib/memstore.js",
+        "node_modules/tough-cookie/lib/pathMatch.js",
+        "node_modules/tough-cookie/lib/permuteDomain.js",
+        "node_modules/tough-cookie/lib/pubsuffix.js",
+        "node_modules/tough-cookie/lib/store.js",
+        "node_modules/tunnel-agent/index.js",
+        "node_modules/tweetnacl/nacl-fast.js",
+        "node_modules/tweetnacl/nacl-fast.min.js",
+        "node_modules/tweetnacl/nacl.js",
+        "node_modules/tweetnacl/nacl.min.js",
         "node_modules/underscore/underscore-min.js",
         "node_modules/underscore/underscore.js",
         "node_modules/underscore-plus/lib/underscore-plus.js",
         "node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
-        "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+        "node_modules/underscore-plus/node_modules/underscore/underscore.js",
+        "node_modules/universal-analytics/index.js",
+        "node_modules/universal-analytics/lib/config.js",
+        "node_modules/universal-analytics/lib/index.js",
+        "node_modules/universal-analytics/lib/utils.js",
+        "node_modules/universal-analytics/node_modules/async/coverage/lcov-report/prettify.js",
+        "node_modules/universal-analytics/node_modules/async/coverage/lcov-report/sorter.js",
+        "node_modules/universal-analytics/node_modules/async/coverage/prettify.js",
+        "node_modules/universal-analytics/node_modules/async/coverage/sorter.js",
+        "node_modules/universal-analytics/node_modules/async/lib/async.js",
+        "node_modules/universal-analytics/node_modules/async/support/sync-package-managers.js",
+        "node_modules/uuid/index.js",
+        "node_modules/uuid/lib/bytesToUuid.js",
+        "node_modules/uuid/lib/rng-browser.js",
+        "node_modules/uuid/lib/rng.js",
+        "node_modules/uuid/v1.js",
+        "node_modules/uuid/v4.js",
+        "node_modules/verror/examples/levels-verror.js",
+        "node_modules/verror/examples/levels-werror.js",
+        "node_modules/verror/examples/varargs.js",
+        "node_modules/verror/examples/verror.js",
+        "node_modules/verror/examples/werror.js",
+        "node_modules/verror/lib/verror.js",
+        "node_modules/xtend/immutable.js",
+        "node_modules/xtend/mutable.js",
+        "node_modules/xtend/test.js"
+      ],
+      ".coffee": [
+        "lib/command-keystroke-humanizer.coffee",
+        "lib/config.coffee",
+        "lib/context-menu.coffee",
+        "lib/context-package-finder.coffee",
+        "lib/git-plus-commands.coffee",
+        "lib/git-plus.coffee",
+        "lib/git.coffee",
+        "lib/models/_pull.coffee",
+        "lib/models/context/git-add-and-commit-context.coffee",
+        "lib/models/context/git-add-context.coffee",
+        "lib/models/context/git-checkout-file-context.coffee",
+        "lib/models/context/git-diff-context.coffee",
+        "lib/models/context/git-difftool-context.coffee",
+        "lib/models/context/git-pull-context.coffee",
+        "lib/models/context/git-push-context.coffee",
+        "lib/models/context/git-unstage-file-context.coffee",
+        "lib/models/git-branch.coffee",
+        "lib/models/git-checkout-all-files.coffee",
+        "lib/models/git-checkout-file.coffee",
+        "lib/models/git-cherry-pick.coffee",
+        "lib/models/git-commit-amend.coffee",
+        "lib/models/git-commit.coffee",
+        "lib/models/git-delete-local-branch.coffee",
+        "lib/models/git-delete-remote-branch.coffee",
+        "lib/models/git-diff-all.coffee",
+        "lib/models/git-diff.coffee",
+        "lib/models/git-difftool.coffee",
+        "lib/models/git-fetch-prune.coffee",
+        "lib/models/git-fetch.coffee",
+        "lib/models/git-init.coffee",
+        "lib/models/git-log.coffee",
+        "lib/models/git-merge.coffee",
+        "lib/models/git-open-changed-files.coffee",
+        "lib/models/git-pull.coffee",
+        "lib/models/git-push.coffee",
+        "lib/models/git-rebase.coffee",
+        "lib/models/git-remove.coffee",
+        "lib/models/git-run.coffee",
+        "lib/models/git-show.coffee",
+        "lib/models/git-stage-files-beta.coffee",
+        "lib/models/git-stage-files.coffee",
+        "lib/models/git-stage-hunk.coffee",
+        "lib/models/git-stash-apply.coffee",
+        "lib/models/git-stash-drop.coffee",
+        "lib/models/git-stash-pop.coffee",
+        "lib/models/git-stash-save-message.coffee",
+        "lib/models/git-stash-save.coffee",
+        "lib/models/git-status.coffee",
+        "lib/models/git-tags.coffee",
+        "lib/models/git-unstage-files.coffee",
+        "lib/notifier.coffee",
+        "lib/output-view-manager.coffee",
+        "lib/service.coffee",
+        "lib/views/branch-list-view.coffee",
+        "lib/views/cherry-pick-select-branch-view.coffee",
+        "lib/views/cherry-pick-select-commits-view.coffee",
+        "lib/views/delete-branch-view.coffee",
+        "lib/views/git-palette-view.coffee",
+        "lib/views/log-list-view.coffee",
+        "lib/views/merge-list-view.coffee",
+        "lib/views/output-view.coffee",
+        "lib/views/projects-list-view.coffee",
+        "lib/views/pull-branch-list-view.coffee",
+        "lib/views/rebase-list-view.coffee",
+        "lib/views/remote-branch-list-view.coffee",
+        "lib/views/remote-list-view.coffee",
+        "lib/views/remove-list-view.coffee",
+        "lib/views/repo-list-view.coffee",
+        "lib/views/select-list-multiple-view.coffee",
+        "lib/views/select-stage-files-view-beta.coffee",
+        "lib/views/select-stage-files-view.coffee",
+        "lib/views/select-stage-hunk-file-view.coffee",
+        "lib/views/select-stage-hunks-view.coffee",
+        "lib/views/select-unstage-files-view.coffee",
+        "lib/views/stash-message-view.coffee",
+        "lib/views/status-list-view.coffee",
+        "lib/views/tag-create-view.coffee",
+        "lib/views/tag-list-view.coffee",
+        "lib/views/tag-view.coffee",
+        "node_modules/atom-notify/Gruntfile.coffee",
+        "node_modules/atom-notify/notify.coffee"
       ],
       ".json": [
         "lib/grammars/line-diff.json",
         "lib/grammars/word-diff.json",
+        "node_modules/ansi-regex/package.json",
+        "node_modules/ansi-styles/package.json",
         "node_modules/ansi-to-html/package.json",
+        "node_modules/asn1/package.json",
+        "node_modules/assert-plus/package.json",
         "node_modules/async/component.json",
         "node_modules/async/package.json",
+        "node_modules/asynckit/package.json",
         "node_modules/atom-notify/package.json",
         "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/package.json",
         "node_modules/atom-space-pen-views/package.json",
+        "node_modules/aws-sign2/package.json",
+        "node_modules/aws4/package.json",
+        "node_modules/bcrypt-pbkdf/package.json",
+        "node_modules/boom/package.json",
+        "node_modules/caseless/package.json",
+        "node_modules/chalk/package.json",
+        "node_modules/combined-stream/package.json",
+        "node_modules/commander/package.json",
+        "node_modules/cryptiles/package.json",
         "node_modules/d/package.json",
+        "node_modules/dashdash/node_modules/assert-plus/package.json",
+        "node_modules/dashdash/package.json",
+        "node_modules/delayed-stream/package.json",
+        "node_modules/ecc-jsbn/package.json",
         "node_modules/emissary/package.json",
         "node_modules/entities/maps/decode.json",
         "node_modules/entities/maps/entities.json",
@@ -863,20 +1424,91 @@
         "node_modules/es6-iterator/package.json",
         "node_modules/es6-symbol/package.json",
         "node_modules/es6-weak-map/package.json",
+        "node_modules/escape-string-regexp/package.json",
+        "node_modules/extend/.jscs.json",
+        "node_modules/extend/component.json",
+        "node_modules/extend/package.json",
+        "node_modules/extsprintf/package.json",
+        "node_modules/forever-agent/package.json",
+        "node_modules/form-data/package.json",
         "node_modules/fs-plus/package.json",
         "node_modules/fuzzaldrin/package.json",
+        "node_modules/generate-function/package.json",
+        "node_modules/generate-object-property/package.json",
+        "node_modules/getpass/node_modules/assert-plus/package.json",
+        "node_modules/getpass/package.json",
+        "node_modules/graceful-readlink/package.json",
         "node_modules/grim/package.json",
+        "node_modules/har-validator/lib/schemas/cache.json",
+        "node_modules/har-validator/lib/schemas/cacheEntry.json",
+        "node_modules/har-validator/lib/schemas/content.json",
+        "node_modules/har-validator/lib/schemas/cookie.json",
+        "node_modules/har-validator/lib/schemas/creator.json",
+        "node_modules/har-validator/lib/schemas/entry.json",
+        "node_modules/har-validator/lib/schemas/har.json",
+        "node_modules/har-validator/lib/schemas/log.json",
+        "node_modules/har-validator/lib/schemas/page.json",
+        "node_modules/har-validator/lib/schemas/pageTimings.json",
+        "node_modules/har-validator/lib/schemas/postData.json",
+        "node_modules/har-validator/lib/schemas/record.json",
+        "node_modules/har-validator/lib/schemas/request.json",
+        "node_modules/har-validator/lib/schemas/response.json",
+        "node_modules/har-validator/lib/schemas/timings.json",
+        "node_modules/har-validator/package.json",
+        "node_modules/has-ansi/package.json",
+        "node_modules/hawk/bower.json",
+        "node_modules/hawk/component.json",
+        "node_modules/hawk/package.json",
+        "node_modules/hoek/package.json",
+        "node_modules/http-signature/package.json",
+        "node_modules/is-my-json-valid/package.json",
+        "node_modules/is-property/package.json",
+        "node_modules/is-typedarray/package.json",
+        "node_modules/isstream/package.json",
+        "node_modules/jodid25519/jsdoc.json",
+        "node_modules/jodid25519/package.json",
         "node_modules/jquery/bower.json",
         "node_modules/jquery/package.json",
+        "node_modules/jsbn/package.json",
+        "node_modules/json-schema/package.json",
+        "node_modules/json-stringify-safe/package.json",
+        "node_modules/jsonpointer/package.json",
+        "node_modules/jsprim/package.json",
+        "node_modules/mime-db/db.json",
+        "node_modules/mime-db/package.json",
+        "node_modules/mime-types/package.json",
         "node_modules/mixto/package.json",
         "node_modules/mkdirp/package.json",
+        "node_modules/oauth-sign/package.json",
+        "node_modules/pinkie/package.json",
+        "node_modules/pinkie-promise/package.json",
         "node_modules/property-accessors/package.json",
+        "node_modules/punycode/package.json",
+        "node_modules/qs/package.json",
+        "node_modules/request/package.json",
         "node_modules/rimraf/package.json",
+        "node_modules/sntp/package.json",
         "node_modules/space-pen/api.json",
         "node_modules/space-pen/package.json",
+        "node_modules/sshpk/node_modules/assert-plus/package.json",
+        "node_modules/sshpk/package.json",
+        "node_modules/stringstream/package.json",
+        "node_modules/strip-ansi/package.json",
+        "node_modules/supports-color/package.json",
+        "node_modules/tough-cookie/package.json",
+        "node_modules/tunnel-agent/package.json",
+        "node_modules/tweetnacl/package.json",
         "node_modules/underscore/package.json",
         "node_modules/underscore-plus/node_modules/underscore/package.json",
         "node_modules/underscore-plus/package.json",
+        "node_modules/universal-analytics/node_modules/async/bower.json",
+        "node_modules/universal-analytics/node_modules/async/component.json",
+        "node_modules/universal-analytics/node_modules/async/nyc_output/5074.json",
+        "node_modules/universal-analytics/node_modules/async/package.json",
+        "node_modules/universal-analytics/package.json",
+        "node_modules/uuid/package.json",
+        "node_modules/verror/package.json",
+        "node_modules/xtend/package.json",
         "package.json"
       ]
     },
@@ -900,7 +1532,9 @@
           "fs-plus": "^2.2.0",
           "fuzzaldrin": "^1.2.0",
           "underscore": "^1.8.3",
-          "underscore-plus": "^1.6.6"
+          "underscore-plus": "^1.6.6",
+          "universal-analytics": "^0.4.8",
+          "uuid": "^3.0.1"
         }
       },
       {
@@ -925,11 +1559,86 @@
       },
       {
         "paths": [
+          "node_modules/bcrypt-pbkdf"
+        ],
+        "dependencies": {
+          "tweetnacl": "^0.14.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/boom/lib",
+          "node_modules/boom",
+          "node_modules/boom/test"
+        ],
+        "dependencies": {
+          "hoek": "2.x.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^2.2.1",
+          "escape-string-regexp": "^1.0.2",
+          "has-ansi": "^2.0.0",
+          "strip-ansi": "^3.0.0",
+          "supports-color": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/combined-stream/lib",
+          "node_modules/combined-stream"
+        ],
+        "dependencies": {
+          "delayed-stream": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/commander"
+        ],
+        "dependencies": {
+          "graceful-readlink": ">= 1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/cryptiles/lib",
+          "node_modules/cryptiles",
+          "node_modules/cryptiles/test"
+        ],
+        "dependencies": {
+          "boom": "2.x.x"
+        }
+      },
+      {
+        "paths": [
           "node_modules/d",
           "node_modules/d/test"
         ],
         "dependencies": {
           "es5-ext": "~0.10.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/dashdash/lib",
+          "node_modules/dashdash"
+        ],
+        "dependencies": {
+          "assert-plus": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/ecc-jsbn",
+          "node_modules/ecc-jsbn/lib"
+        ],
+        "dependencies": {
+          "jsbn": "~0.1.0"
         }
       },
       {
@@ -1164,6 +1873,17 @@
       },
       {
         "paths": [
+          "node_modules/form-data/lib",
+          "node_modules/form-data"
+        ],
+        "dependencies": {
+          "asynckit": "^0.4.0",
+          "combined-stream": "^1.0.5",
+          "mime-types": "^2.1.12"
+        }
+      },
+      {
+        "paths": [
           "node_modules/fs-plus/lib",
           "node_modules/fs-plus"
         ],
@@ -1172,6 +1892,23 @@
           "mkdirp": "~0.3.5",
           "rimraf": "~2.2.2",
           "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/generate-object-property"
+        ],
+        "dependencies": {
+          "is-property": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/getpass/lib",
+          "node_modules/getpass"
+        ],
+        "dependencies": {
+          "assert-plus": "^1.0.0"
         }
       },
       {
@@ -1185,12 +1922,148 @@
       },
       {
         "paths": [
+          "node_modules/har-validator/lib",
+          "node_modules/har-validator/lib/schemas",
+          "node_modules/har-validator"
+        ],
+        "dependencies": {
+          "chalk": "^1.1.1",
+          "commander": "^2.9.0",
+          "is-my-json-valid": "^2.12.4",
+          "pinkie-promise": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/hawk",
+          "node_modules/hawk/dist",
+          "node_modules/hawk/example",
+          "node_modules/hawk/lib",
+          "node_modules/hawk/test"
+        ],
+        "dependencies": {
+          "boom": "2.x.x",
+          "cryptiles": "2.x.x",
+          "hoek": "2.x.x",
+          "sntp": "1.x.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/http-signature/lib",
+          "node_modules/http-signature"
+        ],
+        "dependencies": {
+          "assert-plus": "^0.2.0",
+          "jsprim": "^1.2.2",
+          "sshpk": "^1.7.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/is-my-json-valid",
+          "node_modules/is-my-json-valid/test/fixtures",
+          "node_modules/is-my-json-valid/test/json-schema-draft4",
+          "node_modules/is-my-json-valid/test"
+        ],
+        "dependencies": {
+          "generate-function": "^2.0.0",
+          "generate-object-property": "^1.1.0",
+          "jsonpointer": "^4.0.0",
+          "xtend": "^4.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jodid25519",
+          "node_modules/jodid25519/lib"
+        ],
+        "dependencies": {
+          "jsbn": "~0.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/jsprim/lib",
+          "node_modules/jsprim"
+        ],
+        "dependencies": {
+          "extsprintf": "1.0.2",
+          "json-schema": "0.2.3",
+          "verror": "1.3.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/mime-types"
+        ],
+        "dependencies": {
+          "mime-db": "~1.25.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/pinkie-promise"
+        ],
+        "dependencies": {
+          "pinkie": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
           "node_modules/property-accessors/lib",
           "node_modules/property-accessors"
         ],
         "dependencies": {
           "es6-weak-map": "^0.1.2",
           "mixto": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/request",
+          "node_modules/request/lib"
+        ],
+        "dependencies": {
+          "aws-sign2": "~0.6.0",
+          "aws4": "^1.2.1",
+          "caseless": "~0.11.0",
+          "combined-stream": "~1.0.5",
+          "extend": "~3.0.0",
+          "forever-agent": "~0.6.1",
+          "form-data": "~2.1.1",
+          "har-validator": "~2.0.6",
+          "hawk": "~3.1.3",
+          "http-signature": "~1.1.0",
+          "is-typedarray": "~1.0.0",
+          "isstream": "~0.1.2",
+          "json-stringify-safe": "~5.0.1",
+          "mime-types": "~2.1.7",
+          "oauth-sign": "~0.8.1",
+          "qs": "~6.3.0",
+          "stringstream": "~0.0.4",
+          "tough-cookie": "~2.3.0",
+          "tunnel-agent": "~0.4.1",
+          "uuid": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/sntp/examples",
+          "node_modules/sntp",
+          "node_modules/sntp/lib",
+          "node_modules/sntp/test"
+        ],
+        "dependencies": {
+          "hoek": "2.x.x"
         }
       },
       {
@@ -1206,11 +2079,70 @@
       },
       {
         "paths": [
+          "node_modules/sshpk/lib",
+          "node_modules/sshpk/lib/formats",
+          "node_modules/sshpk"
+        ],
+        "dependencies": {
+          "asn1": "~0.2.3",
+          "assert-plus": "^1.0.0",
+          "bcrypt-pbkdf": "^1.0.0",
+          "dashdash": "^1.12.0",
+          "ecc-jsbn": "~0.1.1",
+          "getpass": "^0.1.1",
+          "jodid25519": "^1.0.0",
+          "jsbn": "~0.1.0",
+          "tweetnacl": "~0.14.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tough-cookie/lib",
+          "node_modules/tough-cookie"
+        ],
+        "dependencies": {
+          "punycode": "^1.4.1"
+        }
+      },
+      {
+        "paths": [
           "node_modules/underscore-plus/lib",
           "node_modules/underscore-plus"
         ],
         "dependencies": {
           "underscore": "~1.6.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/universal-analytics",
+          "node_modules/universal-analytics/lib",
+          "node_modules/universal-analytics/test"
+        ],
+        "dependencies": {
+          "async": "1.2.x",
+          "request": "2.x",
+          "underscore": "1.x",
+          "uuid": "^3.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/verror/examples",
+          "node_modules/verror/lib",
+          "node_modules/verror",
+          "node_modules/verror/tests"
+        ],
+        "dependencies": {
+          "extsprintf": "1.0.2"
         }
       }
     ]

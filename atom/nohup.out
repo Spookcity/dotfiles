@@ -1,386 +1,386 @@
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:66:7: The 'engine' property is ignored
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:66:7: The 'engine' property is ignored
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:66:14: Theming engine 'unico' not found
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:66:14: Theming engine 'unico' not found
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:94:13: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:94:13: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:102:26: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:102:26: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:105:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:105:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:111:19: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:111:19: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:115:18: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:115:18: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:122:18: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:122:18: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:179:19: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:179:19: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:206:26: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:206:26: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:250:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:250:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:251:42: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:251:42: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:252:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:252:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:253:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:253:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:254:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:254:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:266:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:266:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:267:42: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:267:42: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:268:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:268:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:269:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:269:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:270:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:270:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:282:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:282:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:297:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:297:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:308:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:308:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:319:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:319:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:347:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:347:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:348:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:348:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:349:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:349:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:371:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:371:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:389:20: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:389:20: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:398:15: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:398:15: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:405:20: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:405:20: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:427:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:427:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:428:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:428:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:429:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:429:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:430:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:430:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:430:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:430:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:431:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:431:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:432:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:432:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:433:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:433:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:434:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:434:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:435:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:435:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:435:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:435:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:436:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:436:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:436:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:436:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:452:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:452:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:454:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:454:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:456:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:456:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:461:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:461:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:462:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:462:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:467:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:467:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:470:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:470:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:470:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:470:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:471:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:471:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:472:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:472:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:472:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:472:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:485:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:485:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:486:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:486:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:487:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:487:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:488:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:488:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:488:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:488:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:489:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:489:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:490:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:490:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:491:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:491:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:492:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:492:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:493:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:493:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:493:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:493:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:494:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:494:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:494:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:494:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:511:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:511:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:517:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:517:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:519:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:519:27: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:524:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:524:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:525:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:525:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:529:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:529:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:532:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:532:19: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:532:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:532:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:533:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:533:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:534:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:534:28: The :inconsistent pseudo-class is deprecated. Use :indeterminate instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:534:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:534:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:615:29: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:615:29: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:640:27: The :prelight pseudo-class is deprecated. Use :hover instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:640:27: The :prelight pseudo-class is deprecated. Use :hover instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:649:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:649:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:680:39: The :prelight pseudo-class is deprecated. Use :hover instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:680:39: The :prelight pseudo-class is deprecated. Use :hover instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:681:42: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:681:42: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:705:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:705:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:706:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:706:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:725:23: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:725:23: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:730:14: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:730:14: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:742:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:742:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:751:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:751:18: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:771:48: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:771:48: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:777:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:777:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:789:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:789:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:806:45: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:806:45: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:821:46: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:821:46: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:822:46: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:822:46: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:863:38: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:863:38: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:885:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:885:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:886:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:886:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:925:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:925:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:926:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:926:20: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:954:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:954:31: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:955:24: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:955:24: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1066:38: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1066:38: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1067:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1067:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1068:53: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1068:53: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1069:55: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1069:55: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1070:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1070:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1071:46: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1071:46: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1072:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1072:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1073:54: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1073:54: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1074:21: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1074:21: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1075:23: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1075:23: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1080:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1080:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1081:38: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1081:38: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1082:39: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1082:39: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1083:41: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1083:41: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1111:34: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1111:34: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1191:28: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1191:28: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1208:33: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1208:33: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1219:33: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1219:33: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1346:21: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1346:21: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1356:21: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1356:21: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1365:25: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1365:25: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1366:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1366:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1372:25: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1372:25: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1389:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1389:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1398:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1398:40: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1407:34: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1407:34: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1421:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1421:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1430:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1430:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1480:29: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1480:29: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1502:19: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1502:19: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1503:24: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1503:24: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1551:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1551:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1552:29: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1552:29: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1602:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1602:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1608:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1608:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1611:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1611:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1635:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1635:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1636:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1636:30: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1788:28: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1788:28: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1789:35: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1789:35: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1802:35: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1802:35: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1803:28: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1803:28: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1859:29: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1859:29: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1878:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1878:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1886:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1886:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1907:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1907:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1908:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1908:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1912:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1912:36: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1916:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1916:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1922:31: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1922:31: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1929:39: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1929:39: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1941:12: The 'icon-shadow' property has been renamed to '-gtk-icon-shadow'
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1941:12: The 'icon-shadow' property has been renamed to '-gtk-icon-shadow'
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1944:45: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1944:45: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1945:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1945:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1953:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1953:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1959:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1959:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1965:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1965:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1967:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1967:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1972:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1972:57: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1974:66: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1974:66: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1984:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1984:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1990:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1990:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1996:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1996:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1998:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:1998:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2003:69: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2003:69: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2005:78: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2005:78: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2014:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2014:50: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2020:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2020:51: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2026:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2026:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2028:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2028:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2033:68: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2033:68: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2035:77: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2035:77: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2044:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2044:44: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2046:53: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2046:53: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2051:69: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2051:69: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2053:78: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2053:78: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2058:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2058:43: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2060:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2060:52: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2065:68: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2065:68: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2067:77: The :insensitive pseudo-class is deprecated. Use :disabled instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gtk-widgets.css:2067:77: The :insensitive pseudo-class is deprecated. Use :disabled instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: unity.css:14:14: The 'icon-shadow' property has been renamed to '-gtk-icon-shadow'
+(electron:25140): Gtk-WARNING **: Theme parsing error: unity.css:14:14: The 'icon-shadow' property has been renamed to '-gtk-icon-shadow'
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: nautilus.css:32:47: The :prelight pseudo-class is deprecated. Use :hover instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: nautilus.css:32:47: The :prelight pseudo-class is deprecated. Use :hover instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gnome-panel.css:72:35: The :prelight pseudo-class is deprecated. Use :hover instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gnome-panel.css:72:35: The :prelight pseudo-class is deprecated. Use :hover instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gnome-panel.css:73:35: The :prelight pseudo-class is deprecated. Use :hover instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gnome-panel.css:73:35: The :prelight pseudo-class is deprecated. Use :hover instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gnome-panel.css:83:28: The :prelight pseudo-class is deprecated. Use :hover instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gnome-panel.css:83:28: The :prelight pseudo-class is deprecated. Use :hover instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: gnome-panel.css:84:28: The :prelight pseudo-class is deprecated. Use :hover instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: gnome-panel.css:84:28: The :prelight pseudo-class is deprecated. Use :hover instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: unity-greeter.css:49:30: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: unity-greeter.css:49:30: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: unity-greeter.css:53:29: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: unity-greeter.css:53:29: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: unity-greeter.css:58:23: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: unity-greeter.css:58:23: The :focused pseudo-class is deprecated. Use :focus instead.
 
-(electron:8847): Gtk-WARNING **: Theme parsing error: unity-greeter.css:59:22: The :focused pseudo-class is deprecated. Use :focus instead.
+(electron:25140): Gtk-WARNING **: Theme parsing error: unity-greeter.css:59:22: The :focused pseudo-class is deprecated. Use :focus instead.
