@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=VDrumLib
+Categories=audiovideo;
+Type=Application
+StartupNotify=true
+Exec=wine ~/.wine/drive_c/Program\ Files\ \(x86\)/VDrumLib/v231\/VDrumLib.exe

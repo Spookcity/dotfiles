@@ -9,7 +9,7 @@ imlib_cache_size 10
 
 # WINDOW ESPECIFICATIONS
 gap_x 1155
-gap_y -160
+gap_y -65
 minimum_size 440 768
 maximum_width 440
 own_window yes
@@ -32,8 +32,8 @@ show_graph_range no
 
 # TEXT CONFIG
 use_xft yes
-xftalpha 0
-xftfont Droid Sans:size=8
+xftalpha 1
+xftfont Droid Sans:size=13.5
 text_buffer_size 256
 override_utf8_locale yes
 
@@ -50,49 +50,44 @@ color4 0042FF
 TEXT
 
 # IMAGES
-${image ~/.conky/images/arch_linux1.png -p 235,5 -s 80x80}\
-${image ~/.conky/images/process-bg.png -p 216,519 -s 220x210}\
-${image ~/.conky/images/cpu-bg.png -p 216,310 -s 220x60}\
-${image ~/.conky/images/cpu-bg.png -p 216,100 -s 220x80}\
-${image ~/.conky/images/disk-bg.png -p 216,763 -s 220x55}\
+${image ~/.conky/images/arch_linux1.png -p 216,10 -s 90x90}\
+${image ~/.conky/images/process-bg.png -p 216,510 -s 220x210}\
+${image ~/.conky/images/cpu-bg.png -p 216,308 -s 220x65}\
+${image ~/.conky/images/cpu-bg.png -p 216,115 -s 220x80}\
+${image ~/.conky/images/disk-bg.png -p 216,755 -s 220x60}\
 
 # INFOS
-${goto 320}${voffset }${font Droid Sans :size=16}${color4}Arch${color}${color2}Linux${color}
-#${goto 220}${voffset 25}${color1}rick@Arch-Studio${color}
+${goto 320}${voffset -10}${font Droid Sans :size=16}${color4}Arch${color}${color2}Linux${color}
+${goto 305}${voffset -3 }${color2}${font Droid Sans :size=8}$kernel${color}
 
 # SYS
-${goto 288}${voffset 8}${color1}${font Droid Sans :size=10}FILE SYSTEM${color}
-${goto 220}${color1}${font Droid Sans :size=10}Root ${goto 273}${voffset }${goto 270}${color2}${fs_bar 7,70 /}${goto 350}${voffset -2 }${color}${color2}${fs_used /}${color1}/${fs_size /}${color}
-${goto 220}${color1}${font Droid Sans :size=10}Home ${goto 269}${voffset }${goto 270}${color2}${fs_bar 7,70 /home}${goto 350}${voffset -2 }${color}${color2}${fs_used /home}${color1}/${fs_size /home}${color}
-${goto 220}${color1}${font Droid Sans :size=10}Stuff ${goto 270}${color1}${voffset }${color2}${fs_bar 7,70 /mnt/Ricks_Stuff}${goto 350}${voffset -2 }${color}${color2}${fs_used /mnt/Ricks_Stuff}${color1}/${fs_size /mnt/Ricks_Stuff}${color}
+${goto 288}${voffset 30}${color1}${font Droid Sans :size=11}FILE SYSTEM${color}
+${goto 220}${color1}${font Droid Sans :size=11}Root ${goto 273}${voffset }${goto 270}${color2}${fs_bar 7,70 /}${goto 350}${voffset -2 }${color}${color2}${fs_used /}${color1}/${fs_size /}${color}
+${goto 220}${color1}${font Droid Sans :size=11}Home ${goto 269}${voffset }${goto 270}${color2}${fs_bar 7,70 /home}${goto 350}${voffset -2 }${color}${color2}${fs_used /home}${color1}/${fs_size /home}${color}
+${goto 220}${color1}${font Droid Sans :size=11}Stuff ${goto 270}${color1}${voffset }${color2}${fs_bar 7,70 /mnt/Ricks_Stuff}${goto 350}${voffset -2 }${color}${color2}${fs_used /mnt/Ricks_Stuff}${color1}/${fs_size /mnt/Ricks_Stuff}${color}
+
 # CONNECTION
-
-${voffset -3}${goto 236}${font Droid Sans :size=10}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 332}    Down ${color1}${downspeed wlp3s0}
+${voffset -5}${goto 225}${font Droid Sans :size=11}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 345}    Down ${color1}${downspeed wlp3s0}
 ${voffset 10}${goto 217}${upspeedgraph wlp3s0 26,80 8cbc65 8cbc65}${goto 332}    ${downspeedgraph wlp3s0 26,80 8cbc65 8cbc65}
-${voffset 9}${goto 222}${color2}Sent ${color1}${totalup wlp3s0}${color2}${goto 332}Received ${color1}${totaldown wlp3s0}${font}
-
-
+${voffset 9}${goto 222}${color2}Sent ${color1}${totalup wlp3s0}${color2}${goto 345}Received ${color1}${totaldown wlp3s0}${font}
 
 # CPU AND MEM
+${voffset -9}${goto 225}${color1}${font Droid Sans :size=10}CPU 1:${color}
+${voffset 9}${goto 225}${color1}${font Droid Sans :size=10}CPU 2:${color}
+${voffset -39}${goto 277}${color2}${cpubar cpu1 9, 110}${color}
+${voffset 9}${goto 277}${color2}${cpubar cpu2 9, 110}${color}
+${voffset -40}${alignr 18}${color1}${font Droid Sans :size=10}${cpu cpu1}%${color}
+${voffset 9}${alignr 18}${color1}${cpu cpu2}%${color}
+${voffset 17}${goto 225}${color2}${font Droid Sans :size=10}Uptime:${font}${color}
+${voffset }${goto 225}${color2}${font Droid Sans :size=10}RAM:${color}
+${voffset -42}${alignr }${color1}${uptime_short}${color}
+${voffset 12}${alignr 10}${font Droid Sans :size=10}${color1}${memperc}%${color}
+${voffset -15}${goto 295}${color1}${mem} / ${memmax}${font}${color}
 
-${voffset -16}${goto 225}${color1}${font Droid Sans :size=8}CPU 1:${color}
-${voffset 7}${goto 225}${color1}${font Droid Sans :size=8}CPU 2:${color}
-
-
-${voffset -7}${goto 234}${color2}${font Droid Sans :size=10}RAM:${color}
-${voffset 4}${goto 234}${color2}Uptime:${font}${color}
-${voffset -95}${alignr 18}${color1}${font Droid Sans :size=8}${cpu cpu1}%${color}
-${voffset 6}${alignr 18}${color1}${cpu cpu2}%${color}
-${voffset 22}${alignr 10}${font Droid Sans :size=10}${color1}${memperc}%${color}
-${voffset 4}${alignr }${color1}${uptime_short}${color}
-${voffset -97}${goto 277}${color2}${cpubar cpu1 9, 110}${color}
-${voffset 2}${goto 277}${color2}${cpubar cpu2 9, 110}${color}
-${voffset 19}${goto 284}${color1}${mem} / ${memmax}${font}${color}
-
-${voffset 40}${goto 218}${loadgraph 40,220 8cbc65 8cbc65 -l}
+${voffset -5}${goto 218}${loadgraph 50,220 8cbc65 8cbc65 -l}
 
 # PROCESS
-${color1}${font Droid Sans :size=8}${voffset 21}${goto 222}${top_mem name 1}
+${color1}${font Droid Sans :size=9}${voffset -8}${goto 222}${top_mem name 1}
 ${voffset 4}${goto 222}${top_mem name 2}
 ${voffset 4}${goto 222}${top_mem name 3}
 ${voffset 4}${goto 222}${top_mem name 4}
@@ -127,12 +122,8 @@ ${voffset -13}${goto 306}RAM (%)
 ${voffset -14}${alignr 24}RAM${color}${font}
 
 # DISK
-${voffset 215}${goto 311}${color1}${font Droid Sans :size=10}SWAP${color}
-${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 271} ${swapbar 8, 110}${color} ${goto 405}${color1}${swapperc}%${color}
-${voffset 7}${goto 220}${font Droid Sans :size=8}${color1}Total:${goto 395} ${swapmax}${color}
-# DATE
- #${voffset 45}${font Droid Sans :size=10}${alignr 32}${color1}${time %H:%M}${color}
- #${voffset -2}${alignr 15}${color1}${time %a, %b %d}${font}${color}
-
-# PANEL
-#${voffset  }${goto 70}${font Droid Sans :size=10}${color1}RAM: ${color}${color2}${mem}/${memmax} ${color}${color2}${membar 9, 60} ${memperc}%${color}      ${color1}CPU: ${color2}${cpubar cpu1 9, 60} ${cpu cpu0}%${color}${font}
+${voffset 200}${goto 311}${color1}${font Droid Sans :size=11}SWAP${color}
+${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 273} ${swapbar 8, 110}${voffset 4}${color} 
+${voffset 5}${goto 220}${font Droid Sans :size=8}${color1}Total:
+${voffset -37}${goto 405}${color1}${swapperc}%${color}
+${voffset 11}${goto 395} ${swapmax}${color}

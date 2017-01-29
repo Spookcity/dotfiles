@@ -1,0 +1,28 @@
+{
+    "bookmarks": [],
+    "gui_state": {
+        "gitdag": {
+            "x": 0,
+            "y": 28,
+            "width": 1600,
+            "height": 900,
+            "maximized": false,
+            "lock_layout": true,
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAARlAAADcfwCAAAAAvsAAAAGAEwAbwBnAQAAABMAAADoAAAAZAD////7AAAACABEAGkAZgBmAQAAAP4AAAKGAAAATgD///8AAAABAAAB2AAAA3H8AgAAAAL7AAAACgBHAHIAYQBwAGgAAAAAEwAAAQ8AAABiAP////sAAAAKAEYAaQBsAGUAcwEAAAATAAADcQAAAGIA////AAAAAAAAA3EAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
+            "count": 1000
+        },
+        "mainview": {
+            "x": 0,
+            "y": 28,
+            "width": 1600,
+            "height": 849,
+            "maximized": true,
+            "lock_layout": true,
+            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAARGAAADPvwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAABMAAAD+AAAAYAAAIBz7AAAACABEAGkAZgBmAQAAARQAAAI9AAAAHQD///8AAAABAAAB9wAAAz78AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAATAAADPgAAAGIA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABtAAAAZ0AAABiAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAAD/////AAAAYgD///8AAAADAAAAAAAAAAD8AQAAAAH8AAAAAP////8AAAAAAP////r/////AQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAAAAAAD/////AAAAdwD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAegD///8AAAAAAAADPgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "show_status_filter": false
+        }
+    },
+    "recent": [
+        "/home/rick/android_dev/G800F-Kernel_Stuff/android_kernel_samsung_kminilte"
+    ]
+}

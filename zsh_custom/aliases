@@ -21,4 +21,6 @@ alias ajs='archlinux-java status'
 # other stuffs
 alias c='clear'
 alias q='exit'
-alias make='/home/rick/bin/color.sh'
+# alias make='/home/rick/bin/color.sh'
+alias mka='/home/rick/bin/color.sh'
+alias gconf='GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc make gconfig'

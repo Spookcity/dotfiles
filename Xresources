@@ -32,3 +32,5 @@
 !white
 *xterm.color7:#c0b18b
 *xterm.color15:#c0b18b
+
+*TkTheme: clam

@@ -5,40 +5,19 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/home/rick/.oh-my-zsh/custom", 
-                "sort_ascending": true, 
-                "sort_column": 0
-            }, 
-            {
-                "class": "FileList", 
-                "lock": null, 
-                "path": "/home/rick/android_dev/G800F-Kernel_Stuff/android_kernel_samsung_kminilte-MM", 
+                "path": "/home/rick/android_dev/Completed_ROMS_and_Kernels/MM_ROMS", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
         ]
     }, 
     "right": {
-        "active_tab": 1, 
+        "active_tab": 0, 
         "tabs": [
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/home/rick/bin", 
-                "sort_ascending": true, 
-                "sort_column": 0
-            }, 
-            {
-                "class": "FileList", 
-                "lock": null, 
-                "path": "/usr/bin", 
-                "sort_ascending": true, 
-                "sort_column": 0
-            }, 
-            {
-                "class": "FileList", 
-                "lock": null, 
-                "path": "/home/rick/android_dev/G800F-Kernel_Stuff", 
+                "path": "mtp://[usb:001,004]/sdcard1 (93420001)", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }

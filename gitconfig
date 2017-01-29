@@ -2,19 +2,21 @@
 	email = spookcity138@gmail.com
 	name = Rick M.
 [gui]
-	editor = "env GTK_THEME=cathexis atom "
-	fontui = -family \"Droid Sans\" -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	editor = env PYTHON=python2 /usr/share/atom/atom
+	fontui = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	spellingdictionary = en_US
-	displayuntracked = true
+	displayuntracked = false
 	historybrowser = gitk
 	recentrepo = /home/rick/dotfiles
-	recentrepo = /home/rick/android_dev/G800F-CM13_Kernel_Stuff/android_kernel_samsung_kminilte
+	warndetachedcommit = true
 
 [cola]
 	blameviewer = git gui blame
-	fontdiff = Droid Sans Mono,9,-1,5,50,0,0,0,0,0
-	boldheaders = false
+	fontdiff = Inconsolata,12,-1,5,50,0,0,0,0,0
+	boldheaders = true
+	savewindowsettings = true
+	spellcheck = false
 [difftool]
 	prompt = false
 [merge]
