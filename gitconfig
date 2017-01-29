@@ -6,7 +6,7 @@
 	fontui = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	spellingdictionary = en_US
-	displayuntracked = false
+	displayuntracked = true
 	historybrowser = gitk
 	recentrepo = /home/rick/dotfiles
 	warndetachedcommit = true

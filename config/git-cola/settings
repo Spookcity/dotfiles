@@ -1,89 +1,36 @@
 {
     "bookmarks": [],
     "gui_state": {
-        "gitdag": {
-            "x": 0,
-            "y": 29,
-            "width": 1600,
-            "height": 852,
+        "startupdialog": {
             "maximized": false,
-            "lock_layout": true,
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAQbAAADP/wCAAAAAfwAAAAVAAADPwAAAL4A/////AIAAAAC+wAAAAYATABvAGcBAAAAFQAAAQQAAABqAP////sAAAAIAEQAaQBmAGYBAAABHAAAAjgAAABRAP///wAAAAEAAAIiAAADP/wCAAAAAvsAAAAKAEcAcgBhAHAAaAAAAAAeAAAArgAAAGcA////+wAAAAoARgBpAGwAZQBzAQAAABUAAAM/AAAAZwD///8AAAAAAAADPwAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "count": 1000
-        },
-        "pull": {
-            "x": 467,
-            "y": 29,
-            "width": 666,
-            "height": 420,
-            "maximized": false,
-            "rebase": false
-        },
-        "fetch": {
-            "x": 467,
-            "y": 28,
-            "width": 666,
-            "height": 420,
-            "maximized": false
-        },
-        "push": {
-            "x": 467,
-            "y": 29,
-            "width": 666,
-            "height": 420,
-            "maximized": false
-        },
-        "stashview": {
-            "maximized": false,
-            "y": 241,
-            "x": 0,
-            "height": 420,
-            "width": 1600
-        },
-        "browser": {
-            "x": 202,
-            "y": 241,
-            "width": 720,
-            "height": 420,
-            "maximized": false
+            "width": 800,
+            "height": 450,
+            "x": 399,
+            "y": 201
         },
         "mainview": {
+            "maximized": true,
             "x": 0,
             "y": 28,
             "width": 1600,
             "height": 849,
-            "maximized": true,
             "lock_layout": true,
-            "windowstate": "AAAA/wAAAAL9AAAAAwAAAAAAAAPEAAADPPwCAAAAAvsAAAAMAEMAbwBtAG0AaQB0AQAAABUAAAEfAAAAYgD////7AAAACABEAGkAZgBmAQAAATcAAAIaAAAAHQD///8AAAABAAACeQAAAzz8AgAAAAP7AAAADABTAHQAYQB0AHUAcwEAAAAVAAADPAAAAGcA////+wAAABIARgBhAHYAbwByAGkAdABlAHMAAAABuQAAAZgAAABnAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAm4AAADjAAAAZwD///8AAAADAAAGQAAAACD8AQAAAAH8AAAAAAAABkAAAAAAAP////r/////AQAAAAL7AAAADgBBAGMAdABpAG8AbgBzAAAAAAD/////AAAAfwD////7AAAADgBDAG8AbgBzAG8AbABlAAAAAAD/////AAAAgwD///8AAAAAAAADPAAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
-            "show_status_filter": false
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAEAAAZAAAADPvwCAAAAAvwAAAATAAADPgAAAOEA/////AEAAAAC/AAAAAAAAAS7AAAAoAD////8AgAAAAL7AAAADABDAG8AbQBtAGkAdAEAAAATAAAAfAAAAGAA/////AAAAJIAAAK/AAAAHQD////6AAAAAQEAAAAC+wAAAA4AQwBvAG4AcwBvAGwAZQAAAAAA/////wAAAHoA////+wAAAAgARABpAGYAZgEAAAAAAAAE1QAAAIIA/////AAABL4AAAGCAAAAswD////8AgAAAAL7AAAADABTAHQAYQB0AHUAcwEAAAATAAACjQAAAHwA////+wAAAAwAUgBlAGMAZQBuAHQBAAACowAAAK4AAABiAP////sAAAASAEYAYQB2AG8AcgBpAHQAZQBzAAAAAbQAAAGdAAAAYgD///8AAAADAAAGQAAAADr8AQAAAAH7AAAADgBBAGMAdABpAG8AbgBzAAAAAAAAAAZAAAAAdwD///8AAAAAAAADPgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "show_status_filter": true,
+            "show_diff_line_numbers": false
         },
-        "startupdialog": {
-            "x": 399,
-            "y": 206,
-            "width": 800,
+        "preferencesview": {
+            "maximized": false,
+            "width": 758,
             "height": 450,
-            "maximized": false
-        },
-        "recentfiledialog": {
-            "maximized": false,
-            "y": 241,
-            "x": 0,
-            "height": 420,
-            "width": 1600
-        },
-        "createbranchdialog": {
-            "maximized": false,
-            "y": 28,
-            "x": 523,
-            "height": 333,
-            "width": 555
+            "x": 410,
+            "y": 186
         }
     },
     "recent": [
-        "/home/rick/android_dev/G800F-Kernel_Stuff/android_kernel_samsung_kminilte-MM",
-        "/home/rick/dotfiles",
-        "/home/rick/android_dev/G800F-Kernel_Stuff/android_kernel_samsung_kminilte",
-        "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_kernel_samsung_kminilte",
-        "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_hardware_ril"
+        {
+            "name": "dotfiles",
+            "path": "/home/rick/dotfiles"
+        }
     ]
 }

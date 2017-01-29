@@ -5,19 +5,33 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/home/rick/android_dev/Completed_ROMS_and_Kernels/MM_ROMS", 
+                "path": "/home/rick", 
+                "sort_ascending": true, 
+                "sort_column": 0
+            }, 
+            {
+                "class": "FileList", 
+                "lock": null, 
+                "path": "/home/rick/downloads", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
         ]
     }, 
     "right": {
-        "active_tab": 0, 
+        "active_tab": 1, 
         "tabs": [
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "mtp://[usb:001,004]/sdcard1 (93420001)", 
+                "path": "/usr/share/git-cola/lib", 
+                "sort_ascending": true, 
+                "sort_column": 0
+            }, 
+            {
+                "class": "FileList", 
+                "lock": null, 
+                "path": "/mnt/Ricks_Stuff", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
