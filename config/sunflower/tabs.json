@@ -5,33 +5,19 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/home/rick", 
-                "sort_ascending": true, 
-                "sort_column": 0
-            }, 
-            {
-                "class": "FileList", 
-                "lock": null, 
-                "path": "/home/rick/downloads", 
+                "path": "/home/rick/android_dev/G800F_Trees-MM/Slim_repo-bak", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
         ]
     }, 
     "right": {
-        "active_tab": 1, 
+        "active_tab": 0, 
         "tabs": [
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/usr/share/git-cola/lib", 
-                "sort_ascending": true, 
-                "sort_column": 0
-            }, 
-            {
-                "class": "FileList", 
-                "lock": null, 
-                "path": "/mnt/Ricks_Stuff", 
+                "path": "/mnt/Ricks_Stuff/Slim_MM_sources/device", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }

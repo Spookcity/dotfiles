@@ -468,9 +468,15 @@
     <keybind key="W-space">
       <action name="Execute">
         <name>j4-dmenu-desktop</name>
-        <command>j4-dmenu-desktop --dmenu="dmenu -i -b -fn 'Comfortaa:size=10.5' -nb 'black' -nf '#3972ac' -sb '#003399' -sf 'white'"</command>
+        <command>j4-dmenu-desktop --dmenu="dmenu -i -b -fn 'Comfortaa:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'"</command>
       </action>
     </keybind>
+    <keybind key="C-space">
+      <action name="Execute">
+        <name>mpdmenu</name>
+        <command>mpdmenu -i -b :: -fn 'Comfortaa:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'</command>
+      </action>
+    </keybind>    
     <keybind key="A-space">
       <action name="Execute">
         <name>Rofi</name>

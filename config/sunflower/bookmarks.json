@@ -1,10 +1,6 @@
 {
-    "add_home": false, 
+    "add_home": true, 
     "bookmarks": [
-        {
-            "name": "Home", 
-            "uri": "/home/rick"
-        }, 
         {
             "name": "Root", 
             "uri": "/"
@@ -12,6 +8,10 @@
         {
             "name": "Samba", 
             "uri": "/mnt/Samba"
+        }, 
+        {
+            "name": "Drum Stuff", 
+            "uri": "/mnt/Drums"
         }
     ], 
     "show_mounts": false, 

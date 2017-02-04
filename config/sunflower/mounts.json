@@ -1,12 +1,21 @@
 {
     "smb": [
         {
-            "directory": "Ricks Stuff", 
+            "directory": "ricks stuff", 
             "domain": "192.168.1.8", 
-            "name": "Xububtu", 
+            "name": "RIcks Stuff_Samba", 
             "requires_login": true, 
             "server": "192.168.1.8", 
             "share": "", 
+            "username": "rick"
+        }, 
+        {
+            "directory": "", 
+            "domain": "192.168.1.8", 
+            "name": "Drum_Stuff_Samba", 
+            "requires_login": true, 
+            "server": "192.168.1.8", 
+            "share": "Drum Vids", 
             "username": "rick"
         }
     ]

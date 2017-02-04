@@ -109,12 +109,12 @@ configs =
         type: "boolean"
         default: false
         description: "Pull from remote before pushing"
-      alwaysPullFromUpstream:
+      promptForBranch:
         order: 3
-        title: "Pull From Upstream"
+        title: "Prompt for branch selection when pulling/pushing"
         type: "boolean"
         default: false
-        description: "Always pull from current branch upstream?"
+        description: "If false, it defaults to current branch upstream"
   experimental:
     order: 6
     type: "object"
@@ -130,7 +130,7 @@ configs =
         title: "Custom Commands"
         type: "boolean"
         default: false
-        description: "Allow custom commands to be declared in your `init` file and run within Git-plus"
+        description: "Declared custom commands in your `init` file that can be run from the Git-plus command palette"
 
 module.exports = ->
   # Cleanup user's config.cson if config properties change

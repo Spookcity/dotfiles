@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-117023-7749-7ttgbx/package.tgz",
+        "raw": "/tmp/d-11711-13948-1ta37jn/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-117023-7749-7ttgbx/package.tgz",
-        "spec": "/tmp/d-117023-7749-7ttgbx/package.tgz",
+        "rawSpec": "/tmp/d-11711-13948-1ta37jn/package.tgz",
+        "spec": "/tmp/d-11711-13948-1ta37jn/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-117023-7749-1trry37"
+      "/tmp/apm-install-dir-11711-13948-o0stnf"
     ]
   ],
-  "_from": "../d-117023-7749-7ttgbx/package.tgz",
-  "_id": "git-plus@7.1.1",
+  "_from": "../d-11711-13948-1ta37jn/package.tgz",
+  "_id": "git-plus@7.2.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/git-plus",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-117023-7749-7ttgbx/package.tgz",
+    "raw": "/tmp/d-11711-13948-1ta37jn/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-117023-7749-7ttgbx/package.tgz",
-    "spec": "/tmp/d-117023-7749-7ttgbx/package.tgz",
+    "rawSpec": "/tmp/d-11711-13948-1ta37jn/package.tgz",
+    "spec": "/tmp/d-11711-13948-1ta37jn/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-117023-7749-7ttgbx/package.tgz",
-  "_shasum": "1469703e5c03003ca2dcc27d40739a04f721e6a7",
+  "_resolved": "file:../d-11711-13948-1ta37jn/package.tgz",
+  "_shasum": "3a3d0e22508c17f2afa1baa3ad23db4d450eb042",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-117023-7749-7ttgbx/package.tgz",
-  "_where": "/tmp/apm-install-dir-117023-7749-1trry37",
+  "_spec": "/tmp/d-11711-13948-1ta37jn/package.tgz",
+  "_where": "/tmp/apm-install-dir-11711-13948-o0stnf",
   "bugs": {
     "url": "https://github.com/akonwi/git-plus/issues"
   },
@@ -91,5 +91,5 @@
     "type": "git",
     "url": "git+https://github.com/akonwi/git-plus.git"
   },
-  "version": "7.1.1"
+  "version": "7.2.0"
 }
