@@ -58,7 +58,7 @@ ${image ~/.conky/images/disk-bg.png -p 216,755 -s 220x60}\
 
 # INFOS
 ${goto 320}${voffset -10}${font Droid Sans :size=16}${color4}Arch${color}${color2}Linux${color}
-${goto 305}${voffset -3 }${color2}${font Droid Sans :size=8}$kernel${color}
+${goto 322}${voffset -3 }${color2}${font Droid Sans :size=8}$kernel${color}
 
 # SYS
 ${goto 288}${voffset 30}${color1}${font Droid Sans :size=11}FILE SYSTEM${color}
@@ -67,9 +67,9 @@ ${goto 220}${color1}${font Droid Sans :size=11}Home ${goto 269}${voffset }${goto
 ${goto 220}${color1}${font Droid Sans :size=11}Stuff ${goto 270}${color1}${voffset }${color2}${fs_bar 7,70 /mnt/Ricks_Stuff}${goto 350}${voffset -2 }${color}${color2}${fs_used /mnt/Ricks_Stuff}${color1}/${fs_size /mnt/Ricks_Stuff}${color}
 
 # CONNECTION
-${voffset -5}${goto 225}${font Droid Sans :size=11}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 345}    Down ${color1}${downspeed wlp3s0}
+${voffset -5}${goto 225}${font Droid Sans :size=11}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 335}      Down ${color1}${downspeed wlp3s0}
 ${voffset 10}${goto 217}${upspeedgraph wlp3s0 26,80 8cbc65 8cbc65}${goto 332}    ${downspeedgraph wlp3s0 26,80 8cbc65 8cbc65}
-${voffset 9}${goto 222}${color2}Sent ${color1}${totalup wlp3s0}${color2}${goto 345}Received ${color1}${totaldown wlp3s0}${font}
+${voffset 9}${goto 222}${color2}Sent ${color1}${totalup wlp3s0}${color2}${goto 335}Received ${color1}${totaldown wlp3s0}${font}
 
 # CPU AND MEM
 ${voffset -9}${goto 225}${color1}${font Droid Sans :size=10}CPU 1:${color}

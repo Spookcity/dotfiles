@@ -4,10 +4,10 @@ rofi.width:                          1450
 rofi.lines:                          10
 rofi.columns:                        1
 rofi.font:                           Inconsolata for Powerline-regular 10.5
-rofi.color-normal:                   #282828,#ebdbb2,#282828,#689d6a,#282828
-rofi.color-urgent:                   #282828,#ebdbb2,#282828,#689d6a,#282828
-rofi.color-active:                   #282828,#ebdbb2,#282828,#689d6a,#282828
-rofi.color-window:                   #282828,#ebdbb2
+rofi.color-normal:                   #1f1f1f,#543d3e,#1f1f1f,#535C5C,#1f1f1f
+rofi.color-urgent:                   #1f1f1f,#543d3e,#1f1f1f,#535C5C,#1f1f1f
+rofi.color-active:                   #1f1f1f,#543d3e,#1f1f1f,#535C5C,#1f1f1f
+rofi.color-window:                   #1f1f1f,#543d3e
 rofi.bw:                             1
 rofi.location:                       6
 rofi.padding:                        5
