@@ -1,6 +1,6 @@
-sw_volume: 94
+sw_volume: 100
 audio_device_state:1:Intel
-audio_device_state:0:Pipe
+audio_device_state:1:Pipe
 state: stop
 random: 0
 repeat: 0

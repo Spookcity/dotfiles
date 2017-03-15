@@ -5,7 +5,7 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/home/rick/android_dev/G800F_Trees-MM/Slim_repo-bak", 
+                "path": "/home/rick", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
@@ -17,7 +17,7 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/mnt/Ricks_Stuff/Slim_MM_sources/device", 
+                "path": "/mnt/Ricks_Stuff", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }

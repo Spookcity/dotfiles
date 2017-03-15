@@ -22,9 +22,9 @@ If you are on a Windows machine, I recommend checking out [this thread](https://
 
 ### Push/Pull/Fetch notifications
 Notifications will appear in a console output above the status bar.
-This view can be toggled by clicking the pin icon in the bottom right of the status bar.
+This view can be toggled by clicking the 'git+' icon in the bottom right of the status bar.
 
-![screenshot](https://github.com/akonwi/git-plus/raw/master/pin.png)
+![screenshot](https://dl.dropboxusercontent.com/s/oe3x8wyt6lnmbv7/git%2B.png)
 
 ### Commands
 _Commands are accessible for keybindings by dasherizing the command title._
@@ -50,6 +50,8 @@ _Commands are accessible for keybindings by dasherizing the command title._
 | `Git Checkout `*`[ref]`* | Change to another ref (branch or tag). | |
 | `Git Checkout New branch` | Create a new branch. | |
 | `Git Diff [All]` | Show the diff for the current file, or all files. The diff can either be against the staged or un-staged tree, as selected in the options. | |
+| `Git Diff Branches` | Show the diff for the current branch all files against another branch. | |
+| `Git Diff Branche Files` | Show the diff for the current branch file against another branch version. | |
 | `Git` *`[Push⎮Pull]`* | Push to or pull from a remote repo. If you have multiple remote repos, you can choose which to push to or pull from. | |
 | `Git Remove [current file]` | `git rm` the current file or open an selector to select the files to remove. You can select multiple files at once. | |
 | `Git Log [Current File]` | Show the commit history [for the current file] and show display the selected commit. | |

@@ -15,7 +15,7 @@
             "width": 1600,
             "height": 849,
             "lock_layout": true,
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAEAAAZAAAADMvwCAAAAAvwAAAAfAAADMgAAAOMA/////AEAAAAC/AAAAAAAAAS7AAAAwgD////8AgAAAAL7AAAADABDAG8AbQBtAGkAdAEAAAAfAAAAfAAAAGMA/////AAAAJ4AAAKzAAAAIAD////6AAAAAQEAAAAC+wAAAA4AQwBvAG4AcwBvAGwAZQAAAAAA/////wAAAJAA////+wAAAAgARABpAGYAZgEAAAAAAAAE1QAAAJwA/////AAABL4AAAGCAAAA2QD////8AgAAAAL7AAAADABTAHQAYQB0AHUAcwEAAAAfAAACjQAAAHAA////+wAAAAwAUgBlAGMAZQBuAHQBAAACrwAAAKIAAABwAP////sAAAASAEYAYQB2AG8AcgBpAHQAZQBzAAAAAbQAAAGdAAAAcAD///8AAAADAAAGQAAAADr8AQAAAAH7AAAADgBBAGMAdABpAG8AbgBzAAAAAAAAAAZAAAAAjAD///8AAAAAAAADMgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAEAAAZAAAADMvwCAAAAAvwAAAAfAAADMgAAAOMA/////AEAAAAC/AAAAAAAAAP/AAAAwgD////8AgAAAAL7AAAADABDAG8AbQBtAGkAdAEAAAAfAAAAfAAAAGMA/////AAAAJ4AAAKzAAAAIAD////6AAAAAQEAAAAC+wAAAA4AQwBvAG4AcwBvAGwAZQAAAAAA/////wAAAJAA////+wAAAAgARABpAGYAZgEAAAAAAAAE1QAAAJwA/////AAABAIAAAI+AAAA2QD////8AgAAAAL7AAAADABTAHQAYQB0AHUAcwEAAAAfAAAClAAAAHAA////+wAAAAwAUgBlAGMAZQBuAHQBAAACtgAAAJsAAABwAP////sAAAASAEYAYQB2AG8AcgBpAHQAZQBzAAAAAbQAAAGdAAAAcAD///8AAAADAAAGQAAAADr8AQAAAAH7AAAADgBBAGMAdABpAG8AbgBzAAAAAAAAAAZAAAAAjAD///8AAAAAAAADMgAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
             "show_status_filter": false,
             "show_diff_line_numbers": false
         },
@@ -30,22 +30,78 @@
             "maximized": false,
             "width": 705,
             "height": 397,
-            "x": 331,
-            "y": 265,
+            "x": 224,
+            "y": 258,
             "tags": false,
             "prompt": true
         },
         "gitdag": {
             "maximized": true,
             "lock_layout": true,
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAMfAAADMvwCAAAAAvsAAAAGAEwAbwBnAQAAAB8AAADyAAAAcgD////7AAAACABEAGkAZgBmAQAAARQAAAI9AAAAXwD///8AAAABAAADHgAAAzL8AgAAAAL7AAAACgBGAGkAbABlAHMBAAAAHwAAAdMAAABwAP////sAAAAKAEcAcgBhAHAAaAEAAAH1AAABXAAAAHAA////AAAAAAAAAzIAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAMfAAADMvwCAAAAAvsAAAAGAEwAbwBnAQAAAB8AAADyAAAAcgD////7AAAACABEAGkAZgBmAQAAARQAAAI9AAAAXwD///8AAAABAAADHgAAAzL8AgAAAAL7AAAACgBGAGkAbABlAHMBAAAAHwAAAQQAAABwAP////sAAAAKAEcAcgBhAHAAaAEAAAEmAAACKwAAAHAA////AAAAAAAAAzIAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
             "count": 1000
+        },
+        "applypatches": {
+            "maximized": false,
+            "width": 666,
+            "height": 420,
+            "x": 467,
+            "y": 28
+        },
+        "remoteeditor": {
+            "maximized": false,
+            "width": 1600,
+            "height": 849,
+            "x": 0,
+            "y": 28
+        },
+        "fetch": {
+            "maximized": false,
+            "width": 800,
+            "height": 675,
+            "x": 400,
+            "y": 28,
+            "tags": false
+        },
+        "pull": {
+            "maximized": false,
+            "width": 800,
+            "height": 675,
+            "x": 400,
+            "y": 28,
+            "ff_only": false,
+            "no_ff": false,
+            "rebase": false
         }
     },
     "recent": [
         {
+            "name": "android_device_samsung_smdk3470-common",
+            "path": "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_device_samsung_smdk3470-common"
+        },
+        {
+            "name": "android_device_samsung_kminilte",
+            "path": "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_device_samsung_kminilte"
+        },
+        {
+            "name": "android_device_samsung_kminilte",
+            "path": "/home/rick/android_dev/G800F_Trees-Nougat_7.1/cm-3470_repos/android_device_samsung_kminilte"
+        },
+        {
+            "name": "base",
+            "path": "/mnt/Ricks_Stuff/Slim_nougat_sources/frameworks/base"
+        },
+        {
             "name": "dotfiles",
             "path": "/home/rick/dotfiles"
+        },
+        {
+            "name": "android_hardware_samsung_slsi_exynos3470",
+            "path": "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_hardware_samsung_slsi_exynos3470"
+        },
+        {
+            "name": "android_vendor_samsung_kminilte",
+            "path": "/home/rick/android_dev/G800F_Trees-Nougat_7.1/android_vendor_samsung_kminilte"
         }
     ]
 }

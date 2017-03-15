@@ -1,5 +1,17 @@
 ## Changelog
 
+### 7.2.3
+- [Experimental Features] Show diffs between branches (@yacut)
+- [Experimental Features] Use the split-diff package to show diffs for a single file (@yacut)
+
+### 7.2.2
+- Remove the git+ logo from status-bar when there is no git project in workspace and add it when there is a git project [#613](https://github.com/akonwi/git-plus/issues/613)
+- Fixes [#614](https://github.com/akonwi/git-plus/issues/614)
+
+### 7.2.1
+- Swapped pin icon in the status-bar for 'git+'. [#613](https://github.com/akonwi/git-plus/issues/613)
+- Removed analytics
+
 ### 7.2.0
 - Fixes [#596](https://github.com/akonwi/git-plus/issues/596)
   - __BREAKING__ the config option of `Pull From Upstream` is now the default behavior.

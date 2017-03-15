@@ -2,39 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/tmp/d-1161123-24959-pogn13.l5qhg833di/package.tgz",
+        "raw": "/tmp/d-117119-4677-sj5041/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/tmp/d-1161123-24959-pogn13.l5qhg833di/package.tgz",
-        "spec": "/tmp/d-1161123-24959-pogn13.l5qhg833di/package.tgz",
+        "rawSpec": "/tmp/d-117119-4677-sj5041/package.tgz",
+        "spec": "/tmp/d-117119-4677-sj5041/package.tgz",
         "type": "local"
       },
-      "/tmp/apm-install-dir-1161123-24959-1by2t82.j5750qw7b9"
+      "/tmp/apm-install-dir-117119-4677-do3yew"
     ]
   ],
-  "_from": "../d-1161123-24959-pogn13.l5qhg833di/package.tgz",
-  "_id": "tree-view-git-status@1.3.0",
+  "_from": "../d-117119-4677-sj5041/package.tgz",
+  "_id": "tree-view-git-status@1.3.1",
   "_inCache": true,
+  "_installable": true,
   "_location": "/tree-view-git-status",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/tmp/d-1161123-24959-pogn13.l5qhg833di/package.tgz",
+    "raw": "/tmp/d-117119-4677-sj5041/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/tmp/d-1161123-24959-pogn13.l5qhg833di/package.tgz",
-    "spec": "/tmp/d-1161123-24959-pogn13.l5qhg833di/package.tgz",
+    "rawSpec": "/tmp/d-117119-4677-sj5041/package.tgz",
+    "spec": "/tmp/d-117119-4677-sj5041/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-1161123-24959-pogn13.l5qhg833di/package.tgz",
-  "_shasum": "733136d7d5881ba59c9c138569ebb6f06fa07d47",
+  "_resolved": "file:../d-117119-4677-sj5041/package.tgz",
+  "_shasum": "11e303ddfd5ff0657a5221ced77ad75921e00839",
   "_shrinkwrap": null,
-  "_spec": "/tmp/d-1161123-24959-pogn13.l5qhg833di/package.tgz",
-  "_where": "/tmp/apm-install-dir-1161123-24959-1by2t82.j5750qw7b9",
+  "_spec": "/tmp/d-117119-4677-sj5041/package.tgz",
+  "_where": "/tmp/apm-install-dir-117119-4677-do3yew",
   "bugs": {
     "url": "https://github.com/subesokun/atom-tree-view-git-status/issues"
   },
@@ -65,135 +66,5 @@
     "type": "git",
     "url": "git+https://github.com/subesokun/atom-tree-view-git-status.git"
   },
-  "version": "1.3.0",
-  "_atomModuleCache": {
-    "version": 1,
-    "dependencies": [
-      {
-        "name": "async",
-        "version": "0.2.10",
-        "path": "node_modules/async/lib/async.js"
-      },
-      {
-        "name": "fs-plus",
-        "version": "2.9.3",
-        "path": "node_modules/fs-plus/lib/fs-plus.js"
-      },
-      {
-        "name": "mkdirp",
-        "version": "0.3.5",
-        "path": "node_modules/mkdirp/index.js"
-      },
-      {
-        "name": "os-tmpdir",
-        "version": "1.0.2",
-        "path": "node_modules/os-tmpdir/index.js"
-      },
-      {
-        "name": "rimraf",
-        "version": "2.2.8",
-        "path": "node_modules/rimraf/rimraf.js"
-      },
-      {
-        "name": "temp",
-        "version": "0.8.3",
-        "path": "node_modules/temp/lib/temp.js"
-      },
-      {
-        "name": "underscore",
-        "version": "1.6.0",
-        "path": "node_modules/underscore/underscore.js"
-      },
-      {
-        "name": "underscore-plus",
-        "version": "1.6.6",
-        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
-      }
-    ],
-    "extensions": {
-      ".coffee": [
-        "lib/gitrepositoryasync.coffee",
-        "lib/main.coffee",
-        "lib/repositories.coffee",
-        "lib/treeviewui.coffee",
-        "lib/utils.coffee"
-      ],
-      ".json": [
-        "node_modules/async/component.json",
-        "node_modules/async/package.json",
-        "node_modules/fs-plus/package.json",
-        "node_modules/mkdirp/package.json",
-        "node_modules/os-tmpdir/package.json",
-        "node_modules/rimraf/package.json",
-        "node_modules/temp/package.json",
-        "node_modules/underscore/package.json",
-        "node_modules/underscore-plus/package.json",
-        "package.json"
-      ],
-      ".js": [
-        "node_modules/async/lib/async.js",
-        "node_modules/fs-plus/lib/fs-plus.js",
-        "node_modules/mkdirp/examples/pow.js",
-        "node_modules/mkdirp/index.js",
-        "node_modules/os-tmpdir/index.js",
-        "node_modules/rimraf/bin.js",
-        "node_modules/rimraf/rimraf.js",
-        "node_modules/temp/examples/grepcount.js",
-        "node_modules/temp/examples/pdfcreator.js",
-        "node_modules/temp/lib/temp.js",
-        "node_modules/temp/no_cleanup.js",
-        "node_modules/temp/no_cleanup_on_exit.js",
-        "node_modules/temp/no_cleanup_on_exit.spec.js",
-        "node_modules/underscore/underscore-min.js",
-        "node_modules/underscore/underscore.js",
-        "node_modules/underscore-plus/lib/underscore-plus.js"
-      ]
-    },
-    "folders": [
-      {
-        "paths": [
-          "lib",
-          "",
-          "spec"
-        ],
-        "dependencies": {
-          "fs-plus": "^2.9.1",
-          "temp": "^0.8.3"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/fs-plus/lib",
-          "node_modules/fs-plus"
-        ],
-        "dependencies": {
-          "async": "~0.2.9",
-          "mkdirp": "~0.3.5",
-          "rimraf": "~2.2.2",
-          "underscore-plus": "1.x"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/temp/examples",
-          "node_modules/temp/lib",
-          "node_modules/temp",
-          "node_modules/temp/test"
-        ],
-        "dependencies": {
-          "os-tmpdir": "^1.0.0",
-          "rimraf": "~2.2.6"
-        }
-      },
-      {
-        "paths": [
-          "node_modules/underscore-plus/lib",
-          "node_modules/underscore-plus"
-        ],
-        "dependencies": {
-          "underscore": "~1.6.0"
-        }
-      }
-    ]
-  }
+  "version": "1.3.1"
 }

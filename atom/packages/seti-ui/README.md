@@ -10,7 +10,7 @@ This is the latest version of the Seti UI theme. It's a dark interface theme cra
 
 ##### **Please Note:** This is the Seti interface theme for [Atom](http://atom.io) only
 
-This is for the _interface_ of the Atom editor. I also have [Seti Syntax](https://atom.io/themes/seti-syntax) for theming the _code view_ in Atom.
+This is for the _interface_ of the Atom editor. I also have [Seti Syntax](https://atom.io/themes/seti-syntax) for theming the _code view_ in Atom. In addition, there is a new [Seti theme](https://www.npmjs.com/package/seti-hyper) for [Hyper](https://hyper.is/).
 
 If these are not the droids you're looking for, may I point you in the drection of these great ports:
 
@@ -91,7 +91,7 @@ Anyone is welcome to contribute to the development of this theme. If can be a lo
 ### 1. Fork
 If you're keen to contribute, start by [forking](https://github.com/jesseweed/seti-ui/tree/1.0-beta#fork-destination-box) the repo and cloning it to your computer.
 
-**Note:** To use the development version, you must first install the production version (`apm uninstall seti-ui`), then and run the following commands:
+**Note:** To use the development version, you must first uninstall the production version (`apm uninstall seti-ui`), then and run the following commands:
 
 ```bash
 # To install the local version as an Atom Theme

@@ -3,7 +3,6 @@
 git                    = require './git'
 configurations         = require './config'
 contextMenu            = require './context-menu'
-analytics              = require './analytics'
 OutputViewManager      = require './output-view-manager'
 GitPaletteView         = require './views/git-palette-view'
 GitAddContext          = require './models/context/git-add-context'
@@ -19,6 +18,10 @@ GitCherryPick          = require './models/git-cherry-pick'
 GitCommit              = require './models/git-commit'
 GitCommitAmend         = require './models/git-commit-amend'
 GitDiff                = require './models/git-diff'
+GitDiffBranches        = require './models/git-diff-branches'
+GitDiffBranchesContext = require './models/context/git-diff-branches-context'
+GitDiffBranchFiles     = require './models/git-diff-branch-files'
+GitDiffBranchFilesContext     = require './models/context/git-diff-branch-files-context'
 GitDifftool            = require './models/git-difftool'
 GitDifftoolContext     = require './models/context/git-difftool-context'
 GitDiffAll             = require './models/git-diff-all'
@@ -79,8 +82,15 @@ setDiffGrammar = ->
     grammar.packageName = 'git-plus'
     atom.grammars.addGrammar grammar
 
+getWorkspaceRepos = -> atom.project.getRepositories().filter (r) -> r?
+
+onPathsChanged = (gp) ->
+  gp.deactivate()
+  gp.activate()
+  gp.consumeStatusBar(gp.statusBar) if gp.statusBar
+
 module.exports =
-  config: configurations()
+  config: configurations
 
   subscriptions: null
 
@@ -89,11 +99,13 @@ module.exports =
   activate: (state) ->
     setDiffGrammar()
     @subscriptions = new CompositeDisposable
-    repos = atom.project.getRepositories().filter (r) -> r?
-    if repos.length is 0
-      atom.project.onDidChangePaths (paths) => @activate()
+    repos = getWorkspaceRepos()
+    if atom.project.getDirectories().length is 0
+      atom.project.onDidChangePaths (paths) => onPathsChanged(this)
+    if repos.length is 0 and atom.project.getDirectories().length > 0
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:init', => GitInit().then(@activate)
-    else
+    if repos.length > 0
+      atom.project.onDidChangePaths (paths) => onPathsChanged(this)
       contextMenu()
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:menu', -> new GitPaletteView()
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:add', -> git.getRepo().then((repo) -> git.add(repo, file: currentFile(repo)))
@@ -116,6 +128,9 @@ module.exports =
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:delete-remote-branch', -> git.getRepo().then((repo) -> GitDeleteRemoteBranch(repo))
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:cherry-pick', -> git.getRepo().then((repo) -> GitCherryPick(repo))
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:diff', -> git.getRepo().then((repo) -> GitDiff(repo, file: currentFile(repo)))
+      if atom.config.get('git-plus.experimental.diffBranches')
+        @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:diff-branches', -> git.getRepo().then((repo) -> GitDiffBranches(repo))
+        @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:diff-branch-files', -> git.getRepo().then((repo) -> GitDiffBranchFiles(repo))
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:difftool', -> git.getRepo().then((repo) -> GitDifftool(repo, file: currentFile(repo)))
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:diff-all', -> git.getRepo().then((repo) -> GitDiffAll(repo))
       @subscriptions.add atom.commands.add 'atom-workspace', 'git-plus:fetch', -> git.getRepo().then((repo) -> GitFetch(repo))
@@ -147,6 +162,8 @@ module.exports =
       @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:add-and-commit', -> GitAddAndCommitContext()
       @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:checkout-file', -> GitCheckoutFileContext()
       @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:diff', -> GitDiffContext()
+      @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:diff-branches', GitDiffBranchesContext
+      @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:diff-branch-files', GitDiffBranchFilesContext
       @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:difftool', -> GitDifftoolContext()
       @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:pull', -> GitPullContext()
       @subscriptions.add atom.commands.add '.tree-view', 'git-plus-context:push', -> GitPushContext()
@@ -162,27 +179,25 @@ module.exports =
       @subscriptions.add atom.config.onDidChange 'git-plus.experimental.stageFilesBeta', =>
         @subscriptions.dispose()
         @activate()
-      analytics() if atom.config.get("git-plus.general.analytics")
-
 
   deactivate: ->
     @subscriptions.dispose()
     @statusBarTile?.destroy()
-    delete @statusBarTile
-
-  consumeStatusBar: (statusBar) ->
-    @setupBranchesMenuToggle statusBar
-    if atom.config.get 'git-plus.general.enableStatusBarIcon'
-      @setupOutputViewToggle statusBar
 
   consumeAutosave: ({dontSaveIf}) ->
     dontSaveIf (paneItem) -> paneItem.getPath().includes 'COMMIT_EDITMSG'
+
+  consumeStatusBar: (@statusBar) ->
+    if getWorkspaceRepos().length > 0
+      @setupBranchesMenuToggle @statusBar
+      if atom.config.get 'git-plus.general.enableStatusBarIcon'
+        @setupOutputViewToggle @statusBar
 
   setupOutputViewToggle: (statusBar) ->
     div = document.createElement 'div'
     div.classList.add 'inline-block'
     icon = document.createElement 'span'
-    icon.classList.add 'icon', 'icon-pin'
+    icon.textContent = 'git+'
     link = document.createElement 'a'
     link.appendChild icon
     link.onclick = (e) -> OutputViewManager.getView().toggle()

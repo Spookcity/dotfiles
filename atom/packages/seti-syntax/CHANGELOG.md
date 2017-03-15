@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.1
+- Fix deprecated selectors
+- Add support for Ink syntax
+- Update Markdown syntax
+- Update Jade syntax
+
+## 1.1.0
+- Skipped due to apm `Git tag not found` error.
+
 ## 1.0.1
 - Fix "path not defined" bug
 
