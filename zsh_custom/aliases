@@ -9,7 +9,7 @@ alias y='yaourt'
 alias virtual='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env'
 
 # android stuffs
-alias nougat='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env && export JAVA_HOME=/usr/lib/jvm/java-8-jdk/jre/ && export USE_NINJA=false && export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4096m" && ./prebuilts/sdk/tools/jack-admin start-server'
+alias nougat='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env && export JAVA_HOME=/usr/lib/jvm/java-8-jdk/jre/ && export USE_NINJA=false && export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6144m" && ./prebuilts/sdk/tools/jack-admin start-server'
 alias log='adb logcat -d > logcat.txt'
 alias device='adb devices'
 

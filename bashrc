@@ -14,7 +14,7 @@ export PATH=${PATH}:/opt/android-sdk
 export PATH=${PATH}:/opt/android-sdk/platform-tools
 
 # Android Toolchain Path
-#export ARCH=arm
+export ARCH=arm
 #export CROSS_COMPILE=/opt/toolchains/arm-linux-androideabi-6.1-linaro/bin
 export CC=${CROSS_COMPILE}-gcc
 export CXX=${CROSS_COMPILE}-g++

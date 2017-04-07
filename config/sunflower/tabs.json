@@ -5,7 +5,7 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/home/rick", 
+                "path": "/home/rick/.config/openbox", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
@@ -17,7 +17,7 @@
             {
                 "class": "FileList", 
                 "lock": null, 
-                "path": "/mnt/Ricks_Stuff", 
+                "path": "/usr/share/applications", 
                 "sort_ascending": true, 
                 "sort_column": 0
             }
