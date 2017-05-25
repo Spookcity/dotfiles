@@ -91,6 +91,7 @@
     position: absolute;
     top: 0.4em;
     margin-right: 0.4em;
+    // margin-right: 2.4em;
   }
 
   .left-username {
@@ -98,6 +99,50 @@
   }
 
   .right-username {
+    right: 0;
+  }
+
+  .history {
+    position: absolute;
+    top: 0.4em;
+    cursor: default;
+    z-index: 1;
+    // margin-right: 0.4em;
+  }
+
+  .history:hover {
+    color: @text-color-highlight;
+  }
+
+  .left-history {
+    right: 50%;
+  }
+
+  .right-history {
+    right: 0;
+  }
+
+  .history-panel {
+    position: absolute;
+    bottom: 100%;
+    padding-right: 1em;
+  }
+
+  .history-list {
+    margin: 0;
+    overflow: auto !important;
+  }
+
+  .history-list-item:hover {
+    color: @text-color-selected;
+    background-color: @background-color-selected;
+  }
+
+  .left-history-panel {
+    right: 50%;
+  }
+
+  .right-history-panel {
     right: 0;
   }
 
@@ -165,6 +210,12 @@
 
   #name-header {
     width: 65%;
+  }
+
+  .sort-icon::before {
+    margin: 0;
+    font-size: smaller;
+    max-height: 1em;
   }
 
   #extension-header {
@@ -270,6 +321,13 @@
   }
 
   .password {
+    border-width: 1px;
+    border-style: solid;
+    border-color: @input-border-color;
+  }
+
+  .password-editor {
+    margin: 0px !important;
     -webkit-filter: blur(5px);
     filter: blur(5px);
     letter-spacing: 5px;

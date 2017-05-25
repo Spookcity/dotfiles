@@ -1,3 +1,11 @@
+## 0.9.0 - 1 May 2017
+- Added sorting by column.
+- Added copying of file paths and file names to clipboard.
+- Added ability to open a file from the directory editor.
+
+## 0.8.8 - 19 March 2017
+- Improved FTP and SFTP connection handling.
+
 ## 0.8.7 - 18 February 2017
 - Added guard to handle files that do not exist anymore.
 

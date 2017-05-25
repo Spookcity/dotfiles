@@ -11,22 +11,22 @@ Utils = require '../../utils'
 module.exports =
 class SFTPFileSystem extends VFileSystem
 
-  constructor: (@server, @config) ->
-    super(@server.getMain());
+  constructor: (main, @server, @config) ->
+    super(main);
     @session = null;
     @client = null;
 
     if !@config.passwordDecrypted
-      if @config.loginWithPassword
+      if @config.password? and @config.password.length > 0
         @config.password = Utils.decrypt(@config.password, @getDescription());
-      else
+      if @config.passphrase? and @config.passphrase.length > 0
         @config.passphrase = Utils.decrypt(@config.passphrase, @getDescription());
       @config.passwordDecrypted = true;
 
     @clientConfig = @getClientConfig();
 
   clone: ->
-    cloneFS = new SFTPFileSystem(@server, @config);
+    cloneFS = new SFTPFileSystem(@getMain(), @server, @config);
     cloneFS.clientConfig = @clientConfig;
     return cloneFS;
 
@@ -65,9 +65,14 @@ class SFTPFileSystem extends VFileSystem
     result.username = @config.username;
     result.password = @config.password;
     result.passphrase = @config.passphrase;
-    result.privateKey = @getPrivateKey(@config.privateKeyPath);
     result.tryKeyboard = true;
     result.keepaliveInterval = 60000;
+
+    if !@config.loginWithPassword
+      try
+        result.privateKey = @getPrivateKey(@config.privateKeyPath);
+      catch err
+        Utils.showErrorWarning("Error reading private key", null, null, err, true);
 
     return result;
 
@@ -89,9 +94,9 @@ class SFTPFileSystem extends VFileSystem
       result[key] = val;
 
     if @config.storePassword
-      if @config.loginWithPassword
+      if @config.password? and @config.password.length > 0
         result.password = Utils.encrypt(result.password, @getDescription());
-      else if @config.usePassphrase
+      if @config.passphrase? and @config.passphrase.length > 0
         result.passphrase = Utils.encrypt(result.passphrase, @getDescription());
     else
       delete result.password;

@@ -3,7 +3,7 @@ fsp = require 'fs-plus'
 SSH2 = require 'ssh2'
 PathUtil = require('path')
 Utils = require '../utils'
-FTPFileSystem = require '../fs/ftp/ftp-filesystem'
+SFTPFileSystem = require '../fs/ftp/sftp-filesystem'
 {View, TextEditorView} = require 'atom-space-pen-views'
 
 module.exports =
@@ -40,13 +40,19 @@ class SFTPDialog extends View
             @td =>
               @subview "usernameEditor", new TextEditorView(mini: true)
           @tr =>
+            @td "Password", {class: "text-highlight", style: "width:40%"}
+            @td =>
+              @div {class: "password"}, =>
+                @subview "passwordEditor", new TextEditorView(mini: true)
+              @div "Leave empty to prompt for password", {class:"encrypted"}
+          @tr =>
             @td =>
               @input {type: "radio", outlet: "loginWithPasswordCheckBox"}
               @span "Login with password", {class: "text-highlight", style: "margin-left:5px"}
           # @tr =>
           #   @td "Password", {class: "text-highlight indent", style: "width:40%"}
-            @td {class: "password"}, =>
-              @subview "passwordEditor", new TextEditorView(mini: true)
+            # @td {class: "password"}, =>
+              # @subview "passwordEditor", new TextEditorView(mini: true)
           @tr =>
             @td =>
               @input {type: "radio", outlet: "loginWithPrivateKeyCheckBox"}
@@ -59,8 +65,9 @@ class SFTPDialog extends View
             @td {class: "indent", style: "width:40%"}, =>
               @input {type: "checkbox", outlet: "usePassphraseCheckBox"}
               @span "Use passphrase", {class: "text-highlight", style: "margin-left:5px"}
-            @td {class: "password"}, =>
-              @subview "passphraseEditor", new TextEditorView(mini: true)
+            @td =>
+              @div {class: "password"}, =>
+                @subview "passphraseEditor", new TextEditorView(mini: true)
           @tr =>
             @td =>
               @input {type: "checkbox", outlet: "storeCheckBox"}
@@ -89,6 +96,9 @@ class SFTPDialog extends View
     @testButton.attr("tabindex", 10);
     @okButton.attr("tabindex", 11);
     @cancelButton.attr("tabindex", 12);
+
+    @passwordEditor.addClass("password-editor");
+    @passphraseEditor.addClass("password-editor");
 
     @spinner.hide();
     @portEditor.getModel().setText("22");
@@ -137,13 +147,22 @@ class SFTPDialog extends View
   # Populates the fields with an existing server's config. This is used
   # when editing a server.
   populateFields: (config) ->
+    password = config.password;
+    passphrase = config.passphrase;
+
+    if !password?
+      password = '';
+
+    if !passphrase?
+      passphrase = '';
+
     @serverEditor.getModel().setText(config.host);
     @portEditor.getModel().setText(config.port + "");
     @folderEditor.getModel().setText(config.folder);
     @usernameEditor.getModel().setText(config.username);
-    @passwordEditor.getModel().setText(config.password);
+    @passwordEditor.getModel().setText(password);
     @privateKeyPathEditor.getModel().setText(config.privateKeyPath);
-    @passphraseEditor.getModel().setText(config.passphrase);
+    @passphraseEditor.getModel().setText(passphrase);
     @storeCheckBox.prop("checked", config.storePassword);
     @usePassphraseCheckBox.prop("checked", config.usePassphrase);
     @loginWithPasswordCheckBox.prop("checked", config.loginWithPassword);
@@ -346,48 +365,25 @@ class SFTPDialog extends View
     if @hasError() or (@ssh2 != null)
       return;
 
-    @ssh2 = new SSH2();
-    config = @getSFTPConfig(true);
-    config.tryKeyboard = true;
+    config = @getSFTPConfig(false);
+    fs = new SFTPFileSystem(@parentDialog.getMain(), null, config);
 
-    @ssh2.on "ready", =>
-      @ssh2.sftp (err, sftp) =>
-        @spinner.hide();
+    fs.onError (err) =>
+      @parentDialog.attach();
 
-        if err?
-          if err.message?
-            @showMessage("Connection failed. "+err.message, 1);
-          else
-            @showMessage("Connection failed", 1);
-        else
-          @showMessage("Connection successful", 0);
-
-        @ssh2.end();
-        @ssh2 = null;
-
-    @ssh2.on "error", (err) =>
-      @spinner.hide();
-
-      if err.message?
-        @showMessage("Connection failed. "+err.message, 1);
+      if err.canceled
+        @showMessage("", 0);
       else
-        @showMessage("Connection failed", 1);
-
-      @ssh2.end();
-      @ssh2 = null;
-
-    @ssh2.on "keyboard-interactive", (name, instructions, instructionsLang, prompt, finish) =>
-      finish([config.password]);
-
-    @spinner.show();
-
-    try
-      @ssh2.connect(config);
-    catch err
-      @spinner.hide();
-
-      if err.message?
         @showMessage("Connection failed. "+err.message, 1);
 
-      @ssh2.end();
-      @ssh2 = null;
+      fs.disconnect();
+
+    fs.onConnected () =>
+      @parentDialog.attach();
+      @showMessage("Connection successful", 0);
+      fs.disconnect();
+
+    fs.onDisconnected () =>
+      @parentDialog.attach();
+
+    fs.connect();

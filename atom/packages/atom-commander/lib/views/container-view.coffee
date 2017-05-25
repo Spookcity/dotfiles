@@ -11,6 +11,8 @@ VFile = require '../fs/vfile'
 VDirectory = require '../fs/vdirectory'
 VSymLink = require '../fs/vsymlink'
 Utils = require '../utils'
+ListDirectoryView = require './list-directory-view';
+# HistoryView = require './history-view';
 
 module.exports =
 class ContainerView extends View
@@ -27,32 +29,57 @@ class ContainerView extends View
     @scheduler = new Scheduler(1);
     @disposables = new CompositeDisposable();
     @lastLocalPath = null;
+    @sortBy = null;
+    @sortAscending = true;
 
     @directoryEditor.addClass('directory-editor');
 
+    # @disposables.add(atom.tooltips.add(@history, {title: 'History'}));
+
     if @left
       @username.addClass('left-username');
+      # @history.addClass('left-history');
     else
       @username.addClass('right-username');
+      # @history.addClass('right-history');
 
     @username.hide();
 
     @directoryEditor.focusout =>
       @directoryEditorCancel();
 
-    @disposables.add atom.commands.add @directoryEditor.element,
+    @disposables.add atom.commands.add @directoryEditor[0],
       'core:confirm': => @directoryEditorConfirm()
       'core:cancel': => @directoryEditorCancel()
+
+    @disposables.add atom.commands.add @containerView[0],
+      'core:move-up': @moveUp.bind(this)
+      'core:move-down': @moveDown.bind(this)
+      'core:page-up': => @pageUp()
+      'core:page-down': => @pageDown()
+      'core:move-to-top': => @highlightFirstItem()
+      'core:move-to-bottom': => @highlightLastItem()
+      'core:cancel': => @escapePressed();
+      'atom-commander:open-highlighted-item': => @openHighlightedItem(false)
+      'atom-commander:open-highlighted-item-native': => @openHighlightedItem(true)
+      'atom-commander:open-parent-folder': => @backspacePressed();
+      'atom-commander:highlight-first-item': => @highlightFirstItem()
+      'atom-commander:highlight-last-item': => @highlightLastItem()
+      'atom-commander:page-up': => @pageUp()
+      'atom-commander:page-down': => @pageDown()
+      'atom-commander:select-item': => @spacePressed()
 
   @content: ->
     @div {tabindex: -1}, =>
       @div =>
         @span '', {class: 'highlight-info username', outlet: 'username'}
+        # @span '', {class: 'history icon icon-clock', outlet: 'history', click: 'toggleHistory' }
         @subview 'directoryEditor', new TextEditorView(mini: true)
-      @div {class: 'atom-commander-container-view'}, =>
+      @div {class: 'atom-commander-container-view', outlet: 'containerView'}, =>
         @container();
       @div {class: 'search-panel', outlet: 'searchPanel'}
       @div "Loading...", {class: 'loading-panel', outlet: 'spinnerPanel'}
+      # @subview 'historyView', new HistoryView()
 
   isLeft: ->
     return @left;
@@ -86,10 +113,17 @@ class ContainerView extends View
     @searchPanel.hide();
     @spinnerPanel.hide();
 
-    if (@left)
+    # @historyView.setContainerView(@);
+
+    if @left
       @addClass("left-container");
 
     @directoryEditor.addClass("directory-editor");
+    @directoryEditor.on 'focus', (e) =>
+      @mainView.focusedView = @;
+      # @historyView.close();
+      @mainView.getOtherView(@).refreshHighlight();
+      @refreshHighlight();
 
     @on 'dblclick', '.item', (e) =>
       @requestFocus();
@@ -102,22 +136,9 @@ class ContainerView extends View
 
     @keypress (e) => @handleKeyPress(e);
 
-    atom.commands.add @element,
-     'core:move-up': @moveUp.bind(this)
-     'core:move-down': @moveDown.bind(this)
-     'core:page-up': => @pageUp()
-     'core:page-down': => @pageDown()
-     'core:move-to-top': => @highlightFirstItem()
-     'core:move-to-bottom': => @highlightLastItem()
-     'core:cancel': => @escapePressed();
-     'atom-commander:open-highlighted-item': => @openHighlightedItem(false)
-     'atom-commander:open-highlighted-item-native': => @openHighlightedItem(true)
-     'atom-commander:open-parent-folder': => @backspacePressed();
-     'atom-commander:highlight-first-item': => @highlightFirstItem()
-     'atom-commander:highlight-last-item': => @highlightLastItem()
-     'atom-commander:page-up': => @pageUp()
-     'atom-commander:page-down': => @pageDown()
-     'atom-commander:select-item': => @spacePressed()
+  toggleHistory: (e) ->
+    e.stopPropagation();
+    # @historyView.toggle();
 
   storeScrollTop: ->
     @scrollTop = @getScrollTop();
@@ -168,7 +189,7 @@ class ContainerView extends View
       @selectItem();
 
   handleKeyPress: (e) ->
-    if !@hasFocus()
+    if !@hasContainerFocus()
       return;
 
     # When Alt is down the menu is being shown.
@@ -288,8 +309,11 @@ class ContainerView extends View
     atom.workspace.getActivePane().activate()
     @refreshHighlight();
 
-  # Override and return whether view has focus.
   hasFocus: ->
+    return @hasContainerFocus() or @directoryEditor.hasFocus();
+
+  # Override and return whether the item container view has focus.
+  hasContainerFocus: ->
 
   # Override to remove all item views.
   clearItemViews: ->
@@ -315,6 +339,9 @@ class ContainerView extends View
 
   # Override to set the height of the content.
   setContentHeight: (contentHeight) ->
+
+  # Override to refresh the sort icons.
+  refreshSortIcons: (sortBy, ascending) ->
 
   moveUp: (event) ->
     if @highlightedIndex != null
@@ -510,7 +537,7 @@ class ContainerView extends View
 
       if itemView?
         @itemViews.push(itemView);
-        @addItemView(itemView);
+        # @addItemView(itemView);
         index++;
 
     if @itemViews.length > 0
@@ -518,6 +545,7 @@ class ContainerView extends View
 
     @restoreSnapShot(snapShot);
     @enableAutoRefresh();
+    @sort(true);
     callback?(null);
 
   disableAutoRefresh: ->
@@ -580,11 +608,22 @@ class ContainerView extends View
     if snapShot.selectedNames?
       @selectNames(snapShot.selectedNames);
 
+  setDirectory: (path) ->
+    if !fs.isDirectorySync(path)
+      return;
+
+    @directoryEditor.setText(path);
+    @directoryEditorConfirm();
+
   directoryEditorConfirm: ->
     uri = @directoryEditor.getText().trim();
 
     if fs.isDirectorySync(uri)
-      @openDirectory(@localFileSystem.getDirectory(uri));
+      @openDirectory(@localFileSystem.getDirectory(uri), null, () => @focus());
+      return;
+    else if fs.isFileSync(uri)
+      file = @localFileSystem.getFile(uri);
+      @mainView.main.actions.goFile(file, true);
       return;
 
     fileSystem = @directory.getFileSystem();
@@ -595,7 +634,7 @@ class ContainerView extends View
     path = fileSystem.getPathFromURI(uri);
 
     if path != null
-      @openDirectory(fileSystem.getDirectory(path));
+      @openDirectory(fileSystem.getDirectory(path), null, () => @focus());
 
     # # TODO : The file system may change.
     # directory = @directory.fileSystem.getDirectory(@directoryEditor.getText().trim());
@@ -688,10 +727,80 @@ class ContainerView extends View
 
   setExtensionColumnVisible: (visible) ->
 
+  setSortBy: (sortBy) ->
+    if @sortBy == sortBy
+      if sortBy == null
+        return;
+      @sortAscending = !@sortAscending
+    else
+      @sortBy = sortBy;
+      @sortAscending = true;
+
+    if sortBy == null
+      @refreshDirectory();
+    else
+      @sort(true);
+
+  sort: (scrollToHighlight=false) ->
+    if @itemViews.length == 0
+      return;
+
+    prevHighlightIndex = @highlightedIndex;
+    @highlightIndex(null, false);
+    @clearItemViews();
+
+    # Separate files and directories.
+    parentItemView = null;
+    dirItemViews = [];
+    fileItemViews = [];
+
+    for itemView in @itemViews
+      item = itemView.getItem();
+
+      if item.isFile()
+        fileItemViews.push(itemView);
+      else if item.isDirectory()
+        if itemView.isForParentDirectory()
+          parentItemView = itemView;
+        else
+          dirItemViews.push(itemView);
+
+    Utils.sortItemViews(true, dirItemViews, @sortBy, @sortAscending);
+    Utils.sortItemViews(false, fileItemViews, @sortBy, @sortAscending);
+
+    @itemViews = [];
+
+    if parentItemView?
+      @itemViews.push(parentItemView);
+
+    @itemViews = @itemViews.concat(dirItemViews);
+    @itemViews = @itemViews.concat(fileItemViews);
+
+    index = 0;
+    newHighlightIndex = null;
+
+    for itemView in @itemViews
+      if !newHighlightIndex? and itemView.index == prevHighlightIndex
+        newHighlightIndex = index;
+      itemView.index = index++;
+      @addItemView(itemView);
+
+    @highlightIndex(newHighlightIndex, scrollToHighlight);
+    @refreshSortIcons(@sortBy, @sortAscending);
+
   deserialize: (path, state) ->
     if !state?
       @openDirectory(@getInitialDirectory(path));
       return;
+
+    @sortBy = state.sortBy;
+    @sortAscending = state.sortAscending;
+
+    if !@sortBy?
+      @sortBy = null;
+
+    if !@sortAscending?
+      @sortAscending = true;
 
     snapShot = {}
     snapShot.name = state.highlight;
@@ -702,6 +811,8 @@ class ContainerView extends View
 
   serialize: ->
     state = {}
+    state.sortBy = @sortBy;
+    state.sortAscending = @sortAscending;
 
     if @directory.isLocal()
       state.path = @getPath();

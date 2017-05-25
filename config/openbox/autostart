@@ -17,7 +17,7 @@ sh ~/.fehbg &
 tint2 -c /home/rick/.config/tint2/grey_tint2rc &
 mpd &
 # cadence --minimized &
-paramano &
+# paramano &
 alsa-tray &
 conky -c ~/.conky/conkyrc2 &
 # terminator -H -b  &
