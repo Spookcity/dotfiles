@@ -243,6 +243,7 @@ systemd-sysvcompat 232-8
 tar 1.29-2
 terminator 1.90-1
 texinfo 6.3-1
+tig 2.2.2
 tint2 0.12.12-1
 tk 8.6.6-1
 tmux 2.3-1

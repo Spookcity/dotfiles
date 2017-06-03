@@ -18,7 +18,7 @@ set datetimeformat {%Y-%m-%d %H:%M:%S}
 set limitdiffs 1
 set uicolor #acb4b8
 set want_ttk 1
-set bgcolor #090909
+set bgcolor #111113
 set fgcolor #0094dc
 set uifgcolor black
 set uifgdisabledcolor #999
@@ -57,6 +57,6 @@ set geometry(topwidth) 1598
 set geometry(topheight) 238
 set geometry(pwsash0) "762 1"
 set geometry(pwsash1) "1247 1"
-set geometry(botwidth) 1127
+set geometry(botwidth) 1089
 set geometry(botheight) 573
 set permviews {}

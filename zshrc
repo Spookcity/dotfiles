@@ -81,9 +81,9 @@ source /usr/bin/virtualenvwrapper.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Compilation flags
-export ARCHFLAGS="-arch x86_64"
-export CC=${CROSS_COMPILE}/usr/bin/gcc
-export CXX=${CROSS_COMPILE}/usr/bin/g++
+#export ARCHFLAGS="-arch x86_64"
+#export CC=${CROSS_COMPILE}/usr/bin/gcc
+#export CXX=${CROSS_COMPILE}/usr/bin/g++
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/id_rsa"

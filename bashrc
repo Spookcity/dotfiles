@@ -10,14 +10,14 @@ export PATH=:~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/lib:/sbin:/bin
 
 # Android tools
 export ANDROID_HOME=/opt/android-sdk
-export PATH=${PATH}:/opt/android-sdk
+export PATH=${PATH}:/opt/android-sdk/tools
 export PATH=${PATH}:/opt/android-sdk/platform-tools
 
 # Android Toolchain Path
-export ARCH=arm
+#export ARCH=arm
 #export CROSS_COMPILE=/opt/toolchains/arm-linux-androideabi-6.1-linaro/bin
-export CC=${CROSS_COMPILE}-gcc
-export CXX=${CROSS_COMPILE}-g++
+#export CC=${CROSS_COMPILE}-gcc
+#export CXX=${CROSS_COMPILE}-g++
 #export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6144m"
 
 export USE_CCACHE=1

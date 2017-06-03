@@ -36,7 +36,6 @@
       "exception-reporting"
     ]
     openEmptyEditorOnStart: false
-    restorePreviousWindowsOnStart: false
     telemetryConsent: "no"
     themes: [
       "atom-material-ui"
