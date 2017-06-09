@@ -298,7 +298,7 @@
       <action name="ToggleDecorations">
       </action>
     </keybind>
-    <keybind key="C-A-2">
+    <keybind key="C-A-0">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -415,9 +415,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>gitkraken</name>
+          <name>git-cola</name>
         </startupnotify>
-        <command>gitkraken</command>
+        <command>git-cola</command>
       </action>
     </keybind>
     <keybind key="W-m">

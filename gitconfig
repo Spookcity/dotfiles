@@ -2,24 +2,28 @@
 	email = spookcity138@gmail.com
 	name = Rick M.
 [gui]
-	editor = env PYTHON=python2 XMODIFIERS= /usr/share/atom-beta/atom
+	editor = env PYTHON=python2 /usr/share/atom/atom
 	fontui = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	spellingdictionary = en_US
 	displayuntracked = true
-	historybrowser = gitk
+	historybrowser = git-dag
 	recentrepo =
 	warndetachedcommit = true
 
 [difftool]
 	prompt = false
 [merge]
-	tool = xxdiff
+	tool = meld
 	conflictstyle = diff3
 [credential]
 	helper = store --file /home/rick/.config/git/credentials
 
 [diff]
-	tool = xxdiff %F
+	tool = meld %F
 [color]
 	ui = auto
+[cola]
+	spellcheck = false
+	fontdiff = Inconsolata-g,9,-1,5,50,0,0,0,0,0
+	blameviewer = git gui blame
