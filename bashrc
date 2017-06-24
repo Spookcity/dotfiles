@@ -7,6 +7,7 @@
 export EDITOR=vim
 export PATH=:~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/lib:/sbin:/bin
 #JAVA_HOME=/usr/lib/jvm/java-7-jdk/jre
+export QT_API=pyqt4
 
 # Android tools
 export ANDROID_HOME=/opt/android-sdk

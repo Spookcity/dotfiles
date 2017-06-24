@@ -44,7 +44,7 @@
         "selection_color": "#bfe909781f22", 
         "selection_indicator": "\u25c8", 
         "show_expanders": false, 
-        "show_hidden": true, 
+        "show_hidden": false, 
         "single_click_navigation": true, 
         "time_format": "%H:%M %d-%m-%y"
     }, 
@@ -68,7 +68,8 @@
     }, 
     "plugins": [
         "file_list", 
-        "system_terminal"
+        "system_terminal", 
+        "find_file_extensions"
     ], 
     "show_command_bar": false, 
     "show_command_entry": false, 

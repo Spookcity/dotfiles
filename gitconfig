@@ -2,7 +2,7 @@
 	email = spookcity138@gmail.com
 	name = Rick M.
 [gui]
-	editor = env PYTHON=python2 /usr/share/atom/atom
+	editor = geany
 	fontui = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Inconsolata -size 12 -weight normal -slant roman -underline 0 -overstrike 0
 	spellingdictionary = en_US
@@ -25,5 +25,7 @@
 	ui = auto
 [cola]
 	spellcheck = false
-	fontdiff = Inconsolata-g,9,-1,5,50,0,0,0,0,0
+	fontdiff = Hack,10,-1,5,50,0,0,0,0,0
 	blameviewer = git gui blame
+	savewindowsettings = true
+	boldheaders = true

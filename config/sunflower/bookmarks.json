@@ -2,6 +2,10 @@
     "add_home": true, 
     "bookmarks": [
         {
+            "name": "Ricks Stuff", 
+            "uri": "/mnt/Ricks_Stuff"
+        }, 
+        {
             "name": "Root", 
             "uri": "/"
         }, 

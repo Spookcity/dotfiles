@@ -34,12 +34,13 @@
       "grammar-selector"
       "timecop"
       "exception-reporting"
+      "deprecation-cop"
     ]
     openEmptyEditorOnStart: false
     telemetryConsent: "no"
     themes: [
-      "atom-material-ui"
-      "atom-material-syntax"
+      "seti-ui"
+      "seti-syntax"
     ]
   editor:
     fontFamily: "Inconsolata Regular"

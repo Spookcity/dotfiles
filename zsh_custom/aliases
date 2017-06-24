@@ -13,14 +13,39 @@ alias nougat='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/
 alias log='adb logcat -d > logcat.txt'
 alias device='adb devices'
 
-# java stuffs
-alias java7='sudo archlinux-java set java-7-jdk'
-alias java8='sudo archlinux-java set java-8-jdk'
-alias ajs='archlinux-java status'
+# git stuffs
+alias g='git'
+alias gs='git status'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gbl='git blame -b -w'
+alias gbr='git branch --remote'
+alias gc='git checkout'
+alias gcl='git clone'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gd='git diff'
+alias gf='git fetch'
+alias gg='git gui citool'
+alias gk='\git-dag --all --branches'
+alias gl='git pull'
+alias glgga='git log --graph --decorate --all'
+alias glo='git log --oneline --decorate'
+alias gp='git push'
+alias gr='git remote'
+alias grh='git reset --hard'
+alias gra='git remote add'
+alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 
-# other stuffs
+alias tis='tig status'
+alias til='tig log'
+
+# common stuffs
+alias grep='grep --color'
+alias h='history'
 alias c='clear'
 alias q='exit'
+
 # alias make='/home/rick/bin/color.sh'
 alias mka='/home/rick/bin/color.sh'
 alias gconf='GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc make gconfig'

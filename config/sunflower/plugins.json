@@ -1,4 +1,13 @@
 {
+    "DefaultFindFiles": {
+        "patterns": [
+            "ccache*", 
+            "ccache", 
+            "*ccache", 
+            "*cpuidle", 
+            "cpuidle"
+        ]
+    }, 
     "FileList": {
         "columns": [
             "name"

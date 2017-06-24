@@ -33,6 +33,21 @@ apm install tree-view-git-status
 
 Via the user's custom Atom CSS stylesheet (Settings > Themes > "Edit Stylesheet") you can individually style the Tree View Git status labels as shown above. An example stylesheet can be found [here](https://gist.github.com/subesokun/04909f8ff45fbc28faad016559adc267).
 
+### Git Flow
+
+![Screenshot Git Flow](https://github.com/subesokun/atom-tree-view-git-status/blob/master/screenshot-gitflow.png?raw=true)
+
+This plugin supports Git Flow if you've configured your repository to use
+it. By default Octicons are used to indicate the various states of the flow process but you can also choose to just show the colorized branch name.
+
+**Note**: Git Flow "support" branches are not yet supported and they're only available in the [gitflow-avh](https://github.com/petervanderdoes/gitflow-avh) fork of Git Flow.
+
+#### Prerequisites
+
+In order to use this feature you've to [install Git Flow](https://github.com/petervanderdoes/gitflow-avh/wiki/Installation) and run `git flow init` on the repository you want to work on.
+
 ### License
 
 MIT
+
+[gitflow-wiki-faq]: https://github.com/nvie/gitflow/wiki/FAQ

@@ -69,7 +69,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Plugins
-plugins=(git z zsh-autosuggestions web-search zsh-syntax-highlighting)
+plugins=(z zsh-autosuggestions web-search zsh-syntax-highlighting)
 
 autoload -U compinit && compinit
 # Other
