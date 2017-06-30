@@ -79,7 +79,7 @@ function getRelevantItem() {
   done
 }
 
-# OS detection for the `os_icon` segment
+# OS detection
 case $(uname) in
     Darwin)
       OS='OSX'
@@ -100,6 +100,14 @@ case $(uname) in
     Linux)
       OS='Linux'
       OS_ICON=$(print_icon 'LINUX_ICON')
+
+      # Check if we're running on Android
+      case $(uname -o 2>/dev/null) in
+        Android)
+          OS='Android'
+          OS_ICON=$(print_icon 'ANDROID_ICON')
+          ;;
+      esac
       ;;
     SunOS)
       OS='Solaris'
@@ -204,5 +212,23 @@ function segmentShouldBeJoined() {
 # Given a directory path, truncate it according to the settings for
 # `truncate_from_right`
 function truncatePathFromRight() {
-  echo $1 | sed $SED_EXTENDED_REGEX_PARAMETER "s/([^/]{$POWERLEVEL9K_SHORTEN_DIR_LENGTH})[^/]+\//\1$POWERLEVEL9K_SHORTEN_DELIMITER\//g"
+  local delim_len=${#POWERLEVEL9K_SHORTEN_DELIMITER}
+  echo $1 | sed $SED_EXTENDED_REGEX_PARAMETER \
+ "s@(([^/]{$((POWERLEVEL9K_SHORTEN_DIR_LENGTH))})([^/]{$delim_len}))[^/]+/@\2$POWERLEVEL9K_SHORTEN_DELIMITER/@g"
+}
+
+# Search recursively in parent folders for given file.
+function upsearch () {
+  if [[ "$PWD" == "$HOME" || "$PWD" == "/" ]]; then
+    echo "$PWD"
+  elif test -e "$1"; then
+    pushd .. > /dev/null
+    upsearch "$1"
+    popd > /dev/null
+    echo "$PWD"
+  else
+    pushd .. > /dev/null
+    upsearch "$1"
+    popd > /dev/null
+  fi
 }

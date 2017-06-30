@@ -49,3 +49,6 @@ alias q='exit'
 # alias make='/home/rick/bin/color.sh'
 alias mka='/home/rick/bin/color.sh'
 alias gconf='GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc make gconfig'
+
+# random 
+alias weather='/home/rick/bin/weather.sh i'
