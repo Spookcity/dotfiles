@@ -21,8 +21,8 @@ export PATH=${PATH}:/opt/android-sdk/platform-tools
 #export CXX=${CROSS_COMPILE}-g++
 #export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx6144m"
 
-export USE_CCACHE=1
-export CCACHE_DIR=/mnt/Ricks_Stuff/.ccache
+#export USE_CCACHE=1
+#export CCACHE_DIR=/mnt/Ricks_Stuff/.ccache
 STAGING_RT_PRIORITY_BASE=15
 STAGING_RT_PRIORITY_SERVER=95
 source /usr/bin/virtualenvwrapper.sh
