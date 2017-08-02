@@ -10,7 +10,7 @@ let g:airline_section_b = '%{strftime("%a,%h %e ~ %I:%M")}'
 let g:airline_section_y = 'BN: %{bufnr("%")}'
 
 " enable syntax highlighting
-syntax enable
+syntax on
 
 
 " configure Vundle
@@ -25,6 +25,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
