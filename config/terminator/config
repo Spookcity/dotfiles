@@ -5,7 +5,6 @@
   title_hide_sizetext = True
   title_transmit_bg_color = "#4c4c4c"
   title_use_system_font = False
-[keybindings]
 [layouts]
   [[default]]
     [[[child1]]]

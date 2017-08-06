@@ -442,9 +442,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>atom</name>
+          <name>sublime</name>
         </startupnotify>
-        <command>env PYTHON=python2 /usr/share/atom/atom</command>
+        <command>subl3</command>
       </action>
     </keybind>
     <keybind key="W-b">
