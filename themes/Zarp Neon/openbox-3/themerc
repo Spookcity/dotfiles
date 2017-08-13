@@ -1,0 +1,98 @@
+!!! Zarp Rendition by j@mesrobertson.com
+
+
+!!! Menus
+
+!! Menu border
+menu.border.color:                          #090e14
+menu.border.width:                          1
+
+!! Menu background
+menu.items.bg:                              flat gradient vertical
+menu.items.bg.color:                        #1c242e
+menu.items.bg.colorTo:                      #090e14
+
+!! Menu text
+menu.items.text.color:                      #e0e0e0
+menu.items.justify:                         left
+menu.items.disabled.text.color:             #7b7b7b
+
+!! Menu Seperators
+menu.separator.color:                       #2e3a45
+menu.separator.width:                       1
+menu.separator.padding.height:              1
+menu.separator.padding.width:               5
+
+!! Menu headers
+menu.title.bg:                              flat gradient vertical
+menu.title.bg.color:                        #1c242e
+menu.title.bg.colorTo:                      #090e14
+menu.title.text.color:                      #e0e0e0
+menu.title.text.justify:                    center
+
+!! Selected menu item
+menu.items.active.bg:                       flat border
+menu.items.active.text.color:               #ffffff
+menu.items.active.bg.color:                 #000000
+menu.items.active.bg.border.color:          #96bde0
+
+!! Overlap
+menu.overlap: 0
+
+
+!!! Titlebars
+
+!! Titlebar
+window.*.title.bg:                          flat gradient vertical
+window.*.title.bg.color:                    #1c242e
+window.*.title.bg.colorTo:                  #090e14
+window.*.title.separator.color:             #090e14
+
+!! Titlebar text
+window.label.text.justify:                  center
+window.active.label.bg:                     parentrelative
+window.active.label.text.color:             #e0e0e0
+window.inactive.label.bg:                   parentrelative
+window.inactive.label.text.color:           #7b7b7b
+
+!! Window buttons
+window.*.button.*.bg:                       parentrelative
+window.active.button.*.image.color:         #e0e0e0
+window.inactive.button.*.image.color:       #7b7b7b
+! hover
+window.active.button.hover.bg:              flat border
+window.active.button.hover.bg.color:        #000000
+window.active.button.hover.image.color:     #ffffff
+window.active.button.hover.bg.border.color: #96bde0
+window.inactive.button.hover.bg:            flat border
+window.inactive.button.hover.bg.color:      #000000
+window.inactive.button.hover.image.color:   #ffffff
+window.inactive.button.hover.bg.border.color: #96bde0
+! pressed
+window.*.button.*.pressed.bg:               flat border
+window.active.button.pressed.bg.color:      #000000
+window.active.button.pressed.bg.border.color: #96bde0
+window.active.button.pressed.image.color:   #7b7b7b
+
+
+!! Borders
+window.active.border.color:                 #96bde0
+window.inactive.border.color:               #090e14
+border.width: 1
+padding.width: 2
+padding.height: 2
+window.handle.width: 0
+window.client.padding.width: 0
+window.client.padding.height: 0
+! only used if client padding has a value
+window.active.client.color:                #96bde0
+window.inactive.client.color:              #0c0c0c
+
+!! Font shadows
+menu.items.font:shadow=y:shadowtint=30
+!menu.items.font:shadow=n
+
+!! On-screen displays
+osd.bg: gradient vertical flat
+osd.bg.color:                               #1c242e
+osd.bg.colorTo:                             #090e14

@@ -44,7 +44,7 @@ echoerrnocolor() {
 	fi
 }
 
-echoerr() { 
+echoerr() {
 	if [ $# -gt 1 ]; then
 		color=$1
 		shift
@@ -175,7 +175,6 @@ done
 paths=('~/.profile'
 	'~/.bash_profile'
 	'~/.bashrc'
-	'~/.atom'
 	'~/.ncmpcpp'
 	'~/.redshiftgrc'
 	'~/.conky'
@@ -191,12 +190,10 @@ paths=('~/.profile'
 	'~/.themes'
 	'~/.dircolors'
 	'~/.gtkrc-2.0'
-	'~/.xprofile'
-	'~/.nanorc'
+	'~/.nano'
 	'~/.zshrc'
 	'~/bin'
 	'~/.mpd'
-	'~/.Xresources'
 	'~/.Xdefaults'
 	'~/.xinitrc'
 	'~/.config/fontconfig'
@@ -207,14 +204,14 @@ paths=('~/.profile'
 	'~/.config/lemonbar'
 	'~/.config/rofi'
 	'~/.config/neofetch'
-	'~/.config/geany'
 	'~/.config/htop'
+	'~/.config/codeblocks'
 	'~/.config/ranger'
 	'~/.config/sunflower'
 	'~/.config/compton.conf'
+	'~/.config/sublime-text-3'
+	'~/.config/termite'
 	'~/.config/paramano.conf'
-	'~/.config/gtk-2.0'
-	'~/.config/gtk-3.0'
 	'~/.config/i3'
 	'~/.config/rtile'
 	'~/.config/terminator'

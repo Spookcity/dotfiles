@@ -1,0 +1,624 @@
+atom*
+/config/git/credentials
+/config/neofetch/ascii/distro/alpine
+/config/neofetch/ascii/distro/antergos
+/config/neofetch/ascii/distro/arch
+/config/neofetch/ascii/distro/arch_small
+/config/neofetch/ascii/distro/bitrig
+/config/neofetch/ascii/distro/blag
+/config/neofetch/ascii/distro/bunsenlabs
+/config/neofetch/ascii/distro/centos
+/config/neofetch/ascii/distro/chakra
+/config/neofetch/ascii/distro/chapeau
+/config/neofetch/ascii/distro/chrome
+/config/neofetch/ascii/distro/crux
+/config/neofetch/ascii/distro/crux_small
+/config/neofetch/ascii/distro/debian
+/config/neofetch/ascii/distro/deepin
+/config/neofetch/ascii/distro/devuan
+/config/neofetch/ascii/distro/dragonflybsd
+/config/neofetch/ascii/distro/elementary
+/config/neofetch/ascii/distro/exherbo
+/config/neofetch/ascii/distro/fedora
+/config/neofetch/ascii/distro/freebsd
+/config/neofetch/ascii/distro/frugalware
+/config/neofetch/ascii/distro/funtoo
+/config/neofetch/ascii/distro/galliumos
+/config/neofetch/ascii/distro/gentoo
+/config/neofetch/ascii/distro/gentoo_small
+/config/neofetch/ascii/distro/gnewsense
+/config/neofetch/ascii/distro/guixsd
+/config/neofetch/ascii/distro/kali
+/config/neofetch/ascii/distro/kaos
+/config/neofetch/ascii/distro/kde
+/config/neofetch/ascii/distro/kogaion
+/config/neofetch/ascii/distro/kubuntu
+/config/neofetch/ascii/distro/lmde
+/config/neofetch/ascii/distro/lubuntu
+/config/neofetch/ascii/distro/mac
+/config/neofetch/ascii/distro/mageia
+/config/neofetch/ascii/distro/manjaro
+/config/neofetch/ascii/distro/mint
+/config/neofetch/ascii/distro/netbsd
+/config/neofetch/ascii/distro/nixos
+/config/neofetch/ascii/distro/openbsd
+/config/neofetch/ascii/distro/openbsd_small
+/config/neofetch/ascii/distro/openindiana
+/config/neofetch/ascii/distro/openmandriva
+/config/neofetch/ascii/distro/opensuse
+/config/neofetch/ascii/distro/openwrt
+/config/neofetch/ascii/distro/oracle
+/config/neofetch/ascii/distro/pacbsd
+/config/neofetch/ascii/distro/parabola
+/config/neofetch/ascii/distro/pclinuxos
+/config/neofetch/ascii/distro/peppermint
+/config/neofetch/ascii/distro/puppy
+/config/neofetch/ascii/distro/qubes
+/config/neofetch/ascii/distro/raspbian
+/config/neofetch/ascii/distro/redhat
+/config/neofetch/ascii/distro/rosa
+/config/neofetch/ascii/distro/sabayon
+/config/neofetch/ascii/distro/sailfishos
+/config/neofetch/ascii/distro/scientific
+/config/neofetch/ascii/distro/slackware
+/config/neofetch/ascii/distro/solus
+/config/neofetch/ascii/distro/sparky
+/config/neofetch/ascii/distro/steamos
+/config/neofetch/ascii/distro/tails
+/config/neofetch/ascii/distro/travis
+/config/neofetch/ascii/distro/trisquel
+/config/neofetch/ascii/distro/ubuntu
+/config/neofetch/ascii/distro/ubuntu-gnome
+/config/neofetch/ascii/distro/void
+/config/neofetch/ascii/distro/windows
+/config/neofetch/ascii/distro/windows10
+/config/neofetch/ascii/distro/xubuntu
+/config/neofetch/ascii/distro/zorin
+/config/ranger/colorschemes/__init__.py
+/config/ranger/colorschemes/__pycache__/__init__.cpython-35.opt-1.pyc
+/config/ranger/colorschemes/__pycache__/rangy.cpython-35.opt-1.pyc
+/config/ranger/colorschemes/__pycache__/ryuuko.cpython-35.opt-1.pyc
+/config/ranger/colorschemes/__pycache__/zenburn.cpython-35.opt-1.pyc
+/repoconfig/gnupg/pubring.kbx
+/repoconfig/gnupg/trustdb.gpg
+/repoconfig/keyring-version
+/ssh/config
+/config/gtk-2.0/gtkfilechooser.ini.ULQCQY
+/ncmpcpp/error.log
+/conky/.goutputstream-F5O0PY
+
+config/obmenu-generator/cache\.db
+
+config/sunflower/tabs\.json
+/atom
+/atom/github.cson
+/atom/packages/atom-commander/node_modules/es5-ext/CHANGELOG.md
+/atom/packages/atom-commander/node_modules/es5-ext/object/ensure-promise.js
+/atom/packages/atom-commander/node_modules/es5-ext/object/is-promise.js
+/atom/packages/atom-commander/node_modules/es5-ext/safe-to-string.js
+/atom/packages/atom-commander/node_modules/es5-ext/string/#/count.js
+/atom/packages/atom-commander/node_modules/es5-ext/test/object/ensure-promise.js
+/atom/packages/atom-commander/node_modules/es5-ext/test/object/is-promise.js
+/atom/packages/atom-commander/node_modules/es5-ext/test/safe-to-string.js
+/atom/packages/atom-commander/node_modules/es5-ext/test/string/#/count.js
+/atom/packages/atom-commander/resources/single_browser.png
+/atom/packages/seti-ui/file-types/.firebaserc
+/atom/packages/seti-ui/file-types/.travis.yml
+/atom/packages/seti-ui/file-types/Jar.jar
+/atom/packages/seti-ui/file-types/Jinja.jinja2
+/atom/packages/seti-ui/file-types/TOML.toml
+/atom/packages/seti-ui/file-types/archive.zip
+/atom/packages/seti-ui/file-types/cert.cert
+/atom/packages/seti-ui/file-types/firebase.json
+/atom/packages/seti-ui/file-types/geckodriver
+/atom/packages/seti-ui/file-types/keyfile.key
+/atom/packages/seti-ui/file-types/mime.types
+/atom/packages/seti-ui/icons/R.svg
+/atom/packages/seti-ui/icons/firebase.svg
+/atom/packages/seti-ui/icons/firefox.svg
+/atom/packages/seti-ui/icons/git.svg
+/atom/packages/seti-ui/icons/jinja.svg
+/atom/packages/seti-ui/icons/lock.svg
+/atom/packages/seti-ui/icons/zip.svg
+/atom/packages/seti-ui/styles/components/dock.less
+/atom/packages/seti-ui/styles/components/find-replace.less
+/atom/packages/seti-ui/styles/components/icons.less
+/atom/packages/seti-ui/styles/components/icons/mapping.less
+/atom/packages/seti-ui/styles/components/icons/preview.less
+/atom/packages/seti-ui/styles/components/icons/sidebar.less
+/atom/packages/seti-ui/styles/components/icons/tabs.less
+/atom/packages/seti-ui/styles/components/modals.less
+/atom/packages/seti-ui/styles/components/panes.less
+/atom/packages/seti-ui/styles/components/preview-pane.less
+/atom/packages/seti-ui/styles/components/scrollbars.less
+/atom/packages/seti-ui/styles/components/settings.less
+/atom/packages/seti-ui/styles/components/sidebar.less
+/atom/packages/seti-ui/styles/components/sidebar/background.less
+/atom/packages/seti-ui/styles/components/sidebar/header.less
+/atom/packages/seti-ui/styles/components/sidebar/list.less
+/atom/packages/seti-ui/styles/components/status-bar.less
+/atom/packages/seti-ui/styles/components/status.less
+/atom/packages/seti-ui/styles/components/tabs.less
+/atom/packages/seti-ui/styles/components/title-bar.less
+/atom/packages/seti-ui/styles/components/user-theme.less
+/config/codeblocks/en_US_personaldictionary.dic
+/config/sublime-text-3/Cache/ASP/ASP.sublime-syntax.cache
+/config/sublime-text-3/Cache/ASP/HTML-ASP.sublime-syntax.cache
+/config/sublime-text-3/Cache/ActionScript/ActionScript.sublime-syntax.cache
+/config/sublime-text-3/Cache/AppleScript/AppleScript.sublime-syntax.cache
+/config/sublime-text-3/Cache/Batch File/Batch File.sublime-syntax.cache
+/config/sublime-text-3/Cache/C#/Build.sublime-syntax.cache
+/config/sublime-text-3/Cache/C#/C#.sublime-syntax.cache
+/config/sublime-text-3/Cache/C++/C++.sublime-syntax.cache
+/config/sublime-text-3/Cache/C++/C++.sublime-syntax.rcache
+/config/sublime-text-3/Cache/C++/C.sublime-syntax.cache
+/config/sublime-text-3/Cache/C++/C.sublime-syntax.rcache
+/config/sublime-text-3/Cache/CSS/CSS.sublime-syntax.cache
+/config/sublime-text-3/Cache/Clojure/Clojure.sublime-syntax.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Amy.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Blackboard.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Dawn.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Eiffel.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Espresso Libre.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/IDLE.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/LAZY.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Mac Classic.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/MagicWB (Amiga).tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Monokai Bright.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Monokai.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Solarized (Dark).tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/SpaceCadet.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Sunburst.tmTheme.cache
+/config/sublime-text-3/Cache/Color Scheme - Default/Zenburnesque.tmTheme.cache
+/config/sublime-text-3/Cache/D/D.sublime-syntax.cache
+/config/sublime-text-3/Cache/Default/Ignored Packages.cache
+/config/sublime-text-3/Cache/Default/Meta Info Summary.cache
+/config/sublime-text-3/Cache/Default/Startup.cache
+/config/sublime-text-3/Cache/Default/Syntax Summary.cache
+/config/sublime-text-3/Cache/Diff/Diff.sublime-syntax.cache
+/config/sublime-text-3/Cache/Diff/Diff.sublime-syntax.rcache
+/config/sublime-text-3/Cache/Emmet/Emmet.tmLanguage.cache
+/config/sublime-text-3/Cache/Erlang/Erlang.sublime-syntax.cache
+/config/sublime-text-3/Cache/Erlang/HTML (Erlang).sublime-syntax.cache
+/config/sublime-text-3/Cache/Git/syntax/Git Blame.tmLanguage.cache
+/config/sublime-text-3/Cache/Git/syntax/Git Commit Message.tmLanguage.cache
+/config/sublime-text-3/Cache/Git/syntax/Git Commit View.tmLanguage.cache
+/config/sublime-text-3/Cache/Git/syntax/Git Graph.tmLanguage.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/blame.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/branch.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/dashboard.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/diff.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/graph.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/make_commit.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/rebase.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/rebase_interactive.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/show_commit.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/show_commit_diffstat.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/status.sublime-syntax.cache
+/config/sublime-text-3/Cache/GitSavvy/syntax/tags.sublime-syntax.cache
+/config/sublime-text-3/Cache/Go/Go.sublime-syntax.cache
+/config/sublime-text-3/Cache/Graphviz/DOT.sublime-syntax.cache
+/config/sublime-text-3/Cache/Groovy/Groovy.sublime-syntax.cache
+/config/sublime-text-3/Cache/HTML/HTML.sublime-syntax.cache
+/config/sublime-text-3/Cache/Haskell/Haskell.sublime-syntax.cache
+/config/sublime-text-3/Cache/Haskell/Literate Haskell.sublime-syntax.cache
+/config/sublime-text-3/Cache/Java/Java Server Pages (JSP).sublime-syntax.cache
+/config/sublime-text-3/Cache/Java/Java.sublime-syntax.cache
+/config/sublime-text-3/Cache/Java/JavaDoc.sublime-syntax.cache
+/config/sublime-text-3/Cache/Java/JavaProperties.sublime-syntax.cache
+/config/sublime-text-3/Cache/JavaScript/JSON.sublime-syntax.cache
+/config/sublime-text-3/Cache/JavaScript/JSON.sublime-syntax.rcache
+/config/sublime-text-3/Cache/JavaScript/JavaScript.sublime-syntax.cache
+/config/sublime-text-3/Cache/JavaScript/Regular Expressions (JavaScript).sublime-syntax.cache
+/config/sublime-text-3/Cache/LaTeX/Bibtex.sublime-syntax.cache
+/config/sublime-text-3/Cache/LaTeX/LaTeX Log.sublime-syntax.cache
+/config/sublime-text-3/Cache/LaTeX/LaTeX.sublime-syntax.cache
+/config/sublime-text-3/Cache/LaTeX/TeX.sublime-syntax.cache
+/config/sublime-text-3/Cache/Lisp/Lisp.sublime-syntax.cache
+/config/sublime-text-3/Cache/Lua/Lua.sublime-syntax.cache
+/config/sublime-text-3/Cache/Makefile/Make Output.sublime-syntax.cache
+/config/sublime-text-3/Cache/Makefile/Makefile.sublime-syntax.cache
+/config/sublime-text-3/Cache/Makefile/Makefile.sublime-syntax.rcache
+/config/sublime-text-3/Cache/Markdown/Markdown.sublime-syntax.cache
+/config/sublime-text-3/Cache/Markdown/Markdown.sublime-syntax.rcache
+/config/sublime-text-3/Cache/Markdown/MultiMarkdown.sublime-syntax.cache
+/config/sublime-text-3/Cache/Material Theme/schemes/Material-Theme-Darker.tmTheme.cache
+/config/sublime-text-3/Cache/Material Theme/schemes/Material-Theme-Palenight.tmTheme.cache
+/config/sublime-text-3/Cache/Material Theme/schemes/Material-Theme.tmTheme.cache
+/config/sublime-text-3/Cache/Material Theme/widgets/Widget - Material-Theme.stTheme.cache
+/config/sublime-text-3/Cache/Matlab/Matlab.sublime-syntax.cache
+/config/sublime-text-3/Cache/OCaml/OCaml.sublime-syntax.cache
+/config/sublime-text-3/Cache/OCaml/OCamllex.sublime-syntax.cache
+/config/sublime-text-3/Cache/OCaml/OCamlyacc.sublime-syntax.cache
+/config/sublime-text-3/Cache/OCaml/camlp4.sublime-syntax.cache
+/config/sublime-text-3/Cache/Objective-C/Objective-C++.sublime-syntax.cache
+/config/sublime-text-3/Cache/Objective-C/Objective-C.sublime-syntax.cache
+/config/sublime-text-3/Cache/PHP/PHP Source.sublime-syntax.cache
+/config/sublime-text-3/Cache/PHP/PHP.sublime-syntax.cache
+/config/sublime-text-3/Cache/Pascal/Pascal.sublime-syntax.cache
+/config/sublime-text-3/Cache/Perl/Perl.sublime-syntax.cache
+/config/sublime-text-3/Cache/Python/Python.sublime-syntax.cache
+/config/sublime-text-3/Cache/Python/Regular Expressions (Python).sublime-syntax.cache
+/config/sublime-text-3/Cache/R/R Console.sublime-syntax.cache
+/config/sublime-text-3/Cache/R/R.sublime-syntax.cache
+/config/sublime-text-3/Cache/R/Rd (R Documentation).sublime-syntax.cache
+/config/sublime-text-3/Cache/Rails/HTML (Rails).sublime-syntax.cache
+/config/sublime-text-3/Cache/Rails/JavaScript (Rails).sublime-syntax.cache
+/config/sublime-text-3/Cache/Rails/Ruby Haml.sublime-syntax.cache
+/config/sublime-text-3/Cache/Rails/Ruby on Rails.sublime-syntax.cache
+/config/sublime-text-3/Cache/Rails/SQL (Rails).sublime-syntax.cache
+/config/sublime-text-3/Cache/Regular Expressions/RegExp.sublime-syntax.cache
+/config/sublime-text-3/Cache/RestructuredText/reStructuredText.sublime-syntax.cache
+/config/sublime-text-3/Cache/Ruby/Ruby.sublime-syntax.cache
+/config/sublime-text-3/Cache/Rust/Cargo.sublime-syntax.cache
+/config/sublime-text-3/Cache/Rust/Rust.sublime-syntax.cache
+/config/sublime-text-3/Cache/SQL/SQL.sublime-syntax.cache
+/config/sublime-text-3/Cache/Scala/Scala.sublime-syntax.cache
+/config/sublime-text-3/Cache/ShellScript/Shell-Unix-Generic.sublime-syntax.cache
+/config/sublime-text-3/Cache/ShellScript/Shell-Unix-Generic.sublime-syntax.rcache
+/config/sublime-text-3/Cache/TCL/HTML (Tcl).sublime-syntax.cache
+/config/sublime-text-3/Cache/TCL/Tcl.sublime-syntax.cache
+/config/sublime-text-3/Cache/Text/Plain text.tmLanguage.cache
+/config/sublime-text-3/Cache/Text/Plain text.tmLanguage.rcache
+/config/sublime-text-3/Cache/Textile/Textile.sublime-syntax.cache
+/config/sublime-text-3/Cache/Theme - Centurion/Galea.tmTheme.cache
+/config/sublime-text-3/Cache/Theme - Centurion/GaleaLight.tmLanguage.cache
+/config/sublime-text-3/Cache/Theme - Default/Widgets.stTheme.cache
+/config/sublime-text-3/Cache/XML/XML.sublime-syntax.cache
+/config/sublime-text-3/Cache/XML/XML.sublime-syntax.rcache
+/config/sublime-text-3/Cache/YAML/YAML.sublime-syntax.cache
+/config/sublime-text-3/Cache/YAML/YAML.sublime-syntax.rcache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/CoffeeScript (Gulpfile).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Groovy (Gradle).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Babel).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Bower).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Composer).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (ESLint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (NPM).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (PostCSS).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Settings).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Stylelint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Sublime).sublime-syntax.rcache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JSON (Tern JS).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JavaScript (ESLint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JavaScript (Gruntfile).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JavaScript (Gulpfile).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JavaScript (PostCSS).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JavaScript (Stylelint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/JavaScript (Webpack).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Markdown (License).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Adobe After Effects).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Adobe Illustrator).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Adobe InDesign).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Adobe Photoshop).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Adobe Premiere Pro).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Archive).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Audio).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Buildpacks).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (ESLint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Font).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (License).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Log).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Microsoft Access).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Microsoft Excel).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Microsoft OneNote).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Microsoft PowerPoint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Microsoft Word).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (NodeJS).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (PDF).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Ruby).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Sketch).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Video).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Plain Text (Windows Shortcut).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Shell Script (ESLint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Shell Script (Git).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Shell Script (Git).sublime-syntax.rcache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Shell Script (NPM).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Shell Script (Ruby).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Shell Script (Stylelint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/Vimrc (VimL).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/XML (Config).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/XML (Config).sublime-syntax.rcache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/XML (SVG).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/YAML (CircleCI).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/YAML (Docker).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/YAML (ESLint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/YAML (Lock).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/YAML (Procfile).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/YAML (Stylelint).sublime-syntax.cache
+/config/sublime-text-3/Cache/zzz A File Icon zzz/aliases/YAML (Yarn).sublime-syntax.cache
+/config/sublime-text-3/Installed Packages/0_package_control_loader.sublime-package
+/config/sublime-text-3/Installed Packages/A File Icon.sublime-package
+/config/sublime-text-3/Installed Packages/BracketHighlighter.sublime-package
+/config/sublime-text-3/Installed Packages/Emmet.sublime-package
+/config/sublime-text-3/Installed Packages/FileDiffs.sublime-package
+/config/sublime-text-3/Installed Packages/Git.sublime-package
+/config/sublime-text-3/Installed Packages/GitGutter.sublime-package
+/config/sublime-text-3/Installed Packages/Github Tools.sublime-package
+/config/sublime-text-3/Installed Packages/HTML5.sublime-package
+/config/sublime-text-3/Installed Packages/HTMLBeautify.sublime-package
+/config/sublime-text-3/Installed Packages/Material Theme.sublime-package
+/config/sublime-text-3/Installed Packages/Modific.sublime-package
+/config/sublime-text-3/Installed Packages/Package Control.sublime-package
+/config/sublime-text-3/Installed Packages/PyV8/linux64-p3/PyV8.py
+/config/sublime-text-3/Installed Packages/PyV8/linux64-p3/_PyV8.cpython-33m.so
+/config/sublime-text-3/Installed Packages/PyV8/linux64-p3/config.json
+/config/sublime-text-3/Installed Packages/SideBarEnhancements.sublime-package
+/config/sublime-text-3/Installed Packages/Theme - Centurion.sublime-package
+/config/sublime-text-3/Installed Packages/Theme - Soda.sublime-package
+/config/sublime-text-3/Installed Packages/Trimmer.sublime-package
+/config/sublime-text-3/Local/License.sublime_license
+/config/sublime-text-3/Local/Session.sublime_session
+/config/sublime-text-3/Packages/ColorPicker/.gitignore
+/config/sublime-text-3/Packages/ColorPicker/.no-sublime-package
+/config/sublime-text-3/Packages/ColorPicker/ColorPicker.sublime-commands
+/config/sublime-text-3/Packages/ColorPicker/ColorPicker.sublime-settings
+/config/sublime-text-3/Packages/ColorPicker/Default (Linux).sublime-keymap
+/config/sublime-text-3/Packages/ColorPicker/Default (OSX).sublime-keymap
+/config/sublime-text-3/Packages/ColorPicker/Default (Windows).sublime-keymap
+/config/sublime-text-3/Packages/ColorPicker/Main.sublime-menu
+/config/sublime-text-3/Packages/ColorPicker/README.md
+/config/sublime-text-3/Packages/ColorPicker/lib/linux_colorpicker.py
+/config/sublime-text-3/Packages/ColorPicker/lib/osx_colorpicker
+/config/sublime-text-3/Packages/ColorPicker/lib/win_colorpicker.exe
+/config/sublime-text-3/Packages/ColorPicker/package-metadata.json
+/config/sublime-text-3/Packages/ColorPicker/sublimecp.py
+/config/sublime-text-3/Packages/PyV8/linux64-p3/PyV8.py
+/config/sublime-text-3/Packages/PyV8/linux64-p3/_PyV8.cpython-33m.so
+/config/sublime-text-3/Packages/PyV8/linux64-p3/config.json
+/config/sublime-text-3/Packages/Terminal/.gitignore
+/config/sublime-text-3/Packages/Terminal/.no-sublime-package
+/config/sublime-text-3/Packages/Terminal/Context.sublime-menu
+/config/sublime-text-3/Packages/Terminal/Default (Linux).sublime-keymap
+/config/sublime-text-3/Packages/Terminal/Default (OSX).sublime-keymap
+/config/sublime-text-3/Packages/Terminal/Default (Windows).sublime-keymap
+/config/sublime-text-3/Packages/Terminal/Default.sublime-commands
+/config/sublime-text-3/Packages/Terminal/LICENSE
+/config/sublime-text-3/Packages/Terminal/Main.sublime-menu
+/config/sublime-text-3/Packages/Terminal/PS.bat
+/config/sublime-text-3/Packages/Terminal/PS.ps1
+/config/sublime-text-3/Packages/Terminal/Side Bar.sublime-menu
+/config/sublime-text-3/Packages/Terminal/Terminal.py
+/config/sublime-text-3/Packages/Terminal/Terminal.sh
+/config/sublime-text-3/Packages/Terminal/Terminal.sublime-settings
+/config/sublime-text-3/Packages/Terminal/changelog.md
+/config/sublime-text-3/Packages/Terminal/iTerm.sh
+/config/sublime-text-3/Packages/Terminal/iTerm2-v3.sh
+/config/sublime-text-3/Packages/Terminal/messages.json
+/config/sublime-text-3/Packages/Terminal/messages/1.13.0.txt
+/config/sublime-text-3/Packages/Terminal/messages/1.4.0.txt
+/config/sublime-text-3/Packages/Terminal/messages/1.7.0.txt
+/config/sublime-text-3/Packages/Terminal/messages/1.8.0.txt
+/config/sublime-text-3/Packages/Terminal/package-metadata.json
+/config/sublime-text-3/Packages/Terminal/readme.md
+/config/sublime-text-3/Packages/Terminal/release.sh
+/config/sublime-text-3/Packages/User/Git.sublime-settings
+/config/sublime-text-3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414
+/config/sublime-text-3/Packages/User/Package Control.cache/01524fae79697630d0454ba3fabd9414.info
+/config/sublime-text-3/Packages/User/Package Control.last-run
+/config/sublime-text-3/Packages/User/Package Control.merged-ca-bundle
+/config/sublime-text-3/Packages/User/Package Control.sublime-settings
+/config/sublime-text-3/Packages/User/Package Control.user-ca-bundle
+/config/sublime-text-3/Packages/User/Plain text.sublime-settings
+/config/sublime-text-3/Packages/User/Preferences.sublime-settings
+/config/sublime-text-3/Packages/User/Terminal.sublime-settings
+/config/sublime-text-3/Packages/b7beba6f962110596660-c416f9a2231ba45b1290a9b9536e6c4a87567af4/auto-remove-sublime-license-popup
+/config/sublime-text-3/Packages/backrefs/.gitignore
+/config/sublime-text-3/Packages/backrefs/LICENSE
+/config/sublime-text-3/Packages/backrefs/dependency-metadata.json
+/config/sublime-text-3/Packages/backrefs/readme.md
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/__init__.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/bre.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/bregex.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/common_tokens.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/compat.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/__init__.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/__init__.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/age.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/alias.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/bidiclass.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/binary.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/block.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/canonicalcombiningclass.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/decompositiontype.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/eastasianwidth.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/generalcategory.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/graphemeclusterbreak.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/hangulsyllabletype.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/joininggroup.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/joiningtype.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/linebreak.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/numerictype.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/numericvalue.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/posix.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/quickcheck.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/script.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/sentencebreak.py
+/config/sublime-text-3/Packages/backrefs/st3/backrefs/uniprops/unidata/wordbreak.py
+/config/sublime-text-3/Packages/backrefs/tools/__init__.py
+/config/sublime-text-3/Packages/backrefs/tools/unidatadownload.py
+/config/sublime-text-3/Packages/backrefs/tools/unipropgen.py
+/config/sublime-text-3/Packages/backrefs/update_unicode.sh
+/config/sublime-text-3/Packages/markupsafe/.hg_archival.txt
+/config/sublime-text-3/Packages/markupsafe/.hgtags
+/config/sublime-text-3/Packages/markupsafe/all/markupsafe/__init__.py
+/config/sublime-text-3/Packages/markupsafe/all/markupsafe/_compat.py
+/config/sublime-text-3/Packages/markupsafe/all/markupsafe/_constants.py
+/config/sublime-text-3/Packages/markupsafe/all/markupsafe/_native.py
+/config/sublime-text-3/Packages/markupsafe/dependency-metadata.json
+/config/sublime-text-3/Packages/mdpopups/.dictionary
+/config/sublime-text-3/Packages/mdpopups/.gitignore
+/config/sublime-text-3/Packages/mdpopups/.travis.yml
+/config/sublime-text-3/Packages/mdpopups/LICENSE
+/config/sublime-text-3/Packages/mdpopups/README.md
+/config/sublime-text-3/Packages/mdpopups/css/default.css
+/config/sublime-text-3/Packages/mdpopups/dependency-metadata.json
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/_snippets/abbr.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/_snippets/links.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/_snippets/refs.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/_snippets/uml.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/api.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/changelog.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/contributing.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/faq.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/images/tooltips_test.png
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/index.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/installation.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/license.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/settings.md
+/config/sublime-text-3/Packages/mdpopups/docs/src/markdown/styling.md
+/config/sublime-text-3/Packages/mdpopups/docs/theme/extra-2aceccb07f.js
+/config/sublime-text-3/Packages/mdpopups/docs/theme/extra-6068b97e47.css
+/config/sublime-text-3/Packages/mdpopups/docs/theme/partials/footer.html
+/config/sublime-text-3/Packages/mdpopups/mkdocs.yml
+/config/sublime-text-3/Packages/mdpopups/setup.cfg
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/__init__.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/colorbox.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/frontmatter.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/imagetint.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/__init__.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/betterem.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/extrarawhtml.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/highlight.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/inlinehilite.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/magiclink.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/superfences.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/mdx/util.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/png.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/rgba.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/st_clean_css.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/st_code_highlight.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/st_color_scheme_matcher.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/st_mapping.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/st_pygments_highlight.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/st_scheme_template.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/version.py
+/config/sublime-text-3/Packages/mdpopups/st3/mdpopups/x11colors.py
+/config/sublime-text-3/Packages/mdpopups/tests/spellcheck.py
+/config/sublime-text-3/Packages/pygments/.gitignore
+/config/sublime-text-3/Packages/pygments/README.md
+/config/sublime-text-3/Packages/pygments/all/pygments/__init__.py
+/config/sublime-text-3/Packages/pygments/all/pygments/cmdline.py
+/config/sublime-text-3/Packages/pygments/all/pygments/console.py
+/config/sublime-text-3/Packages/pygments/all/pygments/filter.py
+/config/sublime-text-3/Packages/pygments/all/pygments/filters/__init__.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatter.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/__init__.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/_mapping.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/bbcode.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/html.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/img.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/latex.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/other.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/rtf.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/svg.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/terminal.py
+/config/sublime-text-3/Packages/pygments/all/pygments/formatters/terminal256.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexer.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/__init__.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_asy_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_cl_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_cocoa_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_lasso_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_lua_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_mapping.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_mql_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_openedge_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_php_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_postgres_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_scilab_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_sourcemod_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_stan_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/_vim_builtins.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/actionscript.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/agile.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/algebra.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/ambient.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/apl.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/asm.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/automation.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/basic.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/business.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/c_cpp.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/c_like.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/chapel.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/compiled.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/configs.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/console.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/css.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/d.py
+/config/sublime-text-3/Packages/pygments/all/pygments/lexers/dalvik.py
+/vim/bundle/Vundle.vim/README_KR.md
+/vim/bundle/vim-airline-themes/autoload/airline/themes/alduin.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/aurora.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/badcat.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/base16_oceanicnext.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/base16_seti.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/base16_shell.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/base16_spacemacs.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/fairyfloss.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/minimalist.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/onedark.vim
+/vim/bundle/vim-airline-themes/autoload/airline/themes/sierra.vim
+/vim/bundle/vim-airline/autoload/airline/extensions/denite.vim
+/vim/bundle/vim-airline/autoload/airline/extensions/vimagit.vim
+/vim/bundle/vim-airline/autoload/airline/extensions/vimtex.vim
+/vim/bundle/vim-airline/autoload/airline/extensions/xkblayout.vim
+/vim/bundle/vim-fugitive/
+/zsh_custom/plugins/git-open/
+/zsh_custom/plugins/zsh-autosuggestions/.rspec
+/zsh_custom/plugins/zsh-autosuggestions/.rubocop.yml
+/zsh_custom/plugins/zsh-autosuggestions/.ruby-version
+/zsh_custom/plugins/zsh-autosuggestions/Gemfile
+/zsh_custom/plugins/zsh-autosuggestions/Gemfile.lock
+/zsh_custom/plugins/zsh-autosuggestions/circle.yml
+/zsh_custom/plugins/zsh-autosuggestions/spec/integrations/bracketed_paste_magic_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/integrations/client_zpty_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/integrations/wrapped_widget_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/integrations/zle_input_stack_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/multi_line_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/options/async_zpty_name_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/options/buffer_max_size_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/options/highlight_style_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/options/original_widget_prefix_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/options/strategy_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/options/use_async_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/options/widget_lists_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/spec_helper.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/special_characters_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/strategies/default_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/strategies/match_prev_cmd_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/terminal_session.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/widgets/disable_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/widgets/enable_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/widgets/fetch_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/spec/widgets/toggle_spec.rb
+/zsh_custom/plugins/zsh-autosuggestions/src/async.zsh
+/zsh_custom/plugins/zsh-autosuggestions/src/features.zsh
+/zsh_custom/plugins/zsh-autosuggestions/src/setup.zsh
+/zsh_custom/plugins/zsh-autosuggestions/src/util.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/.travis.yml
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/arg0-colon.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch10-if-negative.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch8-if-positive.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/brackets-mismatch9-if-positive.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/comment-followed.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-escaped.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-no.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-unescaped.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/history-double-quoted-yes.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/highlighters/main/test-data/parameter-star.zsh
+/zsh_custom/plugins/zsh-syntax-highlighting/images/after1-smaller.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/after1.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/after2-smaller.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/after2.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/after3-smaller.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/after3.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/before1-smaller.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/before1.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/before2-smaller.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/before2.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/before3-smaller.png
+/zsh_custom/plugins/zsh-syntax-highlighting/images/before3.png
+/zsh_custom/themes/powerlevel9k/CODE_OF_CONDUCT.md

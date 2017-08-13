@@ -154,3 +154,37 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.config/codeblocks:
+        path: config/codeblocks/
+        create: true
+    ~/.config/sublime-text-3:
+        path: config/sublime-text-3/
+        create: true
+    ~/.config/tilix:
+        path: config/tilix/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.config/git-cola:
+        path: config/git-cola/
+        create: true
+    ~/.config/termite:
+        path: config/termite/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.nano:
+        path: nano/
+        create: true
+
+

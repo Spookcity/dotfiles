@@ -5,20 +5,20 @@ scriptencoding utf-8
 
 let s:prototype = {}
 
-function! s:prototype.split(...)
+function! s:prototype.split(...) dict
   call add(self._sections, ['|', a:0 ? a:1 : '%='])
 endfunction
 
-function! s:prototype.add_section_spaced(group, contents)
+function! s:prototype.add_section_spaced(group, contents) dict
   let spc = empty(a:contents) ? '' : g:airline_symbols.space
   call self.add_section(a:group, spc.a:contents.spc)
 endfunction
 
-function! s:prototype.add_section(group, contents)
+function! s:prototype.add_section(group, contents) dict
   call add(self._sections, [a:group, a:contents])
 endfunction
 
-function! s:prototype.add_raw(text)
+function! s:prototype.add_raw(text) dict
   call add(self._sections, ['', a:text])
 endfunction
 
@@ -34,7 +34,7 @@ function! s:get_prev_group(sections, i)
   return ''
 endfunction
 
-function! s:prototype.build()
+function! s:prototype.build() dict
   let side = 1
   let line = ''
   let i = 0
@@ -159,6 +159,11 @@ function! s:section_is_empty(self, content)
 
   " only check, if airline#skip_empty_sections == 1
   if get(g:, 'airline_skip_empty_sections', 0) == 0
+    return 0
+  endif
+
+  " only check, if airline#skip_empty_sections == 1
+  if get(w:, 'airline_skip_empty_sections', -1) == 0
     return 0
   endif
   " assume accents sections to be never empty

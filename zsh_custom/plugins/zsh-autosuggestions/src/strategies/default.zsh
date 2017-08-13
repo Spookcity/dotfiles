@@ -7,12 +7,19 @@
 #
 
 _zsh_autosuggest_strategy_default() {
-	local prefix="$1"
+	# Reset options to defaults and enable LOCAL_OPTIONS
+	emulate -L zsh
 
-	# Get the keys of the history items that match
-	local -a histkeys
-	histkeys=(${(k)history[(r)$prefix*]})
+	# Enable globbing flags so that we can use (#m)
+	setopt EXTENDED_GLOB
 
-	# Echo the value of the first key
-	echo -E "${history[$histkeys[1]]}"
+	# Escape backslashes and all of the glob operators so we can use
+	# this string as a pattern to search the $history associative array.
+	# - (#m) globbing flag enables setting references for match data
+	local prefix="${1//(#m)[\\*?[\]<>()|^~#]/\\$MATCH}"
+
+	# Get the history items that match
+	# - (r) subscript flag makes the pattern match on values
+	suggestion="${history[(r)$prefix*]}"
+
 }

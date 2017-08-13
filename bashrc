@@ -4,10 +4,10 @@
 # If not running interactively, don't do anything
 #[[ $- != *i* ]] && return
 
-export EDITOR=vim
+# export EDITOR=vim
 export PATH=:~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/lib:/sbin:/bin
 #JAVA_HOME=/usr/lib/jvm/java-7-jdk/jre
-export QT_API=pyqt4
+# export QT_API=pyqt4
 
 # Android tools
 export ANDROID_HOME=/opt/android-sdk
@@ -23,6 +23,6 @@ export PATH=${PATH}:/opt/android-sdk/platform-tools
 
 #export USE_CCACHE=1
 #export CCACHE_DIR=/mnt/Ricks_Stuff/.ccache
-STAGING_RT_PRIORITY_BASE=15
-STAGING_RT_PRIORITY_SERVER=95
+# STAGING_RT_PRIORITY_BASE=15
+# STAGING_RT_PRIORITY_SERVER=95
 source /usr/bin/virtualenvwrapper.sh

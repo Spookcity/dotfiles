@@ -1,0 +1,95 @@
+!! Focus Pocus by jelloir
+
+!! Menu border
+menu.border.color: #12171d
+menu.border.width: 1
+
+!! Menu background
+menu.items.bg: flat gradient vertical
+menu.items.bg.color: #364451
+menu.items.bg.colorTo: #12171d
+
+!! Menu text
+menu.items.text.color: #7b7b7b
+menu.items.justify: left
+menu.items.disabled.text.color: #4e4e4e
+
+!! Menu headers
+menu.title.bg: flat gradient vertical
+menu.title.bg.color: #364451
+menu.title.bg.colorTo: #12171d
+menu.title.text.color: #bdbdbd
+menu.title.text.justify: center
+
+!! Selected menu item
+menu.items.active.bg: sunken gradient vertical
+menu.items.active.bg.color: #12171d
+menu.items.active.bg.colorTo: #222b33
+menu.items.active.text.color: #bdbdbd
+
+!! Menu Seperators
+menu.separator.color: #12171d
+menu.separator.width: 1
+menu.separator.padding.height: 1
+
+!! Titlebar
+window.active.title.bg: gradient vertical flat
+window.active.title.bg.color: #364451
+window.active.title.bg.colorTo: #12171d
+window.inactive.title.bg: gradient vertical flat
+window.inactive.title.bg.color: #364451
+window.inactive.title.bg.colorTo: #12171d
+
+!! Titlebar text
+window.label.text.justify: center
+window.active.label.bg: parentrelative
+window.active.label.text.color: #bdbdbd
+window.inactive.label.bg: parentrelative
+window.inactive.label.text.color: #7b7b7b
+
+!! Window buttons
+window.*.button.*.bg: parentrelative
+window.active.button.*.hover.bg: flat splitvertical gradient border
+window.inactive.button.*.hover.bg: parentrelative
+window.*.button.*.pressed.bg: flat splitvertical gradient border
+
+window.active.button.*.hover.bg.color: #4e6274
+window.active.button.*.hover.bg.colorTo: #12171d
+window.active.button.*.hover.bg.border.color: #12171d
+
+window.active.button.*.pressed.bg.color: #22292f
+window.active.button.*.pressed.bg.colorTo: #0d1014
+window.active.button.*.pressed.image.color: #7b7b7b
+window.active.button.*.pressed.bg.border.color: #12171d
+window.inactive.button.*.pressed.bg.color: #22292f
+window.inactive.button.*.pressed.bg.colorTo: #0d1014
+window.inactive.button.*.pressed.image.color: #7b7b7b
+window.inactive.button.*.pressed.bg.border.color: #12171d
+
+window.active.button.*.image.color: #bdbdbd
+window.active.button.disabled.image.color: #7b7b7b
+window.inactive.button.*.image.color: #7b7b7b
+window.inactive.button.disabled.image.color: #7b7b7b
+
+!! Borders
+window.active.border.color: #12171d
+window.inactive.border.color: #12171d
+window.active.title.separator.color: #12171d
+window.inactive.title.separator.color: #12171d
+border.width: 1
+padding.width: 2
+padding.height: 2
+window.handle.width: 3
+window.active.client.color: #12171d
+window.inactive.client.color: #12171d
+window.client.padding.width: 0
+window.client.padding.height: 0
+menu.overlap: 0
+
+!! Font shadows
+menu.items.font:shadow=n:shadowtint=30
+
+!! On-screen displays
+osd.bg: gradient vertical flat
+osd.bg.color: #364451
+osd.bg.colorTo: #12171d

@@ -43,8 +43,7 @@
       "seti-syntax"
     ]
   editor:
-    fontFamily: "Inconsolata Regular"
-    fontSize: 15
+    fontFamily: "FiraCode-Regular"
     invisibles: {}
     scrollSensitivity: 100
   "exception-reporting":

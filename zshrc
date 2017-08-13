@@ -37,22 +37,15 @@ POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
 # CASE_SENSITIVE="true"
 
 # Config history
-setopt SHARE_HISTORY 
+setopt SHARE_HISTORY
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
-setopt HIST_SAVE_NO_DUPS 
+setopt HIST_SAVE_NO_DUPS
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
-
-# keybindings
-bindkey -e                      # emacs keybindings
-bindkey '\e[1;5C' forward-word            # C-Right
-bindkey '\e[1;5D' backward-word           # C-Left
-bindkey '\e[2~'   overwrite-mode          # Insert
-bindkey '^A'      beginning-of-line       # Home
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
@@ -89,11 +82,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(z zsh-autosuggestions git-open web-search zsh-syntax-highlighting)
 
 autoload -U compinit && compinit
-# Other
 
+# Other
 source $ZSH/oh-my-zsh.sh
 source /usr/bin/virtualenvwrapper.sh
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -104,3 +96,7 @@ source /usr/bin/virtualenvwrapper.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/id_rsa"
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi

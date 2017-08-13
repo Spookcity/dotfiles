@@ -1,16 +1,16 @@
-urxvt*font:             xft:Consolas for Powerline :size=12
-urxvt*termName:         rxvt
+urxvt*font:             xft:Droid Sans Mono Slashed for Powerline :size=11
+urxvt*termName:         urxvt
 urxvt*scrollBar:        false
-urxvt*perl-lib:         /usr/lib/urxvt/perl/
-urxvt*perl-ext-common:  default,matcher
-urxvt*urlLauncher:      /usr/bin/firefox
+# urxvt*perl-lib:         /usr/lib/urxvt/perl/
+# urxvt*perl-ext-common:  default,matcher
+# urxvt*urlLauncher:      /usr/bin/firefox
 urxvt*matcher.button:   1
 
-Xft*dpi:                96
-Xft*antialias:          true
-Xft*hinting:            true
-Xft*hintstyle:          hintfull
-Xft*rgba:               rgb
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
 
 URxvt.cursorBlink: 1
 URxvt.cursorUnderline: 1
@@ -28,21 +28,21 @@ urxvt*borderColor:      black
 *background: #1f1f1f
 *foreground: #657b83
 
-URxvt*color0:           #543d3e
-URxvt*color1:           #d17b49
-URxvt*color2:           #7b8748
-URxvt*color3:           #af865a
-URxvt*color4:           #686a6a
-URxvt*color5:           #775759
-URxvt*color6:           #6d715e
-URxvt*color7:           #c0b18b
-URxvt*color8:           #543d3e
-URxvt*color9:           #d17b49
-URxvt*color10:          #7b8748
-URxvt*color11:          #af865a
-URxvt*color12:          #686a6a
-URxvt*color13:          #775759
-URxvt*color14:          #6d715e
-URxvt*color15:          #c0b18b
+*color0:           #543d3e
+*color1:           #d17b49
+*color2:           #7b8748
+*color3:           #af865a
+*color4:           #686a6a
+*color5:           #775759
+*color6:           #6d715e
+*color7:           #c0b18b
+*color8:           #543d3e
+*color9:           #d17b49
+*color10:          #7b8748
+*color11:          #af865a
+*color12:          #686a6a
+*color13:          #775759
+*color14:          #6d715e
+*color15:          #c0b18b
 
-urxvt*fading: 40
+*fading: 40

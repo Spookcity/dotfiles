@@ -16,9 +16,12 @@
 # will be 'ls foo' rather than 'ls bar' because your most recently
 # executed command (pwd) was previously followed by 'ls foo'.
 #
+# Note that this strategy won't work as expected with ZSH options that don't
+# preserve the history order such as `HIST_IGNORE_ALL_DUPS` or
+# `HIST_EXPIRE_DUPS_FIRST`.
 
 _zsh_autosuggest_strategy_match_prev_cmd() {
-	local prefix="$1"
+	local prefix="${1//(#m)[\\()\[\]|*?~]/\\$MATCH}"
 
 	# Get all history event numbers that correspond to history
 	# entries that match pattern $prefix*
@@ -44,6 +47,6 @@ _zsh_autosuggest_strategy_match_prev_cmd() {
 		fi
 	done
 
-	# Echo the matched history entry
-	echo -E "$history[$histkey]"
+	# Give back the matched history entry
+	suggestion="$history[$histkey]"
 }

@@ -27,7 +27,7 @@
   // background-color: @background-color-selected;
 }
 
-.atom-commander-resizer {
+// .atom-commander-resizer {
   .atom-commander-resize-handle {
     position: absolute;
     left: 0;
@@ -37,7 +37,7 @@
     cursor: row-resize;
     z-index: 3;
   }
-}
+// }
 
 .platform-win32 {
   .atom-commander-resizer {
@@ -57,26 +57,62 @@
   text-align: center;
 
   .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: @base-background-color;
+  }
+
+  .settings-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+}
+
+.atom-commander-button-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .btn {
+    flex-grow: 1;
   }
 }
 
 .atom-commander {
+  display: flex;
+  flex-direction: column;
   height: 100%;
 
   .content {
-    width: 100%;
-    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: @tool-panel-background-color;
+  }
+
+  .content-horizontal {
+    flex-direction: row;
+  }
+
+  .content-vertical {
+    flex-direction: column;
   }
 
   .left {
-    width: 50%;
-    float: left;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-right: 1px solid @input-border-color;
   }
 
   .right {
-    width: 50%;
-    float: right;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   .directory-editor {
@@ -89,7 +125,7 @@
 
   .username {
     position: absolute;
-    top: 0.4em;
+    margin-top: 0.4em;
     margin-right: 0.4em;
     // margin-right: 2.4em;
   }
@@ -99,6 +135,10 @@
   }
 
   .right-username {
+    right: 0;
+  }
+
+  .vertical-username {
     right: 0;
   }
 
@@ -169,7 +209,7 @@
   }
 
   .left-container {
-    border-right: 1px solid @input-border-color;
+    // border-right: 1px solid @input-border-color;
   }
 }
 
@@ -180,7 +220,7 @@
   cursor: default;
   -webkit-user-select: none;
   min-height: 80px;
-  height: 200px;
+  // height: 200px;
   z-index: 2;
 }
 
@@ -452,4 +492,8 @@
       }
     }
   }
+}
+
+.atom-commander-container-view {
+  overflow: auto;
 }

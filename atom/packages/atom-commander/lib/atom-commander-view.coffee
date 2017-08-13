@@ -16,6 +16,8 @@ TabbedView = require './views/tabbed-view'
 module.exports =
 class AtomCommanderView extends View
 
+  @ATOM_COMMANDER_URI = 'atom://atom-commander'
+
   constructor: (@main, state)->
     super(@main);
 
@@ -46,31 +48,33 @@ class AtomCommanderView extends View
     @leftView = @leftTabbedView.getSelectedView();
     @rightView = @rightTabbedView.getSelectedView();
 
-    if state.height
-      @leftTabbedView.setContentHeight(state.height);
-      @rightTabbedView.setContentHeight(state.height);
+    @horizontal = true;
+    @customHeight = state.height;
+
+    if !atom.config.get('atom-commander.panel.showInDock')
+      @setHeight(state.height);
 
     @focusedView = @getLeftView();
 
   @content: ->
-    buttonStyle = 'width: 11.1%';
+    buttonStyle = '';
 
-    @div {class: 'atom-commander atom-commander-resizer'}, =>
+    @div {class: 'atom-commander'}, =>
       @div class: 'atom-commander-resize-handle', outlet: 'resizeHandle'
       @subview 'menuBar', new MenuBarView();
-      @div {class: 'content'}, =>
+      @div {class: 'content', outlet: 'contentView'}, =>
         @subview 'leftTabbedView', new TabbedView(true)
         @subview 'rightTabbedView', new TabbedView(false)
-      @div {class: 'btn-group-xs'}, =>
-        @button 'F2 Rename', {class: 'btn', style: buttonStyle, click: 'renameButton'}
-        @button 'F3 Add Project', {class: 'btn', style: buttonStyle, click: 'addRemoveProjectButton', outlet: 'F3Button'}
-        @button 'F4 New File', {class: 'btn', style: buttonStyle, click: 'newFileButton'}
-        @button 'F5 Copy', {class: 'btn', style: buttonStyle, click: 'copyDuplicateButton', outlet: 'F5Button'}
-        @button 'F6 Move', {class: 'btn', style: buttonStyle, click: 'moveButton'}
-        @button 'F7 New Folder', {class: 'btn', style: buttonStyle, click: 'newDirectoryButton'}
-        @button 'F8 Delete', {class: 'btn', style: buttonStyle, click: 'deleteButton'}
-        @button 'F9 Focus', {class: 'btn', style: buttonStyle, click: 'focusButton'}
-        @button 'F10 Hide', {class: 'btn', style: buttonStyle, click: 'hideButton'}
+      @div {tabindex: -1, class: 'atom-commander-button-bar btn-group-xs'}, =>
+        @button 'F2 Rename', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'renameButton'}
+        @button 'F3 Add Project', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'addRemoveProjectButton', outlet: 'F3Button'}
+        @button 'F4 New File', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'newFileButton'}
+        @button 'F5 Copy', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'copyDuplicateButton', outlet: 'F5Button'}
+        @button 'F6 Move', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'moveButton'}
+        @button 'F7 New Folder', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'newDirectoryButton'}
+        @button 'F8 Delete', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'deleteButton'}
+        @button 'F9 Focus', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'focusButton'}
+        @button 'F10 Hide', {tabindex: -1, class: 'btn', style: buttonStyle, click: 'hideButton'}
 
   initialize: ->
     @menuBar.hide();
@@ -98,6 +102,9 @@ class AtomCommanderView extends View
       'atom-commander:copy-paths': => @copyPaths(false);
       'atom-commander:copy-path-names': => @copyPaths(true);
 
+    if atom.config.get('atom-commander.panel.showInDock')
+      @resizeHandle.hide();
+
     @on 'mousedown', '.atom-commander-resize-handle', (e) => @resizeStarted(e);
 
     @keyup (e) => @handleKeyUp(e);
@@ -108,6 +115,21 @@ class AtomCommanderView extends View
     @leftView.dispose();
     @rightView.dispose();
     @element.remove();
+
+  getTitle: ->
+    return 'Atom Commander';
+
+  getURI: ->
+    return AtomCommanderView.ATOM_COMMANDER_URI;
+
+  getPreferredLocation: ->
+    return 'bottom';
+
+  getAllowedLocations: ->
+    return ['bottom', 'left', 'right'];
+
+  isPermanentDockItem: ->
+    return false;
 
   getElement: ->
     return @element;
@@ -173,8 +195,15 @@ class AtomCommanderView extends View
     return @resizeStopped() unless which is 1
 
     change = @offset().top - pageY;
-    @leftTabbedView.adjustContentHeight(change);
-    @rightTabbedView.adjustContentHeight(change);
+    @setHeight(@outerHeight() + change);
+
+  setHeight: (@customHeight) ->
+    if !@customHeight?
+      @customHeight = 200;
+    else if @customHeight < 50
+      @customHeight = 50;
+
+    @height(@customHeight);
 
   getMain: ->
     return @main;
@@ -191,10 +220,53 @@ class AtomCommanderView extends View
 
     return @getLeftView();
 
+  setHorizontal: (horizontal) ->
+    @horizontal = horizontal;
+
+    if @horizontal
+      @contentView.addClass('content-horizontal');
+      @contentView.removeClass('content-vertical');
+    else
+      @contentView.addClass('content-vertical');
+      @contentView.removeClass('content-horizontal');
+
+    @getLeftView().setHorizontal(horizontal);
+    @getRightView().setHorizontal(horizontal);
+
+    @applyVisibility();
+
   focusView: (@focusedView) ->
     otherView = @getOtherView(@focusedView);
     otherView.unfocus();
+    @applyVisibility();
     @focusedView.focus();
+
+  showInDockChanged: (height) ->
+    # TODO : Call this when toggling docked mode without recreating main view.
+
+    # if atom.config.get('atom-commander.panel.showInDock')
+    #   @height('100%')
+    #   @resizeHandle.hide();
+    #   @applyVisibility();
+    # else
+    #   @height(height);
+    #   @resizeHandle.show();
+    #   @setHorizontal(true);
+
+  applyVisibility: ->
+    onlyOne = atom.config.get('atom-commander.panel.onlyOneWhenVertical');
+
+    if @horizontal or !onlyOne
+      @leftTabbedView.show();
+      @rightTabbedView.show();
+      return;
+
+    if @getRightView() == @focusedView
+      @leftTabbedView.hide();
+      @rightTabbedView.show();
+    else
+      @leftTabbedView.show();
+      @rightTabbedView.hide();
 
   focusOtherView: ->
     if @getLeftView().hasFocus()
@@ -411,7 +483,7 @@ class AtomCommanderView extends View
     @main.toggleFocus();
 
   hideButton: ->
-    @main.hidePanel();
+    @main.hide();
 
   mirror: ->
     if @focusedView != null
@@ -557,9 +629,9 @@ class AtomCommanderView extends View
 
     state.left = @leftTabbedView.serialize();
     state.right = @rightTabbedView.serialize();
-    state.height = @getLeftView().getContentHeight();
     state.sizeColumnVisible = @sizeColumnVisible;
     state.dateColumnVisible = @dateColumnVisible;
     state.extensionColumnVisible = @extensionColumnVisible;
+    state.height = @customHeight;
 
     return state;

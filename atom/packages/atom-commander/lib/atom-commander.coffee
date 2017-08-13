@@ -17,15 +17,31 @@ module.exports = AtomCommander =
     panel:
       type: "object"
       properties:
-        hideOnOpen:
-          description: "Hide the panel after opening a file."
+        showInDock:
+          title: "Show In Dock"
+          description: "Show the panel in the dock. Disable to limit the panel to the bottom of the screen."
+          type: "boolean"
+          default: true
+          order: 1
+        onlyOneWhenVertical:
+          title: "Single Browser When Docked Left Or Right"
+          description: "Show only one browser at a time when the panel is docked on the left or right. Tabbing will toggle between them."
           type: "boolean"
           default: false
+          order: 2
+        hideOnOpen:
+          title: "Hide After Opening File"
+          description: "Hide the panel after opening a file and then focus the editor."
+          type: "boolean"
+          default: false
+          order: 3
     uploadOnSave:
+      title: "Upload Cached File On Save"
       description: "Automatically upload cached files when saved."
       type: "boolean"
       default: true
     removeOnClose:
+      title: "Remove Cached File On Close"
       description: "Remove a cached file after it was closed and successfully uploaded."
       type: "boolean"
       default: true
@@ -38,12 +54,12 @@ module.exports = AtomCommander =
     @actions = new Actions(@);
     @bookmarkManager = new BookmarkManager(@, @state.bookmarks);
     @serverManager = new ServerManager(@, @state.servers);
-    @mainView = new AtomCommanderView(@, @state);
-    @bottomPanel = atom.workspace.addBottomPanel(item: @mainView.getElement(), visible: false);
+    # @mainView = new AtomCommanderView(@, @state);
+    # @element = @mainView.getElement();
 
     @subscriptions = new CompositeDisposable();
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-commander:toggle-visible': => @toggleVisible();
+    @subscriptions.add atom.commands.add 'atom-workspace', 'atom-commander:toggle-visible': => @toggle();
     @subscriptions.add atom.commands.add 'atom-workspace', 'atom-commander:toggle-focus': => @toggleFocus();
 
     @subscriptions.add atom.commands.add 'atom-workspace', 'atom-commander:select-all': => @actions.selectAll();
@@ -108,8 +124,44 @@ module.exports = AtomCommander =
       event.stopPropagation();
       @actions.bookmarksAddEditor();
 
+    # Monitor active pane item in docks.
+    @subscriptions.add atom.workspace.getLeftDock().onDidChangeActivePaneItem (event) =>
+      @onDidChangeActivePaneItem(event);
+
+    @subscriptions.add atom.workspace.getRightDock().onDidChangeActivePaneItem (event) =>
+      @onDidChangeActivePaneItem(event);
+
+    @subscriptions.add atom.workspace.getBottomDock().onDidChangeActivePaneItem (event) =>
+      @onDidChangeActivePaneItem(event);
+
+    @subscriptions.add atom.workspace.getLeftDock().onWillDestroyPaneItem (event) =>
+      @onWillDestroyPaneItem(event);
+
+    @subscriptions.add atom.workspace.getRightDock().onWillDestroyPaneItem (event) =>
+      @onWillDestroyPaneItem(event);
+
+    @subscriptions.add atom.workspace.getBottomDock().onWillDestroyPaneItem (event) =>
+      @onWillDestroyPaneItem(event);
+
+    # Monitor configuration
+    @subscriptions.add atom.config.onDidChange 'atom-commander.panel.onlyOneWhenVertical', () =>
+      @mainView?.applyVisibility();
+
+    @subscriptions.add atom.config.onDidChange 'atom-commander.panel.showInDock', () =>
+      @showInDockChanged();
+
+    if !atom.config.get('atom-commander.panel.showInDock')
+      @bottomPanel = atom.workspace.addBottomPanel(item: @getMainView(true), visible: false);
+
     if @state.visible
-      @bottomPanel.show();
+      @show(false);
+
+  getMainView: (createLazy=false)->
+    if !@mainView? and createLazy
+      @mainView = new AtomCommanderView(@, @state);
+      @element = @mainView.getElement();
+
+    return @mainView;
 
   getActions: ->
     return @actions;
@@ -151,7 +203,6 @@ module.exports = AtomCommander =
 
     state = @serialize();
     file = @getSaveFile();
-    state.version = 3;
 
     try
       fsp.writeFileSync(file.getPath(), JSON.stringify(state));
@@ -161,51 +212,173 @@ module.exports = AtomCommander =
 
   deactivate: ->
     @saveState();
-    @bottomPanel.destroy();
+    @bottomPanel?.destroy();
     @subscriptions.dispose();
     @serverManager.dispose();
-    @mainView.destroy();
+    @mainView?.destroy();
     @statusTile?.destroy();
 
   serialize: ->
-    if @mainView != null
+    if @mainView?
+      visible = @state.visible;
       state = @mainView.serialize();
-      state.visible = @bottomPanel.isVisible();
+      state.visible = visible;
       state.bookmarks = @bookmarkManager.serialize();
       state.servers = @serverManager.serialize();
+      state.version = 3;
       return state;
 
     return @state;
 
-  toggleVisible: ->
-    if @bottomPanel.isVisible()
-      if (@mainView.focusedView != null) and @mainView.focusedView.hasFocus()
-        @mainView.focusedView.unfocus();
+  showInDockChanged: ->
+    visible = @isVisible();
+    @state = @serialize();
 
+    if @getDock() is atom.workspace.getBottomDock()
+      @state.height = @getMainView().height();
+
+    if @bottomPanel?
+      @bottomPanel.destroy();
+      @bottomPanel = null;
+    else
+      pane = atom.workspace.paneForItem(@mainView);
+      if pane?
+        pane.removeItem(@mainView);
+
+    @mainView?.destroy();
+    @mainView = null;
+
+    if !atom.config.get('atom-commander.panel.showInDock')
+      @bottomPanel = atom.workspace.addBottomPanel(item: @getMainView(true), visible: false);
+
+    # @mainView.showInDockChanged(@state.height);
+
+    if visible
+      @show(false, 'bottom');
+
+  onWillDestroyPaneItem: (event) ->
+    if event.item is @mainView
+      @state.visible = false;
+      @saveState();
+      @mainView.destroy();
+      @mainView = null;
+
+  onDidChangeActivePaneItem: (item) ->
+    if item isnt @mainView
+      return;
+
+    dock = @getDock();
+
+    if dock?
+      @getMainView().setHorizontal(dock.location == 'bottom');
+
+  getDock: ->
+    if atom.workspace.getBottomDock().getPaneItems().indexOf(@mainView) >= 0
+      return atom.workspace.getBottomDock();
+    if atom.workspace.getLeftDock().getPaneItems().indexOf(@mainView) >= 0
+      return atom.workspace.getLeftDock();
+    if atom.workspace.getRightDock().getPaneItems().indexOf(@mainView) >= 0
+      return atom.workspace.getRightDock();
+
+    return null;
+
+  isVisible: ->
+    if @bottomPanel
+      return @state.visible;
+    else
+      return @isVisibleInDock();
+
+  isVisibleInDock: ->
+    dock = @getDock();
+
+    if !dock? or !dock.isVisible()
+      return false;
+
+    if !dock.getActivePane()?
+      return false;
+
+    return dock.getActivePane().getActiveItem() is @mainView;
+
+  toggle: ->
+    if @isVisible()
+      @hide();
+    else
+      @show(false);
+
+  togglePanelVisible: ->
+    if @bottomPanel.isVisible()
+      @unfocus();
       @bottomPanel.hide();
     else
       @bottomPanel.show();
 
+  show: (focus, location = undefined) ->
+    if @bottomPanel?
+      @showPanel(focus);
+    else
+      @showDock(focus, location);
+
+    @state.visible = true;
     @saveState();
 
-  hidePanel: ->
-    @bottomPanel.hide();
-    @saveState();
-
-  showPanel: ->
+  showPanel: (focus) ->
     @bottomPanel.show();
+
+    if focus
+      @focus();
+
+  showDock: (focus, location) ->
+    paneContainer = atom.workspace.paneContainerForURI(AtomCommanderView.ATOM_COMMANDER_URI);
+
+    if paneContainer?
+      paneContainer.show();
+
+      if focus
+        @focus();
+    else
+      atom.workspace.open(@getMainView(true), {
+        searchAllPanes: true,
+        activatePane: true,
+        activateItem: true,
+        location: location
+      }).then =>
+        paneContainer = atom.workspace.paneContainerForURI(AtomCommanderView.ATOM_COMMANDER_URI);
+
+        if paneContainer?
+          paneContainer.show();
+
+          if focus
+            @focus();
+
+  hide: ->
+    if @bottomPanel?
+      @bottomPanel.hide();
+    else if @mainView?
+      atom.workspace.hide(@mainView);
+
+    @state.visible = false;
     @saveState();
+
+  focus: ->
+    pane = atom.workspace.paneForURI(AtomCommanderView.ATOM_COMMANDER_URI);
+    pane.activateItemForURI(AtomCommanderView.ATOM_COMMANDER_URI);
+
+    @getMainView()?.refocusLastView();
+
+  unfocus: ->
+    atom.workspace.getCenter().activate()
+
+  hasFocus: ->
+    if !@mainView?
+      return false;
+
+    return (@mainView.focusedView != null) and @mainView.focusedView.hasFocus();
 
   toggleFocus: ->
-    if @bottomPanel.isVisible()
-      if (@mainView.focusedView != null) and @mainView.focusedView.hasFocus()
-        @mainView.focusedView.unfocus();
-      else
-        @mainView.refocusLastView();
+    if @hasFocus()
+      @unfocus()
     else
-      @bottomPanel.show()
-      @mainView.refocusLastView();
-      @saveState();
+      @show(true)
 
   consumeStatusBar: (statusBar) ->
     @statusView = new StatusView();
@@ -220,10 +393,10 @@ module.exports = AtomCommander =
 
   fileSystemRemoved: (fileSystem) ->
     @bookmarkManager.fileSystemRemoved(fileSystem);
-    @mainView.fileSystemRemoved(fileSystem);
+    @mainView?.fileSystemRemoved(fileSystem);
 
   serverClosed: (server) ->
-    @mainView.serverClosed(server);
+    @mainView?.serverClosed(server);
 
   getFileSystemWithID: (fileSystemId) ->
     if @localFileSystem.getID() == fileSystemId

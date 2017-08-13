@@ -70,7 +70,7 @@ class ContainerView extends View
       'atom-commander:select-item': => @spacePressed()
 
   @content: ->
-    @div {tabindex: -1}, =>
+    @div {tabindex: -1, style: 'display: flex; flex-direction: column; flex: 1'}, =>
       @div =>
         @span '', {class: 'highlight-info username', outlet: 'username'}
         # @span '', {class: 'history icon icon-clock', outlet: 'history', click: 'toggleHistory' }
@@ -113,7 +113,7 @@ class ContainerView extends View
     @searchPanel.hide();
     @spinnerPanel.hide();
 
-    # @historyView.setContainerView(@);
+    # @historyView.set§(@);
 
     if @left
       @addClass("left-container");
@@ -135,6 +135,25 @@ class ContainerView extends View
       @highlightIndex(e.currentTarget.index, false);
 
     @keypress (e) => @handleKeyPress(e);
+
+  setHorizontal: (horizontal) ->
+    @username.removeClass('vertical-username');
+
+    if @left
+      @username.removeClass('left-username');
+
+      if horizontal
+        @username.addClass('left-username');
+      # @history.addClass('left-history');
+    else
+      @username.removeClass('right-username');
+
+      if horizontal
+        @username.addClass('right-username');
+      # @history.addClass('right-history');
+
+    if !horizontal
+      @username.addClass('vertical-username');
 
   toggleHistory: (e) ->
     e.stopPropagation();

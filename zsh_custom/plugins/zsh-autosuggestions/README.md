@@ -4,6 +4,8 @@ _[Fish](http://fishshell.com/)-like fast/unobtrusive autosuggestions for zsh._
 
 It suggests commands as you type, based on command history.
 
+[![CircleCI](https://circleci.com/gh/zsh-users/zsh-autosuggestions.svg?style=svg)](https://circleci.com/gh/zsh-users/zsh-autosuggestions)
+
 <a href="https://asciinema.org/a/37390" target="_blank"><img src="https://asciinema.org/a/37390.png" width="400" /></a>
 
 
@@ -42,6 +44,39 @@ It suggests commands as you type, based on command history.
 
 3. Start a new terminal session.
 
+### Arch Linux via the AUR
+1. Install the [`zsh-autosuggestions`](https://aur.archlinux.org/packages/zsh-autosuggestions/) or the [`zsh-autosuggestions-git`](https://aur.archlinux.org/packages/zsh-autosuggestions-git/) packages from the [AUR](https://wiki.archlinux.org/index.php/Arch_User_Repository).
+
+    ```sh
+    pacaur -S zsh-autosuggestions
+    ```
+    or
+    ```
+    pacaur -S zsh-autosuggestions-git
+    ```
+
+2. Add the following to your `.zshrc`:
+
+    ```sh
+    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+    ```
+
+3. Start a new terminal session.
+
+### macOS via Homebrew
+1. Install the `zsh-autosuggestions` package using [Homebrew](https://brew.sh/).
+
+    ```sh
+    brew install zsh-autosuggestions
+    ```
+
+2. Add the following to your `.zshrc`:
+
+    ```sh
+    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    ```
+
+3. Start a new terminal session.
 
 ## Usage
 
@@ -69,7 +104,7 @@ Set `ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE` to configure the style that the suggestion
 Set `ZSH_AUTOSUGGEST_STRATEGY` to choose the strategy for generating suggestions. There are currently two to choose from:
 
 - `default`: Chooses the most recent match.
-- `match_prev_cmd`: Chooses the most recent match whose preceding history item matches the most recently executed command ([more info](src/strategies/match_prev_cmd.zsh)).
+- `match_prev_cmd`: Chooses the most recent match whose preceding history item matches the most recently executed command ([more info](src/strategies/match_prev_cmd.zsh)). Note that this strategy won't work as expected with ZSH options that don't preserve the history order such as `HIST_IGNORE_ALL_DUPS` or `HIST_EXPIRE_DUPS_FIRST`.
 
 
 ### Widget Mapping
@@ -80,19 +115,34 @@ This plugin works by triggering custom behavior when certain [zle widgets](http:
 - `ZSH_AUTOSUGGEST_ACCEPT_WIDGETS`: Widgets in this array will accept the suggestion when invoked.
 - `ZSH_AUTOSUGGEST_EXECUTE_WIDGETS`: Widgets in this array will execute the suggestion when invoked.
 - `ZSH_AUTOSUGGEST_PARTIAL_ACCEPT_WIDGETS`: Widgets in this array will partially accept the suggestion when invoked.
+- `ZSH_AUTOSUGGEST_IGNORE_WIDGETS`: Widgets in this array will not trigger any custom behavior.
 
-Widgets not in any of these lists will update the suggestion when invoked.
+Widgets that modify the buffer and are not found in any of these arrays will fetch a new suggestion after they are invoked.
 
 **Note:** A widget shouldn't belong to more than one of the above arrays.
 
 
+### Disabling suggestion for large buffers
+
+Set `ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE` to an integer value to disable autosuggestion for large buffers. The default is unset, which means that autosuggestion will be tried for any buffer size. Recommended value is 20.
+This can be useful when pasting large amount of text in the terminal, to avoid triggering autosuggestion for too long strings.
+
+### Enable Asynchronous Mode
+
+As of `v0.4.0`, suggestions can be fetched asynchronously using the `zsh/zpty` module. To enable this behavior, set the `ZSH_AUTOSUGGEST_USE_ASYNC` variable (it can be set to anything).
+
+
 ### Key Bindings
 
-This plugin provides three widgets that you can use with `bindkey`:
+This plugin provides a few widgets that you can use with `bindkey`:
 
 1. `autosuggest-accept`: Accepts the current suggestion.
 2. `autosuggest-execute`: Accepts and executes the current suggestion.
 3. `autosuggest-clear`: Clears the current suggestion.
+4. `autosuggest-fetch`: Fetches a suggestion (works even when suggestions are disabled).
+5. `autosuggest-disable`: Disables suggestions.
+6. `autosuggest-enable`: Re-enables suggestions.
+7. `autosuggest-toggle`: Toggles between enabled/disabled suggestions.
 
 For example, this would bind <kbd>ctrl</kbd> + <kbd>space</kbd> to accept the current suggestion.
 
@@ -147,9 +197,9 @@ Pull requests are welcome! If you send a pull request, please:
 
 ### Testing
 
-Testing is performed with [`shunit2`](https://github.com/kward/shunit2) (v2.1.6). Documentation can be found [here](http://shunit2.googlecode.com/svn/trunk/source/2.1/doc/shunit2.html).
+Tests are written in ruby using the [`rspec`](http://rspec.info/) framework. They use [`tmux`](https://tmux.github.io/) to drive a pseudoterminal, sending simulated keystrokes and making assertions on the terminal content.
 
-The test script lives at `script/test_runner.zsh`. To run the tests, run `make test`.
+Test files live in `spec/`. To run the tests, run `make test`. To run a specific test, run `TESTS=spec/some_spec.rb make test`. You can also specify a `zsh` binary to use by setting the `TEST_ZSH_BIN` environment variable (ex: `TEST_ZSH_BIN=/bin/zsh make test`).
 
 
 ## License
