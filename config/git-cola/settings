@@ -15,9 +15,10 @@
             "width": 1600,
             "height": 849,
             "lock_layout": true,
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAEAAAZAAAADNfwCAAAAAvwAAAAcAAADNQAAAMUA/////AEAAAAC/AAAAAAAAAQyAAAAzQD////8AgAAAAL7AAAADABDAG8AbQBtAGkAdAEAAAAcAAAAfAAAAGMA/////AAAAJsAAAK2AAAAIAD////6AAAAAQEAAAAC+wAAAA4AQwBvAG4AcwBvAGwAZQAAAAAA/////wAAAJgA////+wAAAAgARABpAGYAZgEAAAAAAAAE1QAAAKIA/////AAABDUAAAILAAAA4wD////8AgAAAAL7AAAADABTAHQAYQB0AHUAcwEAAAAcAAAClAAAAGEA////+wAAAAwAUgBlAGMAZQBuAHQBAAACswAAAJ4AAABhAP////sAAAASAEYAYQB2AG8AcgBpAHQAZQBzAAAAAbQAAAGdAAAAYQD///8AAAADAAAGQAAAADr8AQAAAAH7AAAADgBBAGMAdABpAG8AbgBzAAAAAAAAAAZAAAAAlAD///8AAAAAAAADNQAAAAQAAAAEAAAACAAAAAj8AAAAAA==",
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAEAAAZAAAADNvwCAAAAAvwAAAAdAAADNgAAAJMA/////AEAAAAC/AAAAAAAAAQNAAABWwD////8AgAAAAL8AAAAHQAAAOAAAABwAAAgH/wBAAAAAvsAAAAQAEIAcgBhAG4AYwBoAGUAcwEAAAAAAAABDAAAAJoA////+wAAAAwAQwBvAG0AbQBpAHQBAAABDwAAAv4AAAC+AP////wAAAEAAAACUwAAACAA////+gAAAAEBAAAAAvsAAAAOAEMAbwBuAHMAbwBsAGUAAAAAAP////8AAACQAP////sAAAAIAEQAaQBmAGYBAAAAAAAABNUAAACbAP////wAAAQQAAACMAAAAK0AACAA/AIAAAAC+wAAAAwAUwB0AGEAdAB1AHMBAAAAHQAAAzYAAABwAP////sAAAAMAFIAZQBjAGUAbgB0AAAAAgAAAACfAAAAcAD////7AAAAEgBGAGEAdgBvAHIAaQB0AGUAcwAAAAG0AAABnQAAAHAA////AAAAAwAABkAAAAA6/AEAAAAB+wAAAA4AQQBjAHQAaQBvAG4AcwAAAAAAAAAGQAAAAIwA////AAAAAAAAAzYAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
             "show_status_filter": false,
-            "show_diff_line_numbers": false
+            "show_diff_line_numbers": false,
+            "toolbar": []
         },
         "preferencesview": {
             "maximized": false,
@@ -38,8 +39,15 @@
         "gitdag": {
             "maximized": true,
             "lock_layout": true,
-            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAMfAAADNfwCAAAAAvsAAAAGAEwAbwBnAQAAABwAAAD0AAAAZAD////7AAAACABEAGkAZgBmAQAAARMAAAI+AAAAZgD///8AAAABAAADHgAAAzX8AgAAAAL7AAAACgBGAGkAbABlAHMBAAAAHAAAAQUAAABhAP////sAAAAKAEcAcgBhAHAAaAEAAAEkAAACLQAAAGEA////AAAAAAAAAzUAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
-            "count": 1000
+            "windowstate": "AAAA/wAAAAL9AAAAAgAAAAAAAAOcAAADNvwCAAAAAfsAAAAIAEQAaQBmAGYBAAAAHQAAAzYAAABZAP///wAAAAEAAAKhAAADNvwCAAAAA/sAAAAGAEwAbwBnAQAAAB0AAAFsAAAAcAD////7AAAACgBGAGkAbABlAHMBAAABjAAAAccAAABwAP////sAAAAKAEcAcgBhAHAAaAAAAAEmAAACLQAAAHAA////AAAAAAAAAzYAAAAEAAAABAAAAAgAAAAI/AAAAAA=",
+            "count": 1000,
+            "log": {
+                "column_widths": [
+                    522,
+                    100,
+                    100
+                ]
+            }
         },
         "applypatches": {
             "maximized": false,
@@ -92,6 +100,10 @@
         {
             "name": "dotfiles",
             "path": "/home/rick/dotfiles"
+        },
+        {
+            "name": "kernel_samsung_kminilte",
+            "path": "/home/rick/android_dev/G800F-Kernel_Stuff/kernel_samsung_kminilte"
         },
         {
             "name": "android_kernel_samsung_kminilte",

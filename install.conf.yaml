@@ -188,3 +188,15 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.walls:
+        path: walls/
+        create: true
+    ~/.config/polybar:
+        path: config/polybar/
+        create: true
+
+

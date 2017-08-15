@@ -43,7 +43,7 @@ set $ws8 VIII
 set $ws9 IX
 set $ws10 X
 
-# i3-gaps stuff 
+# i3-gaps stuff
 gaps inner 15
 gaps outer 0
 smart_borders on
@@ -266,6 +266,6 @@ bar {
 }
 
 # AUTOSTART
-exec_always --no-startup-id compton  --config /home/rick/.config/compton1.conf -b &
+exec_always --no-startup-id compton  --config /home/rick/.config/compton.conf -b &
 exec_always --no-startup-id sh ~/.fehbg &
 exec --no-startup-id redshift-gtk &

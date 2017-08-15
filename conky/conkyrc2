@@ -18,7 +18,7 @@ own_window_transparent yes
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 border_inner_margin 0
 border_outer_margin 0
-  
+
 # GRAPHIC CONFIGS
 draw_shades no
 default_shade_color AAAAAA
@@ -123,7 +123,7 @@ ${voffset -15}${alignr 24}RAM${color}${font}
 
 # DISK
 ${voffset 200}${goto 311}${color1}${font Droid Sans :size=11}SWAP${color}
-${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 273} ${swapbar 8, 110}${voffset 4}${color} 
+${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 273} ${swapbar 8, 110}${voffset 4}${color}
 ${voffset 5}${goto 220}${font Droid Sans :size=8}${color1}Total:
 ${voffset -37}${goto 405}${color1}${swapperc}%${color}
 ${voffset 11}${goto 395} ${swapmax}${color}

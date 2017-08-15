@@ -1,0 +1,7 @@
+#!/bin/bash
+
+LOC="249208"
+URL="https://www.accuweather.com/en/nl/eindhoven/249208/current-weather/$LOC"
+METRIC=0 #Should be 0 or 1; 0 for F, 1 for C
+
+wget -q -o /dev/null -O- "$URL" | awk -F\' '/acm_RecentLocationsCarousel\.push/{print $12"" }' | head -1

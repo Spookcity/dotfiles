@@ -34,7 +34,7 @@ clementine 1.3.1-9
 codeblocks 16.01-10
 colord 1.3.5-1
 compton 0.1_beta2.5-8
-conky 1.10.6-2
+conky-lua 1.10.6-1
 coreutils 8.27-1
 cpio 2.12-3
 cpupower 4.12-1
@@ -54,7 +54,7 @@ easymp3gain-gtk2 0.5.0-8
 electron 1.4.16-3
 f2fs-tools 1.8.0-1
 fakeroot 1.21-2
-feh 2.19.1-1
+feh 2.19.2-1
 ffmpegthumbnailer 2.2.0-1
 file 5.31-1
 file-roller2-nn 2.32.2-6
@@ -95,6 +95,7 @@ heimdall-git 1.4.2.r1.g3b4f34e-1
 help2man 1.47.4-1
 highlight 3.39-1
 htop 2.0.2-2
+i2c-tools 3.1.2-1
 i3-gaps-git 4.13-2
 i3blocks-gaps-git 1.4.r36.g578e878-1
 inetutils 1.9.4-5
@@ -156,6 +157,7 @@ openbox 3.6.1-3
 openssh 7.5p1-2
 os-prober 1.75-1
 p7zip 16.02-3
+pacaur 4.7.10-1
 pacman 5.0.2-2
 paper-icon-theme-git 729.579e9aab-1
 paramano 0.71-1
@@ -169,10 +171,12 @@ picard 1.4.2-1
 pkg-config 0.29.2-1
 pngcrush 1.8.12-1
 pngquant 2.10.0-1
+polybar-git 3.0.5.r26.g2d1e3c2-1
 powerline-fonts 2.6-1
 procps-ng 3.3.12-1
 psmisc 23.1-1
 pulseaudio-alsa 2-3
+python-lxml 3.8.0-2
 python-pyalsaaudio 0.8.4-1
 python-pyside 1.2.4-6
 python-virtualenvwrapper 4.7.2-2
@@ -189,7 +193,7 @@ s-nail 14.9.3-1
 schedtool 1.3.0-3
 sdl 1.2.15-9
 sed 4.4-1
-shadow 4.4-3
+shadow 4.5-2
 skypeforlinux-bin 5.4.0.1-1
 soulseekqt 20170220-2
 squashfs-tools 4.3-4
@@ -197,6 +201,7 @@ sublime-text-dev 3.3126-1
 sudo 1.8.20.p2-1
 sunflower 0.3-4
 sysfsutils 2.1.0-9
+sysstat 11.4.5-1
 systemd-sysvcompat 234.11-6
 tar 1.29-2
 tcp-wrappers 7.6.24-3
@@ -206,7 +211,7 @@ termite-git 12.r32.g3c2753b-1
 termite-terminfo-git 12.r32.g3c2753b-1
 texinfo 6.4-1
 tig 2.2.2-1
-tint2 0.14.6-1
+tint2 0.14.6-2
 tk 8.6.6-2
 tmux 2.5-3
 transmission-gtk 2.92-7
@@ -229,7 +234,7 @@ wget 1.19.1-2
 which 2.21-2
 wine-staging 2.14-1
 wmctrl 1.07-4
-wpa_supplicant 1:2.6-7
+wpa_supplicant 1:2.6-8
 wxgtk2 3.0.3.1-7
 wxhexeditor-git r597.bb951eb-1
 xclip 0.13-1
@@ -242,12 +247,12 @@ xfsprogs 4.12.0-1
 xinit-xsession 1-1
 xorg-fonts-100dpi 1.0.3-3
 xorg-fonts-75dpi 1.0.3-3
-xorg-server-devel 1.19.3-2
-xorg-server-xdmx 1.19.3-2
-xorg-server-xephyr 1.19.3-2
-xorg-server-xnest 1.19.3-2
-xorg-server-xvfb 1.19.3-2
-xorg-server-xwayland 1.19.3-2
+xorg-server-devel 1.19.3-3
+xorg-server-xdmx 1.19.3-3
+xorg-server-xephyr 1.19.3-3
+xorg-server-xnest 1.19.3-3
+xorg-server-xvfb 1.19.3-3
+xorg-server-xwayland 1.19.3-3
 xorg-x11perf 1.6.0-1
 xorg-xcursorgen 1.0.6-1
 xorg-xdpyinfo 1.3.2-1

@@ -1,5 +1,5 @@
 {
-    "active_notebook": 1, 
+    "active_notebook": 0, 
     "always_show_tabs": true, 
     "button_relief": false, 
     "confirmations": {
@@ -11,9 +11,9 @@
         "file_mode": 420
     }, 
     "editor": {
-        "application": "Geany", 
-        "default_editor": "geany %F", 
-        "external_command": "geany %F", 
+        "application": "Sublime Text", 
+        "default_editor": "subl3 %F", 
+        "external_command": "subl3 %F", 
         "terminal_command": false, 
         "type": 0
     }, 
@@ -24,7 +24,7 @@
     "item_list": {
         "always_visible": [], 
         "breadcrumbs": 2, 
-        "case_sensitive_sort": false, 
+        "case_sensitive_sort": true, 
         "force_directories": true, 
         "grid_lines": 0, 
         "headers_visible": true, 
@@ -41,20 +41,20 @@
         "row_hinting": false, 
         "search_modifier": "000", 
         "second_extension": false, 
-        "selection_color": "#bfe909781f22", 
-        "selection_indicator": "\u25c8", 
+        "selection_color": "#ffff5e5e0000", 
+        "selection_indicator": "\u2731", 
         "show_expanders": false, 
         "show_hidden": false, 
         "single_click_navigation": true, 
         "time_format": "%H:%M %d-%m-%y"
     }, 
     "last_version": 0, 
-    "media_preview": true, 
+    "media_preview": false, 
     "multiple_instances": false, 
     "network_path_completion": true, 
     "operations": {
-        "automount_insert": true, 
-        "automount_start": true, 
+        "automount_insert": false, 
+        "automount_start": false, 
         "follow_symlink": false, 
         "hide_on_minimize": false, 
         "merge_in_silent": true, 
@@ -68,22 +68,22 @@
     }, 
     "plugins": [
         "file_list", 
-        "system_terminal", 
-        "find_file_extensions"
+        "default_toolbar", 
+        "system_terminal"
     ], 
     "show_command_bar": false, 
-    "show_command_entry": false, 
+    "show_command_entry": true, 
     "show_notifications": true, 
     "show_status_bar": 0, 
-    "show_toolbar": true, 
+    "show_toolbar": false, 
     "size_format": 1, 
     "superuser_notification": true, 
     "tab_button_icons": true, 
     "tab_close_button": true, 
     "terminal": {
         "allow_bold": true, 
-        "command": "terminator -into {0}", 
-        "command2": "terminator -into {0} -e \"{1}\"", 
+        "command": "xterm -into {0}", 
+        "command2": "xterm -into {0} -e \"{1}\"", 
         "cursor_shape": 0, 
         "font": "Monospace 12", 
         "mouse_autohide": false, 
