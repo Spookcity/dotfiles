@@ -1,5 +1,5 @@
 {
-    "active_notebook": 0, 
+    "active_notebook": 1, 
     "always_show_tabs": true, 
     "button_relief": false, 
     "confirmations": {
@@ -24,7 +24,7 @@
     "item_list": {
         "always_visible": [], 
         "breadcrumbs": 2, 
-        "case_sensitive_sort": true, 
+        "case_sensitive_sort": false, 
         "force_directories": true, 
         "grid_lines": 0, 
         "headers_visible": true, 
@@ -44,7 +44,7 @@
         "selection_color": "#ffff5e5e0000", 
         "selection_indicator": "\u2731", 
         "show_expanders": false, 
-        "show_hidden": false, 
+        "show_hidden": true, 
         "single_click_navigation": true, 
         "time_format": "%H:%M %d-%m-%y"
     }, 
@@ -53,8 +53,8 @@
     "multiple_instances": false, 
     "network_path_completion": true, 
     "operations": {
-        "automount_insert": false, 
-        "automount_start": false, 
+        "automount_insert": true, 
+        "automount_start": true, 
         "follow_symlink": false, 
         "hide_on_minimize": false, 
         "merge_in_silent": true, 
@@ -72,7 +72,7 @@
         "system_terminal"
     ], 
     "show_command_bar": false, 
-    "show_command_entry": true, 
+    "show_command_entry": false, 
     "show_notifications": true, 
     "show_status_bar": 0, 
     "show_toolbar": false, 
@@ -84,7 +84,7 @@
         "allow_bold": true, 
         "command": "xterm -into {0}", 
         "command2": "xterm -into {0} -e \"{1}\"", 
-        "cursor_shape": 0, 
+        "cursor_shape": 1, 
         "font": "Monospace 12", 
         "mouse_autohide": false, 
         "show_scrollbars": true, 

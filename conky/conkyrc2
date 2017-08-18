@@ -1,129 +1,129 @@
-# MADE BY MQZABIN. PLEASE KEEP THE CREDITS
-# MODIFIED by Spookcity
-
-background yes
-update_interval 2
-double_buffer yes
-no_buffers yes
-imlib_cache_size 10
-
-# WINDOW ESPECIFICATIONS
-gap_x 1155
-gap_y -105
-minimum_size 440 768
-maximum_width 440
-own_window yes
-own_window_type desktop
-own_window_transparent yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-border_inner_margin 0
-border_outer_margin 0
-
-# GRAPHIC CONFIGS
-draw_shades no
-default_shade_color AAAAAA
-draw_outline no
-default_outline_color AAAAAA
-draw_borders no
-draw_graph_borders no
-default_graph_size 26 80
-show_graph_scale no
-show_graph_range no
-
-# TEXT CONFIG
+background no
 use_xft yes
-xftalpha 1
-xftfont Droid Sans:size=13.5
-text_buffer_size 256
+xftfont 123:size=8.5
+xftalpha 0.7
+update_interval 1
+total_run_times 0
+own_window yes
+own_window_type override
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+#default_bar_size 0 6
+ 
+maximum_width 296
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_color white
+default_shade_color red
+default_outline_color green
+alignment top_right
+gap_x 28
+#gap_y 230
+gap_y 20
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
 override_utf8_locale yes
+use_spacer no
 
-# UTILS
-short_units yes
-pad_percents 2
-top_name_width 7
+# Lua Load  #
+#lua_load /home/rick/.conky/clock_rings.lua
+#lua_draw_hook_pre clock_rings
 
-# COLOR SCHEME
-color1 AAAAAA
-color2 8cbc65
-color3 FFFFFF
-color4 0042FF
 TEXT
 
-# IMAGES
-${image ~/.conky/images/arch_linux1.png -p 216,10 -s 90x90}\
-${image ~/.conky/images/process-bg.png -p 216,527 -s 220x210}\
-${image ~/.conky/images/cpu-bg.png -p 216,308 -s 220x73}\
-${image ~/.conky/images/cpu-bg.png -p 216,115 -s 220x85}\
-${image ~/.conky/images/disk-bg.png -p 216,773 -s 220x60}\
+${alignc -10}${font Open Sans:size=20}${color dodgerblue3}Arch${color}Linux$font$color
+${voffset 4}$color${font}${font Open Sans:size=16}$alignr${voffset -15}${time %I:%M}$font
+${voffset -4}${color dodgerblue3}${font Open Sans:Bold:size=10}DATE ${hr 5}$color$font
+$color${font Open Sans:size=12}$alignc${time %A}, ${time %d %B %Y}$font$color
 
-# INFOS
-${goto 320}${voffset -10}${font Droid Sans :size=16}${color4}Arch${color}${color2}Linux${color}
-${goto 322}${voffset -3 }${color2}${font Droid Sans :size=8}$kernel${color}
 
 # SYS
-${goto 288}${voffset 30}${color1}${font Droid Sans :size=11}FILE SYSTEM${color}
-${goto 220}${color1}${font Droid Sans :size=11}Root ${goto 273}${voffset }${goto 270}${color2}${fs_bar 7,70 /}${goto 350}${voffset -2 }${color}${color2}${fs_used /}${color1}/${fs_size /}${color}
-${goto 220}${color1}${font Droid Sans :size=11}Home ${goto 269}${voffset }${goto 270}${color2}${fs_bar 7,70 /home}${goto 350}${voffset -2 }${color}${color2}${fs_used /home}${color1}/${fs_size /home}${color}
-${goto 220}${color1}${font Droid Sans :size=11}Stuff ${goto 270}${color1}${voffset }${color2}${fs_bar 7,70 /mnt/Ricks_Stuff}${goto 350}${voffset -2 }${color}${color2}${fs_used /mnt/Ricks_Stuff}${color1}/${fs_size /mnt/Ricks_Stuff}${color}
+${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}SYSTEM ${hr 5}$color${font}
+$sysname $kernel $alignr $machine
+Uptime: $alignr $uptime
+#Last System Update:$alignr${execi 60 sh ~/bin/pacman-date.sh}
+# GPU Temperature $alignr ${execi 30 sensors | grep 'temp1:' | cut -c16-17}°C
 
-# CONNECTION
-${voffset -5}${goto 225}${font Droid Sans :size=11}${color2}Up ${color1}${upspeed wlp3s0}${color2}${goto 335}      Down ${color1}${downspeed wlp3s0}
-${voffset 10}${goto 217}${upspeedgraph wlp3s0 26,80 8cbc65 8cbc65}${goto 332}    ${downspeedgraph wlp3s0 26,80 8cbc65 8cbc65}
-${voffset 9}${goto 222}${color2}Sent ${color1}${totalup wlp3s0}${color2}${goto 335}Received ${color1}${totaldown wlp3s0}${font}
 
-# CPU AND MEM
-${voffset -9}${goto 225}${color1}${font Droid Sans :size=10}CPU 1:${color}
-${voffset 9}${goto 225}${color1}${font Droid Sans :size=10}CPU 2:${color}
-${voffset -43}${goto 277}${color2}${cpubar cpu1 9, 110}${color}
-${voffset 9}${goto 277}${color2}${cpubar cpu2 9, 110}${color}
-${voffset -43}${alignr 18}${color1}${font Droid Sans :size=10}${cpu cpu1}%${color}
-${voffset 9}${alignr 18}${color1}${cpu cpu2}%${color}
-${voffset 17}${goto 225}${color2}${font Droid Sans :size=10}Uptime:${font}${color}
-${voffset }${goto 225}${color2}${font Droid Sans :size=10}RAM:${color}
-${voffset -42}${alignr }${color1}${uptime_short}${color}
-${voffset 8}${alignr 10}${font Droid Sans :size=10}${color1}${memperc}%${color}
-${voffset -18}${goto 295}${color1}${mem} / ${memmax}${font}${color}
+# File System
+${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}FILE SYSTEM ${fs_bar 5}$color
+$color${font Open Sans:bold:size=8.5}Root${goto 60}${fs_used /}${alignr}${fs_size /}
+$color${font Open Sans:bold:size=8.5}Home${goto 60}${fs_used /home}${alignr}${fs_size /home}
+$color${font Open Sans:bold:size=8.5}Stuff${goto 60}${fs_used /mnt/Ricks_Stuff}${alignr}${fs_size /mnt/Ricks_Stuff}
 
-${voffset -5}${goto 218}${loadgraph 50,220 8cbc65 8cbc65 -l}
+# CPU
+${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}CPU ${cpubar 5}
+$color${font}Intel® Core 2 Quad @ ${freq_g cpu0}GHz $alignr ${font Open Sans:Bold:size=7}$cpu% 
+${font Open Sans:Bold:size=8}${cpu cpu0}% ${alignc 60}${color dodgerblue3}${cpubar cpu1}${color}
+${font Open Sans:Bold:size=8}${cpu cpu1}% ${alignc 60}${color dodgerblue3}${cpubar cpu2}${color}
 
-# PROCESS
-${color1}${font Droid Sans :size=9}${voffset -5}${goto 222}${top_mem name 1}
-${voffset 4}${goto 222}${top_mem name 2}
-${voffset 4}${goto 222}${top_mem name 3}
-${voffset 4}${goto 222}${top_mem name 4}
-${voffset 4}${goto 222}${top_mem name 5}
-${voffset 4}${goto 222}${top_mem name 6}
-${voffset 4}${goto 222}${top_mem name 7}
-${voffset 4}${goto 222}${top_mem name 8}
-${voffset 4}${goto 222}${top_mem name 9}
-${voffset 4}${goto 222}${top_mem name 10}
-${voffset -185}${goto 302}${top_mem mem 1}%
-${voffset 4}${goto 302}${top_mem mem 2}%
-${voffset 4}${goto 302}${top_mem mem 3}%
-${voffset 4}${goto 302}${top_mem mem 4}%
-${voffset 4}${goto 302}${top_mem mem 5}%
-${voffset 4}${goto 302}${top_mem mem 6}%
-${voffset 4}${goto 302}${top_mem mem 7}%
-${voffset 4}${goto 302}${top_mem mem 8}%
-${voffset 4}${goto 302}${top_mem mem 9}%
-${voffset 4}${goto 302}${top_mem mem 10}%
-${voffset -185}${alignr 20}${top_mem mem_res 1}
-${voffset 4}${alignr 20}${top_mem mem_res 2}
-${voffset 4}${alignr 20}${top_mem mem_res 3}
-${voffset 4}${alignr 20}${top_mem mem_res 4}
-${voffset 4}${alignr 20}${top_mem mem_res 5}
-${voffset 4}${alignr 20}${top_mem mem_res 6}
-${voffset 4}${alignr 20}${top_mem mem_res 7}
-${voffset 4}${alignr 20}${top_mem mem_res 8}
-${voffset 4}${alignr 20}${top_mem mem_res 9}
-${voffset 4}${alignr 20}${top_mem mem_res 10}${color}
-${voffset -205}${goto 222}${color3}Processes
-${voffset -15}${goto 306}RAM (%)
-${voffset -15}${alignr 24}RAM${color}${font}
+${voffset -10}------------------------------------------------------------- ${font Open Sans:Bold:size=10}${color dodgerblue3}CPU${color}${font}${voffset -1} -
+#${hr 1}
+${top name 1}${alignr}${top cpu 1} %
+#${voffset -14}${alignr}${offset -60}${top mem 1} %
+${top name 2}${alignr}${top cpu 2} %
+#${voffset -14}${alignr}${offset -60}${top mem 2} %
+${top name 3}${alignr}${top cpu 3} %
+#${voffset -14}${alignr}${offset -60}${top mem 3} %
+#${top name 4}${alignr}${top cpu 4} %
+#${voffset -13}${alignr}${offset -60}${top mem 4} %
+# ${top name 5}${alignr}${top cpu 5} %
+# ${voffset -13}${alignr}${offset -60}${top mem 5} %
 
-# DISK
-${voffset 200}${goto 311}${color1}${font Droid Sans :size=11}SWAP${color}
-${voffset -4}${goto 218}${font Droid Sans :size=8}${color1} $swap ${color2}${goto 273} ${swapbar 8, 110}${voffset 4}${color}
-${voffset 5}${goto 220}${font Droid Sans :size=8}${color1}Total:
-${voffset -37}${goto 405}${color1}${swapperc}%${color}
-${voffset 11}${goto 395} ${swapmax}${color}
+
+# MEMORY
+${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}MEMORY ${membar 5} 
+$color${font Open Sans:bold:size=8.5}RAM${goto 60}${alignr}${memmax }${alignr}$alignr}
+$color${font Open Sans:bold:size=8.5}USED${goto 60}${alignr}$mem
+#$color${font Open Sans:bold:size=8.5}Used:$font $mem ${color dodgerblue3}${membar 5}
+#${color dodgerblue3}${membar 4 }${alignr}
+#$color${font Open Sans:bold:size=8.5}Buffers / Cached:$font$alignr$buffers / $cached
+
+${color}${voffset -10}------------------------------------------------------------- ${font Open Sans:Bold:size=10}${color dodgerblue3}RAM${color}${font}${voffset -1} -
+${top_mem name 1}${alignr}${top_mem mem 1} %
+#${voffset -13}${alignr}${offset -60}${top_mem mem 1} %
+${top_mem name 2}${alignr}${top_mem mem 2} %
+#${voffset -13}${alignr}${offset -60}${top_mem mem 2} %
+${top_mem name 3}${alignr}${top_mem mem 3} %
+#${voffset -13}${alignr}${offset -60}${top_mem mem 3} %
+#${top_mem name 4}${alignr}${top_mem cpu 4} %
+#${voffset -13}${alignr}${offset -60}${top_mem mem 4} %
+
+
+# Swap
+${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}SWAP ${swapbar 5}
+$color${font Open Sans:bold:size=8.5}Used:$font $swap ${color dodgerblue3}${swapbar}
+$color${font Open Sans:bold:size=8.5}Total${goto 60}${alignr}${swapmax}
+
+# NETWORK
+${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue4}NETWORK ${hr 5}
+#$color${font Open Sans:bold:size=8.5}External IP ${font}${alignr}${execi 60 curl http://ip.tupeux.com --connect-timeout 2 | grep -o "[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"}$font
+
+${voffset -10}$color${font Open Sans:bold:size=8.5}WiFi $font${wireless_bitrate wlp3s0} $alignr ${addr wlp3s0}
+${voffset -14}$alignc${wireless_essid wlp3s0}
+$alignc${wireless_link_bar 4,260 wlp3s0}   
+↑ ${upspeedf wlp3s0} kb/s $alignr ${totalup wlp3s0}
+${voffset -14}$alignc${upspeedgraph wlp3s0 10,120 000000 aaddff}
+↓ ${downspeedf wlp3s0} kb/s $alignr ${totaldown wlp3s0}
+${voffset -14}$alignc${downspeedgraph wlp3s0 10,120 000000 66aaff}
+
+#${voffset -14}$alignc${execpi 4 echo "\${font}\${color}ping: \${font Open Sans:bold:size=8.5}\${color #66aaff}$(ping -W 1 -c 1 8.8.8.8 -q | grep rtt | egrep [0-9]+\.[0-9]+ -o | head -n 2 | tail -n 1)\${font}\${color} ms"}
+
+#${voffset -10}${font Open Sans:bold:size=8.5}Ethernet $font$alignr ${addr enp0s25}
+#↑ ${upspeedf enp0s25} kb/s $alignr ${totalup enp0s25}
+#${voffset -14}$alignc${upspeedgraph enp0s25 10,120  000000 aaddff}
+#↓ ${downspeedf enp0s25} kb/s $alignr ${totaldown enp0s25}
+#${voffset -14}$alignc${downspeedgraph enp0s25 10,120  000000 66aaff}
+# HDD
+${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}DISCS ${hr 5}
+$color${font Open Sans:bold:size=8.5}${font Open Sans:bold:size=8.5}ROOT$font${alignc -20}${fs_used /} / ${fs_size /}$alignr ${fs_type /}
+${color aaddff}write: ${diskio_write /dev/sda}${color 66aaff}${alignc -20} read:${diskio_read /dev/sda} $color$alignr ${fs_used_perc /} %
+${fs_bar /}
+
+

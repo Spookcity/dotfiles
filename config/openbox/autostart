@@ -12,15 +12,14 @@
 #  gnome-settings-daemon &
 #fi
 
+~/.wallpapers/wp_init.sh &
 compton --config /home/rick/.config/compton.conf -b &
-sh ~/.fehbg &
-tint2 -c /home/rick/.config/tint2/grey_tint2rc &
+#sh ~/.fehbg &
+tint2 -c /home/rick/.config/tint2/tint2rc &
+conky -c ~/.conky/conkyrc &
 mpd &
-# cadence --minimized &
 # paramano &
 alsa-tray &
-conky -c ~/.conky/conkyrc2 &
-# terminator -H -b  &
 redshift-gtk &
 # xset m 5/3 0 &
 # synclient TouchpadOff=1 &

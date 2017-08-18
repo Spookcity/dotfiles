@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=WpGTK
+Categories=Settings;
+Type=Application
+StartupNotify=true
+Exec=env GTK2_RC_FILES=/usr/share/themes/FlatStudioCustom/gtk-2.0/gtkrc wpg

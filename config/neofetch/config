@@ -302,7 +302,7 @@ thumbnail_dir="$HOME/.cache/thumbnails/neofetch"
 
 # W3m-img path
 # Some systems have this in another location
-w3m_img_path="/usr/lib/w3m/w3mimgdisplay"
+--w3m --/home/rick/.walls/archlinux.jpg"
 
 # Image position
 # Only works with the w3m backend
@@ -311,7 +311,7 @@ image_position="left"
 
 # Crop mode
 # --crop_mode normal/fit/fill
-crop_mode="normal"
+crop_mode="fit"
 
 # Crop offset
 # Only affects normal mode.

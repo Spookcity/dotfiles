@@ -1,7 +1,6 @@
 # PATHS
 [ -f ~/.oh-my-zsh/custom/exports ] && source ~/.oh-my-zsh/custom/exports
 [ -f ~/.oh-my-zsh/custom/aliases ] && source ~/.oh-my-zsh/custom/aliases
-
 # Path to your oh-my-zsh installation.
   export ZSH=/home/rick/.oh-my-zsh
 
@@ -96,7 +95,3 @@ source /usr/bin/virtualenvwrapper.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/id_rsa"
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
-fi

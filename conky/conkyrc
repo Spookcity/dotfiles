@@ -1,129 +1,87 @@
-background no
-use_xft yes
-xftfont 123:size=8.5
-xftalpha 0.7
-update_interval 1
-total_run_times 0
-own_window yes
-own_window_type override
-own_window_transparent yes
-own_window_argb_visual yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-double_buffer yes
-#default_bar_size 0 6
- 
-maximum_width 296
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders yes
-default_color white
-default_shade_color red
-default_outline_color green
-alignment top_right
-gap_x 28
-#gap_y 230
-gap_y 20
-no_buffers yes
-uppercase no
-cpu_avg_samples 2
-net_avg_samples 2
-override_utf8_locale yes
-use_spacer no
+-- All credit for original design by raphael141714 (https://github.com/raphael141714/personnal-Conky)
+-- Modified to fit my needs by Spookcity
 
-# Lua Load  #
-#lua_load /home/rick/.conky/clock_rings.lua
-#lua_draw_hook_pre clock_rings
+conky.config = {
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+    update_interval=1,
+    background=false,
+    text_buffer_size=2048,
+    double_buffer=true,
+    no_buffers=true,
+    use_xft=true,
+    font='Hack:bold:pixelsize=10',
+    override_utf8_locale=true,
+    own_window=true,
+    own_window_type='desktop',
+    own_window_class='Conky',
+    own_window_hints='undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_colour='#333333',
+    own_window_argb_visual = yes,
+    own_window_transparent = true,
+    alignment = 'top_right',
+    gap_x = 12,
+    gap_y = 55,
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+    lua_load = "/home/rick/.conky/conky/graphs.lua",
+    lua_draw_hook_pre = 'conky_main',
+    draw_borders = false,
+    draw_graph_borders = true,
+    draw_outline = false,
+    draw_shades = false,
+    border_inner_margin=8,
+    border_outer_margin=0,
+    default_color="#ecf0f1"
+}
 
-TEXT
+conky.text = [[
+${offset 80}${voffset 0}${font Hack:bold:pixelsize=18}Time ${hr 2}${lua conky_TIME_clock 48 48}
+${offset 80}${voffset 4}${font Hack:bold:pixelsize=22}${time %I:%M:%S}
+${offset 80}${voffset -5}${font Hack:pixelsize=12}${time %A %d %B %Y}
 
-${alignc -10}${font Open Sans:size=20}${color dodgerblue3}Arch${color}Linux$font$color
-${voffset 4}$color${font}${font Open Sans:size=16}$alignr${voffset -15}${time %I:%M}$font
-${voffset -4}${color dodgerblue3}${font Open Sans:Bold:size=10}DATE ${hr 5}$color$font
-$color${font Open Sans:size=12}$alignc${time %A}, ${time %d %B %Y}$font$color
+${voffset 15}${offset 80}${font Hack:bold:pixelsize=18}System ${hr 2}${lua conky_UPTIME_timer 48 148}
 
+${offset 80}${voffset -23}${font}Uptime : ${font Hack:pixelsize=12}${uptime}
+${offset 80}${font}Distribution : ${font Hack:pixelsize=12}${no_update $distribution}
+${offset 80}${font}${no_update $sysname} : ${voffset -2}${font Hack:pixelsize=12}${no_update $kernel}
 
-# SYS
-${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}SYSTEM ${hr 5}$color${font}
-$sysname $kernel $alignr $machine
-Uptime: $alignr $uptime
-#Last System Update:$alignr${execi 60 sh ~/bin/pacman-date.sh}
-# GPU Temperature $alignr ${execi 30 sensors | grep 'temp1:' | cut -c16-17}°C
+${offset 80}${voffset 1}${font Hack:bold:pixelsize=20}CPU ${hr 2}${lua conky_CPU_square 48 246}
 
+${offset 80}${voffset -20}${cpugraph cpu1 8,84 2980b9 c0392b -t}
+${offset 80}${voffset -13}${cpugraph cpu2 8,84 2980b9 c0392b -t}
+${offset 80}${voffset -10}${cpugraph cpu0 16,168 2980b9 c0392b -t}$font   ${voffset -6}${font Hack:bold:pixelsize=12}${cpu cpu0}%
 
-# File System
-${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}FILE SYSTEM ${fs_bar 5}$color
-$color${font Open Sans:bold:size=8.5}Root${goto 60}${fs_used /}${alignr}${fs_size /}
-$color${font Open Sans:bold:size=8.5}Home${goto 60}${fs_used /home}${alignr}${fs_size /home}
-$color${font Open Sans:bold:size=8.5}Stuff${goto 60}${fs_used /mnt/Ricks_Stuff}${alignr}${fs_size /mnt/Ricks_Stuff}
-
-# CPU
-${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}CPU ${cpubar 5}
-$color${font}Intel® Core 2 Quad @ ${freq_g cpu0}GHz $alignr ${font Open Sans:Bold:size=7}$cpu% 
-${font Open Sans:Bold:size=8}${cpu cpu0}% ${alignc 60}${color dodgerblue3}${cpubar cpu1}${color}
-${font Open Sans:Bold:size=8}${cpu cpu1}% ${alignc 60}${color dodgerblue3}${cpubar cpu2}${color}
-
-${voffset -10}------------------------------------------------------------- ${font Open Sans:Bold:size=10}${color dodgerblue3}CPU${color}${font}${voffset -1} -
-#${hr 1}
-${top name 1}${alignr}${top cpu 1} %
-#${voffset -14}${alignr}${offset -60}${top mem 1} %
-${top name 2}${alignr}${top cpu 2} %
-#${voffset -14}${alignr}${offset -60}${top mem 2} %
-${top name 3}${alignr}${top cpu 3} %
-#${voffset -14}${alignr}${offset -60}${top mem 3} %
-#${top name 4}${alignr}${top cpu 4} %
-#${voffset -13}${alignr}${offset -60}${top mem 4} %
-# ${top name 5}${alignr}${top cpu 5} %
-# ${voffset -13}${alignr}${offset -60}${top mem 5} %
+${offset 80}${voffset 18}${font Hack:bold:pixelsize=20}RAM ${hr 2}${lua conky_double_RAM_circle 48 338}
+${offset 80}${voffset -1}${font}RAM   ${voffset -2}${font Hack:pixelsize=12}$mem${font}${goto 215}${voffset -1}max $memmax
+${font Hack:pixelsize=12}${font}
+${offset 80}${font}SWAP  ${voffset -1}${font Hack:pixelsize=12}${voffset -1}$swap${font}${goto 216}max $swapmax
 
 
-# MEMORY
-${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}MEMORY ${membar 5} 
-$color${font Open Sans:bold:size=8.5}RAM${goto 60}${alignr}${memmax }${alignr}$alignr}
-$color${font Open Sans:bold:size=8.5}USED${goto 60}${alignr}$mem
-#$color${font Open Sans:bold:size=8.5}Used:$font $mem ${color dodgerblue3}${membar 5}
-#${color dodgerblue3}${membar 4 }${alignr}
-#$color${font Open Sans:bold:size=8.5}Buffers / Cached:$font$alignr$buffers / $cached
 
-${color}${voffset -10}------------------------------------------------------------- ${font Open Sans:Bold:size=10}${color dodgerblue3}RAM${color}${font}${voffset -1} -
-${top_mem name 1}${alignr}${top_mem mem 1} %
-#${voffset -13}${alignr}${offset -60}${top_mem mem 1} %
-${top_mem name 2}${alignr}${top_mem mem 2} %
-#${voffset -13}${alignr}${offset -60}${top_mem mem 2} %
-${top_mem name 3}${alignr}${top_mem mem 3} %
-#${voffset -13}${alignr}${offset -60}${top_mem mem 3} %
-#${top_mem name 4}${alignr}${top_mem cpu 4} %
-#${voffset -13}${alignr}${offset -60}${top_mem mem 4} %
+${offset 80}${voffset -27}${font Hack Slab:bold:pixelsize=20}Internet ${hr 2}${lua conky_NET_arrows_eth 48 434}
+${offset 80}${voffset -6}$font${upspeedgraph wlp3s0 12,84 f1c40f f39c12 -t -l}${downspeedgraph wlp3s0 12,84 1abc9c 16a085 -t -l}
+
+${offset 80}${font}T. : ${font Hack:pixelsize=12}${totalup wlp3s0}$alignr${font}T : ${font Hack:pixelsize=12}${totaldown wlp3s0}$font
+${offset 80}${font}UP : ${font Hack:pixelsize=12}${upspeed wlp3s0}$font${alignr}DOWN : ${font Hack:pixelsize=12}${downspeed wlp3s0}
 
 
-# Swap
-${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}SWAP ${swapbar 5}
-$color${font Open Sans:bold:size=8.5}Used:$font $swap ${color dodgerblue3}${swapbar}
-$color${font Open Sans:bold:size=8.5}Total${goto 60}${alignr}${swapmax}
-
-# NETWORK
-${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue4}NETWORK ${hr 5}
-#$color${font Open Sans:bold:size=8.5}External IP ${font}${alignr}${execi 60 curl http://ip.tupeux.com --connect-timeout 2 | grep -o "[0-9]*\.[0-9]*\.[0-9]*\.[0-9]*"}$font
-
-${voffset -10}$color${font Open Sans:bold:size=8.5}WiFi $font${wireless_bitrate wlp3s0} $alignr ${addr wlp3s0}
-${voffset -14}$alignc${wireless_essid wlp3s0}
-$alignc${wireless_link_bar 4,260 wlp3s0}   
-↑ ${upspeedf wlp3s0} kb/s $alignr ${totalup wlp3s0}
-${voffset -14}$alignc${upspeedgraph wlp3s0 10,120 000000 aaddff}
-↓ ${downspeedf wlp3s0} kb/s $alignr ${totaldown wlp3s0}
-${voffset -14}$alignc${downspeedgraph wlp3s0 10,120 000000 66aaff}
-
-#${voffset -14}$alignc${execpi 4 echo "\${font}\${color}ping: \${font Open Sans:bold:size=8.5}\${color #66aaff}$(ping -W 1 -c 1 8.8.8.8 -q | grep rtt | egrep [0-9]+\.[0-9]+ -o | head -n 2 | tail -n 1)\${font}\${color} ms"}
-
-#${voffset -10}${font Open Sans:bold:size=8.5}Ethernet $font$alignr ${addr enp0s25}
-#↑ ${upspeedf enp0s25} kb/s $alignr ${totalup enp0s25}
-#${voffset -14}$alignc${upspeedgraph enp0s25 10,120  000000 aaddff}
-#↓ ${downspeedf enp0s25} kb/s $alignr ${totaldown enp0s25}
-#${voffset -14}$alignc${downspeedgraph enp0s25 10,120  000000 66aaff}
-# HDD
-${voffset -8}${font Open Sans:Bold:size=10}${color dodgerblue3}DISCS ${hr 5}
-$color${font Open Sans:bold:size=8.5}${font Open Sans:bold:size=8.5}ROOT$font${alignc -20}${fs_used /} / ${fs_size /}$alignr ${fs_type /}
-${color aaddff}write: ${diskio_write /dev/sda}${color 66aaff}${alignc -20} read:${diskio_read /dev/sda} $color$alignr ${fs_used_perc /} %
-${fs_bar /}
-
-
+${offset 80}${voffset -10}${font Hack:bold:pixelsize=20}Disks ${hr 2}${lua conky_DISK_cylinder 48 542}
+${offset 80}${voffset -3}${font}Read  : ${font Hack:pixelsize=12}$diskio_read${voffset -5}${goto 250}${diskiograph_read /dev/sda 16,50 9b59b6 8e44ad -l}
+${voffset 6}${offset 80}${font}Write : ${font Hack:pixelsize=12}$diskio_write${voffset -5}${goto 250}${diskiograph_write /dev/sda 16,50 9b59b6 8e44ad -l}
+${offset 80}${font Hack:BOLD:pixelsize=10}HOME    ${fs_used /home} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /home}$font (${fs_used_perc /home}%)
+${offset 80}${font Hack:BOLD:pixelsize=10}ROOT    ${fs_used /} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /}$font (${fs_used_perc /}%)
+${offset 80}${font Hack:BOLD:pixelsize=10}STUFF    ${fs_used /mnt/Ricks_Stuff} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /mnt/Ricks_Stuff}$font  (${fs_used_perc /mnt/Ricks_Stuff}%)
+${voffset 12}${font Hack:bold:pixelsize=20}Processes ${hr 2}
+${font Hack:bold:pixelsize=12}Name             ${alignr}PID            ${alignr}CPU%${font Hack:pixelsize=12}
+${color #3498db}${top name 1}     ${top pid 1} ${alignr}${top cpu 1}
+${color #3498db}${top name 2}     ${top pid 2} ${alignr}${top cpu 2}
+${color #ecf0f1}${top name 3}     ${top pid 3} ${alignr}${top cpu 3}
+${color #ecf0f1}${top name 4}     ${top pid 4} ${alignr}${top cpu 4}
+${color #ecf0f1}${top name 5}     ${top pid 5} ${alignr}${top cpu 5}
+${color #ecf0f1}${top name 6}     ${top pid 6} ${alignr}${top cpu 6}
+${color #ecf0f1}${top name 7}     ${top pid 7} ${alignr}${top cpu 7}
+${color #ecf0f1}${top name 8}     ${top pid 8} ${alignr}${top cpu 8}
+${color #ecf0f1}${top name 9}     ${top pid 9} ${alignr}${top cpu 9}
+${color #ecf0f1}${top name 10}     ${top pid 10} ${alignr}${top cpu 10}]]

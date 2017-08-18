@@ -1,5 +1,5 @@
 [options]
-font = Monospace 11
+#font = Monospace 11
 font = Droid Sans Mono Slashed for Powerline 10.5
 
 [options]
@@ -38,49 +38,29 @@ cursor_shape = ibeam
 #size_hints = false
 
 [colors]
-foreground      = #c0b18b
-foreground_bold = #ebdbb2
-cursor          = #ebdbb2
-background      = #1f1f1f
 
-# 16 color space
+# Special
+background=#24251F
+foreground=#727b5b
+cursor=#535353
 
-# Black, Gray, Silver, White
-color0  = #4A3637
-color8  = #4A3637
-color7  = #c0b18b
-color15 = #c0b18b
+# Colors
+color0=#24251F
+color1=#475324
+color2=#45531A
+color3=#444444
+color4=#3F3F40
+color5=#40413F
+color6=#535353
+color7=#3D4231
+color8=#37382f
+color9=#829941
+color10=#849f31
+color11=#767676
+color12=#707072
+color13=#727370
+color14=#858585
+color15=#727b5b
 
-# Red
-color1  = #d17b49
-color9  = #d17b49
-
-# Green
-color2  = #7b8748
-color10 = #7b8748
-
-# Yellow
-color3  = #af865a
-color11 = #af865a
-
-# Blue
-color4  = #535C5C
-color12 = #535C5C
-
-# Purple
-color5  = #775759
-color13 = #775759
-
-# Teal
-color6  = #6d715e
-color14 = #6d715e
-
-# Extra colors
-color16 = #fe8019
-color17 = #d65d0e
-color18 = #3c3836
-color19 = #504945
-color20 = #bdae93
-color21 = #ebdbb2
 
 # background = rgba(0, 0, 0, 0.9)
