@@ -402,6 +402,15 @@
         <command>termite --geometry=1200x800 -e ranger</command>
       </action>
     </keybind>
+       <keybind key="W-S-w">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>weechat</name>
+        </startupnotify>
+        <command>termite --geometry=1000x700 -e weechat</command>
+      </action>
+    </keybind>
     <keybind key="W-h">
       <action name="Execute">
         <startupnotify>

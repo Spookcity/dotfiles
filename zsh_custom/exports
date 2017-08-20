@@ -6,4 +6,4 @@ export TERM="xterm-256color"
 export ANDROID_HOME=/opt/android-sdk
 export PATH=:~/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/lib:/sbin:/bin:/usr/bin/core_perl:/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/opt/android-ndk
 export PATH=$PATH:/opt/gradle/gradle-4.1/bin
-/home/rick/.config/neofetch/neofetch --config /home/rick/.config/neofetch/config
+/home/rick/.config/neofetch/neofetch --config /home/rick/.config/neofetch/config/config.conf

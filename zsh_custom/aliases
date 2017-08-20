@@ -1,7 +1,7 @@
 # arch stuffs
-alias upgrade='sudo pacman -Syu'
-alias yup='yaourt -Syua'
-alias orphan='pacman -Qtd'
+alias upgrade='pacaur -Syua'
+alias orphan='pacaur -Qtd'
+alias pac='pacaur -Ss'
 alias y='yaourt'
 
 # python env
@@ -21,6 +21,7 @@ alias gb='git branch -a'
 alias gbl='git blame -b -w'
 alias gbr='git branch --remote'
 alias gc='git checkout'
+alias gcm='git commit -m'
 alias gcl='git clone'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
@@ -49,5 +50,5 @@ alias q='exit'
 alias mka='/home/rick/bin/color.sh'
 alias gconf='GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc make gconfig'
 
-# random 
+# random
 alias weather='/home/rick/bin/weather.sh i'
