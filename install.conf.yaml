@@ -200,3 +200,18 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.config/nvim:
+        path: config/nvim/
+        create: true
+    ~/.config/neofetch:
+        path: config/neofetch/
+        create: true
+    ~/.config/herbstluftwm:
+        path: config/herbstluftwm/
+        create: true
+
+

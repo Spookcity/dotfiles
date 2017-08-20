@@ -34,3 +34,6 @@
 *xterm.color15:#c0b18b
 
 *TkTheme: clam
+
+!! Colors
+include "/home/rick/.colors/archlinux"

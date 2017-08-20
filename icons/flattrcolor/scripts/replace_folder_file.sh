@@ -1,16 +1,16 @@
 #!/bin/bash
 #	default color: 178984
-glyphColorOriginal=202510
+glyphColorOriginal=1b1d16
 glyphColorNew=1b1d16
 
 #	Front
 #	default color: 36d7b7
-frontColorOriginal=59692c
+frontColorOriginal=4e543e
 frontColorNew=4e543e
 
 #	Back
 #	default color: 1ba39c
-backColorOriginal=323b19
+backColorOriginal=2c2f23
 backColorNew=2c2f23
 
 #	Paper

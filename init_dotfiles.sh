@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+ #!/usr/bin/env bash
 
 # Colors as per: http://www.tldp.org/LDP/abs/html/colorizing.html
 
@@ -173,7 +173,6 @@ while [ $# -ne 0 ]; do
 done
 
 paths=('~/.profile'
-	'~/.bash_profile'
 	'~/.bashrc'
 	'~/.ncmpcpp'
 	'~/.redshiftgrc'
@@ -190,24 +189,24 @@ paths=('~/.profile'
 	'~/.themes'
 	'~/.dircolors'
 	'~/.gtkrc-2.0'
-	'~/.nano'
 	'~/.zshrc'
 	'~/bin'
 	'~/.mpd'
 	'~/.Xdefaults'
-    '~/.walls'
+             '~/.walls'
 	'~/.xinitrc'
 	'~/.config/fontconfig'
 	'~/.config/openbox'
-	'~/.config/git-cola'
 	'~/.config/git'
 	'~/.config/obmenu-generator'
 	'~/.config/lemonbar'
-    '~/.config/polybar'
+            '  ~/.config/polybar'
 	'~/.config/rofi'
+            '~/.config/nvim'
 	'~/.config/neofetch'
 	'~/.config/htop'
 	'~/.config/codeblocks'
+             '~/.config/herbstluftwm'
 	'~/.config/ranger'
 	'~/.config/sunflower'
 	'~/.config/compton.conf'

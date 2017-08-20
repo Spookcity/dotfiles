@@ -44,7 +44,7 @@ set $ws9 IX
 set $ws10 X
 
 # i3-gaps stuff
-gaps inner 15
+gaps inner 10
 gaps outer 0
 smart_borders on
 new_window none
@@ -266,6 +266,7 @@ bar {
 }
 
 # AUTOSTART
+exec_always --no-startup-id conky -c ~/.conky/conkyrc &
+exec_always --no-startup-id ~/.wallpapers/wp_init.sh &
 exec_always --no-startup-id compton  --config /home/rick/.config/compton.conf -b &
-exec_always --no-startup-id sh ~/.fehbg &
 exec --no-startup-id redshift-gtk &

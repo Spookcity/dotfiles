@@ -8,7 +8,7 @@ allow_bold = true
 clickable_url = true
 dynamic_title = true
 #fullscreen = true
-geometry = 760x500
+geometry = 780x500
 #icon_name = terminal
 #mouse_autohide = false
 #scroll_on_output = false
@@ -40,27 +40,27 @@ cursor_shape = ibeam
 [colors]
 
 # Special
-background=#24251F
-foreground=#727b5b
-cursor=#535353
+background=#1d2120
+foreground=#ebdbb2
+cursor=#a89984y
 
 # Colors
-color0=#24251F
-color1=#475324
-color2=#45531A
-color3=#444444
-color4=#3F3F40
-color5=#40413F
-color6=#535353
-color7=#3D4231
-color8=#37382f
-color9=#829941
-color10=#849f31
-color11=#767676
-color12=#707072
-color13=#727370
-color14=#858585
-color15=#727b5b
+color0=#1d2021
+color1=#cc241d
+color2=#98971a
+color3=#d79921
+color4=#458588
+color5=#b16286
+color6=#689d6a
+color7=#a89984
+color8=#928374
+color9=#fb4934
+color10=#b8bb26
+color11=#fabd2f
+color12=#83a598
+color13=#d3869b
+color14=#8ec07c
+color15=#ebdbb2
 
 
-# background = rgba(0, 0, 0, 0.9)
+background = rgba(9, 9, 9, 0.8)

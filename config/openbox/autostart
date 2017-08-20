@@ -13,13 +13,13 @@
 #fi
 
 ~/.wallpapers/wp_init.sh &
+conky -c ~/.conky/conkyrc &
 compton --config /home/rick/.config/compton.conf -b &
 tint2 -c /home/rick/.config/tint2/tint2rc &
 conky -c ~/.conky/conkyrc &
 mpd &
-# paramano &
+paramano &
 alsa-tray &
-redshift-gtk &
+redshift &
 # xset m 5/3 0 &
 # synclient TouchpadOff=1 &
-

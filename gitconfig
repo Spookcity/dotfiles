@@ -44,5 +44,6 @@
 	spellcheck = false
 	fontdiff = Hack,10,-1,5,50,0,0,0,0,0
 	blameviewer = git gui blame
+	terminal = termite
 	savewindowsettings = true
 	boldheaders = true
