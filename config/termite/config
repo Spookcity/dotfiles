@@ -1,6 +1,5 @@
 [options]
-#font = Monospace 11
-font = Droid Sans Mono Slashed for Powerline 10.5
+font = Droid Sans Mono Dotted for Powerline 10
 
 [options]
 allow_bold = true

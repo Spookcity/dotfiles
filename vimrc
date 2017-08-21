@@ -7,10 +7,19 @@ colorscheme gruvbox
 set bg=dark
 
 " Vim-Air Theme
-let g:airline_theme='base16_twilight'
+let g:airline#extensions#tabline#enabled = 1
+set hidden
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline_powerline_fonts = 1
-let g:airline_section_b = '%{strftime("%a,%h %e ~ %I:%M")}'
-let g:airline_section_y = 'BN: %{bufnr("%")}'
+let g:airline_theme='wombat'
+" cnoreabbrev <expr> x getcmdtype() == ":" && getcmdline() == 'x' ? 'Sayonara' : 'x'
+set termguicolors
+set noshowmode
+set noswapfile
+filetype on
+set relativenumber number
+ let g:gitgutter_max_signs = 1000  " default value
 
 " enable syntax highlighting
 syntax on

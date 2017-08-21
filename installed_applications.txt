@@ -4,7 +4,7 @@ alsa-plugins 1.1.4-1
 alsa-tools 1.1.3-1
 alsa-tray 0.6-2
 alsa-utils 1.1.4-1
-android-apktool 2.2.3-1
+android-apktool 2.2.4-1
 android-bash-completion 20131016-1
 android-sdk 26.0.2-2
 android-sdk-platform-tools r26.0.0-1
@@ -121,7 +121,6 @@ libtool 2.4.6-8
 libusb-compat 0.1.5-1
 licenses 20140629-2
 linux 4.12.8-1
-linux-pf-core2 4.11.5-1
 linux-zen 4.12.8-1
 llvm 4.0.1-5
 logrotate 3.12.3-1
@@ -181,6 +180,7 @@ powerline-fonts 2.6-1
 procps-ng 3.3.12-1
 psmisc 23.1-1
 pulseaudio-alsa 2-3
+pxdo-git 67dfedc-1
 python-lxml 3.8.0-2
 python-pyalsaaudio 0.8.4-1
 python-pyside 1.2.4-6
@@ -194,6 +194,7 @@ reiserfsprogs 3.6.25-1
 repo 1.12.37-1
 rofi-git 1.3.1.r723.g96c70813-1
 rsync 3.1.2-2
+ruby 2.4.1-3
 s-nail 14.9.3-1
 schedtool 1.3.0-3
 sdl 1.2.15-9
@@ -201,7 +202,7 @@ sed 4.4-1
 shadow 4.5-2
 siji-git r21.95369af-1
 skypeforlinux-bin 5.4.0.1-1
-soulseekqt 20170220-2
+soulseekqt 20170729-1
 squashfs-tools 4.3-4
 sublime-text-dev 3.3126-1
 sudo 1.8.20.p2-1
@@ -212,7 +213,6 @@ systemd-sysvcompat 234.11-8
 tar 1.29-2
 tcp-wrappers 7.6.24-3
 termcap 1.3.1-4
-terminator 1.91-5
 termite-git 12.r32.g3c2753b-1
 termite-terminfo-git 12.r32.g3c2753b-1
 texinfo 6.4-1
@@ -230,7 +230,7 @@ ttf-material-icons r120.5ab428852-1
 ttf-meslo 1.2.1-1
 ufw 0.35-3
 unetbootin 655-1
-unrar 1:5.5.7-1
+unrar 1:5.5.8-1
 unzip 6.0-12
 usbutils 008-1
 util-linux 2.30.1-2
@@ -239,6 +239,7 @@ vi 1:070224-2
 vim 8.0.0851-1
 vim-fugitive 2.2-2
 w3m 0.5.3.git20170102-2
+weechat 1.9-2
 wget 1.19.1-2
 which 2.21-2
 wine-staging 2.14-1

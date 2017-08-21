@@ -215,3 +215,55 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.colors:
+        path: colors/
+        create: true
+    ~/.weechat:
+        path: weechat/
+        create: true
+    ~/.config/neofetch:
+        path: config/neofetch/
+        create: true
+    ~/.config/redshift.conf:
+        path: config/redshift.conf
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.config/neofetch:
+        path: config/neofetch/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.weechat/weechat.conf:
+        path: weechat/weechat.conf
+        create: true
+    ~/.config/neofetch:
+        path: config/neofetch/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.config/neofetch:
+        path: config/neofetch/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/.config/neofetch:
+        path: config/neofetch/
+        create: true
+
+

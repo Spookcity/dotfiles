@@ -217,7 +217,6 @@ paths=('~/.profile'
              '~/.config/redshift.conf'
 	'~/.config/i3'
 	'~/.config/rtile'
-	'~/.config/terminator'
 	'~/.config/tint2')
 
 setupshell=''

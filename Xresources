@@ -36,4 +36,4 @@
 *TkTheme: clam
 
 !! Colors
-include "/home/rick/.colors/archlinux"
+# include "/home/rick/.colors/archlinux"

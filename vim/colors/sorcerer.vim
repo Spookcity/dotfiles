@@ -1,21 +1,26 @@
-" 'sorcerer.vim' -- Vim color scheme.
-" Maintainer: Andrew Lawson
-" Forked from 'vim-scripts/Sorcerer' by Jeet Sukumaran
-" Based on 'Mustang' by Henrique C. Alves (hcarvalhoalves@gmail.com),
+"   ██████  ██████  ██   ██ ██████  █████   █████  ██████  █████  ██████
+"  ██░░░░  ██░░░░██░██  ░██░░██░░████░░░██ ██░░░██░░██░░████░░░██░░██░░██
+" ░░█████ ░██   ░██░██  ░██ ░██ ░░░██  ░░ ░███████ ░██ ░░░███████ ░██ ░░
+"  ░░░░░██░██   ░██░██  ░██ ░██   ░██   ██░██░░░░  ░██   ░██░░░░  ░██
+"  ██████ ░░██████ ░░██████░███   ░░█████ ░░██████░███   ░░██████░███
+" ░░░░░░   ░░░░░░   ░░░░░░ ░░░     ░░░░░   ░░░░░░ ░░░     ░░░░░░ ░░░
+"  r  e  a  d     c  o  d  e     l  i  k  e     a     w  i  z  a  r  d
+"
+" sourcerer by xero harrison (http://sourcerer.xero.nu)
+"  ├─ based on sorcerer by Jeet Sukumaran (http://jeetworks.org)
+"  └─ based on mustang by Henrique C. Alves (hcarvalhoalves@gmail.com)
 
 set background=dark
-
 hi clear
 
 if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "sorcerer"
+let colors_name = "sourcerer"
 
-" GUI Colors {{{1
-" ============================================================================
 
+"  █▓▒░ GUI colors
 hi Normal       guifg=#c2c2b0 guibg=#222222 gui=NONE
 hi ColorColumn  guifg=NONE    guibg=#1c1c1c
 hi Cursor       guifg=NONE    guibg=#626262 gui=NONE
@@ -30,16 +35,17 @@ hi ErrorMsg     guifg=#ff6a6a guibg=NONE    gui=bold
 hi FoldColumn   guifg=#68838b guibg=#4B4B4B gui=bold
 hi Folded       guifg=#406060 guibg=#232c2c gui=NONE
 hi IncSearch    guifg=#ffffff guibg=#ff4500 gui=bold
-hi LineNr       guifg=#686858 guibg=NONE    gui=NONE
+hi LineNr       guifg=#878787 guibg=#3A3A3A gui=NONE
 hi MatchParen   guifg=#fff000 guibg=NONE    gui=bold
-hi ModeMsg      guifg=#000000 guibg=#00ff00 gui=bold
+hi ModeMsg      guifg=#afafaf guibg=#222222 gui=bold
 hi MoreMsg      guifg=#2e8b57 guibg=NONE    gui=bold
 hi NonText      guifg=#404050 guibg=NONE    gui=NONE
 
-hi Pmenu        guifg=#ffffff guibg=#444444
-hi PmenuSel     guifg=#000000 guibg=#b1d631
-"  hi           PmenuSbar     guifg=#ffffff guibg=#c1cdc1 gui=NONE
-"  hi           PmenuThumb    guifg=#ffffff guibg=#838b83 gui=NONE
+" completions
+hi Pmenu        guifg=#A8A8A8 guibg=#3A3A3A
+hi PmenuSel     guifg=#000000 guibg=#528B8B
+hi PmenuSbar    guifg=#000000 guibg=#528B8B
+hi PmenuThumb   guifg=#000000 guibg=#528B8B
 
 hi Question     guifg=#00ee00 guibg=NONE    gui=bold
 hi Search       guifg=#000000 guibg=#d6e770 gui=bold
@@ -61,7 +67,7 @@ hi WarningMsg   guifg=#ee9a00 guibg=NONE    gui=NONE
 hi WildMenu     guifg=#000000 guibg=#87ceeb gui=NONE
 hi ExtraWhitespace guifg=fg   guibg=#528b8b gui=NONE
 
-"  Syntax highlighting
+"  syntax highlighting
 hi Comment      guifg=#686858 gui=italic
 hi Boolean      guifg=#ff9800 gui=NONE
 hi String       guifg=#779b70 gui=NONE
@@ -76,7 +82,7 @@ hi Special      guifg=#719611 gui=NONE
 hi PreProc      guifg=#528b8b gui=NONE
 hi Todo         guifg=#8f6f8f guibg=#202020 gui=italic,underline,bold
 
-" Diff
+" diff
 hi diffOldFile      guifg=#88afcb   guibg=NONE      gui=italic
 hi diffNewFile      guifg=#88afcb   guibg=NONE      gui=italic
 hi diffFile         guifg=#88afcb   guibg=NONE      gui=italic
@@ -94,16 +100,13 @@ hi link             diffNoEOL       Constant
 hi link             diffCommon      Constant
 hi link             diffComment     Constant
 
-" Python
+" python
 hi pythonException  guifg=#90b0d1 guibg=NONE gui=NONE
 hi pythonExClass    guifg=#996666 guibg=NONE gui=NONE
 hi pythonDecorator  guifg=#888555 guibg=NONE gui=NONE
 hi link pythonDecoratorFunction pythonDecorator
 
-" 1}}}
-
-" 256 Colors {{{1
-" ============================================================================
+"  █▓▒░ 256 colors
 hi Normal                 cterm=NONE             ctermbg=NONE  ctermfg=145
 hi ColorColumn            cterm=NONE             ctermbg=16    ctermfg=NONE
 hi Cursor                 cterm=NONE             ctermbg=241   ctermfg=fg
@@ -118,9 +121,9 @@ hi ErrorMsg               cterm=bold             ctermbg=NONE  ctermfg=203
 hi FoldColumn             cterm=bold             ctermbg=239   ctermfg=66
 hi Folded                 cterm=NONE             ctermbg=16    ctermfg=60
 hi IncSearch              cterm=bold             ctermbg=202   ctermfg=231
-hi LineNr                 cterm=NONE             ctermbg=NONE  ctermfg=59
+hi LineNr                 cterm=NONE             ctermbg=237   ctermfg=102
 hi MatchParen             cterm=bold             ctermbg=NONE  ctermfg=226
-hi ModeMsg                cterm=bold             ctermbg=46    ctermfg=16
+hi ModeMsg                cterm=bold             ctermbg=NONE  ctermfg=145
 hi MoreMsg                cterm=bold             ctermbg=234   ctermfg=29
 hi NonText                cterm=NONE             ctermbg=NONE  ctermfg=59
 hi Pmenu                  cterm=NONE             ctermbg=238   ctermfg=231
@@ -146,27 +149,27 @@ hi WarningMsg             cterm=NONE             ctermbg=234   ctermfg=208
 hi WildMenu               cterm=NONE             ctermbg=116   ctermfg=16
 hi ExtraWhitespace        cterm=NONE             ctermbg=66    ctermfg=fg
 
-hi Comment                cterm=NONE             ctermbg=NONE    ctermfg=59
-hi Boolean                cterm=NONE             ctermbg=NONE    ctermfg=208
-hi String                 cterm=NONE             ctermbg=NONE    ctermfg=101
-hi Identifier             cterm=NONE             ctermbg=NONE    ctermfg=145
-hi Function               cterm=NONE             ctermbg=NONE    ctermfg=230
-hi Type                   cterm=NONE             ctermbg=NONE    ctermfg=103
-hi Statement              cterm=NONE             ctermbg=NONE    ctermfg=110
-hi Keyword                cterm=NONE             ctermbg=NONE    ctermfg=110
-hi Constant               cterm=NONE             ctermbg=NONE    ctermfg=208
-hi Number                 cterm=NONE             ctermbg=NONE    ctermfg=172
-hi Special                cterm=NONE             ctermbg=NONE    ctermfg=64
-hi PreProc                cterm=NONE             ctermbg=NONE    ctermfg=66
-hi Todo                   cterm=bold,underline   ctermbg=234     ctermfg=96
+hi Comment                cterm=NONE             ctermbg=NONE  ctermfg=59
+hi Boolean                cterm=NONE             ctermbg=NONE  ctermfg=208
+hi String                 cterm=NONE             ctermbg=NONE  ctermfg=101
+hi Identifier             cterm=NONE             ctermbg=NONE  ctermfg=145
+hi Function               cterm=NONE             ctermbg=NONE  ctermfg=230
+hi Type                   cterm=NONE             ctermbg=NONE  ctermfg=103
+hi Statement              cterm=NONE             ctermbg=NONE  ctermfg=110
+hi Keyword                cterm=NONE             ctermbg=NONE  ctermfg=110
+hi Constant               cterm=NONE             ctermbg=NONE  ctermfg=208
+hi Number                 cterm=NONE             ctermbg=NONE  ctermfg=172
+hi Special                cterm=NONE             ctermbg=NONE  ctermfg=64
+hi PreProc                cterm=NONE             ctermbg=NONE  ctermfg=66
+hi Todo                   cterm=bold,underline   ctermbg=234   ctermfg=96
 
-hi diffOldFile            cterm=NONE             ctermbg=NONE    ctermfg=67
-hi diffNewFile            cterm=NONE             ctermbg=NONE    ctermfg=67
-hi diffFile               cterm=NONE             ctermbg=NONE    ctermfg=67
-hi diffLine               cterm=NONE             ctermbg=NONE    ctermfg=67
-hi diffAdded              cterm=NONE             ctermfg=NONE    ctermfg=71
-hi diffRemoved            cterm=NONE             ctermfg=NONE    ctermfg=124
-hi diffChanged            cterm=NONE             ctermfg=NONE    ctermfg=68
+hi diffOldFile            cterm=NONE             ctermbg=NONE  ctermfg=67
+hi diffNewFile            cterm=NONE             ctermbg=NONE  ctermfg=67
+hi diffFile               cterm=NONE             ctermbg=NONE  ctermfg=67
+hi diffLine               cterm=NONE             ctermbg=NONE  ctermfg=67
+hi diffAdded              cterm=NONE             ctermfg=NONE  ctermfg=71
+hi diffRemoved            cterm=NONE             ctermfg=NONE  ctermfg=124
+hi diffChanged            cterm=NONE             ctermfg=NONE  ctermfg=68
 hi link             diffSubname     diffLine
 hi link             diffOnly        Constant
 hi link             diffIdentical   Constant
@@ -177,17 +180,17 @@ hi link             diffNoEOL       Constant
 hi link             diffCommon      Constant
 hi link             diffComment     Constant
 
-hi pythonClass            cterm=NONE             ctermbg=NONE    ctermfg=fg
-hi pythonDecorator        cterm=NONE             ctermbg=NONE    ctermfg=101
-hi pythonExClass          cterm=NONE             ctermbg=NONE    ctermfg=95
-hi pythonException        cterm=NONE             ctermbg=NONE    ctermfg=110
-hi pythonFunc             cterm=NONE             ctermbg=NONE    ctermfg=fg
-hi pythonFuncParams       cterm=NONE             ctermbg=NONE    ctermfg=fg
-hi pythonKeyword          cterm=NONE             ctermbg=NONE    ctermfg=fg
-hi pythonParam            cterm=NONE             ctermbg=NONE    ctermfg=fg
-hi pythonRawEscape        cterm=NONE             ctermbg=NONE    ctermfg=fg
-hi pythonSuperclasses     cterm=NONE             ctermbg=NONE    ctermfg=fg
-hi pythonSync             cterm=NONE             ctermbg=NONE    ctermfg=fg
+hi pythonClass            cterm=NONE             ctermbg=NONE  ctermfg=fg
+hi pythonDecorator        cterm=NONE             ctermbg=NONE  ctermfg=101
+hi pythonExClass          cterm=NONE             ctermbg=NONE  ctermfg=95
+hi pythonException        cterm=NONE             ctermbg=NONE  ctermfg=110
+hi pythonFunc             cterm=NONE             ctermbg=NONE  ctermfg=fg
+hi pythonFuncParams       cterm=NONE             ctermbg=NONE  ctermfg=fg
+hi pythonKeyword          cterm=NONE             ctermbg=NONE  ctermfg=fg
+hi pythonParam            cterm=NONE             ctermbg=NONE  ctermfg=fg
+hi pythonRawEscape        cterm=NONE             ctermbg=NONE  ctermfg=fg
+hi pythonSuperclasses     cterm=NONE             ctermbg=NONE  ctermfg=fg
+hi pythonSync             cterm=NONE             ctermbg=NONE  ctermfg=fg
 
 hi Conceal                cterm=NONE             ctermbg=248   ctermfg=252
 hi Error                  cterm=NONE             ctermbg=196   ctermfg=231
@@ -203,6 +206,10 @@ hi VisualNOS              cterm=bold,underline   ctermbg=NONE  ctermfg=fg
 hi cCursor                cterm=reverse          ctermbg=NONE  ctermfg=fg
 hi iCursor                cterm=NONE             ctermbg=210   ctermfg=16
 hi lCursor                cterm=NONE             ctermbg=145   ctermfg=234
-hi nCursor                cterm=NONE             ctermbg=46    ctermfg=16
+hi nCursor                cterm=NONE             ctermbg=NONE  ctermfg=145
 hi vCursor                cterm=NONE             ctermbg=201   ctermfg=16
-" 1}}}
+
+hi Pmenu                  cterm=NONE             ctermfg=248   ctermbg=237
+hi PmenuSel               cterm=NONE             ctermfg=16    ctermbg=66
+hi PmenuSbar              cterm=NONE             ctermfg=16    ctermbg=66
+hi PmenuThumb             cterm=NONE             ctermfg=16    ctermbg=66

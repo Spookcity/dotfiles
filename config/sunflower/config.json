@@ -44,7 +44,7 @@
         "selection_color": "#ffff5e5e0000", 
         "selection_indicator": "\u2731", 
         "show_expanders": false, 
-        "show_hidden": true, 
+        "show_hidden": false, 
         "single_click_navigation": true, 
         "time_format": "%H:%M %d-%m-%y"
     }, 
