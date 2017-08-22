@@ -62,8 +62,9 @@ ${offset 80}${font}SWAP  ${voffset -1}${font Hack:pixelsize=12}${voffset -1}$swa
 ${offset 80}${voffset -29}${color #849F31}${font Hack Slab:bold:pixelsize=20}Internet ${hr 2}${lua conky_NET_arrows_eth 40 441 }$color
 ${offset 80}${voffset -6}${color #849F31}$font${upspeedgraph wlp3s0 12,84 f1c40f f39c12 -t -l}${downspeedgraph wlp3s0 12,84 1abc9c 16a085 -t -l}$color
 
-${offset 80}${font}${color #AAB887}T. : ${font Hack:pixelsize=12}${totalup wlp3s0}$alignr${font}T : ${font Hack:pixelsize=12}${totaldown wlp3s0}$font$color
-${offset 80}${color #AAB887}${font}UP : ${font Hack:pixelsize=12}${upspeed wlp3s0}$font ${goto 215}DOWN : ${font Hack:pixelsize=12}${downspeed wlp3s0}$color
+${offset 80}${font}${color #AAB887}T. : ${font Hack:pixelsize=12}${voffset -1}${totalup wlp3s0}$alignr${font}T : ${voffset -1}${font Hack:pixelsize=12}${totaldown wlp3s0}$font$color
+
+${offset 80}${color #AAB887}${font}UP : ${voffset -2}${font Hack:pixelsize=12}${upspeed wlp3s0}$font ${goto 203}DOWN${voffset -2} : ${font Hack:pixelsize=12}${downspeed wlp3s0}$color
 
 
 

@@ -17,6 +17,7 @@ conky -c ~/.conky/conkyrc &
 compton --config /home/rick/.config/compton.conf -b &
 tint2 -c /home/rick/.config/tint2/tint2rc &
 conky -c ~/.conky/conkyrc &
+quicktile --daemonize &
 mpd &
 paramano &
 alsa-tray &

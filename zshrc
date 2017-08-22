@@ -86,6 +86,10 @@ autoload -U compinit && compinit
 source $ZSH/oh-my-zsh.sh
 source /usr/bin/virtualenvwrapper.sh
 
+eval $(thefuck --alias)
+# You can use whatever you want as an alias, like for Mondays:
+eval $(thefuck --alias FUCK)
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Compilation flags

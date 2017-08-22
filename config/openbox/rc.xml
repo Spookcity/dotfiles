@@ -54,6 +54,10 @@
       S: shade (roll up/down)
       D: omnipresent (on all desktops).
   -->
+
+    <cornerRadius>8</cornerRadius>
+    <cornerRadius menu="yes">3</cornerRadius>
+
     <keepBorder>yes</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
@@ -209,95 +213,22 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-W-9">
-      <action name="Execute">
-        <command>rtile.rb --split-up</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-8">
-      <action name="Execute">
-        <command>rtile.rb --split-down</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-7">
-      <action name="Execute">
-        <command>rtile.rb --split-left</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-6">
-      <action name="Execute">
-        <command>rtile.rb --split-right</command>
-      </action>
-    </keybind>
-    <keybind key="W-Up">
-      <action name="Execute">
-        <command>rtile.rb --grow-up</command>
-      </action>
-    </keybind>
-    <keybind key="W-Down">
-      <action name="Execute">
-        <command>rtile.rb --grow-down</command>
-      </action>
-    </keybind>
-    <keybind key="W-Left">
-      <action name="Execute">
-        <command>rtile.rb --grow-left</command>
-      </action>
-    </keybind>
-    <keybind key="W-Right">
-      <action name="Execute">
-        <command>rtile.rb --grow-right</command>
-      </action>
-    </keybind>
-    <keybind key="C-W-0">
-      <action name="Execute">
-        <command>rtile.rb --cycle</command>
-      </action>
-    </keybind>
-    <keybind key="W-7">
-      <action name="Execute">
-        <command>rtile.rb t</command>
-      </action>
-    </keybind>
-    <keybind key="W-8">
-      <action name="Execute">
-        <command>rtile.rb b</command>
-      </action>
-    </keybind>
-    <keybind key="W-6">
-      <action name="Execute">
-        <command>rtile.rb l</command>
-      </action>
-    </keybind>
-    <keybind key="W-5">
-      <action name="Execute">
-        <command>rtile.rb r</command>
-      </action>
-    </keybind>
-    <keybind key="W-4">
-      <action name="Execute">
-        <command>rtile.rb --cycle</command>
-      </action>
-    </keybind>
-    <keybind key="W-0">
-      <action name="Execute">
-        <command>rtile.rb --all</command>
-      </action>
-    </keybind>
     <keybind key="W-i">
       <action name="iconify">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="C-S-f">
-      <action name="ToggleMaximize">
-      </action>
-    </keybind>
     <keybind key="W-j">
       <action name="ToggleDecorations">
       </action>
     </keybind>
+<keybind key="W-A-Return">
+  <action name="ToggleMaximizeVert"/>
+</keybind>
+<keybind key="W-Return">
+   <action name="ToggleMaximizeFull"/>
+</keybind>
     <keybind key="C-A-0">
       <action name="Execute">
         <startupnotify>
@@ -373,6 +304,26 @@
         </finalactions>
       </action>
     </keybind>
+    <keybind key="W-KP_6">
+    <action name="Execute">
+        <command>rtile.rb --grow-right</command>
+    </action>
+   </keybind>
+    <keybind key="W-KP_4">
+    <action name="Execute">
+        <command>rtile.rb --grow-left</command>
+    </action>
+</keybind>
+   <keybind key="W-KP_8">
+    <action name="Execute">
+        <command>rtile.rb --grow-up</command>
+    </action>
+   </keybind>
+    <keybind key="W-KP_2">
+    <action name="Execute">
+        <command>rtile.rb --grow-down</command>
+    </action>
+</keybind>
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
@@ -411,13 +362,22 @@
         <command>termite --geometry=1000x700 -e weechat</command>
       </action>
     </keybind>
-    <keybind key="W-h">
+    <keybind key="C-W-g">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>htop</name>
+          <name>gtop</name>
         </startupnotify>
-        <command>termite --geometry=1200x800 -e htop</command>
+        <command>termite  -e gtop</command>
+      </action>
+    </keybind>
+       <keybind key="C-W-v">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>vtop</name>
+        </startupnotify>
+        <command>termite  -e vtop</command>
       </action>
     </keybind>
     <keybind key="W-g">
@@ -907,7 +867,7 @@
   </menu>
   <applications>
     <application name="subl3">
-      <decor>yes</decor>
+      <decor>no</decor>
       <maximized>no</maximized>
     </application>
     <application name="termite">
@@ -916,7 +876,19 @@
       <focus>yes</focus>
       <maximized>no</maximized>
     </application>
-    <application name="terminator">
+    <application name="git-cola">
+      <decor>no</decor>
+      <skip_taskbar>no</skip_taskbar>
+      <focus>yes</focus>
+      <maximized>no</maximized>
+    </application>
+     <application name="git-dag">
+      <decor>no</decor>
+      <skip_taskbar>no</skip_taskbar>
+      <focus>yes</focus>
+      <maximized>no</maximized>
+    </application>
+         <application name="bleachbit">
       <decor>no</decor>
       <skip_taskbar>no</skip_taskbar>
       <focus>yes</focus>

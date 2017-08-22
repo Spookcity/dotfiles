@@ -157,7 +157,7 @@ obconf 2.0.4-4
 oblogout-fork-git 20130106-3
 obmenu-generator 0.71-1
 ohsnap 1.8.0-1
-openbox 3.6.1-3
+openbox-patched 3.6.1-3
 openssh 7.5p1-2
 os-prober 1.75-1
 p7zip 16.02-3
@@ -174,7 +174,7 @@ perl-switch 2.17-2
 picard 1.4.2-1
 pkg-config 0.29.2-1
 pngcrush 1.8.12-1
-pngquant 2.10.0-1
+pngquant 2.10.1-1
 polybar-git 3.0.5.r26.g2d1e3c2-1
 powerline-fonts 2.6-1
 procps-ng 3.3.12-1

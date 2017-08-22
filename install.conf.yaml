@@ -267,3 +267,79 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.config/quicktile.cfg:
+        path: config/quicktile.cfg
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/startpages:
+        path: startpages/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/startpages:
+        path: startpages/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/startpages:
+        path: startpages/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+
+
+- clean: ['~']
+
+- link:
+
+
+- clean: ['~']
+
+- link:
+
+
+- clean: ['~']
+
+- link:
+    ~/startpages:
+        path: startpages/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+
+
+- clean: ['~']
+
+- link:
+    ~/startpages:
+        path: startpages/
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/startpages:
+        path: startpages/
+        create: true
+
+

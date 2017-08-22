@@ -7,7 +7,7 @@ allow_bold = true
 clickable_url = true
 dynamic_title = true
 #fullscreen = true
-geometry = 780x500
+geometry = 800x500
 #icon_name = terminal
 #mouse_autohide = false
 #scroll_on_output = false
@@ -21,7 +21,6 @@ scrollback_lines = 10000
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = chromium
 
-# "system", "on" or "off"
 #cursor_blink = system
 
 # "block", "underline" or "ibeam"
@@ -62,4 +61,4 @@ color14=#8ec07c
 color15=#ebdbb2
 
 
-background = rgba(9, 9, 9, 0.8)
+background = rgba(2, 10, 10, 0.9)
