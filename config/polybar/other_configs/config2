@@ -1,0 +1,387 @@
+####################################################################################################
+############################################### BARS ###############################################
+####################################################################################################
+
+[bar/top]
+width = 100%
+height = 28
+clickareas = 35
+bottom = false
+
+background = #003e4d
+foreground = #c5c8c6
+
+padding-left = 3
+padding-right = 3
+
+lineheight = 3
+separator = "  |  "
+
+font-0 = NotoSans-Regular:size=10;0
+font-1 = MaterialDesignIcons:size=14;0
+font-2 = WunconSiji:pixelsize=10;0
+
+modules-left = menu
+modules-center = date
+modules-right = volume network
+
+[bar/bottom_primary]
+monitor = ${env:POLYBAR_PRIMARY_MONITOR}
+width = 100%
+height = 28
+bottom = true
+
+padding-left = 1
+padding-right = 3
+
+lineheight = 3
+
+background = ${bar/top.background}
+foreground = ${bar/top.foreground}
+
+spacing = 4
+separator = "  "
+
+font-0 = ${bar/top.font-0}
+font-1 = ${bar/top.font-1}
+
+modules-left = menu
+modules-center = title
+modules-right = cpu memory packages diskspace
+
+[bar/bottom_secondary]
+monitor = ${env:POLYBAR_SECONDARY_MONITOR}
+width = 100%
+height = 28
+bottom = true
+
+padding-left = 1
+padding-right = 3
+
+lineheight = 3
+
+background = ${bar/top.background}
+foreground = ${bar/top.foreground}
+
+spacing = 4
+
+font-0 = ${bar/top.font-0}
+font-1 = ${bar/top.font-1}
+
+modules-left = i3
+modules-center = title
+
+##################################################################################################
+############################################ MODULES #############################################
+##################################################################################################
+[module/menu]
+type = custom/menu
+
+label-open = 
+label-close = 
+
+menu-0-0 = Run
+menu-0-0-foreground = #dde4a48a
+menu-0-0-exec = rofi -show run
+menu-0-1 = Apps
+menu-0-1-foreground = #dded9896
+menu-0-1-exec = menu-open-1
+menu-0-2 = Quit
+menu-0-2-foreground = #dde89ac0
+menu-0-2-exec = menu-open-7
+
+menu-1-0 = Terminal
+menu-1-0-foreground = #dde4a48a
+menu-1-0-exec = termite
+menu-1-1 = File
+menu-1-1-foreground = #dded9896
+menu-1-1-exec = sunflower
+menu-1-2 = Browser
+menu-1-2-foreground = #dde89ac0
+menu-1-2-exec = menu-open-2
+menu-1-3 = Editor
+menu-1-3-foreground = #ddb5b7e1
+menu-1-3-exec = menu-open-3
+menu-1-4 = Media
+menu-1-4-foreground = #dd92c4e8
+menu-1-4-exec = menu-open-4
+menu-1-5 = Graphics
+menu-1-5-foreground = #dd94cfcb
+menu-1-5-exec = menu-open-5
+menu-1-6 = Game
+menu-1-6-foreground = #ddc1cb7f
+menu-1-6-exec = menu-open-6
+menu-1-7 = 
+menu-1-7-foreground = #ddfdf6e3
+menu-1-7-exec = menu-open-0
+
+menu-2-0 = Chromium
+menu-2-0-foreground = #ddfdf6e3
+menu-2-0-exec = chromium &
+menu-2-1 = Opera
+menu-2-1-foreground = #ddfdf6e3
+menu-2-1-exec = opera-developer &
+menu-2-2 = Firefox
+menu-2-2-foreground = #ddfdf6e3
+menu-2-2-exec = firefox &
+menu-2-3 = QuteBrowser
+menu-2-3-foreground = #ddfdf6e3
+menu-2-3-exec = qutebrowser &
+menu-2-4 = 
+menu-2-4-foreground = #ddfdf6e3
+menu-2-4-exec = menu-open-1
+
+menu-3-0 = LibreOffice
+menu-3-0-foreground = #ddfdf6e3
+menu-3-0-exec = libreoffice &
+menu-3-1 = Sublime
+menu-3-1-foreground = #ddfdf6e3
+menu-3-1-exec = subl3
+menu-3-2 = Brakets
+menu-3-2-foreground = #ddfdf6e3
+menu-3-2-exec = brackets &
+menu-3-3 = QT Creator
+menu-3-3-foreground = #ddfdf6e3
+menu-3-3-exec = qtcreator &
+menu-3-4 = 
+menu-3-4-foreground = #ddfdf6e3
+menu-3-4-exec = menu-open-1
+
+menu-4-0 = Spotify
+menu-4-0-foreground = #ddfdf6e3
+menu-4-0-exec = spotify &
+menu-4-1 = Banshee
+menu-4-1-foreground = #ddfdf6e3
+menu-4-1-exec = banshee &
+menu-4-2 = 
+menu-4-2-foreground = #ddfdf6e3
+menu-4-2-exec = menu-open-1
+
+menu-5-0 = GIMP
+menu-5-0-foreground = #ddfdf6e3
+menu-5-0-exec = gimp &
+menu-5-1 = Inkscape
+menu-5-1-foreground = #ddfdf6e3
+menu-5-1-exec = inkscape &
+menu-5-2 = Krita
+menu-5-2-foreground = #ddfdf6e3
+menu-5-2-exec = krita &
+menu-5-3 = 
+menu-5-3-foreground = #ddfdf6e3
+menu-5-3-exec = menu-open-1
+
+menu-6-0 = Steam
+menu-6-0-foreground = #ddfdf6e3
+menu-6-0-exec = steam-native &
+menu-6-1 = NES
+menu-6-1-foreground = #ddfdf6e3
+menu-6-1-exec = fceux &
+menu-6-2 = SNES
+menu-6-2-foreground = #ddfdf6e3
+menu-6-2-exec = zsnes &
+menu-6-3 = 
+menu-6-3-foreground = #ddfdf6e3
+menu-6-3-exec = menu-open-1
+
+menu-7-0 = Log Out
+menu-7-0-foreground = #dde4a48a
+menu-7-0-exec = bspc quit -1
+menu-7-1 = Suspend
+menu-7-1-foreground = #dded9896
+menu-7-1-exec = systemctl suspend
+menu-7-2 = Hibernate
+menu-7-2-foreground = #dde89ac0
+menu-7-2-exec = systemctl hibernate
+menu-7-3 = Power Off
+menu-7-3-foreground = #ddb5b7e1
+menu-7-3-exec = menu-open-8
+menu-7-4 = Reboot
+menu-7-4-foreground = #dd92c4e8
+menu-7-4-exec = menu-open-9
+menu-7-5 = 
+menu-7-5-foreground = #ddfdf6e3
+menu-7-5-exec = menu-open-0
+
+menu-8-0 = Power Off
+menu-8-0-foreground = #ddd9c37f
+menu-8-0-exec = systemctl poweroff
+menu-8-1 = 
+menu-8-1-foreground = #ddfdf6e3
+menu-8-1-exec = menu-open-7
+
+menu-9-0 = Reboot
+menu-9-0-foreground = #ddd9c37f
+menu-9-0-exec = systemctl reboot
+menu-9-1 = 
+menu-9-1-foreground = #ddfdf6e3
+menu-9-1-exec = menu-open-7
+
+[module/date]
+type = internal/date
+date =   %%{F#ddc1cb7f}%Y-%m-%d%%{F-}  %%{F#ddfdf6e3}%H:%M%%{F-}
+date-alt =  %%{F#dd94cfcb}%A, %%{F#ddc1cb7f}%d %B %Y  %%{F#ddfdf6e3}%H:%M:%S%%{F-}
+
+[module/battery]
+type = internal/battery
+adapter = AC
+battery = BAT0
+full_at = 99
+poll-interval = 5
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <label-full>
+
+label-full =  100%
+
+label-discharging = "%percentage%"
+ramp-capacity-9 = ""
+ramp-capacity-8 = ""
+ramp-capacity-7 = ""
+ramp-capacity-6 = ""
+ramp-capacity-5 = ""
+ramp-capacity-4 = ""
+ramp-capacity-3 = ""
+ramp-capacity-2 = ""
+ramp-capacity-1 = ""
+ramp-capacity-0 = ""
+ramp-capacity-0-foreground = #f53c3c
+ramp-capacity-1-foreground = #ffa900
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+;animation-charging-6 =
+animation-charging-framerate = 400
+
+[module/network]
+type = internal/network
+interface = ${env:POLYBAR_NETWORK_INTERFACE}
+interval = 1.0
+ping-interval = 1
+
+format-packetloss = <label-packetloss>
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+
+label-connected =  %essid% (%local_ip%)
+label-disconnected =  not connected
+
+label-disconnected-foreground = #66
+label-packetloss = packetloss
+
+[module/volume]
+type = internal/volume
+
+master-mixer = Master
+
+format-volume = <ramp-volume> <label-volume> <bar-volume>
+label-volume = %percentage%
+
+bar-volume-width = 10
+bar-volume-foreground = #aaff77
+bar-volume-indicator = ▓
+bar-volume-indicator-font = 6
+bar-volume-fill = ▒
+bar-volume-fill-font = 6
+bar-volume-fill-font-style = bold
+bar-volume-empty = ░
+bar-volume-empty-font = 6
+
+format-muted = <label-muted>
+;label-muted =  muted
+label-muted =    muted   ░░░░░░░░░░
+label-muted-foreground = #66
+
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+[module/memory]
+type = internal/memory
+format = <label> <bar-used>
+label =  %percentage_used%
+
+bar-used-width = 10
+bar-used-foreground-0 = #c1cb7f
+bar-used-foreground-1 = #d9c37f
+bar-used-foreground-2 = #e4a48a
+bar-used-foreground-3 = #ed9896
+bar-used-indicator = ■
+bar-used-indicator-font = 2
+bar-used-indicator-foreground = #55fdf6e3
+bar-used-fill = ■
+bar-used-fill-font = 2
+bar-used-empty = □
+bar-used-empty-font = 2
+bar-used-empty-foreground = #99586e75
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+format = <label> <bar-load>
+label =  %percentage%
+
+bar-load-width = 10
+bar-load-foreground-0 = #c1cb7f
+bar-load-foreground-1 = #d9c37f
+bar-load-foreground-2 = #e4a48a
+bar-load-foreground-3 = #ed9896
+bar-load-indicator = ■
+bar-load-indicator-font = 0
+bar-load-indicator-foreground = #55fdf6e3
+bar-load-fill = ■
+bar-load-fill-font = 0
+bar-load-empty = □
+bar-load-empty-font = 0
+bar-load-empty-foreground = #99586e75
+
+[module/i3]
+type = internal/i3
+
+pin-workspaces=true
+index-sort=true
+
+format = <label-state>
+
+ws-icon-default=
+ws-icon-0 = 1;  
+ws-icon-1 = 2;  
+ws-icon-2 = 3;  
+ws-icon-3 = 9;  
+ws-icon-4 = 10;  
+
+label-focused = " %icon%%name% "
+label-focused-foreground = #1d1f21
+label-focused-background = #2d6c95
+label-focused-underline = #ee4433
+label-focused-padding = 2
+
+label-unfocused = " %icon%%name% "
+label-unfocused-padding = 2
+
+label-visible = " %icon%%name% "
+label-visible-padding = 2
+
+label-urgent = " %icon%%name% "
+label-urgent-foreground = #ee4433
+label-urgent-padding = 2
+
+[module/title]
+type = custom/script
+exec = xtitle -s
+tail = true
+maxlen = 120
+
+[module/diskspace]
+type = custom/script
+exec = /home/benoit/.scripts/polybar_diskspace.sh
+interval = 60
+
+[module/packages]
+type = custom/script
+exec = /home/benoit/.scripts/polybar_packages.sh
+interval = 60

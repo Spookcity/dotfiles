@@ -1,3 +1,0 @@
-#!/bin/sh
-
-echo -n " $(date "+%d %B")  $(date "+%H:%M:%S")"

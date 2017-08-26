@@ -343,3 +343,11 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/scripts:
+        path: scripts/
+        create: true
+
+

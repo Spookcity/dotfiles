@@ -2,76 +2,71 @@
 
 # this is a simple config for herbstluftwm
 
-hc() {
+function hc() {
     herbstclient "$@"
 }
-export TERMINAL='termite'
-export WEB=chromium
-export FILE=sunflower
+
+#autostart
+~/.wallpapers/wp_init.sh  &
+compton --config /home/rick/.config/compton.conf -b &
+redshift &
+
 hc emit_hook reload
 
-# xsetroot -solid '#5A8E3A'
-split_rate_h=${split_rate_h:-0.5}
-resizestep_h=${resizestep_h:-0.005}
-split_rate_v=${split_rate_v:-0.5}
-resizestep_v=${resizestep_v:-0.02}
+# xrdb -cpp cpp -merge ~/.Xdefaults
 
-hc set tree_style '╾│ ├└╼─┐'
+killall lemons.sh
 
-#---------------------------------------------------------------------------}}}
-# Keybindings                                                               {{{
-#------------------------------------------------------------------------------
+export TERMINAL=termite
+export FILE=sunflower
 
-# remove all existing keybindings
+hc set default_frame_layout 2
+
+hc set frame_gap 6
+hc set snap_gap 6
+#xsetroot -solid '#5A8E3A'
+
 hc keyunbind --all
 
 # keybindings
-# if you have a super key you will be much happier with Mod set to Mod4
-#Mod=Mod1    # Use alt as the main modifier
 Mod=Mod4   # Use the super key as the main modifier
 
-hc keybind $Mod-Shift-q quit
+hc keybind $Mod-Shift-BackSpace quit
 hc keybind $Mod-Shift-r reload
-hc keybind $Mod-c       close_or_remove
-hc keybind $Mod-Shift-c remove
-hc keybind $Mod-Return  spawn termite
+hc keybind $Mod-Shift-c close
+hc keybind $Mod-Return spawn $TERMINAL
+hc keybind $Mod-w spawn chromium
+hc keybind $Mod-Shift-f spawn $FILE
 
-# basic movement
 # focusing clients
-hc keybind $Mod-j focus down
-hc keybind $Mod-k focus up
-hc keybind $Mod-h focus left
-hc keybind $Mod-l focus right
-# cycle
-hc keybind $Mod-Down cycle_all +1
-hc keybind $Mod-Up   cycle_all -1
+hc keybind $Mod-Left  focus left
+hc keybind $Mod-Down  focus down
+hc keybind $Mod-Up    focus up
+hc keybind $Mod-Right focus right
 
 # moving clients
-hc keybind $Mod-Shift-j shift down
-hc keybind $Mod-Shift-k shift up
-hc keybind $Mod-Shift-h shift left
-hc keybind $Mod-Shift-l shift right
+hc keybind $Mod-Shift-Left  shift left
+hc keybind $Mod-Shift-Down  shift down
+hc keybind $Mod-Shift-Up    shift up
+hc keybind $Mod-Shift-Right shift right
 
 # resizing frames
-hc keybind $Mod-z      resize down  +$resizestep_v
-hc keybind $Mod-a      resize up    +$resizestep_v
-hc keybind $Mod-comma  resize left  +$resizestep_h
-hc keybind $Mod-period resize right +$resizestep_h
+RESIZESTEP=0.04
+hc keybind $Mod-Control-h resize left +$RESIZESTEP
+hc keybind $Mod-Control-j resize down +$RESIZESTEP
+hc keybind $Mod-Control-k resize up +$RESIZESTEP
+hc keybind $Mod-Control-l resize right +$RESIZESTEP
 
-# splitting frames
-# create an empty frame at the specified direction
-hc keybind $Mod-s chain , split bottom $split_rate_h , focus down
-hc keybind $Mod-v chain , split right  $split_rate_v , focus right
-hc keybind $Mod-Control-j chain , split bottom 0.5 , focus down
-hc keybind $Mod-Control-k chain , split top    0.5 , focus up
-hc keybind $Mod-Control-h chain , split left   0.5 , focus left
-hc keybind $Mod-Control-l chain , split right  0.5 , focus right
-# let the current frame explode into subframes
-hc keybind $Mod-Control-space split explode
+hc keybind $Mod-Control-Left    resize left +$resizestep
+hc keybind $Mod-Control-Down    resize down +$resizestep
+hc keybind $Mod-Control-Up      resize up +$resizestep
+hc keybind $Mod-Control-Right   resize right +$resizestep
 
+#rofi
+hc keybind $Mod-d spawn rofi -show run -width 25 -fg "#B0E670" -bg "#14161F" -hlfg "#14161F" -hlbg "#B0E670" -bc "#14161F" -location 0 -lines 4 -bw 0 -font "Dejavu Sans Mono 12" -opacity 90 -fuzzy -sidebar-mode -auto-select -regex -color-enabled -tokenize
 
 # tags
-tag_names=( {1..5} )
+tag_names=( 0000 0001 0010 0011 0100 )
 tag_keys=( {1..5} 0 )
 
 hc rename default "${tag_names[0]}" || true
@@ -79,24 +74,26 @@ for i in ${!tag_names[@]} ; do
     hc add "${tag_names[$i]}"
     key="${tag_keys[$i]}"
     if ! [ -z "$key" ] ; then
-        hc keybind "$Mod-$key" use_index "$i"
-        hc keybind "$Mod-Shift-$key" move_index "$i"
+        hc keybind "Control-$key" use_index "$i"
+        hc keybind "$Mod-Control-$key" move_index "$i"
     fi
 done
 
 # cycle through tags
-hc keybind $Mod-Right use_index +1 --skip-visible
-hc keybind $Mod-Left  use_index -1 --skip-visible
-# shift client to neighbor tag
-hc keybind $Mod-Shift-Right move_index +1 --skip-visible
-hc keybind $Mod-Shift-Left  move_index -1 --skip-visible
+hc keybind $Mod-period use_index +1 --skip-visible
+hc keybind $Mod-comma  use_index -1 --skip-visible
+hc keybind $Mod-Escape use_previous
 
-# layouting'
-hc keybind $Mod-t  floating toggle
+# layouting
+hc keybind $Mod-i toggle always_show_frame
 hc keybind $Mod-r remove
 hc keybind $Mod-s floating toggle
-hc keybind $Mod-v fullscreen toggle
+hc keybind $Mod-f fullscreen toggle
 hc keybind $Mod-p pseudotile toggle
+hc keybind $Mod-u split vertical 0.5
+hc keybind $Mod-o split horizontal 0.5
+hc keybind $Mod-v split explode
+
 # The following cycles through the available layouts within a frame, but skips
 # layouts, if the layout change wouldn't affect the actual window positions.
 # I.e. if there are two windows within a frame, the grid layout is skipped.
@@ -104,89 +101,73 @@ hc keybind $Mod-space cycle_layout +1
 
 # mouse
 hc mouseunbind --all
-hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button3 move
 hc mousebind $Mod-Button2 zoom
-hc mousebind $Mod-Button3 resize
-
+hc mousebind $Mod-Button1 resize
+hc mousebind $Mod-B4 call substitute WID clients.dragged.winid spawn transset-df --inc -i WID 0.05
+hc mousebind $Mod-B5 call substitute WID clients.dragged.winid spawn transset-df --dec -i WID -m 0.2 0.05
+frame_gap_steps=( 0 1 2 3 $(seq 4 4 100) )
+i=${#frame_gap_steps[@]} ; for x in "${frame_gap_steps[@]}" ; do reversed_frame_gap_steps[--i]=$x ; done
+hc mousebind $Mod-Control-B4 call cycle_value frame_gap "${frame_gap_steps[@]}" "${reversed_frame_gap_steps[0]}"
+hc mousebind $Mod-Control-B5 call cycle_value frame_gap "${reversed_frame_gap_steps[@]}" "${frame_gap_steps[0]}"
 
 # focus
 hc keybind $Mod-BackSpace   cycle_monitor
 hc keybind $Mod-Tab         cycle_all +1
 hc keybind $Mod-Shift-Tab   cycle_all -1
-hc keybind $Mod-c cycle
-hc keybind $Mod-i jumpto urgent
+hc keybind $Mod-c           cycle
+hc keybind $Mod-i           jumpto urgent
 
-hc keybind $Mod-m spawn termite -e ncmpcpp
-hc keybind $Mod-f spawn $FILE
-hc keybind $Mod-w spawn $WEB
+hc set focus_follows_mouse 1
+hc set raise_on_click 0
 
 # theme
 hc attr theme.tiling.reset 1
 hc attr theme.floating.reset 1
-hc set frame_border_active_color '#292F40'
-#             ||
-# panel color \/
-hc set frame_border_normal_color '#40372B'
-hc set frame_bg_normal_color '#292F40'
-hc set frame_bg_active_color '#292F40'
-hc set frame_border_width 1
-hc set always_show_frame 0
+hc set frame_border_active_color '#849F31'
+hc set frame_border_normal_color '#101010'
+hc set frame_bg_normal_color '#222222'
+hc set frame_bg_active_color '#101010'
+hc set frame_border_width 2
+hc set always_show_frame 1
 hc set frame_bg_transparent 1
-hc set frame_transparent_width 0
-hc set frame_gap -1
+hc set frame_transparent_width 1
+hc set frame_gap 4
 
-# set seected 'window'and selected worksace throw its attr
-hc attr theme.active.color '#FFDDAE'
-hc attr theme.normal.color '#454545'
-hc attr theme.urgent.color '#7F6F57'
-hc attr theme.inner_width 2
-hc attr theme.outer_width 2
-hc attr theme.inner_color '#CCB18B'
-hc attr theme.border_width 6
-hc attr theme.floating.border_width 6
-hc attr theme.floating.outer_width 2
-hc attr theme.floating.outer_color '#40372B'
-hc attr theme.active.inner_color '#40372B'
-hc attr theme.active.outer_color '#CCB18B'
-hc attr theme.background_color '#CCB18B'
+hc attr theme.active.color '#66A3BF' #'#9fbc00'
+hc attr theme.normal.color '#FFFFFF' #'#240054' #454545'
+#hc attr theme.urgent.color orange
+hc attr theme.inner_width 0
+hc attr theme.inner_color black
+hc attr theme.border_width 0
+hc attr theme.floating.border_width 1
+hc attr theme.floating.outer_width 1
+hc attr theme.floating.outer_color black
+hc attr theme.active.inner_color '#6693BF' #'#3E4A00'
+hc attr theme.active.outer_color '#240054' #'#3E4A00'
+hc attr theme.background_color '#141414'
 
-hc set window_gap 0
-hc set frame_padding 0
-hc set smart_window_surroundings 0
+hc set window_gap 4
+hc set frame_padding 4
+hc set smart_window_surroundings 1
 hc set smart_frame_surroundings 1
-hc set mouse_recenter_gap 0
-hc set focus_follows_mouse 1
-
-#---------------------------------------------------------------------------}}}
-# Rules                                                                     {{{
-#------------------------------------------------------------------------------
-
-hc unrule -F
-#hc rule class=XTerm tag=3 # move all xterms to tag 3
-hc rule focus=on
-# give focus to most common terminals
-hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
-hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
-hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK)' manage=off
-hc rule class='Conky' manage=off
+hc set mouse_recenter_gap 1
 
 # rules
 hc unrule -F
-#hc rule class=XTerm tag=3 # move all xterms to tag 3
-hc rule focus=on # normally focus new clients
-#hc rule focus=off # normally do not focus new clients
-# give focus to most common terminals
-#hc rule class~'(.*[Rr]xvt.*|.*[Tt]erm|Konsole)' focus=on
-hc rule class='conky' manage=off
+hc rule focus=on
+# hc rule class=Gmrun pseudotile=on focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
 hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
 hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
 
-hc set tree_style '╾│ ├└╼─┐'
+hc rule class='logout-dialog' pseudotile=on focus=on
 
-# unlock, just to be sure
-hc unlock
+# nice tree styles:
+#herbstclient set tree_style '╾│ ├└╼─┐'
+herbstclient set tree_style '╾│ ├╰╼─╮'
+# herbstclient set tree_style '*| +`>-.'
+#herbstclient set tree_style '*| +`-->'
 
 # do multi monitor setup here, e.g.:
 # hc set_monitors 1280x1024+0+0 1280x1024+1280+0
@@ -194,12 +175,11 @@ hc unlock
 # hc detect_monitors
 
 # find the panel
-panel=~/.config/herbstluftwm/panel.sh
-[ -x "$panel" ] || panel=/home/rick/.config/herbstluftwm/panel.sh
+panel=/home/rick/.config/herbstluftwm/bar.sh
+[ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
-    "$panel" $monitor &
-~/.wallpapers/wp_init.sh  &
-conky -c ~/.conky/conkyrc &
-compton --config /home/rick/.config/compton.conf -b &
+    "$panel" & # $monitor &
 done
+
+hc unlock

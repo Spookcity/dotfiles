@@ -1,0 +1,131 @@
+#!/bin/sh
+
+# ObliviousGmn, June 2015
+# https://github.com/ObliviousGmn
+# Panel for Lemonbar ..
+
+# Fonts
+FONT1="-misc-profont-medium-r-semicondensed--12-110-75-75-c-60-iso10646-1"
+FONT2="-lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1"
+
+# Icons ..
+ICON1="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+ICON2="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+
+# Panel
+notifybar_g="1920x24+0+0"
+
+# Colors
+BG=#282828
+FG=#fe8019
+BLACK=#282828
+BBLACK=#32302f
+RED=#cc241d
+BRED=#fb4934
+ORANGE=#d65d0e
+BORANGE=#fe8019
+GREEN=#98971a
+BGREEN=#b8bb26
+YELLOW=#d79921
+BYELLOW=#fabd2f
+BLUE=#458588
+BBLUE=#83a598
+MAGENTA=#b16286
+BMAGENTA=#d3869b
+WHITE=#f2e5bc
+BWHITE=#fbf1c7
+
+
+
+ ws(){ # Current Workspace ..
+  ws=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
+  case ${ws} in
+    0) echo "%{F$BORANGE} %{F$WHITE}  %{F$WHITE}  %{F$WHITE}  %{F$WHITE}  %{F$WHITE} ";;
+    1) echo "%{F$WHITE} %{F$BORANGE}  %{F$WHITE}  %{F$WHITE}  %{F$WHITE}  %{F$WHITE} ";;
+    2) echo "%{F$WHITE} %{F$WHITE}  %{F$BORANGE}  %{F$WHITE}  %{F$WHITE}  %{F$WHITE} ";;
+    3) echo "%{F$WHITE} %{F$WHITE}  %{F$WHITE}  %{F$BORANGE}  %{F$WHITE}  %{F$WHITE} ";;
+    4) echo "%{F$WHITE} %{F$WHITE}  %{F$WHITE}  %{F$WHITE}  %{F$BORANGE}  %{F$WHITE} ";;
+    *) echo "%{F$WHITE} %{F$WHITE}  %{F$WHITE}  %{F$WHITE}  %{F$WHITE}  %{F$BORANGE} ";;
+  esac
+}
+
+ menu(){ # Useless for now ..
+  echo "%{B$BBLUE}%{F$BG} GMN  %{B-}%{F-}"
+}
+
+ cpuload(){ # CPUs temp ..
+  cpuload=$(echo $[100-$(vmstat 1 2|tail -1|awk '{print $15}')])
+  cpuload+="% CPU"
+  #echo "%{F$BYELLOW} %{F-} ${cpuload}"
+  echo "%{F$BYELLOW}  ${cpuload}"
+}
+
+ fan(){ # Fan speeds ..
+  fan=`sensors | awk '/fan1/ {print $2,$3}'`
+  echo "%{F$BORANGE}  %{F-} ${fan}"
+}
+
+ memory(){
+  mem=$(free -m | awk 'NR==2 {print $3}')
+        mem+="MB"
+        #echo "%{F$BMAGENTA}  %{F-}${mem} RAM"
+  echo "%{F$BMAGENTA}  ${mem} RAM"
+    }
+
+ clock(){ # Clock, obv ..
+  clock=`date "+%b %d %Y %I:%M"`
+  #echo "%{F$BORANGE} %{F-} ${clock}"
+        echo "%{F$BORANGE}  ${clock}"
+}
+
+ vol(){ # Volume, Sets to Headset when switched ..
+  switch=`amixer get Master | awk '/Mono:/ {print $6}'`
+  vol=`amixer get Master | awk '/Mono:/ {print $4}' | tr -d '[]%,'`
+  hsvol=`amixer get PCM | awk '/Mono:/ {print $4}' | tr -d '[]%,'`
+
+  if [ "$switch" = "[on]" ]; then
+  #echo "%{F$BBLUE}  %{F-} ${vol}"
+  echo "%{F$BBLUE}   ${vol}"
+  elif [ "$switch" = "[off]" ]; then
+  #echo "%{F$BRED}  %{F-} MUTE"
+        echo "%{F$BRED}   MUTE"
+  else
+  #echo "%{F$BBLUE}  %{F-} ${hsvol}"
+        echo "%{F$BBLUE}   ${hsvol}"
+  fi
+}
+
+ mus(){ # Current song ..
+  mus=`mpc current -f %title%`
+
+  if [[ $mus ]]; then
+  #echo "%{F$BORANGE}  %{F-} ${mus}"
+  echo "%{F$BORANGE}   ${mus}"
+  fi
+}
+
+# last(){ # Weechat, Last highlight ..
+#  last=`(tail -n1) <$HOME/Gmnbox/Panel/Weelog`
+
+#  if [[ $last ]]; then
+#   echo "%{A:cat /dev/null > $HOME/Gmnbox/Panel/Weelog:}${last}%{A}"
+#  fi
+#}
+
+ net(){ # Connected or nah? ..
+  ping=`ping 8.8.8.8 -c 1 | awk '/rtt/ {printf("%d\n",$4 + 0.5)}'`
+  test -n "${ping}" && echo "%{F$BGREEN}    " || echo "%{F$BRED}   %{F-} No Connection"
+}
+
+while :; do
+
+ # Run ping in intervals ..
+ [[ loops -eq 15 ]] && loops=0
+ [[ loops -eq 0 ]] && ping=$(net)
+ loops=$(( loops + 1 ))
+
+  echo "  $(ws)  %{c}$(mus) %{r}$(vol) $(cpuload) $(memory) $(net) $(clock)  "
+         sleep 0.5
+
+ done | lemonbar -g $notifybar_g -f "source code pro:bold:size=9" -f "FontAwesome:regular:size=9" -B "$BG" -F "$BRED" -d -p | \
+  while read line; do eval "$line"; done &

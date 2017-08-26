@@ -12,8 +12,8 @@
 #  gnome-settings-daemon &
 #fi
 
-~/.wallpapers/wp_init.sh &
 conky -c ~/.conky/conkyrc &
+~/.wallpapers/wp_init.sh &
 compton --config /home/rick/.config/compton.conf -b &
 tint2 -c /home/rick/.config/tint2/tint2rc &
 conky -c ~/.conky/conkyrc &

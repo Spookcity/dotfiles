@@ -1,26 +1,26 @@
 #!/usr/bin/bash
 # Define the clock
 Clock() {
-		echo "$(~/.config/lemonbar/blocks/time)"
+		echo "$(~/.config/i3/blocks/time)"
 }
 
 Brightness() {
-		echo "$(~/.config/lemonbar/blocks/brightness)"
+		echo "$(~/.config/i3/blocks/brightness)"
 }
 
 Volume() {
-		echo "$(~/.config/lemonbar/blocks/volume)"
+		echo "$(~/.config/i3/blocks/volume)"
 }
 
 Workspaces() {
 		WORKSPACES="$(i3-msg -t get_workspaces)"
-		echo $(~/.config/lemonbar/workspaces.py $WORKSPACES)
+		echo $(~/.config/i3/workspaces.py $WORKSPACES)
 }
 Network() {
-		echo "$(~/.config/lemonbar/blocks/network)"
+		echo "$(~/.config/i3/blocks/network)"
 }
 Lock() {
-		echo "$(~/.config/lemonbar/blocks/lock)"
+		echo "$(~/.config/i3/blocks/lock)"
 }
 Info() {
 	echo " %{l}%{F#FFFFFF}%{B#2E343C} $(Network) $(Brightness)%{c}$(Workspaces)%{F-}%{B-}%{r}%{f#ffffff}%{B#2E343C}$(Battery) $(Volume) $(Clock)%{F-}%{B-}"

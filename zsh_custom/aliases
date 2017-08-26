@@ -1,7 +1,7 @@
 # arch stuffs
-alias upgrade='pacaur -Syua'
-alias orphan='pacaur -Qtd'
-alias pac='pacaur -Ss'
+alias upgrade='sudo pacman -Syu'
+alias orphan='pacman -Qtd'
+alias pac='pacaur -Syua'
 alias y='yaourt'
 
 # python env
@@ -46,9 +46,9 @@ alias h='history'
 alias c='clear'
 alias q='exit'
 
-# alias make='/home/rick/bin/color.sh'
-alias mka='/home/rick/bin/color.sh'
+# alias make='~/scripts/random/color.sh'
+alias mka='~/scripts/random/color.sh'
 alias gconf='GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc make gconfig'
 
 # random
-alias weather='/home/rick/bin/weather.sh i'
+alias weather='~/scripts/random/weather.sh i'

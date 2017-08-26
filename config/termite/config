@@ -3,7 +3,7 @@ font = Droid Sans Mono Dotted for Powerline 10
 
 [options]
 allow_bold = true
-#audible_bell = false
+audible_bell = false
 clickable_url = true
 dynamic_title = true
 #fullscreen = true
@@ -21,7 +21,7 @@ scrollback_lines = 10000
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = chromium
 
-#cursor_blink = system
+cursor_blink = system
 
 # "block", "underline" or "ibeam"
 cursor_shape = ibeam
