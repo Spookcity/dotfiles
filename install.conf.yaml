@@ -351,3 +351,11 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.config/mpv:
+        path: config/mpv/
+        create: true
+
+

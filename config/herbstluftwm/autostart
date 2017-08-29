@@ -22,7 +22,7 @@ export FILE=sunflower
 
 hc set default_frame_layout 2
 
-hc set frame_gap 6
+hc set frame_gap 0
 hc set snap_gap 6
 #xsetroot -solid '#5A8E3A'
 
@@ -119,7 +119,7 @@ hc keybind $Mod-c           cycle
 hc keybind $Mod-i           jumpto urgent
 
 hc set focus_follows_mouse 1
-hc set raise_on_click 0
+hc set raise_on_click 1
 
 # theme
 hc attr theme.tiling.reset 1
@@ -132,19 +132,18 @@ hc set frame_border_width 2
 hc set always_show_frame 1
 hc set frame_bg_transparent 1
 hc set frame_transparent_width 1
-hc set frame_gap 4
 
 hc attr theme.active.color '#66A3BF' #'#9fbc00'
 hc attr theme.normal.color '#FFFFFF' #'#240054' #454545'
 #hc attr theme.urgent.color orange
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
-hc attr theme.border_width 0
+hc attr theme.border_width 2
 hc attr theme.floating.border_width 1
 hc attr theme.floating.outer_width 1
 hc attr theme.floating.outer_color black
-hc attr theme.active.inner_color '#6693BF' #'#3E4A00'
-hc attr theme.active.outer_color '#240054' #'#3E4A00'
+hc attr theme.active.inner_color '#6693BF'
+hc attr theme.active.outer_color '#240054'
 hc attr theme.background_color '#141414'
 
 hc set window_gap 4

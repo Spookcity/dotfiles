@@ -71,9 +71,9 @@ ${offset 80}${color #AAB887}${font}UP : ${voffset -2}${font Hack:pixelsize=12}${
 ${offset 80}${voffset -25}${color #849F31}${font Hack:bold:pixelsize=20}Disks ${hr 2}${lua conky_DISK_cylinder 40 548}$color
 ${offset 80}${voffset -1}${font}${color #AAB887}Read  : ${font Hack:pixelsize=12}${voffset -1}$diskio_read${voffset -5}${goto 250}${color #849F31}${diskiograph_read /dev/sda 16,50 9b59b6 8e44ad -l}$color
 ${voffset 6}${offset 80}${font}${color #AAB887}Write : ${font Hack:pixelsize=12}${voffset -2}$diskio_write${voffset -5}${goto 250}${color #849F31}${diskiograph_write /dev/sda 16,50 9b59b6 8e44ad -l}$color
-${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}HOME    ${fs_used /home} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /home}$font (${fs_used_perc /home}%)$color
-${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}ROOT    ${fs_used /} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /}$font (${fs_used_perc /}%)$color
-${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}STUFF    ${fs_used /mnt/Ricks_Stuff} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /mnt/Ricks_Stuff}$font  (${fs_used_perc /mnt/Ricks_Stuff}%)$color
+${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}HOME    ${fs_used /home} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /home}$font (${fs_free_perc /home}%)$color
+${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}ROOT    ${fs_used /} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /}$font (${fs_free_perc /}%)$color
+${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}STUFF    ${fs_used /mnt/Ricks_Stuff} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /mnt/Ricks_Stuff}$font  (${fs_free_perc /mnt/Ricks_Stuff}%)$color
 ${voffset 12}${color #849F31}${font Hack:bold:pixelsize=20}Processes ${hr 2}$color
 ${font Hack:bold:pixelsize=12}Name             ${alignr}PID            ${alignr}CPU%${font Hack:pixelsize=12}
 ${color #849F31}${top name 1}     ${top pid 1} ${alignr}${top cpu 1}
