@@ -27,7 +27,7 @@ super + Escape
 #
 
 # quit bspwm normally
-super + alt + Escape
+super + shift + BackSpace
   bspc quit
 
 # close and kill

@@ -37,52 +37,52 @@ conky.config = {
 }
 
 conky.text = [[
-${offset 80}${voffset 0}${color #849F31}${font Hack:bold:pixelsize=18}Time ${hr 2}${lua conky_TIME_clock 40 52}$color
-${offset 80}${voffset 4}${color #849F31}${font Hack:bold:pixelsize=22}${time %I:%M:%S}$color
-${offset 80}${voffset -5}${color #AAB887}${font Hack:pixelsize=12}${time %A %d %B %Y}$color
+${offset 80}${voffset 0}${color #9B2323}${font Hack:bold:pixelsize=18}Time ${hr 2}${lua conky_TIME_clock 40 52}$color
+${offset 80}${voffset 4}${color #5E57A1}${font Hack:bold:pixelsize=22}${time %I:%M:%S}$color
+${offset 80}${voffset -5}${color #5E57A1}${font Hack:pixelsize=12}${time %A %d %B %Y}$color
 
-${voffset 15}${offset 80}${color #849F31}${font Hack:bold:pixelsize=18}System ${hr 2}${lua conky_UPTIME_timer 40 153}$color
+${voffset 15}${offset 80}${color #9B2323}${font Hack:bold:pixelsize=18}System ${hr 2}${lua conky_UPTIME_timer 40 153}$color
 
-${offset 80}${color #AAB887}${voffset -23}${font}Uptime : ${font Hack:pixelsize=12}${uptime}$color
-${offset 80}${color #AAB887}${font}Distribution : ${font Hack:pixelsize=12}${no_update $distribution}$color
-${offset 80}${color #AAB887}${font}${no_update $sysname} : ${voffset -2}${font Hack:pixelsize=12}${no_update $kernel}$color
+${offset 80}${color #5E57A1}${voffset -23}${font}Uptime : ${font Hack:pixelsize=12}${uptime}$color
+${offset 80}${color #5E57A1}${font}Distribution : ${font Hack:pixelsize=12}${no_update $distribution}$color
+${offset 80}${color #5E57A1}${font}${no_update $sysname} : ${voffset -2}${font Hack:pixelsize=12}${no_update $kernel}$color
 
-${offset 80}${voffset 1}${color #849F31}${font Hack:bold:pixelsize=20}CPU ${hr 2}${lua conky_CPU_square 40 257}$color
+${offset 80}${voffset 1}${color #9B2323}${font Hack:bold:pixelsize=20}CPU ${hr 2}${lua conky_CPU_square 40 257}$color
 
-${offset 80}${voffset -20}${color #849F31}${cpugraph cpu0 8,84 2980b9 c0392b -t}$color
-${offset 80}${voffset -13}${color #849F31}${cpugraph cpu1 8,84 2980b9 c0392b -t}$color
-${offset 80}${voffset -10}${color #849F31}${cpugraph cpu0 16,168 2980b9 c0392b -t}$font   ${voffset -6}${font Hack:bold:pixelsize=12}${cpu cpu0}%$color
-${offset 80}${voffset 18}${color #849F31}${font Hack:bold:pixelsize=20}RAM ${hr 2}${lua conky_double_RAM_circle 40 348}$color
-${offset 80}${voffset -1}${font}${color #AAB887}RAM   ${voffset -2}${font Hack:pixelsize=12}$mem${font}${goto 215}${voffset -1}max $memmax$color
-${font Hack:pixelsize=12}${font}${color #AAB887}
+${offset 80}${voffset -20}${color #5E57A1}${cpugraph cpu0 8,84 2980b9 c0392b -t}$color
+${offset 80}${voffset -13}${color #5E57A1}${cpugraph cpu1 8,84 2980b9 c0392b -t}$color
+${offset 80}${voffset -10}${color #5E57A1}${cpugraph cpu0 16,168 2980b9 c0392b -t}$font   ${voffset -6}${font Hack:bold:pixelsize=12}${cpu cpu0}%$color
+${offset 80}${voffset 18}${color #9B2323}${font Hack:bold:pixelsize=20}RAM ${hr 2}${lua conky_double_RAM_circle 40 348}$color
+${offset 80}${voffset -1}${font}${color #5E57A1}RAM   ${voffset -2}${font Hack:pixelsize=12}$mem${font}${goto 215}${voffset -1}max $memmax$color
+${font Hack:pixelsize=12}${font}${color #5E57A1}
 ${offset 80}${font}SWAP  ${voffset -1}${font Hack:pixelsize=12}${voffset -1}$swap${font}${goto 216}max $swapmax$color
 
 
 
-${offset 80}${voffset -29}${color #849F31}${font Hack Slab:bold:pixelsize=20}Internet ${hr 2}${lua conky_NET_arrows_eth 40 441 }$color
-${offset 80}${voffset -6}${color #849F31}$font${upspeedgraph wlp3s0 12,84 f1c40f f39c12 -t -l}${downspeedgraph wlp3s0 12,84 1abc9c 16a085 -t -l}$color
+${offset 80}${voffset -29}${color #9B2323}${font Hack Slab:bold:pixelsize=20}Internet ${hr 2}${lua conky_NET_arrows_eth 40 441 }$color
+${offset 80}${voffset -6}${color #5E57A1}$font${upspeedgraph wlp3s0 12,84 f1c40f f39c12 -t -l}${downspeedgraph wlp3s0 12,84 1abc9c 16a085 -t -l}$color
 
-${offset 80}${font}${color #AAB887}T. : ${font Hack:pixelsize=12}${voffset -1}${totalup wlp3s0}$alignr${font}T : ${voffset -1}${font Hack:pixelsize=12}${totaldown wlp3s0}$font$color
+${offset 80}${font}${color #5E57A1}T. : ${font Hack:pixelsize=12}${voffset -1}${totalup wlp3s0}$alignr${font}T : ${voffset -1}${font Hack:pixelsize=12}${totaldown wlp3s0}$font$color
 
-${offset 80}${color #AAB887}${font}UP : ${voffset -2}${font Hack:pixelsize=12}${upspeed wlp3s0}$font ${goto 203}DOWN${voffset -2} : ${font Hack:pixelsize=12}${downspeed wlp3s0}$color
+${offset 80}${color #5E57A1}${font}UP : ${voffset -2}${font Hack:pixelsize=12}${upspeed wlp3s0}$font ${goto 203}DOWN${voffset -2} : ${font Hack:pixelsize=12}${downspeed wlp3s0}$color
 
 
 
-${offset 80}${voffset -25}${color #849F31}${font Hack:bold:pixelsize=20}Disks ${hr 2}${lua conky_DISK_cylinder 40 548}$color
-${offset 80}${voffset -1}${font}${color #AAB887}Read  : ${font Hack:pixelsize=12}${voffset -1}$diskio_read${voffset -5}${goto 250}${color #849F31}${diskiograph_read /dev/sda 16,50 9b59b6 8e44ad -l}$color
-${voffset 6}${offset 80}${font}${color #AAB887}Write : ${font Hack:pixelsize=12}${voffset -2}$diskio_write${voffset -5}${goto 250}${color #849F31}${diskiograph_write /dev/sda 16,50 9b59b6 8e44ad -l}$color
-${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}HOME    ${fs_used /home} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /home}$font (${fs_free_perc /home}%)$color
-${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}ROOT    ${fs_used /} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /}$font (${fs_free_perc /}%)$color
-${offset 80}${font Hack:BOLD:pixelsize=10}${color #AAB887}STUFF    ${fs_used /mnt/Ricks_Stuff} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /mnt/Ricks_Stuff}$font  (${fs_free_perc /mnt/Ricks_Stuff}%)$color
-${voffset 12}${color #849F31}${font Hack:bold:pixelsize=20}Processes ${hr 2}$color
-${font Hack:bold:pixelsize=12}Name             ${alignr}PID            ${alignr}CPU%${font Hack:pixelsize=12}
-${color #849F31}${top name 1}     ${top pid 1} ${alignr}${top cpu 1}
-${color #849F31}${top name 2}     ${top pid 2} ${alignr}${top cpu 2}
-${color #849F31}${top name 3}     ${top pid 3} ${alignr}${top cpu 3}
-${color #AAB887}${top name 4}     ${top pid 4} ${alignr}${top cpu 4}
-${color #AAB887}${top name 5}     ${top pid 5} ${alignr}${top cpu 5}
-${color #AAB887}${top name 6}     ${top pid 6} ${alignr}${top cpu 6}
-${color #AAB887}${top name 7}     ${top pid 7} ${alignr}${top cpu 7}
-${color #AAB887}${top name 8}     ${top pid 8} ${alignr}${top cpu 8}
-${color #AAB887}${top name 9}     ${top pid 9} ${alignr}${top cpu 9}
-${color #AAB887}${top name 10}     ${top pid 10} ${alignr}${top cpu 10}]]
+${offset 80}${voffset -25}${color #9B2323}${font Hack:bold:pixelsize=20}Disks ${hr 2}${lua conky_DISK_cylinder 40 548}$color
+${offset 80}${voffset -1}${font}${color #5E57A1}Read  : ${font Hack:pixelsize=12}${voffset -1}$diskio_read${voffset -5}${goto 250}${color #d15345}${diskiograph_read /dev/sda 16,50 9b59b6 8e44ad -l}$color
+${voffset 6}${offset 80}${font}${color #5E57A1}Write : ${font Hack:pixelsize=12}${voffset -2}$diskio_write${voffset -5}${goto 250}${color #d15345}${diskiograph_write /dev/sda 16,50 9b59b6 8e44ad -l}$color
+${offset 80}${font Hack:BOLD:pixelsize=10}${color #5E57A1}HOME    ${fs_used /home} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /home}$font (${fs_free_perc /home}%)$color
+${offset 80}${font Hack:BOLD:pixelsize=10}${color #5E57A1}ROOT    ${fs_used /} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /}$font (${fs_free_perc /}%)$color
+${offset 80}${font Hack:BOLD:pixelsize=10}${color #5E57A1}STUFF    ${fs_used /mnt/Ricks_Stuff} ${font}  ${font Hack:BOLD:pixelsize=10}    ${fs_size /mnt/Ricks_Stuff}$font  (${fs_free_perc /mnt/Ricks_Stuff}%)$color
+${voffset 12}${color #9B2323}${font Hack:bold:pixelsize=20}Processes ${hr 2}$color
+${font Hack:bold:pixelsize=12}${color #5E57A1}Name             ${alignr}PID            ${alignr}CPU%${font Hack:pixelsize=12}$color
+${color #D62713}${top name 1}     ${top pid 1} ${alignr}${top cpu 1}
+${color #D62713}${top name 2}     ${top pid 2} ${alignr}${top cpu 2}
+${color #D62713}${top name 3}     ${top pid 3} ${alignr}${top cpu 3}
+${color #5E57A1}${top name 4}     ${top pid 4} ${alignr}${top cpu 4}
+${color #5E57A1}${top name 5}     ${top pid 5} ${alignr}${top cpu 5}
+${color #5E57A1}${top name 6}     ${top pid 6} ${alignr}${top cpu 6}
+${color #5E57A1}${top name 7}     ${top pid 7} ${alignr}${top cpu 7}
+${color #5E57A1}${top name 8}     ${top pid 8} ${alignr}${top cpu 8}
+${color #5E57A1}${top name 9}     ${top pid 9} ${alignr}${top cpu 9}
+${color #5E57A1}${top name 10}     ${top pid 10} ${alignr}${top cpu 10}]]

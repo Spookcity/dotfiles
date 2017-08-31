@@ -15,6 +15,12 @@ POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="↳ "
 #POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+POWERLEVEL9K_DIR_HOME_BACKGROUND='001'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='001'
+POWERLEVEL9K_TIME_BACKGROUND='001'
+POWERLEVEL9K_TIME_FOREGROUND='007'
+POWERLEVEL9K_COLOR_SCHEME='light'
 # Advanced `vcs` color customization
 #POWERLEVEL9K_VCS_CLEAN_FOREGROUND='blue'
 #POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black'
@@ -63,7 +69,7 @@ ENABLE_CORRECTION="true"
 #COMPLETION_WAITING_DOTS="true"
 
 # COLORS
-eval $(dircolors -b $HOME/.dircolors/dircolors.256dark)
+eval $(dircolors -b $HOME/.dircolors/dircolors.ansi-dark)
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories

@@ -50,7 +50,7 @@
 =cut
 
 our $CONFIG = {
-  "editor"              => "geany",
+  "editor"              => "subl3",
   "force_icon_size"     => 0,
   "force_svg_icons"     => 0,
   "gtk_rc_filename"     => "$ENV{HOME}/.gtkrc-2.0",

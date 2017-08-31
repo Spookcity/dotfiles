@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/rick/.gtkrc-2.0.mine"
-gtk-theme-name="FlatColor"
-gtk-icon-theme-name="acyl"
+gtk-theme-name="Crimix"
+gtk-icon-theme-name="ACYLS"
 gtk-font-name="Roboto Light 12"
 gtk-cursor-theme-name="ArchCursorTheme"
 gtk-cursor-theme-size=0

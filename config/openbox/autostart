@@ -13,13 +13,14 @@
 #fi
 
 conky -c ~/.conky/conkyrc &
-~/.wallpapers/wp_init.sh &
+# ~/.wallpapers/wp_init.sh &
+~/.fehbg &
 compton --config /home/rick/.config/compton.conf -b &
 tint2 -c /home/rick/.config/tint2/tint2rc &
 conky -c ~/.conky/conkyrc &
 quicktile --daemonize &
 mpd &
-paramano &
+# paramano &
 alsa-tray &
 redshift &
 # xset m 5/3 0 &

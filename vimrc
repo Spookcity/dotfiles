@@ -3,7 +3,7 @@ set nocompatible
 
 execute pathogen#infect()
 
-colorscheme gruvbox
+colorscheme apprentice
 set bg=dark
 
 " Vim-Air Theme
@@ -12,7 +12,7 @@ set hidden
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='wombat'
+let g:airline_theme='base16_harmonic16'
 " cnoreabbrev <expr> x getcmdtype() == ":" && getcmdline() == 'x' ? 'Sayonara' : 'x'
 set termguicolors
 set noshowmode

@@ -7,7 +7,8 @@ function hc() {
 }
 
 #autostart
-~/.wallpapers/wp_init.sh  &
+#~/.wallpapers/wp_init.sh  &
+~/.fehbg &
 compton --config /home/rick/.config/compton.conf -b &
 redshift &
 
@@ -174,7 +175,7 @@ herbstclient set tree_style '╾│ ├╰╼─╮'
 # hc detect_monitors
 
 # find the panel
-panel=/home/rick/.config/herbstluftwm/bar.sh
+panel=/home/rick/.config/herbstluftwm/panel.sh
 [ -x "$panel" ] || panel=/etc/xdg/herbstluftwm/panel.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
