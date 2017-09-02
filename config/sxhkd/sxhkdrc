@@ -8,7 +8,11 @@ super + button{4,5}
 
 # program launcher
 super + space
-  dmenu_run -i -h 30 -p ">_" -nb "#282828" -nf "#ebdbb2" -sb "#a89984" -sf "#282828" -fn "xft:Roboto\ For\ Powerline:size=11"
+  j4-dmenu-desktop --dmenu="dmenu -i -b -fn 'Comfortaa:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'"
+
+#
+# apps
+#
 
 # web
 super + w
@@ -17,6 +21,26 @@ super + w
 # file manager
 super + e
     sunflower
+
+# music
+super + shift + m
+    termite -e ncmpcpp
+
+# git-cola
+super + shift + g
+    env QT_API=pyqt4 GTK2_RC_FILES=/home/rick/.themes/Crimix/gtk-2.0/gtkrc git-cola
+
+# chat
+super + shift + w
+    termite -e weechat
+
+# tasks
+super + shift + v
+    termite -e vtop
+
+# cleaner
+super + shift + b
+    bleachbit
 
 # make sxhkd reload its configuration files:
 super + Escape

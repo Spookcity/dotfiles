@@ -1,0 +1,304 @@
+@-moz-document domain("marktplaats.nl") {
+body, .mp-Button--secondary, .mp-Input, .mp-Select select, .mp-SearchForm-search.mp-header, .mp-SearchFieldset-standard.mp-header .mp-SearchForm-options.mp-header label.mp-header, mp-header .mp-Header-links>li>a, .mp-Nav-dropdown-toggle.mp-header, .mp-Header-menu.mp-header>li.mp-header>a.mp-header, .mp-Listing-card-body, .mp-Card-body, #page-wrapper, ._2cvtO1Ff, .pageRoot, ._1u46xjBS, ._26QMKmJF, ._3yxPQ5xO, ._3jTBP04H ul ._3Jix4CXt, ._2WKaNmTB, ._3sCsWSkf, ._3UlrdYJt, ._1x4zxbCY, .mp-Nav-dropdown-menu>li>a, ._2wZOqDeP ._1tqLlAXj h3, .preferred-contact #vip-seller .messaging-section .contact-heading, .dialog .content>.title, .mp-Textarea, #cancel-asq:hover, mp-header .mp-Header-links>li>a:hover, .mp-Header-menu.mp-header>li.mp-header>a.mp-header:hover, .mp-Nav-dropdown-toggle.mp-header:hover, .mp-Nav-dropdown--open.mp-header .mp-Nav-dropdown-toggle.mp-header, .mp-Nav-dropdown-toggle.mp-header:active, .mp-Nav-dropdown-toggle.mp-header:focus, #page-wrapper.mymp #ad-listing-header .button.secondary.medium.disabled, #page-wrapper.mymp #ad-listing-header .button.secondary.medium, #searches-listing-header .disabled, .tabs a, .tabs span.juiceless-link, .tabs a.selected, .tabs span.juiceless-link.selected, .syi-tab.selected, .dialog#PostNLShippingProducts .content>.canvas .group-field label, .dialog#PostNLShippingProducts .content>.canvas .button-row .button.secondary, .dialog, .dialog#PostNLShippingProducts .content>.title, .button.secondary.large.disabled, ._1mtEQtA_, ._1mtEQtA_:hover, .view-count-block, .findability-bar>span:first-of-type, .button.secondary, .button.secondary:hover, .VIP-large, .mp-Button--secondary:hover, .mp-SearchForm-search.mp-header:hover, textarea, #vip-bidding-form #vip-bidding-input, #tinymce, .mp-HamburgerMenu.mp-header .mp-Nav-pills.mp-header .mp-Header-hamburger-close.mp-header, #map-link .heading a {
+    color: white;
+}
+
+#page-wrapper, .pageRoot, ._26QMKmJF, ._3yxPQ5xO, ._3jTBP04H ul ._3Jix4CXt, ._2WKaNmTB, .mp-Header-navBar.mp-header, .mp-Header-searchBar.mp-header, #footer, ._3inIQPGa, .LxnYA-Vk, ._1jcQiuGU._2OdVV6nH, ._2KYo817d, ._3aCJ1asm>div, .SFHYXwqp, ._2xrMyRZZ, ._106K199U, ::-webkit-scrollbar-track, .category-name:hover, .tree-list li:hover, .column-listing .listing-title-description .heading a:hover, .column-listing .description:hover, .mp-Card--highlighted, .mp-Nav-tabs--bar .mp-Nav-tab--selected:hover, .mp-Nav-tabs--bar .mp-Nav-tab:hover, .listing-image:hover, .seller-info .seller-name:hover, #pagination-page-sizes .pagination-size.selected span, [disabled].mp-Button--primary, [disabled].mp-Button--round, [disabled].mp-Button--primary, [disabled].mp-Button--round:hover, .mp-Select select:hover, .mp-Nav-dropdown-menu>li>a:hover, .mp-Card, ._2cvtO1Ff:hover._2VtsUrMW, ._2cvtO1Ff:hover, .tabs-vertical .tab-vertical.active, .no-touch .tabs-vertical .tab-vertical:hover, .no-touch .tabs-vertical .tab-vertical.active:hover, .preferred-contact #vip-seller .contact-buttons, #page-wrapper .l-page .tip, .mp-Textarea:hover, .dialog .content, .top-bar-wrapper, .no-touch #ad-listing-table-body .ad-listing:hover .cells, .profile-professional .box-content, #page-wrapper.mymp .box-header, .mymp-legacy .top-bar-wrapper, .message.info, .page-block, .message.success, .message.failure, .mp-Listing-card-body:hover, #header-content, .tabs a:hover, .tabs span.juiceless-link:hover, .tabs a.selected, .tabs span.juiceless-link.selected, .box, .box-header, .recent-categories .item:hover, .category-suggestions .item:hover, .listbox-container.custom.with-header label, .listbox .item:hover, .listbox .item.active, #photo-upload, #photo-upload .box-header, #upload-message, #photo-upload .uploader-container, .feature-selection .feature-column, .shipping-dimensions-items .shipping-dimensions-item.active, .shipping-method-types .shipping-method-type.active, .syi-tab.selected, .editable, .view-count-block, .view-count-block .cover-left, .view-count-block .cover-right, .card--rich, #ad-listing-table-body .ad-listing:hover .dagtopper-column:hover, #ad-listing-table-body .ad-listing:hover .top-ad-column:hover,#ad-listing-table-body .ad-listing .up-call-column, .no-touch #ad-listing-table-body .ad-listing:hover .up-call-column, .no-touch #ad-listing-table-body .ad-listing:hover .dagtopper-column, .no-touch #ad-listing-table-body .ad-listing:hover .top-ad-column, #buy-feature-block-body, .editable-title.active .input-wrapper, .editable-title.active .input-wrapper:hover .field, #tinymce:hover, #tinymce:focus, .description-triggers:hover, .mp-HamburgerMenu.mp-header, .mp-Nav-pills, .mp-Nav-pills>li.mp-Nav-pill--header, .list-menu .link, #syi-form #photo-upload .box-header, #syi-form #photo-upload, #syi-form #photo-upload .uploader-container, .userdata #syi-email, .saved-searches-widget.success .saved-searches-widget-inner, #search-content, .mp-Card.mp-Card--background , .feed-tabs .tabs-shadow-fade {
+    background-color: #111;
+}
+
+article.mp-Listing-card.feed-item, .mp-Listing-card-body, .mp-Card-body, .mp-Select select, .mp-SearchForm-search.mp-header, .search-results-table .row, .mp-Nav-tabs--bar .mp-Nav-tab--selected, .mp-Nav-tabs--bar .mp-Nav-tab, .pagination-pages a:hover, #pagination-page-sizes .pagination-size a:hover, .mp-Select select:focus, .mp-Nav-dropdown-menu>li>a, .listing, .l-top-content, .l-body-content, .bottom-actions, .vip-soi, .vip-soi .vip-soi-head, #vip-seller, ._2cvtO1Ff, ._1tqLlAXj, .tabs-vertical .tab-vertical, #vip-bidding-block, .bidding-block #vip-place-bid-block, .box-content, .mp-Textarea, #table-filters, #page-wrapper.mymp #ad-listing-header, #ad-listing-table-body .ad-listing .cells, #page-wrapper.mymp #ad-listing-header #select-all-container, #page-wrapper .l-page, #page-wrapper.mymp #searches-listing-header, .cells, .page-block .form-field input:focus, .tabs-submenu, .help-tab, .tabs a, .listbox, .uploader-container:before, .mce-panel, #syi-email, .mp-Input:hover, #vip-left, .editable-title .input-wrapper:hover, .editable-image.passive:hover, .uploader-box:hover, .editable-delivery-options.passive:hover, .editable-price.passive:hover, #vip-place-bid-block, #vip-list-bids-block, .editable-attributes.passive:hover, .editable-description.passive:hover, .editable-description.active, #flagging-dialog #catagoryOptions, #flagging-dialog .flagging-sub-reasons-container, .clear-fix.my-ads-top-panel.aurora-only, #ad-listing-table-body .ad-listing .up-call-column, #ad-listing-table-body .ad-listing .dagtopper-column, #ad-listing-table-body .ad-listing .top-ad-column, .notification, #visual-upsell-dialog .canvas #visual-upsell-form, #postnl-top-panel .stamp-online-block .postnl-location-block, .bid-reply .uneditable-message, textarea, #vip-bidding-form #vip-bidding-input:hover, #navigation, .mp-Nav-pills>li>a:hover, ._1u46xjBS, #left-column-container, #navigation .title, #map-link .heading a, .mp-Card-block.mp-Card-block--highlight   {
+    background-color: #222;
+}
+
+.mp-Button--flat:hover, .mp-Button--flat {
+    background-color: transparent;
+}
+
+.mp-Header-ribbonBottom.mp-header, .mp-Header-ribbonTop.mp-header, input.l-stretchable-fixed.input-with-small-prefix, .mp-Input, .card__link:hover, .VIP-large, #reason-user-message, #tinymce {
+    background-color: #505050;
+}
+
+mp-header .mp-Header-links>li>a, .mp-Nav-dropdown-toggle.mp-header, .mp-Header-menu.mp-header>li.mp-header>a.mp-header, .mp-Button--secondary, .mp-SearchForm-search.mp-header, #page-wrapper.mymp #ad-listing-header .button.secondary.medium, .dialog#PostNLShippingProducts .content>.canvas .button-row .button.primary, .button.secondary {
+    background-color: #116db4;
+}
+/* lighter blue */
+
+mp-header .mp-Header-links>li>a:hover, .mp-Header-menu.mp-header>li.mp-header>a.mp-header:hover, .mp-Nav-dropdown-toggle.mp-header:hover, .mp-Nav-dropdown-toggle.mp-header:focus, .dialog#PostNLShippingProducts .content>.canvas .button-row .button.primary:hover, .button.secondary:hover, #save-seller-button:hover, .mp-Button--secondary:hover, .mp-SearchForm-search.mp-header:hover {
+    background-color: #0082e6;
+}
+
+._3sCsWSkf, ._3UlrdYJt, ._1x4zxbCY, #cancel-asq:hover, .mp-Nav-pills>li.mp-Nav-pill--separator {
+    background-color: #1C664A;
+}
+
+[disabled]._3cnLg8kn, [disabled]._3cnLg8kn:hover, .dialog .content>.close, #cancel-asq, #page-wrapper.mymp #ad-listing-header .button.secondary.medium.disabled, input.mp-Button.mp-Button--secondary.mp-Button--sm.disabled, ._2wZOqDeP ._1tqLlAXj h3>a, .mp-HamburgerMenu.mp-header .mp-Nav-pills.mp-header .mp-Header-hamburger-close.mp-header {
+    background-color: firebrick;
+}
+/* firebrick hover */
+
+.dialog#PostNLShippingProducts .content>.canvas .button-row .button.secondary:hover, ._1mtEQtA_:hover {
+    background-color: #d62929;
+}
+
+
+#searches-listing-header .select-all, .tabs a, .tabs span.juiceless-link, .syi-tab, .list li:hover, .dialog#PostNLShippingProducts .content>.canvas .group-field label {
+    background: linear-gradient(to bottom, #202020 0%, #202020 100%)
+}
+
+.uspListPostNL, .dialog#PostNLShippingProducts .content>.canvas .form-contents, .dialog#PostNLShippingProducts .content>.canvas .form-buttons {
+    background: linear-gradient(to bottom, #101010 0%, #101010 100%)
+}
+
+.dialog#PostNLShippingProducts .content>.canvas .button-row .button.secondary, ._1mtEQtA_ {
+    background: firebrick;
+}
+
+.shipping-dimensions-items, #vip-gallery .etalage-feature-overlay{
+    background: #202020;
+}
+
+.shipping-dimensions-item.wrapper, #shipping-details .uspListPostNL {
+    background: #101010;
+}
+
+.button.secondary{
+    background:  #116db4;
+}
+
+.feed-tabs .tabs-shadow-fade{
+    background-image: none;
+}
+
+#vip-bidding-form #vip-bidding-input{
+    background:#505050;
+}
+
+.button.secondary.large.disabled {
+    background: #090;
+}
+
+.mp-Listing-card-body .mp-Listing-card-price {
+    color: #c38956;
+}
+
+#navigation-categories .link a, .mp-Listing-card-body .mp-Listing-card-title, .category-name, .mp-Nav-tabs--bar .mp-Nav-tab--selected, .mp-Nav-tabs--bar .mp-Nav-tab, span.page-size-title, .syi-tab, .feed-tabs .feed-tab {
+    color: #909090;
+}
+/* blue shit */
+
+#navigation-categories .link a:hover, .category-name:hover, .mp-Nav-tabs--bar .mp-Nav-tab--selected:hover, .mp-Nav-tabs--bar .mp-Nav-tab:hover, .image-group .heading-link {
+    color: #116db4;
+}
+
+#page-wrapper .l-page #asq-form .form-label {
+    color: #4a627d
+}
+/* weird green */
+
+._1cM53jkJ, h2.name, .phone-link, .favorited-count-icon, .view-count-icon {
+    color: #2cb783;
+}
+
+._1Xg4ifqm, ._3i3LbYX1 {
+    color: #99B898;
+}
+
+.price {
+    color: firebrick;
+}
+
+.mp-Listing-card-body, .mp-Card-body {
+    padding-top: 0px;
+}
+
+.l-page {
+    padding-top: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 0px;
+    margin-bottom: 50px;
+}
+
+#left-column-container{
+    padding-left: 1%;
+}
+
+#content {
+    padding-bottom: 0px;
+}
+
+#searches-listing-header .select-all {
+    padding-top: 10px;
+}
+
+.searches-overview {
+    padding-bottom: 5px;
+}
+
+.bucket-page {
+    padding-top: 0px;
+    margin-top: -60px;
+}
+
+a.style-scope.mp-autocomplete {
+    padding: 5px 11px;
+}
+
+.description-triggers{
+    padding: 0px 10px;
+}
+
+#page-wrapper.mymp .profile-block.box.mp-Card {
+    padding: 3px;
+}
+
+.search-results-table .row {
+    padding: 2px 0px;
+    min-height: 124px;
+}
+
+#main-content {
+    padding: 10px 5px 20px 5px;
+    border-left: 4px solid #101010;
+}
+
+.discovery-search, .pagination, .feed {
+    margin-top: 0px;
+}
+
+#postnl-top-panel .postnl-top-panel-link{
+    padding-top: 25px;
+}
+
+.mp-Nav-pills>li.mp-Nav-pill--separator{
+    height: 2px;
+}
+
+span.page-size-title {
+    margin-top: 8px;
+}
+
+.mp-Card.mp-Card--highlighted.mp-Card--rounded.saved-searches-widget, #search-results, .search-results-table {
+    margin-bottom: 0px;
+}
+
+.results-nav-top{
+    margin-bottom: 5px;
+}
+
+.mp-autocomplete-0 .mp-Nav-dropdown-menu.mp-autocomplete {
+    top: 0px;
+}
+
+span.page-size-title {
+    float: left;
+}
+
+.tree-list li:hover {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    border: 1px gray solid;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 6px gray inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: firebrick;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #c52626;
+    border: 1px solid #333333;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #A6393D;
+    border: 1px solid #333333;
+}
+
+.icon.icon-mp-sms {
+    padding-left: 3px;
+    padding-right: 4px;
+}
+
+.view-count-block:before {
+    border-right-color: #505050;
+}
+
+.view-count-block:after {
+    border-left-color: #505050;
+}
+
+.select-all-row{
+    border-left: 1px;
+    border-left-color: #202020;
+}
+
+.search-results-table .row+.row, ._26QMKmJF, .tabs-vertical .tab-vertical+.tab-vertical, #ad-listing-header, #ad-listing-header, .ad-listing.row, .cells, .sellers.list, #mceu_11, .dialog#PostNLShippingProducts .content>.canvas .form-buttons, .l-top-content, .bottom-actions {
+    border-top: 1px solid #505050;
+}
+
+.top-bar-wrapper, #ad-listing-table-body .ad-listing .cells, .cells, .cells .row, .dialog#PostNLShippingProducts .content>.title, .l-top-content, .bidding-block #vip-place-bid-block {
+    border-bottom: 1px solid #505050;
+}
+
+.cells, .syi-tab.vertical {
+    border-left: 1px solid #505050;
+    border-right: 1px solid #505050;
+}
+
+.mp-Input:focus, #input:focus, .mp-Textarea:focus, .shipping-dimensions-items .shipping-dimensions-item.active {
+    border: 1px solid #116db4;
+}
+
+._3inIQPGa, .LxnYA-Vk{
+    border-bottom: 2px solid #2cb783;
+}
+
+.responsive-top-bar .tab.selected {
+    border-bottom: 4px solid #116db4;
+}
+
+.mp-Nav-dropdown-menu>li>a, .mp-Nav-dropdown-menu>li>a:hover {
+    border-bottom: 1px solid #116db4;
+    border-left: 1px solid #116db4;
+    border-right: 1px solid #116db4;
+}
+
+._22hmZhu2{
+    border-right: 1px solid #505050;
+}
+
+.mp-Nav-dropdown-menu>li:last-of-type>a, .mp-Nav-pills>li:last-of-type>a{
+    border-bottom: 1px solid #116db4;
+}
+
+.preferred-contact #vip-seller .contact-buttons {
+    border-left: 3px solid #202020;
+    border-right: 3px solid #202020;
+}
+
+#description_ifr{
+    display:block;
+}
+
+.mp-Button--secondary, .mp-Input, .mp-Input:focus, .mp-SearchForm-search.mp-header, .mp-Textarea, .mp-Textarea:focus, #cancel-asq, #cancel-asq:hover, #send-asq, #send-asq:hover, #page-wrapper.mymp .ad-listing-container, input.mp-Button.mp-Button--secondary.mp-Button--sm.disabled, .dialog#PostNLShippingProducts .content>.canvas .button-row .button.secondary, .dialog#PostNLShippingProducts .content>.canvas .button-row .button.primary, ._1mtEQtA_, ._1mtEQtA_:hover, ._3cnLg8kn, ._3cnLg8kn:hover, .button.secondary:hover, .card__link:hover, .mp-Button--primary, .mp-Button--primary:hover,  #save-seller-button:hover, .mp-Button--secondary:hover, .mp-SearchForm-search.mp-header:hover, .mp-Header-menu.mp-header>li.mp-header .mp-Header-link--placeAd.mp-header:hover   {
+    box-shadow: none;
+}
+
+#pagination-page-sizes .pagination-size.selected span, #pagination-page-sizes .pagination-size a:hover, .mp-Button--secondary, .mp-SearchForm-search.mp-header, #send-asq, #ad-listing-table-body .ad-listing .cells, #ad-listing-header, #page-wrapper.mymp #ad-listing-header .button.secondary.medium, #page-wrapper.mymp #ad-listing-header #select-all-container, #ad-listing-header .row, #page-wrapper.mymp #searches-listing-header, #searches-listing-header .select-all, #mceu_4, .mce-btn-group:not(:first-child), .dialog#PostNLShippingProducts .content>.canvas .button-row .button.secondary, .syi-tab.vertical, .dialog#PostNLShippingProducts .content>.canvas .button-row .button.primary, .button.secondary.large.disabled, ._1mtEQtA_, ._3cnLg8kn, .button.secondary, #ad-listing-table-body .ad-listing .up-call-column, #ad-listing-table-body .ad-listing .dagtopper-column, #ad-listing-table-body .ad-listing .top-ad-column, .mp-Nav-pills>li>a:hover, .mp-Nav-pills>li>a, #header-content, .header-icon-item {
+    border: 0px;
+}
+
+.mp-Card-body.saved-searches-widget-inner, #sort-order, .mp-Nav-tabs--bar .mp-Nav-tab--selected, .mp-Nav-tabs--bar .mp-Nav-tab, .mp-Input, .mp-Select select, ._2MrTxBk1:not(:last-child), .mp-Textarea, #page-wrapper.mymp .ad-listing-container, .message.info, .listbox-container, .dialog#PostNLShippingProducts .content>.canvas .group-field label, .shipping-method-types .shipping-method-type, .syi-tab.vertical:first-child, .syi-tab.vertical:last-child, .image-viewer-wrapper, .shipping-method-types .shipping-method-type.active, .shipping-dimensions-item.wrapper, .editable, .view-count-block, .editable-title .input-wrapper,  #reason-user-message, #buy-feature-block-body, #description_ifr, ._3ZNChku5  {
+    border: 1px solid #505050;
+}
+
+.aanbieding-widget-container, #fixed-groups, #openOverlay, iframe, #top-banner-wrapper, .box-content.snippet-list, .mp-Card.mp-Card--rounded.feed-banner, #banner-top, #adsenceContainerTop, #banner-rubrieks, #bottom-listings-divider, .search-results-table .row.bottom-group, #banner-bottom, .listing-extension, .row.inline-listings-banner, .listing-cas, #footer, .page-messages, #banner-viptop, .cas-other-items, #adsense-bottom, #banner-vipbottom, .yo-container, .banner-row, #vip-map-banner, .cells.cells-similar-ads, .mp-adsense-header-top, .premium-content, #header-edge, .feature-banner {
+    display: none;
+}
+}

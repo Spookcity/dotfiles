@@ -370,3 +370,24 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.gtkrc-2.0: gtkrc-2.0
+    ~/.xinitrc: xinitrc
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings:
+        path: config/sublime-text-3/Packages/User/Preferences.sublime-settings
+        create: true
+
+
+- clean: ['~']
+
+- link:
+    ~/stylez:
+        path: stylez/
+        create: true
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings:
+        path: config/sublime-text-3/Packages/User/Preferences.sublime-settings
+        create: true
+
+
