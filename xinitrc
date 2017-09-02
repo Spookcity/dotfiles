@@ -1,6 +1,6 @@
 #!/bin/sh
+xrdb ~/.Xresources
 
-$ xrdb ~/.Xresources
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources

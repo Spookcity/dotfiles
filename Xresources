@@ -1,4 +1,3 @@
-Xcursor.theme: ArchCursorTheme
 
 *xterm.background: #1f1f1f
 *xterm.foreground: #c0b18b
@@ -36,6 +35,8 @@ Xcursor.theme: ArchCursorTheme
 *xterm.color15:#c0b18b
 
 *TkTheme: clam
+
+Xcursor.theme: ArchCursorTheme
 
 !! Colors
 # include "/home/rick/.colors/archlinux"
