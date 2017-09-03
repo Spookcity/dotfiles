@@ -391,3 +391,11 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings:
+        path: config/sublime-text-3/Packages/User/Preferences.sublime-settings
+        create: true
+
+

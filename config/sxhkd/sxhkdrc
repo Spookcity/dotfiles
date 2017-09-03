@@ -1,25 +1,25 @@
-# terminal emulator
-super + Return
-  termite
-
 # window gap via mouse wheel
 super + button{4,5}
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5))
 
 # program launcher
 super + space
-  j4-dmenu-desktop --dmenu="dmenu -i -b -fn 'Comfortaa:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'"
+  j4-dmenu-desktop --dmenu="dmenu -i -b -fn 'hack:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'"
 
-#
+############
 # apps
-#
+############
+
+# terminal emulator
+super + Return
+  termite
 
 # web
 super + w
     chromium
 
 # file manager
-super + e
+super + shift + f
     sunflower
 
 # music
@@ -42,13 +42,17 @@ super + shift + v
 super + shift + b
     bleachbit
 
-# make sxhkd reload its configuration files:
-super + Escape
-  pkill -USR1 -x sxhkd
+###########
+#scripts
+###########
 
-#
+# TogglePolybar
+super + control + p
+    ~/scripts/bspwm/TogglePolybar.sh
+
+###############
 # bspwm hotkeys
-#
+###############
 
 # quit bspwm normally
 super + shift + BackSpace
@@ -56,7 +60,12 @@ super + shift + BackSpace
 
 # close and kill
 super + shift + c
+control + q
   bspc node -c
+
+  # close and kill
+#control + q
+  #bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -70,9 +79,9 @@ super + y
 super + g
   bspc node -s biggest
 
-#
+#############
 # state/flags
-#
+############
 
 # set the window state
 super + {t,shift + t,s,f}
@@ -82,9 +91,9 @@ super + {t,shift + t,s,f}
 super + ctrl + {x,y,z}
   bspc node -g {locked,sticky,private}
 
-#
+############
 # focus/swap
-#
+############
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -116,9 +125,12 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
   bspc {desktop -f,node -d} '^{1-9,10}'
 
-#
+super + bracket{left,right}
+  bspc desktop -f {prev,next}
+
+###########
 # preselect
-#
+##########
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -136,9 +148,9 @@ super + ctrl + space
 super + ctrl + shift + space
   bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-#
+########################
 # resize tiled/floating
-#
+#######################
 
 # expand the tiled space in the given direction
 super + alt + {h,j,k,l}
@@ -151,6 +163,10 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
   xdo move {-x -20,-y +20,-y -20,-x +20}
+
+#########
+# mouse
+#########
 
 # focus
 ~button1
@@ -169,3 +185,8 @@ super + {Left,Down,Up,Right}
 
  super + !button{1-3}
    bspc pointer --track %i %i
+
+
+# make sxhkd reload its configuration files:
+super + Escape
+  pkill -USR1 -x sxhkd

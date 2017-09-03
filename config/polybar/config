@@ -42,14 +42,14 @@ font-2 = unifont:fontformat=truetype:size=10:antialias=false;0
 font-3 = Wuncon Siji:pixelsize=10;1
 font-4 = Roboto:style=Regular:pixelsize=10;1
 
-modules-left = bspwm mpd
+modules-left = bspwm
 modules-center = xwindow
 modules-right =  memory cpu temperature volume date
 
-;tray-position = right
-;tray-padding = 2
+tray-position = left
+tray-padding = 3
 ;tray-transparent = true
-tray-background = ${colors.background}
+;tray-background = ${colors.background}
 
 wm-restack = bspwm
 
