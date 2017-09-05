@@ -2,9 +2,13 @@
 super + button{4,5}
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5))
 
-# program launcher
+# rofi window select
 super + space
-  j4-dmenu-desktop --dmenu="dmenu -i -b -fn 'hack:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'"
+  rofi -show window
+
+# rofi app select
+control + space
+  rofi -show drun
 
 ############
 # apps
@@ -21,6 +25,10 @@ super + w
 # file manager
 super + shift + f
     sunflower
+
+# root file manager
+super + shift + r
+    gksudo sunflower
 
 # music
 super + shift + m
@@ -47,20 +55,26 @@ super + shift + b
 ###########
 
 # TogglePolybar
-super + control + p
+super + control + 0
     ~/scripts/bspwm/TogglePolybar.sh
 
 ###############
 # bspwm hotkeys
 ###############
 
+super + apostrophe
+    bspc node -s last
+
+# Focus on floating / tiled
+alt + {e,w}
+    bspc node -f {next.floating,next.tiled}
+
 # quit bspwm normally
 super + shift + BackSpace
-  bspc quit
+  oblogout
 
 # close and kill
 super + shift + c
-control + q
   bspc node -c
 
   # close and kill
@@ -164,6 +178,10 @@ super + alt + shift + {h,j,k,l}
 super + {Left,Down,Up,Right}
   xdo move {-x -20,-y +20,-y -20,-x +20}
 
+# Change window gap
+alt + {minus,equal}
+    bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
+
 #########
 # mouse
 #########
@@ -190,3 +208,7 @@ super + {Left,Down,Up,Right}
 # make sxhkd reload its configuration files:
 super + Escape
   pkill -USR1 -x sxhkd
+
+# screenshot
+super + Print
+    scrot
