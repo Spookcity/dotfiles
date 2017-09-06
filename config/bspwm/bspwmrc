@@ -26,11 +26,15 @@ bspc desktop  -l monocle
 bspc rule -a mpv state=floating
 bspc rule -a Chromium desktop=^2 follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
-# bspc rule -a Termite:weechat desktop=^5
-# bspc rule -a Termite  -name ncmpcpp desktop=^6
+bspc rule -a Gimp state=floating
+bspc rule -a Lxappearance floating=true
+bspc rule -a File-roller floating=true
+# bspc rule -a Termite -e  weechat desktop=^5
 bspc rule -a Oblogout state=floating
 bspc rule -a feh state=floating
 bspc rule -a Termite state=floating border=off
+bspc rule -a Telegram Web state=floating
+bspc rule -a Screenkey manage=off
 
 # startups
 # menutray -i &
@@ -40,3 +44,5 @@ polybar top &
 compton --config /home/rick/.config/compton.conf -b &
 redshift &
 mpd &
+
+bspc config external_rules_command ~/.config/bspwm/external-rules.sh

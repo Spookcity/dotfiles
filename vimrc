@@ -24,11 +24,28 @@ set relativenumber number
 " enable syntax highlighting
 syntax on
 
+
+" NERDTress File highlighting only the glyph/icon
+" test highlight just the glyph (icons) in nerdtree:
+autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight html_icon ctermbg=none ctermfg=Red guifg=#ffa500
+autocmd filetype nerdtree highlight go_icon ctermbg=none ctermfg=Red guifg=#ffa500
+
+autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
+" if you are using another syn highlight for a given line (e.g.
+" NERDTreeHighlightFile) need to give that name in the 'containedin' for this
+" other highlight to work with it
+autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
+autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
+
+:let g:NERDTreeWinSize=45
+
 " Diff Colors
 " if &diff
    " " colorscheme wombat256mod
 " endif
 
+set rtp+=~/.fzf
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
 set backspace=2                                              " Fix broken backspace in some setups
@@ -60,6 +77,7 @@ if exists('$TMUX')  " Support resizing in tmux
 endif
 
 " keyboard shortcuts
+map <C-n> :NERDTreeToggle<CR>
 let mapleader = ','
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j

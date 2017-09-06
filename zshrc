@@ -106,3 +106,5 @@ eval $(thefuck --alias FUCK)
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/id_rsa"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

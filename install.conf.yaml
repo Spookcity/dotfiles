@@ -399,3 +399,17 @@
         create: true
 
 
+- clean: ['~']
+
+- link:
+    ~/.config/albert.conf:
+        path: config/albert.conf
+        create: true
+    ~/.config/menutray:
+        path: config/menutray/
+        create: true
+    ~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings:
+        path: config/sublime-text-3/Packages/User/Preferences.sublime-settings
+        create: true
+
+

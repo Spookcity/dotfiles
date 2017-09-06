@@ -1,3 +1,8 @@
+############## COLORS ################
+#                                                                                     #
+#                                                                                     #
+####################################
+
 [colors]
 background = #181818
 background-alt = #FF9b2323
@@ -6,6 +11,12 @@ foreground-alt = #919191
 primary = #fff
 secondary = #e60053
 alert = #bd2c40
+
+############## BAR TOP ################
+#                                                                                     #
+#                                                                                     #
+####################################
+
 
 [bar/top]
 width = 100%
@@ -42,9 +53,21 @@ font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-3 = Wuncon Siji:pixelsize=10;1
 font-4 = Roboto:style=Regular:pixelsize=10;1
 
-modules-left = bspwm weather
+
+############# MODULES USED ###############
+#                                                                                            #
+#                                                                                            #
+#######################################
+
+
+modules-left = bspwm weather pkg
 modules-center =  xwindow
-modules-right =   pkg filesystem filesystem-home memory cpu temperature volume date
+modules-right =   filesystem filesystem-home filesystem-stuff memory cpu temperature volume date
+
+################ TRAY ################
+#                                                                                     #
+#                                                                                     #
+####################################
 
 ;tray-position = left
 ;tray-padding = 3
@@ -58,6 +81,13 @@ wm-restack = bspwm
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprevious
 
+
+############## MODULES ################
+#                                                                                       #
+#                                                                                       #
+#####################################
+
+
 [module/xwindow]
 type = internal/xwindow
 
@@ -66,6 +96,8 @@ format-foreground = #ba5247
 ;format-padding = 4
 label = %title:0:120:...%
 label-maxlen = 40
+
+
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -83,6 +115,8 @@ label-indicator-margin = 1
 ;label-indicator-background = ${colors.secondary}
 ;label-indicator-underline = ${colors.secondary}
 
+
+
 [module/filesystem]
 type = internal/fs
 interval = 25
@@ -94,12 +128,25 @@ spacing = 2
 ;label-indicator-padding = 2
 ;label-indicator-margin = 1
 
+
+
 [module/filesystem-home]
 type = internal/fs
 interval = 25
 
 mount-0 = /home
 label-mounted = %{F#ad2828} %{F-}%{F#C1C1C1}%free%
+
+
+
+[module/filesystem-stuff]
+type = internal/fs
+interval = 25
+
+mount-0 = /mnt/Ricks_Stuff
+label-mounted = %{F#ad2828} %{F-}%{F#C1C1C1}%free%
+
+
 
 [module/pkg]
 type = custom/script
@@ -111,27 +158,31 @@ label = "%output:0:30%"
 exec = ~/scripts/polybar/pkg.sh
 exec-if = "ping -q -w 2 -c 1 176.34.135.167 > /dev/null"
 
+
+
 [module/weather]
 type = custom/script
 interval = 10
 format = <label>
 format-prefix = " "
-format-padding = 4
+format-padding = 3
 format-prefix-foreground = #C3C6FF
 exec = ~/scripts/polybar/weather
+
+
 
 [module/bspwm]
 type = internal/bspwm
 
-;icon-default = ♟
-ws-icon-0 = 1;一
-ws-icon-1 = 2;二
-ws-icon-2 = 3;三
-ws-icon-3 = 4;四
-ws-icon-4 = 5;五
-ws-icon-5 = 6;六
-ws-icon-6 = 7;七
-ws-icon-7 = 8;八
+;icon-default =
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
 
 label-mode-padding = 2
 label-mode-foreground = #000
@@ -153,6 +204,8 @@ label-urgent-padding = 2
 label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
+
+
 
 [module/mpd]
 type = internal/mpd
@@ -181,6 +234,7 @@ bar-progress-empty-font = 2
 bar-progress-empty-foreground = ${colors.foreground-alt}
 
 
+
 [module/xbacklight]
 type = internal/xbacklight
 
@@ -202,6 +256,8 @@ bar-empty-foreground = ${colors.foreground-alt}
 inherit = module/xbacklight
 type = internal/backlight
 card = intel_backlight
+
+
 
 [module/cpu]
 type = internal/cpu
@@ -232,6 +288,8 @@ ramp-coreload-7 = █
 ramp-coreload-7-foreground = #ad2828
 ramp-foreground = #ad2828
 
+
+
 [module/memory]
 type = internal/memory
 interval = 0.5
@@ -239,6 +297,8 @@ format-prefix = " "
 format-prefix-foreground = #ad2828
 ;format-underline = #fff
 label = %percentage_used%%
+
+
 
 [module/wlan]
 type = internal/network
@@ -262,6 +322,8 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
+
+
 [module/eth]
 type = internal/network
 interface = eth0
@@ -278,6 +340,8 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+
+
 [module/date]
 type = internal/date
 interval = 1
@@ -293,6 +357,8 @@ format-prefix-foreground = #ad2828
 ;format-underline = #fff
 
 label = %date% %time%
+
+
 
 [module/volume]
 type = internal/volume
@@ -315,12 +381,14 @@ bar-volume-width = 6
 ;bar-volume-foreground-6 = #ad2828
 bar-volume-gradient = false
 bar-volume-indicator = 
-bar-volume-indicator-font = 2
+bar-volume-indicator-font =
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 3
 bar-volume-empty = ─
-bar-volume-empty-font = 2
+bar-volume-empty-font = 3
 bar-volume-empty-foreground = ${colors.foreground-alt}
+
+
 
 [module/battery]
 type = internal/battery
@@ -368,6 +436,8 @@ ramp-1 = 
 ramp-2 = 
 ramp-foreground = #ad2828
 
+
+
 [module/powermenu]
 type = custom/menu
 
@@ -402,8 +472,8 @@ screenchange-reload = true
 ;compositing-foreground = source
 ;compositing-border = over
 
+
+
 [global/wm]
 margin-top = 0
 margin-bottom = 0
-
-; vim:ft=dosini

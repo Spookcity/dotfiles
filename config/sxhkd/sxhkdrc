@@ -1,3 +1,7 @@
+# negative -w arg to account for a border width (default: 100%)
+F12
+    tdrop -ma -w -300 -x 137 -y "22" -h 350 -s dropdown termite
+
 # window gap via mouse wheel
 super + button{4,5}
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5))
@@ -62,8 +66,20 @@ super + control + 0
 # bspwm hotkeys
 ###############
 
+# insert receptacle, or clear receptacles on current desktop
+super + {_,shift} + d
+    {bspc node -i,for win in `bspc query -N -d -n .leaf.!window`; do bspc node $win -k; done}
+
+# rotate, balance
+super + {_,shift} + comma
+    bspc node $(bspc query -N -n -n .!leaf || echo @/) {-R 90,-B}
+
 super + apostrophe
     bspc node -s last
+
+# hide current node, or restore a queried hidden node
+super + {_,shift} + minus
+    bspc node {,$(bspc query -N -d -n .hidden | head -n 1)} -g hidden
 
 # Focus on floating / tiled
 alt + {e,w}
@@ -173,6 +189,9 @@ super + alt + {h,j,k,l}
 # contract the tiled space in the given direction
 super + alt + shift + {h,j,k,l}
   bspc node {@east -r -10,@north -r +10,@south -r -10,@west -r +10}
+
+alt + {_,shift} + Tab
+    bspc node -f {next,prev}.local
 
 # move a floating window
 super + {Left,Down,Up,Right}
