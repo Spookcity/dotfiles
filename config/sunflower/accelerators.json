@@ -32,7 +32,7 @@
         "collapse_directory_2": "", 
         "copy_files": "F5", 
         "copy_files_2": "", 
-        "copy_path_to_clipboard": "<Primary><Shift>l", 
+        "copy_path_to_clipboard": "<Shift><Super>l", 
         "copy_path_to_clipboard_2": "", 
         "copy_path_to_command_entry": "<Primary><Shift>Return", 
         "copy_path_to_command_entry_2": "<Primary><Shift>KP_Enter", 

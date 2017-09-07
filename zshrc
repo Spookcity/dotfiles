@@ -69,7 +69,7 @@ ENABLE_CORRECTION="true"
 #COMPLETION_WAITING_DOTS="true"
 
 # COLORS
-eval $(dircolors -b $HOME/.dircolors/dircolors.ansi-dark)
+eval $(dircolors -b $HOME/.dircolors/dircolors.256dark)
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories

@@ -49,7 +49,7 @@
         "time_format": "%H:%M %d-%m-%y"
     }, 
     "last_version": 0, 
-    "media_preview": true, 
+    "media_preview": false, 
     "multiple_instances": false, 
     "network_path_completion": true, 
     "operations": {
@@ -85,7 +85,7 @@
         "allow_bold": true, 
         "command": "xterm -into {0}", 
         "command2": "xterm -into {0} -e \"{1}\"", 
-        "cursor_shape": 1, 
+        "cursor_shape": 0, 
         "font": "Monospace 12", 
         "mouse_autohide": false, 
         "show_scrollbars": true, 

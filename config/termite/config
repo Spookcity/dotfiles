@@ -34,24 +34,18 @@ filter_unmatched_urls = true
 #modify_other_keys = false
 
 [colors]
-#cursor = #dcdccc
-#cursor_foreground = #dcdccc
-foreground = #dcdccc
+# special
+foreground      = #a6a6a6
+foreground_bold = #a6a6a6
+cursor          = #c5c8c6
+background      = #181818
 foreground_bold = #ffffff
-background = #1F1F1F
 
 
 # if unset, will reverse foreground and background
 highlight = #2f2f2f
 
 # colors from color0 to color254 can be set
-
-# special
-foreground      = #a6a6a6
-foreground_bold = #a6a6a6
-cursor          = #c5c8c6
-background      = #181818
-
 
 #BLACK
 color0 =     #303030
@@ -85,7 +79,7 @@ color12 =     #8C4B46
 color5 =    #d15345
 color13 =     #ba5247
 
-background = rgba(2, 10, 10, 0.9)
+background = rgba(31, 31, 31, 0.9)
 
 [hints]
 #font = Monospace 12

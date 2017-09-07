@@ -27,13 +27,14 @@ bspc rule -a mpv state=floating
 bspc rule -a Chromium desktop=^2 follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
 bspc rule -a Gimp state=floating
-bspc rule -a Lxappearance floating=true
-bspc rule -a File-roller floating=true
-# bspc rule -a Termite -e  weechat desktop=^5
+bspc rule -a Lxappearance state=floating
+bspc rule -a File-roller state=floating
+#bspc rule -a ncmpcpp desktop=^
+#bspc rule -a Terminator:Weechat desktop=^
 bspc rule -a Oblogout state=floating
+bspc rule -a Wpg state=floating
 bspc rule -a feh state=floating
 bspc rule -a Termite state=floating border=off
-bspc rule -a Telegram Web state=floating
 bspc rule -a Screenkey manage=off
 
 # startups

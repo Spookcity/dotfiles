@@ -8,11 +8,11 @@ super + button{4,5}
 
 # rofi window select
 super + space
-  rofi -show window
+  rofi -show drun
 
 # rofi app select
 control + space
-  rofi -show drun
+  rofi -show window
 
 ############
 # apps
@@ -36,7 +36,7 @@ super + shift + r
 
 # music
 super + shift + m
-    termite -e ncmpcpp
+    terminator -e ncmpcpp
 
 # git-cola
 super + shift + g
@@ -44,7 +44,7 @@ super + shift + g
 
 # chat
 super + shift + w
-    termite -e weechat
+    terminator -e weechat
 
 # tasks
 super + shift + v
@@ -90,12 +90,8 @@ super + shift + BackSpace
   oblogout
 
 # close and kill
-super + shift + c
+{super + shift + c,control + q}
   bspc node -c
-
-  # close and kill
-#control + q
-  #bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m

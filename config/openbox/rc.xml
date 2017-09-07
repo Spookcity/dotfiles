@@ -879,7 +879,7 @@
       <skip_taskbar>no</skip_taskbar>
       <focus>yes</focus>
       <maximized>yes</maximized>
-      </application>
+    </application>
     <application name="meld">
       <decor>no</decor>
       <skip_taskbar>no</skip_taskbar>
