@@ -35,10 +35,10 @@ filter_unmatched_urls = true
 
 [colors]
 # special
-foreground      = #a6a6a6
+foreground      = #8FA388
 foreground_bold = #a6a6a6
-cursor          = #c5c8c6
-background      = #181818
+cursor          = #BE5E1E
+background      =  #1D2426
 foreground_bold = #ffffff
 
 
@@ -48,36 +48,36 @@ highlight = #2f2f2f
 # colors from color0 to color254 can be set
 
 #BLACK
-color0 =     #303030
-color8 =     #5E5E5E
+color0 =     #39474A
+color8 =     #4C5F63
 
 #WHITE
-color7 =     #C6C6C6
-color15 =     #FFFFFF
+color7 =     #977D5E
+color15 =     #AB9C71
 
 #RED
-color1 =   #9B2323
-color9 =      #9B2323
+color1 =   #986345
+color9 =   #B07350
 
 #YELLOW
-color3 =     #B51D2C
-color11 =     #B51D2C
+color3 =     #9B6A46
+color11 =     #AF6B42
 
 #GREEN
-color2 =    #A83334
-color10 =     #A83334
+color2 =    #788249
+color10 =    #869151
 
 #CYAN
-color6 =   #9A413D
-color14 =     #9a413d
+color6 =   #5d796a
+color14 =     #668574
 
 #BLUE
-color4 =    #8C4B46
-color12 =     #8C4B46
+color4 =    #3E5951
+color12 =     #567A6E
 
 #MAGENTA
-color5 =    #d15345
-color13 =     #ba5247
+color5 =    #B9924A
+color13 =     #D69D55
 
 background = rgba(31, 31, 31, 0.9)
 

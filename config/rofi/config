@@ -2,10 +2,10 @@
 ! Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-normal:                   #B3202020,#892B2B,#B3202020,#9A413D,#202020
-rofi.color-urgent:                   #202020,#892B2B,#202020,#9A413D,#202020
-rofi.color-active:                    #B3202020,#892B2B,#B3202020,#9A413D,#202020
-rofi.color-window:                  #B3202020,#892B2B
+rofi.color-normal:                   #1D2426,#486350,#1D2426,#3E5951,#1D2426
+rofi.color-urgent:                   #1D2426,#3E5951,#1D2426,#3E5951,#1D2426
+rofi.color-active:                    #1D2426,#3E5951,#1D2426,#3E5951,#1D2426
+rofi.color-window:                  #1D2426,#3E5951
 
 rofi.font:                           Hack Regular 11
 rofi.separator-style:                none
@@ -13,7 +13,7 @@ rofi.separator-style:                none
 ! Configuration Options
 
 rofi.modi:                           window,run,ssh
-rofi.width:                          50
+rofi.width:                          40
 rofi.lines:                          15
 rofi.opacity:                        100
 rofi.columns:                        1

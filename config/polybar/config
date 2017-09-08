@@ -4,9 +4,8 @@
 ####################################
 
 [colors]
-background = #181818
-background-alt = #FF9b2323
-foreground = #C1C1C1
+background = #1D2426
+foreground = #8FA388
 foreground-alt = #919191
 primary = #fff
 secondary = #e60053
@@ -29,9 +28,9 @@ fixed-center = true
 underline-size = 2
 ;underline-color = #9b2323
 ;border-bottom = 2
-border-top = 4
-border-bottom-color = #9b2323
-border-top-color = #181818
+border-top = 2
+border-bottom-color = #202020
+border-top-color = #202020
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -91,8 +90,7 @@ scroll-down = bspwm-deskprevious
 [module/xwindow]
 type = internal/xwindow
 
-;format-background = #ba5247
-format-foreground = #ba5247
+format-foreground = #567A6E
 ;format-padding = 4
 label = %title:0:120:...%
 label-maxlen = 40
@@ -122,7 +120,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-label-mounted = %{F#ad2828} %{F#C1C1C1}%free%
+label-mounted = %{F#869151} %{F#9B6A46}%free%
 format-mounted = <label-mounted>
 spacing = 2
 ;label-indicator-padding = 2
@@ -135,7 +133,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /home
-label-mounted = %{F#ad2828} %{F-}%{F#C1C1C1}%free%
+label-mounted = %{F#869151} %{F-}%{F#9B6A46}%free%
 
 
 
@@ -144,7 +142,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /mnt/Ricks_Stuff
-label-mounted = %{F#ad2828} %{F-}%{F#C1C1C1}%free%
+label-mounted = %{F#869151} %{F-}%{F#9B6A46}%free%
 
 
 
@@ -166,7 +164,7 @@ interval = 10
 format = <label>
 format-prefix = " "
 format-padding = 3
-format-prefix-foreground = #C3C6FF
+format-prefix-foreground = #FFFFFF
 exec = ~/scripts/polybar/weather
 
 
@@ -186,23 +184,21 @@ ws-icon-7 = 8;
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
 
 label-focused = %name%
-;label-focused-background = ${colors.background-alt}
-label-focused-foreground= #920F0F
-label-focused-underline= #9b2323
+label-focused-foreground= #FFFFFF
+label-focused-underline= #9B6A46
 label-focused-padding = 2
 
 label-occupied = %name%
 label-occupied-padding = 2
 
 label-urgent = %name%
-label-urgent-background = ${colors.alert}
+;label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = %name%
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground =  #3E5951
 label-empty-padding = 2
 
 
@@ -264,29 +260,29 @@ type = internal/cpu
 interval = 1.5
 
 format-prefix = " "
-format-prefix-foreground = #ad2828
-format = <label> <ramp-coreload>
+format-prefix-foreground = #869151
+format = %{F#9B6A46}<label> <ramp-coreload>
 format-padding = 1
-format-lab-foreground = #ad2828
+format-label-foreground = #9B6A46
 format-background = ${colors.background}
 
 ramp-coreload-0 = ▁
-ramp-coreload-0-foreground = #ad2828
+ramp-coreload-0-foreground = #3E5951
 ramp-coreload-1 = ▂
-ramp-coreload-1-foreground = #ad2828
+ramp-coreload-1-foreground = #3E5951
 ramp-coreload-2 = ▃
-ramp-coreload-2-foreground = #ad2828
+ramp-coreload-2-foreground = #3E5951
 ramp-coreload-3 = ▄
-ramp-coreload-3-foreground = #ad2828
+ramp-coreload-3-foreground = #3E5951
 ramp-coreload-4 = ▅
-ramp-coreload-4-foreground = #ad2828
+ramp-coreload-4-foreground = #3E5951
 ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = #ad2828
+ramp-coreload-5-foreground = #3E5951
 ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = #ad2828
+ramp-coreload-6-foreground = #3E5951
 ramp-coreload-7 = █
-ramp-coreload-7-foreground = #ad2828
-ramp-foreground = #ad2828
+ramp-coreload-7-foreground = #3E5951
+ramp-foreground = #3E5951
 
 
 
@@ -294,9 +290,9 @@ ramp-foreground = #ad2828
 type = internal/memory
 interval = 0.5
 format-prefix = " "
-format-prefix-foreground = #ad2828
+format-prefix-foreground = #869151
 ;format-underline = #fff
-label = %percentage_used%%
+label = %{F#9B6A46} %percentage_used%%
 
 
 
@@ -353,11 +349,11 @@ time = %l:%M %p
 time-alt = %l:%M %p
 
 format-prefix = 
-format-prefix-foreground = #ad2828
+format-prefix-foreground = #9B6A46
 ;format-underline = #fff
 
 label = %date% %time%
-
+label-foreground=  #869151
 
 
 [module/volume]
@@ -365,10 +361,10 @@ type = internal/volume
 
 format-volume = <label-volume> <bar-volume>
 label-volume = " "
-label-volume-foreground = #ad2828
+label-volume-foreground = #869151
 
 format-muted-prefix = " "
-format-muted-foreground = #ad2828
+format-muted-foreground = #869151
 label-muted = Muted
 
 bar-volume-width = 6
@@ -380,7 +376,8 @@ bar-volume-width = 6
 ;bar-volume-foreground-5 = #ad2828
 ;bar-volume-foreground-6 = #ad2828
 bar-volume-gradient = false
-bar-volume-indicator = 
+bar-volume-indicator =  
+bar-volume-indicator-foreground = #3E5951
 bar-volume-indicator-font =
 bar-volume-fill = ─
 bar-volume-fill-font = 3
@@ -427,14 +424,14 @@ format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 ;format-warn-underline = ${self.format-underline}
 
-label = %temperature%
+label = %{F#9B6A46} %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-foreground = #ad2828
+ramp-foreground = #869151
 
 
 
