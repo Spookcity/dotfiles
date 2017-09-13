@@ -1,6 +1,6 @@
 ############## COLORS ################
-#                                                                                     #
-#                                                                                     #
+#                                                                                             #
+#                                                                                             #
 ####################################
 
 [colors]
@@ -8,12 +8,12 @@ background = #1D2426
 foreground = #8FA388
 foreground-alt = #919191
 primary = #fff
-secondary = #e60053
+secondary = #B31416
 alert = #bd2c40
 
 ############## BAR TOP ################
-#                                                                                     #
-#                                                                                     #
+#                                                                                             #
+#                                                                                             #
 ####################################
 
 
@@ -27,7 +27,7 @@ fixed-center = true
 
 underline-size = 2
 ;underline-color = #9b2323
-;border-bottom = 2
+border-bottom = 1
 border-top = 2
 border-bottom-color = #202020
 border-top-color = #202020
@@ -54,18 +54,18 @@ font-4 = Roboto:style=Regular:pixelsize=10;1
 
 
 ############# MODULES USED ###############
-#                                                                                            #
-#                                                                                            #
-#######################################
+#                                                                                                    #
+#                                                                                                    #
+######################################
 
 
-modules-left = bspwm weather pkg
+modules-left = bspwm weather  wlan networkspeedup networkspeeddown
 modules-center =  xwindow
 modules-right =   filesystem filesystem-home filesystem-stuff memory cpu temperature volume date
 
 ################ TRAY ################
-#                                                                                     #
-#                                                                                     #
+#                                                                                             #
+#                                                                                             #
 ####################################
 
 ;tray-position = left
@@ -82,8 +82,8 @@ scroll-down = bspwm-deskprevious
 
 
 ############## MODULES ################
-#                                                                                       #
-#                                                                                       #
+#                                                                                               #
+#                                                                                               #
 #####################################
 
 
@@ -92,10 +92,25 @@ type = internal/xwindow
 
 format-foreground = #567A6E
 ;format-padding = 4
-label = %title:0:120:...%
+label = %title:0:49:...%
 label-maxlen = 40
 
 
+[module/networkspeedup]
+type = internal/network
+interface = wlp3s0
+label-connected = "%upspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-foreground = #869151
+
+[module/networkspeeddown]
+type = internal/network
+interface = wlp3s0
+label-connected = "%downspeed:7%"
+format-connected = <label-connected>
+format-connected-prefix = " "
+format-connected-prefix-foreground = #869151
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -120,7 +135,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-label-mounted = %{F#869151} %{F#9B6A46}%free%
+label-mounted = %{F#869151} %{F#B9924A}%free%
 format-mounted = <label-mounted>
 spacing = 2
 ;label-indicator-padding = 2
@@ -133,7 +148,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /home
-label-mounted = %{F#869151} %{F-}%{F#9B6A46}%free%
+label-mounted = %{F#869151} %{F-}%{F#B9924A}%free%
 
 
 
@@ -142,7 +157,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /mnt/Ricks_Stuff
-label-mounted = %{F#869151} %{F-}%{F#9B6A46}%free%
+label-mounted = %{F#869151} %{F-}%{F#B9924A}%free%
 
 
 
@@ -261,7 +276,7 @@ interval = 1.5
 
 format-prefix = " "
 format-prefix-foreground = #869151
-format = %{F#9B6A46}<label> <ramp-coreload>
+format = %{F#B9924A}<label> <ramp-coreload>
 format-padding = 1
 format-label-foreground = #9B6A46
 format-background = ${colors.background}
@@ -292,7 +307,7 @@ interval = 0.5
 format-prefix = " "
 format-prefix-foreground = #869151
 ;format-underline = #fff
-label = %{F#9B6A46} %percentage_used%%
+label = %{F#B9924A} %percentage_used%%
 
 
 
@@ -302,8 +317,8 @@ interface = wlp3s0
 interval = 1.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
+;format-connected-underline = #9f78e1
+label-connected = %{F#B9924A} %essid%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -316,7 +331,7 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-foreground = #869151
 
 
 
@@ -424,7 +439,7 @@ format = <ramp> <label>
 format-warn = <ramp> <label-warn>
 ;format-warn-underline = ${self.format-underline}
 
-label = %{F#9B6A46} %temperature%
+label = %{F#B9924A} %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
 

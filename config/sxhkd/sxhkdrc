@@ -19,7 +19,7 @@ super + Return
   termite
 
 # web
-super + w
+super +  shift + w
     chromium
 
 # file manager
@@ -74,7 +74,7 @@ super + apostrophe
     bspc node -s last
 
 # hide current node, or restore a queried hidden node
-super + {_,shift} + minus
+super + {_,shift} + i
     bspc node {,$(bspc query -N -d -n .hidden | head -n 1)} -g hidden
 
 # Focus on floating / tiled
