@@ -19,7 +19,7 @@ super + Return
   termite
 
 # web
-super +  shift + w
+super  w
     chromium
 
 # file manager
@@ -49,6 +49,10 @@ super + shift + t
 # cleaner
 super + shift + b
     bleachbit
+
+# xkill
+control + alt + k
+    xkill
 
 ###########
 #scripts

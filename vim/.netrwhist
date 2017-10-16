@@ -1,0 +1,3 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/rick/android_dev/G800F-Kernel_Stuff/kernel_samsung_kminilte/drivers/cpufreq'

@@ -7,7 +7,7 @@ xsetroot -cursor_name left_ptr &
 bspc monitor -d      
 
 bspc config border_width        2
-bspc config window_gap          10
+bspc config window_gap          8
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -25,6 +25,7 @@ bspc config presel_feedback_color         "#A6A6A6"
 bspc desktop  -l monocle
 bspc rule -a mpv state=floating
 bspc rule -a Chromium desktop=^2 follow=on
+bspc rule -a Tor Browser desktop=^2 follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
 bspc rule -a Gimp state=floating
 bspc rule -a Lxappearance state=floating
@@ -33,6 +34,7 @@ bspc rule -a File-roller state=floating
 bspc rule -a Oblogout state=floating
 bspc rule -a Wpg state=floating
 bspc rule -a feh state=floating
+bspc rule -a skypeforlinux state=floating
 bspc rule -a Termite state=floating border=off
 bspc rule -a Screenkey manage=off
 
