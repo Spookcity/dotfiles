@@ -42,6 +42,8 @@ bspc rule -a Screenkey manage=off
 # menutray -i &
 polybar top &
 ~/.fehbg &
+#stalonetray &
+#paramano &
 compton --config /home/rick/.config/compton.conf -b &
 redshift &
 mpd &

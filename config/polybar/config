@@ -68,8 +68,8 @@ modules-right =   filesystem filesystem-home filesystem-stuff memory cpu tempera
 #                                                                                             #
 ####################################
 
-;tray-position = left
-;tray-padding = 3
+;tray-position = right
+;tray-padding = 2
 ;tray-transparent = true
 ;tray-background = ${colors.background}
 

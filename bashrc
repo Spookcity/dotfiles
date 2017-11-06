@@ -24,7 +24,7 @@ export PATH=${PATH}:/opt/android-sdk/platform-tools
 #export USE_CCACHE=1
 #export CCACHE_DIR=/mnt/Ricks_Stuff/.ccache
 # STAGING_RT_PRIORITY_BASE=15
-# STAGING_RT_PRIORITY_SERVER=95
+#STAGING_RT_PRIORITY_SERVER=95
 source /usr/bin/virtualenvwrapper.sh
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
