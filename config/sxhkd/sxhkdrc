@@ -26,6 +26,10 @@ super  w
 super + shift + f
     sunflower
 
+ # spotify
+super + shift + s
+    blockify
+
 # root file manager
 super + shift + r
     gksudo sunflower
