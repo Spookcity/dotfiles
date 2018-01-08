@@ -14,4 +14,4 @@ symbol = icons[new.xpath('symbol')[0].attrib['var'].replace('mf/', '').split('.'
 degrees = new.xpath('temperature')[0].attrib['value']
 name = new.xpath('symbol')[0].attrib['name']
 
-print(u'%{T5}' + symbol + u'%{T-}  %{T1}' + degrees + '° C%{T-}')
+print(u'%{T5}' +  u'%{T-}  %{T1}' + degrees + '° C%{T-}')
