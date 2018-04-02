@@ -1,1 +1,0 @@
-{"description": "GDB integration with Sublime Text 2", "dependencies": [], "url": "https://github.com/quarnster/SublimeGDB", "platforms": ["*"], "version": "2017.06.10.15.29.21", "sublime_text": "*"}

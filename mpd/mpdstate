@@ -2,7 +2,7 @@ sw_volume: 100
 audio_device_state:1:Intel
 audio_device_state:1:Pipe
 state: stop
-current: 0
+current: 9
 random: 0
 repeat: 0
 single: 0
@@ -11,80 +11,14 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-song_begin: http://listen.181fm.com/181-buzz_128k.mp3
-Title: Franz Ferdinand - Take Me Out 
-Name: 181.FM The Buzz (Alt. Rock)
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Alice In Chains - Down In A Hole 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Flys - Got You (Where I Want You) 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90scountry_128k.mp3
-Title: Clint Black & Lisa Hartman - When I Said I Do 
-Name: 181.FM 90s Country
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90scountry_128k.mp3
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90scountry_128k.mp3
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-classicbuzz_128k.mp3
-Title: Silverchair - Abuse Me 
-Name: 181.FM Classic Buzz (Alt)
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-classicbuzz_128k.mp3
-Title: Silverchair - Abuse Me 
-Name: 181.FM Classic Buzz (Alt)
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: 181.FM - THIS STATION WILL CONTINUE AFTER THIS BREAK
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-awesome80s_128k.mp3
-Title: Animotion - Obsession 
-Name: 181.FM Awesome 80s
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Live - Lightning Crashes 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Live - Lightning Crashes 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Sarah McLachlan - Building A Mystery 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Sarah McLachlan - Building A Mystery 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Sarah McLachlan - Building A Mystery 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
-song_begin: http://listen.181fm.com/181-90salt_128k.mp3
-Title: Bush - Machinehead 
-Name: 181.FM 90s Alternative
-mtime: 0
-song_end
+0:1476/Our Season Draws Near/1476 - Ettins.mp3
+1:1476/Our Season Draws Near/1476 - Odessa.mp3
+2:1476/Our Season Draws Near/1476 - Our Ice Age.mp3
+3:1476/Our Season Draws Near/1476 - Our Silver Age.mp3
+4:1476/Our Season Draws Near/1476 - Solitude (Exterior).mp3
+5:1476/Our Season Draws Near/1476 - Solitude (Interior).mp3
+6:1476/Our Season Draws Near/1476 - Winter of Winds.mp3
+7:A Day to Remember/For Those Who Have Heart/A Day to Remember - Fast Forward to 2012.mp3
+8:1476/Our Season Draws Near/1476 - By Torchlight.mp3
+9:AFI/A Fire Inside EP/AFI - The Hanging Garden.mp3
 playlist_end

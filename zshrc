@@ -18,7 +18,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
 POWERLEVEL9K_DIR_HOME_BACKGROUND='green'
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='cyan'
 POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='001'
-POWERLEVEL9K_TIME_BACKGROUND='001'
+#POWERLEVEL9K_TIME_BACKGROUND='001'
 # POWERLEVEL9K_TIME_FOREGROUND='007'
 # POWERLEVEL9K_COLOR_SCHEME='light'
 # Advanced `vcs` color customization
@@ -33,7 +33,7 @@ ZSH_THEME="spaceship"
 SPACESHIP_DIR_COLOR=cian
 SPACESHIP_VENV_SHOW=true
 SPACESHIP_TIME_PREFIX="at "
-SPACESHIP_PROMPT_SYMBOL="➜"
+SPACESHIP_CHAR_SYMBOL="➜"
 SPACESHIP_TIME_SHOW=true
 SPACESHIP_TIME_COLOR=blue
 
@@ -90,11 +90,15 @@ autoload -U compinit && compinit
 
 # Other
 source $ZSH/oh-my-zsh.sh
-source /usr/bin/virtualenvwrapper.sh
+#source /usr/bin/virtualenvwrapper.sh
 
 eval $(thefuck --alias)
 # You can use whatever you want as an alias, like for Mondays:
 eval $(thefuck --alias FUCK)
+
+# Other
+source $ZSH/oh-my-zsh.sh
+source /usr/bin/virtualenvwrapper.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

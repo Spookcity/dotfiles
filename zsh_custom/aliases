@@ -2,13 +2,12 @@
 alias upgrade='sudo pacman -Syu'
 alias orphan='pacman -Qtd'
 alias pac='pacaur -Syua'
-alias y='yaourt'
+alias p='pacaur -s'
 
 # python env
 alias virtual='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env'
 
 # android stuffs
-alias nougat='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env && export USE_NINJA=false && export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx10240m" && ./prebuilts/sdk/tools/jack-admin start-server'
 alias log='adb logcat -d > logcat.txt'
 alias device='adb devices'
 

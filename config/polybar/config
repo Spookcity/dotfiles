@@ -19,7 +19,7 @@ alert = #bd2c40
 
 [bar/top]
 width = 100%
-height = 18
+height = 22
 ;offset-x = 1%
 ;offset-y = 4
 radius = 0.0
@@ -46,11 +46,11 @@ padding-right = 3
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = NotoSans-Regular:size=9
-font-1 = FontAwesome:pixelsize=9
+font-0 = NotoSans-Regular:size=10.5
+font-1 = FontAwesome:pixelsize=10
 font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
 font-3 = Wuncon Siji:pixelsize=10;1
-font-4 = Roboto:style=Regular:pixelsize=10;1
+font-4 = Roboto:style=Regular:pixelsize=10s;1
 
 
 ############# MODULES USED ###############
@@ -59,9 +59,9 @@ font-4 = Roboto:style=Regular:pixelsize=10;1
 ######################################
 
 
-modules-left = bspwm weather  wlan networkspeedup networkspeeddown
+modules-left = bspwm weather pkg  wlan networkspeedup networkspeeddown
 modules-center =  xwindow
-modules-right =   filesystem filesystem-home filesystem-stuff memory cpu temperature volume date
+modules-right =   filesystem filesystem-home filesystem-shit memory cpu temperature volume date battery
 
 ################ TRAY ################
 #                                                                                             #
@@ -152,11 +152,11 @@ label-mounted = %{F#869151} %{F-}%{F#B9924A}%free%
 
 
 
-[module/filesystem-stuff]
+[module/filesystem-shit]
 type = internal/fs
 interval = 25
 
-mount-0 = /mnt/Ricks_Stuff
+mount-0 = /mnt/shit
 label-mounted = %{F#869151} %{F-}%{F#B9924A}%free%
 
 
@@ -382,7 +382,7 @@ format-muted-prefix = " "
 format-muted-foreground = #869151
 label-muted = Muted
 
-bar-volume-width = 6
+bar-volume-width = 8
 ;bar-volume-foreground-0 = #ad2828
 ;bar-volume-foreground-1 = #ad2828
 ;bar-volume-foreground-2 = #ad2828
@@ -409,10 +409,10 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = #9B6A46
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+;format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
@@ -429,10 +429,11 @@ animation-charging-2 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
+
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
-warn-temperature = 60
+warn-temperature = 70
 
 format = <ramp> <label>
 ;format-underline = #fff

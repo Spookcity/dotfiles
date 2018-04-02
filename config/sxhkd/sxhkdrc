@@ -66,6 +66,18 @@ control + alt + k
 super + control + 0
     ~/scripts/bspwm/TogglePolybar.sh
 
+# toggle touchpad
+XF86Launch1
+    ~/scripts/toggle_touchpad.sh
+
+# media
+
+# mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+
+
 ###############
 # bspwm hotkeys
 ###############
