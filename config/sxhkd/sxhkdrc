@@ -26,7 +26,7 @@ super  w
 super + shift + f
     sunflower
 
- # spotify
+# spotify
 super + shift + s
     blockify
 
@@ -68,15 +68,30 @@ super + control + 0
 
 # toggle touchpad
 XF86Launch1
-    ~/scripts/toggle_touchpad.sh
+    ~/scripts/toggle_touchpad.sh;
 
-# media
+# media/special keys
 
-# mute
+# mute/unmute
 XF86AudioMute
-    amixer -D pulse set Master 1+ toggle
-
-
+    amixer set Master toggle; notify-send "Toggle Mute"
+    
+# volume
+XF86AudioRaiseVolume
+   amixer set Master 5%+; notify-send "Volume Up: [$(amixer get Master | egrep -o "[0-9]+%")]"
+   
+XF86AudioLowerVolume
+    amixer set Master 5%-; notify-send "Volume Down: [$(amixer get Master | egrep -o "[0-9]+%")]"
+    
+XF86AudioMicMute
+   amixer set Capture toggle mute; notify-send "Toggle Mic Mute"    
+   
+# brightness 
+XF86MonBrightnessUp
+    light -A 5; notify-send "brightness up [$(light)%]"
+    
+XF86MonBrightnessDown    
+    light -U 5; notify-send "brightness down [$(light)%]"
 
 ###############
 # bspwm hotkeys

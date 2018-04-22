@@ -1,8 +1,8 @@
 mpd_host = "127.0.0.1"
 
-mpd_port = 6600
+mpd_port = 6300
 
-mpd_music_dir = "/mnt/Samba/Music"
+mpd_music_dir = "/mnt/Ricks_Stuff/Music"
 
 mpd_crossfade_time = "5"
 startup_screen = browser
@@ -73,4 +73,3 @@ visualizer_fifo_path = "/tmp/mpd.fifo"
 visualizer_type = "wave" (spectrum/wave)
 visualizer_color = "green"
 visualizer_look = "∙▋"
-

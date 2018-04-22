@@ -1,8 +1,8 @@
 # arch stuffs
 alias upgrade='sudo pacman -Syu'
 alias orphan='pacman -Qtd'
-alias pac='pacaur -Syua'
-alias p='pacaur -s'
+alias yup='yay -Syu'
+alias y='yay'
 
 # python env
 alias virtual='VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 && mkvirtualenv -p /usr/bin/python2.7 my_env'
@@ -46,10 +46,10 @@ alias c='clear'
 alias q='exit'
 
 
-# alias vim= 'nvim'
+alias vim='nvim'
 # alias make='~/bin/color.sh'
 # alias mka='~/bin/color.sh'
 alias gconf='GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc make gconfig'
 
 # random
-alias weather='~/bin/weather.sh i'
+alias weather='termite --geometry=1200x800 --hold -e ~/scripts/weather.sh i'

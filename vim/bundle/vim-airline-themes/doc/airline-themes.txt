@@ -29,6 +29,7 @@ Currently this repository contains the following themes:
     * angr
     * atomic
     * aurora
+    * ayu_mirage
     * badcat
     * badwolf
     * base16 (|airline-theme-base16|)
@@ -45,6 +46,7 @@ Currently this repository contains the following themes:
     * base16_brewer
     * base16_bright
     * base16_chalk
+    * base16_classic
     * base16_codeschool
     * base16_colors
     * base16_default
@@ -62,7 +64,7 @@ Currently this repository contains the following themes:
     * base16_mocha
     * base16_monokai
     * base16_ocean
-    * base16_oceanicnext
+    * base16_oceanicnext (|airline-theme-base16-oceanicnext|)
     * base16_paraiso
     * base16_pop
     * base16_railscasts
@@ -71,7 +73,7 @@ Currently this repository contains the following themes:
     * base16_solarized
     * base16_spacemacs
     * base16_summerfruit
-    * base16_tomorrow
+    * base16_tomorrow (|airline-theme-base16_tomorrow|)
     * base16_twilight
     * base16color
     * behelit
@@ -89,6 +91,7 @@ Currently this repository contains the following themes:
     * hybridline
     * jay
     * jellybeans
+    * jet
     * kalisi
     * kolor
     * laederon
@@ -101,10 +104,12 @@ Currently this repository contains the following themes:
     * murmur
     * onedark (|airline-theme-onedark|)
     * papercolor
+    * peaksea
     * powerlineish
     * qwq
     * raven
     * ravenpower
+    * seagull
     * serene
     * sierra
     * silver
@@ -113,10 +118,12 @@ Currently this repository contains the following themes:
     * sol
     * solarized (|airline-theme-solarized|)
     * term
+    * term_light
     * tomorrow
     * ubaryd
     * understated
     * vice
+    * violet
     * wombat
     * xtermlight
     * zenburn
@@ -128,7 +135,6 @@ NAME                                         *airline-themes-configuration*
 
 To define a theme to be used by vim-airline you can set the variable
 g:airline_theme in your |.vimrc|  like this: >
-
     :let g:airline_theme='dark'
 <
                                                   *airline-theme-dark_minimal*
@@ -145,8 +151,7 @@ Base16 has a Solarized theme with the usual colors, but mapped in the
 terminal differently.  The main difference is that the bright colors,
 Ansi 9-15, are left the same as their Ansi 1-7 counterparts.  The
 remaining solarized colors are mapped into higher indexes by using
-Base16 Shell.  To enable it:
->
+Base16 Shell.  To enable it: >
     let g:solarized_base16 = 1
 >
 See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
@@ -154,16 +159,19 @@ See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
 *g:airline_solarized_normal_green*
 
 Turns the outer-most section of the statusline Solarized green, making it
-look more like classic powerline in normal mode. To enable it:
->
+look more like classic powerline in normal mode. To enable it: >
     let g:airline_solarized_normal_green = 1
 <
+*g:airline_solarized_dark_text*
 
+Turns the text color of the outer-most sections of the statusline to be dark. 
+To enable it: >
+    let g:airline_solarized_dark_text = 1
+<
 *g:airline_solarized_dark_inactive_border*
 
 Changes inactive window panes to have a dark bottom border instead
-of light by default. To enable it:
->
+of light by default. To enable it: >
     let g:airline_solarized_dark_inactive_border = 1
 <
                                                     *airline-theme-base16*
@@ -176,7 +184,6 @@ might not support all options.
 *g:airline_base16_improved_contrast*
 
 Improves the contrast for the inactive statusline. To enable it: >
-
     let g:airline_base16_improved_contrast = 1
 <
 
@@ -184,7 +191,6 @@ Improves the contrast for the inactive statusline. To enable it: >
 
 Uses a predefined colorpalette for defining the colors, instead of guessing
 the values from other highlight groups. To enable it: >
-
     let g:airline#themes#base16#constant = 1
 <
                                                   *airline-theme-base16-shell*
@@ -196,13 +202,6 @@ colors in the terminal: (https://github.com/chriskempson/base16-shell). The
 colors used in this theme are within the 21 term colors set by Base16 Shell.
 The theme supports 2 options described below.
 
-*g:airline_base16_oceanicnext*
-
-Allow 256 color use of the base16_oceanicnext theme. Without this setting
-base16_oceanicnext may look incorrect in 256 color mode. To enable it: >
-
-    let base16colorspace = 256
-
 *g:airline_base16_solarized*
 
 Adjusts the colors to match base16_solarized shell theme. You may also try to
@@ -210,8 +209,17 @@ use it with other Base16 Shell themes. To enable it: >
 
     let g:airline_base16_solarized = 1
 <
-                                                       *airline-theme-onedark*
+                                                 *airline-theme-base16-tomorrow*
+                                                *airline-theme-base16-oceanicnext*
 
+base16 theme for vim-airline matches your active Base16 colorscheme.
+
+Allow 256 color use of the base16 theme. Without this setting
+the theme may look incorrect in 256 color mode. To enable it: >
+
+    let base16colorspace = 256
+<
+                                                       *airline-theme-onedark*
 *g:onedark_termcolors*
 
 Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
@@ -225,14 +233,23 @@ described in the installation notes for the joshdick/onedark.vim colorscheme:
 (https://github.com/joshdick/onedark.vim#installation)
 
                                                        *airline-theme-deus*
-
 *g:deus_termcolors*
 
 Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
 Has no effect if using true/24-bit color. To enable 16-color mode: >
-
     let g:onedark_termcolors = 16
 <
+                                                       *airline-theme-zenburn*
+*g:zenburn_high_Contrast*
+
+Enable higher contrast colors for the zenburn colorscheme and the
+corresponding airline theme. Must be set before switching to the zenburn
+colorscheme >
+    let g:zenburn_high_Contrast = 1
+
+The zenburn colorscheme also supports a couple of other configuration
+variables, that possibly also influence the colors in the zenburn airline
+theme. Please check the zenburn color scheme on how to configure it.
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
