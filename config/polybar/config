@@ -59,7 +59,7 @@ font-4 = Roboto:style=Regular:pixelsize=10s;1
 ######################################
 
 
-modules-left = bspwm weather pkg  wlan networkspeedup networkspeeddown
+modules-left = bspwm  weather wlan networkspeedup networkspeeddown
 modules-center =  xwindow
 modules-right =   filesystem filesystem-home filesystem-shit memory cpu temperature volume date battery
 

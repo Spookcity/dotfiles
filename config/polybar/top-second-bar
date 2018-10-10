@@ -1,0 +1,27 @@
+width = 80%
+height = 19
+offset-x = 10%
+
+; subtle
+offset-y = 0
+override-redirect = false
+
+; i3
+;offset-y = 24
+;override-redirect = true
+
+background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+font-0 = "Iosevka-Term:size=6;2"
+font-1 = "Material Icons:antialias=false:size=8;4"
+border-top-size = 1
+border-top-color = ${colors.border}
+border-size = 0
+padding-left = 2
+padding-right = 1
+module-margin-left = 0
+module-margin-right = 0
+line-size = 0
+bottom = false
+cursor-click = pointer
+cursor-scroll = ns-resize

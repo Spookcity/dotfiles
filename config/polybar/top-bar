@@ -1,0 +1,30 @@
+width = 86%
+height = 19
+offset-x = 7%
+
+; subtle
+offset-y = 0 
+override-redirect = true
+
+; i3
+;offset-y = 4
+;override-redirect = true
+
+fixed-center = true
+bottom = false 
+background = ${colors.background-alt}
+foreground = ${colors.foreground-alt}
+line-size = 0
+line-color = #f00
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0 
+font-0 = "Iosevka-Term:size=6;2"
+font-1 = "Material Icons:antialias=false:size=8;4"
+cursor-click = pointer
+cursor-scroll = ns-resize
+;separator = "%{B#dd212326}%{F#ff666666}|%{F-}%{B-}"
+separator = " %{F#555588}*%{F-} "
+border-bottom-size = 0
+border-bottom-color = ${colors.background}

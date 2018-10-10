@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# together with i3wm i bound this script to the blue thinkvantage button
-# using:
-# bindsym XF86Launch1 exec /usr/local/bin/toggle_touchpad.sh
-
 # extract device id
 DEVICE=`xinput --list|sed -n 's/.*SynPS\/2 Synaptics TouchPad.*id=\([0-9]*\).*/\1/p'`
 
@@ -14,7 +10,7 @@ RESULT=$?
 # toggle
 if [ $RESULT -eq 0 ]
 then
-    xinput disable $DEVICE
+    xinput disable $DEVICE & notify-send "Touchpad Off"
     exit 0
 fi
-xinput enable $DEVICE
+xinput enable $DEVICE & notify-send "Touchpad On"

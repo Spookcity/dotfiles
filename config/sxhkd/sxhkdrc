@@ -38,6 +38,10 @@ super + shift + r
 super + shift + m
     termite -e ncmpcpp
 
+    # editor
+super + shift + e
+    termite -e subl3 %F
+
 # git-cola
 super + shift + g
     env QT_API=pyqt4 git-cola
@@ -75,22 +79,22 @@ XF86Launch1
 # mute/unmute
 XF86AudioMute
     amixer set Master toggle; notify-send "Toggle Mute"
-    
+
 # volume
 XF86AudioRaiseVolume
    amixer set Master 5%+; notify-send "Volume Up: [$(amixer get Master | egrep -o "[0-9]+%")]"
-   
+
 XF86AudioLowerVolume
     amixer set Master 5%-; notify-send "Volume Down: [$(amixer get Master | egrep -o "[0-9]+%")]"
-    
+
 XF86AudioMicMute
-   amixer set Capture toggle mute; notify-send "Toggle Mic Mute"    
-   
-# brightness 
+   amixer set Capture toggle mute; notify-send "Toggle Mic Mute"
+
+# brightness
 XF86MonBrightnessUp
     light -A 5; notify-send "brightness up [$(light)%]"
-    
-XF86MonBrightnessDown    
+
+XF86MonBrightnessDown
     light -U 5; notify-send "brightness down [$(light)%]"
 
 ###############
