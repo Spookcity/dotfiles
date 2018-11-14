@@ -1,9 +1,0 @@
-#! /bin/bash
-
-if [ `pidof tint2` ]; then
-    killall tint2
-    exit
-else
-    tint2 -c /home/rick/.config/tint2/tint2rc &
-fi
-exit

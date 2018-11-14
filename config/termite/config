@@ -1,5 +1,5 @@
 [options]
-font = Droid Sans Mono Dotted for Powerline 11
+font =  Monaco, Regular, 10pt 11
 padding = 8
 border_width = 8
 scroll_on_output = false

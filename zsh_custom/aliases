@@ -35,6 +35,7 @@ alias gr='git remote -v'
 alias grh='git reset --hard'
 alias gra='git remote add'
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
+alias lg='lazygit'
 
 alias tis='tig status'
 alias til='tig log'
@@ -47,9 +48,8 @@ alias q='exit'
 
 
 alias vim='nvim'
-# alias make='~/bin/color.sh'
-# alias mka='~/bin/color.sh'
-alias gconf='GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc make gconfig'
+# alias make='~/scripts/color.sh'
+# alias mka='~/scripts/color.sh'
 
 # random
 alias weather='termite --geometry=1200x800 --hold -e ~/scripts/weather.sh i'

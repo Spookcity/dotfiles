@@ -46,6 +46,10 @@ super + shift + e
 super + shift + g
     env QT_API=pyqt4 git-cola
 
+ # meld
+super + shift + c
+    meld
+
 # chat
 super + shift + w
     termite -e weechat
@@ -72,7 +76,11 @@ super + control + 0
 
 # toggle touchpad
 XF86Launch1
-    ~/scripts/toggle_touchpad.sh;
+    ~/scripts/toggle_touchpad.sh
+
+# Pennywise
+super + shift + p
+    ~/scripts/pennywise
 
 # media/special keys
 
@@ -125,7 +133,7 @@ super + shift + BackSpace
   oblogout
 
 # close and kill
-{super + shift + c,control + q}
+control + q
   bspc node -c
 
 # alternate between the tiled and monocle layout

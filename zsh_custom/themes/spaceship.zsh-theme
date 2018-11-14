@@ -7,7 +7,7 @@
 
 # Current version of Spaceship
 # Useful for issue reporting
-export SPACESHIP_VERSION='3.3.0'
+export SPACESHIP_VERSION='3.7.1'
 
 # Common-used variable for new line separator
 NEWLINE='
@@ -49,6 +49,7 @@ if [ -z "$SPACESHIP_PROMPT_ORDER" ]; then
     package       # Package version
     node          # Node.js section
     ruby          # Ruby section
+    elm           # Elm section
     elixir        # Elixir section
     xcode         # Xcode section
     swift         # Swift section
@@ -165,7 +166,8 @@ spaceship_ps2() {
   # Retrieve exit code of last command to use in exit_code
   RETVAL=$?
 
-  spaceship::section "$SPACESHIP_CHAR_COLOR_SECONDARY" $SPACESHIP_CHAR_SYMBOL
+  local char="${SPACESHIP_CHAR_SYMBOL_SECONDARY="$SPACESHIP_CHAR_SYMBOL"}"
+  spaceship::section "$SPACESHIP_CHAR_COLOR_SECONDARY" "$char"
 }
 
 # ------------------------------------------------------------------------------

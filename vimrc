@@ -38,7 +38,8 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
-:let g:NERDTreeWinSize=45
+:let g:NERDTreeWinSize=30
+map <C-n> :NERDTreeToggle<CR>
 
 " Diff Colors
 " if &diff
