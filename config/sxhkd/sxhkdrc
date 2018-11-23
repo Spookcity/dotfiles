@@ -15,19 +15,23 @@ control + space
 ############
 
 # terminal emulator
-super + Return
-  termite
+control + Return
+    termite
 
 # web
-super  w
+control  w
     chromium
 
 # file manager
-super + shift + f
+control + shift + f
     sunflower
 
+# file manager (ranger)
+control + shift + r
+    bspc desktop --focus ^3 && termite --geometry=1900x1000 -e ranger
+
 # spotify
-super + shift + s
+control + shift + s
     blockify
 
 # root file manager
@@ -35,15 +39,15 @@ super + shift + r
     gksudo sunflower
 
 # music
-super + shift + m
-    termite -e ncmpcpp
+control + shift + m
+    bspc desktop --focus ^6 && termite --geometry=1920x500+0+26 -e ncmpcpp
 
     # editor
-super + shift + e
+control + shift + e
     termite -e subl3 %F
 
 # git-cola
-super + shift + g
+control + shift + g
     env QT_API=pyqt4 git-cola
 
  # meld
@@ -51,15 +55,15 @@ super + shift + c
     meld
 
 # chat
-super + shift + w
-    termite -e weechat
+control + shift + w
+    bspc desktop --focus ^5 && termite --geometry=1500x800++197+25 -e weechat
 
 # tasks
-super + shift + t
+control + shift + t
     termite -e gtop
 
 # cleaner
-super + shift + b
+control + shift + b
     bleachbit
 
 # xkill
@@ -79,8 +83,12 @@ XF86Launch1
     ~/scripts/toggle_touchpad.sh
 
 # Pennywise
-super + shift + p
+control + shift + p
     ~/scripts/pennywise
+
+# edex-ui
+control + shift + u
+    ~/scripts/edex
 
 # media/special keys
 
@@ -117,7 +125,7 @@ super + {_,shift} + d
 super + {_,shift} + comma
     bspc node $(bspc query -N -n -n .!leaf || echo @/) {-R 90,-B}
 
-super + apostrophe
+control + apostrophe
     bspc node -s last
 
 # hide current node, or restore a queried hidden node
@@ -129,7 +137,7 @@ alt + {e,w}
     bspc node -f {next.floating,next.tiled}
 
 # quit bspwm normally
-super + shift + BackSpace
+control + shift + BackSpace
   oblogout
 
 # close and kill
@@ -137,15 +145,15 @@ control + q
   bspc node -c
 
 # alternate between the tiled and monocle layout
-super + m
+control + m
   bspc desktop -l next
 
 # if the current node is automatic, send it to the last manual, otherwise pull the last leaf
-super + y
+control + y
   bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
 
 # swap the current node and the biggest node
-super + g
+control + g
   bspc node -s biggest
 
 #############
@@ -169,32 +177,32 @@ super + {_,shift + }{h,j,k,l}
   bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
+control + {p,b,comma,period}
   bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node
-super + {_,shift + }c
+control + {_,shift + } slash
   bspc node -f {next,prev}
 
 # focus the next/previous desktop
-super + bracket{left,right}
+control + bracket{left,right}
   bspc desktop -f {prev,next}
 
 # focus the last node/desktop
-super + {grave,Tab}
+control + {grave,Tab}
   bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {o,i}
+control + {o,i}
   bspc wm -h off; \
   bspc node {older,newer} -f; \
   bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
+control + {_,shift + }{1-9,0}
   bspc {desktop -f,node -d} '^{1-9,10}'
 
-super + bracket{left,right}
+control + bracket{left,right}
   bspc desktop -f {prev,next}
 
 ###########

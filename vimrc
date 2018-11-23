@@ -38,7 +38,7 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
-:let g:NERDTreeWinSize=30
+:let g:NERDTreeWinSize=35
 map <C-n> :NERDTreeToggle<CR>
 
 " Diff Colors
@@ -102,7 +102,9 @@ cnoremap w!! %!sudo tee > /dev/null %
 " plugin settings
 let g:ctrlp_match_window = 'order:ttb,max:20'
 let g:NERDSpaceDelims=1
-let g:gitgutter_enabled = 0
+let g:gitgutter_enabled = 1
+let g:gitgutter_highlight_lines = 1
+set updatetime=100
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')

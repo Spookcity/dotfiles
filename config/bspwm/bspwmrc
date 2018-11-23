@@ -36,11 +36,11 @@ bspc rule -a Oblogout state=floating
 bspc rule -a Wpg state=floating
 bspc rule -a feh state=floating
 bspc rule -a skypeforlinux state=floating
-bspc rule -a Termite state=floating border=off
-bspc rule -a Alacritty state=floating border=off
+bspc rule -a Termite state=floating
 bspc rule -a Screenkey manage=off
 
-# startups
+# startups\
+termite --geometry=1100x700 &
 polybar top &
 # /home/rick/.config/wpg/wp_init.sh &
 ~/.fehbg &
@@ -48,5 +48,6 @@ polybar top &
 compton --config /home/rick/.config/compton.conf -b &
 redshift &
 mpd &
+xinput disable 'SynPS/2 Synaptics TouchPad' &
 
 bspc config external_rules_command ~/.config/bspwm/external-rules.sh

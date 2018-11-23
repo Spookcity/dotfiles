@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /home/rick/.edex-ui
+npm start

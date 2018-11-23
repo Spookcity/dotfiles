@@ -79,7 +79,7 @@ color12 =     #567A6E
 color5 =    #B9924A
 color13 =     #D69D55
 
-background = rgba(31, 31, 31, 0.9)
+background = rgba(31, 31, 31, 0.98)
 
 [hints]
 #font = Monospace 12

@@ -1,5 +1,4 @@
 acetoneiso2
-alacritty
 alsa-firmware
 alsa-plugins
 alsa-utils
@@ -176,6 +175,7 @@ sysfsutils
 systemd
 systemd-sysvcompat
 tar
+terminator
 termite-git
 termite-terminfo-git
 texinfo
@@ -215,14 +215,17 @@ winetricks-git
 wpa_supplicant
 wpgtk-git
 xclip
+xdotool
 xfsprogs
 xorg-server
 xorg-xev
 xorg-xinit
 xorg-xinput
 xorg-xkill
+xorg-xprop
 xorg-xrandr
 xorg-xsetroot
+xorg-xwininfo
 xterm
 yarn
 yay
