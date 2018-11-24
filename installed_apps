@@ -58,6 +58,7 @@ gawk
 gcc
 gcc-libs
 gdb
+genymotion
 gerrit
 gettext
 gimp
@@ -90,6 +91,7 @@ iproute2
 iputils
 iw
 j4-dmenu-desktop
+jadx
 jdk10-openjdk
 jdk8-openjdk
 jdk9
@@ -100,6 +102,7 @@ lemonbar-xft-git
 less
 libtool
 licenses
+links
 linux
 linux-zen
 logrotate
