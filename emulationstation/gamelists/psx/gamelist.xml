@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./Driver.img</path>
+		<name>Driver</name>
+		<desc>As Tanner, you're going undercover to be the wheelman for a crime syndicate in order to break open a big case. On the way, you'll eliminate competition, drive getaway cars, scare some people silly, evade plenty of police, dodge bad guys, smash through a few windows, save your love interest, and much more through four cities (Miami, San Francisco, Los Angeles, and New York).
+
+Perform authentic manuevers like donuts, 180 spin, 360 spin, reverse 180 spin, and more as you cut through alley ways, across sidewalks and parks, smash park benches and and drive over traffic cones. Many different cars to try (most you'll recognize). Will you save the day?</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Driver-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>19990708T000000</releasedate>
+		<developer>Reflections Interactive Limited</developer>
+		<publisher>GT Interactive</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Need for Speed III - Hot Pursuit .bin</path>
+		<name>Need for Speed III: Hot Pursuit</name>
+		<desc>Hot Pursuit remains focused in racing using exotic sports cars, but features races that primarily take place in locations within North America, including varied settings and climates. In addition, police AI is significantly improved over its predecessor, utilizing several tactics to stop both the player and opponent. The game was released for PlayStation in March 1998 and later received an enhanced port for Microsoft Windows in September 1998. A PlayStation 2 version was developed, however it was cancelled. During the Electronic Arts Keynote on June 14, 2010 EA announced that a new Need for Speed game under the same name, scheduled for released on November 16, 2010. The game title's suffix, "Hot Pursuit", is a term for a police pursuit.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Need for Speed III - Hot Pursuit -image.jpg</image>
+		<rating>0.9</rating>
+		<releasedate>19980927T000000</releasedate>
+		<developer>EA Canada</developer>
+		<publisher>Electronic Arts</publisher>
+		<genre>Racing</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./Need For Speed 4 - High Stakes.bin</path>
+		<name>Need For Speed: High Stakes</name>
+		<desc>Just like its predecessors Need for Speed: High Stakes is an action racing game with a wide selection of exotic sports cars and many different types of tracks. The trademark Hot Pursuit mode game mode from the first game in the series is still present, where players race opponents on tracks filled with regular traffic and police cars that chase the racers. The classic pursuit mode is extended with two additional modes: Getaway and Time Trap. In Getaway the player needs to shake off the police in a set amount of time, or playing as the police trap a speeder before time runs out. In Time Trap an entire race needs to be completed before time runs out, or as the police all speeders need to be arrested. There are minor differences between the two platforms for this game mode, regarding spike strips, road blocks, and back-up. The latter for instance is unique to the PlayStation version. The Pursuit mode is available in multiplayer as well and players can take different sides or race together.
+
+It is the first game in the series to introduce a Career mode with a set of challenges. Beating these is rewarded with trophies for unlocks, and money to spend on new cars, repairs and upgrades. In the PlayStation version the Career mode is split up into two different sets of challenges: Tournament (required races) and Special Event (optional races). High Stakes in the title refers to races where players bet their cars. In the PC version these are a part of the Career mode when the player owns more than two cars. In the PlayStation version two players can insert their memory cards and race against each other. The winner immediately receives the opponent's car and it is deleted from the loser's memory card right away.
+
+In addition to the new game modes it is also the first game in the series to have a detailed physics models. Damage now affects both the appearance and the performance of the car for the first time.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Need For Speed 4 - High Stakes-image.jpg</image>
+		<releasedate>19990301T000000</releasedate>
+		<developer>EA Canada</developer>
+		<publisher>Electronic Arts</publisher>
+		<genre>Racing</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./Tony Hawk`s Pro Skater 3.img</path>
+		<name>Tony Hawk's Pro Skater 3</name>
+		<desc>With this release of Tony Hawk Pro Skater 3, one of the most universally popular and financially successful game franchises in recent memory returns home to roost on the original PlayStation console that launched the peerless extreme sports series in the autumn of 1999. Though this third version of the title is being released on half a dozen platforms and considerable effort has been invested in assuring that the PS2, Xbox, and GameCube versions of the live up to their "next-generation" technological potential, Neversoft and Activision endeavored to bless this PS version with all of the third edition's key innovations while retaining and reinforcing the engaging, accessible gameplay which is the true crux of the series' success.
+
+While it can't pump out the same amount of eye-candy as its counterparts on the 128-bit generation systems, this PlayStation release of THPS3 incorporates several of the new features designed to propel the series' popularity on other platforms. New landing tricks allow players to string together greater combinations, especially when moving from the ramps to the street. Environments are designed to test old and new skills alike. Loyal PS gamers should be pleased that all the important new levels, tricks, and combinations developed for the third edition of Tony Hawk Pro Skater are duly represented in this version of the game.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Tony Hawk`s Pro Skater 3-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>20011030T000000</releasedate>
+		<developer>Shaba Games</developer>
+		<publisher>Activision</publisher>
+		<genre>Sports</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./Twisted Metal 3.img</path>
+		<name>Twisted Metal III</name>
+		<desc>Welcome to our twisted world where the drivers are insane, the explosions apocalyptic and the weapons hard-core nasty. It's the original and ultimate automotive combat experience!
+
+Destructive 3D Engine
+Experience an all-new next generation 3D engine with TruPhysics. Feel your vehicle get waxed!
+
+More Twisted Metal
+Get twisted with 14 high powered vehicles, an arsenal of all new weapons and unbeatable bosses! Try Vibration Mode with the Dual Shock Analog Controller for a heightened sense of mass destruction!
+
+Deadly Battlegrounds
+Ten new and explosive battlegrounds to torch, each with its own gameplay style and strategy, featuring two and four-player modes with special multi-player arenas and head-to-head mayhem!
+
+Wicked Tunes
+Take a ride on the wild side with adrenaline-pumpin' music for your soul by Rob Zombie. Shred it up!</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Twisted Metal 3-image.jpg</image>
+		<rating>0.5</rating>
+		<releasedate>19981111T000000</releasedate>
+		<developer>989 Studios</developer>
+		<publisher>989 Studios</publisher>
+		<genre>Action</genre>
+		<players>4+</players>
+	</game>
+	<game>
+		<path>./Twisted Metal 4.img</path>
+		<name>Twisted Metal 4</name>
+		<desc>High-Octane Attitude With A Twist
+
+Sweet Tooth and his pumped-up posse of evil henchmen have taken control of the most explosive freakshow on wheels!
+- More than 20 Wicked New Characters and Vehicles with All-New Weapons Get sick with Rob Zombie's Dragula, Roach Coach, Nuke Mobile and more!
+- 8 New Multi-Level Warzones with Hidden Levels Go buck wild in interactive arenas like Neon City, Carnival and Sweet Tooth's Bedroom.
+- New Car Combat Customization Pick your size, body style, paint design and special weapon. Now savable to Memory Card!
+- Monster Graphics and Improved Car Physics Crisp vehicles and lush battlegrounds await. Revamped arcade physics keep you on track for destruction.
+- Slammin' Soundtrack Promotes Maximum Mayhem Rob Zombie, Cirrus, Cypress Hill, Skold, Ghoulspoon and One Minute Silence.
+- 1 to 4 Player Lunacy with Multi-Tap Support
+
+The #1 Car Combat Game is Ready to Rage!</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Twisted Metal 4-image.jpg</image>
+		<rating>0.6</rating>
+		<releasedate>19991031T000000</releasedate>
+		<developer>989 Studios</developer>
+		<publisher>Sony Computer Entertainment</publisher>
+		<genre>Action</genre>
+		<players>4+</players>
+	</game>
+	<game>
+		<path>./Castlevania - Symphony of the Night 2.bin</path>
+		<name>Castlevania: Symphony of the Night (Disk 2)</name>
+		<desc>Five years ago, Richter Belmont, the latest in the Belmont lineage and the one destined to be a Vampire Hunter, defeated Dracula in a brutal battle which nearly cost him the love of his life, Annette, and her sister, Maria. Now, Richter has suddenly vanished, CastleVania has mysteriously reappeared, and Maria, now a young woman, sets off to find Richter. Alucard, the son of Dracula, is awakened from his eternal slumber after this large shift in power, and enters into Castlevania to find some answers and perhaps destroy the castle once again.
+
+Symphony of the Night is a direct sequel to Dracula X: Rondo of Blood. The game is set in a castle which you can explore freely with many different paths, although often items in certain areas need to be found that will allow passage to others. The action-based gameplay incorporates now strong RPG elements. The hero receives experience points for defeating enemies, gains levels and becomes more powerful. There is also money to be found in the game, and various accessories to buy. In a separate screen, players need to equip attack weapons, shields and other items. Magic plays an important role, as well as secondary weapons and a large amount of "special moves" that are executed similar to advanced one-on-one fighting games.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Castlevania - Symphony of the Night 2-image.jpg</image>
+		<rating>0.8</rating>
+		<releasedate>99240429T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Crash Bandicoot 2 - Cortex Strikes Back.bin</path>
+		<name>Crash Bandicoot 2: Cortex Strikes Back</name>
+		<desc>The evil Dr. Neo Cortex is back with a vengeance .. this time ... to save the world? And he's asking for helo from his arch-nemesis, Crash Bandicoot? Or is it just some conniving plan to lure Crash into a deadly trap for his own evil bidding? Find out as Crash takes on a whole new adventure that's out of this world!</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Crash Bandicoot 2 - Cortex Strikes Back-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>19971031T000000</releasedate>
+		<developer>Naughty Dog</developer>
+		<publisher>Sony Computer Entertainment</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Crash Bandicoot 3 - Warped.bin</path>
+		<name>Crash Bandicoot 3: Warped</name>
+		<desc>After defeating Dr. Neo Cortex, Crash and his sister, Coco, take a well-deserved vacation. However, their friend, Aku Aku, has a bad feeling, and as usual, he is right. Aku's evil twin, Uka Uka, was the person behind all of Dr. Cortex's schemes. Now Uka and Cortex have hatched a plot to gain control of the powerful crystals they desire. The have hired Dr. N. Tropy to create a time machine, which will allow Uka and Cortex to go back and take the crystals without interference. Take control of Crash and Coco as they travel through 30 levels across five time periods in an effort to stop Uka and Cortex. Use a motorcycle, plane, bazooka, and a baby T-rex to help Crash survive, or destroy the bad guys by using new moves like the super belly flop or the double jump. Will Crash and Coco be able to save the world? Play CRASH BANDICOOT: Warped and find out.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Crash Bandicoot 3 - Warped-image.jpg</image>
+		<rating>0.8</rating>
+		<releasedate>19981031T000000</releasedate>
+		<developer>Naughty Dog</developer>
+		<publisher>Sony</publisher>
+		<genre>Adventure</genre>
+	</game>
+	<game>
+		<path>./Gran Turismo 2.bin</path>
+		<name>Gran Turismo 2</name>
+		<desc>Gran Turismo 2 is fundamentally based on the racing game genre. The player must maneuver an automobile to compete against artificially intelligent drivers on various race tracks. The game uses two different modes: arcade and simulation. In the arcade mode, the player can freely choose the courses and vehicles they wish to use. However, the simulation mode requires the player to earn driver's licenses, pay for vehicles, and earn trophies in order to unlock new courses. Gran Turismo 2 features nearly 650 automobiles and 27 racing tracks.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Gran Turismo 2-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>19991211T000000</releasedate>
+		<developer>Polyphony Digital</developer>
+		<publisher>Sony Computer Entertainment</publisher>
+		<genre>Racing</genre>
+		<players>2</players>
+	</game>
+	<game>
+		<path>./Mega Man Legends 2 (Track 2).bin</path>
+		<name>Mega Man Legends 2 (Disk 2)</name>
+		<desc>Mega Man, Roll, and all your favorites are back in this all new 3-D adventure!  Far away, in an isolated wasteland, a mysterious girl and an infamous treasure have been discovered.  It's the legendary "Sealed Key," rumored to unlock an even greater mystery known as the Great Legacy.  What power does the Great Legacy hold?  Now, a raced unfolds as Mega Man and his friends embark on a journey which will alter their destinies forever.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Mega Man Legends 2 (Track 2)-image.png</image>
+		<rating>0.8</rating>
+		<releasedate>20001024T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Mega Man X5.bin</path>
+		<name>Mega Man X5</name>
+		<desc>The year is 21XX and the chaos of the Reploid Wars has passed. Lunar colonization is at its peak. The largest colony, Eurasia, is unexpectedly taken over by an unknown band of galactic terrorists. Its artificial gravity device has been hacked and Eurasia is now on a collision course with Earth. The only way to stop it is to deploy an ancient beam cannon, Codename: Enigma. Join Mega Man X and his pal, Zero as they race against time to collect the necessary parts to restart Enigma, prevent total annihilation and save life on Earth!</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Mega Man X5-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>20010131T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./R4 - Ridge Racer Type 4.bin</path>
+		<name>R4: Ridge Racer Type 4</name>
+		<desc>"R4 has to be the best-looking PlayStation racer ever (yes, edging out even Gran Turismo)." – Official PlayStation Magazine, December 1998
+
+* 8 tracks, 45 unique car models, and over 300 different car variations.
+* Sensational graphics and lighting effects give every race a cinematic feel.
+* Battle head-to-head in the 2-player, split screen VS mode.
+* Experience all the ups and downs of a full racing season with your team in the Grand Prix Mode.
+* New cars awarded based on your performance in every race.
+* Design original logos to customize your car.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/R4 - Ridge Racer Type 4-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>19990504T000000</releasedate>
+		<developer>Namco</developer>
+		<publisher>Namco</publisher>
+		<genre>Racing</genre>
+	</game>
+	<game>
+		<path>./Silent Hill.bin</path>
+		<name>Silent Hill</name>
+		<desc>Silent Hill is a 1999 survival horror video game for the PlayStation. The first in a series about a mysterious town of the same name, Silent Hill generated a direct sequel, three indirect sequels, a prequel and a film adaptation. The game was included in Sony's Greatest Hits and Platinum Range of budget titles as a result of strong sales. A reinterpretation of the game was developed for the Wii, PlayStation 2 and PlayStation Portable.
+The plot focuses on Harry Mason as he searches for his daughter, Cheryl, who has disappeared following a car accident which left Harry unconscious. He finds Silent Hill to be largely abandoned, shrouded in a thick fog, snowing out of season, filled with monsters and being over taken by a hellish otherworld. As Harry scours the town, he begins learning about the history of Silent Hill and stumbles upon a cult ritual undertaken to bring a god to Earth.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Silent Hill-image.jpg</image>
+		<rating>0.8</rating>
+		<releasedate>19990131T000000</releasedate>
+		<developer>Team Silent, Konami</developer>
+		<publisher>Konami Digital Entertainment</publisher>
+		<genre>Action</genre>
+	</game>
+	<game>
+		<path>./Castlevania - Symphony of the Night 1.bin</path>
+		<name>Castlevania: Symphony of the Night (Disk 1)</name>
+		<desc>Five years ago, Richter Belmont, the latest in the Belmont lineage and the one destined to be a Vampire Hunter, defeated Dracula in a brutal battle which nearly cost him the love of his life, Annette, and her sister, Maria. Now, Richter has suddenly vanished, CastleVania has mysteriously reappeared, and Maria, now a young woman, sets off to find Richter. Alucard, the son of Dracula, is awakened from his eternal slumber after this large shift in power, and enters into Castlevania to find some answers and perhaps destroy the castle once again.
+
+Symphony of the Night is a direct sequel to Dracula X: Rondo of Blood. The game is set in a castle which you can explore freely with many different paths, although often items in certain areas need to be found that will allow passage to others. The action-based gameplay incorporates now strong RPG elements. The hero receives experience points for defeating enemies, gains levels and becomes more powerful. There is also money to be found in the game, and various accessories to buy. In a separate screen, players need to equip attack weapons, shields and other items. Magic plays an important role, as well as secondary weapons and a large amount of "special moves" that are executed similar to advanced one-on-one fighting games.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Castlevania - Symphony of the Night 1-image.jpg</image>
+		<rating>0.8</rating>
+		<releasedate>99240429T000000</releasedate>
+		<developer>Konami</developer>
+		<publisher>Konami</publisher>
+		<genre>Action</genre>
+		<playcount>1</playcount>
+		<lastplayed>20181220T084307</lastplayed>
+	</game>
+	<game>
+		<path>./Crash Bandicoot.bin</path>
+		<name>Crash Bandicoot</name>
+		<desc>Crash Bandicoot, a heroic, agile and mutated marsupial who must save his girlfriend Tawna. The main antagonist is Doctor Neo Cortex, a mad scientist who was often ridiculed by the scientific community for his outlandish (but nearly workable) theories and is now motivated to prove his tormentors wrong by creating a mutated army of beasts to conquer the world. Cortex's henchman is Doctor Nitrus Brio, the insecure creator of the Evolvo-Ray. Crash's love interest is Tawna, a female bandicoot about to undergo experimentation by the Doctors. Helping Crash in his journey is an ancient witch doctor spirit named Aku Aku, who has scattered masks of himself throughout the islands to grant Crash special powers. The boss characters of the game include Papu Papu, the obese and short-tempered chief of the native village; Ripper Roo, a demented kangaroo with razor-sharp toenails; Koala Kong, a muscular but unintelligent koala; and Pinstripe Potoroo, the tommy gun-wielding bodyguard of Doctor Cortex.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Crash Bandicoot-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>19960831T000000</releasedate>
+		<developer>Naughty Dog</developer>
+		<publisher>Sony Computer Entertainment</publisher>
+		<genre>Adventure</genre>
+		<playcount>1</playcount>
+		<lastplayed>20181220T084432</lastplayed>
+	</game>
+	<game>
+		<path>./Mega Man Legends 2 (Track 1).bin</path>
+		<name>Mega Man Legends 2 (Disk 1)</name>
+		<desc>Mega Man, Roll, and all your favorites are back in this all new 3-D adventure!  Far away, in an isolated wasteland, a mysterious girl and an infamous treasure have been discovered.  It's the legendary "Sealed Key," rumored to unlock an even greater mystery known as the Great Legacy.  What power does the Great Legacy hold?  Now, a raced unfolds as Mega Man and his friends embark on a journey which will alter their destinies forever.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Mega Man Legends 2 (Track 1)-image.png</image>
+		<rating>0.8</rating>
+		<releasedate>20001024T000000</releasedate>
+		<developer>Capcom</developer>
+		<publisher>Capcom</publisher>
+		<genre>Action</genre>
+		<playcount>1</playcount>
+		<lastplayed>20181220T084457</lastplayed>
+	</game>
+	<game>
+		<path>./CTR - Crash Team Racing.bin</path>
+		<name>Crash Team Racing</name>
+		<desc>The main antagonist of the story, Nitros Oxide, is the self-proclaimed fastest racer in the galaxy who threatens to turn Earth into a concrete parking lot. Preceding Oxide are four boss characters: Ripper Roo, a deranged straitjacket-wearing kangaroo; Papu Papu, the morbidly obese leader of the island's native tribe; Komodo Joe, a Komodo dragon with a speech sound disorder; and Pinstripe Potoroo, a greedy pinstripe-clad potoroo. The four boss characters, along with an imperfect and morally ambiguous clone of Crash Bandicoot named Fake Crash, become accessible as playable characters if the Adventure Mode is fully completed.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/CTR - Crash Team Racing-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>19990930T000000</releasedate>
+		<developer>Naughty Dog</developer>
+		<publisher>Sony Computer Entertainment</publisher>
+		<genre>Racing</genre>
+		<players>4+</players>
+		<playcount>1</playcount>
+		<lastplayed>20181224T162847</lastplayed>
+	</game>
+	<game>
+		<path>./NHL 2001.bin</path>
+		<name>NHL 2001</name>
+		<desc>In NHL 2001, there are five primary game modes: exhibition, season (where players can take a team through a full season and act as the team's general manager), tournament (involving up to 16 teams), playoffs (also a 16 team format), and shootout (where gamers play out the tie breaker format used in international hockey). Outside of the season and playoff modes, NHL 2001 allows gamers to use a total of 18 international teams and four all-star teams.
+
+Several new features have been added to the mix including "Big Hit" and "Big Shot" buttons for enhanced gameplay. Also new to gameplay is "The Momentum Meter," where a team's performance is affected by the game's momentum. Finally, similar to the Madden Challenge offered in EA's football title, NHL 2001 offers NHL Challenge Mode. Here, players are rewarded points for achieving certain tasks during gameplay. These points can then be used to enhance the abilities of created players.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/NHL 2001-image.jpg</image>
+		<rating>0.7</rating>
+		<releasedate>20000928T000000</releasedate>
+		<developer>EA Canada</developer>
+		<publisher>EA Sports</publisher>
+		<genre>Sports</genre>
+		<players>4+</players>
+		<favorite>true</favorite>
+	</game>
+	<game>
+		<path>./Tony Hawk's Pro Skater.bin</path>
+		<name>Tony Hawk's Pro Skater</name>
+		<desc>Go Big, Go Pro! Skate as legendary Tony Hawk, or as one of nine top pros. Work your way up the ranks by landing suicidal tricks in brutal competitions to become the highest ranked skate champ! Great features such as: Signature Pro Moves, fully skateable worlds, head-to-head competition, and Instant Replay Mode.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Tony Hawk's Pro Skater-image.jpg</image>
+		<rating>0.8</rating>
+		<releasedate>20000329T000000</releasedate>
+		<developer>Neversoft Entertainment</developer>
+		<publisher>Activision</publisher>
+		<genre>Sports</genre>
+		<players>2</players>
+		<favorite>true</favorite>
+		<playcount>4</playcount>
+		<lastplayed>20181226T220638</lastplayed>
+	</game>
+	<game>
+		<path>./Tony Hawk's Pro Skater 2.img</path>
+		<name>Tony Hawk's Pro Skater 2</name>
+		<desc>Tony Hawk's Pro Skater 2 features the series' trademark open-ended gameplay, in which the player (playing as a professional skateboarder) completes a number of tasks which result in cash rewards. With money gained, the player can then purchase skill improvements and better skateboards. THPS2 was also the first game in the series to introduce the manual, a skateboarding trick where the performer balances on two wheels. This enables players to string together trick combos. The game also introduced the Noseslide, Tailslide, Bluntslide, Nosebluntside, Feeble, and Overcrook grinds. It was also the first of the Pro Skater games to feature Create-a-Skater and Park Editor features, now staples in the series.</desc>
+		<image>~/.emulationstation/downloaded_images/psx/Tony Hawk's Pro Skater 2-image.jpg</image>
+		<rating>0.8</rating>
+		<releasedate>20000920T000000</releasedate>
+		<developer>Neversoft</developer>
+		<publisher>Activision</publisher>
+		<genre>Sports</genre>
+		<players>2</players>
+		<favorite>true</favorite>
+	</game>
+</gameList>

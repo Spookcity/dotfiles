@@ -1,5 +1,5 @@
 [options]
-font = Monaco, Regular, 10pt 12
+font = Monaco, Regular, 10pt 13
 padding = 8
 border_width = 8
 scroll_on_output = false

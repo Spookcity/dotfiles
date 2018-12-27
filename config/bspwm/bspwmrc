@@ -31,6 +31,7 @@ bspc rule -a Gimp state=floating
 bspc rule -a /home/rick/scripts/pennywise state=floating border=off
 bspc rule -a Lxappearance state=floating
 bspc rule -a Obconf state=floating
+bspc rule -a retroarch state=floating border=off
 bspc rule -a File-roller state=floating
 bspc rule -a Oblogout state=floating
 bspc rule -a Wpg state=floating
@@ -40,8 +41,9 @@ bspc rule -a Termite state=floating
 bspc rule -a Screenkey manage=off
 
 # startups\
-termite --geometry=1100x700 &
+termite --geometry=1100x700+408+43 &
 polybar top &
+xbanish &
 # /home/rick/.config/wpg/wp_init.sh &
 ~/.fehbg &
 #paramano &
