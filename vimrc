@@ -24,6 +24,7 @@ set relativenumber number
 " enable syntax highlighting
 syntax on
 
+let g:loaded_sensible = 1
 
 " NERDTress File highlighting only the glyph/icon
 " test highlight just the glyph (icons) in nerdtree:

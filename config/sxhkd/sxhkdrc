@@ -28,7 +28,7 @@ control + shift + f
 
 # file manager (ranger)
 control + shift + r
-    bspc desktop --focus ^3 && termite --geometry=1900x1000 -e ranger
+    bspc desktop --focus ^3 && termite --geometry=1900x1020 -c /home/rick/.config/termite/config3 -e ranger
 
 # spotify
 control + shift + s
@@ -40,15 +40,15 @@ super + shift + r
 
 # music
 control + shift + m
-    bspc desktop --focus ^6 && termite --geometry=1920x500+0+26 -e ncmpcpp
+    bspc desktop --focus ^6 && termite --geometry=1920x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
-    # editor
+# editor
 control + shift + e
-    termite -e subl3 %F
+    bspc desktop --focus ^3 && subl3
 
 # git-cola
 control + shift + g
-    env QT_API=pyqt4 git-cola
+    bspc desktop --focus ^4 && env QT_API=pyqt4 git-cola
 
  # meld
 super + shift + c
@@ -60,7 +60,7 @@ control + shift + w
 
 # tasks
 control + shift + t
-    termite -e gtop
+    termite -e htop
 
 # cleaner
 control + shift + b
@@ -69,6 +69,9 @@ control + shift + b
 # xkill
 control + alt + k
     xkill
+
+super + shift + g
+    emulationstation
 
 ###########
 #scripts
@@ -122,7 +125,7 @@ super + {_,shift} + d
     {bspc node -i,for win in `bspc query -N -d -n .leaf.!window`; do bspc node $win -k; done}
 
 # rotate, balance
-super + {_,shift} + comma
+control + {_,shift} + comma
     bspc node $(bspc query -N -n -n .!leaf || echo @/) {-R 90,-B}
 
 control + apostrophe
@@ -149,8 +152,8 @@ control + m
   bspc desktop -l next
 
 # if the current node is automatic, send it to the last manual, otherwise pull the last leaf
-control + y
-  bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+#control + y
+  #bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc #node last.leaf -n focused
 
 # swap the current node and the biggest node
 control + g
