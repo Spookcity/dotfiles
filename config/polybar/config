@@ -19,7 +19,7 @@ alert = #bd2c40
 
 [bar/top]
 width = 100%
-height = 22
+height = 24
 ;offset-x = 1%
 ;offset-y = 4
 radius = 0.0
@@ -46,11 +46,11 @@ padding-right = 3
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = NotoSans-Regular:size=10.5
-font-1 = FontAwesome:pixelsize=10
+font-0 = "Comfortaa-Regular:pixelsize=11"
+font-1 = "Iosevka Nerd Font:pixelsize=10"
 font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
-font-3 = Wuncon Siji:pixelsize=10;1
-font-4 = Roboto:style=Regular:pixelsize=10s;1
+;font-3 = Wuncon Siji:pixelsize=10;1
+;font-4 = Roboto:style=Regular:pixelsize=10s;1
 
 
 ############# MODULES USED ###############
@@ -61,7 +61,7 @@ font-4 = Roboto:style=Regular:pixelsize=10s;1
 
 modules-left = bspwm  weather wlan networkspeedup networkspeeddown
 modules-center =  xwindow
-modules-right =   filesystem filesystem-home filesystem-shit memory cpu temperature volume date battery
+modules-right =   filesystem filesystem-home filesystem-shit memory cpu volume date battery
 
 ################ TRAY ################
 #                                                                                             #

@@ -4,7 +4,7 @@ sxhkd &
 xsetroot -cursor_name left_ptr &
 
 # bspc monitor -d I II III IV V
-bspc monitor -d      
+bspc monitor -d      
 
 bspc config border_width        2
 bspc config window_gap          6
@@ -22,7 +22,7 @@ bspc config focused_border_color        "#AB9C71"
 bspc config presel_feedback_color         "#A6A6A6"
 
 # rules
-bspc desktop  -l monocle
+bspc desktop  -l monocle
 bspc rule -a mpv state=floating
 bspc rule -a Chromium desktop=^2 follow=on
 bspc rule -a firefox-beta desktop=^2 follow=on

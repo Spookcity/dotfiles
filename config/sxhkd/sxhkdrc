@@ -20,7 +20,7 @@ control + Return
 
 # web
 control  w
-    chromium
+     bspc desktop --focus ^2 && firefox-beta
 
 # file manager
 control + shift + f
@@ -42,9 +42,17 @@ super + shift + r
 control + shift + m
     bspc desktop --focus ^6 && termite --geometry=1920x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
+# reaper
+super + shift + m
+    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
+
+# fl studio
+control + shift + f
+    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/rick/.wine/dosdevices/c:/users/rick/Start\\ Menu/Programs/Image-Line/FL\\ Studio\\ 12\\ \\(64bit\\).lnk
+
 # editor
 control + shift + e
-    bspc desktop --focus ^3 && subl3
+   subl3
 
 # git-cola
 control + shift + g
@@ -192,8 +200,8 @@ control + bracket{left,right}
   bspc desktop -f {prev,next}
 
 # focus the last node/desktop
-control + {grave,Tab}
-  bspc {node,desktop} -f last
+#control + {grave,Tab}
+#  bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 control + {o,i}
