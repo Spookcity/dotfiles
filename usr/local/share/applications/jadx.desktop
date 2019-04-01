@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=jadx GUI
+Exec=jadx-gui
+Type=Application
+StartupNotify=true
+Categories=Development;
+Terminal=False

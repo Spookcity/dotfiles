@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=SuperR_s Kitchen
-Exec=termite -e /home/rick/superrs-kitchen/superr
+Exec=termite -e /mnt/shit/Superrs-kitchen/superr
 Type=Application
 StartupNotify=true
-Path=/home/rick/superrs-kitchen
+Path=/mnt/shit/Superrs-kitchen
 Icon=/home/rick/downloads/wallpapers/android___icon_by_cyborgninja22-d5tw0w5.png
 Categories=Development;
 Name[en_US.UTF-8]=SuperR_s Kitchen

@@ -1,8 +1,10 @@
 [Desktop Entry]
-Version=1.0
 Encoding=UTF-8
-Name=Reaper
-Categories=audiovideo;
 Type=Application
-StartupNotify=true
-Exec=env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 wine ~/.wine/drive_c/Program\ Files/REAPER\ \(x64\)/reaper.exe
+Name=REAPER
+Comment=REAPER
+Categories=Audio;Video;AudioVideo;AudioVideoEditing;Recorder;
+Exec=env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
+Icon=cockos-reaper
+MimeType=application/x-reaper-project;application/x-reaper-project-backup;application/x-reaper-theme
+StartupWMClass=REAPER

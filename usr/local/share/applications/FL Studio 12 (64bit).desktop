@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FL Studio 12 (64bit)
+Exec=env WINEPREFIX="/home/rick/.wine" STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/rick/.wine/dosdevices/c:/users/rick/Start\\ Menu/Programs/Image-Line/FL\\ Studio\\ 12\\ \\(64bit\\).lnk
+Type=Application
+StartupNotify=true
+Path=/home/rick/.wine/dosdevices/c:/Program Files (x86)/Image-Line/FL Studio 12
+Icon=F74B_FL64.0
+StartupWMClass=fl64.exe
