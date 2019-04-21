@@ -2,6 +2,7 @@
 
 sxhkd &
 xsetroot -cursor_name left_ptr &
+setxkbmap -option ctrl:nocaps &
 
 # bspc monitor -d I II III IV V
 bspc monitor -d      
@@ -9,12 +10,15 @@ bspc monitor -d      
 bspc config border_width        2
 bspc config window_gap          6
 
+bspc config border_radius       8
+
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_by_distance    true
 bspc config history_aware_focus  true
 bspc config focus_follows_pointer true
+bspc config border_radius 5
 # bspc config click_to_focus true
 
 bspc config normal_border_color         "#3E5951"
@@ -46,12 +50,13 @@ bspc rule -a Screenkey manage=off
 termite --geometry=1100x700+408+43 &
 polybar top &
 xbanish &
-# /home/rick/.config/wpg/wp_init.sh &
+# ~/.config/wpg/wp_init.sh &
 ~/.fehbg &
 #paramano &
-compton --config /home/rick/.config/compton.conf -b &
+compton --config ~/.config/compton.conf -b &
 redshift &
 mpd &
+xcape -e 'Control_L=Escape' &
 xinput disable 'SynPS/2 Synaptics TouchPad' &
 
 bspc config external_rules_command ~/.config/bspwm/external-rules.sh

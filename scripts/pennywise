@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd /home/rick/.config/pennywise
-yarn start

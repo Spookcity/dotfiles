@@ -10,16 +10,18 @@ super + space
 control + space
   rofi -show window
 
+
+
 ############
 # apps
 ############
 
 # terminal emulator
 control + Return
-    termite
+    termite --geometry=800x500
 
 # web
-control  w
+control + w
      bspc desktop --focus ^2 && firefox-beta
 
 # file manager
@@ -68,7 +70,7 @@ control + shift + w
 
 # tasks
 control + shift + t
-    termite -e htop
+    termite --geometry=1000x700 -e htop
 
 # cleaner
 control + shift + b
@@ -80,6 +82,8 @@ control + alt + k
 
 super + shift + g
     emulationstation
+
+
 
 ###########
 #scripts
@@ -101,6 +105,8 @@ control + shift + p
 control + shift + u
     ~/scripts/edex
 
+
+
 # media/special keys
 
 # mute/unmute
@@ -116,6 +122,15 @@ XF86AudioLowerVolume
 
 XF86AudioMicMute
    amixer set Capture toggle mute; notify-send "Toggle Mic Mute"
+
+XF86AudioPlay
+   MPD_PORT=6300 mpc toggle
+
+XF86AudioNext
+   MPD_PORT=6300 mpc next
+
+XF86AudioPrev
+   MPD_PORT=6300 mpc prev
 
 # brightness
 XF86MonBrightnessUp
