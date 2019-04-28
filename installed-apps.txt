@@ -104,6 +104,7 @@ jdk-openjdk 11.0.3.u4-1
 jdk9 9.0.4-1
 jfsutils 1.1.15-6
 jq 1.6-2
+kitty-git 0.13.3.r355.g60371673-1
 klavaro 3.03-2
 lazygit 0.7.2-2
 lemonbar-xft-git 269.00a3fe6-1

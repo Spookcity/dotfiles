@@ -18,7 +18,7 @@ control + space
 
 # terminal emulator
 control + Return
-    termite
+    kitty
 
 # web
 control + w
@@ -30,7 +30,7 @@ control + shift + f
 
 # file manager (ranger)
 control + shift + r
-    bspc desktop --focus ^3 && termite --geometry=1900x1020 -c /home/rick/.config/termite/config3 -e ranger
+    bspc desktop --focus ^3 && kitty -o initial_window_width=1900 -o initial_window_height=1020 -e ranger
 
 # spotify
 control + shift + s
@@ -66,11 +66,11 @@ super + shift + c
 
 # chat
 control + shift + w
-    bspc desktop --focus ^5 && termite --geometry=1500x800++197+25 -c /home/rick/.config/termite/config4 -e weechat
+    bspc desktop --focus ^5 && kitty -o initial_window_width=1500 -o initial_window_height=800 -e weechat
 
 # tasks
 control + shift + t
-    termite --geometry=1000x700 -e htop
+    kitty -o initial_window_width=1000 -o initial_window_height=700 -e htop
 
 # cleaner
 control + shift + b

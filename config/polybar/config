@@ -191,9 +191,9 @@ ramp-volume-3 = 
 ramp-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
-format-muted-foreground = ${colors.background}
+;format-muted-foreground = ${colors.background}
 format-muted-background = ${colors.error}
-label-muted = MUTED
+label-muted = Muted
 format-muted-padding = 1
 
 [module/battery]
@@ -208,7 +208,7 @@ format-discharging-padding = 1
 format-discharging = <ramp-capacity> <label-discharging>
 format-full = <label-full> <ramp-capacity>
 format-full-padding = 1
-format-full-background = ${colors.active}
+;format-full-background = ${colors.active}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
