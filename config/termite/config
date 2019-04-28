@@ -22,7 +22,7 @@ cursor_blink = system
 cursor_shape = ibeam
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
-browser = chromium
+browser = firefox-beta
 
 # set size hints for the window
 size_hints = false
@@ -35,11 +35,9 @@ filter_unmatched_urls = true
 
 [colors]
 # special
-foreground      = #8FA388
-foreground_bold = #a6a6a6
-cursor          = #BE5E1E
-background      =  #1D2426
-foreground_bold = #ffffff
+background =  #292929
+foreground = #f1f1f1
+cursor = #f1f1f1
 
 
 # if unset, will reverse foreground and background
@@ -79,4 +77,4 @@ color12 =     #567A6E
 color5 =    #B9924A
 color13 =     #D69D55
 
-background = rgba(31, 31, 31, 0.95)
+background = rgba(31, 31, 31, 0.65)

@@ -6,7 +6,6 @@ mpd_music_dir = "/mnt/Ricks_Stuff/Music"
 
 mpd_crossfade_time = "5"
 startup_screen = browser
-#display_screens_numbers_on_start = yes
 # Display ..
 song_list_format = " %n $0$8$8%l$0$8 $1|$7 $7%a$7 $1| $7 $6%t$1 $R $1%y$1 $1%b$1"
 song_status_format = "{$8%a} $2»$8»$5» $b{$1%b}$/b"
@@ -33,18 +32,15 @@ now_playing_prefix = "$b>>"
 now_playing_suffix = "$/b"
 
 # Colors ..
-#empty_tag_color = "red"
-statusbar_color = "green"
-state_line_color = "black"
-#state_flags_color = "green"
-main_window_color = "blue"
-header_window_color = "blue"
-main_window_highlight_color = "yellow"
-progressbar_elapsed_color = "cyan"
-#progressbar_color = "black"
-#alternative_ui_separator_color = "white"
-#active_column_color = "white"
-#active_window_border = "red"
+colors_enabled = "yes"
+state_line_color = "177"
+main_window_color = "134"
+active_column_color = "245"
+main_window_highlight_color = "31"
+
+empty_tag_color = "15"
+window_border_color = "white"
+#state_flags_color = default
 
 # Progress Bar ..
 progressbar_look = "▉▉▉"

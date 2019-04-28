@@ -1,5 +1,5 @@
 [options]
-font = Monaco, Regular, 10pt 12
+font = Hack 12
 padding = 8
 border_width = 8
 scroll_on_output = false
@@ -52,8 +52,8 @@ color0 =     #39474A
 color8 =     #4C5F63
 
 #WHITE
-color7 =     #977D5E
-color15 =     #AB9C71
+color7 =     #f1f1f1
+color15 =     #f1f1f1
 
 #RED
 color1 =   #986345
@@ -79,7 +79,7 @@ color12 =     #567A6E
 color5 =    #B9924A
 color13 =     #D69D55
 
-background = rgba(31, 31, 31, 0.98)
+background = rgba(31, 31, 31, 0.15)
 
 [hints]
 #font = Monospace 12

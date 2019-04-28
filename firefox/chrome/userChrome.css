@@ -1,0 +1,201 @@
+/*TABS*/
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+
+#tabbrowser-tabs .tabbrowser-tab .tab-close-button { display:none!important; }
+
+.tabbrowser-tab[fadein]:not([pinned]) { min-width: 60px !important; max-width: 35px !important; }
+
+.tabbrowser-tab {
+
+height: 49px!important;
+
+}
+
+.tab-icon-image {
+
+height: 36px !important;
+
+width: 36px !important;
+
+filter: drop-shadow(1px 1px 1px #A9A9A9);
+
+border-radius: 50%;
+
+}
+
+#TabsToolbar {
+
+visibility:collapse;
+
+}
+
+#navigator-toolbox:hover > #TabsToolbar{
+
+visibility: visible !important;
+
+}
+
+.tabbrowser-tab::before,
+
+.tabbrowser-tab::after,
+
+.tab-line
+
+{
+
+display: none !important;
+}
+
+.tab-background
+
+{
+
+background-color: transparent !important;
+}
+
+.tab-icon-image{
+
+}
+
+.tab-icon-image {
+
+filter: url("data:image/svg+xml;utf8,<svg xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)'><filter id='svgMask'><feGaussianBlur stdDeviation='1' /></filter></svg>#svgMask");
+
+opacity: 0.3!important
+
+}
+
+.tab-icon-image:hover {
+
+filter: url("data:image/svg+xml;utf8,<svg xmlns='[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)'><filter id='svgMask'><feGaussianBlur stdDeviation='0.3' /></filter></svg>#svgMask");
+
+filter: drop-shadow(1px 1px 1px #A9A9A9);
+
+opacity: 1!important
+
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+  display: none;
+}
+
+/*BORDERS*/
+
+.titlebar-placeholder
+
+{
+
+border: 0 !important;
+}
+
+:root {
+
+--tabs-border: transparent !important;
+
+}
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+
+border-left: none !important;
+
+}
+
+#urlbar, .searchbar-textbox {
+
+border: none !important;
+
+box-shadow: none !important;
+
+}
+
+#nav-bar {
+
+margin-top: 0px !important;
+
+border-top: 0px !important;
+
+box-shadow: none !important;
+
+}
+
+
+
+/*NAVBAR*/
+
+:root:not([customizing]) #nav-bar toolbarbutton
+
+{
+
+margin-left: -28px !important;
+
+opacity: 0 !important;
+
+transform: scale(.85, .85) !important;
+
+pointer-events: none !important;
+
+transition: all 100ms var(--animation-easing-function) !important;
+
+}
+
+:root:not([customizing]) :hover > #nav-bar toolbarbutton,
+
+:root:not([customizing]) #navigator-toolbox:focus-within #nav-bar toolbarbutton,
+
+:root:not([customizing]) :hover > #titlebar toolbarbutton {
+
+transform: scale(1, 1) !important;
+
+opacity:0.4 !important;
+
+margin-left:0 !important;
+
+pointer-events: auto !important;
+
+}
+
+#urlbar {opacity: 0!important}
+
+#urlbar:hover {opacity: 0.8!important}
+
+#urlbar[focused="true"] {opacity: 1!important}
+
+#urlbar {
+
+background: transparent !important;
+
+border: none !important;
+
+}
+
+/* TABS on bottom */
+#navigator-toolbox toolbar:not(#nav-bar):not(#toolbar-menubar) {-moz-box-ordinal-group:10}
+#TabsToolbar {-moz-box-ordinal-group:1000!important}
+
+#TabsToolbar {
+ #position: absolute !important;
+ #bottom: 0 !important;
+ #width: 100vw !important;
+#}
+#main-window:not([chromehidden*="toolbar"]) #navigator-toolbox {
+#padding-bottom: var(--tab-min-height) !important;
+#}
+#tabbrowser-tabs {
+# width: 100vw !important;
+#}
+
+/* or hide suggestions completely */
+#PopupAutoCompleteRichResult { display: none; }
+
+#urlbar {
+
+font-size: 12pt !important;
+
+}
+
+#nav-bar {
+
+margin-left: 35px !important;
+
+}

@@ -1,5 +1,5 @@
 [options]
-font = Monaco, Regular, 10pt 12.5
+font = Inconsolata 14
 padding = 8
 border_width = 8
 scroll_on_output = false
@@ -79,7 +79,7 @@ color12 =     #567A6E
 color5 =    #B9924A
 color13 =     #D69D55
 
-background = rgba(31, 31, 31, 0.98)
+background = rgba(31, 31, 31, 0.75)
 
 [hints]
 #font = Monospace 12

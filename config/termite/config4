@@ -1,0 +1,93 @@
+[options]
+font = Inconsolata 13
+padding = 8
+border_width = 8
+scroll_on_output = false
+scroll_on_keystroke = true
+audible_bell = false
+mouse_autohide = false
+allow_bold = true
+dynamic_title = true
+urgent_on_bell = true
+clickable_url = true
+scrollback_lines = 10000
+search_wrap = true
+# icon_name = terminal
+# geometry = 640x480
+
+# "system", "on" or "off"
+cursor_blink = system
+
+# "block", "underline" or "ibeam"
+cursor_shape = ibeam
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = chromium
+
+# set size hints for the window
+size_hints = false
+
+# Hide links that are no longer valid in url select overlay mode
+filter_unmatched_urls = true
+
+# emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+[colors]
+# special
+foreground      = #8FA388
+foreground_bold = #a6a6a6
+cursor          = #BE5E1E
+background      =  #1D2426
+foreground_bold = #ffffff
+
+
+# if unset, will reverse foreground and background
+highlight = #2f2f2f
+
+# colors from color0 to color254 can be set
+
+#BLACK
+color0 =     #39474A
+color8 =     #4C5F63
+
+#WHITE
+color7 =     #f1f1f1
+color15 =     #f1f1f1
+
+#RED
+color1 =   #986345
+color9 =   #B07350
+
+#YELLOW
+color3 =     #9B6A46
+color11 =     #AF6B42
+
+#GREEN
+color2 =    #788249
+color10 =    #869151
+
+#CYAN
+color6 =   #5d796a
+color14 =     #668574
+
+#BLUE
+color4 =    #3E5951
+color12 =     #567A6E
+
+#MAGENTA
+color5 =    #B9924A
+color13 =     #D69D55
+
+background = rgba(31, 31, 31, 0.55)
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 8
+#border = #3f3f3f
+#border_width = 8
+#roundness = 2.0

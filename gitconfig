@@ -7,22 +7,27 @@
 	displayuntracked = true
 	historybrowser = git-dag
 	warndetachedcommit = true
-
-[difftool]
-	prompt = false
+	fontui = -family \"DejaVu Sans Mono\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	recentrepo = /mnt/shit/AndroidSources/los/kernel/samsung/kminilte
+	recentrepo = /home/rick/android_dev/G800F-trees/android_kernel_samsung_kminilte
 
 [merge]
 	tool = meld
 	conflictstyle = diff3
+	diffstat = true
+	summary = true
 
 [credential]
 	helper = store --file /home/rick/.config/git/credentials
-
-[diff]
-	tool = meld %F
+[difftool]
+	prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+	path = /usr/bin/meld
 
 [color]
-	ui = auto
+	ui = true
 
 [color "branch"]
 	current = yellow reverse
@@ -30,10 +35,12 @@
 	remote = green
 
 [color "diff"]
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
+	meta = yellow
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	commit = yellow bold
+	whitespace = red reverse
 
 [color "status"]
 	added = yellow
@@ -44,6 +51,14 @@
 	spellcheck = false
 	fontdiff = Hack,10,-1,5,50,0,0,0,0,0
 	blameviewer = git gui blame
-	terminal = termite
-	savewindowsettings = true
 	boldheaders = true
+	terminal = termite
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[diff]
+	tool = meld

@@ -18,7 +18,7 @@ control + space
 
 # terminal emulator
 control + Return
-    termite --geometry=800x500
+    termite
 
 # web
 control + w
@@ -62,11 +62,11 @@ control + shift + g
 
  # meld
 super + shift + c
-    meld
+    bspc desktop --focus ^5 && meld
 
 # chat
 control + shift + w
-    bspc desktop --focus ^5 && termite --geometry=1500x800++197+25 -e weechat
+    bspc desktop --focus ^5 && termite --geometry=1500x800++197+25 -c /home/rick/.config/termite/config4 -e weechat
 
 # tasks
 control + shift + t

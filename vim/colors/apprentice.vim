@@ -251,3 +251,5 @@ hi link diffNoEOL                WarningMsg
 hi link diffOnly                 WarningMsg
 hi link diffRemoved              WarningMsg
 hi link diffAdded                String
+hi NonText ctermbg=none
+hi Normal guibg=NONE ctermbg=NONE
