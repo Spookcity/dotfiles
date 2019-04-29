@@ -1,5 +1,11 @@
 # (cat $HOME/.config/wpg/sequences &)
 
+emulate sh -c 'source /etc/profile'
+
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
+
 # PATHS
 [ -f ~/.oh-my-zsh/custom/exports ] && source ~/.oh-my-zsh/custom/exports
 [ -f ~/.oh-my-zsh/custom/aliases ] && source ~/.oh-my-zsh/custom/aliases
@@ -22,6 +28,7 @@ POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time battery)
 POWERLEVEL9K_DIR_HOME_BACKGROUND='green'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='036'
 POWERLEVEL9K_VIRTUALENV_BACKGROUND='cyan'
 POWERLEVEL9K_BATTERY_CHARGING='yellow'
 POWERLEVEL9K_BATTERY_CHARGED='green'
@@ -126,5 +133,3 @@ source "/usr/bin/virtualenvwrapper.sh"
 #bindkey '^[[C' history-substring-search-down
 #bindkey -M vicmd 'k' history-substring-search-up
 #bindkey -M vicmd 'j' history-substring-search-down
-
-

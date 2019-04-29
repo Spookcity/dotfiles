@@ -20,6 +20,10 @@ control + space
 control + Return
     kitty
 
+# lock the screen
+XF86ScreenSaver
+    i3lock-fancy
+
 # web
 control + w
      bspc desktop --focus ^2 && firefox-beta
