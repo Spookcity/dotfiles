@@ -45,7 +45,7 @@ alias c='clear'
 alias q='exit'
 
 
-alias vim='nvim'
+alias vim='kitty -o initial_window_width=1800 -o initial_window_height=1000 -e nvim'
 # alias make='~/scripts/color.sh'
 # alias mka='~/scripts/color.sh'
 

@@ -6,10 +6,10 @@ setxkbmap -option ctrl:nocaps &
 
 #bspc monitor -d I II III IV V VI VII VIII IX X
 #bspc monitor -d 一 二 三 四 五
-bspc monitor -d code web files git chat music
+bspc monitor -d term web files git chat music
 
 bspc config border_width        3
-bspc config window_gap          8
+bspc config window_gap          6
 
 bspc config border_radius       20
 
@@ -19,17 +19,18 @@ bspc config gapless_monocle      true
 bspc config focus_by_distance    true
 bspc config history_aware_focus  true
 bspc config focus_follows_pointer true
-bspc config border_radius 5
 # bspc config click_to_focus true
 
-bspc config normal_border_color         "#f1f1f1"
-bspc config focused_border_color        "#6B4E5F"
-bspc config presel_feedback_color         "#A6A6A6"
+bspc config normal_border_color          "#B8A699"
+bspc config focused_border_color         "#168E25"
+bspc config presel_feedback_color        "#A6A6A6"
 
 # rules
 bspc desktop web -l monocle
 bspc rule -a mpv state=floating
+bspc rule -a oblogout border=off
 bspc rule -a Tor Browser desktop='web' follow=on
+bspc rule -a skypeforlinux='chat' follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
 bspc rule -a Meld desktop='chat' follow=on
 
@@ -41,7 +42,7 @@ bspc rule -a arandr state=floating
 bspc rule -a retroarch state=floating border=off
 bspc rule -a File-roller state=floating
 bspc rule -a GParted state=floating focus=on
-bspc rule -a Oblogout state=floating
+bspc rule -a Oblogout manage=off
 bspc rule -a Wpg state=floating
 bspc rule -a feh state=floating
 bspc rule -a skypeforlinux state=floating
@@ -61,6 +62,6 @@ redshift &
 mpd &
 xcape -e 'Control_L=Escape' &
 xinput disable 'SynPS/2 Synaptics TouchPad' &
-/usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
+# /usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
 
 bspc config external_rules_command ~/.config/bspwm/external-rules.sh

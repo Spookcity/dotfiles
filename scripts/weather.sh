@@ -26,9 +26,9 @@ LC_ALL=C /usr/bin/printf '%.0f' " $temperature"
 
 # Use either Celsius or Fahrenheit character
 if grep -qi 'units=us' <<< $address; then
-	printf "°F"
+    printf "°F"
 else
-	printf "°C"
+    printf "°C"
 fi
 
 # Print edgy shit about the weather
@@ -41,22 +41,22 @@ elif grep -qi 'cloudy' <<< $condition; then
 elif grep -qi 'clear-day' <<< $condition; then
     printf " Diffuse sky radiation"
 elif grep -qi 'clear-night' <<< $condition; then
-	printf " Look up at the stars."
+    printf " Look up at the stars."
 elif grep -qi 'snow' <<< $condition; then
-	printf " It's snowing!"
+    printf " It's snowing!"
 elif grep -qi 'fog' <<< $condition; then
-	printf " Spooky."
+    printf " Spooky."
 elif grep -qi 'wind' <<< $condition; then
-	printf " Don't fly away"
+    printf " Don't fly away"
 elif grep -qi 'sleet' <<< $condition; then
-	printf " Sleet. Stay inside"
+    printf " Sleet. Stay inside"
 # Next 3 may not be defined yet.
 elif grep -qi 'thunderstorm' <<< $condition; then
-	printf " The gods are wrathful"
+    printf " The gods are wrathful"
 elif grep -qi 'hail' <<< $condition; then
-	printf " Hail. Stay inside"
+    printf " Hail. Stay inside"
 elif grep -qi 'tornado' <<< $condition; then
-	printf " Tornado. Stay inside. Or don't. You'll probably never see this text. Basement? Be careful."
+    printf " Tornado. Stay inside. Or don't. You'll probably never see this text. Basement? Be careful."
 else
     printf " Look out the window"
 fi

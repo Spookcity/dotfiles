@@ -5,9 +5,9 @@ mpd_port = 6300
 mpd_music_dir = "/mnt/Ricks_Stuff/Music"
 
 mpd_crossfade_time = "5"
-startup_screen = browser
+startup_screen = media_library
 # Display ..
-song_list_format = " %n $0$8$8%l$0$8 $1|$7 $7%a$7 $1| $7 $6%t$1 $R $1%y$1 $1%b$1"
+#song_list_format = " %n $0$8$8%l$0$8 $1|$7 $7%a$7 $1| $7 $6%t$1 $R $1%y$1 $1%b$1"
 song_status_format = "{$8%a} $2»$8»$5» $b{$1%b}$/b"
 song_library_format = "{%n > }{%t}|{%f}"
 browser_sort_mode = "name"
@@ -23,6 +23,7 @@ default_tag_editor_pattern = "%n - %t"
 header_text_scrolling = "yes"
 jump_to_now_playing_song_at_start = "yes"
 
+user_interface = "classic"
 playlist_display_mode = "classic" (classic/columns)
 browser_display_mode = "classic" (classic/columns)
 search_engine_display_mode = "classic" (classic/columns)
@@ -33,17 +34,17 @@ now_playing_suffix = "$/b"
 
 # Colors ..
 colors_enabled = "yes"
-state_line_color = "177"
-main_window_color = "134"
+state_line_color = "23"
+main_window_color = "11"
 active_column_color = "245"
-main_window_highlight_color = "31"
+main_window_highlight_color = "15"
 
 empty_tag_color = "15"
 window_border_color = "white"
 #state_flags_color = default
 
 # Progress Bar ..
-progressbar_look = "▉▉▉"
+progressbar_look = "▃▃▃"
 progressbar_boldness = "no"
 
 # Misc ..
@@ -60,6 +61,10 @@ display_remaining_time = "no"
 ask_before_clearing_playlists = "no"
 discard_colors_if_item_is_selected = "yes"
 song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+
+#uncomment both statement's below if you want to display the albumart
+#execute_on_song_change="~/.ncmpcpp/albumart"
+#song_list_format = "                       $2%t $R$5%a "
 
 # Visualizer ..
 visualizer_in_stereo = "yes"

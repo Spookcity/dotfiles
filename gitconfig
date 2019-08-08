@@ -49,10 +49,13 @@
 
 [cola]
 	spellcheck = false
-	fontdiff = Hack,10,-1,5,50,0,0,0,0,0
+	fontdiff = Hack,8,-1,5,50,0,0,0,0,0
 	blameviewer = git gui blame
 	boldheaders = true
-	terminal = termite
+	terminal = kitty
+	icontheme = default
+	theme = flat-dark-green
+	hidpi = 1.5
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color "diff-highlight"]
@@ -60,5 +63,3 @@
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
-[diff]
-	tool = meld

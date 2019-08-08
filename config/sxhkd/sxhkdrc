@@ -46,15 +46,15 @@ super + shift + r
 
 # music
 control + shift + m
-    bspc desktop --focus ^6 && termite --geometry=1920x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
+    bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
 # reaper
-super + shift + m
-    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
+#super + shift + m
+  #  bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 #`STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
 
 # fl studio
-control + shift + f
-    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/rick/.wine/dosdevices/c:/users/rick/Start\\ Menu/Programs/Image-Line/FL\\ Studio\\ 12\\ \\(64bit\\).lnk
+#control + shift + f
+    bspc desktop --focus ^6 && env WINEPREFIX="/home/rick/.wine" STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/rick/.wine/dosdevices/c:/users/rick/Start\\ Menu/Programs/Image-Line/FL\\ Studio\\ 12\\ \\(64bit\\).lnk
 
 # editor
 control + shift + e
@@ -62,7 +62,7 @@ control + shift + e
 
 # git-cola
 control + shift + g
-    bspc desktop --focus ^4 && env QT_API=pyqt4 git-cola
+    bspc desktop --focus ^4 && git-cola
 
  # meld
 super + shift + c

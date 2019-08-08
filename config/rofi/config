@@ -3,17 +3,17 @@ rofi.width:                          50
 rofi.lines:                          15
 rofi.columns:                        1
 rofi.font:                           Hack Regular 12
-rofi.color-normal:                   #292929, #f1f1f1, #292929, #6b4e5f, #f1f1f1
-rofi.color-urgent:                   #292929, #d6b48d, #22231D, #d6b48d, #f1f1f1
+rofi.color-normal:                   #292929, #617658, #292929, #134B12, #f1f1f1
+rofi.color-urgent:                   #292929, #134B12, #292929, #134B12, #f1f1f1
 rofi.color-active:                   #292929, #818181, #292929, #818181, #292929
-rofi.color-window:                   #292929, #6b4e5f, #493541
+rofi.color-window:                   #292929, #134B12, #134B12
 rofi.bw:                             5
 rofi.location:                       0
 rofi.padding:                        5
 rofi.yoffset:                        0
 rofi.xoffset:                        0
 rofi.fixed-num-lines:                true
-rofi.terminal:                       termite
+rofi.terminal:                       kitty
 rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
 rofi.run-command:                    {cmd}
