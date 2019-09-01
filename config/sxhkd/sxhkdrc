@@ -4,12 +4,10 @@ super + Escape
 
 # rofi window select
 super + space
-  rofi -show drun
+  ~/.config/rofi/scripts/appsmenu.sh
 
 # rofi app select
-control + space
-  rofi -show window
-
+# control + space
 
 
 ############
@@ -18,14 +16,14 @@ control + space
 
 # terminal emulator
 control + Return
-    kitty
+    termite
 
 # lock the screen
 XF86ScreenSaver
     i3lock-fancy
 
 # web
-control + w
+control shift + w
      bspc desktop --focus ^2 && firefox-beta
 
 # file manager
@@ -34,11 +32,11 @@ control + shift + f
 
 # file manager (ranger)
 control + shift + r
-    bspc desktop --focus ^3 && kitty -o initial_window_width=1900 -o initial_window_height=1020 -e ranger
+    bspc desktop --focus ^3 && termite --geometry=1900x1020 -e ranger
 
 # spotify
 control + shift + s
-    blockify
+    bspc desktop --focus ^6 && blockify
 
 # root file manager
 super + shift + r
@@ -70,11 +68,11 @@ super + shift + c
 
 # chat
 control + shift + w
-    bspc desktop --focus ^5 && kitty -o initial_window_width=1500 -o initial_window_height=800 -e weechat
+    bspc desktop --focus ^5 && termite --geometry=1500x800 -e weechat
 
 # tasks
 control + shift + t
-    kitty -o initial_window_width=1000 -o initial_window_height=700 -e htop
+    termite --geometry=1000x700 -e htop
 
 # cleaner
 control + shift + b
@@ -93,23 +91,28 @@ super + shift + g
 #scripts
 ###########
 
+# show weather
+control + F2
+        termite --geometry=1200x1000 --hold -e ~/scripts/weather
+
+# show help on sxhkd key bindings
+control + F1
+        termite --geometry 700x500 -e  ~/scripts/help.sh
+
 # TogglePolybar
 super + control + 0
-    ~/scripts/bspwm/TogglePolybar.sh
+    ~/scripts/TogglePolybar.sh
 
 # toggle touchpad
 XF86Launch1
     ~/scripts/toggle_touchpad.sh
 
-# Pennywise
-control + shift + p
-    ~/scripts/pennywise
-
 # edex-ui
 control + shift + u
     ~/scripts/edex
 
-
+super + Return
+  termite --geometry=1900x1020 -e ~/scripts/4pane_mux.sh
 
 # media/special keys
 
@@ -183,7 +186,7 @@ control + m
   #bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc #node last.leaf -n focused
 
 # swap the current node and the biggest node
-control + g
+super + g
   bspc node -s biggest
 
 #############
@@ -207,7 +210,7 @@ super + {_,shift + }{h,j,k,l}
   bspc node -{f,s} {west,south,north,east}
 
 # focus the node for the given path jump
-control + {p,b,comma,period}
+control + {y,b,comma,period}
   bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node

@@ -1,6 +1,6 @@
 [colors]
-background = #2a2a2a
-foreground = #f1f1f1
+background = #0F161E
+foreground = #a1bfc0
 active = #6B4E5F
 inactive = #493541
 highlight = #44535a
@@ -91,7 +91,7 @@ format-connected-prefix-foreground = #168E25
 
 [module/xwindow]
 type = internal/xwindow
-format-foreground = #f1f1f1
+format-foreground = #AC9B4D
 format-padding = 1
 label = %title:0:49:...%
 label-maxlen = 40
@@ -101,7 +101,7 @@ type = internal/cpu
 interval = 1.5
 
 format-prefix = " "
-format-prefix-foreground = #168E25
+format-prefix-foreground = #AC9B4D
 format-padding = 1
 format = <label> <ramp-coreload>
 
@@ -127,7 +127,7 @@ ramp-foreground = #f1f1f1
 type = internal/memory
 interval = 0.5
 format-prefix = " "
-format-prefix-foreground = #168E25
+format-prefix-foreground = #AC9B4D
 ;format-underline = #fff
 label = %percentage_used%%
 
@@ -142,15 +142,15 @@ label-focused-background = ${colors.highlight}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = #168E25
+label-occupied-foreground = #5BA798
 label-occupied-padding = 1
 
 label-urgent = %name%!
-label-urgent-background = ${colors.active}
+label-urgent-background = #AC9B4D
 label-urgent-padding = 1
 
 label-empty = %name%
-label-empty-foreground = #617658
+label-empty-foreground = #2E534C
 label-empty-padding = 1
 
 [module/mpd]
@@ -218,6 +218,7 @@ time-alt = %l:%M %p
 
 format-padding = 1
 format-background = ${colors.background}
+;format-foreground = #5BA798
 
 label = %date%%time%
 
@@ -277,7 +278,7 @@ label-font = 3
 format = <label>
 ;format-prefix = " "
 ;format-padding = 3
-;format-prefix-foreground = #f1f1f1
+;format-foreground = #5BA798
 exec = ~/scripts/polybar/weather
 
 [module/filesystem]
@@ -285,7 +286,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-label-mounted = %{F#168E25} %{F#f1f1f1}%free%
+label-mounted = %{F#AC9B4D} %{F}%free%
 format-mounted = <label-mounted>
 spacing = 2
 ;label-indicator-padding = 2
@@ -296,14 +297,14 @@ type = internal/fs
 interval = 25
 
 mount-0 = /home
-label-mounted = %{F#168E25} %{F-}%{F#f1f1f1}%free%
+label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
 
 [module/filesystem-shit]
 type = internal/fs
 interval = 25
 
 mount-0 = /mnt/shit
-label-mounted = %{F#168E25} %{F-}%{F#f1f1f1}%free%
+label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
 [settings]
 screenchange-reload = true
 

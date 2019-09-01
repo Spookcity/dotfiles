@@ -3,8 +3,31 @@ set nocompatible
 
 execute pathogen#infect()
 
-colorscheme apprentice
-set bg=dark
+call plug#begin('~/.vim/bundle')
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-github-dashboard'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-syntastic/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
+Plug 'airblade/vim-gitgutter'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'dylanaraps/wal.vim'
+call plug#end()
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+colorscheme wal
 
 " Vim-Air Theme
 let g:airline#extensions#tabline#enabled = 1
@@ -12,9 +35,8 @@ set hidden
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='base16_harmonic16'
+let g:airline_theme='dracula'
 " cnoreabbrev <expr> x getcmdtype() == ":" && getcmdline() == 'x' ? 'Sayonara' : 'x'
-set termguicolors
 set noshowmode
 set noswapfile
 filetype on
@@ -41,6 +63,12 @@ autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
 :let g:NERDTreeWinSize=35
 map <C-n> :NERDTreeToggle<CR>
+
+" close NERDTree after a file is opened
+let g:NERDTreeQuitOnOpen=1
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
 
 " Diff Colors
 " if &diff
@@ -74,12 +102,7 @@ set wildmode=longest,list,full
 
 " Enable basic mouse behavior such as resizing buffers.
 set mouse=a
-if exists('$TMUX')  " Support resizing in tmux
-  set ttymouse=xterm2
-endif
 
-" keyboard shortcuts
-map <C-n> :NERDTreeToggle<CR>
 let mapleader = ','
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j

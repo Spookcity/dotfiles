@@ -44,10 +44,9 @@ alias h='history'
 alias c='clear'
 alias q='exit'
 
+alias find='vim $(fzf)'
 
-alias vim='kitty -o initial_window_width=1800 -o initial_window_height=1000 -e nvim'
+alias vim='nvim'
+alias vimdiff='nvim -d'
 # alias make='~/scripts/color.sh'
 # alias mka='~/scripts/color.sh'
-
-# random
-alias weather='termite --geometry=1200x800 --hold -e ~/scripts/weather.sh i'

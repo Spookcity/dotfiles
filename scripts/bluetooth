@@ -1,0 +1,6 @@
+#!/bin/bash
+bluetoothctl power on
+sleep 2
+bluetoothctl pairable on
+sleep 2
+bluetoothctl connect 60:02:B4:6B:EA:87

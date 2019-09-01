@@ -208,7 +208,7 @@ GtkFileChooser {
   }
 GtkFileChooserWidget.vertical GtkPaned.horizontal {
     -GtkPaned-handle-size: 1px;
-} 
+}
 
 
 /****************
@@ -307,7 +307,7 @@ GtkScrolledWindow.frame {
     border-style: none;
 }
 
-/* avoid double borders when a viewport is 
+/* avoid double borders when a viewport is
  * packed into a GtkScrolledWindow */
 GtkScrolledWindow GtkViewport.frame {
     border-style: none;
@@ -401,7 +401,7 @@ GtkLabel:insensitive {
 }
 
 .floating-bar.left {
- 
+
 }
 
 
