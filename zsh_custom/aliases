@@ -44,7 +44,7 @@ alias h='history'
 alias c='clear'
 alias q='exit'
 
-alias find='vim $(fzf)'
+alias vf='vim $(fzf)'
 
 alias vim='nvim'
 alias vimdiff='nvim -d'

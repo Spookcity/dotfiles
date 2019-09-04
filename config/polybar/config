@@ -4,7 +4,7 @@ foreground = #a1bfc0
 active = #6B4E5F
 inactive = #493541
 highlight = #44535a
-error = #9b6b85
+error = #2E534C
 
 [bar/top]
 monitor = LVDS-1
@@ -79,7 +79,7 @@ interface = wlp3s0
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #168E25
+format-connected-prefix-foreground = #AC9B4D
 
 [module/networkspeeddown]
 type = internal/network
@@ -87,7 +87,7 @@ interface = wlp3s0
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #168E25
+format-connected-prefix-foreground = #AC9B4D
 
 [module/xwindow]
 type = internal/xwindow
