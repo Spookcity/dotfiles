@@ -1,8 +1,8 @@
-" don't bother with vi compatibility
 set nocompatible
 
 execute pathogen#infect()
 
+" Plugins
 call plug#begin('~/.vim/bundle')
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -23,11 +23,29 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dylanaraps/wal.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme wal
+
+"bspwm color border:
+if $DISPLAY != ""
+    autocmd FocusGained * :silent execute "!$HOME/.vim/bspwm_border_color/set " . shellescape(mode())
+    autocmd InsertEnter * :silent execute "!$HOME/.vim/bspwm_border_color/set i"
+    autocmd InsertLeave * :silent execute "!$HOME/.vim/bspwm_border_color/set n"
+    autocmd VimLeave * :silent !$HOME/.vim/bspwm_border_color/reset
+    set title titlestring=VIM "So the listener script can tell its a VIM window
+endif
+
+" Disable scrollbars
+set guioptions-=r
+set guioptions-=R
+set guioptions-=l
+set guioptions-=L
+
+colorscheme apprentice
+set bg=dark
 
 " Vim-Air Theme
 let g:airline#extensions#tabline#enabled = 1
@@ -36,9 +54,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='dracula'
-" cnoreabbrev <expr> x getcmdtype() == ":" && getcmdline() == 'x' ? 'Sayonara' : 'x'
-set noshowmode
-set noswapfile
+
 filetype on
 set relativenumber number
  let g:gitgutter_max_signs = 1000  " default value
@@ -48,6 +64,7 @@ syntax on
 
 let g:loaded_sensible = 1
 
+" NerdTree Stuffs"
 " NERDTress File highlighting only the glyph/icon
 " test highlight just the glyph (icons) in nerdtree:
 autocmd filetype nerdtree highlight haskell_icon ctermbg=none ctermfg=Red guifg=#ffa500
@@ -61,7 +78,7 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
-:let g:NERDTreeWinSize=35
+:let g:NERDTreeWinSize=40
 map <C-n> :NERDTreeToggle<CR>
 
 " close NERDTree after a file is opened
@@ -77,7 +94,10 @@ let g:ctrlp_cmd = 'CtrlP'
 
 set rtp+=~/.fzf
 set autoindent
-set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
+set noswapfile
+set autoread                                                 "Reload files changed outside vim
+set history=1000                                             "Store lots of :cmdline history
+set showmode                                                 "Show current mode down the bottom
 set backspace=2                                              " Fix broken backspace in some setups
 set backupcopy=yes                                           " see :help crontab
 set directory-=.                                             " don't store swapfiles in the current directory
@@ -119,6 +139,8 @@ nnoremap <leader>] :TagbarToggle<CR>
 nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
 noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+nnoremap <C-Left> :bprevious<CR>
+nnoremap <C-Right> :bnext<CR>
 
 " in case you forgot to sudo
 cnoremap w!! %!sudo tee > /dev/null %
@@ -139,18 +161,6 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
-" fdoc is yaml
-autocmd BufRead,BufNewFile *.fdoc set filetype=yaml
-" md is markdown
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-autocmd BufRead,BufNewFile *.md set spell
-" extra rails.vim help
-autocmd User Rails silent! Rnavcommand decorator      app/decorators            -glob=**/* -suffix=_decorator.rb
-autocmd User Rails silent! Rnavcommand observer       app/observers             -glob=**/* -suffix=_observer.rb
-autocmd User Rails silent! Rnavcommand feature        features                  -glob=**/* -suffix=.feature
-autocmd User Rails silent! Rnavcommand job            app/jobs                  -glob=**/* -suffix=_job.rb
-autocmd User Rails silent! Rnavcommand mediator       app/mediators             -glob=**/* -suffix=_mediator.rb
-autocmd User Rails silent! Rnavcommand stepdefinition features/step_definitions -glob=**/* -suffix=_steps.rb
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
 

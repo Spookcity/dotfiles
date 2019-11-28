@@ -360,13 +360,13 @@
         <command>termite --geometry=1000x700 -e weechat</command>
       </action>
     </keybind>
-    <keybind key="C-W-g">
+    <keybind key="W-S-g">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>gtop</name>
+          <name>retroarch</name>
         </startupnotify>
-        <command>termite  -e gtop</command>
+        <command>retroarch</command>
       </action>
     </keybind>
     <keybind key="C-W-v">
