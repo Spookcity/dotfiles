@@ -20,7 +20,7 @@ control + Return
 
 # lock the screen
 XF86ScreenSaver
-    i3lock-fancy
+    i3lock-fancy -p -- scrot -z -o
 
 # web
 control shift + w
@@ -171,7 +171,7 @@ alt + {e,w}
 
 # quit bspwm normally
 control + shift + BackSpace
-  oblogout
+  clearine
 
 # close and kill
 control + q

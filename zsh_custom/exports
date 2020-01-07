@@ -13,5 +13,5 @@ export npm_config_prefix=~/.node_modules
 export ANDROID_HOME=/opt/android-sdk
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 export PATH=$PATH:/opt/android-sdk/ndk-bundle/build
-#export PATH=$PATH:/opt/gradle/gradle-4.1/bin
+export PATH=$PATH:/opt/gradle/gradle-6.0.1/bin
 neofetch

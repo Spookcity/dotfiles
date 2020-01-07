@@ -1,0 +1,43 @@
+[colors]
+background = #2a2a2a
+foreground = #f1f1f1
+active = #6B4E5F
+inactive = #493541
+highlight = #44535a
+error = #9b6b85
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+label-line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+font-1 = "Iosevka Nerd Font:pixelsize=10"
+
+modules-center =  mpd
+
+[module/mpd]
+type = internal/mpd
+host = localhost
+port = 6300
+format-online =    <label-song>
+label-song = %artist% - %title%
+format-online-padding = 10
+;format-online-foreground = #44ffffff
+label-offline = Off
+format-offline-padding = 10
+;format-offline-foreground = #00ff0000
+
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+format-playing-padding = 2
+;format-playing-background = ${colors.highlight}

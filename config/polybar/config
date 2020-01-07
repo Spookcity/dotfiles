@@ -43,7 +43,7 @@ font-3 = Weather Icons:size=12;1
 
 modules-left = bspwm  weather wlan networkspeedup networkspeeddown
 modules-center =  xwindow
-modules-right =   filesystem filesystem-home filesystem-shit memory cpu temperature volume date battery
+modules-right =   filesystem-home filesystem filesystem-shit memory cpu temperature volume date battery
 
 wm-restack = bspwm
 
@@ -142,11 +142,11 @@ label-focused-background = ${colors.highlight}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = #5BA798
+label-occupied-foreground = #AC9B4D
 label-occupied-padding = 1
 
 label-urgent = %name%!
-label-urgent-background = #AC9B4D
+label-urgent-background = #AC3C2D
 label-urgent-padding = 1
 
 label-empty = %name%
@@ -232,7 +232,7 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-3 = 
-ramp-volume-foreground = ${colors.foreground}
+ramp-volume-foreground = #AC9B4D
 
 format-muted-prefix = " "
 ;format-muted-foreground = ${colors.background}
@@ -259,7 +259,7 @@ ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = ${colors.foreground}
+ramp-capacity-foreground = #AC9B4D
 
 animation-charging-foreground = ${colors.foreground}
 animation-charging-framerate = 500
