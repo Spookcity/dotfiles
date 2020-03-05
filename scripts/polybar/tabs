@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# First argument = focused color
+# Second argument = unfocused color
+
+TABS=''
+WLIST=($(bspc query -N -n .window -d focused))
+FWIN=$(bspc query -N -n .window.focused)
+
+for ID in ${WLIST[@]}; do
+    TITLE=$(xtitle $ID | sed -E 's/(.{30})(.{1,})$/\1.../')
+    if [ "$ID" == "$FWIN" ]; then
+        TABS="$TABS%{A1:bspc node -f $ID:}%{F$1}$TITLE%{F- O18 A}"
+        continue;
+    fi
+        TABS="$TABS%{A1:bspc node -f $ID:}%{F$2}$TITLE%{F- O18 A}"
+done
+
+echo $TABS

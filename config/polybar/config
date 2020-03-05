@@ -52,9 +52,9 @@ wm-restack = bspwm
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprevious
 
-tray-position = none
-tray-padding = 10
-tray-background = ${colors.inactive}
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.background}
 
 [module/temperature]
 type = internal/temperature

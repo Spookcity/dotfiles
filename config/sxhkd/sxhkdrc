@@ -26,6 +26,10 @@ XF86ScreenSaver
 control shift + w
      bspc desktop --focus ^2 && firefox-beta
 
+# tor
+super + shift + t
+     bspc desktop --focus ^2 && /usr/bin/tor-browser-en
+
 # file manager
 control + shift + f
     sunflower
@@ -71,7 +75,7 @@ control + shift + w
     bspc desktop --focus ^5 && termite --geometry=1500x800 -e weechat
 
 # tasks
-control + shift + t
+super + F12
     termite --geometry=1000x700 -e htop
 
 # cleaner

@@ -9,8 +9,6 @@
 	warndetachedcommit = true
 	fontui = -family \"DejaVu Sans Mono\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
-	recentrepo = /mnt/shit/AndroidSources/los/kernel/samsung/kminilte
-	recentrepo = /home/rick/android_dev/G800F-trees/android_kernel_samsung_kminilte
 
 [merge]
 	tool = meld

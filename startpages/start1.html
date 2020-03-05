@@ -8,9 +8,10 @@
 
   var config = {
     categories: [
-      { name: "Media & Social", commands: [
+      { name: "Media,Social,Vid", commands: [
         { key: 'i', name: 'GMail', url: 'https://mail.google.com/mail/u/0/#inbox', search: '/search/' },
         { key: 'hm', name: 'Hotmail', url: 'https://outlook.live.com/mail/inbox', search: '/search/' },
+        { key: 'nf', name: 'Netflix', url: 'https://www.netflix.com/browse', search: '/search/' },
         { key: 'fm', name: 'LastFM', url: 'http://www.last.fm/home', search: '/search/' },
         { key: 'd', name: 'Drive', url: 'https://drive.google.com/drive', search: '/search?q=' },
         { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
@@ -26,7 +27,6 @@
       { name: "Forums", commands: [
         { key: 'x', name: 'XDA Forums', url: 'http://forum.xda-developers.com/', search: '/search/' },
         { key: 'r', name: 'Reaper Forum', url: 'http://forum.cockos.com/forumdisplay.php?f=20', search: '/search?q=' },
-        { key: 't', name: 'Techist Forum', url: 'http://www.techist.com/forums/', search: '/search?page_search_query=' },
         { key: 'm', name: 'Linux Musicians', url: 'https://linuxmusicians.com/', search: '/search?q=' },
         { key: 'v', name: 'VDrum Forum', url: 'https://www.vdrums.com/search?searchJSON=%7B%22date%22%3A%7B%22from%22%3A%22lastDay%22%7D%2C%22view%22%3A%22topic%22%2C%22sort%22%3A%7B%22lastcontent%22%3A%22desc%22%7D%2C%22exclude_type%22%3A%5B%22vBForum_PrivateMessage%22%5D%7D', search: '/search?q=' },
         { key: 'gab', name: 'GuitarAmpBoard', url: 'https://www.guitargearforum.com/forum/viewforum.php?f=5&sid=25bbe13db87d0ad4fdf8e2769d48e999 ' },
@@ -55,6 +55,7 @@
         { key: 'rj', name: 'RetroJunk', url: 'http://www.retrojunk.com/', search: '/search?q=' },
         { key: 'wm', name: 'POWM', url: 'http://www.peopleofwalmart.com/', search: '/search?q=' },
         { key: 'p', name: 'Plex', url: 'https://app.plex.tv/desktop#', search: '/search?q=' },
+        { key: 'e', name: 'Emby', url: 'http://app.emby.media/#!/home.html', search: '/search?q=' },
         { key: 'stl', name: 'STLBlues', url: 'https://www.nhl.com/blues/', search: '/search?q=' },
         { key: 'w', name: 'Wikipedia', url: 'https://en.wikipedia.org', search: '/wiki/' },
         { key: 'ng', name: 'Netgear Router', url: 'http://192.168.1.1/cgi-bin/index.html' },
@@ -139,6 +140,7 @@
     margin-bottom: 20px;
     font-size: 5rem;
     letter-spacing: 6px;
+    color: #A1A100;
   }
 
   input,
@@ -147,7 +149,7 @@
     width: 100%;
     margin: 0;
     border: 0;
-    background: #1A1A1A;
+    background: #324703;
     outline: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -207,7 +209,7 @@
 
   .overlay[data-toggled='true'] {
     visibility: visible;
-    background-image: url("/home/rick/.walls/forest.png"); no-repeat center center fixed;
+    background-image: url("/home/rick/.walls/rick.jpg"); no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -287,7 +289,7 @@
       align-items: center;
     }
     body {
-   background-image: url("/home/rick/.walls/forest.png"); no-repeat center center fixed;
+   background-image: url("/home/rick/.walls/rick.jpg"); no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

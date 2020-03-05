@@ -11,18 +11,20 @@
         "file_mode": 420
     }, 
     "editor": {
-        "application": "Sublime Text", 
-        "default_editor": "subl3 %F", 
-        "external_command": "subl3 %F", 
+        "application": "Sublime Text 3 Dev", 
+        "default_editor": "subl3", 
+        "external_command": "subl3", 
         "terminal_command": false, 
-        "type": 0
+        "type": 1
     }, 
     "expand_tabs": 0, 
     "focus_new_tab": true, 
     "history_file": ".bash_history", 
     "horizontal_split": false, 
     "item_list": {
-        "always_visible": [], 
+        "always_visible": [
+            ".config"
+        ], 
         "breadcrumbs": 2, 
         "case_sensitive_sort": false, 
         "force_directories": true, 
@@ -36,7 +38,7 @@
         "number_sensitive_sort": false, 
         "right_click_select": false, 
         "right_directories": [
-            "/mnt/Ricks_Stuff"
+            "/mnt/shit"
         ], 
         "row_hinting": false, 
         "search_modifier": "000", 
@@ -44,12 +46,12 @@
         "selection_color": "#ffff5e5e0000", 
         "selection_indicator": "\u2731", 
         "show_expanders": false, 
-        "show_hidden": true, 
+        "show_hidden": false, 
         "single_click_navigation": true, 
         "time_format": "%H:%M %d-%m-%y"
     }, 
     "last_version": 0, 
-    "media_preview": false, 
+    "media_preview": true, 
     "multiple_instances": false, 
     "network_path_completion": true, 
     "operations": {
@@ -68,15 +70,14 @@
     }, 
     "plugins": [
         "file_list", 
-        "default_toolbar", 
         "system_terminal", 
-        "find_file_extensions"
+        "default_toolbar"
     ], 
     "show_command_bar": false, 
     "show_command_entry": false, 
     "show_notifications": true, 
-    "show_status_bar": 0, 
-    "show_toolbar": false, 
+    "show_status_bar": 1, 
+    "show_toolbar": true, 
     "size_format": 1, 
     "superuser_notification": true, 
     "tab_button_icons": true, 
