@@ -24,6 +24,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'Kody-Quintana/bspwm_border_color'
 call plug#end()
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

@@ -11,18 +11,20 @@
         "file_mode": 420
     }, 
     "editor": {
-        "application": "Sublime Text", 
-        "default_editor": "subl3 %F", 
-        "external_command": "subl3 %F", 
+        "application": "Sublime Text 3 Dev", 
+        "default_editor": "subl3 ", 
+        "external_command": "subl3 ", 
         "terminal_command": false, 
-        "type": 0
+        "type": 1
     }, 
     "expand_tabs": 0, 
     "focus_new_tab": true, 
     "history_file": ".bash_history", 
     "horizontal_split": false, 
     "item_list": {
-        "always_visible": [], 
+        "always_visible": [
+            ".config"
+        ], 
         "breadcrumbs": 2, 
         "case_sensitive_sort": false, 
         "force_directories": true, 
@@ -36,20 +38,20 @@
         "number_sensitive_sort": false, 
         "right_click_select": false, 
         "right_directories": [
-            "/mnt/Ricks_Stuff"
+            "/mnt/Shit"
         ], 
         "row_hinting": false, 
         "search_modifier": "000", 
         "second_extension": false, 
         "selection_color": "#ffff5e5e0000", 
-        "selection_indicator": "\u2731", 
+        "selection_indicator": "\u2738", 
         "show_expanders": false, 
-        "show_hidden": true, 
+        "show_hidden": false, 
         "single_click_navigation": true, 
         "time_format": "%H:%M %d-%m-%y"
     }, 
     "last_version": 0, 
-    "media_preview": false, 
+    "media_preview": true, 
     "multiple_instances": false, 
     "network_path_completion": true, 
     "operations": {
@@ -67,10 +69,10 @@
         "trash_files": true
     }, 
     "plugins": [
-        "file_list", 
-        "default_toolbar", 
         "system_terminal", 
-        "find_file_extensions"
+        "rename_extensions", 
+        "default_toolbar", 
+        "file_list"
     ], 
     "show_command_bar": false, 
     "show_command_entry": false, 
@@ -85,7 +87,7 @@
         "allow_bold": true, 
         "command": "xterm -into {0}", 
         "command2": "xterm -into {0} -e \"{1}\"", 
-        "cursor_shape": 0, 
+        "cursor_shape": 1, 
         "font": "Monospace 12", 
         "mouse_autohide": false, 
         "show_scrollbars": true, 

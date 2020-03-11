@@ -2,7 +2,7 @@ mpd_host = localhost
 
 mpd_port = 6300
 
-mpd_music_dir = "/mnt/Ricks_Stuff/Music"
+mpd_music_dir = "/mnt/Shit/music"
 
 mpd_crossfade_time = "5"
 startup_screen = media_library
@@ -23,10 +23,10 @@ default_tag_editor_pattern = "%n - %t"
 header_text_scrolling = "yes"
 jump_to_now_playing_song_at_start = "yes"
 
-user_interface = "classic"
-playlist_display_mode = "classic" (classic/columns)
+user_interface = "alternative"
+playlist_display_mode = "columns" (classic/columns)
 browser_display_mode = "classic" (classic/columns)
-search_engine_display_mode = "classic" (classic/columns)
+search_engine_display_mode = "columns" (classic/columns)
 
 # Now Playing ..
 now_playing_prefix = "$b>>"
@@ -35,7 +35,7 @@ now_playing_suffix = "$/b"
 # Colors ..
 colors_enabled = "yes"
 state_line_color = "23"
-main_window_color = "11"
+main_window_color = "15"
 active_column_color = "245"
 main_window_highlight_color = "15"
 

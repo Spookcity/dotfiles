@@ -77,4 +77,4 @@ color12 =     #AF5151
 color5 =    #39A859
 color13 =    #636343
 
-# background = rgba(31, 31, 31, 0.85)
+background = rgba(31, 31, 31, 0.65)

@@ -2,7 +2,7 @@
 super + Escape
   pkill -USR1 -x sxhkd
 
-# rofi window select
+# rofi
 super + space
   ~/.config/rofi/scripts/appsmenu.sh
 
@@ -20,14 +20,18 @@ control + Return
 
 # lock the screen
 XF86ScreenSaver
-    i3lock-fancy -p -- scrot -z -o
+    i3lock-fancy
 
 # web
-control shift + w
+XF86HomePage
      bspc desktop --focus ^2 && firefox-beta
 
+# web
+super + shift + t
+     bspc desktop --focus ^2 && /usr/bin/tor-browser
+
 # file manager
-control + shift + f
+XF86Search
     sunflower
 
 # file manager (ranger)
@@ -43,7 +47,7 @@ super + shift + r
     gksudo sunflower
 
 # music
-control + shift + m
+XF86Tools
     bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
 # reaper
@@ -63,16 +67,16 @@ control + shift + g
     bspc desktop --focus ^4 && git-cola
 
  # meld
-super + shift + c
-    bspc desktop --focus ^5 && meld
+control + shift + m
+    meld
 
 # chat
-control + shift + w
-    bspc desktop --focus ^5 && termite --geometry=1500x800 -e weechat
+super + shift + w
+    bspc desktop --focus ^5 && termite --geometry=1200x800 -e weechat
 
 # tasks
-control + shift + t
-    termite --geometry=1000x700 -e htop
+XF86Mail
+    termite --geometry=1200x900 -e htop
 
 # cleaner
 control + shift + b
@@ -82,9 +86,9 @@ control + shift + b
 control + alt + k
     xkill
 
-super + shift + g
+# games
+XF86Calculator
     emulationstation
-
 
 
 ###########
@@ -102,10 +106,6 @@ control + F1
 # TogglePolybar
 super + control + 0
     ~/scripts/TogglePolybar.sh
-
-# toggle touchpad
-XF86Launch1
-    ~/scripts/toggle_touchpad.sh
 
 # edex-ui
 control + shift + u
@@ -127,9 +127,6 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
     amixer set Master 5%-; notify-send "Volume Down: [$(amixer get Master | egrep -o "[0-9]+%")]"
 
-XF86AudioMicMute
-   amixer set Capture toggle mute; notify-send "Toggle Mic Mute"
-
 XF86AudioPlay
    MPD_PORT=6300 mpc toggle
 
@@ -138,13 +135,6 @@ XF86AudioNext
 
 XF86AudioPrev
    MPD_PORT=6300 mpc prev
-
-# brightness
-XF86MonBrightnessUp
-    light -A 5; notify-send "brightness up [$(light)%]"
-
-XF86MonBrightnessDown
-    light -U 5; notify-send "brightness down [$(light)%]"
 
 ###############
 # bspwm hotkeys
@@ -308,7 +298,7 @@ super + button{4,5}
     bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 5))
 
 # screenshot
-super + Print
+super + F12
     scrot
 
 # negative -w arg to account for a border width (default: 100%)

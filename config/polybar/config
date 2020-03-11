@@ -7,12 +7,12 @@ highlight = #44535a
 error = #2E534C
 
 [bar/top]
-monitor = LVDS-1
+monitor = DP-1
 width = 100%
-height = 24
+height = 25
 ;offset-x = 1%
 ;offset-y = 4
-radius = 0.0
+;radius = 0.0
 fixed-center = true
 
 underline-size = 2
@@ -29,7 +29,7 @@ border-size = 0
 border-color = #00000000
 
 padding-left = 2
-padding-right = 1
+padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
@@ -41,9 +41,9 @@ font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
 ;font-4 = Roboto:style=Regular:pixelsize=10s;1
 font-3 = Weather Icons:size=12;1
 
-modules-left = bspwm  weather wlan networkspeedup networkspeeddown
+modules-left = bspwm weather  networkspeedup networkspeeddown
 modules-center =  xwindow
-modules-right =   filesystem-home filesystem filesystem-shit memory cpu temperature volume date battery
+modules-right =   filesystem filesystem-home  filesystem-shit memory cpu temperature volume date
 
 wm-restack = bspwm
 
@@ -52,9 +52,9 @@ wm-restack = bspwm
 scroll-up = bspwm-desknext
 scroll-down = bspwm-deskprevious
 
-tray-position = none
-tray-padding = 10
-tray-background = ${colors.inactive}
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.background}
 
 [module/temperature]
 type = internal/temperature
@@ -75,7 +75,7 @@ warn-temperature = 65
 
 [module/networkspeedup]
 type = internal/network
-interface = wlp3s0
+interface = eno1
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
@@ -83,7 +83,7 @@ format-connected-prefix-foreground = #AC9B4D
 
 [module/networkspeeddown]
 type = internal/network
-interface = wlp3s0
+interface = eno1
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
@@ -94,7 +94,7 @@ type = internal/xwindow
 format-foreground = #AC9B4D
 format-padding = 1
 label = %title:0:49:...%
-label-maxlen = 40
+label-maxlen = 65
 
 [module/cpu]
 type = internal/cpu
@@ -142,11 +142,11 @@ label-focused-background = ${colors.highlight}
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = #AC9B4D
+label-occupied-foreground = #5BA798
 label-occupied-padding = 1
 
 label-urgent = %name%!
-label-urgent-background = #AC3C2D
+label-urgent-background = #AC9B4D
 label-urgent-padding = 1
 
 label-empty = %name%
@@ -197,7 +197,7 @@ ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
 type = internal/network
-interface = enp0s25
+interface = eno1
 interval = 3.0
 
 format-connected =  <label-connected>
@@ -232,44 +232,13 @@ ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-volume-3 = 
-ramp-volume-foreground = #AC9B4D
+ramp-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
 ;format-muted-foreground = ${colors.background}
 format-muted-background = ${colors.error}
 label-muted = Muted
 format-muted-padding = 1
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 100
-
-format-charging =   <animation-charging> <label-charging>
-format-charging-padding = 1
-format-discharging-padding = 1
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <label-full> <ramp-capacity>
-format-full-padding = 1
-;format-full-background = ${colors.active}
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-ramp-capacity-foreground = #AC9B4D
-
-animation-charging-foreground = ${colors.foreground}
-animation-charging-framerate = 500
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-;format-charging-background = ${colors.highlight}
-;format-discharging-background = ${colors.active}
 
 [module/weather]
 type = custom/script
@@ -303,7 +272,7 @@ label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
 type = internal/fs
 interval = 25
 
-mount-0 = /mnt/shit
+mount-0 = /mnt/Shit
 label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
 [settings]
 screenchange-reload = true
