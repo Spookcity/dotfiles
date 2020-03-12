@@ -1,9 +1,9 @@
 [colors]
 background = #0F161E
-foreground = #a1bfc0
-active = #6B4E5F
-inactive = #493541
-highlight = #44535a
+foreground = #A9D7F5
+;active = #6B4E5F
+;inactive = #493541
+highlight = #207DAD
 error = #2E534C
 
 [bar/top]
@@ -12,7 +12,7 @@ width = 100%
 height = 25
 ;offset-x = 1%
 ;offset-y = 4
-;radius = 0.0
+;radius = 1.5
 fixed-center = true
 
 underline-size = 2
@@ -28,22 +28,20 @@ label-line-color = #f00
 border-size = 0
 border-color = #00000000
 
-padding-left = 2
+padding-left = 1
 padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Comfortaa-Regular:pixelsize=11"
-font-1 = "Iosevka Nerd Font:pixelsize=10"
-font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
-;font-3 = Wuncon Siji:pixelsize=10;1
-;font-4 = Roboto:style=Regular:pixelsize=10s;1
-font-3 = Weather Icons:size=12;1
+font-1 = "Iosevka Nerd Font:pixelsize=12"
+;font-3 = "Wuncon Siji:pixelsize=10;1"
+font-3 = "Weather Icons:size=12;1"
 
-modules-left = bspwm weather  networkspeedup networkspeeddown
+modules-left = bspwm weather networkspeedup networkspeeddown
 modules-center =  xwindow
-modules-right =   filesystem filesystem-home  filesystem-shit memory cpu temperature volume date
+modules-right =   filesystem filesystem-home filesystem-shit memory cpu temperature volume date
 
 wm-restack = bspwm
 
@@ -62,6 +60,7 @@ type = internal/temperature
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 0.5
+format-foreground = #8FCFB8
 
 ; Thermal zone to use
 ; To list all the zone types, run
@@ -79,7 +78,7 @@ interface = eno1
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #AC9B4D
+format-connected-prefix-foreground = #8FCFB8
 
 [module/networkspeeddown]
 type = internal/network
@@ -87,11 +86,11 @@ interface = eno1
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
 format-connected-prefix = " "
-format-connected-prefix-foreground = #AC9B4D
+format-connected-prefix-foreground = #8FCFB8
 
 [module/xwindow]
 type = internal/xwindow
-format-foreground = #AC9B4D
+format-foreground = #E1C337
 format-padding = 1
 label = %title:0:49:...%
 label-maxlen = 65
@@ -101,33 +100,33 @@ type = internal/cpu
 interval = 1.5
 
 format-prefix = " "
-format-prefix-foreground = #AC9B4D
+format-prefix-foreground = #75BA95
 format-padding = 1
 format = <label> <ramp-coreload>
 
 ramp-coreload-0 = ▁
-ramp-coreload-0-foreground = #f1f1f1
+ramp-coreload-0-foreground = #ECC730
 ramp-coreload-1 = ▂
-ramp-coreload-1-foreground = #f1f1f1
+ramp-coreload-1-foreground = #ECC730
 ramp-coreload-2 = ▃
-ramp-coreload-2-foreground = #f1f1f1
+ramp-coreload-2-foreground = #ECC730
 ramp-coreload-3 = ▄
-ramp-coreload-3-foreground = #f1f1f1
+ramp-coreload-3-foreground = #ECC730
 ramp-coreload-4 = ▅
-ramp-coreload-4-foreground = #f1f1f1
+ramp-coreload-4-foreground = #ECC730
 ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = #f1f1f1
+ramp-coreload-5-foreground = #ECC730
 ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = #f1f1f1
+ramp-coreload-6-foreground = #ECC730
 ramp-coreload-7 = █
-ramp-coreload-7-foreground = #f1f1f1
-ramp-foreground = #f1f1f1
+ramp-coreload-7-foreground = #ECC730
+ramp-foreground = #ECC730
 
 [module/memory]
 type = internal/memory
 interval = 0.5
 format-prefix = " "
-format-prefix-foreground = #AC9B4D
+format-prefix-foreground = #75BA95
 ;format-underline = #fff
 label = %percentage_used%%
 
@@ -137,12 +136,12 @@ format = <label-state> <label-mode>
 
 
 label-focused = %name%
-label-focused-background = ${colors.highlight}
-;label-focused-foreground= ${colors.inactive}
+label-focused-background = #68AE93
+label-focused-foreground= #FFE040
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = #5BA798
+label-occupied-foreground = #49BEE2
 label-occupied-padding = 1
 
 label-urgent = %name%!
@@ -218,7 +217,7 @@ time-alt = %l:%M %p
 
 format-padding = 1
 format-background = ${colors.background}
-;format-foreground = #5BA798
+format-foreground = #DEC122
 
 label = %date%%time%
 
@@ -247,7 +246,7 @@ label-font = 3
 format = <label>
 ;format-prefix = " "
 ;format-padding = 3
-;format-foreground = #5BA798
+format-foreground = #ECC730
 exec = ~/scripts/polybar/weather
 
 [module/filesystem]
@@ -255,7 +254,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-label-mounted = %{F#AC9B4D} %{F}%free%
+label-mounted = %{F#75BA95} %{F}%free%
 format-mounted = <label-mounted>
 spacing = 2
 ;label-indicator-padding = 2
@@ -266,14 +265,14 @@ type = internal/fs
 interval = 25
 
 mount-0 = /home
-label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
+label-mounted = %{F#75BA95} %{F-}%{F}%free%
 
 [module/filesystem-shit]
 type = internal/fs
 interval = 25
 
 mount-0 = /mnt/Shit
-label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
+label-mounted = %{F#75BA95} %{F-}%{F}%free%
 [settings]
 screenchange-reload = true
 

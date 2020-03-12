@@ -16,7 +16,7 @@ browser_playlist_prefix = "$2plist »$9 "
 browser_sort_format = "{%a - }{%t}|{%f} {(%l)}"
 alternative_header_first_line_format = "{$b$1%t$9$/b}"
 alternative_header_second_line_format ="$0{%a} $b$8-$9$/b {%b}$9"
-song_columns_list_format = "$L(9)[black]{l} (30)[blue]{a} (30)[green]{b} (30)[magenta]{t}"
+song_columns_list_format = "$L(9)[yellow]{l} (30)[cyan]{a} (30)[green]{b} (30)[red]{t}"
 
 default_find_mode = "wrapped" (wrapped/normal)
 default_tag_editor_pattern = "%n - %t"
@@ -35,12 +35,12 @@ now_playing_suffix = "$/b"
 # Colors ..
 colors_enabled = "yes"
 state_line_color = "23"
-main_window_color = "15"
+main_window_color = "11"
 active_column_color = "245"
-main_window_highlight_color = "15"
+main_window_highlight_color = "11"
 
-empty_tag_color = "15"
-window_border_color = "white"
+empty_tag_color = "11"
+window_border_color = "yellow"
 #state_flags_color = default
 
 # Progress Bar ..

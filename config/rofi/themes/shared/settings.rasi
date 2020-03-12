@@ -1,7 +1,7 @@
 /**
  * Allows to change the settings of every menu simply by editing this file
  */
-@import "~/.config/rofi/themes/shared/colorschemes/astro.rasi"
+@import "~/.config/rofi/themes/shared/colorschemes/pacific.rasi"
 @import "resolutions/1920x1080.rasi"
 
 #window {

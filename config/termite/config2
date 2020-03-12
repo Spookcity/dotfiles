@@ -48,38 +48,39 @@ highlight = #2f2f2f
 # colors from color0 to color254 can be set
 
 #BLACK
-color0 =     #39474A
-color8 =     #4C5F63
+color0 =     #000000
+color8 =     #385436
 
 #WHITE
-color7 =     #f1f1f1
-color15 =     #f1f1f1
+color7 =     #cbcdc8
+color15 =     #ffffff
 
 #RED
-color1 =   #986345
-color9 =   #B07350
+color1 =   #c91639
+color9 =   #da5f47
 
 #YELLOW
-color3 =     #9B6A46
-color11 =     #AF6B42
+color3 =     #c99b00
+color11 =     #dab71f
 
 #GREEN
-color2 =    #788249
-color10 =    #869151
+color2 =   #8ccc00
+color10 =    #5EA889
 
 #CYAN
-color6 =   #5d796a
-color14 =     #668574
+color6 =   #13b58c
+color14 =  #5cdd75
 
 #BLUE
-color4 =    #3E5951
-color12 =     #567A6E
+color4 =    #6d168c
+color12 =     #7c5f9d
 
 #MAGENTA
-color5 =    #B9924A
-color13 =     #D69D55
+color5 =    #c9168a
+color13 =    #b55f9d
 
-#background = rgba(31, 31, 31, 0.15)
+
+background = rgba(31, 31, 31, 0.60)
 
 [hints]
 #font = Monospace 12

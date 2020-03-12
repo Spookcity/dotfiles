@@ -1,5 +1,5 @@
 [options]
-font =  Inconsolata 13
+font =  Inconsolata 12
 padding = 8
 border_width = 8
 scroll_on_output = false
@@ -36,7 +36,7 @@ filter_unmatched_urls = true
 [colors]
 # special
 background =  #0F161E
-foreground = #a1bfc0
+foreground = #ffffff
 cursor = #a1bfc0
 
 
@@ -46,35 +46,35 @@ highlight = #2f2f2f
 # colors from color0 to color254 can be set
 
 #BLACK
-color0 =     #0F161E
-color8 =     #708586
+color0 =     #000000
+color8 =     #385436
 
 #WHITE
-color7 =     #a1bfc0
-color15 =     #f9e1cf
+color7 =     #cbcdc8
+color15 =     #ffffff
 
 #RED
-color1 =   #2B3442
-color9 =   #2B3442
+color1 =   #c91639
+color9 =   #da5f47
 
 #YELLOW
-color3 =     #595B58
-color11 =     #595B58
+color3 =     #c99b00
+color11 =     #dab71f
 
 #GREEN
-color2 =   #2E534C
-color10 =    #2E534C
+color2 =   #8ccc00
+color10 =    #5EA889
 
 #CYAN
-color6 =   #AC9B4D
-color14 =  #AC9B4D
+color6 =   #13b58c
+color14 =  #5cdd75
 
 #BLUE
-color4 =    #AF5151
-color12 =     #AF5151
+color4 =    #6d168c
+color12 =     #7c5f9d
 
 #MAGENTA
-color5 =    #39A859
-color13 =    #636343
+color5 =    #c9168a
+color13 =    #b55f9d
 
-background = rgba(31, 31, 31, 0.65)
+background = rgba(31, 31, 31, 0.88)
