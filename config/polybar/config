@@ -35,9 +35,9 @@ module-margin-left = 1
 module-margin-right = 2
 
 font-0 = "Comfortaa-Regular:pixelsize=11"
-font-1 = "Iosevka Nerd Font:pixelsize=12"
-;font-3 = "Wuncon Siji:pixelsize=10;1"
-font-3 = "Weather Icons:size=12;1"
+font-1 = "Iosevka Nerd Font:pixelsize=10"
+;font-2 = "Wuncon Siji:pixelsize=10;1"
+font-2 = "Weather Icons:size=12;1"
 
 modules-left = bspwm weather networkspeedup networkspeeddown
 modules-center =  xwindow
@@ -77,7 +77,7 @@ type = internal/network
 interface = eno1
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = #8FCFB8
 
 [module/networkspeeddown]
@@ -85,7 +85,7 @@ type = internal/network
 interface = eno1
 label-connected = "%downspeed:7%"
 format-connected = <label-connected>
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = #8FCFB8
 
 [module/xwindow]
@@ -99,7 +99,7 @@ label-maxlen = 65
 type = internal/cpu
 interval = 1.5
 
-format-prefix = " "
+format-prefix = "   "
 format-prefix-foreground = #75BA95
 format-padding = 1
 format = <label> <ramp-coreload>
@@ -125,7 +125,7 @@ ramp-foreground = #ECC730
 [module/memory]
 type = internal/memory
 interval = 0.5
-format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = #75BA95
 ;format-underline = #fff
 label = %percentage_used%%
@@ -224,8 +224,8 @@ label = %date%%time%
 [module/volume]
 type = internal/alsa
 
-format-volume = <ramp-volume> <label-volume>
-format-volume-padding = 1
+format-volume = <ramp-volume>  <label-volume>
+;format-volume-padding = 1
 ;format-volume-background = ${colors.active}
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -242,9 +242,9 @@ format-muted-padding = 1
 [module/weather]
 type = custom/script
 interval = 600
-label-font = 3
+label-font = 2
 format = <label>
-;format-prefix = " "
+format-prefix = " "
 ;format-padding = 3
 format-foreground = #ECC730
 exec = ~/scripts/polybar/weather
@@ -254,7 +254,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-label-mounted = %{F#75BA95} %{F}%free%
+label-mounted = %{F#75BA95}  %{F}%free%
 format-mounted = <label-mounted>
 spacing = 2
 ;label-indicator-padding = 2
@@ -265,14 +265,14 @@ type = internal/fs
 interval = 25
 
 mount-0 = /home
-label-mounted = %{F#75BA95} %{F-}%{F}%free%
+label-mounted = %{F#75BA95}  %{F-}%{F}%free%
 
 [module/filesystem-shit]
 type = internal/fs
 interval = 25
 
 mount-0 = /mnt/Shit
-label-mounted = %{F#75BA95} %{F-}%{F}%free%
+label-mounted = %{F#75BA95}  %{F-}%{F}%free%
 [settings]
 screenchange-reload = true
 
