@@ -112,7 +112,7 @@ control + shift + u
     ~/scripts/edex
 
 super + Return
-  termite --geometry=1900x1020 -e ~/scripts/4pane_mux.sh
+  termite --geometry=1900x1040+8-5 -e ~/scripts/4pane_mux.sh
 
 # media/special keys
 

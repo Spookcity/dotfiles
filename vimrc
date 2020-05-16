@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'Kody-Quintana/bspwm_border_color'
+" Plug 'valloric/youcompleteme'
 call plug#end()
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -54,7 +55,7 @@ set hidden
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='dracula'
+let g:airline_theme='base16_monokai'
 
 filetype on
 set relativenumber number
