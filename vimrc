@@ -24,6 +24,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'Kody-Quintana/bspwm_border_color'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+" Plug 'valloric/youcompleteme'
 call plug#end()
 
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -53,7 +57,7 @@ set hidden
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme='dracula'
+let g:airline_theme='base16_monokai'
 
 filetype on
 set relativenumber number
@@ -78,11 +82,12 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
-:let g:NERDTreeWinSize=40
-map <C-n> :NERDTreeToggle<CR>
+" open ranger
+map <C-n> :Ranger<CR>
 
+:let g:NERDTreeWinSize=40
 " close NERDTree after a file is opened
-let g:NERDTreeQuitOnOpen=1
+ " let g:NERDTreeQuitOnOpen=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
