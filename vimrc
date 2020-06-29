@@ -25,6 +25,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dylanaraps/wal.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'Kody-Quintana/bspwm_border_color'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 " Plug 'valloric/youcompleteme'
 call plug#end()
 
@@ -39,6 +41,14 @@ if $DISPLAY != ""
     autocmd VimLeave * :silent !$HOME/.vim/bspwm_border_color/reset
     set title titlestring=VIM "So the listener script can tell its a VIM window
 endif
+
+" cursor
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i:blinkwait10
 
 " Disable scrollbars
 set guioptions-=r
@@ -80,11 +90,12 @@ autocmd filetype nerdtree syn match haskell_icon ## containedin=NERDTreeFile
 autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,html
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
-:let g:NERDTreeWinSize=40
-map <C-n> :NERDTreeToggle<CR>
+" open ranger
+map <C-n> :Ranger<CR>
 
+:let g:NERDTreeWinSize=40
 " close NERDTree after a file is opened
-let g:NERDTreeQuitOnOpen=1
+ " let g:NERDTreeQuitOnOpen=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
