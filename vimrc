@@ -33,6 +33,11 @@ call plug#end()
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
+" cursor
+set guicursor=
+highlight Cursor guifg=white guibg=black
+highlight iCursor guifg=white guibg=steelblue
+
 "bspwm color border:
 if $DISPLAY != ""
     autocmd FocusGained * :silent execute "!$HOME/.vim/bspwm_border_color/set " . shellescape(mode())
@@ -41,14 +46,6 @@ if $DISPLAY != ""
     autocmd VimLeave * :silent !$HOME/.vim/bspwm_border_color/reset
     set title titlestring=VIM "So the listener script can tell its a VIM window
 endif
-
-" cursor
-highlight Cursor guifg=white guibg=black
-highlight iCursor guifg=white guibg=steelblue
-set guicursor=n-v-c:block-Cursor
-set guicursor+=i:ver100-iCursor
-set guicursor+=n-v-c:blinkon0
-set guicursor+=i:blinkwait10
 
 " Disable scrollbars
 set guioptions-=r

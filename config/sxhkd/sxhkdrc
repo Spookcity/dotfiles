@@ -2,13 +2,21 @@
 super + Escape
   pkill -USR1 -x sxhkd
 
-# rofi
+# rofi apps
 super + space
   ~/.config/rofi/scripts/appsmenu.sh
 
-# rofi app select
-# control + space
+# rofi mpdmenu
+super + u
+    ~/.config/rofi/scripts/mpdmenu.sh
 
+# mpdmenu
+control + space
+    ~/scripts/mpdmenu1
+
+ # mpdmenu
+#control + space
+   mpdmenu :: -i -b -fn 'Hack:size=10' -nb '#1f1f1f' -nf '#A9D7F5' -sb '#535C5C' -sf '#8FCFB8' -l 25
 
 ############
 # apps
@@ -34,9 +42,9 @@ super + shift + t
 XF86Search
     sunflower
 
-# file manager (ranger)
+# Ranger FM
 control + shift + r
-    bspc desktop --focus ^3 && termite --geometry=1900x1020 -e ranger
+    termite --geometry=1900x1020 -e ranger
 
 # spotify
 control + shift + s
@@ -128,13 +136,13 @@ XF86AudioLowerVolume
     amixer set Master 5%-; notify-send "Volume Down: [$(amixer get Master | egrep -o "[0-9]+%")]"
 
 XF86AudioPlay
-   MPD_PORT=6300 mpc toggle
+   MPD_PORT=6600 mpc toggle
 
 XF86AudioNext
-   MPD_PORT=6300 mpc next
+   MPD_PORT=6600 mpc next
 
 XF86AudioPrev
-   MPD_PORT=6300 mpc prev
+   MPD_PORT=6600 mpc prev
 
 ###############
 # bspwm hotkeys
