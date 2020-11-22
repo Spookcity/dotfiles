@@ -52,7 +52,7 @@ scroll-down = bspwm-deskprevious
 
 tray-position = right
 tray-padding = 4
-;tray-background = ${colors.background}
+tray-background = ${colors.background}
 
 [module/temperature]
 type = internal/temperature
@@ -155,7 +155,7 @@ label-empty-padding = 1
 [module/mpd]
 type = internal/mpd
 host = localhost
-port = 6300
+port = 6600
 format-online =    <label-song>
 label-song = %artist% - %title%
 format-online-padding = 10
@@ -210,7 +210,7 @@ type = internal/date
 interval = 1
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = " %Y-%m-%d  |  "
 
 time = %l:%M %p
 time-alt = %l:%M %p

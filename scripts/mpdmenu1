@@ -2,8 +2,7 @@
 
 # Based on https://github.com/k00mi/mpdmenu
 # Taken from: https://github.com/glen3b/linux-dotfiles-public/blob/master/home.dotless/bin/mpdmenu
-# Only slightly edited for my needs
-
+# Only slighty edited for my taste
 MPC="mpc --quiet -p 6600"
 export BEMENU_BACKEND=curses
 DMENU_EXECUTABLE="${1:-dmenu}"
@@ -173,7 +172,7 @@ clear(){
 
 
 while true; do
-    action=$(DMENU "Play\nAdd Album\nAdd Artist\nAdd Song\nClear\nPause\nStop\nNext\nPrev" "Choose")
+    action=$(DMENU "Play\nAdd Album\nAdd Song\nAdd Artist\nClear\nPause\nStop\nNext\nPrev" "Choose")
     case $action in
         "Add Artist") add_from_artist;;
         "Add Album") add_from_album;;

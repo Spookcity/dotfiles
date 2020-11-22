@@ -48,7 +48,7 @@ control + shift + r
 
 # spotify
 control + shift + s
-    bspc desktop --focus ^6 && blockify
+    bspc desktop --focus ^6 && spotify
 
 # root file manager
 super + shift + r
@@ -71,7 +71,7 @@ control + shift + e
    subl3
 
 # git-cola
-control + shift + g
+XF86Mail
     bspc desktop --focus ^4 && git-cola
 
  # meld
@@ -83,8 +83,8 @@ super + shift + w
     bspc desktop --focus ^5 && termite --geometry=1200x800 -e weechat
 
 # tasks
-XF86Mail
-    termite --geometry=1200x900 -e htop
+# XF86Mail
+ #   termite --geometry=1200x900 -e htop
 
 # cleaner
 control + shift + b
@@ -105,7 +105,7 @@ XF86Calculator
 
 # show weather
 control + F2
-        termite --geometry=1200x1000 --hold -e ~/scripts/weather
+        kitty --hold curl -4 wttr.in
 
 # show help on sxhkd key bindings
 control + F1
@@ -116,7 +116,7 @@ super + control + 0
     ~/scripts/TogglePolybar.sh
 
 # edex-ui
-control + shift + u
+# control + shift + u
     ~/scripts/edex
 
 super + Return
