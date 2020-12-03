@@ -17,8 +17,6 @@ fixed-center = true
 
 underline-size = 2
 ;underline-color = #9b2323
-bar/top.border-bottom-size = 1
-bar/top.border-top-size = 1
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -49,8 +47,8 @@ wm-restack = bspwm
 
 ;override-redirect = true
 
-scroll-up = bspwm-desknext
-scroll-down = bspwm-deskprevious
+scroll-up = bspc desktop -f prev.local
+scroll-down = bspc desktop -f next.local
 
 tray-position = right
 tray-padding = 4
@@ -211,7 +209,7 @@ type = internal/date
 interval = 1
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = " %Y-%m-%d  |  "
 
 time = %l:%M %p
 time-alt = %l:%M %p

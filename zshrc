@@ -96,12 +96,12 @@ plugins=(
     z
     zsh-autosuggestions
     zsh-completions
-    git-open
     web-search
     zsh-syntax-highlighting
-    #history-substring-search
     fzf
     sublime
+    #history-substring-search
+    #git-open
     )
 
 autoload -Uz compinit

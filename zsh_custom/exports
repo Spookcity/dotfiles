@@ -5,6 +5,7 @@ export LC_ALL=C
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export USE_CCACHE=1
+export SKIP_ABI_CHECKS=true
 export CCACHE_DIR=/mnt/shit/.ccache
 export CCACHE_EXEC=/usr/bin/ccache
 export PATH=:~/bin:~/scripts:~/.node_modules/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/lib:/sbin:/bin:/usr/bin/core_perl:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
@@ -16,3 +17,6 @@ export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 export PATH=$PATH:/opt/android-sdk/ndk-bundle/build
 export PATH=$PATH:/opt/gradle/gradle-6.0.1/bin
 neofetch
+
+# export WITHOUT_CHECK_API=true
+# export _JAVA_OPTIONS=-XX:-UsePerfData

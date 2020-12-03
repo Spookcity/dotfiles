@@ -35,7 +35,6 @@ bspc rule -a oblogout border=off
 bspc rule -a Tor Browser desktop='web' follow=on
 bspc rule -a skypeforlinux desktop='chat' follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
-bspc rule -a Meld desktop='chat' follow=on
 
 bspc rule -a Gimp state=floating
 bspc rule -a /home/rick/scripts/pennywise state=floating border=off
@@ -63,7 +62,6 @@ xbanish &
 compton --config ~/.config/compton.conf -b &
 redshift &
 mpd &
-viper start &
 xcape -e 'Control_L=Escape' &
 xinput disable 'SynPS/2 Synaptics TouchPad' &
 $HOME/.vim/bspwm_border_color/listener
