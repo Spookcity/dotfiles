@@ -105,7 +105,7 @@ XF86Calculator
 
 # show weather
 control + F2
-        kitty --hold curl -4 wttr.in
+        kitty --hold curl -4 wttr.in/Eindhoven
 
 # show help on sxhkd key bindings
 control + F1
@@ -169,7 +169,11 @@ alt + {e,w}
 
 # quit bspwm normally
 control + shift + BackSpace
-  clearine
+  systemctl poweroff
+
+# reboot
+super + shift + BackSpace
+  systemctl reboot
 
 # close and kill
 control + q

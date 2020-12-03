@@ -1,6 +1,6 @@
 mpd_host = localhost
 
-mpd_port = 6300
+mpd_port = 6600
 
 mpd_music_dir = "/mnt/Shit/music"
 
