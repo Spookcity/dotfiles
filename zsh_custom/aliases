@@ -13,7 +13,7 @@ alias device='adb devices'
 
 # git stuffs
 alias g='git'
-alias go='git open'
+# alias go='git open'
 alias gs='git status'
 alias gaa='git add --all'
 alias gb='git branch -a'

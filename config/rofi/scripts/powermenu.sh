@@ -19,16 +19,5 @@ case $chosen in
     $reboot)
         systemctl reboot
         ;;
-    $lock)
-        light-locker-command -l
-        ;;
-    $suspend)
-        mpc -q pause
-        amixer set Master mute
-        systemctl suspend
-        ;;
-    $log_out)
-        i3-msg exit
-        ;;
 esac
 
