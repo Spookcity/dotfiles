@@ -1,13 +1,29 @@
-/**
- * This theme is intended for a 5 items wide menu on a 1920x1080 pixels resolution.
- * You may have to tweak values such as the window padding if you have a different resolution.
- */
-@import "shared/option-menu.rasi"
-#window {
-  padding: @option-5-window-padding;
-}
-#listview {
-  spacing: @option-5-listview-spacing;
-  lines: 5;
+configuration {
+    show-icons: true;
 }
 
+* {
+  background: rgba ( 40, 40, 40, 100 % );
+  text-color: rgba ( 251, 241, 199, 100% );
+  font:"Iosevka 50";
+}
+
+#window {
+  children: [ horibox ];
+  padding: 0;
+  width: 45%;
+  height: 100px;
+  border-radius: 10px;
+}
+#horibox {
+  children: [ listview ];
+}
+#listview {
+  layout: horizontal;
+  spacing: 5px;
+  lines: 5;
+}
+#element.selected {
+  background-color: rgba ( 204, 36, 29, 100% );
+  text-color: rgba ( 189, 174, 147, 100% );
+}

@@ -52,7 +52,7 @@ scroll-down = bspc desktop -f next.local
 
 tray-position = right
 tray-padding = 4
-tray-background = ${colors.background}
+;tray-background = ${colors.background}
 
 [module/temperature]
 type = internal/temperature

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MUSIC_DIR=/mnt/Ricks_Stuff/Music
+MUSIC_DIR=/mnt/Shit/music
 
 COVER=/tmp/cover.jpg
 
@@ -10,8 +10,8 @@ function reset_background
 }
 
 {
-    album="$(mpc --format %album% current -p 6300)"
-    file="$(mpc --format %file% current -p 6300)"
+    album="$(mpc --format %album% current -p 6600)"
+    file="$(mpc --format %file% current -p 6600)"
     album_dir="${file%/*}"
     [[ -z "$album_dir" ]] && exit 1
     album_dir="$MUSIC_DIR/$album_dir"

@@ -13,7 +13,6 @@ alias device='adb devices'
 
 # git stuffs
 alias g='git'
-alias go='git open'
 alias gs='git status'
 alias gaa='git add --all'
 alias gb='git branch -a'
@@ -34,6 +33,7 @@ alias grh='git reset --hard'
 alias gra='git remote add'
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias lg='lazygit'
+# alias go='git open'
 
 alias tis='tig status'
 alias til='tig log'

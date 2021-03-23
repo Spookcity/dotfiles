@@ -1,4 +1,4 @@
-mpd_host = localhost
+ ncmpcppmpd_host = localhost
 
 mpd_port = 6600
 
@@ -17,6 +17,7 @@ browser_sort_format = "{%a - }{%t}|{%f} {(%l)}"
 alternative_header_first_line_format = "{$b$1%t$9$/b}"
 alternative_header_second_line_format ="$0{%a} $b$8-$9$/b {%b}$9"
 song_columns_list_format = "$L(9)[yellow]{l} (30)[cyan]{a} (30)[green]{b} (30)[red]{t}"
+# song_list_format = "{$3[%l]$9 }{$7%a$9 }{%t}|{%f} {$4%y$9 }$R{$4%n$9 }{$7%b$9}"
 
 default_find_mode = "wrapped" (wrapped/normal)
 default_tag_editor_pattern = "%n - %t"
@@ -36,8 +37,6 @@ now_playing_suffix = "$/b"
 colors_enabled = "yes"
 state_line_color = "23"
 main_window_color = "11"
-active_column_color = "245"
-main_window_highlight_color = "11"
 
 empty_tag_color = "11"
 window_border_color = "yellow"
@@ -45,7 +44,6 @@ window_border_color = "yellow"
 
 # Progress Bar ..
 progressbar_look = "▃▃▃"
-progressbar_boldness = "no"
 
 # Misc ..
 display_bitrate = "yes"
@@ -53,24 +51,24 @@ autocenter_mode = "yes"
 centered_cursor = "yes"
 titles_visibility = "no"
 statusbar_visibility = "yes"
-empty_tag_marker=" -- ‼ -- "
+empty_tag_marker= "--!!--"
 mouse_support = "yes"
 mouse_list_scroll_whole_page = "no"
 header_visibility = "yes"
 display_remaining_time = "no"
 ask_before_clearing_playlists = "no"
 discard_colors_if_item_is_selected = "yes"
-song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+song_window_title_format = "{%a > }{%t} {%f}"
 
 #uncomment both statement's below if you want to display the albumart
 #execute_on_song_change="~/.ncmpcpp/albumart"
 #song_list_format = "                       $2%t $R$5%a "
 
 # Visualizer ..
-visualizer_in_stereo = "yes"
+visualizer_in_stereo = "no"
 visualizer_sync_interval = "30"
 visualizer_output_name = "Pipe"
 visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_type = "wave" (spectrum/wave)
+visualizer_type = spectrum
 visualizer_color = "green"
-visualizer_look = "∙▋"
+visualizer_look = "█┇"
