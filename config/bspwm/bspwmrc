@@ -57,7 +57,7 @@ bspc rule -a Screenkey manage=off
 # startups
 termite --geometry=1100x700+408+43 &
 polybar top &
-xscreensaver -no-splash &
+# xscreensaver -no-splash &
 xbanish &
 ~/.fehbg &
 #paramano &
