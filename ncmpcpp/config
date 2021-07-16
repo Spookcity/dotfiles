@@ -2,7 +2,7 @@ mpd_host = localhost
 
 mpd_port = 6300
 
-mpd_music_dir = "/mnt/Ricks_Stuff/Music"
+mpd_music_dir = "/mnt/shit/music"
 
 mpd_crossfade_time = "5"
 startup_screen = media_library
