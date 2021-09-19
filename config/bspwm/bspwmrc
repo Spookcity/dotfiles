@@ -58,9 +58,9 @@ termite --geometry=1100x700+408+43 &
 polybar top &
 xbanish &
 ~/.fehbg &
-#paramano &
 compton --config ~/.config/compton.conf -b &
 redshift &
+cadence --minimized &
 mpd &
 xcape -e 'Control_L=Escape' &
 xinput disable 'SynPS/2 Synaptics TouchPad' &

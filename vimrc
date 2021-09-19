@@ -2,36 +2,12 @@ set nocompatible
 
 execute pathogen#infect()
 
-" Plugins
-call plug#begin('~/.vim/bundle')
-Plug 'junegunn/vim-easy-align'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-github-dashboard'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-syntastic/syntastic'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-gitgutter'
-Plug 'tmux-plugins/vim-tmux'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'dylanaraps/wal.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'Kody-Quintana/bspwm_border_color'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
-" Plug 'valloric/youcompleteme'
-call plug#end()
-
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+set guicursor=
+highlight Cursor guifg=white guibg=white
+highlight iCursor guifg=white guibg=white
 
 "bspwm color border:
 if $DISPLAY != ""
