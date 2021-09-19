@@ -1,0 +1,65 @@
+<TRACK
+  NAME ""
+  PEAKCOL 16576
+  BEAT -1
+  AUTOMODE 0
+  VOLPAN 1 0 -1 -1 1
+  MUTESOLO 0 0 0
+  IPHASE 0
+  PLAYOFFS 0 1
+  ISBUS 0 0
+  BUSCOMP 0 0 0 0 0
+  SHOWINMIX 1 0.6667 0.5 1 0.5 0 -1 0
+  FREEMODE 0
+  REC 1 0 1 0 0 0 0
+  VU 2
+  TRACKHEIGHT 0 0 0 0 -1 0
+  INQ 0 0 0 0.5 100 0 0 100
+  NCHAN 2
+  FX 1
+  TRACKID {8654C923-D52A-6423-4A64-D8A5FE0C2D08}
+  PERF 0
+  UNDO_HAS_TRACKENV
+  MIDIOUT -1
+  MAINSEND 1 0
+  <FXCHAIN
+    WNDRECT 38 91 809 425
+    SHOW 0
+    LASTSEL 0
+    DOCKED 0
+    BYPASS 0 0 0
+    <LV2 "LV2: Carla-Rack" http://kxstudio.sf.net/carla/plugins/carlarack ""
+      CFG 0 0 0 ""
+      MIDI lv2_events_in 0 0 
+      MIDI lv2_events_out 1 0 
+      XWIDGET 1
+      <STATE
+        <S http://kxstudio.sf.net/ns/carla/chunk 3
+           |<?xml version='1.0' encoding='UTF-8'?>
+          n|<!DOCTYPE CARLA-PROJECT>
+          n|<CARLA-PROJECT VERSION='2.4'>
+          n| <EngineSettings>
+          n|  <ForceStereo>false</ForceStereo>
+          n|  <PreferPluginBridges>false</PreferPluginBridges>
+          n|  <PreferUiBridges>true</PreferUiBridges>
+          n|  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+          n|  <MaxParameters>200</MaxParameters>
+          n|  <UIBridgesTimeout>4000</UIBridgesTimeout>
+          n|  <LADSPA_PATH>/home/rick/.ladspa:/home/rick/.wine/drive_c/Program Files/vst:/usr/lib/ladspa:/usr/local/lib/ladspa</LADSPA_PATH>
+          n|  <DSSI_PATH>/home/rick/.dssi:/usr/lib/dssi:/usr/local/lib/dssi</DSSI_PATH>
+          n|  <LV2_PATH>/home/rick/.lv2:/usr/lib/lv2:/usr/local/lib/lv2</LV2_PATH>
+          n|  <VST2_PATH>/home/rick/.vst:/home/rick/.wine/drive_c/Program Files (x86)/VstPlugins:/home/rick/.wine/drive_c/Program Files/VstPlugins:/usr/lib/lxvst:/usr/lib/vst:/usr/local/lib/lxvst:/usr/local/lib/vst/home/rick/.lxvst</VST2_PATH>
+          n|  <VST3_PATH>/home/rick/.vst3:/home/rick/.wine/drive_c/Program Files (x86)/Common Files/VST3:/home/rick/.wine/drive_c/Program Files/Common Files/VST3:/usr/lib/vst3:/usr/local/lib/vst3</VST3_PATH>
+          n|  <SF2_PATH>/home/rick/.sounds/sf2:/usr/share/soundfonts:/usr/share/sounds/sf2</SF2_PATH>
+          n|  <SFZ_PATH>/home/rick/.sounds/sfz:/usr/share/sounds/sfz</SFZ_PATH>
+          n| </EngineSettings>
+          n|</CARLA-PROJECT>
+          n|
+        >
+      >
+    >
+    FLOATPOS 0 0 0 0
+    FXID {7C4B52E2-A900-D68E-CA2E-CFFCA302397F}
+    WAK 0 0
+  >
+>

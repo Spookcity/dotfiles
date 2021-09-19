@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Katana FX FloorBoard
+Exec=/home/rick/.local/share/applications/Katana-MK2-FxFloorBoard/GT-ProFxFloorBoard
+Type=Application
+StartupNotify=true
+Path=/home/rick/.local/share/applications/Katana-MK2-FxFloorBoard
+Terminal=False

@@ -63,6 +63,7 @@ xbanish &
 #paramano &
 compton --config ~/.config/compton.conf -b &
 redshift &
+cadence --minimized &
 [[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble &
 mpd &
 xcape -e 'Control_L=Escape' &

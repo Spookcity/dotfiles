@@ -1,0 +1,27 @@
+use_pngs 1
+tcp_vupeakwidth 1
+mcp_vupeakheight 1
+mcp_mastervupeakheight 1 
+tcp_showborders 0
+mcp_altmeterpos 1
+mcp_showborders 0
+transport_showborders 1
+use_overlays 1
+tcp_volbg.png:
+tcp_volthumb.png:
+tcp_panbg.png:
+tcp_panthumb.png: 
+mcp_volbg.png: 
+mcp_volthumb.png:
+mcp_panbg.png:
+mcp_panthumb.png:
+
+;Panel backgrounds (you can use bmp or png, all stretched to fit -- and alpha channel is ignored)
+transport_bg.png:
+tcp_bg.png:
+tcp_bgsel.png:
+mcp_bg.png:
+mcp_bgsel.png: 
+mcp_mainbg.png:
+mcp_mainbgsel.png:
+toolbar_bg.png:

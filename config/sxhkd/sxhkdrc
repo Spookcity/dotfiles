@@ -7,7 +7,7 @@ super + space
   ~/.config/rofi/scripts/appsmenu.sh
 
 # rofi mpdmenu
-super + u
+# super + u
     ~/.config/rofi/scripts/mpdmenu.sh
 
 # mpdmenu
@@ -26,6 +26,10 @@ control + space
 control + Return
     termite
 
+# tuxguitar
+control + shift + t
+  bspc desktop --focus ^5 && env JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar
+
 # lock the screen
 XF86ScreenSaver
     i3lock-fancy
@@ -34,7 +38,7 @@ XF86ScreenSaver
 XF86HomePage
      bspc desktop --focus ^2 && firefox-beta
 
-# web
+# tor-browser
 super + shift + t
      bspc desktop --focus ^2 && /usr/bin/tor-browser
 
@@ -59,8 +63,8 @@ XF86Tools
     bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
 # reaper
-#super + shift + m
-  #  bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 #`STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
+super + shift + m
+    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
 
 # fl studio
 #control + shift + f
@@ -68,7 +72,7 @@ XF86Tools
 
 # editor
 control + shift + e
-   subl3
+   vscodium
 
 # git-cola
 XF86Mail
@@ -114,10 +118,6 @@ control + F1
 # TogglePolybar
 super + control + 0
     ~/scripts/TogglePolybar.sh
-
-# edex-ui
-# control + shift + u
-    ~/scripts/edex
 
 super + Return
   termite --geometry=1900x1040+8-5 -e ~/scripts/4pane_mux.sh
