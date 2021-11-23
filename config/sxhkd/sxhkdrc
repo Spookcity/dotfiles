@@ -26,9 +26,9 @@ control + space
 control + Return
     termite
 
-# tuxguitar
+# tasks
 control + shift + t
-  bspc desktop --focus ^5 && env JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar
+  termite --geometry=1600x900 -e htop
 
 # lock the screen
 XF86ScreenSaver
@@ -44,7 +44,7 @@ super + shift + t
 
 # file manager
 XF86Search
-    sunflower
+    bspc desktop --focus ^3 && sunflower
 
 # Ranger FM
 control + shift + r
@@ -56,7 +56,7 @@ control + shift + s
 
 # root file manager
 super + shift + r
-    gksudo sunflower
+    bspc desktop --focus ^3 && gksudo sunflower
 
 # music
 XF86Tools
@@ -66,13 +66,10 @@ XF86Tools
 super + shift + m
     bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
 
-# fl studio
-#control + shift + f
-    bspc desktop --focus ^6 && env WINEPREFIX="/home/rick/.wine" STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 /usr/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/rick/.wine/dosdevices/c:/users/rick/Start\\ Menu/Programs/Image-Line/FL\\ Studio\\ 12\\ \\(64bit\\).lnk
 
 # editor
 control + shift + e
-   vscodium
+   subl
 
 # git-cola
 XF86Mail

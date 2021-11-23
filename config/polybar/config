@@ -28,20 +28,21 @@ label-line-color = #f00
 border-size = 0
 border-color = #00000000
 
-padding-left = 1
+;padding-left = 2
 padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Comfortaa-Regular:pixelsize=11"
+;font-0 = "Comfortaa-Regular:pixelsize=11"
+font-0 = "Wuncon Siji:pixelsize=11;1"
 font-1 = "Iosevka Nerd Font:pixelsize=10"
-;font-2 = "Wuncon Siji:pixelsize=10;1"
-font-2 = "Weather Icons:size=12;1"
+font-2 = "Iosevka Nerd Font:pixelsize=14"
+;font-2 = "Weather Icons:size=12;1"
 
-modules-left = bspwm weather networkspeedup networkspeeddown
+modules-left = bspwm networkspeedup networkspeeddown mpd
 modules-center =  xwindow
-modules-right =   filesystem filesystem-home filesystem-shit memory cpu temperature volume date
+modules-right =    filesystem filesystem-home filesystem-shit memory cpu temperature volume date
 
 wm-restack = bspwm
 
@@ -92,7 +93,7 @@ format-connected-prefix-foreground = #8FCFB8
 type = internal/xwindow
 format-foreground = #E1C337
 format-padding = 1
-label = %title:0:49:...%
+label = %title:0:69:...%
 label-maxlen = 65
 
 [module/cpu]
@@ -102,7 +103,7 @@ interval = 1.5
 format-prefix = "   "
 format-prefix-foreground = #75BA95
 format-padding = 1
-format = <label> <ramp-coreload>
+format = <label> %{T2} <ramp-coreload>
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-foreground = #ECC730
@@ -132,11 +133,11 @@ label = %percentage_used%%
 
 [module/bspwm]
 type = internal/bspwm
-format = <label-state> <label-mode>
+format = %{T3} <label-state> <label-mode>
 
 
 label-focused = %name%
-label-focused-background = #68AE93
+;label-focused-background = #68AE93
 label-focused-foreground= #FFE040
 label-focused-padding = 1
 
@@ -156,12 +157,12 @@ label-empty-padding = 1
 type = internal/mpd
 host = localhost
 port = 6600
-format-online =    <label-song>
+format-online = ﱘ   <label-song>
 label-song = %artist% - %title%
-format-online-padding = 10
-;format-online-foreground = #44ffffff
-label-offline = Off
-format-offline-padding = 10
+format-online-padding =3
+format-online-foreground = #22973E
+label-offline = None
+format-offline-padding = 3
 ;format-offline-foreground = #00ff0000
 
 icon-play = ⏵
@@ -170,7 +171,7 @@ icon-stop = ⏹
 icon-prev = ⏮
 icon-next = ⏭
 
-label-song-maxlen = 25
+label-song-maxlen = 45
 label-song-ellipsis = true
 format-playing-padding = 2
 ;format-playing-background = ${colors.highlight}
