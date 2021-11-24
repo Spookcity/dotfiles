@@ -25,7 +25,7 @@ control + Return
 
 # tuxguitar
 control + shift + t
-    env JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar
+    bspc desktop --focus ^5 &&  env JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar
 
 # lock the screen
 XF86ScreenSaver
@@ -41,7 +41,7 @@ super + shift + t
 
 # file manager
 control + shift + f
-    sunflower
+   bspc desktop --focus ^3 && /home/rick/.local/share/applications/Sunflower-0.3-61/Sunflower.py
 
 # file manager (ranger)
 control + shift + r
@@ -53,7 +53,7 @@ control + shift + s
 
 # root file manager
 super + shift + r
-    gksu sunflower
+    bspc desktop --focus ^3 && gksu /home/rick/.local/share/applications/Sunflower-0.3-61/Sunflower.py
 
 # music
 control + shift + m

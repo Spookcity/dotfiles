@@ -60,7 +60,7 @@ header_visibility = "yes"
 display_remaining_time = "no"
 ask_before_clearing_playlists = "no"
 discard_colors_if_item_is_selected = "yes"
-song_window_title_format = "MPD: {%a > }{%t}{ [%b{ Disc %d}]}|{%f}"
+song_window_title_format = "{%y}-{%a -> }{%t}"
 
 #uncomment both statement's below if you want to display the albumart
 #execute_on_song_change="~/.ncmpcpp/albumart"

@@ -9,7 +9,7 @@ error = #2E534C
 [bar/top]
 monitor = LVDS-1
 width = 100%
-height = 24
+height = 25
 ;offset-x = 1%
 ;offset-y = 4
 radius = 0.0
@@ -23,25 +23,23 @@ foreground = ${colors.foreground}
 line-size = 2
 label-line-color = #f00
 
-border-size = 0
+border-size = 2
 border-color = #00000000
 
-padding-left = 2
+;padding-left = 2
 padding-right = 1
 
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Comfortaa-Regular:pixelsize=11"
+;font-0 = "Comfortaa-Regular:pixelsize=11"
+font-0 = "Wuncon Siji:pixelsize=11;1"
 font-1 = "Iosevka Nerd Font:pixelsize=10"
-font-2 = unifont:fontformat=truetype:size=9:antialias=false;0
-;font-3 = Wuncon Siji:pixelsize=10;1
-;font-4 = Roboto:style=Regular:pixelsize=10s;1
-font-3 = Weather Icons:size=12;1
+font-2 = "Iosevka Nerd Font:pixelsize=14"
 
-modules-left = bspwm  weather wlan networkspeedup networkspeeddown
+modules-left = bspwm networkspeedup networkspeeddown mpd
 modules-center =  xwindow
-modules-right =   filesystem-home filesystem filesystem-shit memory cpu temperature volume date battery
+modules-right =   filesystem-home filesystem filesystem-shit memory cpu temperature volume date
 
 wm-restack = bspwm
 
@@ -101,7 +99,7 @@ interval = 1.5
 format-prefix = " "
 format-prefix-foreground = #AC9B4D
 format-padding = 1
-format = <label> <ramp-coreload>
+format = <label> %{T2} <ramp-coreload>
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-foreground = #f1f1f1
@@ -131,7 +129,7 @@ label = %percentage_used%%
 
 [module/bspwm]
 type = internal/bspwm
-format = <label-state> <label-mode>
+format = %{T3} <label-state> <label-mode>
 
 
 label-focused = %name%
@@ -155,12 +153,12 @@ label-empty-padding = 1
 type = internal/mpd
 host = localhost
 port = 6300
-format-online =    <label-song>
-label-song = %artist% - %title%
-format-online-padding = 10
-;format-online-foreground = #44ffffff
-label-offline = Off
-format-offline-padding = 10
+format-online = ﱘ   <label-song>
+label-song = %title%
+format-online-padding =3
+format-online-foreground = #22973E
+label-offline = None
+format-offline-padding = 3
 ;format-offline-foreground = #00ff0000
 
 icon-play = ⏵
@@ -169,7 +167,7 @@ icon-stop = ⏹
 icon-prev = ⏮
 icon-next = ⏭
 
-label-song-maxlen = 25
+label-song-maxlen = 45
 label-song-ellipsis = true
 format-playing-padding = 2
 ;format-playing-background = ${colors.highlight}
