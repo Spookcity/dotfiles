@@ -39,7 +39,7 @@ font-2 = "Iosevka Nerd Font:pixelsize=14"
 
 modules-left = bspwm networkspeedup networkspeeddown mpd
 modules-center =  xwindow
-modules-right =   filesystem-home filesystem filesystem-shit memory cpu temperature volume date
+modules-right =    filesystem filesystem-home filesystem-shit memory cpu temperature volume date
 
 wm-restack = bspwm
 
@@ -89,8 +89,8 @@ format-connected-prefix-foreground = #AC9B4D
 type = internal/xwindow
 format-foreground = #AC9B4D
 format-padding = 1
-label = %title:0:49:...%
-label-maxlen = 40
+label = %title:0:69:...%
+label-maxlen = 60
 
 [module/cpu]
 type = internal/cpu
@@ -102,22 +102,22 @@ format-padding = 1
 format = <label> %{T2} <ramp-coreload>
 
 ramp-coreload-0 = ▁
-ramp-coreload-0-foreground = #f1f1f1
+ramp-coreload-0-foreground = #AC9B4D
 ramp-coreload-1 = ▂
-ramp-coreload-1-foreground = #f1f1f1
+ramp-coreload-1-foreground = #AC9B4D
 ramp-coreload-2 = ▃
-ramp-coreload-2-foreground = #f1f1f1
+ramp-coreload-2-foreground = #AC9B4D
 ramp-coreload-3 = ▄
-ramp-coreload-3-foreground = #f1f1f1
+ramp-coreload-3-foreground = #AC9B4D
 ramp-coreload-4 = ▅
-ramp-coreload-4-foreground = #f1f1f1
+ramp-coreload-4-foreground = #AC9B4D
 ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = #f1f1f1
+ramp-coreload-5-foreground = #AC9B4D
 ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = #f1f1f1
+ramp-coreload-6-foreground = #AC9B4D
 ramp-coreload-7 = █
-ramp-coreload-7-foreground = #f1f1f1
-ramp-foreground = #f1f1f1
+ramp-coreload-7-foreground = #AC9B4D
+ramp-foreground = #AC9B4D
 
 [module/memory]
 type = internal/memory
@@ -133,16 +133,16 @@ format = %{T3} <label-state> <label-mode>
 
 
 label-focused = %name%
-label-focused-background = ${colors.highlight}
-;label-focused-foreground= ${colors.inactive}
+;label-focused-background = #68AE93
+label-focused-foreground= #FFE040
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = #AC9B4D
+label-occupied-foreground = #49BEE2
 label-occupied-padding = 1
 
 label-urgent = %name%!
-label-urgent-background = #AC3C2D
+label-urgent-background = #AC9B4D
 label-urgent-padding = 1
 
 label-empty = %name%
@@ -156,7 +156,7 @@ port = 6300
 format-online = ﱘ   <label-song>
 label-song = %title%
 format-online-padding =3
-format-online-foreground = #22973E
+format-online-foreground = #A52E3E
 label-offline = None
 format-offline-padding = 3
 ;format-offline-foreground = #00ff0000
@@ -282,7 +282,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-label-mounted = %{F#AC9B4D} %{F}%free%
+label-mounted = %{F#AC9B4D} %{F}%free%
 format-mounted = <label-mounted>
 spacing = 2
 ;label-indicator-padding = 2
@@ -300,7 +300,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /mnt/shit
-label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
+label-mounted = %{F#AC9B4D} %{F-}%{F}%free%
 [settings]
 screenchange-reload = true
 
