@@ -337,18 +337,18 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>chromium</name>
+          <name>firefox</name>
         </startupnotify>
-        <command>chromium</command>
+        <command>firefox-beta</command>
       </action>
     </keybind>
-    <keybind key="W-r">
+    <keybind key="control-t">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>ranger</name>
+          <name>termite</name>
         </startupnotify>
-        <command>termite --geometry=1200x800 -e ranger</command>
+        <command>termite</command>
       </action>
     </keybind>
     <keybind key="W-S-w">
@@ -481,13 +481,13 @@
       </action>
     </keybind>
     <!-- Keybindings for running applications -->
-    <keybind key="W-f">
+    <keybind key="control-shift-f">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Sunflower</name>
+          <name>spacefm</name>
         </startupnotify>
-        <command>sunflower</command>
+        <command>spacefm</command>
       </action>
     </keybind>
     <keybind key="W-S-f">

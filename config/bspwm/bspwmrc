@@ -34,7 +34,6 @@ bspc rule -a mplayer state=floating border=off
 bspc rule -a oblogout border=off
 bspc rule -a Tor Browser desktop='' follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
-
 bspc rule -a Gimp state=floating
 bspc rule -a /home/rick/scripts/pennywise state=floating border=off
 bspc rule -a Lxappearance state=floating
@@ -57,6 +56,7 @@ termite --geometry=1100x700+408+43 &
 polybar top &
 xbanish &
 ~/.fehbg &
+# telegram-desktop &
 compton --config ~/.config/compton.conf -b &
 redshift &
 cadence --minimized &
@@ -66,4 +66,4 @@ xinput disable 'SynPS/2 Synaptics TouchPad' &
 $HOME/.vim/bspwm_border_color/listener
 # /usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
 
-bspc config external_rules_command ~/.config/bspwm/external-rules.sh
+# bspc config external_rules_command ~/.config/bspwm/external-rules.sh

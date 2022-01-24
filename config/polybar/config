@@ -23,7 +23,7 @@ foreground = ${colors.foreground}
 line-size = 2
 label-line-color = #f00
 
-border-size = 2
+;border-size = 2
 border-color = #00000000
 
 ;padding-left = 2
@@ -205,7 +205,7 @@ label-connected = %local_ip%
 [module/date]
 type = internal/date
 interval = 1
-
+format-foreground = #AC9B4D
 date =
 date-alt = " %Y-%m-%d  |  "
 
