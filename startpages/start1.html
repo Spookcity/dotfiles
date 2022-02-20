@@ -8,15 +8,19 @@
 
   var config = {
     categories: [
-      { name: "Media & Social", commands: [
+      { name: "Media,Social,Vid", commands: [
         { key: 'i', name: 'GMail', url: 'https://mail.google.com/mail/u/0/#inbox', search: '/search/' },
         { key: 'hm', name: 'Hotmail', url: 'https://outlook.live.com/mail/inbox', search: '/search/' },
+        { key: 'nf', name: 'Netflix', url: 'https://www.netflix.com/browse', search: '/search/' },
         { key: 'fm', name: 'LastFM', url: 'http://www.last.fm/home', search: '/search/' },
         { key: 'd', name: 'Drive', url: 'https://drive.google.com/drive', search: '/search?q=' },
+        { key: 'od', name: 'OneDrive', url: 'https://onedrive.live.com/?id=root&cid=73233A6891D54B6C', search: '/search?q=' },
+        { key: 'gl', name: 'GitLab', url: 'https://gitlab.com/', search: '/search?q=' },
         { key: 'g', name: 'GitHub', url: 'https://github.com', search: '/search?q=' },
         { key: 'lg', name: 'LineageOS Gerrit', url: 'https://review.lineageos.org/q/status:open', search: '/search?q=' },
         { key: 'gt', name: 'GitHub-Trending', url: 'https://github.com/trending', search: '/search?q=' },
         { key: 'yt', name: 'YouTube', url: 'https://www.youtube.com', search: '/results?search_query=' },
+        { key: 't', name: 'Twitch', url: 'https://www.twitch.tv/', search: '/search?q=' },
       ] },
       { name: "News", commands: [
         { key: 'red', name: 'Reddit', url: 'https://www.reddit.com', search: '/search?q=' },
@@ -26,7 +30,6 @@
       { name: "Forums", commands: [
         { key: 'x', name: 'XDA Forums', url: 'http://forum.xda-developers.com/', search: '/search/' },
         { key: 'r', name: 'Reaper Forum', url: 'http://forum.cockos.com/forumdisplay.php?f=20', search: '/search?q=' },
-        { key: 't', name: 'Techist Forum', url: 'http://www.techist.com/forums/', search: '/search?page_search_query=' },
         { key: 'm', name: 'Linux Musicians', url: 'https://linuxmusicians.com/', search: '/search?q=' },
         { key: 'v', name: 'VDrum Forum', url: 'https://www.vdrums.com/search?searchJSON=%7B%22date%22%3A%7B%22from%22%3A%22lastDay%22%7D%2C%22view%22%3A%22topic%22%2C%22sort%22%3A%7B%22lastcontent%22%3A%22desc%22%7D%2C%22exclude_type%22%3A%5B%22vBForum_PrivateMessage%22%5D%7D', search: '/search?q=' },
         { key: 'gab', name: 'GuitarAmpBoard', url: 'https://www.guitargearforum.com/forum/viewforum.php?f=5&sid=25bbe13db87d0ad4fdf8e2769d48e999 ' },
@@ -36,16 +39,19 @@
         { key: 'dev', name: 'Android Devs', url: 'https://developer.android.com/index.html' },
         { key: 'a', name: 'ArchWiki', url: 'https://wiki.archlinux.org/', search: '/search?q=' },
         { key: 'aur', name: 'AUR', url: 'https://aur.archlinux.org/packages/', search: '/search?q=' },
+        { key: 'evo', name: 'evo-git', url: 'https://github.com/Evolution-X', search: '/search?q=' },
+        { key: 'kang', name: 'kang-git', url: 'https://github.com/KangOS-SnowCone', search: '/search?q=' },
       ] },
       { name: "Music Stuff", commands: [
       { key: 'ugt', name: 'Ultimate Guitar', url: 'https://www.ultimate-guitar.com/', search: '/search/top/?q=' },
-      { key: 'od', name: 'Online Drummer', url: 'http://www.onlinedrummer.com/', search: '/search/top/?q=' },
+      { key: 'drum', name: 'Online Drummer', url: 'http://www.onlinedrummer.com/', search: '/search/top/?q=' },
       { key: 'lm', name: 'Linux Musicians', url: 'https://linuxmusicians.com/', search: '/search/top/?q=' },
       { key: 'c', name: 'Chordie', url: 'https://www.chordie.com/', search: '/search/top/?q=' },
+      { key: 'disc', name: 'Discogs', url: 'https://www.discogs.com', search: '/search/top/?q=' },
       ] },
       { name: "Torrents & DL", commands: [
-        { key: 'pb', name: 'PirateBay', url: 'https://piratebayproxy.info/', search: '/?query=' },
-        { key: 'e', name: 'EZTV', url: 'https://eztv.ag/', search: '/search?q=' },
+        { key: 'pb', name: 'PirateBay', url: 'https://thepirate-bay.org/home133', search: '/?query=' },
+        { key: 'ez', name: 'EZTV', url: 'https://eztv.ag/', search: '/search?q=' },
         { key: 'st', name: 'Sports Torrents', url: 'https://sportscult.org/index.php?page=torrents', search: '/search?q=' },
         { key: 'az', name: 'AndroidZone', url: 'http://android-zone.ws/', search: '/search?q=' },
       ] },
@@ -54,7 +60,8 @@
         { key: 'mp', name: 'Marktplaats', url: 'http://www.marktplaats.nl/', search: '/search?q=' },
         { key: 'rj', name: 'RetroJunk', url: 'http://www.retrojunk.com/', search: '/search?q=' },
         { key: 'wm', name: 'POWM', url: 'http://www.peopleofwalmart.com/', search: '/search?q=' },
-        { key: 'p', name: 'Plex', url: 'https://app.plex.tv/desktop#', search: '/search?q=' },
+        { key: 'sf', name: 'Sourceforge', url: 'https://sourceforge.net/', search: '/search/' },
+        { key: 'e', name: 'Emby', url: 'http://app.emby.media/#!/home.html', search: '/search?q=' },
         { key: 'stl', name: 'STLBlues', url: 'https://www.nhl.com/blues/', search: '/search?q=' },
         { key: 'w', name: 'Wikipedia', url: 'https://en.wikipedia.org', search: '/wiki/' },
         { key: 'ng', name: 'Netgear Router', url: 'http://192.168.1.1/cgi-bin/index.html' },
@@ -139,6 +146,7 @@
     margin-bottom: 20px;
     font-size: 5rem;
     letter-spacing: 6px;
+    color: #A1A100;
   }
 
   input,
@@ -147,7 +155,7 @@
     width: 100%;
     margin: 0;
     border: 0;
-    background: #1A1A1A;
+    background: #324703;
     outline: 0;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -207,7 +215,7 @@
 
   .overlay[data-toggled='true'] {
     visibility: visible;
-    background-image: url("/home/rick/.walls/forest.png"); no-repeat center center fixed;
+    background-image: url("/home/rick/.walls/255425.jpg"); no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -287,7 +295,7 @@
       align-items: center;
     }
     body {
-   background-image: url("/home/rick/.walls/forest.png"); no-repeat center center fixed;
+   background-image: url("/home/rick/.walls/255425.jpg"); no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

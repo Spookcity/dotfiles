@@ -1,15 +1,6 @@
 reporting: "off"
-os:
-  openCommand: 'sh -c "xdg-open {{filename}} >/dev/null"'
-gui:
-  scrollHeight: 2
-  theme:
-    activeBorderColor:
-      - red
-      - magenta
-    inactiveBorderColor:
-      - blue
-    optionsTextColor:
-      - red
-  commitLength:
-    show: true
+startuppopupversion: 1
+git:
+  paging:
+    colorArg: always
+    pager: diff-so-fancy

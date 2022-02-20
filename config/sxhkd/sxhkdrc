@@ -30,17 +30,13 @@ control + Return
 control + shift + t
   termite --geometry=1600x900 -e htop
 
-# lock the screen
-XF86ScreenSaver
-    i3lock-fancy
-
 # web
 XF86HomePage
      bspc desktop --focus ^2 && firefox-beta
 
-# tor-browser
+# tux-guitar
 super + shift + t
-     bspc desktop --focus ^2 && /usr/bin/tor-browser
+     JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar
 
 # file manager
 XF86Search
@@ -62,10 +58,9 @@ super + shift + r
 XF86Tools
     bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
-# reaper
+# Music script
 super + shift + m
-    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
-
+    bspc desktop --focus ^6 && /home/rick/scripts/music-start
 
 # editor
 control + shift + e
@@ -78,10 +73,6 @@ XF86Mail
  # meld
 control + shift + m
     meld
-
-# chat
-super + shift + w
-    bspc desktop --focus ^5 && termite --geometry=1200x800 -e weechat
 
 # tasks
 # XF86Mail
@@ -99,6 +90,9 @@ control + alt + k
 XF86Calculator
     emulationstation
 
+# temp guitar aerobics
+super + shift + g
+  zat "/mnt/Shit/books/calibre_library/Troy Nelson/Guitar Aerobics (924)/Guitar Aerobics - Troy Nelson.pdf"
 
 ###########
 #scripts
@@ -225,7 +219,7 @@ control + bracket{left,right}
 #  bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-control + {o,i}
+control + {i}
   bspc wm -h off; \
   bspc node {older,newer} -f; \
   bspc wm -h on

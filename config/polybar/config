@@ -53,7 +53,7 @@ scroll-down = bspc desktop -f next.local
 
 tray-position = right
 tray-padding = 4
-;tray-background = ${colors.background}
+tray-background = #131C27
 
 [module/temperature]
 type = internal/temperature
@@ -94,7 +94,7 @@ type = internal/xwindow
 format-foreground = #E1C337
 format-padding = 1
 label = %title:0:69:...%
-label-maxlen = 65
+label-maxlen = 60
 
 [module/cpu]
 type = internal/cpu
@@ -157,11 +157,11 @@ label-empty-padding = 1
 type = internal/mpd
 host = localhost
 port = 6600
-format-online = ﱘ   <label-song>
-label-song = %artist% - %title%
+format-online = ﱘ  <label-song>
+label-song = %artist% ~> %title%
 format-online-padding =3
 format-online-foreground = #22973E
-label-offline = None
+label-offline = MPD
 format-offline-padding = 3
 ;format-offline-foreground = #00ff0000
 
@@ -171,7 +171,7 @@ icon-stop = ⏹
 icon-prev = ⏮
 icon-next = ⏭
 
-label-song-maxlen = 45
+label-song-maxlen = 50
 label-song-ellipsis = true
 format-playing-padding = 2
 ;format-playing-background = ${colors.highlight}
@@ -213,8 +213,8 @@ interval = 1
 date =
 date-alt = " %Y-%m-%d  |  "
 
-time = %l:%M %p
-time-alt = %l:%M %p
+time = %H:%M
+time-alt = %H:%M
 
 format-padding = 1
 format-background = ${colors.background}
@@ -255,7 +255,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-label-mounted = %{F#75BA95}  %{F}%free%
+label-mounted = %{F#75BA95}  %{F}%free%
 format-mounted = <label-mounted>
 spacing = 2
 ;label-indicator-padding = 2
@@ -273,7 +273,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /mnt/Shit
-label-mounted = %{F#75BA95}  %{F-}%{F}%free%
+label-mounted = %{F#75BA95}  %{F-}%{F}%free%
 [settings]
 screenchange-reload = true
 
