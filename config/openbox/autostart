@@ -8,8 +8,6 @@
 ~/.fehbg &
 compton --config /home/rick/.config/compton.conf -b &
 tint2 &
-# quicktile --daemonize &
-redshift &
-cadence --minimized $
-# xset m 5/3 0 &
-synclient TouchpadOff=1 &
+cadence --minimized &
+/home/rick/scripts/music-start-ob &
+# synclient TouchpadOff=1 &

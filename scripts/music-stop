@@ -1,0 +1,4 @@
+#!/bin/bash
+
+mpd &
+sudo cpupower frequency-set --governor schedutil

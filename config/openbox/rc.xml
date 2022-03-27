@@ -227,15 +227,6 @@
     <keybind key="W-Return">
       <action name="ToggleMaximizeFull"/>
     </keybind>
-    <keybind key="C-A-0">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Toggle Tint2</name>
-        </startupnotify>
-        <command>~/bin/toggletint2</command>
-      </action>
-    </keybind>
     <keybind key="S-A-Right">
       <action name="SendToDesktop">
         <to>right</to>
@@ -302,26 +293,6 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="W-KP_6">
-      <action name="Execute">
-        <command>rtile.rb --grow-right</command>
-      </action>
-    </keybind>
-    <keybind key="W-KP_4">
-      <action name="Execute">
-        <command>rtile.rb --grow-left</command>
-      </action>
-    </keybind>
-    <keybind key="W-KP_8">
-      <action name="Execute">
-        <command>rtile.rb --grow-up</command>
-      </action>
-    </keybind>
-    <keybind key="W-KP_2">
-      <action name="Execute">
-        <command>rtile.rb --grow-down</command>
-      </action>
-    </keybind>
     <keybind key="C-A-Tab">
       <action name="NextWindow">
         <panels>yes</panels>
@@ -333,31 +304,22 @@
         </finalactions>
       </action>
     </keybind>
-    <keybind key="W-w">
+    <keybind key="C-S-w">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>firefox</name>
+          <name>librewolf</name>
         </startupnotify>
-        <command>firefox-beta</command>
+        <command>librewolf</command>
       </action>
     </keybind>
-    <keybind key="control-t">
+    <keybind key="control-Return">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
           <name>termite</name>
         </startupnotify>
         <command>termite</command>
-      </action>
-    </keybind>
-    <keybind key="W-S-w">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>weechat</name>
-        </startupnotify>
-        <command>termite --geometry=1000x700 -e weechat</command>
       </action>
     </keybind>
     <keybind key="W-S-g">
@@ -369,52 +331,7 @@
         <command>retroarch</command>
       </action>
     </keybind>
-    <keybind key="C-W-v">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>vtop</name>
-        </startupnotify>
-        <command>termite  -e vtop</command>
-      </action>
-    </keybind>
-    <keybind key="W-g">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>git-cola</name>
-        </startupnotify>
-        <command>env QT_API=pyqt4 GTK2_RC_FILES=/home/rick/.themes/Crimix/gtk-2.0/gtkrc git-cola</command>
-      </action>
-    </keybind>
-    <keybind key="W-m">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>ncmpcpp</name>
-        </startupnotify>
-        <command>termite --geometry=1600x350  -e ncmpcpp</command>
-      </action>
-    </keybind>
-    <keybind key="W-a">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Android Studio</name>
-        </startupnotify>
-        <command>android-studio</command>
-      </action>
-    </keybind>
-    <keybind key="W-e">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>sublime</name>
-        </startupnotify>
-        <command>subl3</command>
-      </action>
-    </keybind>
-    <keybind key="W-b">
+    <keybind key="C-S-b">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -423,40 +340,34 @@
         <command>bleachbit</command>
       </action>
     </keybind>
-    <keybind key="W-t">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>termite</name>
-        </startupnotify>
-        <command>termite</command>
-      </action>
-    </keybind>
     <keybind key="W-space">
       <action name="Execute">
         <name>j4-dmenu-desktop</name>
-        <command>j4-dmenu-desktop --dmenu="dmenu -i -b -fn 'Comfortaa:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'"</command>
+        <command>~/.config/rofi/scripts/appsmenu.sh</command>
       </action>
     </keybind>
-    <keybind key="C-space">
-      <action name="Execute">
-        <name>mpdmenu</name>
-        <command>mpdmenu  :: -b -i -fn 'Comfortaa:size=10.5' -nb '#1f1f1f' -nf '#543d3e' -sb '#535C5C' -sf '#D0C9B6'</command>
-      </action>
-    </keybind>
-    <keybind key="A-space">
-      <action name="Execute">
-        <name>Rofi</name>
-        <command>rofi -show run</command>
-      </action>
-    </keybind>
-    <keybind key="W-x">
+    <keybind key="C-A-k">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>oblogut</name>
+          <name>xkill</name>
         </startupnotify>
-        <command>oblogout</command>
+        <command>xkill</command>
+      </action>
+    </keybind>
+    <keybind key="W-S-BackSpace">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>logout</name>
+        </startupnotify>
+        <command>openbox --exit</command>
+      </action>
+    </keybind>
+    <keybind key="XF86Launch1">
+      <action name="Execute">
+        <name>Toggle Touchpad</name>
+        <command>~/scripts/toggle_touchpad.sh</command>
       </action>
     </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
@@ -485,9 +396,9 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>spacefm</name>
+          <name>sunflower</name>
         </startupnotify>
-        <command>spacefm</command>
+        <command>/home/rick/.local/share/applications/Sunflower-0.3-61/Sunflower.py</command>
       </action>
     </keybind>
     <keybind key="W-S-f">

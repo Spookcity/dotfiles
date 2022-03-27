@@ -6,13 +6,9 @@ super + Escape
 super + space
   ~/.config/rofi/scripts/appsmenu.sh
 
-# rofi mpdmenu
-#super + u
-    ~/.config/rofi/scripts/mpdmenu.sh
-
 # mpdmenu
 control + space
-    ~/scripts/mpdmenu1
+    ~/scripts/mpdmenu
 
 
 ############
@@ -33,11 +29,7 @@ control + shift + t
 
 # web
 control + shift + w
-     bspc desktop --focus ^2 && firefox-beta
-
-# tor-browser
-super + shift + t
-     bspc desktop --focus ^2 && /usr/bin/tor-browser-en
+     bspc desktop --focus ^2 && /usr/lib/librewolf/librewolf
 
 # file manager
 control + shift + f
@@ -58,10 +50,6 @@ super + shift + r
 # music
 control + shift + m
     bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
-
-# reaper
-super + shift + m
-    ~/scripts/music-start
 
 # editor
 control + shift + e
@@ -104,6 +92,14 @@ control + F2
 control + F1
         termite --geometry 700x500 -e  ~/scripts/help.sh
 
+# reaper
+super + shift + m
+    ~/scripts/music-start
+
+# music-stop
+super + shift + s
+    ~/scripts/music-stop
+
 # TogglePolybar
 super + control + 0
     ~/scripts/TogglePolybar.sh
@@ -116,7 +112,6 @@ XF86Launch1
  # termite --geometry=1900x1020 -e ~/scripts/4pane_mux.sh
 
 # media/special keys
-
 # mute/unmute
 XF86AudioMute
     amixer set Master toggle; notify-send "Toggle Mute"
@@ -171,12 +166,16 @@ alt + {e,w}
     bspc node -f {next.floating,next.tiled}
 
 # quit bspwm normally
-control + shift + BackSpace
-  systemctl poweroff
+#control + shift + BackSpace
+ # systemctl poweroff
+
+ # Back to lxdm
+super + shift + BackSpace
+  killall bspwm
 
 # reboot
-super + shift + BackSpace
-  systemctl reboot
+#super + shift + BackSpace
+ # systemctl reboot
 
 # close and kill
 control + q
@@ -231,7 +230,7 @@ control + bracket{left,right}
 #  bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-control + {o,i}
+control + {i}
   bspc wm -h off; \
   bspc node {older,newer} -f; \
   bspc wm -h on

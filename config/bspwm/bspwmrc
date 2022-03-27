@@ -31,11 +31,9 @@ bspc config focused_border_color "$color15"
 bspc desktop  -l monocle
 bspc rule -a mpv state=floating
 bspc rule -a mplayer state=floating border=off
-bspc rule -a oblogout border=off
 bspc rule -a Tor Browser desktop='' follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
 bspc rule -a Gimp state=floating
-bspc rule -a /home/rick/scripts/pennywise state=floating border=off
 bspc rule -a Lxappearance state=floating
 bspc rule -a Obconf state=floating
 bspc rule -a telegram-desktop -- %u desktop='chat' state=floating
@@ -43,7 +41,6 @@ bspc rule -a arandr state=floating
 bspc rule -a retroarch state=floating border=off
 bspc rule -a File-roller state=floating
 bspc rule -a GParted state=floating focus=on
-bspc rule -a Oblogout manage=off
 bspc rule -a Wpg state=floating
 bspc rule -a feh state=floating
 bspc rule -a skypeforlinux state=floating
@@ -58,7 +55,7 @@ xbanish &
 ~/.fehbg &
 # telegram-desktop &
 compton --config ~/.config/compton.conf -b &
-redshift &
+# redshift &
 cadence --minimized &
 mpd &
 xcape -e 'Control_L=Escape' &
