@@ -8,11 +8,4 @@
 ~/.fehbg &
 compton --config /home/rick/.config/compton.conf -b &
 tint2 &
-# conky -c ~/.conky/conkyrc &
-# quicktile --daemonize &
-# mpd &
-# paramano &
-# alsa-tray &
-redshift &
-# xset m 5/3 0 &
-# synclient TouchpadOff=1 &
+/home/rick/scripts/music-start-ob &

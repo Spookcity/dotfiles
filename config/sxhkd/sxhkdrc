@@ -6,17 +6,9 @@ super + Escape
 super + space
   ~/.config/rofi/scripts/appsmenu.sh
 
-# rofi mpdmenu
-# super + u
-    ~/.config/rofi/scripts/mpdmenu.sh
-
 # mpdmenu
 control + space
-    ~/scripts/mpdmenu1
-
- # mpdmenu
-#control + space
-   mpdmenu :: -i -b -fn 'Hack:size=10' -nb '#1f1f1f' -nf '#A9D7F5' -sb '#535C5C' -sf '#8FCFB8' -l 25
+    ~/scripts/mpdmenu
 
 ############
 # apps
@@ -58,9 +50,9 @@ super + shift + r
 XF86Tools
     bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
-# Music script
+# reaper
 super + shift + m
-    bspc desktop --focus ^6 && /home/rick/scripts/music-start
+    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
 
 # editor
 control + shift + e
@@ -73,10 +65,6 @@ XF86Mail
  # meld
 control + shift + m
     meld
-
-# tasks
-# XF86Mail
- #   termite --geometry=1200x900 -e htop
 
 # cleaner
 control + shift + b
@@ -98,23 +86,22 @@ super + shift + g
 #scripts
 ###########
 
-# show weather
-control + F2
-        kitty --hold curl -4 wttr.in/Eindhoven
-
 # show help on sxhkd key bindings
 control + F1
         termite --geometry 700x500 -e  ~/scripts/help.sh
+
+# show weather
+control + F2
+        kitty --hold curl -4 wttr.in/Eindhoven
 
 # TogglePolybar
 super + control + 0
     ~/scripts/TogglePolybar.sh
 
-super + Return
-  termite --geometry=1900x1040+8-5 -e ~/scripts/4pane_mux.sh
+#super + Return
+ # termite --geometry=1900x1040+8-5 -e ~/scripts/4pane_mux.sh
 
 # media/special keys
-
 # mute/unmute
 XF86AudioMute
     amixer set Master toggle; notify-send "Toggle Mute"
@@ -159,12 +146,12 @@ alt + {e,w}
     bspc node -f {next.floating,next.tiled}
 
 # quit bspwm normally
-control + shift + BackSpace
-  systemctl poweroff
+#control + shift + BackSpace
+#  systemctl poweroff
 
-# reboot
+  # Back to lxdm
 super + shift + BackSpace
-  systemctl reboot
+  killall bspwm
 
 # close and kill
 control + q

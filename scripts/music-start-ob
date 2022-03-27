@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo cpupower frequency-set --governor performance
+env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F

@@ -2,5 +2,148 @@
 <openbox_menu xmlns="http://openbox.org/"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://openbox.org/">
-    <menu id="root-menu" label="obmenu-generator" execute="/usr/bin/obmenu-generator" />
+  <menu id="root-menu" label="Applications">
+  <separator label="Categories"/>
+  <menu id="0.00583340560934076" label="Accessories">
+    <item label="Archive Manager"><action name="Execute"><command><![CDATA[file-roller]]></command></action></item>
+    <item label="Catarina"><action name="Execute"><command><![CDATA[catarina]]></command></action></item>
+    <item label="compton"><action name="Execute"><command><![CDATA[compton]]></command></action></item>
+    <item label="Disks"><action name="Execute"><command><![CDATA[gnome-disks]]></command></action></item>
+    <item label="Neovim"><action name="Execute"><command><![CDATA[xterm -e 'nvim']]></command></action></item>
+    <item label="Redshift"><action name="Execute"><command><![CDATA[redshift-gtk]]></command></action></item>
+    <item label="SpaceFM File Search"><action name="Execute"><command><![CDATA[spacefm --find-files]]></command></action></item>
+    <item label="SpaceFM"><action name="Execute"><command><![CDATA[spacefm]]></command></action></item>
+    <item label="Sunflower"><action name="Execute"><command><![CDATA[sunflower]]></command></action></item>
+    <item label="Vim"><action name="Execute"><command><![CDATA[xterm -e 'vim']]></command></action></item>
+    <item label="VSCodium"><action name="Execute"><command><![CDATA[/opt/vscodium-bin/bin/codium --no-sandbox --unity-launch]]></command></action></item>
+    <item label="Winetricks"><action name="Execute"><command><![CDATA[winetricks --gui]]></command></action></item>
+    <item label="wpgtk"><action name="Execute"><command><![CDATA[/usr/bin/wpg]]></command></action></item>
+    <item label="wxHexEditor"><action name="Execute"><command><![CDATA[wxHexEditor]]></command></action></item>
+  </menu>
+  <menu id="0.948416056900413" label="Development">
+    <item label="Android Studio"><action name="Execute"><command><![CDATA[android-studio]]></command></action></item>
+    <item label="Bless Hex Editor"><action name="Execute"><command><![CDATA[bless]]></command></action></item>
+    <item label="FLUID"><action name="Execute"><command><![CDATA[fluid]]></command></action></item>
+    <item label="Git Cola"><action name="Execute"><command><![CDATA[git-cola --prompt]]></command></action></item>
+    <item label="Git DAG"><action name="Execute"><command><![CDATA[git-dag --prompt]]></command></action></item>
+    <item label="Glade"><action name="Execute"><command><![CDATA[glade]]></command></action></item>
+    <item label="jadx GUI"><action name="Execute"><command><![CDATA[jadx-gui]]></command></action></item>
+    <item label="Meld"><action name="Execute"><command><![CDATA[meld]]></command></action></item>
+    <item label="Qt4 Assistant"><action name="Execute"><command><![CDATA[assistant-qt4]]></command></action></item>
+    <item label="Qt4 Designer"><action name="Execute"><command><![CDATA[designer-qt4]]></command></action></item>
+    <item label="Qt4 Linguist"><action name="Execute"><command><![CDATA[linguist-qt4]]></command></action></item>
+    <item label="Qt4 QDbusViewer"><action name="Execute"><command><![CDATA[qdbusviewer-qt4]]></command></action></item>
+    <item label="Sublime Text"><action name="Execute"><command><![CDATA[subl]]></command></action></item>
+    <item label="SuperR__s Kitchen"><action name="Execute"><command><![CDATA[termite -e /home/rick/android_dev/superr/superr]]></command></action></item>
+    <item label="VSCodium"><action name="Execute"><command><![CDATA[/opt/vscodium-bin/bin/codium --no-sandbox --unity-launch]]></command></action></item>
+  </menu>
+  <menu id="0.0839235687545958" label="Games">
+    <item label="EmulationStation"><action name="Execute"><command><![CDATA[emulationstation]]></command></action></item>
+    <item label="PCSX2"><action name="Execute"><command><![CDATA[env GDK_BACKEND=x11 MESA_NO_ERROR=1 pcsx2]]></command></action></item>
+    <item label="RetroArch"><action name="Execute"><command><![CDATA[retroarch]]></command></action></item>
+  </menu>
+  <menu id="0.518877311699676" label="Graphics">
+    <item label="GNU Image Manipulation Program"><action name="Execute"><command><![CDATA[gimp-2.10]]></command></action></item>
+  </menu>
+  <menu id="0.21858168848583" label="Multimedia">
+    <item label="AcetoneISO"><action name="Execute"><command><![CDATA[acetoneiso]]></command></action></item>
+    <item label="Cadence"><action name="Execute"><command><![CDATA[cadence]]></command></action></item>
+    <item label="Carla Control"><action name="Execute"><command><![CDATA[carla-control]]></command></action></item>
+    <item label="Carla"><action name="Execute"><command><![CDATA[carla]]></command></action></item>
+    <item label="Catia"><action name="Execute"><command><![CDATA[catia]]></command></action></item>
+    <item label="Clementine"><action name="Execute"><command><![CDATA[clementine]]></command></action></item>
+    <item label="easyMP3Gain"><action name="Execute"><command><![CDATA[easymp3gain]]></command></action></item>
+    <item label="GTick"><action name="Execute"><command><![CDATA[/usr/bin/gtick]]></command></action></item>
+    <item label="HandBrake"><action name="Execute"><command><![CDATA[ghb]]></command></action></item>
+    <item label="Hydrogen"><action name="Execute"><command><![CDATA[hydrogen]]></command></action></item>
+    <item label="LMMS"><action name="Execute"><command><![CDATA[lmms]]></command></action></item>
+    <item label="Mp3tag"><action name="Execute"><command><![CDATA[mp3tag]]></command></action></item>
+    <item label="mpv Media Player"><action name="Execute"><command><![CDATA[mpv --player-operation-mode=pseudo-gui --]]></command></action></item>
+    <item label="MusicBrainz Picard"><action name="Execute"><command><![CDATA[picard]]></command></action></item>
+    <item label="PulseAudio Equalizer"><action name="Execute"><command><![CDATA[pulseaudio-equalizer-gtk]]></command></action></item>
+    <item label="PulseAudio Volume Control"><action name="Execute"><command><![CDATA[pavucontrol]]></command></action></item>
+    <item label="Qt V4L2 test Utility"><action name="Execute"><command><![CDATA[qv4l2]]></command></action></item>
+    <item label="Qt V4L2 video capture utility"><action name="Execute"><command><![CDATA[qvidcap]]></command></action></item>
+    <item label="REAPER"><action name="Execute"><command><![CDATA["/opt/REAPER/reaper"]]></command></action></item>
+    <item label="Spotify"><action name="Execute"><command><![CDATA[spotify --uri=%U]]></command></action></item>
+    <item label="tuxguitar"><action name="Execute"><command><![CDATA[env JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar]]></command></action></item>
+    <item label="VLC media player"><action name="Execute"><command><![CDATA[/usr/bin/vlc --started-from-file]]></command></action></item>
+  </menu>
+  <menu id="0.185840848818756" label="Network">
+    <item label="Avahi SSH Server Browser"><action name="Execute"><command><![CDATA[/usr/bin/bssh]]></command></action></item>
+    <item label="Avahi VNC Server Browser"><action name="Execute"><command><![CDATA[/usr/bin/bvnc]]></command></action></item>
+    <item label="Chromium"><action name="Execute"><command><![CDATA[/usr/bin/chromium]]></command></action></item>
+    <item label="Discord"><action name="Execute"><command><![CDATA[/usr/bin/discord]]></command></action></item>
+    <item label="Firefox Beta"><action name="Execute"><command><![CDATA[firefox-beta]]></command></action></item>
+    <item label="Nicotine+"><action name="Execute"><command><![CDATA[nicotine]]></command></action></item>
+    <item label="Skype"><action name="Execute"><command><![CDATA[/usr/bin/skypeforlinux]]></command></action></item>
+    <item label="Telegram Desktop"><action name="Execute"><command><![CDATA[telegram-desktop --]]></command></action></item>
+    <item label="Tor Browser (en-US)"><action name="Execute"><command><![CDATA[/usr/bin/tor-browser]]></command></action></item>
+    <item label="Transmission"><action name="Execute"><command><![CDATA[transmission-gtk]]></command></action></item>
+    <item label="WeeChat"><action name="Execute"><command><![CDATA[xterm -e 'weechat']]></command></action></item>
+  </menu>
+  <menu id="0.818665546734646" label="Office">
+    <item label="Calibre"><action name="Execute"><command><![CDATA[calibre --detach]]></command></action></item>
+    <item label="E-book editor"><action name="Execute"><command><![CDATA[ebook-edit --detach]]></command></action></item>
+    <item label="E-book viewer"><action name="Execute"><command><![CDATA[ebook-viewer --detach]]></command></action></item>
+    <item label="FBReader"><action name="Execute"><command><![CDATA[FBReader]]></command></action></item>
+    <item label="LRF viewer"><action name="Execute"><command><![CDATA[lrfviewer]]></command></action></item>
+    <item label="Zat"><action name="Execute"><command><![CDATA[zat]]></command></action></item>
+    <item label="Zathura"><action name="Execute"><command><![CDATA[zathura]]></command></action></item>
+  </menu>
+  <menu id="0.072377001674873" label="Other">
+    <item label="Katana FX FloorBoard"><action name="Execute"><command><![CDATA[/home/rick/.local/share/applications/Katana-MK2-FxFloorBoard/Katana-MK2-FxFloorBoard]]></command></action></item>
+    <item label="Klavaro"><action name="Execute"><command><![CDATA[klavaro]]></command></action></item>
+  </menu>
+  <menu id="0.0324718449177546" label="Settings">
+    <item label="ARandR"><action name="Execute"><command><![CDATA[arandr]]></command></action></item>
+    <item label="Customize Look and Feel"><action name="Execute"><command><![CDATA[lxappearance]]></command></action></item>
+    <item label="Privilege granting"><action name="Execute"><command><![CDATA[gksu-properties]]></command></action></item>
+    <item label="PulseAudio Volume Control"><action name="Execute"><command><![CDATA[pavucontrol]]></command></action></item>
+    <item label="Screensaver"><action name="Execute"><command><![CDATA[xscreensaver-settings]]></command></action></item>
+    <item label="Tint2 Settings"><action name="Execute"><command><![CDATA[tint2conf]]></command></action></item>
+  </menu>
+  <menu id="0.608906161564619" label="System">
+    <item label="Avahi Zeroconf Browser"><action name="Execute"><command><![CDATA[/usr/bin/avahi-discover]]></command></action></item>
+    <item label="BleachBit"><action name="Execute"><command><![CDATA[bleachbit]]></command></action></item>
+    <item label="conky"><action name="Execute"><command><![CDATA[conky --daemonize --pause=1]]></command></action></item>
+    <item label="GParted"><action name="Execute"><command><![CDATA[/usr/bin/gparted]]></command></action></item>
+    <item label="Hardware Locality lstopo"><action name="Execute"><command><![CDATA[lstopo]]></command></action></item>
+    <item label="Htop"><action name="Execute"><command><![CDATA[xterm -e 'htop']]></command></action></item>
+    <item label="kitty"><action name="Execute"><command><![CDATA[kitty]]></command></action></item>
+    <item label="Manage Printing"><action name="Execute"><command><![CDATA[/usr/bin/xdg-open http://localhost:631/]]></command></action></item>
+    <item label="OpenJDK Java 11 Console"><action name="Execute"><command><![CDATA[/usr/lib/jvm/java-11-openjdk/bin/jconsole]]></command></action></item>
+    <item label="OpenJDK Java 11 Shell"><action name="Execute"><command><![CDATA[xterm -e '/usr/lib/jvm/java-11-openjdk/bin/jshell']]></command></action></item>
+    <item label="OpenJDK Java 17 Console"><action name="Execute"><command><![CDATA[/usr/lib/jvm/java-17-openjdk/bin/jconsole]]></command></action></item>
+    <item label="OpenJDK Java 17 Shell"><action name="Execute"><command><![CDATA[xterm -e '/usr/lib/jvm/java-17-openjdk/bin/jshell']]></command></action></item>
+    <item label="ranger"><action name="Execute"><command><![CDATA[xterm -e 'ranger']]></command></action></item>
+    <item label="SpaceFM"><action name="Execute"><command><![CDATA[spacefm]]></command></action></item>
+    <item label="Termite"><action name="Execute"><command><![CDATA[termite]]></command></action></item>
+    <item label="Tint2"><action name="Execute"><command><![CDATA[tint2]]></command></action></item>
+    <item label="UXTerm"><action name="Execute"><command><![CDATA[uxterm]]></command></action></item>
+    <item label="XTerm"><action name="Execute"><command><![CDATA[xterm]]></command></action></item>
+  </menu>
+  <separator/>
+  <menu id="0.321139965688229" label="Advanced Settings">
+  <menu id="0.737359840878959" label="Obmenu-Generator">
+    <item label="Menu Schema"><action name="Execute"><command><![CDATA[subl ~/.config/obmenu-generator/schema.pl]]></command></action></item>
+    <item label="Menu Config"><action name="Execute"><command><![CDATA[subl ~/.config/obmenu-generator/config.pl]]></command></action></item>
+  <separator/>
+    <item label="Generate a static menu"><action name="Execute"><command><![CDATA[obmenu-generator -s -c]]></command></action></item>
+    <item label="Generate a static menu with icons"><action name="Execute"><command><![CDATA[obmenu-generator -s -i -c]]></command></action></item>
+  <separator/>
+    <item label="Generate a dynamic menu"><action name="Execute"><command><![CDATA[obmenu-generator -p]]></command></action></item>
+    <item label="Generate a dynamic menu with icons"><action name="Execute"><command><![CDATA[obmenu-generator -p -i]]></command></action></item>
+  <separator/>
+    <item label="Refresh cache"><action name="Execute"><command><![CDATA[obmenu-generator -d]]></command></action></item>
+  </menu>
+  <menu id="0.0173601454889543" label="Openbox">
+    <item label="Openbox Autostart"><action name="Execute"><command><![CDATA[subl ~/.config/openbox/autostart]]></command></action></item>
+    <item label="Openbox RC"><action name="Execute"><command><![CDATA[subl ~/.config/openbox/rc.xml]]></command></action></item>
+    <item label="Openbox Menu"><action name="Execute"><command><![CDATA[subl ~/.config/openbox/menu.xml]]></command></action></item>
+    <item label="Reconfigure Openbox"><action name="Execute"><command><![CDATA[openbox --reconfigure]]></command></action></item>
+  </menu>
+  </menu>
+  <separator/>
+  </menu>
 </openbox_menu>

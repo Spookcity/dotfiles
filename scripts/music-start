@@ -1,6 +1,6 @@
 #!/bin/bash
 
-killall telegram-desktop
-cadence-session-start --system-start
+killall mpd
+killall pulseaudio
 sudo cpupower frequency-set --governor performance
 bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F

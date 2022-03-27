@@ -31,7 +31,6 @@ bspc config urgent_border_color "#C60000"
 bspc desktop  -l monocle
 bspc rule -a mpv state=floating
 bspc rule -a mplayer state=floating border=off
-bspc rule -a oblogout border=off
 bspc rule -a Tor Browser desktop='' follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
 # bspc rule -a Meld desktop='chat' follow=on
@@ -45,14 +44,12 @@ bspc rule -a arandr state=floating
 bspc rule -a retroarch state=floating border=off
 bspc rule -a File-roller state=floating
 bspc rule -a GParted state=floating focus=on
-bspc rule -a Oblogout manage=off
 bspc rule -a Wpg state=floating
 bspc rule -a feh state=floating
 bspc rule -a skypeforlinux state=floating
 bspc rule -a Termite state=floating
 bspc rule -a kitty state=floating
 bspc rule -a Screenkey manage=off
-bspc rule -a Reaxis manage=off
 
 # startups
 termite --geometry=1100x700+408+43 &

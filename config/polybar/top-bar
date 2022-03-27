@@ -3,7 +3,7 @@ height = 19
 offset-x = 7%
 
 ; subtle
-offset-y = 0 
+offset-y = 0
 override-redirect = true
 
 ; i3
@@ -11,7 +11,7 @@ override-redirect = true
 ;override-redirect = true
 
 fixed-center = true
-bottom = false 
+bottom = false
 background = ${colors.background-alt}
 foreground = ${colors.foreground-alt}
 line-size = 0
@@ -19,7 +19,7 @@ line-color = #f00
 padding-left = 0
 padding-right = 0
 module-margin-left = 0
-module-margin-right = 0 
+module-margin-right = 0
 font-0 = "Iosevka-Term:size=6;2"
 font-1 = "Material Icons:antialias=false:size=8;4"
 cursor-click = pointer

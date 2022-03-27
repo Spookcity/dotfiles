@@ -1,0 +1,192 @@
+#!/bin/bash
+
+# Based on https://github.com/k00mi/mpdmenu
+# Taken from: https://github.com/glen3b/linux-dotfiles-public/blob/master/home.dotless/bin/mpdmenu
+# Only slighty edited for my taste
+MPC="mpc --quiet -p 6600"
+export BEMENU_BACKEND=curses
+DMENU_EXECUTABLE="${1:-dmenu}"
+
+# a disambiguation template
+# mpc -f '[[%albumartist%]|[%artist%]] - %album% (%date%) @ %file%' find title 'Somebody To Love' | sed -E 's#(.*)\) @ (.*/)?(.*)#\1) @ \3 @ \2\3#' | awk -F ' @ ' '{printf "%s @ %s @ ",$1,$2; system("sha256sum <<< '"'"'" $3 "'"'"' | head -c 8"); print "";}'
+
+# max height for vertical menu
+height=12
+default_dedup_displaypattern='[[%albumartist%]|[%artist%]] - %album% (%date%) @ %file%'
+
+DMENU() {
+    # Vertical menu if $3 is given
+    # https://stackoverflow.com/questions/3130375/bash-script-store-stderr-in-a-variable
+    { error=$(echo -e "$1" | $DMENU_EXECUTABLE -i -b -fn 'Hack:size=10' -nb '#1f1f1f' -nf '#A9D7F5' -sb '#535C5C' -sf '#8FCFB8' -l 25 -p "$2" ${3:+"-l" "$3"} 2>&1 1>&$out); } {out}>&1
+    grep -q 'cannot grab keyboard' <<< "$error" && exit 1
+    exec {out}>&-
+}
+
+get_playlist() {
+    $MPC -f "%position% - %artist% - %album% - %title% - ID %id%" playlist
+}
+
+select_from() {
+    DMENU "$1" "Select $2" $height
+}
+
+# deduplicates a list of candidate songs
+# formatflag must cause to be rendered whatever human readable description is desired,
+#   followed by ' @ ' then the filename
+#   example: '[[%albumartist%]|[%artist%]] - %album% (%date%) @ %file%'
+# <formatflag> <mpcFilterArgs>
+deduplicate() {
+    local displayflag="$1"
+    shift
+    local songlist_verbose=$($MPC -f "$displayflag" find "$@" | sed -E 's#(.*)\) @ (.*/)?(.*)#\1) @ \3 @ \2\3#' | awk -F ' @ ' '{printf "%s @ %s @ ",$1,$2; system("sha256sum <<< '"'"'" $3 "'"'"' | head -c 8"); printf " @ %s\n",$3;}')
+    if [[ "$(wc -l <<< "$songlist_verbose")" -gt 1 ]]
+    then
+        # lots of songs, we need to disambiguate
+        local songlist="$(awk -F ' @ ' 'BEGIN{OFS=" @ ";} {print $1,$2,$3}' <<< $songlist_verbose)"
+        local chosen_song_entry="$(select_from "$songlist" "song (disambiguation)")"
+        # if song empty (e.g. cancelled selection), break out of function
+        [[ -z "$chosen_song_entry" ]] && return 1
+        # not perfect: doesn't technically only match beginning of line
+        grep -F "$chosen_song_entry" <<< "$songlist_verbose" | awk -F ' @ ' '{print $4}'
+    else
+        # 0 or 1, so just return the output
+        awk -F ' @ ' '{print $4}' <<< "$songlist_verbose"
+    fi
+}
+
+verify_playing() {
+    mpc status | grep -q '\[playing\]'
+}
+
+# add titles directly
+add_direct() {
+    local songs=$($MPC list Title)
+    local song=$(select_from "$songs" "song")
+
+    if [ -n "$song" ]; then
+        deduplicate "$default_dedup_displaypattern" Title "$song" | $MPC add
+    else
+        return 1
+    fi
+
+    return 1
+}
+
+# adds without drilling through artist
+add_from_album() {
+    all="[ALL]"
+
+    local album=$(select_from "$($MPC list Album)\n$all" "album")
+
+    if [ "$album" = "$all" ]; then
+        $MPC listall | $MPC add;
+    elif [ -n "$album" ]; then
+        local songs=$($MPC find -f '%title%' album "$album")
+        local song=$(select_from "$songs\n$all" "song")
+
+        if [ "$song" = "$all" ]; then
+            $MPC findadd Album "$album"
+        elif [ -n "$song" ]; then
+            deduplicate 'By: [[%albumartist%]|[%artist%]] (%date%) @ %file%' Album "$album" Title "$song" | $MPC add
+        else
+            return 1
+        fi
+    else
+        return 1
+    fi
+
+    return 1
+}
+
+# adds without drilling through the album
+add_from_artist() {
+    all="[ALL]"
+
+    local artist=$(select_from "$($MPC list Artist)\n$all" "artist")
+
+    if [ "$artist" = "$all" ]; then
+        $MPC listall | $MPC add;
+    elif [ -n "$artist" ]; then
+        local songs=$($MPC list Title Artist "$artist")
+        local song=$(select_from "$songs\n$all" "song")
+
+        if [ "$song" = "$all" ]; then
+            $MPC findadd Artist "$artist"
+        elif [ -n "$song" ]; then
+            deduplicate '[In: %album%|%title% (Unknown Album)] (%date%) @ %file%' Artist "$artist" Title "$song" | $MPC add
+        else
+            return 1
+        fi
+    else
+        return 1
+    fi
+
+    return 1
+}
+
+remove() {
+    local playlist=$(get_playlist)
+    local song=$(select_from "$playlist" "song")
+
+    [ -n "$song" ] && $MPC del "${song%%\ *}" && return 0
+    return 1
+}
+
+jump() {
+    local playlist=$(get_playlist)
+    local song=$(select_from "$playlist" "song")
+
+    [ -n "$song" ] && $MPC play "${song%%\ *}" && return 0
+    return 1
+}
+
+play(){
+    $MPC play
+    return 0
+}
+
+pause(){
+    $MPC pause
+    return 1
+}
+
+stop(){
+    $MPC stop
+    return 0
+}
+
+next(){
+    $MPC next
+    return 1
+}
+
+prev(){
+    $MPC prev
+    return 1
+}
+
+clear(){
+    $MPC clear
+    return 1
+}
+
+
+while true; do
+    action=$(DMENU "Play\nAdd Album\nAdd Song\nAdd Artist\nClear\nPause\nStop\nNext\nPrev" "Choose")
+    case $action in
+        "Add Artist") add_from_artist;;
+        "Add Album") add_from_album;;
+        "Add Song") add_direct;;
+        Clear) clear;;
+        Pause) pause;;
+        Play) play;;
+        Stop) stop;;
+        Next) next;;
+        Prev) prev;;
+        "") exit 0;;
+        *) false;;
+    esac
+    action_status=$?
+    pkill -SIGRTMIN+3 i3blocks
+    [ $action_status -eq 0 ] && exit 0
+done
