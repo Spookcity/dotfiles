@@ -361,6 +361,15 @@
         <command>openbox --exit</command>
       </action>
     </keybind>
+    <keybind key="W-S-x">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>shutdown</name>
+        </startupnotify>
+        <command>systemctl poweroff</command>
+      </action>
+    </keybind>
     <!-- Keybindings for window switching with the arrow keys -->
     <keybind key="W-S-Right">
       <action name="DirectionalCycleWindows">
@@ -766,7 +775,7 @@
     <!-- show the manage desktops section in the client-list-(combined-)menu -->
   </menu>
   <applications>
-    <application name="subl3">
+    <application name="/usr/bin/subl3">
       <decor>no</decor>
       <maximized>no</maximized>
     </application>

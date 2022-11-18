@@ -1,6 +1,6 @@
 {
 	"buildDir": "/var/cache/pacman/pkg-local/",
-	"editor": "subl3",
+	"editor": "/usr/bin/subl3",
 	"editorflags": "",
 	"makepkgbin": "makepkg",
 	"pacmanbin": "pacman",

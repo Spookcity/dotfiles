@@ -6,23 +6,23 @@ desc: Loudness Meter Peak/RMS/LUFS (Cockos)
 //author: Cockos
 
 
-slider1:cfg_peak=2<0,2,1{off,level,clips}>-True peak
+slider1:cfg_peak=4<0,4,1{off,true peak,true peak clips,peak,peak clips}>-Peak
 slider2:cfg_rms_m=0<0,1,1{off,on}>-RMS momentary
 slider3:cfg_rms_i=0<0,1,1{off,on}>-RMS integrated
 slider4:cfg_lufs_m=2<0,2,1{off,on,on + histogram}>-LUFS momentary
 slider5:cfg_lufs_s=1<0,1,1{off,on}>-LUFS short-term
 slider6:cfg_lra=1<0,1,1{off,on}>-LRA loudness range
 slider7:cfg_lufs_i=1<0,1,1{off,on}>-LUFS integrated
-slider8:cfg_alert=0<0,3,1{off,Yellow,Red,Yellow + Red>-LUFS alerts
+slider8:cfg_alert=0<0,3,1{off,yellow,red,yellow + red>-LUFS alerts
 slider9:cfg_yellow=-12<-60,0>-Yellow alert level
 slider10:cfg_red=-6<-60,0>-Red alert level
 slider11:cfg_reinit=1<0,1,1{off,on}>-Reset on playback start
 slider12:cfg_mono=0<0,1,1{off,on}>-Force mono analysis
 slider13:cfg_textsize=0<-2,8,1>-Text size
 slider14:cfg_yscale=1.8<0.5,4,0.1>-Y axis scaling
-slider15:cfg_out_auto=0<0,1,1{off,on}>-Output loudness values as automation
+slider15:cfg_out_auto=0<0,16,1{off,all,all (inverted),Peak,Peak (inverted),RMS-M,RMS-M (inverted),RMS-I,RMS-I (inverted),LUFS-M,LUFS-M (inverted),LUFS-S,LUFS-S (inverted),LUFS-I,LUFS-I (inverted),LRA,LRA (inverted)}>-Output loudness values as automation
 
-slider30:outparm_truepeak=-150<-150,20,1>-True peak dB (output)
+slider30:outparm_peak=-150<-150,20,1>-Peak/True peak dB (output)
 slider31:outparm_rms_m=-100<-100,0,1>-RMS-M (output)
 slider32:outparm_rms_i=-100<-100,0,1>-RMS-I (output)
 slider33:outparm_lufs_m=-100<-100,0,1>-LUFS-M (output)
@@ -34,6 +34,9 @@ options:no_meter
 
 
 @init
+
+// rms-i, lufs-i, lra calculated 0=during playback only, 1=always
+WANT_INTEGRATED_ALWAYS=0;
 
 FONT_SZ_MIN=12;
 FONT_SZ_MAX=16;
@@ -55,7 +58,6 @@ LOUD_METER_UPDATE=0.100; // default 100ms, must be divisible into both 0.4 and 3
 LOUD_METER_SPEED=0.075;
 
 UI_SLIDER_MASK=(1<<15)-1;
-OUTPUT_SLIDER_MASK = 0x7f * (2^29);
 
 ext_noinit=1;
 ext_nodenorm=1;
@@ -66,6 +68,8 @@ sliders_showing=0;
 NUM_BINS=1024;
 BINS_PER_DB=10;
 DB_PER_BIN=1/BINS_PER_DB;
+
+REAPER_MAX_CHANNELS=64;
 
 
 // sinc filter for true peak
@@ -108,8 +112,8 @@ function alloc(sz) global()
 
 function init(chidx)
 (
-  this.wt = chidx < 3 || num_ch < 6 ? 1 :
-    chidx == 3 ? 0 : sqrt(2);
+  this.chan=chidx;
+  this.wt = chidx < 3 || num_ch < 6 ? 1 : chidx == 3 ? 0 : sqrt(2);
   this.f1p1=this.f1p2=this.f2p1=this.f2p2=0;
   this.pkval=this.hipkval=this.clips=0;
   this.ch_lufs_sum=this.ch_rms_sum=0;
@@ -123,11 +127,10 @@ function decay()
   this.pkval *= pk_decay;
 );
 
-function copypks() global(pk hipk clip_cnt ch) (
-  pk[ch] = this.pkval;
-  hipk[ch] = this.hipkval;
-  clip_cnt[ch] = this.clips;
-  ch+=1;
+function copypks() global(pk hipk clip_cnt) (
+  pk[this.chan] = this.pkval;
+  hipk[this.chan] = this.hipkval;
+  clip_cnt[this.chan] = this.clips;
 );
 
 function proc(lspl)
@@ -140,9 +143,9 @@ function proc(lspl)
          sinc.s1.sinc_slice_abs
          sinc.s2.sinc_slice_abs
          sinc.s3.sinc_slice_abs
-         win_has_signal lval rval win_pos global_truepeak)
+         lval rval win_pos global_peak)
 (
-  cfg_peak ? (
+  cfg_peak == 1 || cfg_peak == 2 ? (
     this.h15 = this.h14; this.h14 = this.h13; this.h13 = this.h12; this.h12 = this.h11;
     this.h11 = this.h10; this.h10 = this.h09; this.h09 = this.h08; this.h08 = this.h07;
     this.h07 = this.h06; this.h06 = this.h05; this.h05 = this.h04; this.h04 = this.h03;
@@ -150,20 +153,22 @@ function proc(lspl)
   
     pspl = max(abs(this.h08), sinc.s1.sinc_slice_abs(this));
     srate < 96000 ? pspl = max(pspl,max(sinc.s2.sinc_slice_abs(this), sinc.s3.sinc_slice_abs(this)));
-  
+  ) : 
+  cfg_peak == 3 || cfg_peak == 4 ? (
+    pspl=abs(lspl);
+  );
+  cfg_peak ? (
     pspl > pkval ? (
       pkval=pspl;
       pspl > hipkval ? (
         hipkval=pspl;
-        global_truepeak = max(global_truepeak,pspl);
+        global_peak = max(global_peak,pspl);
       );
     );
     pspl > 1.0 ? clips += 1;
   );
 
   win_pos == 0 ? ch_rms_sum=ch_lufs_sum=0;
-
-  lspl != 0 ? win_has_signal=1;
 
   rval += (ch_rms_sum += lspl*lspl);
   
@@ -218,18 +223,18 @@ function Reset()
   init_lufs_filters();
 
   alloc.top=0;
-  pk=alloc(num_ch);
-  hipk=alloc(num_ch);
-  clip_cnt=alloc(num_ch);
+  pk=alloc(REAPER_MAX_CHANNELS);
+  hipk=alloc(REAPER_MAX_CHANNELS);
+  clip_cnt=alloc(REAPER_MAX_CHANNELS);
 
   m_win_cnt=0.4/LOUD_METER_UPDATE;
   s_win_cnt=3/LOUD_METER_UPDATE;
 
   win_pos=0;
+  win_cnt=0;
   win_len=(LOUD_METER_UPDATE*srate)|0;
   i_win_len=1/(m_win_cnt*win_len);
   i_win_len2=1/(s_win_cnt*win_len);
-  win_has_signal=0;
 
   rms_m_sum=0;
   rms_m_db=-100;
@@ -264,7 +269,7 @@ function Reset()
   db_hist=alloc(75);
   db_hist_max=0;
 
-  global_truepeak = 0;
+  global_peak = 0;
 
   ch0.init(0); ch1.init(1);
   num_ch > 2 ? ( ch2.init(2); ch3.init(3);
@@ -317,19 +322,27 @@ num_ch > 48 ? ( ch48.decay(); ch49.decay(); ch50.decay(); ch51.decay(); ch52.dec
 num_ch > 56 ? ( ch56.decay(); ch57.decay(); ch58.decay(); ch59.decay(); ch60.decay(); ch61.decay(); ch62.decay(); ch63.decay();
 ))))))))))));
 
-outparm_lufs_m = lufs_m_db + (cfg_mono ? -3 : 0);
-outparm_lufs_i = lufs_i_db + (cfg_mono ? -3 : 0);
-outparm_lufs_s = lufs_s_db + (cfg_mono ? -3 : 0);
-outparm_lufs_lra = lra_db_diff;
-outparm_truepeak = global_truepeak > 0 ? log(global_truepeak)*20/log(10) : -150;
-outparm_rms_m = rms_m_db + (cfg_mono ? -3 : 0);
-outparm_rms_i = rms_i_db + (cfg_mono ? -3 : 0);
+function make_output_slider(b, base) ( cfg_out_auto>=2 && !(cfg_out_auto&1) ? base - b : b );
+outparm_lufs_m = make_output_slider(lufs_m_db + (cfg_mono ? -3 : 0),-100);
+outparm_lufs_s = make_output_slider(lufs_s_db + (cfg_mono ? -3 : 0),-100);
+outparm_lufs_i = make_output_slider(lufs_i_db + (cfg_mono ? -3 : 0),-100);
+outparm_lufs_lra = make_output_slider(lra_db_diff,100);
+outparm_peak = make_output_slider(global_peak > 0 ? log(global_peak)*20/log(10) : -150,-150);
+outparm_rms_m = make_output_slider(rms_m_db + (cfg_mono ? -3 : 0),-100);
+outparm_rms_i = make_output_slider(rms_i_db + (cfg_mono ? -3 : 0),-100);
 
-// if REAPER is set to auto-create envelopes when adjusting FX parameters,
-// this will create a lot of envelopes, and also dominate the
-// last touched FX parameter system
-cfg_out_auto ? slider_automate(OUTPUT_SLIDER_MASK);
-
+cfg_out_auto ? slider_automate(
+  cfg_out_auto > 2 ? (2^(29 + floor((cfg_out_auto-3)/2))) : (
+    2^29 | // (true) peak
+    2^30 | // rms-m
+    2^31 | // rms-i
+    2^32 | // lufs-m
+    2^33 | // lufs-s
+    2^34 | // lufs-i
+    2^35 | // lra
+    0
+  )
+);
 
 @sample
 
@@ -352,9 +365,7 @@ num_ch > 56 ? ( ch56.proc(spl56); ch57.proc(spl57); ch58.proc(spl58); ch59.proc(
 
 (win_pos += 1) >= win_len ? (
   win_pos=0;
-
-  cur_win_has_signal=win_has_signal;
-  win_has_signal=0;
+  win_cnt += 1;
 
   prev_rval=rms_buf[cur_buf];
   rms_buf[cur_buf]=rval;
@@ -372,25 +383,28 @@ num_ch > 56 ? ( ch56.proc(spl56); ch57.proc(spl57); ch58.proc(spl58); ch59.proc(
   lufs_m_sum += (lval-prev_lval)*i_win_len;
   lufs_s_sum += (lval-prev_lval2)*i_win_len2;
   
-  rms_i_sum += rms_m_sum;
-  rms_i_sum_cnt += 1;
-  rms_i_sum > 0 && rms_i_sum_cnt >= m_win_cnt ? (
-    rms_i_db=log(rms_i_sum/rms_i_sum_cnt)*10/log(10);
-  ) : (
-    rms_i_db=-100;
+  WANT_INTEGRATED_ALWAYS || (play_state&1) ? (
+    rms_i_sum += rms_m_sum;
+    rms_i_sum_cnt += 1;
+    rms_i_sum > 0 && rms_i_sum_cnt >= m_win_cnt ? (
+      rms_i_db=log(rms_i_sum/rms_i_sum_cnt)*10/log(10);
+    ) : (
+      rms_i_db=-100;
+    );
   );
   
-  rms_m_sum > 0 && rms_i_sum_cnt >= m_win_cnt ? (
+  rms_m_sum > 0 && win_cnt >= m_win_cnt ? (
     rms_m_db=log(rms_m_sum)*10/log(10);
     rms_m_db > rms_m_db_max ? rms_m_db_max=rms_m_db;
   ) : (
     rms_m_db=-100;
   );
   
-  lufs_m_sum > 0 && rms_i_sum_cnt >= m_win_cnt ? (
+  lufs_m_sum > 0 && win_cnt >= m_win_cnt ? (
     lufs_m_sum > lufs_m_sum_max ? lufs_m_sum_max=lufs_m_sum;
     lufs_m_db=-0.691+log(lufs_m_sum)*10/log(10);
-    a=((lufs_m_db+70)*BINS_PER_DB)|0;
+
+    a = WANT_INTEGRATED_ALWAYS || (play_state&1) ? ((lufs_m_db+70)*BINS_PER_DB)|0 : -1;
     a >= 0 ? (
       a >= NUM_BINS ? a=NUM_BINS-1;
       lufs_a_sum += lufs_m_sum;
@@ -415,11 +429,12 @@ num_ch > 56 ? ( ch56.proc(spl56); ch57.proc(spl57); ch58.proc(spl58); ch59.proc(
     lufs_m_db=-100;
   );
 
-  lufs_s_sum > 0 && rms_i_sum_cnt >= s_win_cnt ? (
+  lufs_s_sum > 0 && win_cnt >= s_win_cnt ? (
     lufs_s_sum > lufs_s_sum_max ? lufs_s_sum_max=lufs_s_sum;
     lufs_s_db=-0.691+log(lufs_s_sum)*10/log(10);
-    b=((lufs_s_db+70)*BINS_PER_DB)|0;
-    b >= 0 && ((play_state&1) || cur_win_has_signal) ? (
+
+    b = WANT_INTEGRATED_ALWAYS || (play_state&1) ? ((lufs_s_db+70)*BINS_PER_DB)|0 : -1;
+    b >= 0 ? (
       b >= NUM_BINS ? b=NUM_BINS-1;
       lufs_b_sum += lufs_s_sum;
       lufs_b_sum_cnt += 1;
@@ -427,7 +442,7 @@ num_ch > 56 ? ( ch56.proc(spl56); ch57.proc(spl57); ch58.proc(spl58); ch59.proc(
 
       lufs_b_db=-0.691+log(lufs_b_sum/lufs_b_sum_cnt)*10/log(10);
       lufs_b_gate=((lufs_b_db-20+70)*BINS_PER_DB)|0;
-  
+
       lra_cnt=0;
       bin=max(lufs_b_gate,0);
       loop(NUM_BINS-bin,
@@ -463,7 +478,6 @@ num_ch > 56 ? ( ch56.proc(spl56); ch57.proc(spl57); ch58.proc(spl58); ch59.proc(
 
 @gfx 300 400
 
-ch=0;
 ch0.copypks(); ch1.copypks();
 num_ch > 2 ? ( ch2.copypks(); ch3.copypks();
 num_ch > 4 ? ( ch4.copypks(); ch5.copypks();
@@ -544,7 +558,7 @@ function draw_str(ts tx ty tc)
 
 function format_dbv(hv)
 (
-  hv <= -72 ? "" : sprintf(#, "%+.1f", floor(hv*10)/10);
+  hv <= -72 ? "" : sprintf(#, "%+.1f", hv);
 );
 function format_db(v)
 (
@@ -599,7 +613,7 @@ function draw_histogram(txlo, txhi, lasty, lasttw, y, tw)
 
 want_vu ? (
   set_color(GRID_COLOR);
-  ytol=gfx_texth;
+
   ty0=draw_grid(0,-1,-1);
   ty12=draw_grid(-12,-1,-1);
   ty24=draw_grid(-24,-1,-1);
@@ -796,7 +810,9 @@ want_peak ? (
   want_capt ? (
     set_color(TEXT_COLOR);
     label = cfg_peak == 1 ? (!want_abbr && !cfg_mono ? "True Peak" : "TPeak") :
-      (!want_abbr && !cfg_mono ? "True Peak Clips" : "TPClip");
+       cfg_peak == 2 ? (!want_abbr && !cfg_mono ? "True Peak Clips" : "TPClip") :
+       cfg_peak == 4 ? (!want_abbr && !cfg_mono ? "Peak Clips" : "Clip") :
+       "Peak";
     draw_str(label,x-(nch-1)*colw/2,yt,5);
   );
   ch=nch-1;
@@ -808,7 +824,7 @@ want_peak ? (
         set_color(PEAK_COLOR);
         gfx_rect(x-colw/4,y0-th,colw/2,th);
       );
-      cfg_peak == 1 ? (
+      cfg_peak == 1 || cfg_peak == 3 ? (
         set_color(!want_vu && pv > 1 ? PEAK_CLIP_COLOR : TEXT_COLOR);
         draw_str(format_db(pv),x,ylo,5);
       ) : (

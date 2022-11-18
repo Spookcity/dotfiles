@@ -58,8 +58,8 @@ polybar top &
 xbanish &
 ~/.fehbg &
 compton --config ~/.config/compton.conf -b &
-redshift &
-# cadence --minimized &
+# redshift &
+cadence --minimized &
 [[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble &
 mpd &
 xcape -e 'Control_L=Escape' &

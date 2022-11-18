@@ -52,11 +52,11 @@ XF86Tools
 
 # reaper
 super + shift + m
-    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/opt/REAPER/reaper" %F
+    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/usr/lib/REAPER/reaper" %F
 
 # editor
 control + shift + e
-   subl
+   /usr/bin/subl3 -n
 
 # git-cola
 XF86Mail
@@ -145,9 +145,9 @@ super + {_,shift} + i
 alt + {e,w}
     bspc node -f {next.floating,next.tiled}
 
-# quit bspwm normally
-#control + shift + BackSpace
-#  systemctl poweroff
+# Shutdown
+super + shift + x
+  systemctl poweroff
 
   # Back to lxdm
 super + shift + BackSpace

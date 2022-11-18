@@ -982,15 +982,23 @@ function getDock()
 end
 
 function getDpi()
-  if gfx.ext_retina ~= dpi then
-    dpi = gfx.ext_retina
-    if dpi>1.49 then drawScale = 2 else drawScale = 1 end
-    if reaper.GetOS() ~= "OSX64" and reaper.GetOS() ~= "OSX32" then
-      drawScale_nonmac = drawScale
-      drawScale_inv_nonmac = 1/drawScale
-    else
-      drawScale_inv_mac = 1/drawScale
-    end
+  local newScale, os = 1, reaper.GetOS()
+  if gfx.ext_retina>1.49 then newScale = 2 end
+
+  if os ~= "OSX64" and os ~= "OSX32" and os ~= "macOS-arm64" then
+    -- disable (non-macOS) hidpi if window is constrained in height or width
+    local minw, minh = 500, 660
+    if _dockedRoot.visible ~= false then  minw, minh = 400, 24 end
+
+    if gfx.h < minh*newScale or gfx.w < minw*newScale then newScale = 1 end
+    drawScale_nonmac = newScale
+    drawScale_inv_nonmac = 1/newScale
+  else
+    drawScale_inv_mac = 1/newScale
+  end
+
+  if newScale ~= drawScale then
+    drawScale = newScale
     resize = 1
   end
 end
@@ -1202,13 +1210,18 @@ function Element:position(parentX,parentY,parentW,parentH,prevElX, prevElY, prev
 
   if self.positionX ~= nil then
     if self.positionX == 'center' then
-      parentW, parentH = parentW * drawScale_inv_nonmac, parentH * drawScale_inv_nonmac
-      self.drawx, self.drawy = (parentW - self.drawW)/2, (parentH - self.drawH)/2
+      parentW = parentW * drawScale_inv_nonmac
+      self.drawx = (parentW - self.drawW)/2
     elseif self.positionX == 'right' then
       self.drawx = parentW - self.w
     end
   end
-
+  if self.positionY ~= nil then
+    if self.positionY == 'center' then
+      parentH = parentH * drawScale_inv_nonmac
+      self.drawy = math.max((parentH - self.drawH)/2,0)
+    end
+  end
   if self.flow ~= nil and self.flow ~= false then
     if prevElX == nil or prevElW == 0 then                                                  -- you're the first child
       self.drawx, self.drawy = parentX + self.x + bx, parentY + self.y + by
@@ -1450,11 +1463,11 @@ function doHelp()
     local help_hit = root:hitTestHelp(gfx.mouse_x,gfx.mouse_y);
     if lastHelpElem ~= help_hit then
       if help_hit ~= nil and help_hit.helpL ~= nil then
-        _helpL.y = (help_hit.drawy or help_hit.y) - 36
+        _helpL.y = math.max((help_hit.drawy or help_hit.y) - 36,30)
         _helpL.text.str = help_hit.helpL
       end
       if help_hit ~= nil and help_hit.helpR ~= nil then
-        _helpR.y = help_hit.drawy - 36
+        _helpR.y = math.max(help_hit.drawy - 36,30)
         _helpR.text.str = help_hit.helpR
       end
       resize = 1
@@ -1964,7 +1977,6 @@ activeMouseElement = nil
 _helpL.y, _helpR.y = 10000,10000
 editPage = tonumber(reaper.GetExtState(sTitle,'editPage')) or 1
 editPage2 = tonumber(reaper.GetExtState(sTitle,'editPage2')) or 1 -- for non-def themes
-dpi = 1
 drawScale = 1
 
 indexParams()
@@ -1978,7 +1990,7 @@ function runloop()
 
   themeCheck()
   getDock()
-  if gfx.ext_retina ~= dpi then getDpi() end
+  getDpi()
 
   chgidx = reaper.GetProjectStateChangeCount(0)
   if chgidx ~= lastchgidx then

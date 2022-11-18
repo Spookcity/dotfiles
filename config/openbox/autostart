@@ -6,6 +6,7 @@
 
 
 ~/.fehbg &
+cadence --minimized &
 compton --config /home/rick/.config/compton.conf -b &
 tint2 &
 /home/rick/scripts/music-start-ob &

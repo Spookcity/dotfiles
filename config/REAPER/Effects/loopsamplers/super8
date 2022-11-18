@@ -71,7 +71,7 @@ out_pin:output 8
 out_pin:monitor output
 out_pin:click output
 
-options: maxmem=33000000 no_meter
+options: maxmem=33000000 no_meter gfx_idle
 
 slider1:g_slider_sync=0<0,2,1{off,project,playback}>-Sync
 slider4:g_slider_click_cnt=0<0,64,1>-Click count/length
@@ -83,9 +83,6 @@ g_nchan = 8;
 g_max_alloc = __memtop(); // JSFX memory available
 g_latchq_len = 1024; // 1024 midi events queueable for latch mode
 g_maxlen = ((g_max_alloc-4096 - g_latchq_len*3)/(g_nchan+1))|0; // use nearly all of available memory
-g_fadespeed = exp(-1/(srate * 0.002));  // fade speed for playback/monitoring
-g_slope_recin = 1/(srate * 0.001); // fade length for starting rec
-g_slope_recout = 1/(srate * 0.030); // fade length for ending rec
 g_infthreshdb = -120;
 g_infthresh = 10^(g_infthreshdb/20);
 g_latchmode=0;
@@ -108,6 +105,13 @@ st_rdc = 11; // msec, chX.rdc is samples
 st_div = 12; // subdiv, 1=normal, chX.div is 1/this
 st_num = 13;
 
+function recalc_fades() (
+  g_fadespeed = exp(-1/(srate * 0.002));  // fade speed for playback/monitoring
+  g_slope_recin = 1/(srate * 0.001); // fade length for starting rec
+  g_slope_recout = 1/(srate * 0.030); // fade length for ending rec
+);
+
+recalc_fades();
 
 function get_section(s) local(r) ( s?(r=s):r; );
 
@@ -568,6 +572,8 @@ cfgp_sync[] != floor(g_slider_sync+0.5) ? (
   cfgp_clickcnt[] = g_slider_click_cnt|0;
 );
 
+recalc_fades();
+
 @serialize
 function doconf() local(i,s) (
   i=mem_stlist;
@@ -642,10 +648,10 @@ g_prevent_processing &= 0xd;
   g_length = (srate * (g_click_int>0?g_click_int:ts_num) * 240.0 / (tempo * ts_denom))|0;
   (play_state&1) ? (
     g_inactive_blockcnt=0;
-    g_pos = (play_position*srate)%g_length;
+    g_pos = (play_position*srate + 0.5)%g_length;
   ) : (
     g_syncmode==2 ? (
-      g_pos = (play_position*srate)%g_length;
+      g_pos = (play_position*srate + 0.5)%g_length;
       g_prevent_processing |= 2;
     ) : (
       g_pos %= g_length;
@@ -844,8 +850,6 @@ g_chan_selected >= 0 ? (
 
 get_section('gfx');
 
-gfx_clear=-1;
-
 function format_note(str, note) //1=CC,2=PC
 (
   (note%129) == 128 || note >= 129*3 ? (
@@ -900,7 +904,7 @@ function draw_value_tweaker(xpos,ypos,midimem,draw, lbl)
     lbl == "RDC" ? (
       t ? (
         cap_last_y = mouse_y;
-        midimem[0] = min(max(midimem[0]-t*(.1*4),0),100);
+        midimem[0] = min(max(midimem[0]-t*(.1*4),0),500);
         rec2 = get_linked_rec(((midimem-mem_stlist)/st_num)|0);
         rec2 >= 0 ? (
           rec2[st_rdc]=midimem[0];
@@ -1320,7 +1324,7 @@ function draw_position(ypos) local(last_pos,last_len)
     gfx_set(0.25,0.125,0.0);
     gfx_rect(0,ypos,gfx_w,20);
     gfx_set(0.125,0.25,0.5);
-    gfx_rect(0,ypos,g_pos/g_length * gfx_w,20);
+    g_length > 0 ? gfx_rect(0,ypos,g_pos/g_length * gfx_w,20);
     gfx_x=2;
     gfx_y=ypos+2;
     gfx_set(1,1,1);
@@ -1328,7 +1332,6 @@ function draw_position(ypos) local(last_pos,last_len)
       cfgp_sync[] ? tempo : estbpm(last_len));
   );
 );
-
 
 function draw_topbar(need_ref) local(s,i,t, lastlen, lastgate, lastlatch, lastclickcount, lastvclickoffs, lastoffs, lastsync)
 (
@@ -1459,58 +1462,6 @@ function get_vclick_pos(latms) local(tmp)
   ) : -1;
 );
 
-vclick_pos = cfgp_vclick[]>0 ? get_vclick_pos(cfgp_vclick[]) : -1;
-
-last_vclick_pos != vclick_pos ? (
-  last_w=0;
-  last_vclick_pos=vclick_pos;
-);
-
-last_w != gfx_w || last_h != gfx_h ? (
- gfx_set(0.125);
- gfx_rect(0,0,gfx_w,gfx_h);
-);
-
-draw_topbar(last_w != gfx_w || last_h != gfx_h);
-draw_position(15);
-draw(0, 40);
-
-gfx_x=0;
-gfx_y=gfx_h-8;
-gfx_set(0);
-gfx_rect(gfx_x,gfx_y,6*8,8);
-gfx_set(.3);
-g_peakvol < g_infthresh ? (
-  gfx_printf("-inf");
-) : (
-  gfx_printf("%.0fdB",log10(g_peakvol)*20);
-  g_peakvol *= 0.93;
-);
-
-g_lastmsg>=0 && g_lastmsg_draw!=g_lastmsg ? (
-  g_lastmsg_t = format_note(#str,g_lastmsg);
-  gfx_x=gfx_w-g_lastmsg_w;
-  g_lastmsg_w = (strlen(#str) + (g_lastmsg_t?3:0)) * 8;
-  gfx_x = min(gfx_x, gfx_w-g_lastmsg_w);
-  gfx_y=gfx_h-8;
-  gfx_set(0);
-  gfx_rect(gfx_x,gfx_y,gfx_w-gfx_x,8);
-  gfx_set(.3);
-  gfx_x = gfx_w-g_lastmsg_w;
-  gfx_printf("%s%s",g_lastmsg_t==1?"CC ":g_lastmsg_t?"PC ":"",#str);
-  g_lastmsg_draw=g_lastmsg;
-);
-
-last_w = gfx_w;
-last_h = gfx_h;
-last_mouse_cap = mouse_cap;
-0 == (mouse_cap & 3) ? (
-  cap_mode > 0 ? (
-    sliderchange(-1);
-  );
-  cap_mode = 0;
-);
-
 function draw_vclick(pos,clen) 
   global(gfx_w,gfx_h,gfx_x,gfx_y)
   local(sw,sh,str)
@@ -1537,8 +1488,6 @@ function draw_vclick(pos,clen)
   gfx_drawstr(str);
   gfx_setfont(0);
 );
-
-vclick_pos >= 0 ? draw_vclick(vclick_pos,vclick_len);
 
 function draw_trim_waveform(xpos, ypos, w, h, chan, isend)
   global(g_length mem_stlist st_num st_dirty st_buf g_offs srate) 
@@ -1577,22 +1526,79 @@ function draw_trim_waveform(xpos, ypos, w, h, chan, isend)
   gfx_line(xpos,ypos,xpos,ypos+h);
 );
 
-cap_mode == cfgp_offs || cap_mode == cfgp_length ? (
-  g_edgetrim_drawstate>=0 ? (
-    draw_trim_waveform(0,40,gfx_w,gfx_h-40, max(g_chan_selected,0), cap_mode == cfgp_length);
-    g_edgetrim_drawstate=1;
+!(gfx_ext_flags&2) ? (
+  gfx_clear=-1;
+  
+  vclick_pos = cfgp_vclick[]>0 ? get_vclick_pos(cfgp_vclick[]) : -1;
+  
+  last_vclick_pos != vclick_pos ? (
+    last_w=0;
+    last_vclick_pos=vclick_pos;
   );
-) : (
-  g_edgetrim_drawstate>0 ? (
-    last_w=-1;
-    g_edgetrim_drawstate=0;
-  );  
-);
+  
+  last_w != gfx_w || last_h != gfx_h ? (
+    gfx_set(0.125);
+    gfx_rect(0,0,gfx_w,gfx_h);
+  );
+  
+  draw_topbar(last_w != gfx_w || last_h != gfx_h);
+  draw_position(15);
+  draw(0, 40);
+  
+  gfx_x=0;
+  gfx_y=gfx_h-8;
+  gfx_set(0);
+  gfx_rect(gfx_x,gfx_y,6*8,8);
+  gfx_set(.3);
+  g_peakvol < g_infthresh ? (
+    gfx_printf("-inf");
+  ) : (
+    gfx_printf("%.0fdB",log10(g_peakvol)*20);
+    g_peakvol *= 0.93;
+  );
+  
+  g_lastmsg>=0 && g_lastmsg_draw!=g_lastmsg ? (
+    g_lastmsg_t = format_note(#str,g_lastmsg);
+    gfx_x=gfx_w-g_lastmsg_w;
+    g_lastmsg_w = (strlen(#str) + (g_lastmsg_t?3:0)) * 8;
+    gfx_x = min(gfx_x, gfx_w-g_lastmsg_w);
+    gfx_y=gfx_h-8;
+    gfx_set(0);
+    gfx_rect(gfx_x,gfx_y,gfx_w-gfx_x,8);
+    gfx_set(.3);
+    gfx_x = gfx_w-g_lastmsg_w;
+    gfx_printf("%s%s",g_lastmsg_t==1?"CC ":g_lastmsg_t?"PC ":"",#str);
+    g_lastmsg_draw=g_lastmsg;
+  );
+  
+  last_w = gfx_w;
+  last_h = gfx_h;
+  last_mouse_cap = mouse_cap;
+  0 == (mouse_cap & 3) ? (
+    cap_mode > 0 ? (
+      sliderchange(-1);
+    );
+    cap_mode = 0;
+  );
+  
+  vclick_pos >= 0 ? draw_vclick(vclick_pos,vclick_len);
+  
+  cap_mode == cfgp_offs || cap_mode == cfgp_length ? (
+    g_edgetrim_drawstate>=0 ? (
+      draw_trim_waveform(0,40,gfx_w,gfx_h-40, max(g_chan_selected,0), cap_mode == cfgp_length);
+      g_edgetrim_drawstate=1;
+    );
+  ) : (
+    g_edgetrim_drawstate>0 ? (
+      last_w=-1;
+      g_edgetrim_drawstate=0;
+    );  
+  );
+); // !(gfx_ext_flags&2)
 
 // export must happen from UI thread
 function export()  local(rec, flag, tidx, idx, ster, l)
 (
-  // export, yay reaper 5.05 undocumented function!
   rec = mem_stlist;
   flag=1<<16; // go to end of project
   flag|=2<<16; // use tempo from next parameter

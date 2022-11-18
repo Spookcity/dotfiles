@@ -1,5 +1,5 @@
 [colors]
-background = #0F161E
+background = #aa0F161E
 foreground = #A9D7F5
 ;active = #6B4E5F
 ;inactive = #493541
@@ -53,7 +53,7 @@ scroll-down = bspc desktop -f next.local
 
 tray-position = right
 tray-padding = 4
-tray-background = #131C27
+tray-background = #111923
 
 [module/temperature]
 type = internal/temperature
