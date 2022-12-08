@@ -1,0 +1,90 @@
+--------------------------------------
+	INSTALLATION INSTRUCTIONS
+--------------------------------------
+
+
+* Extract all files to your REAPER resources folder.
+  It will be installed in the subdirectory 
+  "REAPER_resources_folder/Scripts/HeDaScripts/HeDaScripts Manager"
+	
+* In REAPER, load the script:
+  Go to Actions, Show Actions list...  and click "Load" and 
+  select the file "HeDaScripts Manager.lua" 
+  Now you can run the action and the HeDaScripts Manager window appears and downloads 
+  the list of scripts available to install/upgrade. 
+	
+* All downloads are managed by curl, if you are using a firewall, make sure you 
+  allow connections for curl.exe
+	
+* There are some additional files included in the _resources subdirectory.
+  If you want to delete them and download them yourself follow the next instructions:
+	
+	
+	
+	
+	
+	
+	
+--------------------------------------------------------------------------------------------
+Installation of resources files for OSX:
+--------------------------------------------------------------------------------------------
+	
+* Download unar (used to uncompress the downloaded packages)
+	- Download from http://unarchiver.c3.cx/commandline
+	command line utility and copy unar to the _resources folder inside the script folder:
+	"REAPER_resources_folder/Scripts/HeDaScripts/HeDaScripts Manager/_resources/unar"
+
+
+--------------------------------------------------------------------------------------------
+Installation of resources files for Windows:	
+--------------------------------------------------------------------------------------------
+
+
+* curl installation:	
+	- For Windows x64
+		download package from
+		https://curl.haxx.se/dlwiz/?type=bin&os=Win64&flav=-&ver=*&cpu=x86_64
+		Make sure you choose one of the mirrors that has SSL enabled.
+
+	- For Windows x32
+		download package from
+		https://curl.haxx.se/dlwiz/?type=bin&os=Win32&flav=-&ver=*
+		Make sure you choose one of the mirrors that has SSL enabled.
+	
+	- Extract the bin files:
+		From the curl package file, extract the files in bin folder to _resources 
+		directory inside the script folder: 
+
+		REAPER_resources_folder\Scripts\HeDaScripts\HeDaScripts Manager\_resources\curl-ca-bundle.crt
+		REAPER_resources_folder\Scripts\HeDaScripts\HeDaScripts Manager\_resources\curl.exe
+		REAPER_resources_folder\Scripts\HeDaScripts\HeDaScripts Manager\_resources\libcurl.dll
+
+* Download 7-Zip Extra: standalone console version (7za.exe)
+
+	http://www.7-zip.org/download.html
+
+	Extract 7za.exe into _resources folder (you may need 7zip already installed to extract 
+	it from the 7z file, or use any program that can extract from 7z files)
+
+	REAPER_resources_folder\Scripts\HeDaScripts\HeDaScripts Manager\_resources\7za.exe
+	
+* In REAPER, load the script:
+	Go to Actions, Show Actions list...  and click "Load" and 
+	select the file "HeDaScripts Manager.lua" 
+	Now you can run the action and the HeDaScripts Manager window appears and downloads 
+	the list of scripts available to install/upgrade. 
+
+	
+--------------------------------------------------------------------------------------------
+Installation of resources files for Linux:
+--------------------------------------------------------------------------------------------
+	
+* Install the utilities used to download and install the packages:
+  open a terminal window and enter the commands (example for debien/ubuntu):
+  
+      sudo apt-get install p7zip-full
+  
+      sudo apt-get install curl
+  
+  This will install curl to download the scripts and p7zip to extract the packages in the scripts.
+  

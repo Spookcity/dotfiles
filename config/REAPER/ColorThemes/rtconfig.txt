@@ -1,0 +1,565 @@
+use_pngs 1
+use_lvgs 1
+tcp_showborders 0
+mcp_showborders 0
+tcp_vupeakwidth 1
+mcp_vupeakheight 1
+mcp_mastervupeakheight 1
+mcp_altmeterpos 0
+use_overlays 0
+transport_showborders 0
+tcp_vol_zeroline 00000000
+tcp_pan_zeroline 00000000
+mcp_vol_zeroline 00000000
+mcp_pan_zeroline 00000000
+trans_speed_zeroline 99999999
+gen_vol_zeroline 00000000
+gen_pan_zeroline 00000000
+mcp_min_height 230
+mcp_voltext_flags 13
+tcp_voltext_flags 13
+vertfont_topdown 1
+
+; 				---------- REACTION beta 01a ------------
+
+;TCP
+clear tcp.*
+tcp_heights 								0 22 49 73; supercollapsed, collapsed, small(norecarm), recarm size
+tcp_folderindent 						13
+set H2										[0 22] ;hauteur de la seconde zone
+set H3										[0 42] 
+front tcp.label tcp.meter tcp.recmon tcp.recarm
+set tcp.size 								[311 90 170]
+set tcp.toosmall 						[10 10 10 10 0 0 0 0]
+set tcp.trackidx 						[290 0 20 18 1 0 1 0]
+set tcp.trackidx.margin 			[0 0 0 0 0.5]
+set tcp.trackidx.color 				?recarm [153 52 54] [40 40 40]
+set tcp.recarm							[1 1 20 20]
+set tcp.recmon 						[21 0 15 20]
+set tcp.label 							w<228 [39 1 44 19] [39 1 127 19 0 0 1 0]
+set tcp.label.margin 				[0 1 1 3] 
+set tcp.meter.readout.color 		[255 255 255 140 255 255 255 200]
+set tcp.meter.vu.div [2]
+set tcp.meter							w>=272 [160 6 22 8 1 0 1 0] w>=228 [168 6 14 8 1 0 1 0] [85 6 14 8 ]
+set tcp.fx 									w<208 [0] [208 1 20 20 1 0 1 0]
+set tcp.fxbyp 							w<208 [0] [228 1 17 20 1 0 1 0]
+set tcp.phase 							trackpanmode<4 w>228 [188 1 20 20 1 0 1 0] h>42 + H2 [104 -1 20 20] [0]
+set tcp.phase 							trackpanmode>=4 w<228 [0] [188 1 20 20 1 0 1 0]
+set tcp.mute 							w<170 [105 1 20 20] [246 1 20 20 1 0 1 0]
+set tcp.solo 								w<170 [125 1 20 20] [266 1 20 20 1 0 1 0]
+
+set tcp.fxin								h<=42 [0] w>=208 + H2 [3 -1 20 20]
+set tcp.volume 						trackpanmode<4 h<=42 [0] + H2 w>=228 [23 0 161 17 0 0 1 0] w>=208 [23 0 79 17 0 0 0 0] [3 0 99 17 0 0 0 0]
+set tcp.volume 						trackpanmode>=4 h<=42 [0] + H2 w>264 [23 0 125 17 0 0 1 0] w>=228 [23 0 161 17 0 0 1 0] w>=208 [23 0 79 17 0 0 0 0] [3 0 99 17 0 0 0 0]
+set tcp.volume.label				trackpanmode<4 h<=42 [0] w<=228 [0] + H2 [187 0 42 17 1 0 1 0]
+set tcp.volume.label				trackpanmode>=4 h<=42 [0] w<=264 [0] + H2 [150 0 32 17 1 0 1 0]
+set tcp.volume.label.margin 	[3 0 3 0 0.5]
+
+set tcp.pan								trackpanmode<4 h<=42 [0] + H2 w>=200 [237 0 17 17 1 0 1 0] [126 0 17 17 0 0 0 0]
+set tcp.pan								trackpanmode>=4 h<=42 [0] + H2 w>231 [186 0 17 17 1 0 1 0] [106 0 17 17 0 0 0 0] 
+set tcp.pan.label						h<=42 [0] w<200 [0] + * tcp.pan [1 1 0 0 1 1 1 1] [11 0 37 17]
+set tcp.pan.label.margin			[8 0 4 0]
+set tcp.pan.color						[40 40 40] 
+
+set tcp.width							trackpanmode>=4 h<=42 [0] + H2 w>231 [237 0 17 17 1 0 1 0] w>200 [158 0 17 17] w>170 [266 0 17 17 1 0 1 0] [126 0 17 17 0 0 0 0] [0]
+set tcp.width.label					trackpanmode>=4 h>42 w<=230 [0] + * tcp.width [1 1 0 0 1 1 1 1] [11 0 37 17] [0] [0]
+set tcp.width.label.margin		[8 0 4 0]
+set tcp.width.color						[40 40 40]
+
+set tcp.foldercomp 					[tcp.trackidx 1 20 20 1 0 1 0]
+set tcp.folder 							h>40 + tcp.foldercomp [0 65 0 0 0 1 0 1]
+
+set tcp.recmode 						h>62 [3 41 20 20] [0]
+set tcp.recinput 						h<=62 [0] + [25 41 75 18] w>238 [0 0 72 0 0 0 1] [0]
+set tcp.env 								h<=62 [0] + H3 + [104 0 18 18] w>238 [72 0 30 0 1 0 1] [0]
+set tcp.io 									h<=62 [0] + H3 + [125 0 18 18] w>207 [103 0 40 0 1 0 1] [0] 
+set tcp.fxparm 						[4 62 273 30 0 0 1 1]
+set tcp.fxparm.margin 			[1 0 4 3]
+set tcp.recinput.margin 			[4 1 12 0]
+set tcp.recinput.color 				[40 40 40]
+;EndTCP
+
+Layout "Wide" "Tcp_Wide"
+
+clear tcp.*
+front tcp.label tcp.meter tcp.recmon tcp.recarm tcp.folder
+set tcp.size 								[311 90 170]
+set tcp.recarm							[3 1 20 20]
+set tcp.recmon 						+ tcp.recarm{w}@x [tcp.recarm 1 15 20]
+set tcp.label 							w<228 [39 1 44 19] [39 1 127 19 0 0 1 0]
+set tcp.label.margin 				[0 1 1 3]
+set tcp.label.color 					?recarm [180 106 106] [180 180 180]
+set tcp.fx 									w<208 [0] [208 1 20 20 1 0 1 0]
+set tcp.fxbyp 							w<208 [0] [228 1 17 20 1 0 1 0]
+set tcp.phase 							w<228 [0] [188 1 20 20 1 0 1 0]
+set tcp.mute 							w<170 [105 1 20 20] [246 1 20 20 1 0 1 0]
+set tcp.solo 								w<170 [125 1 20 20] [266 1 20 20 1 0 1 0]
+set tcp.trackidx 						w>=139 + V1 [290 0 20 18 1 0 1 0]
+set tcp.trackidx.margin 			[0 0 0 0 0.5]
+set tcp.trackidx.color 				?recarm [153 52 54] [40 40 40] 
+set tcp.folder							w<228 [82 2 20 15 ] [165 2 20 15 1 0 1 0]
+set tcp.foldercomp 					[tcp.trackidx 1 20 20 1 0 1 0]
+set tcp.fxin								h>58 w>251 [4 21 20 35 0 0 0 0] [0]
+set tcp.meter.inputlabel.color 		[1 1 1 1 1 1 1 1]
+set tcp.meter.inputlabelbox.color [1 1 1 1 1 1 1 1]
+set tcp.meter 							h>58 + [tcp.fxin{w}] w<139 [9 27 99 9] + * [0 0 -1 0] [0 0 tcp.fxin 0] [9 27 270 9 0 0 1 0] [0]
+set tcp.meter.readout.color 		[255 255 255 250 254 256 77 255]
+set tcp.meter.vu.div 					[2]
+set tcp.volume 						h>58 + [tcp.fxin{w}] w<139 [5 39 109 15] + * [0 0 -1 0] [0 0 tcp.fxin 0] [5 39 280 15 0 0 1 0] [0]
+set tcp.volume.label.color 		[210 210 210]
+set tcp.volume.label.margin 	[3 0 3 0 0.5]
+set var1 									trackpanmode<4 [238] [290]
+set tcp.recinput 						h>104 w>var1{x} [5 79 280 18 0 0 1 0] trackpanmode>=4 w>245 [50 79 234 18 0 0 1 0] w>194 [50 79 183 18 0 0 1 0] [50 79 66 18] [50 79 234 18 0 0 1 0] [0]
+set tcp.recinput.margin 			[4 1 12 0]
+set tcp.recinput.color 				[40 40 40]
+set tcp.env 								h>81 w>var1{x} [49 58 50 20] [4 58 50 20] [0]
+set tcp.io 									h>81 w>var1{x} [103 59 58 18] [58 59 58 18] [0]
+set tcp.recmode 						h>81 w>var1{x} [4 58 44 20] h>104 [4 79 44 20] [0]
+set tcp.pan 								h<=81 [0] w>=200 [237 59 17 17 1 0 1 0] [126 59 17 17 0 0 0 0]
+set tcp.pan.color						[40 40 40]
+set tcp.pan.label 						h<=81 [0] w<200 [0] + * tcp.pan [1 1 0 0 1 1 1 1] [11 0 37 17]
+set tcp.pan.label.margin			[8 0 4 0]
+set tcp.pan.label.color 			[210 210 210]
+set tcp.width							trackpanmode<4 [0] h>81 w>245 + tcp.pan [-51] h>104 + tcp.pan [0 20] [0] [0]
+set tcp.width.color						[30 30 30]
+set tcp.width.label					trackpanmode<4 [0] h<=81 [0] w<200 [0] w<=245 h<=104 [0] + * tcp.width [1 1 0 0 1 1 1 1] [11 0 37 17] + * tcp.width [1 1 0 0 1 1 1 1] [11 0 37 17] [0]
+set tcp.width.label.margin		[8 0 4 0]
+set tcp.width.label.color 			tcp.pan.label.color
+set tcp.fxparm 						[4 101 273 -15 0 0 1 1]
+set tcp.fxparm.margin 			[1 0 4 3]
+set tcp.toosmall 						[10 10 10 10 0 0 0 0]
+EndLayout
+
+Layout "Narrow" "Tcp_Narrow"
+clear tcp.*
+set H3 										[0 23]
+front tcp.label tcp.recarm tcp.meter tcp.volume.label tcp.volume
+set tcp.size 								[311 90 170]
+set tcp.recarm							[5 5 10 11]
+set tcp.label 							w>228 [18 1 121 19 0 0 1] [18 1 39 19]
+set tcp.trackidx 						w>200 [290 0 20 18 1 0 1 0] [0]
+set tcp.trackidx.margin 			[0 0 0 0 0.5]
+set tcp.trackidx.color 				?recarm [153 52 54] [40 40 40]
+
+set tcp.volume 					 	w>228 [146 2 17 17 1 0 1 0] [64 2 17 17]
+set tcp.volume.color					[100 100 100 1]
+set tcp.volume.label 				+ * tcp.volume [1 1 0 0 1 1 1 1] [0 0 37 17]
+set tcp.volume.label.margin 	[6 0 2 0 0.5]
+set tcp.meter							w>228 [141 5 3 10 1 0 1 0] [59 5 3 10]
+
+set tcp.fx 									w<187 [0] [226 1 20 20 1 0 1 0]
+set tcp.pan								w<208 [0] w>228 [187 3 13 13 1 0 1 0] [105 3 13 13] 
+set tcp.pan.color						[40 40 40]
+
+set tcp.width							trackpanmode<4 [0] w<228 [0] [207 3 13 13 1 0 1 0]
+set tcp.width.color						[40 40 40]
+
+set tcp.mute 							w<170 [105 1 20 20] [246 1 20 20 1 0 1 0]
+set tcp.solo 								w<170 [125 1 20 20] [266 1 20 20 1 0 1 0]
+
+set tcp.foldercomp 					[tcp.trackidx 1 20 20 1 0 1 0]
+set tcp.folder 							h>40 + tcp.foldercomp [0 65 0 0 0 1 0 1]
+
+set var1										trackpanmode>4 [259] [239]
+set tcp.fxin								h<=42 [0] w>187 + H3 + [2 -1 20 20] [0]
+set tcp.recmon 						h<=42 [0] w>var1{x} + H3 [23 0 14 18]  w>187 + H3 [23 0 17 18] + H3 [3 0 17 18]
+set tcp.recmode 						h<=42 [0] w>var1{x} + H3 [37 0 16 18] [0]
+set tcp.recinput 						h<=42 [0] + H3 + [24 -1 75 18] w>var1{x} trackpanmode>=4 [32 0 20 0 0 0 1] [32 0 40 0 0 0 1] w>187 [19 0 -18] [0]
+set tcp.env 								h<=42 [0] + H3 + [104 0 18 18] w>238 [72 0 30 0 1 0 1] [0]
+set tcp.phase 							h<=42 [0] trackpanmode>=4 w>259 + H3 [154 -1 20 20 1 0 1 0] [0] w>=228 [207 1 20 20 1 0 1 0] [0]
+set tcp.io 									h<=42 [0] + H3 + [125 0 18 18] w>207 [103 0 40 0 1 0 1] [0] ;h>62 w<155 [0] [124 41 20 20] h>42 w<=410 [0] + H2 [184 -1 20 20 1 0 1 0]
+set tcp.fxparm 						[4 45 273 40 0 0 1 1]
+set tcp.fxparm.margin 			[1 0 4 3]
+set tcp.recinput.margin 			[4 1 12 0]
+set tcp.recinput.color 				[40 40 40]
+EndLayout
+
+Layout "Separator/Folder" "Separators"
+clear tcp.*
+set tcp.size 								[311 90 170]
+set tcp.folder							[3 1 20 20]
+set tcp.label 							w<139 [24 2 100 17] w<180 [24 2 260 17 0 0 1 0] [24 2 220 17 0 0 1 0]
+set tcp.label.color					[30 30 30]
+set tcp.foldercomp 					w<139 [0] [290 1 20 20 1 0 1 0]
+set tcp.mute 							w>=139 [246 1 20 20 1 0 1 0]
+set tcp.solo 								w>=139 [266 1 20 20 1 0 1 0]
+EndLayout
+
+;ENVCP
+
+clear envcp.*
+front envcp.label envcp.arm
+set envcp.size 							tcp.size
+set envcp.margin 					+:maxfolderdepth:1 [10 0 0 0]
+set envcp.margin 					+:folderdepth:1 [-10 0 0 0]
+set envcp.hide							tcp.solo
+set envcp.bypass						tcp.mute
+set envcp.learn						w>200 + envcp.bypass [-20]
+set envcp.mod							w>200 + encp.learn [-20]
+set envcp.label 						+ tcp.label [-15 0 34 0]
+set envcp.label.margin			[2 0 4 0 0]
+set envcp.label.color				[154 225 83]
+set envcp.arm 							tcp.recarm
+set envcp.fader						h>44 w<222 [5 24 285 16 0 0 1 0] [5 24 248 16 0 0 1 0]
+set envcp.value						w>222 h<44 [0] + [envcp.fader{x} envcp.fader{y}] + [envcp.fader{w}] [0 0 63 envcp.fader{h} 1 0 1 0]
+set envcp.value.margin 			[4 0 2 0 0]
+set envcp.value.color 				[210 210 210]
+;EndENVCP
+
+Layout "Alt 1"
+clear envcp.fader
+set envcp.fader						w>200 + [envcp.label{x}] + [envcp.label{w}] w>252 [5 2 17 17 0 0 0 0] [5 2 17 17 1 0 1 0] h>44 w<=222 [5 24 285 16 0 0 1 0] [5 24 248 16 0 0 1 0]
+clear envcp.value
+set envcp.value						w>272 + envcp.fader [25] [0]
+set envcp.value.color				[40 40 40] ;don't work
+EndLayout
+
+;Master
+
+clear master.tcp.*
+set H3												[0 42] 
+set master.tcp.size 							[311 90 170]
+set master.tcp.meter 						[6 4 271 11 0 0 1 0]
+
+set master.tcp.volume 					+ H2 w>264 [3 0 145 17 0 0 1 0] [3 0 99 17 0 0 0 0]
+set master.tcp.volume.label			w<=264 [0] + H2 [150 0 32 17 1 0 1 0]
+set master.tcp.volume.label.margin [3 0 3 0 0.5]
+
+set master.tcp.pan							tcp.pan
+set master.tcp.pan.label					tcp.pan.label
+set master.tcp.pan.label.margin		tcp.pan.label.margin
+set master.tcp.pan.color						tcp.pan.color
+
+set master.tcp.width						tcp.width
+set master.tcp.width.label				tcp.width.label
+set master.tcp.width.label.margin	tcp.width.label.margin
+set master.tcp.width.color					tcp.width.color
+
+set master.tcp.env 							+ H3 w>242 [4 1 48 18] [4 1 18 18] ;[4 1 48 18]
+set master.tcp.io 								+ H3 w>242 [55 1 58 18] w>212 [25 1 58 18] [25 1 18 18] ;[56 1 58 18]
+set master.tcp.mono 						+ H3 [186 0 20 20 1 0 1 0]
+set master.tcp.fx 								+ H3 [208 0 20 20 1 0 1 0]
+set master.tcp.fxbyp 						+ H3 [228 0 17 20 1 0 1 0]
+set master.tcp.mute 						+ H3 [246 0 20 20 1 0 1 0]
+set master.tcp.solo 							+ H3 [266 0 20 20 1 0 1 0]
+
+set master.tcp.label 						[290 0 18 84 1 0 1 1]
+set master.tcp.label.margin 			[0 0 0 0 0.5]
+set master.tcp.label.color 				tcp.trackidx.color
+;EndMaster
+
+;MCP
+
+; User Variables ----------
+set V2										[0 3]					; espace entre le haut du mcp et les btns
+set H2										[7]						; espace entre le bord gauche du mcp et les fader/vu/btns
+set Hadd									[-20]
+set Btn2									+ H2 [40]				; espace entre le bord gauche du mcp et les btns
+set intermargin2							+ [0 98] h<=285 [0 Hadd{x}] [0] 	; marge interieur du mcp entre le mcp_label et les fader/vu/btns
+set rec_spe2								+ intermargin2 + [0 153] h>285 [0 Hadd{x}]	; position du groupe record (rec_arm, rec_mode, and rec_input)
+; --------------------
+clear mcp.*
+set mcp.size 							[72 392]
+set mcp.trackidx 						[0 3 35 18 0 0 0 0]
+set mcp.trackidx.margin 			[7 4 3 4 0]
+set mcp.trackidx.color 			?recarm [153 52 54] [35 38 38]
+set mcp.label 							[0 25 72 22 0 0 0 0]
+set mcp.label.margin 				[4 0 4 0 0.5]
+set mcp.label.color 					?recarm [180 106 106] [194 204 204]
+set mcp.mute 							[29 4 20 20 0 0 0 0]
+set mcp.solo 							[49 4 20 20 0 0 0 0]
+
+set dual.knob							[12 55]
+set pan.Y									+ [0 mcp.label{h}] [0 mcp.label{y}]
+set mcp.pan 							trackpanmode<4 [7 50 29 29] + dual.knob [0 0 19 19]
+set mcp.pan.label 					trackpanmode<4 [23 51 43 18] [0]
+set mcp.pan.label.margin		[14 0 4 0]
+set mcp.pan.label.color 			[60 60 60]
+set mcp.pan.color						[60 60 60]
+
+set mcp.width							trackpanmode<4 [0] + dual.knob [29 0 19 19]
+set mcp.width.label.color		[60 60 60]
+set mcp.width.color					[60 60 60]
+
+set mcp.meter.readout.color 		[255 255 255 140 255 255 255 200]
+set mcp.meter.vu.div [2]
+set mcp.meter 						+ intermargin2 + [12 8 10 292 0 0 0 1] h>285 [0 0 0 Hadd{x}] [0]
+set mcp.volume					 	+ intermargin2 + [25 4 17 301 0 0 0 1] h>285 [0 0 0 Hadd{x}] [0]
+set mcp.volume.color					[60 60 60]
+set mcp.volume.label				h<=285 [0] [7 81 59 18]
+set mcp.volume.label.margin 	[0 0 0 0 0.5]
+set mcp.volume.label.color 	[60 60 60]
+
+set mcp.folder 						[2 4 20 20]
+set mcp.phase 						+ intermargin2 + V2 + Btn2 [0 0 20 20]
+set mcp.io 								+ intermargin2 + V2 + Btn2 [0 20 20 20]
+set mcp.env 							+ intermargin2 + V2 + Btn2 [0 40 20 20]
+set mcp.fx 								+ intermargin2 + V2 + Btn2 [0 61 20 20]
+set mcp.fxbyp 							+ intermargin2 + V2 + Btn2 [0 81 20 18]
+set mcp.fxin 							h>=268 + rec_spe2 + V2 + Btn2 [0 98 20 16 0 1 0 1] [0]
+set mcp.recmode						h>=268 + rec_spe2 + V2 + Btn2 [0 82 20 16 0 1 0 1] h>=248 + rec_spe2 + V2 + Btn2 [0 98 20 16 0 1 0 1] [0] 
+set mcp.recmon 						+ rec_spe2 + V2 + Btn2 [0 114 20 17 0 1 0 1]
+set mcp.recarm 						+ rec_spe2 + V2 + Btn2 [0 131 20 19 0 1 0 1]
+set mcp.extmixer.mode 			[0]
+;EndMCP
+ 
+;Master
+clear master.mcp.*
+set sizeadd										[40]
+set master.mcp.size 							[112 392]
+set master.mcp.label 						+ [0 0 sizeadd{x}] mcp.label
+set master.mcp.label.margin 			mcp.label.margin
+set master.mcp.label.color 				mcp.label.color
+set master.mcp.mute 						+ sizeadd mcp.mute
+set master.mcp.solo 						+ sizeadd mcp.solo
+set master. mcp.meter.readout.color 	[255 255 255 140 255 255 255 200]
+set master.mcp.meter.vu.div [6]
+set master.mcp.meter.vu.rmsdiv [6]
+set master.mcp.meter.readout.color [255 255 255 220 255 150 150 255]
+set master.mcp.meter.rmsreadout.color [255 255 255 140 255 255 255 200]
+set master.mcp.meter.scale.color.unlit.top [255 255 255 100 0 0 0 255]
+set master.mcp.meter.scale.color.unlit.bottom [255 255 255 100 0 0 0 255]
+set master.mcp.meter.scale.color.lit.top [255 255 255 255 0 0 0 150]
+set master.mcp.meter.scale.color.lit.bottom [255 255 255 255 0 0 0 150]
+set master.mcp.meter 							+ [0 0 sizeadd{x}]  mcp.meter 
+set master.mcp.volume 						+ sizeadd mcp.volume
+set master.mcp.volume.color					[80 80 80]
+set master.mcp.volume.label 				h<=285 [0] [7 81 99 18]
+set master.mcp.volume.label.margin [0 0 0 0 0.5]
+set master.mcp.volume.label.color 	mcp.volume.label.color
+set master.mcp.pan 							mcp.pan 
+set master.mcp.pan.color						[80 80 80]
+set master.mcp.pan.label 					[23 51 83 18]
+set master.mcp.pan.label.margin		mcp.pan.label.margin
+set master.mcp.pan.label.color 			mcp.pan.label.color
+set master.mcp.width							+ sizeadd{x}@w mcp.width
+set master.mcp.width.label					mcp.width.label
+set master.mcp.width.label.color		mcp.width.label.color
+set master.mcp.mono 							+ sizeadd mcp.phase
+set master.mcp.io 								+ sizeadd mcp.io
+set master.mcp.env 							+ sizeadd mcp.env
+set master.mcp.fx 								+ sizeadd mcp.fx
+set master.mcp.fxbyp				 			+ sizeadd mcp.fxbyp
+set master.mcp.menubutton 				[3 4 20 20]
+;EndMaster
+ 
+Layout "Alt 1 (Vol label at bottom)"  
+set Hadd										[-22]
+set Btn2										+ H2 [40]; espace entre le bord gauche du mcp et les btns
+set intermargin2								[0 78]; marge interieur du mcp entre le mcp_label et les fader/vu/btns
+set rec_spe2									+ intermargin2 + [0 153] h>285 [0 Hadd{x}] [0]
+
+set master.mcp.meter 					+ [0 0 sizeadd{x}] + intermargin2 + [12 8 10 292 0 0 0 1] h>285 [0 0 0 Hadd{x}] [0]
+set master.mcp.volume 				+ sizeadd + intermargin2 + [25 4 17 301 0 0 0 1] h>285 [0 0 0 Hadd{x}] [0]
+set master.mcp.volume.label 		h<=285 [0] h<=285 [0] [7 366 99 18 0 1 0 1]
+set master.mcp.mono 					+ sizeadd + intermargin2 + V2 + Btn2 [0 0 20 20]
+set master.mcp.io 						+ sizeadd + intermargin2 + V2 + Btn2 [0 20 20 20]
+set master.mcp.env 					+ sizeadd + intermargin2 + V2 + Btn2 [0 40 20 20]
+set master.mcp.fx 						+ sizeadd + intermargin2 + V2 + Btn2 [0 61 20 20]
+set master.mcp.fxbyp				 	+ sizeadd + intermargin2 + V2 + Btn2 [0 81 20 18]
+EndLayout
+
+Layout "Alt 1 (Vol label at bottom)"
+  
+set Hadd										[-22]
+set Btn2										+ H2 [40]; espace entre le bord gauche du mcp et les btns
+set intermargin2								[0 78]; marge interieur du mcp entre le mcp_label et les fader/vu/btns
+set rec_spe2									+ intermargin2 + [0 153] h>285 [0 Hadd{x}] [0]
+
+ set mcp.meter 							+ intermargin2 + [12 8 10 292 0 0 0 1] h>285 [0 0 0 Hadd{x}] [0]
+set mcp.volume					 		+ intermargin2 + [25 4 17 301 0 0 0 1] h>285 [0 0 0 Hadd{x}] [0]
+set mcp.volume.color						[60 60 60]
+set mcp.volume.label					h<=285 [0] [7 366 59 18 0 1 0 1]
+set mcp.phase 							+ intermargin2 + V2 + Btn2 [0 0 20 20]
+set mcp.io 									+ intermargin2 + V2 + Btn2 [0 20 20 20]
+set mcp.env 								+ intermargin2 + V2 + Btn2 [0 40 20 20]
+set mcp.fx 									+ intermargin2 + V2 + Btn2 [0 61 20 20]
+set mcp.fxbyp 								+ intermargin2 + V2 + Btn2 [0 81 20 18]
+set mcp.fxin 								h>=268 + rec_spe2 + V2 + Btn2 [0 98 20 16 0 1 0 1] [0]
+set mcp.recmode							h>=268 + rec_spe2 + V2 + Btn2 [0 82 20 16 0 1 0 1] h>=248 + rec_spe2 + V2 + Btn2 [0 98 20 16 0 1 0 1] [0] 
+set mcp.recmon 							+ rec_spe2 + V2 + Btn2 [0 114 20 17 0 1 0 1]
+set mcp.recarm 							+ rec_spe2 + V2 + Btn2 [0 131 20 19 0 1 0 1]
+EndLayout
+
+Layout "Default - Alt 2" "Mcp_Alt2"
+ 
+set mcp.pan.label 						[11 45 40 20]
+set mcp.pan.label.margin			[0 0 0 0]
+set mcp.width.label						[42 66 40 20 1]
+set mcp.pan 								[9 63 29 29]
+set mcp.width								[42 50 17 17]
+set mcp.meter.readout.color 			[255 255 255 140 255 255 255 200]
+set mcp.meter.vu.div [2]
+set mcp.meter 							[12 113 10 265 0 0 0 1]
+set mcp.volume					 		+ * mcp.meter [1 1 0 1 1 1 1 1] + [3] [mcp.meter{w} -4 17 9]
+set mcp.volume.label					[8 97 29 7]
+set intermargin3								[47 86]
+set BtnsVspacing3						[0 2]
+set mcp.phase 							+ intermargin3 + BtnsVspacing3 [-8 -6 20 20]
+set mcp.io 									+ intermargin3 + BtnsVspacing3 [0 20 20 20]
+set mcp.env 								+ intermargin3 + BtnsVspacing3 [0 40 20 20]
+set mcp.fx 									+ intermargin3 + BtnsVspacing3 [0 61 20 20]
+set mcp.fxbyp 								+ intermargin3 + BtnsVspacing3 [0 81 20 18] 
+set mcp.recmode							h>=268 [47 316 20 16 0 1 0 1] h>=248 + rec_spe2 + V2 + Btn2 [0 98 20 16 0 1 0 1] [0] 
+set mcp.fxin 								h>=268 [47 332 20 16 0 1 0 1] [0]
+set mcp.recmon 							[47 348 20 17 0 1 0 1]
+set mcp.recarm 							[47 365 20 19 0 1 0 1]
+set mcp.extmixer.mode 				[0]
+EndLayout
+
+Layout "Fader - Blue" "Fader_Blue"
+set mcp.size 								[72 392]
+EndLayout
+
+Layout "Fader - Green" "Fader_Green"
+set mcp.size 								[72 392]
+EndLayout
+
+Layout "Fader - Yellow" "Fader_Yellow"
+set mcp.size 								[72 392]
+EndLayout
+
+Layout "Fader - Red" "Fader_Red"
+set mcp.size 								[72 392]
+EndLayout
+
+Layout "Extended Mixer Sidebar"
+set ems_add									[72]
+set mcp.size								[144 392]
+set mcp.label								[0 25 144 22 0 0 0 0]
+set mcp.mute 								+ ems_add [29 4 20 20 0 0 0 0]
+set mcp.solo 								+ ems_add [49 4 20 20 0 0 0 0]
+;set mcp.folder							[119 4 20 11 0 0 0 0]
+set mcp.extmixer.mode				[1]
+set mcp.extmixer.position				[72 52 64 332 0 0 0 1]
+EndLayout
+
+Layout "ThreeForce" "ThreeForce"
+;clear mcp.*
+set mcp.size 								[97 392]
+set mcp.trackidx 							[0 3 35 18 0 0 0 0]
+set mcp.trackidx.margin 				[7 4 3 4 0]
+set mcp.trackidx.color 				?recarm [153 52 54] [35 38 38]
+set mcp.label 								[0 25 97 22 0 0 0 0]
+set mcp.label.margin 					[2 0 2 0 0.5]
+set mcp.label.color 						?recarm [180 106 106] [194 204 204]
+set mcp.mute 								[54 4 20 20 0 0 0 0]
+set mcp.solo 								[74 4 20 20 0 0 0 0]
+
+set mcp.extmixer.mode				[1]
+set mcp.extmixer.position				[4 50 88 152 0 0 0 1]
+
+set three.knobs								[20 200 0 0 0 1 0 1 ]
+set mcp.volume					 		+ three.knobs [23 118 29 29]
+set mcp.volume.label					+ three.knobs [23 108 29 7]
+set mcp.volume.label.color 		[51 51 51]
+set mcp.meter 							+ three.knobs [61 63 14 92]
+set mcp.width								+ three.knobs [12 77 17 17]
+set mcp.width.label						+ three.knobs [12 64 34 7]
+set mcp.width.label.color			[51 51 51]
+set mcp.pan 								+ three.knobs [39 22 29 29]
+set mcp.pan.label						+ three.knobs [42 12 34 7]
+set mcp.pan.label.color				[51 51 51]
+
+set three.btns								[4 206 0 0 0 1 0 1]
+set mcp.folder 							[2 4 20 20]
+set mcp.phase 							+ three.btns [0 0 20 20]
+set mcp.io 									+ three.btns [0 20 20 20]
+set mcp.env 								+ three.btns [0 40 20 20]
+set mcp.fx 									+ three.btns [0 61 20 20]
+set mcp.fxbyp 								+ three.btns [0 81 20 18]
+set mcp.fxin 								[0]
+
+set three.rec									[three.btns 215 0 0 0 1 0 1]
+set mcp.recmode							+ three.rec [0 98 20 16]
+set mcp.recmon 							+ three.rec [0 114 20 17]
+set mcp.recarm 							+ three.rec [0 131 20 19]
+set three.inp 									[4 367 0 0 0 1 0 1]
+set mcp.recinput							+ three.inp [1 0 67 18]
+set mcp.recinput.margin 			[4 1 12 0]
+set mcp.recinput.color 				[70 70 70]
+set mcp.fxin									+ three.inp [68 0 20 20]
+EndLayout
+
+Layout "Narrow - 1" "Mcp_Narrow1"
+clear mcp.*
+set mcp.size 								[45 392]
+set mcp.trackidx 							[0 3 35 18 0 0 0 0]
+set mcp.trackidx.margin 				[5 4 3 4 0]
+set mcp.trackidx.color 				?recarm [153 52 54] [140 140 140]
+set mcp.label 								[2 265 16 120 0 1 0 1]
+set mcp.label.margin 					[2 0 2 0 0]
+set mcp.label.color 						?recarm [180 106 106] [194 204 204]
+set mcp.meter.readout.color 			[255 255 255 140 255 255 255 200]
+set mcp.meter.vu.div						 [2]
+set mcp.meter 							[7 24 10 235 0 0 0 1]
+set mcp.mute 								[23 161 20 20 0 1 0 1]
+set mcp.solo 								[23 181 20 20 0 1 0 1]
+set mcp.extmixer.mode				[1]
+set mcp.extmixer.position				[23 4 20 105 0 0 0 1]
+set mcp.volume					 		[24 308 17 17 0 1 0 1]
+set mcp.volume.color						[70 70 70]
+set mcp.width								trackpanmode<4 [0] h>282 [24 117 17 17 0 1 0 1]
+set mcp.width.color						[40 40 40]
+set mcp.pan 								h>260 [24 140 17 17 0 1 0 1]
+set mcp.pan.color							[70 70 70]
+set three.btns								[23 206 0 0 0 1 0 1]
+set mcp.folder 							[2 4 20 20]
+set mcp.phase 							+ three.btns [0 0 20 20]
+set mcp.io 									+ three.btns [0 20 20 20]
+set mcp.env 								+ three.btns [0 40 20 20]
+set mcp.fx 									+ three.btns [0 61 20 20]
+set mcp.fxbyp 								+ three.btns [0 81 20 18]
+set small.rec									[23 334 0 0 0 1 0 1]
+set mcp.recmode							+ small.rec [0 -2 20 16]
+set mcp.recmon 							+ small.rec [0 14 20 17]
+set mcp.recarm 							+ small.rec [0 31 20 19]
+EndLayout
+
+Layout "Separator/Folder" "Separators"
+clear mcp.*
+set mcp.size 								[18 392]
+set mcp.label 								[2 150 16 120 0 0.5 0 0.5]
+set mcp.label.margin 					[0 0 2 0 0]
+set mcp.label.color 						[40 40 40]
+set mcp.extmixer.mode				[1]
+set mcp.extmixer.position				[0]
+set mcp.folder 							[0 4 20 41]
+EndLayout
+
+;Transport
+clear trans.*
+set trans.size 								[1280 42]
+set trans.size.minmax 				[800 42 2048 200]
+set trans.margin 							[0]
+set center 									?trans_flags&1 w>1000 [395] ?trans_flags&2 [172] [74] [8]
+set btn_size									[0 7 27 29]
+set relativpos									w>1000 ?trans_flags&1 [0 0 0 0 0.5 0 0.5 0]
+
+; ------ REW STOP PLAY PAUSE REC FWD REPEAT -----
+
+set trans.rew 								+ relativpos + center + btn_size * [btn_size{w}] [0]
+set trans.play 								+ relativpos + center + btn_size * [btn_size{w}] [1]
+set trans.pause 							+ relativpos + center + btn_size * [btn_size{w}] [2]
+set trans.stop 								+ relativpos + center + btn_size * [btn_size{w}] [3]
+set trans.fwd 								+ relativpos + center + btn_size * [btn_size{w}] [4]
+set trans.rec 								+ relativpos + center + btn_size + [5 0 1 0] * [btn_size{w}] [5]
+set trans.repeat 							+ relativpos + center + btn_size + [10 0 1 0] * [btn_size{w}] [6]
+
+set trans.status 							w<682 [6 40 200 32] + relativpos + center + [30 5 200 32] ?trans_flags&1 * [btn_size{w}] [7] * [btn_size{w}] [9]
+set trans.status.margin 				[2 2 2 2 0]
+set trans.bpm.tap 						+ * trans.status [1 1 0 1 1 1 1 1] [trans.status{w} 0 40]
+set trans.bpm.tap.color 				[31 69 82]
+set trans.bpm.edit 						+ * trans.bpm.tap [1 1 1 1 1 1 1 1] trans.bpm.tap{w}@x
+set trans.bpm.edit.color 				[31 69 82]
+set trans.bpm.edit.margin 			[0 0 0 0 0.5]
+set trans.automode 						+ [6 5 60 32] ?trans_flags&1 [0] + [trans.repeat{x}] [trans.repeat{w}]
+set trans.curtimesig 					?trans_flags&4 + * trans.bpm.edit [1 1 1 1 1 1 1 1] + trans.bpm.edit{w}@x + [5 7 -12 -15]
+set trans.rate.fader 						?trans_flags&2 ?trans_flags&1 w>1000 [76 13 240 16 0 0 0.48 0] [76 6 29 29 0 0 0 0] + [trans.curtimesig{w}] + [trans.bpm.edit{x}] + [trans.bpm.edit{w}] w>1000 [8 13 240 16 0 0 0.47 0] [8 6 29 29] [0]
+set trans.rate_pos							+ trans.rate.fader{x}@x + trans.rate.fader{w}@x [4 12 58 17]
+set trans.rate								?trans_flags&2 + trans.rate_pos w>1000 ?trans_flags&1 [0 0 0 0 0.48 0 0.48] [0 0 0 0 0.47 0 0.47] [0 0 0 0 0 0 0]
+set trans.rate.margin					[5 0 0 0]
+set trans.sel									w>1000 [1070 13 190 16 1 0 1 0] w>880 [710 13 550 16 0 0 1 0] h>=80 w>520 + [trans.curtimesig{w}] [295 48 190 16] [0]
+set trans.sel.margin						[8 0 0 0]
+set trans.size.dockedheight			w<682 ?trans_flags&2 [80] [42] [42]
+;EndTransport

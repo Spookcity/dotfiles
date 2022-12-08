@@ -1,0 +1,100 @@
+---------------------------------------------------
+  HeDaScripts Manager - Changelog (What's new)     
+---------------------------------------------------
+
+* v1.07 (2018-01-16)
+  + Support for linux (native linux, not wine)
+
+* v1.06 (2017-11-18)
+  # fix remembering password correctly.
+
+* v1.05 (2017-11-02)
+  + Support for installing actions in different section ID (MIDI editor, etc)
+  # Password fix to avoid being forgotten after updating
+
+* v1.04 (2017-05-03)
+  # fix: detecting final versions to update (without pre or rc suffix)
+
+* v1.03 (2017-03-22)
+  # fix: check that the manager is installed in the correct folder before starting.
+  # fix: allow password with spaces
+ 
+* v1.02 (2017-02-26)
+  # Increase width of textbox for entering VIP e-mail. 
+  # Password textbox changed to a normal user input window that can handle paste from clipboard.
+  # fix VIP error message after updating HeDaScripts Manager.
+
+* v1.01 (2017-02-02)
+  # fixing adding all actions of the scripts for OSX systems
+
+* v1.0beta12 (2016-09-06)
+  # fix: small change in adding/removing actions
+  # debugging log file option if needed for troubleshooting. 
+  # try to support linux/wine. It may not work.
+  # include x32 and x64 libraries
+
+* v1.0beta11 (2016-07-25)
+  # new method to install/uninstall the actions. Fix for REAPER 32bit.
+
+* v1.0beta10 (2016-07-21)
+  # small cosmetics osx
+
+* v1.0beta9 (2016-07-16)
+  # fix: beta numbers >9
+
+* v1.0beta8 (2016-07-14)
+  # won't crash in REAPERx32, in windows, it installs the files, but it can't add the actions. You can add them manually.
+  
+* v1.0beta7 (2016-07-14)
+  # small fix
+  
+* v1.0beta6 (2016-07-11)
+  # fix: spacing between rows in list.
+
+* v1.0beta5 (2016-07-07)
+  # fix: display fix when installing non VIP scripts being VIP.
+  # prompt to make backups Yes or No when updating scripts.
+  # fix: backup folders when updating scripts were having version suffix of manager, not from the script. 
+
+* v1.0beta4 (2016-07-06)
+  # fix: bug not displaying correctly updates changelogs
+
+* v1.0beta3 (2016-07-05)
+  # fix: error saving VIPuser e-mail
+  
+* v1.0beta2 (2016-07-05)
+  + Support for VIP scripts
+
+* v1.0beta1 (2016-06-28)
+  + Beta release for testing
+  # fix: bug self updating HeDaScripts Manager
+
+* v1.0pre8 (2016-06-21)
+  # fixes
+  + click in icon zooms screenshot
+
+* v1.0pre7 (2016-06-19)
+  + Clicking in Script name, runs the script if installed.
+  + Filter list: Show Installed
+  + Tooltips on buttons
+  # small bugs fixed
+
+* v1.0pre6 (2016-06-17)
+  + filter list options (show all, show updates, show not installed)
+  + sort list options (sort by default, sort by updated date, sort by name)
+
+* v1.0pre5 (2016-06-16)
+  # scrollbar tweaks
+  # osx tweaks
+
+* v1.0pre4 (2016-06-15)
+  # fix: crash when updating free script logged as VIP.
+  
+* v1.0pre3 (2016-06-15)
+  # redesign and optimizations
+  
+* v1.0pre2 (2016-06-07)
+  # osx testing
+
+* v1.0pre1 (2016-05-25)
+  + Initial pre-release
