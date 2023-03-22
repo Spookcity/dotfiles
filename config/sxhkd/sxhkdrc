@@ -28,7 +28,7 @@ XF86HomePage
 
 # tux-guitar
 super + shift + t
-     JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar
+     JAVA_HOME=/usr/lib/jvm/java-11-temurin tuxguitar
 
 # file manager
 XF86Search
@@ -62,9 +62,9 @@ control + shift + e
 XF86Mail
     bspc desktop --focus ^4 && git-cola
 
- # meld
+ # metronome
 control + shift + m
-    meld
+    /usr/bin/gtick
 
 # cleaner
 control + shift + b
@@ -125,6 +125,10 @@ XF86AudioPrev
 ###############
 # bspwm hotkeys
 ###############
+
+# Toggle floating
+control + alt + d
+    bspc node -t \~floating
 
 # insert receptacle, or clear receptacles on current desktop
 super + {_,shift} + d

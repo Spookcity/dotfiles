@@ -36,7 +36,7 @@ bspc rule -a Sunflower desktop=^3 follow=on
 # bspc rule -a Meld desktop='chat' follow=on
 
 bspc rule -a Gimp state=floating
-bspc rule -a gtick state=floating
+bspc rule -a /usr/bin/gtick state=floating
 bspc rule -a Lxappearance state=floating
 bspc rule -a /usr/NX/bin/nxplayer --dialog status state=floating
 bspc rule -a Obconf state=floating
