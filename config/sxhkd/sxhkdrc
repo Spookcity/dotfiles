@@ -38,18 +38,6 @@ XF86Search
 control + shift + r
     termite --geometry=1900x1020 -e ranger
 
-# spotify
-control + shift + s
-    bspc desktop --focus ^6 && spotify
-
-# root file manager
-super + shift + r
-    bspc desktop --focus ^3 && gksudo sunflower
-
-# music
-XF86Tools
-    bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
-
 # reaper
 super + shift + m
     bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/usr/lib/REAPER/reaper" %F
@@ -73,6 +61,18 @@ control + shift + b
 # xkill
 control + alt + k
     xkill
+
+# spotify
+control + shift + s
+    bspc desktop --focus ^6 && spotify
+
+# root file manager
+super + shift + r
+    bspc desktop --focus ^3 && gksudo sunflower
+
+# music
+XF86Tools
+    bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
 # games
 XF86Calculator
@@ -131,8 +131,8 @@ control + alt + d
     bspc node -t \~floating
 
 # insert receptacle, or clear receptacles on current desktop
-super + {_,shift} + d
-    {bspc node -i,for win in `bspc query -N -d -n .leaf.!window`; do bspc node $win -k; done}
+# super + {_,shift} + d
+#    {bspc node -i,for win in `bspc query -N -d -n .leaf.!window`; do bspc node $win -k; done}
 
 # rotate, balance
 control + {_,shift} + comma
