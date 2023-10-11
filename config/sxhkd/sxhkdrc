@@ -16,41 +16,33 @@ control + space
 
 # terminal emulator
 control + Return
+    tdrop -w 1915 -h 450 -y 22 termite
+
+    # terminal emulator
+control + shift + Return
     termite
 
 # tasks
 control + shift + t
   termite --geometry=1600x900 -e htop
 
-# web
-XF86HomePage
-     bspc desktop --focus ^2 && firefox-beta
+# nvim
+control + shift + e
+  termite --geometry=1800x1000 -e nvim
 
-# tux-guitar
-super + shift + t
-     JAVA_HOME=/usr/lib/jvm/java-11-temurin tuxguitar
+# Sublime text
+super + shift + e
+   /usr/bin/subl3 -n
 
-# file manager
-XF86Search
-    bspc desktop --focus ^3 && sunflower
-
-# Ranger FM
+# ranger FM
 control + shift + r
     termite --geometry=1900x1020 -e ranger
 
-# reaper
-super + shift + m
-    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/usr/lib/REAPER/reaper" %F
+# tux-guitar
+super + control + t
+     tuxguitar
 
-# editor
-control + shift + e
-   /usr/bin/subl3 -n
-
-# git-cola
-XF86Mail
-    bspc desktop --focus ^4 && git-cola
-
- # metronome
+# metronome
 control + shift + m
     /usr/bin/gtick
 
@@ -68,7 +60,31 @@ control + shift + s
 
 # root file manager
 super + shift + r
-    bspc desktop --focus ^3 && gksudo sunflower
+    bspc desktop --focus ^3 && gksu dbus-run-session thunar
+
+# reaper
+super + shift + m
+    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/usr/lib/REAPER/reaper" %F
+
+# temp guitar aerobics
+super + shift + g
+  zat "/home/rick/Downloads/guitar-stuff-to-learn/Guitar Aerobics/Guitar Aerobics.pdf"
+
+# temp guitar gym
+super + shift + a
+    zat "/home/rick/Downloads/guitar-stuff-to-learn/Guitar Gym/Guitar Gym -- Parts 1 - 20.pdf"
+
+# web
+XF86HomePage
+     bspc desktop --focus ^2 && firefox-beta
+
+# file manager
+XF86Search
+    bspc desktop --focus ^3 && thunar
+
+# git-cola
+XF86Mail
+    bspc desktop --focus ^4 && git-cola
 
 # music
 XF86Tools
@@ -77,10 +93,6 @@ XF86Tools
 # games
 XF86Calculator
     emulationstation
-
-# temp guitar aerobics
-super + shift + g
-  zat "/mnt/Shit/books/calibre_library/Troy Nelson/Guitar Aerobics (924)/Guitar Aerobics - Troy Nelson.pdf"
 
 ###########
 #scripts

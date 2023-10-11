@@ -35,12 +35,10 @@ bspc rule -a Tor Browser desktop='' follow=on
 bspc rule -a Sunflower desktop=^3 follow=on
 # bspc rule -a Meld desktop='chat' follow=on
 
-bspc rule -a Gimp state=floating
-bspc rule -a /usr/bin/gtick state=floating
+bspc rule -a Gtick state=floating
 bspc rule -a Lxappearance state=floating
-bspc rule -a /usr/NX/bin/nxplayer --dialog status state=floating
 bspc rule -a Obconf state=floating
-bspc rule -a arandr state=floating
+bspc rule -a Arandr state=floating
 bspc rule -a retroarch state=floating border=off
 bspc rule -a File-roller state=floating
 bspc rule -a GParted state=floating focus=on
@@ -59,7 +57,7 @@ xbanish &
 ~/.fehbg &
 compton --config ~/.config/compton.conf -b &
 # redshift &
-cadence --minimized &
+# cadence --minimized &
 [[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble &
 mpd &
 xcape -e 'Control_L=Escape' &

@@ -1,6 +1,6 @@
 [colors]
-background = #aa0F161E
-foreground = #A9D7F5
+background = #000000
+foreground = #B6410E
 ;active = #6B4E5F
 ;inactive = #493541
 highlight = #207DAD
@@ -53,7 +53,7 @@ scroll-down = bspc desktop -f next.local
 
 tray-position = right
 tray-padding = 4
-tray-background = #111923
+tray-background = #000000
 
 [module/temperature]
 type = internal/temperature
@@ -91,7 +91,7 @@ format-connected-prefix-foreground = #8FCFB8
 
 [module/xwindow]
 type = internal/xwindow
-format-foreground = #E1C337
+format-foreground = #C52C06
 format-padding = 1
 label = %title:0:69:...%
 label-maxlen = 60
@@ -106,22 +106,22 @@ format-padding = 1
 format = <label> %{T2} <ramp-coreload>
 
 ramp-coreload-0 = ▁
-ramp-coreload-0-foreground = #ECC730
+ramp-coreload-0-foreground = #00AA00
 ramp-coreload-1 = ▂
-ramp-coreload-1-foreground = #ECC730
+ramp-coreload-1-foreground = #00AA00
 ramp-coreload-2 = ▃
-ramp-coreload-2-foreground = #ECC730
+ramp-coreload-2-foreground = #00AA00
 ramp-coreload-3 = ▄
-ramp-coreload-3-foreground = #ECC730
+ramp-coreload-3-foreground = #00AA00
 ramp-coreload-4 = ▅
-ramp-coreload-4-foreground = #ECC730
-ramp-coreload-5 = ▆
-ramp-coreload-5-foreground = #ECC730
+ramp-coreload-4-foreground = #00AA00
+ramp-coreload-5 = #00AA00
+ramp-coreload-5-foreground = #00AA00
 ramp-coreload-6 = ▇
-ramp-coreload-6-foreground = #ECC730
+ramp-coreload-6-foreground = #00AA00
 ramp-coreload-7 = █
-ramp-coreload-7-foreground = #ECC730
-ramp-foreground = #ECC730
+ramp-coreload-7-foreground = #00AA00
+ramp-foreground = #00AA00
 
 [module/memory]
 type = internal/memory
@@ -138,11 +138,11 @@ format = %{T3} <label-state> <label-mode>
 
 label-focused = %name%
 ;label-focused-background = #68AE93
-label-focused-foreground= #FFE040
+label-focused-foreground= #BC3207
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = #49BEE2
+label-occupied-foreground = #1E9C07
 label-occupied-padding = 1
 
 label-urgent = %name%!
@@ -160,7 +160,7 @@ port = 6600
 format-online = ﱘ  <label-song>
 label-song = %artist% ~> %title%
 format-online-padding =3
-format-online-foreground = #22973E
+format-online-foreground = #2D9608
 label-offline = MPD
 format-offline-padding = 3
 ;format-offline-foreground = #00ff0000
@@ -218,7 +218,7 @@ time-alt = %H:%M
 
 format-padding = 1
 format-background = ${colors.background}
-format-foreground = #DEC122
+format-foreground = #36A108
 
 label = %date%%time%
 
