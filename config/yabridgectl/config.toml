@@ -1,0 +1,7 @@
+plugin_dirs = ['/home/rick/vst']
+no_verify = false
+blacklist = []
+
+[last_known_config]
+wine_version = 'wine-8.9 (Staging)'
+yabridge_host_hash = 3576135841085917388

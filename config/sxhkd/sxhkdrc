@@ -15,13 +15,16 @@ control + space
 # apps
 ############
 
-# terminal emulator
 control + Return
+    tdrop -w 1915 -h 450 -y 25 termite
+
+    # terminal emulator
+control + shift + Return
     termite
 
-# tuxguitar
-control + shift + t
-    bspc desktop --focus ^5 &&  env JAVA_HOME=/usr/lib/jvm/java-11-openjdk tuxguitar
+# tux-guitar
+super + control + t
+     tuxguitar
 
 # lock the screen
 #XF86ScreenSaver
@@ -29,11 +32,12 @@ control + shift + t
 
 # web
 control + shift + w
-     bspc desktop --focus ^2 && /usr/lib/librewolf/librewolf
+    bspc desktop --focus ^2 && firefox-beta-bin
+#    bspc desktop --focus ^2 && /usr/lib/librewolf/librewolf
 
 # file manager
 control + shift + f
-   bspc desktop --focus ^3 && /home/rick/.local/share/applications/Sunflower-0.3-61/Sunflower.py
+   bspc desktop --focus ^3 && thunar
 
 # file manager (ranger)
 control + shift + r
@@ -45,15 +49,19 @@ control + shift + s
 
 # root file manager
 super + shift + r
-    bspc desktop --focus ^3 && gksu /home/rick/.local/share/applications/Sunflower-0.3-61/Sunflower.py
+    bspc desktop --focus ^3 && gksu dbus-run-session thunar
 
 # music
 control + shift + m
     bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
 
-# editor
+# nvim
 control + shift + e
-   subl3
+   termite --geometry=1800x1000 -e nvim
+
+# sublime text
+super + shift + e
+   /usr/bin/subl3 -n
 
 # git-cola
 control + shift + g
@@ -96,9 +104,13 @@ control + F1
 super + shift + m
     ~/scripts/music-start
 
-# music-stop
+# music stop
 super + shift + s
     ~/scripts/music-stop
+
+# Poweroff
+super + shift + x
+    systemctl poweroff
 
 # TogglePolybar
 super + control + 0
@@ -146,9 +158,13 @@ XF86MonBrightnessDown
 # bspwm hotkeys
 ###############
 
+# Toggle floating
+control + alt + d
+    bspc node -t \~floating
+
 # insert receptacle, or clear receptacles on current desktop
-super + {_,shift} + d
-    {bspc node -i,for win in `bspc query -N -d -n .leaf.!window`; do bspc node $win -k; done}
+#super + {_,shift} + d
+  #  {bspc node -i,for win in `bspc query -N -d -n .leaf.!window`; do bspc node $win #-k; done}
 
 # rotate, balance
 control + {_,shift} + comma
