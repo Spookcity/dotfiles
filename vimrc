@@ -29,8 +29,7 @@ Plug 'rbgrouleff/bclose.vim'
 " Plug 'valloric/youcompleteme'
 call plug#end()
 
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+let g:airline#extensions#disable_rtp_load=1
 
 " cursor
 set guicursor=
@@ -87,11 +86,11 @@ autocmd filetype nerdtree syn match html_icon ## containedin=NERDTreeFile,htm
 autocmd filetype nerdtree syn match go_icon ## containedin=NERDTreeFile
 
 " open ranger
-map <C-n> :Ranger<CR>
+map <C-n> :NERDTree<CR>
 
 :let g:NERDTreeWinSize=40
 " close NERDTree after a file is opened
- " let g:NERDTreeQuitOnOpen=1
+ let g:NERDTreeQuitOnOpen=1
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'

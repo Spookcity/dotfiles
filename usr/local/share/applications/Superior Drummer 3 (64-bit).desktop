@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Superior Drummer 3 (64-bit)
+Exec=env WINEPREFIX="/home/rick/.wine" wine C:\\\\Program\\ Files\\\\Toontrack\\\\Superior\\ Drummer\\\\Superior\\ Drummer\\ 3.exe 
+Type=Application
+StartupNotify=true
+Icon=7ACE_DtpShortcut_4F91EEB6FA4B4E2F8930CC977AC06FD6.0
+StartupWMClass=superior drummer 3.exe

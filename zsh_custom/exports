@@ -1,5 +1,5 @@
 export VISUAL='/usr/bin/subl3'
-export EDITOR='/usr/bin/subl3'
+export EDITOR='/usr/bin/nvim'
 export TERM="xterm-256color"
 export LC_ALL=C
 export LC_CTYPE=en_US.UTF-8
@@ -9,11 +9,12 @@ export CCACHE_DIR=/mnt/Shit/.ccache
 export CCACHE_EXEC=/usr/bin/ccache
 export SKIP_ABI_CHECKS=true
 export PATH=:~/.bin:~/scripts:~/scripts/android_tools/tools:~/.node_modules/bin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/lib:/sbin:/bin:/usr/bin/core_perl:/opt/android-sdk/tools:/opt/android-sdk/platform-tools
-export WORKON_HOME=$HOME/.virtualenvs
+# export WORKON_HOME=$HOME/.virtualenvs
 export npm_config_prefix=~/.node_modules
 # Android tools
 export ANDROID_HOME=/opt/android-sdk
 export JAVA_HOME=$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")
 export PATH=$PATH:/opt/android-sdk/ndk-bundle/build
 export PATH=$PATH:/opt/gradle/gradle-6.0.1-1/bin
-neofetch
+source /usr/share/doc/git-extras/git-extras-completion.zsh
+fastfetch

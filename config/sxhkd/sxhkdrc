@@ -16,7 +16,7 @@ control + space
 
 # terminal emulator
 control + Return
-    tdrop -w 1915 -h 450 -y 22 termite
+    tdrop -w 1915 -h 450 -y 25 termite
 
     # terminal emulator
 control + shift + Return

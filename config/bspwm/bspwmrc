@@ -50,8 +50,9 @@ bspc rule -a kitty state=floating
 bspc rule -a Screenkey manage=off
 
 # startups
-termite --geometry=1100x700+408+43 &
+tdrop -w 1915 -h 400 -y 22 termite &
 polybar top &
+xcape -e 'Control_L=Escape' &
 # xscreensaver -no-splash &
 xbanish &
 ~/.fehbg &
@@ -60,7 +61,6 @@ compton --config ~/.config/compton.conf -b &
 # cadence --minimized &
 [[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble &
 mpd &
-xcape -e 'Control_L=Escape' &
 $HOME/.vim/bspwm_border_color/listener
 # /usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
 
