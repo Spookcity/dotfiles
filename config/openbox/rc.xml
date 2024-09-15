@@ -396,18 +396,18 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Sunflower</name>
+          <name>thunar</name>
         </startupnotify>
-        <command>sunflower</command>
+        <command>thunar</command>
       </action>
     </keybind>
     <keybind key="W-S-f">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>Sunflower</name>
+          <name>thunar</name>
         </startupnotify>
-        <command>gksudo sunflower</command>
+        <command>gksudo thunar</command>
       </action>
     </keybind>
   </keyboard>
