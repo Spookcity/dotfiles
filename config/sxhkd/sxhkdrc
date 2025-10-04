@@ -39,8 +39,9 @@ control + shift + r
     termite --geometry=1900x1020 -e ranger
 
 # tux-guitar
-super + control + t
-     tuxguitar
+super + shift + t
+    JAVA_HOME=/usr/lib/jvm/java-11-temurin tuxguitar
+
 
 # metronome
 control + shift + m
@@ -64,11 +65,11 @@ super + shift + r
 
 # reaper
 super + shift + m
-    bspc desktop --focus ^6 && env STAGING_RT_PRIORITY_SERVER=95 STAGING_RT_PRIORITY_BASE=15 chrt -f 50 "/usr/lib/REAPER/reaper" %F
+    ~/scripts/music-start
 
-# temp guitar aerobics
+# temp speed mechanics
 super + shift + g
-  zat "/home/rick/Downloads/guitar-stuff-to-learn/Guitar Aerobics/Guitar Aerobics.pdf"
+  zat "/home/rick/Downloads/guitar-stuff-to-learn/Other/Troy Stetina - Speed Mechanics For Lead Guitar [Book+CD]/Speed Mechanics for Lead Guitar by Troy Stetina.pdf"
 
 # temp guitar gym
 super + shift + a

@@ -1,7 +1,10 @@
-plugin_dirs = ['/home/rick/vst','/home/rick/.wine/drive_c/Program Files/Common Files/VST3/iZotope']
+plugin_dirs = [
+    '/home/rick/.wine/drive_c/Program Files/Common Files/VST3',
+    '/home/rick/vst',
+]
 no_verify = false
 blacklist = []
 
 [last_known_config]
-wine_version = 'wine-8.19 (Staging)'
+wine_version = 'wine-9.20 (Staging)'
 yabridge_host_hash = 3576135841085917388
