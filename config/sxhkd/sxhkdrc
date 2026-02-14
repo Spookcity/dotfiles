@@ -16,7 +16,7 @@ control + space
 
 # terminal emulator
 control + Return
-    tdrop -w 1915 -h 450 -y 25 termite
+    tdrop -w 1915 -h 450 -y 25 -x 2 termite
 
     # terminal emulator
 control + shift + Return
@@ -64,7 +64,7 @@ super + shift + r
     bspc desktop --focus ^3 && gksu dbus-run-session thunar
 
 # reaper
-super + shift + m
+# super + shift + m
     ~/scripts/music-start
 
 # temp speed mechanics
@@ -83,9 +83,9 @@ XF86HomePage
 XF86Search
     bspc desktop --focus ^3 && thunar
 
-# git-cola
+# Reaper
 XF86Mail
-    bspc desktop --focus ^4 && git-cola
+    /home/rick/scripts/music-start
 
 # music
 XF86Tools

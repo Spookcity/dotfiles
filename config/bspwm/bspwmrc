@@ -32,9 +32,10 @@ bspc desktop  -l monocle
 bspc rule -a mpv state=floating
 bspc rule -a mplayer state=floating border=off
 bspc rule -a Tor Browser desktop='' follow=on
-bspc rule -a Sunflower desktop=^3 follow=on
+bspc rule -a vlc desktop=^4 follow=on
 # bspc rule -a Meld desktop='chat' follow=on
 
+bspc rule -a file-roller state=floating
 bspc rule -a Gtick state=floating
 bspc rule -a Lxappearance state=floating
 bspc rule -a Obconf state=floating
@@ -50,15 +51,16 @@ bspc rule -a kitty state=floating
 bspc rule -a Screenkey manage=off
 
 # startups
-tdrop -w 1915 -h 400 -y 22 termite &
+# tdrop -w 1915 -h 450 -y 27 termite &
 polybar top &
-xcape -e 'Control_L=Escape' &
+cadence --minimized &
+easyeffects --gapplication-service &
+# xcape -e 'Control_L=Escape' &
 # xscreensaver -no-splash &
-xbanish &
+unclutter &
 ~/.fehbg &
-compton --config ~/.config/compton.conf -b &
+picom --config ~/.config/picom.conf -b &
 # redshift &
-# cadence --minimized &
 [[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble &
 mpd &
 $HOME/.vim/bspwm_border_color/listener

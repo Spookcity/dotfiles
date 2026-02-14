@@ -4,6 +4,8 @@ plugin_dirs = [
 ]
 no_verify = false
 blacklist = []
+disable_pipes = true
+editor_xembed = true
 
 [last_known_config]
 wine_version = 'wine-9.20 (Staging)'
