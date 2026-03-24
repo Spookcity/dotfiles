@@ -1,6 +1,6 @@
 mpd_host = localhost
 
-mpd_port = 6300
+mpd_port = 6600
 
 mpd_music_dir = "/mnt/shit/music"
 
@@ -65,12 +65,3 @@ song_window_title_format = "{%y}-{%a -> }{%t}"
 #uncomment both statement's below if you want to display the albumart
 #execute_on_song_change="~/.ncmpcpp/albumart"
 #song_list_format = "                       $2%t $R$5%a "
-
-# Visualizer ..
-visualizer_in_stereo = "yes"
-visualizer_sync_interval = "30"
-visualizer_output_name = "Pipe"
-visualizer_fifo_path = "/tmp/mpd.fifo"
-visualizer_type = "wave" (spectrum/wave)
-visualizer_color = "green"
-visualizer_look = "∙▋"

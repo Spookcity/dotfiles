@@ -3,7 +3,7 @@ configuration {
   icon-theme:         "Paper";
   cycle:              true;
   hide-scrollbar:     true;
-  disable-history:    false;
+  disable-history:    true;
   modi:               "window,drun";
   display-drun:       "apps";
   columns: 3;

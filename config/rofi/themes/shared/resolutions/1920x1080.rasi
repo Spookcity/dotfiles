@@ -1,6 +1,6 @@
 * {
   /* General */
-  text-font:                            "Comfortaa 12";
+  text-font:                            "Comfortaa-Regular 11";
   text-font-mono:                       "RobotoMono Nerd Font Regular 12";
   icon-font:                            "Hack Nerd Font Mono 60";
   icon-font-small:                      "Hack Nerd Font Mono 24";

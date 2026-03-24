@@ -3,12 +3,14 @@
 	name = Rick M.
 
 [gui]
-	editor = subl3
+	editor = subl
 	displayuntracked = true
 	historybrowser = git-dag
 	warndetachedcommit = true
 	fontui = -family \"DejaVu Sans Mono\" -size 9 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family Monaco -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	recentrepo = /mnt/shit/AndroidSources/los/kernel/samsung/kminilte
+	recentrepo = /home/rick/android_dev/G800F-trees/android_kernel_samsung_kminilte
 
 [merge]
 	tool = meld
@@ -16,8 +18,6 @@
 	diffstat = true
 	summary = true
 
-[credential]
-	helper = store --file /home/rick/.config/git/credentials
 [difftool]
 	prompt = false
 [difftool "meld"]
@@ -54,10 +54,18 @@
 	icontheme = default
 	theme = flat-dark-green
 	hidpi = 1.5
+	startupmode = list
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = subl
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[pull]
+	rebase = false
+[url "https://"]
+	insteadOf = git://
+[protocol "file"]
+	allow = always

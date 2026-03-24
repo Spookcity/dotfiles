@@ -152,7 +152,7 @@ label-empty-padding = 1
 [module/mpd]
 type = internal/mpd
 host = localhost
-port = 6300
+port = 6600
 format-online = ﱘ   <label-song>
 label-song = %title%
 format-online-padding =3

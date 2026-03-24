@@ -44,7 +44,6 @@ bspc rule -a File-roller state=floating
 bspc rule -a GParted state=floating focus=on
 bspc rule -a Wpg state=floating
 bspc rule -a feh state=floating
-bspc rule -a skypeforlinux state=floating
 bspc rule -a Termite state=floating
 bspc rule -a kitty state=floating
 bspc rule -a Screenkey manage=off
@@ -52,14 +51,12 @@ bspc rule -a Screenkey manage=off
 # startups\
 #termite --geometry=1100x700+408+43 &
 polybar top &
-xbanish &
+unclutter &
 ~/.fehbg &
-# telegram-desktop &
-compton --config ~/.config/compton.conf -b &
-# redshift &
+picom &
 # cadence --minimized &
 mpd &
-xcape -e 'Control_L=Escape' &
+# xcape -e 'Control_L=Escape' &
 xinput disable 'SynPS/2 Synaptics TouchPad' &
 $HOME/.vim/bspwm_border_color/listener
 # /usr/bin/xautolock -time 10 -locker /usr/bin/i3lock-fancy -detectsleep &
