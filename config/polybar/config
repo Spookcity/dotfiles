@@ -42,7 +42,7 @@ font-2 = "Iosevka Nerd Font:pixelsize=14"
 
 modules-left = bspwm networkspeedup networkspeeddown mpd
 modules-center =  xwindow
-modules-right =    filesystem filesystem-home filesystem-shit memory cpu temperature volume date
+modules-right =    filesystem filesystem-home filesystem-music-projects memory cpu temperature date
 
 wm-restack = bspwm
 
@@ -71,7 +71,7 @@ thermal-zone = 0
 
 ; Threshold temperature to display warning label (in degrees celsius)
 ; Default: 80
-warn-temperature = 65
+warn-temperature = 85
 
 [module/networkspeedup]
 type = internal/network
@@ -225,6 +225,14 @@ label = %date%%time%
 [module/volume]
 type = internal/alsa
 
+; Soundcard to be used
+; Usually in the format hw:# where # is the card number
+; You can find the different card numbers in `/proc/asound/cards`
+
+master-soundcard = default
+speaker-soundcard = default
+headphone-soundcard = default
+
 format-volume = <ramp-volume>  <label-volume>
 ;format-volume-padding = 1
 ;format-volume-background = ${colors.active}
@@ -268,11 +276,11 @@ interval = 25
 mount-0 = /home
 label-mounted = %{F#75BA95}  %{F-}%{F}%free%
 
-[module/filesystem-shit]
+[module/filesystem-music-projects]
 type = internal/fs
 interval = 25
 
-mount-0 = /mnt/Shit
+mount-0 = /mnt/MusicProjects
 label-mounted = %{F#75BA95}  %{F-}%{F}%free%
 [settings]
 screenchange-reload = true

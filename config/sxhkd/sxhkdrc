@@ -16,19 +16,19 @@ control + space
 
 # terminal emulator
 control + Return
-    tdrop -w 1915 -h 450 -y 25 -x 2 termite
+    tdrop -w 1915 -h 450 -y 25 -x 2 alacritty
 
     # terminal emulator
 control + shift + Return
-    termite
+    alacritty
 
 # tasks
 control + shift + t
-  termite --geometry=1600x900 -e htop
+  alacritty -e htop
 
 # nvim
 control + shift + e
-  termite --geometry=1800x1000 -e nvim
+  alacritty -e nvim
 
 # Sublime text
 super + shift + e
@@ -36,7 +36,7 @@ super + shift + e
 
 # ranger FM
 control + shift + r
-    termite --geometry=1900x1020 -e ranger
+    alacritty -e ranger
 
 # tux-guitar
 super + shift + t
@@ -89,7 +89,7 @@ XF86Mail
 
 # music
 XF86Tools
-    bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
+    bspc desktop --focus ^6 && alacritty -e rmpc
 
 # games
 XF86Calculator
@@ -101,18 +101,18 @@ XF86Calculator
 
 # show help on sxhkd key bindings
 control + F1
-        termite --geometry 700x500 -e  ~/scripts/help.sh
+        alacritty -e  ~/scripts/help.sh
 
 # show weather
 control + F2
-        kitty --hold curl -4 wttr.in/Eindhoven
+       alacritty curl -4 wttr.in/Eindhoven
 
 # TogglePolybar
 super + control + 0
     ~/scripts/TogglePolybar.sh
 
 #super + Return
- # termite --geometry=1900x1040+8-5 -e ~/scripts/4pane_mux.sh
+ # alacritty -e ~/scripts/4pane_mux.sh
 
 # media/special keys
 # mute/unmute
