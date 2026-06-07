@@ -31,7 +31,7 @@
             "2":       SwitchToTab("Artists"),
             "3":       SwitchToTab("Albums"),
             "4":       SwitchToTab("Search"),
-            "5":       SwitchToTab("Directories"),
+            "5":       SwitchToTab("Playlists"),
             "6":       SwitchToTab("Lyrics"),
             "q":       Quit,
             ">":       NextTrack,
@@ -127,6 +127,10 @@
         (
             name: "Search",
             pane: Pane(Search),
+        ),
+        (
+            name: "Playlists",
+            pane: Pane(Playlists),
         ),
         (
             name: "Lyrics",

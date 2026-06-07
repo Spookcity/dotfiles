@@ -1,11 +1,14 @@
 binds {
     // Application Shortcuts
     XF86HomePage hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox-beta"; }
-    XF86Search   hotkey-overlay-title="Open File Manager: Thunar" { spawn-sh "thunar"; }
-    Mod+Alt+r  hotkey-overlay-title="Open File Manager as root: Thunar" { spawn-sh "gksu dbus-run-session thunar"; }
-    XF86Tools    hotkey-overlay-title="Open Music: rmpc" { spawn-sh "kitty -e rmpc"; }
-    XF86Calculator   hotkey-overlay-title="Open Games: emulationstation" { spawn-sh "emulationstation"; }
-    Mod+b  hotkey-overlay-title="Clean: Bleachbit" { spawn-sh "bleachbit"; }
+    XF86Calculator   hotkey-overlay-title="Open File Manager: Thunar" { spawn-sh "thunar"; }
+    Mod+shift+m    hotkey-overlay-title="Open Music: rmpc" { spawn-sh "alacritty -e rmpc"; }
+    Mod+shift+g  hotkey-overlay-title="Open games: emulationstation" { spawn-sh "emulationstation"; }
+    Mod+shift+b  hotkey-overlay-title="Clean: Bleachbit" { spawn-sh "bleachbit"; }
+
+    // === Scripts ===
+
+
     // === System & Overview ===
     Mod+D repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
@@ -15,7 +18,7 @@ binds {
     Mod+return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
     Mod+shift+return hotkey-overlay-title="Open Terminal" { spawn "alacritty" "--class" "floating-term"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
+        spawn "fuzzel" "toggle";
     }
     Mod+V hotkey-overlay-title="Clipboard Manager" {
         spawn "dms" "ipc" "call" "clipboard" "toggle";
@@ -43,19 +46,17 @@ binds {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
 
+// Media keys for Logitech K540
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+
     // === Audio Controls ===
      // The allow-when-locked=true property makes them work even when the session is locked.
   XF86AudioRaiseVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
   XF86AudioLowerVolume  allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
   XF86AudioMute         allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
   XF86AudioMicMute      allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-    // === Brightness Controls ===
-    XF86MonBrightnessUp allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "increment" "5" "";
-    }
-    XF86MonBrightnessDown allow-when-locked=true {
-       spawn "dms" "ipc" "call" "brightness" "decrement" "5" "";
-    }
 
     // === Window Management ===
     Ctrl+Q repeat=false { close-window; }

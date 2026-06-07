@@ -7,6 +7,11 @@ prefer-no-csd
 config-notification {
     disable-failed
 }
+workspace "1"
+workspace "2"
+workspace "3"
+workspace "4" {
+}
 // Outputs from existing configuration
 /-output "eDP-1" {
     // Uncomment this line to disable this output.
@@ -52,9 +57,9 @@ gestures {
     }
 
     hot-corners {
-         //off
+         off
         //top-left
-         top-right
+        //top-right
         // bottom-left
         // bottom-right
     }
@@ -86,8 +91,8 @@ input {
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
     touchpad {
-        // off
-        tap
+        off
+        // tap
         // dwt
         // dwtp
         // drag false
@@ -102,7 +107,7 @@ input {
     mouse {
         // off
         // natural-scroll
-         accel-speed -0.4
+         accel-speed -0.3
          accel-profile "flat"
         // scroll-method "no-scroll"
     }
@@ -155,6 +160,7 @@ layout {
         proportion 0.5
         proportion 0.66667
         proportion 0.75
+        proportion 1.0
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
@@ -205,7 +211,6 @@ overview {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-sh-at-startup "cadence"
 spawn-sh-at-startup "mpdscribble"
-spawn-at-startup "mpd"
 spawn-at-startup "/usr/lib/polkit/polkit-authentication-agent-1"
 
 environment {
@@ -219,14 +224,262 @@ animations {
     workspace-switch {
         spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
     }
-    window-open {
-        duration-ms 150
-        curve "ease-out-expo"
+// honeycomb animation
+window-open{
+
+  duration-ms 300
+  curve "linear"
+
+  custom-shader r"
+
+    #define ROOT_THREE 1.73205080757
+
+    float round_value(float value) {
+      return floor(value + 0.5);
     }
-    window-close {
-        duration-ms 150
-        curve "ease-out-quad"
+
+    // This function is used to snap fractional axial coordinates to nearest integer hexagon
+    vec2 round_to_hex(vec2 axial_coords) {
+
+      // Convert axial coordinates to Cube [ x + y + z = 0 ]
+      float x = axial_coords.x;
+      float z = axial_coords.y;
+      float y = - x - z;
+
+      // Round components to the nearest integers
+      float r_x = round_value(x);
+      float r_y = round_value(y);
+      float r_z = round_value(z);
+
+      // Check and correct rounding errors, so that our property [ x + y + z = 0 ] holds true
+      float diff_x = abs(r_x - x);
+      float diff_y = abs(r_y - y);
+      float diff_z = abs(r_z - z);
+
+      // Correct component with largest error
+
+      if( diff_x > diff_y && diff_x > diff_z) {
+        r_x = - r_y - r_z;
+      }
+      else if( diff_y > diff_z ) {
+        r_y = - r_x - r_z;
+      }
+      else {
+        r_z = - r_y - r_x;
+      }
+
+      return vec2(r_x, r_z);
     }
+
+    vec2 get_axial_coords(vec2 coords, float size) {
+
+      float q_axial = coords.x * (2.0 / 3.0);
+
+      q_axial /= size;
+
+      float r_axial = (-coords.x / 3.0) + (ROOT_THREE / 3.0) * coords.y;
+
+      r_axial /= size;
+
+      return vec2(q_axial, r_axial);
+    }
+
+    vec2 get_normal_coords_of_hex_center(vec2 axial_coords, float size) {
+
+      float q_axial = axial_coords.x;
+      float r_axial = axial_coords.y;
+
+      float x = q_axial * (3.0 / 2.0);
+
+      x *= size;
+
+      float y = ROOT_THREE * (r_axial + (q_axial * 0.5));
+
+      y *= size;
+
+      return vec2(x,y);
+    }
+
+    vec4 honeycomb_open(vec3 coords_geo, vec3 size_geo){
+
+      float progress = niri_clamped_progress;
+
+      float aspect_ratio = size_geo.x / size_geo.y;
+
+      vec2 coords = coords_geo.xy;
+
+      vec2 normalized_coords = vec2(coords.x * aspect_ratio, coords.y);
+
+      vec2 normalized_center = vec2(0.5 * aspect_ratio, 0.5);
+
+      // Size of single hexagon
+      float hex_size = 0.02 + (niri_random_seed / 20.0);
+      float unit_size = max(hex_size, 0.01);
+
+      // Convert normalized coordinates to axial
+      vec2 axial_coords = get_axial_coords(normalized_coords, unit_size);
+
+      // Find nearest hexagon cell
+      vec2 nearest_hex = round_to_hex(axial_coords);
+
+      // Get center of the nearest_hex ( in normal coords )
+      vec2 hex_center = get_normal_coords_of_hex_center(nearest_hex, unit_size);
+
+      // Get distance from center to nearest hexagon center
+      float hex_dist = distance(hex_center, normalized_center);
+
+      float max_reveal_radius = length(normalized_center) * 1.25;
+      float soft_edge_width = 0.15;
+
+      // Get the wave radius
+      float wave_radius = progress * (max_reveal_radius + soft_edge_width);
+
+      float mask = smoothstep((wave_radius - soft_edge_width), wave_radius, hex_dist);
+
+      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+      color *= (1.0 - mask);
+
+      return color;
+    }
+
+    vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+      return honeycomb_open(coords_geo, size_geo);
+    }
+
+  "
+}
+
+window-close{
+
+  duration-ms 300
+  curve "linear"
+
+  custom-shader r"
+
+    #define ROOT_THREE 1.73205080757
+
+    float round_value(float value) {
+      return floor(value + 0.5);
+    }
+
+    // This function is used to snap fractional axial coordinates to nearest integer hexagon
+    vec2 round_to_hex(vec2 axial_coords) {
+
+      // Convert axial coordinates to Cube [ x + y + z = 0 ]
+      float x = axial_coords.x;
+      float z = axial_coords.y;
+      float y = - x - z;
+
+      // Round components to the nearest integers
+      float r_x = round_value(x);
+      float r_y = round_value(y);
+      float r_z = round_value(z);
+
+      // Check and correct rounding errors, so that our property [ x + y + z = 0 ] holds true
+      float diff_x = abs(r_x - x);
+      float diff_y = abs(r_y - y);
+      float diff_z = abs(r_z - z);
+
+      // Correct component with largest error
+
+      if( diff_x > diff_y && diff_x > diff_z) {
+        r_x = - r_y - r_z;
+      }
+      else if( diff_y > diff_z ) {
+        r_y = - r_x - r_z;
+      }
+      else {
+        r_z = - r_y - r_x;
+      }
+
+      return vec2(r_x, r_z);
+    }
+
+    vec2 get_axial_coords(vec2 coords, float size) {
+
+      float q_axial = coords.x * (2.0 / 3.0);
+
+      q_axial /= size;
+
+      float r_axial = (-coords.x / 3.0) + (ROOT_THREE / 3.0) * coords.y;
+
+      r_axial /= size;
+
+      return vec2(q_axial, r_axial);
+    }
+
+    vec2 get_normal_coords_of_hex_center(vec2 axial_coords, float size) {
+
+      float q_axial = axial_coords.x;
+      float r_axial = axial_coords.y;
+
+      float x = q_axial * (3.0 / 2.0);
+
+      x *= size;
+
+      float y = ROOT_THREE * (r_axial + (q_axial * 0.5));
+
+      y *= size;
+
+      return vec2(x,y);
+    }
+
+    vec4 honeycomb_close(vec3 coords_geo, vec3 size_geo){
+
+      float progress = niri_clamped_progress;
+
+      float reverse_progress = 1.0 - progress;
+
+      float aspect_ratio = size_geo.x / size_geo.y;
+
+      vec2 coords = coords_geo.xy;
+
+      vec2 normalized_coords = vec2(coords.x * aspect_ratio, coords.y);
+
+      vec2 normalized_center = vec2(0.5 * aspect_ratio, 0.5);
+
+      // Size of single hexagon
+      float hex_size = 0.02 + (niri_random_seed / 20.0);
+      float unit_size = max(hex_size, 0.01);
+
+      // Convert normalized coordinates to axial
+      vec2 axial_coords = get_axial_coords(normalized_coords, unit_size);
+
+      // Find nearest hexagon cell
+      vec2 nearest_hex = round_to_hex(axial_coords);
+
+      // Get center of the nearest_hex ( in normal coords )
+      vec2 hex_center = get_normal_coords_of_hex_center(nearest_hex, unit_size);
+
+      // Get distance from center to nearest hexagon center
+      float hex_dist = distance(hex_center, normalized_center);
+
+      float max_reveal_radius = length(normalized_center) * 1.25;
+      float soft_edge_width = 0.15;
+
+      // Get the wave radius
+      float wave_radius = reverse_progress * (max_reveal_radius + soft_edge_width);
+
+      float mask = smoothstep((wave_radius - soft_edge_width), wave_radius, hex_dist);
+
+      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+      color *= (1.0 - mask);
+
+      return color;
+    }
+
+    vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+      return honeycomb_close(coords_geo, size_geo);
+    }
+
+  "
+}
+
+
     horizontal-view-movement {
         spring damping-ratio=0.85 stiffness=423 epsilon=0.0001
     }
@@ -269,5 +522,6 @@ include "dms/alttab.kdl"
 include "dms/binds.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
-
 include "dms/windowrules.kdl"
+
+// animations

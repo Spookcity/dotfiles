@@ -1,0 +1,197 @@
+window-open{
+
+  duration-ms 500
+  curve "ease-out-quad"
+
+  custom-shader r"
+
+    float hash(vec2 vector) {
+
+      // Take dot product of our input vector and a constant direction vector to combine x and y components of our vector into a single scalar value
+
+      // The values 127.1 and 311.7 are prime-like numbers which make sure that x, y components of our vector don't sync too easily (to avoid diagonal patterns in our noise)
+
+      float d = dot(vector, vec2(127.1, 311.7));
+
+      // sin of the scalar dot product to get a value between -1.0 and 1.0
+
+      float ds = sin(d);
+
+      // Now multiply that with 43758.5453 to get a very fast oscilating sine wave
+
+      // Take fractional_part of this large value so that whenever input vector changes even slightly, a completly different output value is obtained
+
+      float hash_value = fract(ds * 43758.5453);
+
+      return hash_value;
+    }
+
+    float noise(vec2 vector) {
+
+      vec2 i = floor(vector); // The bottom-left corner
+      vec2 f = fract(vector); // Position inside the bottom-left corner
+
+      // smoothstep function but using math (Hermite Interpolation)
+
+      f = f * f * (3.0 - 2.0 * f);
+
+      // Get random value from four corners of current square
+
+      float bottom_left = hash(i);
+      float bottom_right = hash(i + vec2(1.0, 0.0));
+      float top_left = hash(i + vec2(0.0, 1.0));
+      float top_right = hash(i + vec2(1.0, 1.0));
+
+      // blend corners from left to right
+
+      float bottom = mix(bottom_left, bottom_right, f.x);
+      float top = mix(top_left, top_right, f.x);
+
+      // blend the blended corners from bottom to top
+
+      float blend = mix(bottom,top,f.y);
+
+      return blend;
+    }
+
+    float fbm(vec2 vector, int octaves) {
+
+      // octaves is total number of layers
+      // This is to mimic nature ( clouds, mountains having many different layers )
+      // more octaves mean more details but it can be slow
+
+      float total_noise = 0.0;
+
+      // contribution of current layer
+      float amplitude = 0.5;
+
+      for (int i = 0; i < octaves; i++){
+
+        // add noise of current layer to the total noise
+        total_noise += noise(vector) * amplitude;
+
+        // zoom in or increase the frequency of features by 2.0
+        vector *= 2.0;
+
+        // decrease amplitude of next layer ( more detailed noise has less contribution )
+        amplitude *= 0.5;
+      }
+
+      return total_noise;
+    }
+
+    vec4 random_noise_reveal(vec3 coords_geo, vec3 size_geo) {
+
+      float progress = niri_clamped_progress;
+
+      vec2 coords = coords_geo.xy;
+
+      float small_seed = 3.0 + niri_random_seed * 5.0;
+      float big_seed = 25.0 + niri_random_seed * 100.0;
+
+      int octaves = 5;
+
+      float fbm_noise = fbm((coords * small_seed + big_seed), octaves);
+
+      float mask = smoothstep(progress, progress + 0.05, fbm_noise);
+
+      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+      color *= (1.0 - mask);
+
+      return color;
+    }
+
+    vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+      return random_noise_reveal(coords_geo, size_geo);
+    }
+
+  "
+}
+
+window-close{
+
+  duration-ms 400
+  curve "linear"
+
+  custom-shader r"
+
+    float hash(vec2 vector) {
+
+      float d = dot(vector, vec2(127.1, 311.7));
+
+      float ds = sin(d);
+
+      float hash_value = fract(ds * 43758.5453);
+
+      return hash_value;
+    }
+
+    float noise(vec2 vector) {
+
+      vec2 i = floor(vector);
+      vec2 f = fract(vector);
+
+      f = f * f * (3.0 - 2.0 * f);
+
+      float bottom_left = hash(i);
+      float bottom_right = hash(i + vec2(1.0, 0.0));
+      float top_left = hash(i + vec2(0.0, 1.0));
+      float top_right = hash(i + vec2(1.0, 1.0));
+
+      float bottom = mix(bottom_left, bottom_right, f.x);
+      float top = mix(top_left, top_right, f.x);
+
+      float blend = mix(bottom,top,f.y);
+
+      return blend;
+    }
+
+    float fbm(vec2 vector, int octaves) {
+
+      float total_noise = 0.0;
+
+      float amplitude = 0.5;
+
+      for (int i = 0; i < octaves; i++){
+
+        total_noise += noise(vector) * amplitude;
+
+        vector *= 2.0;
+
+        amplitude *= 0.5;
+      }
+
+      return total_noise;
+    }
+
+    vec4 random_noise_conceal(vec3 coords_geo, vec3 size_geo) {
+
+      float progress = niri_clamped_progress;
+
+      vec2 coords = coords_geo.xy;
+
+      float small_seed = 3.0 + niri_random_seed * 5.0;
+      float big_seed = 25.0 + niri_random_seed * 100.0;
+
+      int octaves = 5;
+
+      float fbm_noise = fbm((coords * small_seed + big_seed), octaves);
+
+      float mask = smoothstep(progress, progress + 0.05, fbm_noise);
+
+      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+      vec4 color = texture2D(niri_tex, coords_tex.st);
+
+      color *= mask;
+
+      return color;
+    }
+
+    vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+      return random_noise_conceal(coords_geo, size_geo);
+    }
+
+  "
+}
