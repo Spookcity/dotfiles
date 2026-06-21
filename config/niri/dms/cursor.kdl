@@ -5,5 +5,6 @@
 
 cursor {
     xcursor-theme "ArchCursorTheme"
-    xcursor-size 30
+    xcursor-size 28
+    hide-when-typing
 }

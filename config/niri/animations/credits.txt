@@ -1,0 +1,4 @@
+Animation credits
+
+https://github.com/arch-disciple/niri-shader-collection
+https://github.com/jgarza9788/niri-animation-collection

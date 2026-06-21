@@ -1,0 +1,25 @@
+# niri-sidebar configuration — tuned for T530 1600x900
+
+[geometry]
+width = 360       # ~22% of 1600px width, leaves ~1200px for tiled columns
+height = 300       # two stacked windows fit comfortably in the vertical space
+gap = 8
+
+[margins]
+top = 44           # clears a typical DMS top bar — bump up if yours sits taller
+right = 8          # matches the niri layout gap=5 you're already running
+left = 8
+bottom = 8
+
+[interaction]
+position = "right"
+peek = 8                  # thin sliver when hidden, doesn't waste screen real estate
+focus_peek = 368           # width(360) + right(8) — focusing a window fully reveals it
+sticky = true              # keep music/chat visible across workspaces
+
+[window_rule]
+app_id = "Alacritty"
+title = "^rmpc$"        # set Alacritty's --title to "rmpc" if you haven't already
+width = 360
+height = 220
+auto_add = true

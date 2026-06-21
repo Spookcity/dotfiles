@@ -3,17 +3,10 @@
 #![enable(unwrap_variant_newtypes)]
 (
     mpd_port: "6600",
-    mpd_music_dir: "/mnt/shit/music",
+    mpd_music_dir: "/mnt/Shit/music",
     theme: "catppuccin_mocha",
 
 
-
-
-
-    on_song_change: ["~/.config/rmpc/increment_play_count"],
-    volume_step: 5,
-    max_fps: 30,
-    scrolloff: 0,
     wrap_navigation: false,
     enable_mouse: true,
     status_update_interval_ms: 1000,
@@ -38,7 +31,7 @@
             "2":       SwitchToTab("Artists"),
             "3":       SwitchToTab("Albums"),
             "4":       SwitchToTab("Search"),
-            "5":       SwitchToTab("Directories"),
+            "5":       SwitchToTab("Playlists"),
             "6":       SwitchToTab("Lyrics"),
             "q":       Quit,
             ">":       NextTrack,
@@ -136,8 +129,8 @@
             pane: Pane(Search),
         ),
         (
-            name: "Directories",
-            pane: Pane(Directories),
+            name: "Playlists",
+            pane: Pane(Playlists),
         ),
         (
             name: "Lyrics",

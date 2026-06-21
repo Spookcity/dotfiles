@@ -20,7 +20,7 @@ control + Return
 
     # terminal emulator
 control + shift + Return
-    termite
+    kitty
 
 # tux-guitar
 super + control + t
@@ -37,7 +37,7 @@ control + shift + w
 
 # file manager
 control + shift + f
-   bspc desktop --focus ^3 && thunar
+   bspc desktop --focus ^3 && pcmanfm
 
 # file manager (ranger)
 control + shift + r
@@ -49,15 +49,15 @@ control + shift + s
 
 # root file manager
 super + shift + r
-    bspc desktop --focus ^3 && gksu dbus-run-session thunar
+    bspc desktop --focus ^3 && gksu dbus-run-session pcmanfm
 
 # music
 control + shift + m
-    bspc desktop --focus ^6 && termite --geometry=1913x500+0+26 -c /home/rick/.config/termite/config2 -e ncmpcpp
+    bspc desktop --focus ^6 alacritty -e rmpc
 
 # nvim
 control + shift + e
-   termite --geometry=1800x1000 -e nvim
+   alacritty -e nvim
 
 # sublime text
 super + shift + e

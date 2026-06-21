@@ -1,47 +1,55 @@
 binds {
     // Application Shortcuts
-    Super+shift+w hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox-beta"; }
-    Super+shift+f  hotkey-overlay-title="Open File Manager: Thunar" { spawn-sh "thunar"; }
-    Mod+Alt+r  hotkey-overlay-title="Open File Manager as root: Thunar" { spawn-sh "gksu dbus-run-session thunar"; }
-    Super+shift+m hotkey-overlay-title="Open Music: rmpc" { spawn-sh "kitty -e rmpc"; }
-    Super+shift+g   hotkey-overlay-title="Open Games: emulationstation" { spawn-sh "emulationstation"; }
-    Mod+b  hotkey-overlay-title="Clean: BLeachbit" { spawn-sh "bleachbit"; }
+    Mod+B hotkey-overlay-title="Open Firefox" { spawn-sh "firefox-beta"; }
+    Mod+E  hotkey-overlay-title="Open PCManFM" { spawn-sh "pcmanfm"; }
+    Mod+shift+E  hotkey-overlay-title="Open PCManFM as Root" {spawn-sh "pkexec pcmanfm"; }
+    Mod+A hotkey-overlay-title="Open RMPC" { spawn-sh "alacritty --title rmpc -e rmpc"; }
+    Mod+G   hotkey-overlay-title="Open Emulationstation" { spawn-sh "emulationstation"; }
+    Mod+Shift+B  hotkey-overlay-title="Open Bleachbit" { spawn-sh "bleachbit"; }
+    Mod+shift+C hotkey-overlay-title="Open Claude" { spawn-sh "claude-desktop"; }
+    Mod+S hotkey-overlay-title="Open Spotify"    { spawn-sh "spotify"; }
+    Mod+P hotkey-overlay-title="Open Reaper" { spawn-sh "reaper"; }
+    Mod+Shift+N hotkey-overlay-title="Open Neovim"  { spawn-sh  "alacritty -e nvim"; }
+
+    // === Sidebar
+    Mod+X { spawn-sh "niri-sidebar toggle-window"; }
+    Mod+Shift+X { spawn-sh "niri-sidebar toggle-visibility"; }
+    Mod+Ctrl+X { spawn-sh "niri-sidebar flip"; }
+    Mod+Alt+X { spawn-sh "niri-sidebar reorder"; }
+
+
     // === System & Overview ===
     Mod+D repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
     Mod+Shift+ESCAPE { show-hotkey-overlay; }
 
     // === Application Launchers ===
-    Mod+return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
-    Mod+shift+return hotkey-overlay-title="Open Terminal" { spawn "alacritty" "--class" "floating-term"; }
+    Mod+return hotkey-overlay-title="Open Allacritty" { spawn "alacritty"; }
+    Mod+shift+return hotkey-overlay-title="Open Floating Allacritty" { spawn "alacritty" "--class" "floating-term"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
-        spawn "dms" "ipc" "call" "spotlight" "toggle";
+        spawn "fuzzel" "toggle";
     }
-    Mod+V hotkey-overlay-title="Clipboard Manager" {
-        spawn "dms" "ipc" "call" "clipboard" "toggle";
-    }
+
     Mod+M hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
 
-    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
+    Mod+Shift+Backspace hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+Comma hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
     Mod+Y hotkey-overlay-title="Browse Wallpapers" {
         spawn "dms" "ipc" "call" "dankdash" "wallpaper";
     }
-    Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
-        spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
-    }
+    // === Mod+Shift+X { quit; }
+    // ===Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
+    // ===    spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
+   //==== }
 
     // === Audio Controls ===
     XF86AudioRaiseVolume allow-when-locked=true {
@@ -87,10 +95,10 @@ binds {
     Ctrl+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
-    Mod+S { toggle-window-floating; }
+    Mod+V { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
-    Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
+    Ctrl+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
 
     // === Focus Navigation ===
     Mod+Left  { focus-column-left; }

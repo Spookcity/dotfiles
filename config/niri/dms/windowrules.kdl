@@ -1,96 +1,179 @@
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
+// DMS Window Rules - Managed by DankMaterialShell
+// Do not edit manually - changes may be overwritten
+
+// @id=dms_rule_0 @name=
 window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    match app-id="^org\\.wezfurlong\\.wezterm$"
 }
+
+// @id=dms_rule_1 @name=
 window-rule {
-    match app-id=r#"^org\.gnome\."#
-    draw-border-with-background false
+    match app-id="^org\\.gnome\\."
     geometry-corner-radius 12
     clip-to-geometry true
+    draw-border-with-background false
 }
+
+// @id=dms_rule_2 @name=
 window-rule {
-    match app-id=r#"^gnome-control-center$"#
-    match app-id=r#"^pavucontrol$"#
-    match app-id=r#"^nm-connection-editor$"#
+    match app-id="^nm-connection-editor$"
     default-column-width { proportion 0.5; }
-    open-floating false
 }
+
+// @id=dms_rule_3 @name=
 window-rule {
-    match app-id=r#"^gnome-calculator$"#
-    match app-id=r#"^galculator$"#
-    match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^org\.gnome\.Nautilus$"#
-    match app-id=r#"^xdg-desktop-portal$"#
+    match app-id="^xdg-desktop-portal$"
     open-floating true
 }
+
+// @id=dms_rule_4 @name=
 window-rule {
-    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
+    match app-id="^steam$" title="^notificationtoasts_\\d+_desktop$"
     open-focused false
 }
+
+// @id=dms_rule_5 @name=
 window-rule {
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    match app-id="Alacritty"
-    match app-id="zen"
-    match app-id="com.mitchellh.ghostty"
     match app-id="kitty"
     draw-border-with-background false
 }
+
+// @id=dms_rule_6 @name=
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    match app-id="zoom"
+    match app-id="zoom" title="^Picture-in-Picture$"
     open-floating true
 }
-// Open dms windows as floating by default
+
+// @id=dms_rule_7 @name=
 window-rule {
-    match app-id=r#"org.quickshell$"#
+    match app-id="org.quickshell$"
     open-floating true
 }
-// Browsers
+
+// @id=dms_rule_8 @name=
 window-rule {
     match app-id="brave-browser"
     open-maximized true
-    open-on-workspace "browser"
+    open-on-workspace "1"
 }
 
+// @id=dms_rule_9 @name=
 window-rule {
     match app-id="Tor Browse"
     open-maximized true
-    open-on-workspace "browser"
+    open-on-workspace "1"
 }
 
+// @id=dms_rule_10 @name=
 window-rule {
     match app-id="Firefox Beta"
+    open-maximized-to-edges true
+    open-on-workspace "1"
+}
+
+// @id=dms_rule_11 @name=
+window-rule {
+    match title="rmpc"
     open-maximized true
-    open-on-workspace "browser"
+    open-on-workspace "3"
+    default-column-width { fixed 1900; }
+    default-window-height { fixed 600; }
 }
 
+// @id=dms_rule_12 @name=
 window-rule {
-    match app-id="kitty" title="rmpc"
-    open-floating true
-    open-on-workspace "music"
-}
-
-window-rule {
-    match app-id="org.gnome.FileRoller"
-    match app-id="Gtick"
-    match app-id="Bitwarden"
-    match app-id="lxappearance"
-    match app-id="arandr"
-    match app-id="com.libretro.RetroArch"
-    match app-id="gpartedbin"
     match app-id="nwg-look"
     open-floating true
 }
+
+// @id=dms_rule_13 @name=
 window-rule {
     match app-id="^floating-term$"
+    open-floating true
+}
+
+// @id=dms_rule_14 @name=Reaper
+window-rule {
+    match app-id="^REAPER"
+    open-maximized true
+}
+
+// @id=dms_rule_15 @name=
+window-rule {
+    match app-id="^thunar$" title="^Confirm to replace files$"
+    open-floating true
+    default-column-width { fixed 400; }
+    default-window-height { fixed 400; }
+}
+
+// @id=dms_rule_16 @name=
+window-rule {
+    match app-id="org\\.gtk\\.FileChooserDialog"
+    open-floating true
+}
+
+// @id=dms_rule_17 @name=
+window-rule {
+    match app-id="org.qbittorrent.qBittorrent" title="^Select.*"
+    default-column-width { fixed 800; }
+    default-window-height { fixed 600; }
+}
+
+// @id=dms_rule_18 @name=
+window-rule {
+    match title=".*(Dialog|Properties|Preferences|Settings|Rename).*"
+    open-floating true
+}
+
+// @id=dms_rule_19 @name=
+window-rule {
+    match app-id="Bitwarden" title=".*unlock.*"
+    open-floating true
+}
+
+// @id=dms_rule_20 @name=
+window-rule {
+    match app-id="blueman-manager"
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 600; }
+}
+
+// @id=dms_rule_21 @name=
+window-rule {
+    match app-id="Bitwarden"
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 800; }
+}
+
+// @id=dms_rule_22 @name=
+window-rule {
+    match title="^Extension: \\(Bitwarden"
+    open-floating true
+}
+
+// @id=dms_rule_23 @name=
+window-rule {
+    match app-id="^mpv$"
+    open-floating true
+}
+
+// @id=dms_rule_24 @name=
+window-rule {
+    match app-id="File-roller"
+    open-floating true
+    default-column-width { fixed 600; }
+    default-window-height { fixed 600; }
+}
+
+// @id=wr_1781949541614785813 @name=Firefox Beta
+window-rule {
+    match app-id="^Firefox Beta$" title="^Extension: (Bitwarden Password Manager) - Bitwarden — Mozilla Firefox$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="arandr"
     open-floating true
 }
