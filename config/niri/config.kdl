@@ -3,15 +3,30 @@
 // Check the wiki for a full description of the configuration:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
 
+spawn-at-startup "/usr/lib/polkit/polkit-authentication-agent-1"
+spawn-at-startup "niri-sidebar" "listen"
+// spawn-sh-at-startup "cadence"
+spawn-sh-at-startup "mpdscribble"
+spawn-sh-at-startup "~/scripts/niri_dynamic-float"
+
 prefer-no-csd
+
 config-notification {
     disable-failed
 }
+
 workspace "1"
 workspace "2"
 workspace "3"
 workspace "4" {
 }
+blur {
+    passes 3
+    offset 4.0
+    noise 0.02
+    saturation 1.2
+}
+
 // Outputs from existing configuration
 /-output "eDP-1" {
     // Uncomment this line to disable this output.
@@ -158,7 +173,6 @@ layout {
         // The default preset widths are 1/3, 1/2 and 2/3 of the output.
         proportion 0.33333
         proportion 0.5
-        proportion 0.66667
         proportion 0.75
         proportion 1.0
         // Fixed sets the width in logical pixels exactly.
@@ -200,22 +214,21 @@ layer-rule {
     place-within-backdrop true
 }
 overview {
-    workspace-shadow {
-        off
-    }
+    zoom 0.3
+    workspace-shadow { off; }
 }
-// Add lines like this to spawn processes at startup.
-// Note that running niri as a session supports xdg-desktop-autostart,
-// which may be more convenient to use.
-// See the binds section below for more spawn examples.
-// This line starts waybar, a commonly used bar for Wayland compositors.
-// spawn-sh-at-startup "cadence"
-spawn-sh-at-startup "mpdscribble"
-spawn-at-startup "/usr/lib/polkit/polkit-authentication-agent-1"
 
 environment {
   XDG_CURRENT_DESKTOP "niri"
+  TERMINAL "Alacritty"
+  QT_QPA_PLATFORM "wayland"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  MOZ_ENABLE_WAYLAND "1"
+_JAVA_AWT_WM_NONREPARENTING "1"
 }
+
 hotkey-overlay {
     skip-at-startup
 }
@@ -224,128 +237,76 @@ animations {
     workspace-switch {
         spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
     }
-// honeycomb animation
+    // honeycomb animation
 window-open{
 
-  duration-ms 300
-  curve "linear"
+  duration-ms 400
+  curve "ease-out-quad"
 
   custom-shader r"
 
-    #define ROOT_THREE 1.73205080757
+    #define PI 3.14159265359
 
-    float round_value(float value) {
-      return floor(value + 0.5);
+    mat2 rotation_matrix(float angle) {
+
+      float cos_a = cos(angle);
+      float sin_a = sin(angle);
+
+      mat2 rm = mat2(
+        cos_a, -sin_a,
+        sin_a, cos_a
+      );
+
+      return rm;
     }
 
-    // This function is used to snap fractional axial coordinates to nearest integer hexagon
-    vec2 round_to_hex(vec2 axial_coords) {
-
-      // Convert axial coordinates to Cube [ x + y + z = 0 ]
-      float x = axial_coords.x;
-      float z = axial_coords.y;
-      float y = - x - z;
-
-      // Round components to the nearest integers
-      float r_x = round_value(x);
-      float r_y = round_value(y);
-      float r_z = round_value(z);
-
-      // Check and correct rounding errors, so that our property [ x + y + z = 0 ] holds true
-      float diff_x = abs(r_x - x);
-      float diff_y = abs(r_y - y);
-      float diff_z = abs(r_z - z);
-
-      // Correct component with largest error
-
-      if( diff_x > diff_y && diff_x > diff_z) {
-        r_x = - r_y - r_z;
-      }
-      else if( diff_y > diff_z ) {
-        r_y = - r_x - r_z;
-      }
-      else {
-        r_z = - r_y - r_x;
-      }
-
-      return vec2(r_x, r_z);
-    }
-
-    vec2 get_axial_coords(vec2 coords, float size) {
-
-      float q_axial = coords.x * (2.0 / 3.0);
-
-      q_axial /= size;
-
-      float r_axial = (-coords.x / 3.0) + (ROOT_THREE / 3.0) * coords.y;
-
-      r_axial /= size;
-
-      return vec2(q_axial, r_axial);
-    }
-
-    vec2 get_normal_coords_of_hex_center(vec2 axial_coords, float size) {
-
-      float q_axial = axial_coords.x;
-      float r_axial = axial_coords.y;
-
-      float x = q_axial * (3.0 / 2.0);
-
-      x *= size;
-
-      float y = ROOT_THREE * (r_axial + (q_axial * 0.5));
-
-      y *= size;
-
-      return vec2(x,y);
-    }
-
-    vec4 honeycomb_open(vec3 coords_geo, vec3 size_geo){
+    vec4 rotated_ribbons(vec3 coords_geo, vec3 size_geo) {
 
       float progress = niri_clamped_progress;
 
-      float aspect_ratio = size_geo.x / size_geo.y;
+      float seed = niri_random_seed;
+
+      float angle = 2.0 * PI * seed;
+
+      mat2 rotate = rotation_matrix(angle);
+
+      mat2 rev_rotate = rotation_matrix(-1.0 * angle);
+
+      float ribbon_count = 10.0 + (seed/5.0) * 100.0;
 
       vec2 coords = coords_geo.xy;
 
-      vec2 normalized_coords = vec2(coords.x * aspect_ratio, coords.y);
+      vec2 center = vec2(0.5);
 
-      vec2 normalized_center = vec2(0.5 * aspect_ratio, 0.5);
+      coords -= center;
 
-      // Size of single hexagon
-      float hex_size = 0.02 + (niri_random_seed / 20.0);
-      float unit_size = max(hex_size, 0.01);
+      coords = rotate * coords;
 
-      // Convert normalized coordinates to axial
-      vec2 axial_coords = get_axial_coords(normalized_coords, unit_size);
+      float ribbon_index = floor(coords.y * ribbon_count);
 
-      // Find nearest hexagon cell
-      vec2 nearest_hex = round_to_hex(axial_coords);
+      float direction = mod(ribbon_index, 2.0) == 0.0 ? -1.0 : 1.0;
 
-      // Get center of the nearest_hex ( in normal coords )
-      vec2 hex_center = get_normal_coords_of_hex_center(nearest_hex, unit_size);
+      coords.x += direction * (1.0 - progress);
 
-      // Get distance from center to nearest hexagon center
-      float hex_dist = distance(hex_center, normalized_center);
+      coords = rev_rotate * coords;
 
-      float max_reveal_radius = length(normalized_center) * 1.25;
-      float soft_edge_width = 0.15;
+      coords += center;
 
-      // Get the wave radius
-      float wave_radius = progress * (max_reveal_radius + soft_edge_width);
+      if (coords.x < 0.0 || coords.x > 1.0 || coords.y < 0.0 || coords.y > 1.0) {
+        return vec4(0.0);
+      }
 
-      float mask = smoothstep((wave_radius - soft_edge_width), wave_radius, hex_dist);
-
-      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+      vec3 coords_tex = niri_geo_to_tex * vec3(coords, 1.0);
       vec4 color = texture2D(niri_tex, coords_tex.st);
 
-      color *= (1.0 - mask);
+      // Make window opaque ( for fade in effect )
+      color *= progress;
 
       return color;
     }
 
     vec4 open_color(vec3 coords_geo, vec3 size_geo) {
-      return honeycomb_open(coords_geo, size_geo);
+      return rotated_ribbons(coords_geo, size_geo);
     }
 
   "
@@ -353,127 +314,75 @@ window-open{
 
 window-close{
 
-  duration-ms 300
+  duration-ms 400
   curve "linear"
 
   custom-shader r"
 
-    #define ROOT_THREE 1.73205080757
+    #define PI 3.14159265359
 
-    float round_value(float value) {
-      return floor(value + 0.5);
+    mat2 rotation_matrix(float angle) {
+
+      float cos_a = cos(angle);
+      float sin_a = sin(angle);
+
+      mat2 rm = mat2(
+        cos_a, -sin_a,
+        sin_a, cos_a
+      );
+
+      return rm;
     }
 
-    // This function is used to snap fractional axial coordinates to nearest integer hexagon
-    vec2 round_to_hex(vec2 axial_coords) {
-
-      // Convert axial coordinates to Cube [ x + y + z = 0 ]
-      float x = axial_coords.x;
-      float z = axial_coords.y;
-      float y = - x - z;
-
-      // Round components to the nearest integers
-      float r_x = round_value(x);
-      float r_y = round_value(y);
-      float r_z = round_value(z);
-
-      // Check and correct rounding errors, so that our property [ x + y + z = 0 ] holds true
-      float diff_x = abs(r_x - x);
-      float diff_y = abs(r_y - y);
-      float diff_z = abs(r_z - z);
-
-      // Correct component with largest error
-
-      if( diff_x > diff_y && diff_x > diff_z) {
-        r_x = - r_y - r_z;
-      }
-      else if( diff_y > diff_z ) {
-        r_y = - r_x - r_z;
-      }
-      else {
-        r_z = - r_y - r_x;
-      }
-
-      return vec2(r_x, r_z);
-    }
-
-    vec2 get_axial_coords(vec2 coords, float size) {
-
-      float q_axial = coords.x * (2.0 / 3.0);
-
-      q_axial /= size;
-
-      float r_axial = (-coords.x / 3.0) + (ROOT_THREE / 3.0) * coords.y;
-
-      r_axial /= size;
-
-      return vec2(q_axial, r_axial);
-    }
-
-    vec2 get_normal_coords_of_hex_center(vec2 axial_coords, float size) {
-
-      float q_axial = axial_coords.x;
-      float r_axial = axial_coords.y;
-
-      float x = q_axial * (3.0 / 2.0);
-
-      x *= size;
-
-      float y = ROOT_THREE * (r_axial + (q_axial * 0.5));
-
-      y *= size;
-
-      return vec2(x,y);
-    }
-
-    vec4 honeycomb_close(vec3 coords_geo, vec3 size_geo){
+    vec4 rotated_ribbons_out(vec3 coords_geo, vec3 size_geo) {
 
       float progress = niri_clamped_progress;
 
       float reverse_progress = 1.0 - progress;
 
-      float aspect_ratio = size_geo.x / size_geo.y;
+      float seed = niri_random_seed;
+
+      float angle = 2.0 * PI * seed;
+
+      mat2 rotate = rotation_matrix(angle);
+
+      mat2 rev_rotate = rotation_matrix(-1.0 * angle);
+
+      float ribbon_count = 10.0 + (seed/5.0) * 100.0;
 
       vec2 coords = coords_geo.xy;
 
-      vec2 normalized_coords = vec2(coords.x * aspect_ratio, coords.y);
+      vec2 center = vec2(0.5);
 
-      vec2 normalized_center = vec2(0.5 * aspect_ratio, 0.5);
+      coords -= center;
 
-      // Size of single hexagon
-      float hex_size = 0.02 + (niri_random_seed / 20.0);
-      float unit_size = max(hex_size, 0.01);
+      coords = rotate * coords;
 
-      // Convert normalized coordinates to axial
-      vec2 axial_coords = get_axial_coords(normalized_coords, unit_size);
+      float ribbon_index = floor(coords.y * ribbon_count);
 
-      // Find nearest hexagon cell
-      vec2 nearest_hex = round_to_hex(axial_coords);
+      float direction = mod(ribbon_index, 2.0) == 0.0 ? -1.0 : 1.0;
 
-      // Get center of the nearest_hex ( in normal coords )
-      vec2 hex_center = get_normal_coords_of_hex_center(nearest_hex, unit_size);
+      coords.x += direction * (1.0 - reverse_progress);
 
-      // Get distance from center to nearest hexagon center
-      float hex_dist = distance(hex_center, normalized_center);
+      coords = rev_rotate * coords;
 
-      float max_reveal_radius = length(normalized_center) * 1.25;
-      float soft_edge_width = 0.15;
+      coords += center;
 
-      // Get the wave radius
-      float wave_radius = reverse_progress * (max_reveal_radius + soft_edge_width);
+      if (coords.x < 0.0 || coords.x > 1.0 || coords.y < 0.0 || coords.y > 1.0) {
+        return vec4(0.0);
+      }
 
-      float mask = smoothstep((wave_radius - soft_edge_width), wave_radius, hex_dist);
-
-      vec3 coords_tex = niri_geo_to_tex * coords_geo;
+      vec3 coords_tex = niri_geo_to_tex * vec3(coords, 1.0);
       vec4 color = texture2D(niri_tex, coords_tex.st);
 
-      color *= (1.0 - mask);
+      // Make window transparent ( for fade out effect )
+      color *= reverse_progress;
 
       return color;
     }
 
     vec4 close_color(vec3 coords_geo, vec3 size_geo) {
-      return honeycomb_close(coords_geo, size_geo);
+      return rotated_ribbons_out(coords_geo, size_geo);
     }
 
   "

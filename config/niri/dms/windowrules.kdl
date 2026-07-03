@@ -1,5 +1,18 @@
-// DMS Window Rules - Managed by DankMaterialShell
-// Do not edit manually - changes may be overwritten
+// General blur fallback
+window-rule {
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="Alacritty"
+    opacity 0.7
+    background-effect {
+        blur true
+    }
+}
 
 // @id=dms_rule_0 @name=
 window-rule {
@@ -61,6 +74,7 @@ window-rule {
 window-rule {
     match app-id="Tor Browse"
     open-maximized true
+    open-focused true
     open-on-workspace "1"
 }
 
@@ -68,14 +82,36 @@ window-rule {
 window-rule {
     match app-id="Firefox Beta"
     open-maximized-to-edges true
+    open-focused true
+    opacity 1.0
     open-on-workspace "1"
+}
+
+window-rule {
+    match app-id="^floating-term$"
+    default-column-width { fixed 750; }
+    default-window-height { fixed 500; }
+    open-floating true
+    opacity 0.70
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 // @id=dms_rule_11 @name=
 window-rule {
-    match app-id="kitty" title="rmpc"
-    open-floating true
+    match title="rmpc"
+    default-column-width { fixed 1915; }
+    default-window-height { fixed 600; }
     open-on-workspace "3"
+    open-focused true
+    opacity 0.6
+    background-effect {
+    blur true
+    xray false
+    }
+
 }
 
 // @id=dms_rule_12 @name=
@@ -88,12 +124,23 @@ window-rule {
 window-rule {
     match app-id="^floating-term$"
     open-floating true
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 // @id=dms_rule_14 @name=Reaper
 window-rule {
     match app-id="^REAPER"
     open-maximized true
+    open-on-workspace "3"
+    open-focused true
+    opacity 0.9
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 // Matches folder creation and error alerts in Thunar
@@ -103,14 +150,42 @@ window-rule {
     match app-id=r#"^thunar$"# title=r#"^Confirm.*$"#
     match app-id=r#"^thunar$"# title=r#"^Attention$"#
     match app-id=r#"^thunar$"# title=r#"^Confirm to replace files$"#
+    match app-id=r#"^thunar$"# title="File Operation Progress"
     open-floating true
     default-column-width { fixed 400; }
     default-window-height { fixed 400; }
-
+    background-effect {
+        blur true
+        xray false
+    }
 }
+
+
+window-rule {
+    match app-id="^thunar$"
+    opacity 0.8
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="sublime_text"
+    opacity 0.8
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
 window-rule {
     match app-id=r#"org\.gtk\.FileChooserDialog"#
     open-floating true
+    background-effect {
+        blur true
+    }
+
 }
 
 window-rule {
@@ -124,6 +199,10 @@ window-rule {
 window-rule {
     match title=r#".*(Dialog|Properties|Preferences|Settings|Rename).*"#
     open-floating true
+    background-effect {
+    blur true
+    }
+
 }
 
 window-rule {
@@ -146,11 +225,6 @@ window-rule {
 }
 
 window-rule {
-    match title="^Extension: \\(Bitwarden"
-    open-floating true
-}
-
-window-rule {
    match app-id=r#"^mpv$"#
    open-floating true
 }
@@ -160,4 +234,89 @@ window-rule {
    open-floating true
    default-column-width { fixed 600; }
    default-window-height { fixed 600; }
+}
+
+window-rule {
+    match app-id="arandr"
+    open-floating true
+}
+
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    open-floating true
+    default-column-width { fixed 800; }
+    default-window-height { fixed 800; }
+}
+
+// Enable blur behind the fuzzel launcher.
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.75
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^org.bleachbit.BleachBit"
+    opacity 0.80
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^git-cola"
+    opacity 0.85
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^org.qbittorrent.qBittorrent"
+    opacity 0.85
+    open-maximized true
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="xdg-desktop-portal-gtk"
+    open-floating true
+    default-column-width { fixed 600; }
+    default-window-height { fixed 600; }
+}
+
+window-rule {
+    match app-id="^com.danklinux.dms"
+    open-floating true
+    opacity 0.8
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="QjackCtl"
+    default-column-width { fixed 750; }
+    default-window-height { fixed 500; }
+    open-floating true
+    opacity 0.8
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="feedback-desktop"
+    open-maximized true
 }

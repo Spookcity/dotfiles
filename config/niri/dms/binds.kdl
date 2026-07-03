@@ -1,55 +1,64 @@
 binds {
     // Application Shortcuts
-    XF86HomePage hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox-beta"; }
-    XF86Calculator   hotkey-overlay-title="Open File Manager: Thunar" { spawn-sh "thunar"; }
-    Mod+shift+m    hotkey-overlay-title="Open Music: rmpc" { spawn-sh "alacritty -e rmpc"; }
-    Mod+shift+g  hotkey-overlay-title="Open games: emulationstation" { spawn-sh "emulationstation"; }
-    Mod+shift+b  hotkey-overlay-title="Clean: Bleachbit" { spawn-sh "bleachbit"; }
+    Mod+return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
+    Mod+shift+return hotkey-overlay-title="Open Floating Terminal" { spawn "alacritty" "--class" "floating-term"; }
+    Mod+B hotkey-overlay-title="Open Firefox" { spawn-sh "firefox-beta"; }
+    Mod+E  hotkey-overlay-title="Open Thunar" { spawn-sh "thunar"; }
+    Mod+Shift+E  hotkey-overlay-title="Open Thunar as Root" { spawn-sh "gksu env WAYLAND_DISPLAY=$WAYLAND_DISPLAY XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR dbus-run-session thunar"; }
+    Mod+A hotkey-overlay-title="Open RMPC" { spawn-sh "alacritty --title rmpc -e rmpc"; }
+    XF86Calculator  hotkey-overlay-title="Open Emulationstation" { spawn-sh "emulationstation"; }
+    Mod+shift+B  hotkey-overlay-title="Open Bleachbit" { spawn-sh "bleachbit"; }
+    Mod+shift+C hotkey-overlay-title="Open Claude" { spawn-sh "claude-desktop --disable-gpu --disable-software-rasterizer"; }
+    XF86HomePage hotkey-overlay-title="Open Reaper"  { spawn-sh "/home/rick/scripts/reaper-start"; }
+    Mod+Shift+N hotkey-overlay-title="Open Neovim"  { spawn-sh  "alacritty -e nvim"; }
 
     // === Scripts ===
 
+ // === Sidebar
+    Mod+X { spawn-sh "niri-sidebar toggle-window"; }
+    Mod+Shift+X { spawn-sh "niri-sidebar toggle-visibility"; }
+    Mod+Ctrl+X { spawn-sh "niri-sidebar flip"; }
+    Mod+Alt+X { spawn-sh "niri-sidebar reorder"; }
 
     // === System & Overview ===
     Mod+D repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
+    Mod+Ctrl+Tab {
+    spawn "sh" "-c" "niri msg action focus-column-right; niri msg action move-column-to-last; niri msg action focus-window-previous"
+}
     Mod+Shift+ESCAPE { show-hotkey-overlay; }
 
     // === Application Launchers ===
-    Mod+return hotkey-overlay-title="Open Terminal" { spawn "kitty"; }
-    Mod+shift+return hotkey-overlay-title="Open Terminal" { spawn "alacritty" "--class" "floating-term"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "fuzzel" "toggle";
-    }
-    Mod+V hotkey-overlay-title="Clipboard Manager" {
-        spawn "dms" "ipc" "call" "clipboard" "toggle";
     }
     Mod+M hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
 
-    Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
+    //Super+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" //"toggle"; }
     Mod+Comma hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
-    Mod+Y hotkey-overlay-title="Browse Wallpapers" {
-        spawn "dms" "ipc" "call" "dankdash" "wallpaper";
-    }
-    Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
-    Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
+    //Mod+Y hotkey-overlay-title="Browse Wallpapers" {
+    //    spawn "dms" "ipc" "call" "dankdash" "wallpaper";
+    //}
+    // Mod+N hotkey-overlay-title="Notification Center" { spawn "dms" "ipc" "call" "notifications" "toggle"; }
+    // Mod+Shift+N hotkey-overlay-title="Notepad" { spawn "dms" "ipc" "call" "notepad" "toggle"; }
 
     // === Security ===
     Mod+Alt+L hotkey-overlay-title="Lock Screen" {
         spawn "dms" "ipc" "call" "lock" "lock";
     }
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
+    Mod+Shift+z { quit; }
+   Ctrl+Alt+Delete hotkey-overlay-title="Task Manager" {
         spawn "dms" "ipc" "call" "processlist" "focusOrToggle";
     }
 
 // Media keys for Logitech K540
-    XF86AudioPlay { spawn "playerctl" "play-pause"; }
-    XF86AudioNext { spawn "playerctl" "next"; }
-    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86AudioPlay allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    XF86AudioNext allow-when-locked=true { spawn "playerctl" "next"; }
+    XF86AudioPrev allow-when-locked=true { spawn "playerctl" "previous"; }
 
     // === Audio Controls ===
      // The allow-when-locked=true property makes them work even when the session is locked.
@@ -62,10 +71,10 @@ binds {
     Ctrl+Q repeat=false { close-window; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
-    Mod+S { toggle-window-floating; }
+    Mod+V { toggle-window-floating; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+W { toggle-column-tabbed-display; }
-    Mod+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
+    Ctrl+Shift+W hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
 
     // === Focus Navigation ===
     Mod+Left  { focus-column-left; }

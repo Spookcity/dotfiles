@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# 1. Start the JACK server in the background
+# -R sets realtime
+# -d alsa specifies the ALSA audio backend
+# -r 48000 sets the sample rate
+# -p 256 sets the buffer size (period size)
+echo "Setting CPU governor to PERFORMANCE..."
+sudo cpupower frequency-set -g performance
+echo "Starting Jackd..."
+jack_control start || /usr/bin/jackd -P 80 -R -dalsa -dhw:Gen -r48000 -p128 -n3 &
+
+# 2. Wait 2 seconds for JACK to fully initialize
+sleep 2
+
+# 3. Launch REAPER
+echo "Launching Reaper..."
+env WINE_RT=1 reaper
+
+# Return CPU to balanced schedutil
+echo "Reaper closed. Returning CPU governor to schedutil..."
+sudo cpupower frequency-set -g schedutil
+
+

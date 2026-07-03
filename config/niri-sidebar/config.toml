@@ -1,0 +1,32 @@
+# ~/.config/niri-sidebar/config.toml
+
+[geometry]
+# Width of the sidebar in pixels (400px is ideal for chat apps, terminals, and btop)
+width = 400
+
+# Height of individual stacked windows inside the sidebar
+# 335px allows ~3 stacked windows to fit perfectly on a 1080p screen with gaps
+height = 340
+
+# Vertical gap between windows in the sidebar stack
+gap =9
+
+[margins]
+# Layout boundaries relative to your 1080p display edges
+top = 40       # Leaves space for a status bar (like Waybar) at the top
+bottom = 40
+left = 10
+right = 3
+
+[interaction]
+# Sidebar position ("left" or "right")
+position = "right"
+
+# Width of the sidebar windows when hidden in pixels (leaves a tiny sliver visible)
+peek = 10
+
+# Width when hidden but you hover/focus on it (pops out slightly to 60px)
+focus_peek = 60
+
+# Keep false so the sidebar changes layout context per workspace
+sticky = false
