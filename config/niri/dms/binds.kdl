@@ -1,5 +1,7 @@
 binds {
     // Application Shortcuts
+    Mod+return hotkey-overlay-title="Open Allacritty" { spawn "alacritty"; }
+    Mod+shift+return hotkey-overlay-title="Open Floating Allacritty" { spawn "alacritty" "--class" "floating-term"; }
     Mod+B hotkey-overlay-title="Open Firefox" { spawn-sh "firefox-beta"; }
     Mod+E  hotkey-overlay-title="Open PCManFM" { spawn-sh "pcmanfm"; }
     Mod+shift+E  hotkey-overlay-title="Open PCManFM as Root" {spawn-sh "pkexec pcmanfm"; }
@@ -24,8 +26,6 @@ binds {
     Mod+Shift+ESCAPE { show-hotkey-overlay; }
 
     // === Application Launchers ===
-    Mod+return hotkey-overlay-title="Open Allacritty" { spawn "alacritty"; }
-    Mod+shift+return hotkey-overlay-title="Open Floating Allacritty" { spawn "alacritty" "--class" "floating-term"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "fuzzel" "toggle";
     }

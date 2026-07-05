@@ -21,6 +21,7 @@ workspace "2"
 workspace "3"
 workspace "4" {
 }
+
 // Outputs from existing configuration
 /-output "eDP-1" {
     // Uncomment this line to disable this output.
@@ -207,9 +208,8 @@ layer-rule {
     place-within-backdrop true
 }
 overview {
-    workspace-shadow {
-        off
-    }
+    zoom 0.5
+    workspace-shadow { off; }
 }
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
@@ -430,5 +430,4 @@ include "dms/alttab.kdl"
 include "dms/binds.kdl"
 include "dms/outputs.kdl"
 include "dms/cursor.kdl"
-
 include "dms/windowrules.kdl"

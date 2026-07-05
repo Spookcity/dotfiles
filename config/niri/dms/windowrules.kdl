@@ -1,5 +1,20 @@
 // DMS Window Rules - Managed by DankMaterialShell
 // Do not edit manually - changes may be overwritten
+// General blur fallback
+window-rule {
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="Alacritty"
+
+    background-effect {
+        blur true
+    }
+}
 
 // @id=dms_rule_0 @name=
 window-rule {
@@ -78,6 +93,12 @@ window-rule {
     open-on-workspace "3"
     default-column-width { fixed 1900; }
     default-window-height { fixed 600; }
+    opacity 0.70
+    background-effect {
+    blur true
+    xray false
+    }
+
 }
 
 // @id=dms_rule_12 @name=
@@ -90,6 +111,11 @@ window-rule {
 window-rule {
     match app-id="^floating-term$"
     open-floating true
+    opacity 0.70
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 // @id=dms_rule_14 @name=Reaper
@@ -98,12 +124,49 @@ window-rule {
     open-maximized true
 }
 
-// @id=dms_rule_15 @name=
+// Matches folder creation and error alerts in Thunar
 window-rule {
-    match app-id="^thunar$" title="^Confirm to replace files$"
+    match app-id=r#"^thunar$"# title=r#"^Rename.*$"#
+    match app-id=r#"^thunar$"# title=r#"^Create.*$"#
+    match app-id=r#"^thunar$"# title=r#"^Confirm.*$"#
+    match app-id=r#"^thunar$"# title=r#"^Attention$"#
+    match app-id=r#"^thunar$"# title=r#"^Confirm to replace files$"#
+    match app-id=r#"^thunar$"# title="File Operation Progress"
     open-floating true
     default-column-width { fixed 400; }
     default-window-height { fixed 400; }
+    opacity 0.80
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^thunar$"
+    opacity 0.75
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^pcmanfm$"
+    opacity 0.80
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="sublime_text"
+    opacity 0.85
+    background-effect {
+        blur true
+        xray false
+    }
 }
 
 // @id=dms_rule_16 @name=
@@ -123,6 +186,9 @@ window-rule {
 window-rule {
     match title=".*(Dialog|Properties|Preferences|Settings|Rename).*"
     open-floating true
+    background-effect {
+    blur true
+    }
 }
 
 // @id=dms_rule_19 @name=
@@ -176,4 +242,60 @@ window-rule {
 window-rule {
     match app-id="arandr"
     open-floating true
+}
+window-rule {
+    match app-id="com.saivert.pwvucontrol"
+    open-floating true
+}
+
+window-rule {
+    match app-id="Gtick"
+    open-floating true
+}
+
+// Enable blur behind the fuzzel launcher.
+layer-rule {
+    match namespace="^launcher$"
+    opacity 0.75
+
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^pcmanfm$"
+    opacity 0.80
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^org.bleachbit.BleachBit"
+    opacity 0.80
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^git-cola"
+    opacity 0.85
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id="^org.qbittorrent.qBittorrent"
+    opacity 0.85
+    background-effect {
+        blur true
+        xray false
+    }
 }
