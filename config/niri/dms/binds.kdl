@@ -8,6 +8,7 @@ binds {
     Mod+A hotkey-overlay-title="Open RMPC" { spawn-sh "alacritty --title rmpc -e rmpc"; }
     XF86Calculator  hotkey-overlay-title="Open Emulationstation" { spawn-sh "emulationstation"; }
     Mod+shift+B  hotkey-overlay-title="Open Bleachbit" { spawn-sh "bleachbit"; }
+    Mod+shift+t  hotkey-overlay-title="Htop" { spawn-sh "alacritty -e htop"; }
     Mod+shift+C hotkey-overlay-title="Open Claude" { spawn-sh "claude-desktop --disable-gpu --disable-software-rasterizer"; }
     XF86HomePage hotkey-overlay-title="Open Reaper"  { spawn-sh "/home/rick/scripts/reaper-start"; }
     Mod+Shift+N hotkey-overlay-title="Open Neovim"  { spawn-sh  "alacritty -e nvim"; }

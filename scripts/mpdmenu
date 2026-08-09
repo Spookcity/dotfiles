@@ -11,7 +11,7 @@ DMENU_EXECUTABLE="${1:-dmenu}"
 # mpc -f '[[%albumartist%]|[%artist%]] - %album% (%date%) @ %file%' find title 'Somebody To Love' | sed -E 's#(.*)\) @ (.*/)?(.*)#\1) @ \3 @ \2\3#' | awk -F ' @ ' '{printf "%s @ %s @ ",$1,$2; system("sha256sum <<< '"'"'" $3 "'"'"' | head -c 8"); print "";}'
 
 # max height for vertical menu
-height=12
+height=15
 default_dedup_displaypattern='[[%albumartist%]|[%artist%]] - %album% (%date%) @ %file%'
 
 DMENU() {

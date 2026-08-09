@@ -5,9 +5,8 @@
 
 spawn-at-startup "/usr/lib/polkit/polkit-authentication-agent-1"
 spawn-at-startup "niri-sidebar" "listen"
-// spawn-sh-at-startup "cadence"
 spawn-sh-at-startup "mpdscribble"
-spawn-sh-at-startup "~/scripts/niri_dynamic-float"
+// spawn-sh-at-startup "~/scripts/niri_dynamic-float"
 
 prefer-no-csd
 

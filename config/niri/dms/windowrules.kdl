@@ -305,18 +305,18 @@ window-rule {
 }
 
 window-rule {
-    match app-id="QjackCtl"
-    default-column-width { fixed 750; }
-    default-window-height { fixed 500; }
-    open-floating true
-    opacity 0.8
-    background-effect {
-        blur true
-        xray false
-    }
+    match app-id="feedback-desktop"
+    open-maximized true
 }
 
 window-rule {
-    match app-id="feedback-desktop"
+    match app-id=r#"org.rncbc.qpwgraph"#
+    open-floating true
+    default-column-width { fixed 1400; }
+    default-window-height { fixed 900; }
+}
+
+window-rule {
+    match app-id="TuxGuitar"
     open-maximized true
 }

@@ -1,6 +1,8 @@
+#!/bin/sh
+
 #!/bin/bash
 bluetoothctl power on
 sleep 2
 bluetoothctl pairable on
 sleep 2
-bluetoothctl connect 60:02:B4:6B:EA:87
+bluetoothctl connect D0:39:FA:85:D0:7B

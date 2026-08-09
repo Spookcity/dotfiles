@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-filemanager=sunflower
+filemanager=thunar
 
-term=termite
+term=alacritty
 
 path="$(find -H | dmenu -i -b -fn 'Hack:size=10' -nb '#1f1f1f' -nf '#A9D7F5' -sb '#535C5C' -sf '#8FCFB8' -l 25)"
 
